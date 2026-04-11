@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap');
+
+#root {
+  max-width: 2080px;
+  margin: 0 auto;
+  /* padding: 2rem; */
+  overflow-y: hidden;
+  text-align: center;
+  overflow: hidden;
+}
+
+@font-face {
+  font-family: 'alinsa';
+  src: url('./assets/alinsa.otf') format('truetype');
+}
+
+@font-face {
+  font-family: 'weirdy';
+  src: url('./assets/weirdy3.otf') format('truetype');
+}
+
+@font-face {
+  font-family: 'salo';
+  src: url('./assets//salo3.otf') format('truetype');
+}
+
+.salo {
+  font-family: 'salo';
+}
+.alinsa {
+  font-family: 'alinsa';
+}
+
+.weirdy {
+  font-family: 'weirdy';
+}
+
+
+
+.jost {
+  font-family: 'Jost', sans-serif;
+}
+
+/* @keyframes infiniteSlider {
+  from {
+    transform: translateX(0%);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+.animate-infinite-slider {
+  display: flex;
+  animation: infiniteSlider 20s linear infinite;
+} */
+/* Remove horizontal scroll bar */
+html,
+body {
+  overflow-x: hidden;
+  /* Prevent horizontal scrolling */
+}
+
+/* For modern browsers
+body::-webkit-scrollbar {
+  width: 0.5em;
+}
+
+body::-webkit-scrollbar-track {
+  box-shadow: 0 0 6px rgba(255, 255, 255, 0);
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: slategrey;
+  border-radius: 26px;
+  outline: 1px solid slategrey;
+} */
