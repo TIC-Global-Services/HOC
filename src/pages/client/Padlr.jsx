@@ -6,7 +6,7 @@ import { Link, useLocation } from 'react-router-dom';
 import { motion } from "framer-motion";
 import worldsmall from "../../assets/worldsmall.png";
 import logo2 from "../../assets/logo2.png";
-import PadlrMotionTextSec from '../../components/padlr/PadlrMotionTextSec';
+import PadlrMotionVideoSec from '../../components/padlr/PadlrMotionVideoSec';
 import WannaKnowMore from '../../components/padlr/WannaKnowMore';
 import PadlrImageSec from '../../components/padlr/PadlrImageSec';
 import OwnTheCourt from '../../components/padlr/OwnTheCourt';
@@ -150,7 +150,7 @@ const Padlr = () => {
       {/* Sections */}
       <PadlrHero />
       <GrowthEngine />
-      <PadlrMotionTextSec />
+      <PadlrMotionVideoSec />
       <CourtSky />
       <WannaKnowMore />
       <PadlrImageSec />

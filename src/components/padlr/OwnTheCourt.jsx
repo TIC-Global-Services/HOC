@@ -58,7 +58,7 @@ const ROWS = [
 
 const ROW_Y = ["10vh", "30vh", "50vh", "60vh", "70vh", "80vh"];
 
-export default function HeroSection() {
+export default function OwnTheCourt() {
   const containerRef = useRef(null);
   const titleRef = useRef(null);
   const itemRefs = useRef([]);

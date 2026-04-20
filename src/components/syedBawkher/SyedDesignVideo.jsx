@@ -1,0 +1,22 @@
+import { motion } from "framer-motion";
+import video from "../../assets/client/syedBawkher/vdo/SB Animation 1.mp4";
+
+const SyedDesignVideo = () => {
+  return (
+    <>
+      {/* First Video */}
+      <section className="w-full min-h-screen bg-black flex items-center justify-center overflow-hidden">
+        <motion.video
+          src={video}
+          autoPlay
+          loop
+          muted
+          playsInline
+          className="w-full max-h-[80vh] object-contain"
+        />
+      </section>
+    </>
+  );
+};
+
+export default SyedDesignVideo;
