@@ -6,6 +6,13 @@ import { Link, useLocation } from 'react-router-dom';
 import { motion } from "framer-motion";
 import worldsmall from "../../assets/worldsmall.png";
 import logo2 from "../../assets/logo2.png";
+import RaksHero from '../../components/raks/RaksHero';
+import RaksInstitutionVideo from '../../components/raks/RaksInstituionVideo';
+import RaksLearning from '../../components/raks/RaksLearning';
+import RaksOwnTheCourt from '../../components/raks/RaksOwnTheCourt';
+import RaksVideoSec from '../../components/raks/RaksVideoSec';
+import RaksWannaKnow from '../../components/raks/RaksWannaKnow';
+import RaksInstaImg from '../../components/raks/RaksInstaImg';
 
 
 const Padlr = () => {
@@ -143,7 +150,13 @@ const Padlr = () => {
       </div>
 
       {/* Sections */}
-      
+      <RaksHero />
+      <RaksInstitutionVideo />
+      <RaksLearning />
+      <RaksVideoSec />
+      <RaksWannaKnow />
+      <RaksInstaImg />
+      <RaksOwnTheCourt />
       {/* Footer */}
       <Footer />
     </>

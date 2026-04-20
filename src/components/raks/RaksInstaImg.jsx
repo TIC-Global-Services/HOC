@@ -1,11 +1,17 @@
-import React from 'react'
+import raksInstaImg from "../../assets/client/raks/img/raksInstaImg.png";
 
 const RaksInstaImg = () => {
   return (
-    <div>
-      
-    </div>
-  )
-}
+    <section className="w-full h-auto md:min-h-screen flex items-center justify-center">
 
-export default RaksInstaImg
+      <img
+        src={raksInstaImg}
+        alt="Padlr"
+        className="w-full h-full  object-cover"
+      />
+
+    </section>
+  );
+};
+
+export default RaksInstaImg;

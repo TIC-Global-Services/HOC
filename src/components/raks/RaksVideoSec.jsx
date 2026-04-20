@@ -1,11 +1,25 @@
-import React from 'react'
+import { motion } from "framer-motion";
+import video from "../../assets/client/raks/vdo/Raks Animation 2.mp4";
+
 
 const RaksVideoSec = () => {
   return (
-    <div>
-      
-    </div>
-  )
-}
+    <>
+    {/* Second Video */}
+    <section className="w-full min-h-screen relative overflow-hidden">
 
-export default RaksVideoSec
+      <motion.video
+        src={video}
+        autoPlay
+        loop
+        muted
+        playsInline
+        className="w-full h-full object-cover object-center"
+      />
+
+    </section>
+    </>
+  );
+};
+
+export default RaksVideoSec;
