@@ -1,0 +1,93 @@
+import { useState } from "react";
+import { motion } from "framer-motion";
+
+import frontImg from "../../assets/client/page/curiousFront.png";
+import backImg from "../../assets/client/page/curiousBack.png";
+import cd from "../../assets/client/page/clientsCd.png";
+
+const ClientsCurious = () => {
+  const [flipped, setFlipped] = useState(false);
+
+  return (
+    <section className="flex flex-col items-center justify-center text-center px-6 py-10 mt-6 md:mt-20 md:py-20">
+
+      {/* TEXT CONTENT WRAPPER */}
+      <div className="leading-none">
+        {/* Heading */}
+        <h2 className="text-[50px] md:text-[150px] font-normal tracking-tight salo text-[#0000FF]">
+          CURIOUS ?
+        </h2>
+
+        {/* Subtext */}
+        <p className="text-[20px] md:text-[60px] leading-none font-medium jost tracking-tighter text-gray-700">
+          let’s build your next big idea.
+        </p>
+      </div>
+
+      {/* CARD WRAPPER */}
+      <div
+        className="relative mt-10 md:mt-[10%] right-[5%] cursor-pointer"
+        onClick={() => setFlipped(!flipped)}
+      >
+
+        {/* CD (behind) */}
+        <img
+          src={cd}
+          alt="CD"
+          className="
+            absolute top-1/2 right-[-60px]
+            w-[180px] md:w-[450px]
+            -translate-y-1/2 translate-x-[50%]
+            z-0
+          "
+        />
+
+        {/* Flip Card */}
+        <motion.div
+          className="relative w-[260px] md:w-[500px] aspect-square"
+          style={{ perspective: "1000px" }}
+        >
+          <motion.div
+            animate={{ rotateY: flipped ? 180 : 0 }}
+            transition={{ duration: 0.8 }}
+            className="relative w-full h-full"
+            style={{ transformStyle: "preserve-3d" }}
+          >
+
+            {/* FRONT */}
+            <div
+              className="absolute w-full h-full rounded-md overflow-hidden shadow-md"
+              style={{ backfaceVisibility: "hidden" }}
+            >
+              <img
+                src={frontImg}
+                alt="Front"
+                className="w-full h-full object-cover"
+              />
+            </div>
+
+            {/* BACK */}
+            <div
+              className="absolute w-full h-full rounded-md overflow-hidden shadow-md"
+              style={{
+                transform: "rotateY(180deg)",
+                backfaceVisibility: "hidden",
+              }}
+            >
+              <img
+                src={backImg}
+                alt="Back"
+                className="w-full h-full object-cover"
+              />
+            </div>
+
+          </motion.div>
+        </motion.div>
+
+      </div>
+
+    </section>
+  );
+};
+
+export default ClientsCurious;

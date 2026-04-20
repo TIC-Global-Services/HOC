@@ -10,7 +10,6 @@ import MobileNav3 from "./MobileNav3";
 import arrow from "../assets/downwhite.png";
 // import { useInView } from "react-intersection-observer";
 
-
 const Landing = () => {
   const [isSection2, setIsSection2] = useState(false);
   const [isFixed, setIsFixed] = useState(true);
@@ -77,6 +76,9 @@ const Landing = () => {
             />
           </Link>
           <div className="text-[14px] md:text-[19px] font-semibold hidden md:flex gap-4 md:gap-14 items-center">
+            <Link to={"./client"} className="hover:text-white/50">
+              <h1>CLIENT</h1>
+            </Link>
             <Link to={"./Services"} className="hover:text-white/50">
               <h1>SERVICES</h1>
             </Link>
@@ -153,7 +155,7 @@ const Landing = () => {
             </motion.h1>
             {currentText === 0 && (
               <>
-              {/* <motion.div
+                {/* <motion.div
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 exit={{ opacity: 0 }}
@@ -178,7 +180,7 @@ const Landing = () => {
                 >
                 <R /> */}
                 {/* </motion.div> */}
-                </>
+              </>
             )}
           </AnimatePresence>
         </motion.div>

@@ -9,6 +9,12 @@ import Careers from "./pages/Careers";
 import Services from "./pages/Services";
 import Contact from "./pages/Contact";
 import Experience from "./pages/Experience";
+import ClientPage from "./pages/ClientPage";
+import Qatamaran from "./pages/client/Qatamaran";
+import Padlr from "./pages/client/Padlr";
+import GopalanEnterprises from "./pages/client/GopalanEnterprises";
+import SyedBawkher from "./pages/client/SyedBawkher";
+import Raks from "./pages/client/Raks";
  
 function ScrollToTop() {
   const { pathname } = useLocation();
@@ -27,6 +33,16 @@ function App() {
       <ScrollToTop />
       <Routes> 
         <Route path="/" element={<Landing />} />
+
+        {/* Clients Routing */}
+        <Route path='/client' element={<ClientPage />} />
+        <Route path="/client/qatamaran" element={<Qatamaran />} />
+        <Route path="/client/padlr" element={<Padlr />} />
+        <Route path="/client/gopalan-enterprises" element={<GopalanEnterprises />} />
+        <Route path="/client/syed" element={<SyedBawkher />} />
+        <Route path="/client/raks" element={<Raks />} />
+
+
         <Route path="/Ethos" element={<Ethos />} />
         <Route path="/Careers" element={<Careers />} />
         <Route path="/Services" element={<Services />} />
