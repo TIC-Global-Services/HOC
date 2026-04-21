@@ -15,14 +15,23 @@ import Padlr from "./pages/client/Padlr";
 import GopalanEnterprises from "./pages/client/GopalanEnterprises";
 import SyedBawkher from "./pages/client/SyedBawkher";
 import Raks from "./pages/client/Raks";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
  
 function ScrollToTop() {
   const { pathname } = useLocation();
-  
+
   useEffect(() => {
+    // kill ALL triggers before route change
+    ScrollTrigger.getAll().forEach(t => t.kill());
+
     window.scrollTo(0, 0);
+
+    setTimeout(() => {
+      ScrollTrigger.refresh();
+    }, 100);
+
   }, [pathname]);
-  
+
   return null;
 }
 function App() {
