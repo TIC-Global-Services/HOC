@@ -10,7 +10,7 @@ import PadlrMotionVideoSec from '../../components/padlr/PadlrMotionVideoSec';
 import WannaKnowMore from '../../components/padlr/WannaKnowMore';
 import PadlrImageSec from '../../components/padlr/PadlrImageSec';
 import OwnTheCourt from '../../components/padlr/OwnTheCourt';
-import CourtSky from '../../components/padlr/CourtSky';
+import CourtSky from '../../components/padlr/courtSky/CourtSky';
 import GrowthEngine from '../../components/padlr/GrowthEngine';
 
 const Padlr = () => {

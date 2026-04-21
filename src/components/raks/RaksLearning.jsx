@@ -6,7 +6,7 @@ const NAVY_BLUE = "#000085";
 
 export default function RaksLearning() {
   return (
-    <section className="w-full" style={{ backgroundColor: NAVY_BLUE }}>
+    <section className="w-full min-h-screen" style={{ backgroundColor: NAVY_BLUE }}>
       {/* ── TOP BAR ── */}
       <div
         className="flex items-center justify-between px-6 xl:px-10"
@@ -85,9 +85,9 @@ export default function RaksLearning() {
           </p>
         </div>
 
-        {/* Players silhouettes (video or img) */}
+        {/* Image */}
         <div
-          className="relative overflow-hidden flex-1"
+          className="relative flex-1"
           style={{ borderLeft: "2px solid white" }}
         >
           <img

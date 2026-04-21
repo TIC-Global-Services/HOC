@@ -14,7 +14,7 @@ const RaksVideoSec = () => {
         loop
         muted
         playsInline
-        className="w-full h-full object-cover object-center"
+        className="w-full max-w-full h-auto object-cover object-center"
       />
 
     </section>
