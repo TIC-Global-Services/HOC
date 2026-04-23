@@ -6,56 +6,39 @@ const BLUE = "#0606BC";
 
 export default function GrowthEngine() {
   return (
-    <section
-      className="w-full min-h-screen flex justify-center"
-      style={{ backgroundColor: BLUE }}
-    >
-      {/* CENTER CONTAINER */}
-      <div className="w-full max-w-[1440px] 2xl:max-w-[1600px] flex flex-col h-screen">
-
+    <section className="w-[120vw] h-screen flex-shrink-0 bg-[#0606BC] overflow-hidden">
+      {/* FULL WIDTH CONTAINER */}
+      <div className="w-full h-full flex flex-col">
         {/* ── TOP BAR ── */}
-        <div
-          className="flex items-start justify-between px-6 md:px-10 xl:px-14"
-          style={{ borderBottom: "1px solid white" }}
-        >
+        <div className="relative flex items-start px-6 md:px-10 xl:px-16 border-b border-white">
           <h1
             className="salo text-white uppercase leading-none"
-            style={{
-              fontSize: "clamp(60px, 10vw, 150px)",
-            }}
+            style={{ fontSize: "clamp(60px, 12vw, 200px)" }}
           >
             GROWTH ENGINE
           </h1>
 
-          <img
-            src={computerImg}
-            alt="retro computer"
-            className="object-contain pt-2"
-            style={{ width: "clamp(110px, 12vw, 210px)" }}
-          />
+          <div className="md:absolute md:top-0 md:right-[15%] z-10">
+            <img
+              src={computerImg}
+              alt="retro computer"
+              className="object-contain pt-2 w-[100px] md:w-[150px] xl:w-[200px]"
+            />
+          </div>
         </div>
 
         {/* ── BOTTOM GRID ── */}
         <div className="flex flex-1">
-
           {/* LEFT BLOCK */}
-          <div
-            className="flex flex-col justify-between"
-            style={{ flex: 1.2, borderRight: "1px solid white" }}
-          >
-
-            {/* TEXT ROWS */}
+          <div className="flex flex-col justify-between flex-[1.2] border-r border-white">
             {["TRACKED.", "ANALYZED.", "OPTIMIZED."].map((text, i) => (
               <div
                 key={i}
-                className="flex items-center px-6 md:px-10 flex-1"
-                style={{ borderBottom: "1px solid white" }}
+                className="flex items-center px-6 md:px-10 flex-1 border-b border-white"
               >
                 <span
                   className="salo text-white uppercase leading-none"
-                  style={{
-                    fontSize: "clamp(40px, 7vw, 110px)",
-                  }}
+                  style={{ fontSize: "clamp(40px, 6vw, 100px)" }}
                 >
                   {text}
                 </span>
@@ -67,48 +50,32 @@ export default function GrowthEngine() {
               <img
                 src={paddleLogoImg}
                 alt="padlr logo"
-                className="
-                  w-[80px] 
-                  md:w-[100px] 
-                  xl:w-[120px]
-                  object-contain
-                "
+                className="w-[80px] md:w-[100px] xl:w-[120px]"
               />
             </div>
-
           </div>
 
           {/* MIDDLE TEXT */}
-          <div
-            className="flex flex-col justify-center px-6 md:px-10 xl:px-12"
-            style={{ flex: 1 }}
-          >
+          <div className="flex flex-col justify-center px-6 md:px-10 xl:px-12 flex-1">
             <p
               className="salo text-white uppercase tracking-tight mb-4"
-              style={{
-                fontSize: "clamp(28px, 4vw, 60px)",
-              }}
+              style={{ fontSize: "clamp(28px, 3vw, 56px)" }}
             >
               ABOUT
             </p>
 
             <p
-              className="jost text-white leading-[140%] tracking-tight border-t border-b border-white py-4"
-              style={{
-                fontSize: "clamp(14px, 1.6vw, 24px)",
-              }}
+              className="jost text-white leading-[140%] tracking-tight border-y border-white py-4"
+              style={{ fontSize: "clamp(14px, 1.4vw, 22px)" }}
             >
               Padlr Is Built To Power Modern Digital Ecosystems. From Fragmented
-              Data To Unified Intelligence, Every Interaction Is Transformed Into
-              Actionable Insight.
+              Data To Unified Intelligence, Every Interaction Is Transformed
+              Into Actionable Insight.
             </p>
           </div>
 
           {/* RIGHT VIDEO */}
-          <div
-            className="relative overflow-visible flex-1"
-            style={{ borderLeft: "1px solid white" }}
-          >
+          <div className="relative flex-1 border-l border-white overflow-hidden">
             <video
               src={aboutVideo}
               autoPlay
@@ -118,7 +85,6 @@ export default function GrowthEngine() {
               className="absolute inset-0 w-full h-full object-cover"
             />
           </div>
-
         </div>
       </div>
     </section>

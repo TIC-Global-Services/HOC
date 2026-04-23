@@ -69,7 +69,7 @@ const Section3 = () => {
           {/* TEXT */}
           <div className="
             max-w-[450px] 
-            jost 
+            jost text-start
             capitalize 
             text-black 
             leading-[150%] 

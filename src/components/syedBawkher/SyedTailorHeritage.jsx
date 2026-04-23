@@ -1,4 +1,3 @@
-
 import tailorHeritageImg from "../../assets/client/syedBawkher/img/secImg.png";
 import grid from "../../assets/client/padlr/img/checkBg.png";
 

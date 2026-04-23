@@ -24,7 +24,7 @@ export default function Panel2() {
 
           <p
             className="
-              jost 
+              jost text-start
               font-[400] 
               capitalize 
               text-white/90 

@@ -64,8 +64,9 @@ const Home = () => {
             <h2 className="jost md:text-[30px]  w-[100%] text-right  text-lg md:leading-[40px]">
               We dabble in graphic design, <br />
                a smidge of branding + packaging,
-              <br />
-              + focus extensively on experience <br  className=" md:hidden block"/> design <br  className=" md:block hidden"/>
+              <br />+ focus extensively on experience{" "}
+              <br className=" md:hidden block" /> design{" "}
+              <br className=" md:block hidden" />
               to tie everything together seamlessly.
             </h2>
           </div>
@@ -116,10 +117,12 @@ const Home = () => {
       </div>
 
       {/* <SecondSection /> */}
+      {/*<LogosLoop />*/}
       <ThirdSection />
-      <div className=" md:hidden block md:mb-0 mb-40">
+      <div className="md:hidden block mb-10">
         <div className="h-10"></div>
       </div>
+      <ShowReel />
       <FAQ />
       <Footer />
     </>
@@ -268,10 +271,10 @@ export default Home;
 //   return (
 //     <div className="w-screen py-10   z-[300] overflow-hidden  md:flex items-center relative justify-center  gap-20 flex-col">
 //       <div
-//         className="relative items-center justify-center w-[100%] z-[300] overflow-hidden bg-white 
-//   before:absolute before:z-[300] before:left-0 before:top-0 before:h-full before:w-[200px] 
-//   before:bg-[linear-gradient(to_right,rgba(227,222,212,0)_100%)] before:content-[''] 
-//   after:absolute after:right-0 after:top-0 after:z-[2] after:h-full after:w-[200px] 
+//         className="relative items-center justify-center w-[100%] z-[300] overflow-hidden bg-white
+//   before:absolute before:z-[300] before:left-0 before:top-0 before:h-full before:w-[200px]
+//   before:bg-[linear-gradient(to_right,rgba(227,222,212,0)_100%)] before:content-['']
+//   after:absolute after:right-0 after:top-0 after:z-[2] after:h-full after:w-[200px]
 //   after:-scale-x-100 after:bg-[linear-gradient(to_right,rgba(255,0,0,0))] after:content-['']"
 //       >
 //         <div className="animate-infinite-slider overflow-hidden gap-10 flex w-[calc(350px*10)]">
@@ -291,6 +294,9 @@ export default Home;
 
 import one from "../assets/1.webm";
 import iosVideo from "../assets/2.mp4"; // Your video for iOS/Safari
+import ShowReel from "../components/ShowReel";
+import AutoTextSlider from "../components/AutoTextSlider";
+// import LogosLoop from "../components/LogosLoop";
 
 const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
 const isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
@@ -299,42 +305,34 @@ const ThirdSection = () => {
   const videoSource = isIOS || isSafari ? iosVideo : one;
 
   return (
-    <div className="relative mt-10 md:-mt-40">
-      <video
-        id="loader-video"
-        autoPlay
-        muted
-        loop
-        playsInline
-        className={`w-full h-full object-cover ${
-          isIOS || isSafari ? " scale-75 border-2 border-white" : "scale-125"
-        }`}
-      >
-        <source
-          src={videoSource}
-          type={isIOS || isSafari ? "video/mp4" : "video/webm"}
-        />
-      </video>
-      <div className="absolute md:-bottom-[10.5rem] jost text-center flex-col flex items-center justify-center w-full">
-        <h1 className="  text-base md:text-[42px] mb-6 uppercase text-[#060ebb] tracking-widest salo">Client Testimonial</h1>
-        <h1 className="text-[#5B636D] md:block hidden  px-4 font-[500] md:w-[66%] text-sm md:text-[22px] text-center md:leading-[30px]">
-          After years of searching for a graphic designer to create our logo and
-          brand identity, we realized it wasn't just about a logo—it was about
-          crafting an experience that reflects what our company truly stands
-          for. Ria, the creative director of Haus of Chaos, not only
-          conceptualized the journey of how clients experience our brand but
-          also responded with remarkable efficiency.        </h1>
-          <h1 className="text-[#5B636D] md:hidden block  px-4 font-[500] md:w-[66%] text-sm md:text-[22px] text-center md:leading-[30px]">
-          After years of searching for a graphic designer to create our logo and
-          brand identity, we realized it wasn't just about a logo—it was about
-          crafting an experience that reflects what our company truly stands
-          for. Ria, the creative director of Haus of Chaos, not only
-          conceptualized the journey of how clients experience our brand but
-          also   with efficiency.        </h1>
+    <div className="relative mt-20 md:-mt-40 md:flex md:min-h-[80vh]">
+      {/* LEFT — VIDEO */}
+      <div className="w-full md:absolute md:left-0 md:top-0 md:h-full md:w-[50%]">
+        <video
+          id="loader-video"
+          autoPlay
+          muted
+          loop
+          playsInline
+          className={`w-full h-full object-cover ${
+            isIOS || isSafari ? "scale-75 border-2 border-white" : "scale-125"
+          }`}
+        >
+          <source
+            src={videoSource}
+            type={isIOS || isSafari ? "video/mp4" : "video/webm"}
+          />
+        </video>
+      </div>
 
-        <h2 className="text-[#060ebb] text-xs md:text-[20px] mt-2 md:mt-5">
-          Rak's Pallikkoodam, 21st century international school
-        </h2>
+      {/* CONTENT */}
+      <div
+        className="
+      jost text-center flex flex-col items-center justify-center w-full
+      md:absolute md:right-0 md:top-1/2 md:-translate-y-1/2 md:w-[70%] md:translate-x-36 pt-20 md:pt-0
+    "
+      >
+        <AutoTextSlider />
       </div>
     </div>
   );

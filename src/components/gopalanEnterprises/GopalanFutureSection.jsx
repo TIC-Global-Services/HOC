@@ -3,19 +3,19 @@ import clientImg from "../../assets/client/gopalan/clientImg.png";
 
 const GopalanFuture = () => {
   return (
-    <section className="w-full min-h-screen bg-white text-white flex flex-col items-center justify-center px-6 md:px-12 py-16">
+    <section className="w-full min-h-screen bg-white text-white flex flex-col items-center justify-center  py-16">
 
       {/* TOP HEADING */}
-      <h2 className="salo text-[40px] md:text-[120px] text-[#E96428]  text-center tracking-tight mb-10">
+      <h2 className="salo text-[40px] md:text-[120px] text-[#E96428]  text-center tracking-tight mb-2">
         Building Legacy, Shaping the Future
       </h2>
 
       {/* CENTER IMAGE */}
-      <div className="w-full flex justify-center mb-10">
+      <div className="w-full flex justify-end mb-10">
         <img
           src={clientImg}
           alt="Future"
-          className="w-full h-screen object-cover"
+          className="w-[90%] h-screen object-cover"
         />
       </div>
 

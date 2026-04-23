@@ -6,7 +6,7 @@ const SyedCraftmanShip = () => {
   return (
     <>
     {/* Second Video */}
-    <section className="w-full min-h-screen relative overflow-hidden">
+    <section className="w-full h-screen relative overflow-hidden">
 
       <motion.video
         src={video}
@@ -14,7 +14,7 @@ const SyedCraftmanShip = () => {
         loop
         muted
         playsInline
-        className="absolute top-0 left-0 w-full h-full object-contain"
+        className="absolute top-0 left-0 w-full h-full object-cover"
       />
 
     </section>

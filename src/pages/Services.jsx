@@ -217,6 +217,33 @@ const categories = {
       dis: "Innovative design strategies that connect your product with its audience seamlessly. We integrate branding and communication to amplify your product's engagement and market presence.",
     },
   ],
+
+  build: [
+    {
+      cx: 300,
+      cy: 200,
+      label: "Brand Evolution Strategy",
+      dis: "Navigating brand growth, repositioning, and long-term relevance + Defining who you are, what you stand for, and how you show up.",
+    },
+    {
+      cx: 300,
+      cy: 400,
+      label: "Brand Narrative & Content",
+      dis: "Crafting compelling stories and content that bring your brand to life.",
+    },
+    {
+      cx: 300,
+      cy: 600,
+      label: "Logo & Visual Identity Design",
+      dis: "Designing  a narrative world for your brand via distinctive visuals that make your brand instantly recognizable.",
+    },
+    {
+      cx: 300,
+      cy: 800,
+      label: "Social Media & Digital Branding",
+      dis: "Platform-ready identity systems and content frameworks",
+    },
+  ],
 };
 
 import svgser from "../assets/svgser.png";
@@ -418,7 +445,7 @@ const MainServices = () => {
           <h1 className=" xl:block hidden">Services</h1>
           <h1 className="  flex items-center  justify-center  !font-[400]   !text-xl  text-center xl:hidden  text-[#F4ECE0] alinsa"></h1>
           <div className="bg-[#242424] px-3 py-3 rounded-[76px] -bottom-16 md:-bottom-16 flex gap-2 absolute text-xs md:text-base jost text-white font-medium">
-            {["Experience", "Design"].map((item) => (
+            {["Experience", "Design", "Build"].map((item) => (
               <button
                 key={item}
                 className={`px-6 py-2 uppercase rounded-[59px] transition-all duration-300 ${

@@ -23,6 +23,7 @@ const ClientsUniq = () => {
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-x-20 gap-y-10 justify-items-center">
 
         {items.map((item, index) => (
+        <Link to={item.path} >
           <motion.div
             key={index}
             className="group"
@@ -30,7 +31,6 @@ const ClientsUniq = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
           >
-        <Link to={item.path} >
             {/* Card Wrapper */}
             <div className="relative w-[200px] md:w-[220px] aspect-square">
 
@@ -66,9 +66,10 @@ const ClientsUniq = () => {
             <p className="mt-1 md:mt-6 text-center md:text-left text-sm md:text-[24px] font-normal salo tracking-[2%] md:tracking-normal">
               {item.title}
             </p>
-            </Link>
+            
 
           </motion.div>
+          </Link>
         ))}
 
       </div>

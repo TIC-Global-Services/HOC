@@ -1,5 +1,3 @@
-"use client";
-
 import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -17,7 +15,7 @@ export default function CourtSky() {
   useEffect(() => {
     if (window.innerWidth < 768) return;
 
-    const totalScroll = window.innerWidth * 2;
+    const totalScroll = window.innerWidth * 2.5;
 
     const ctx = gsap.context(() => {
       gsap.to(trackRef.current, {
@@ -46,21 +44,21 @@ export default function CourtSky() {
         <div
           ref={trackRef}
           className="flex h-full"
-          style={{ width: "300vw" }}
+          style={{ width: "350vw" }}
         >
 
           {/* SECTION 1 */}
-          <div className="w-screen h-full flex-shrink-0">
+          <div className="w-[120vw] h-full flex-shrink-0">
             <Section1 />
           </div>
 
           {/* SECTION 2 */}
-          <div className="w-screen h-full flex-shrink-0">
+          <div className="w-[140vw] h-full flex-shrink-0">
             <Section2 />
           </div>
 
           {/* SECTION 3 */}
-          <div className="w-screen h-full flex-shrink-0">
+          <div className="w-[90vw] h-full flex-shrink-0">
             <Section3 />
           </div>
 

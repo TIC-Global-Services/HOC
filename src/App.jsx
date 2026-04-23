@@ -1,62 +1,57 @@
-import React ,{useEffect}from "react";
-import { BrowserRouter as Router, Routes, Route,useLocation } from "react-router-dom";
+import React, { useEffect } from "react";
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  useLocation,
+} from "react-router-dom";
 import "./App.css";
+
 import Landing from "./pages/Landing";
-// import Home from "./pages/Home";
-// import CursorHover from "./utils/Hover";
 import Ethos from "./pages/Ethos";
 import Careers from "./pages/Careers";
 import Services from "./pages/Services";
 import Contact from "./pages/Contact";
 import Experience from "./pages/Experience";
 import ClientPage from "./pages/ClientPage";
-import Qatamaran from "./pages/client/Qatamaran";
-import Padlr from "./pages/client/Padlr";
-import GopalanEnterprises from "./pages/client/GopalanEnterprises";
-import SyedBawkher from "./pages/client/SyedBawkher";
-import Raks from "./pages/client/Raks";
+
 import { ScrollTrigger } from "gsap/ScrollTrigger";
- 
+
+/* SCROLL RESET */
 function ScrollToTop() {
   const { pathname } = useLocation();
 
   useEffect(() => {
-    // kill ALL triggers before route change
-    ScrollTrigger.getAll().forEach(t => t.kill());
-
+    ScrollTrigger.getAll().forEach((t) => t.kill(true));
     window.scrollTo(0, 0);
 
     setTimeout(() => {
       ScrollTrigger.refresh();
     }, 100);
-
   }, [pathname]);
 
   return null;
 }
+
 function App() {
   return (
     <Router>
-      {/* Global CursorHover component */}
-      {/*  <CursorHover />*/}
       <ScrollToTop />
-      <Routes> 
+
+      <Routes>
+        {/* MAIN */}
         <Route path="/" element={<Landing />} />
 
-        {/* Clients Routing */}
-        <Route path='/client' element={<ClientPage />} />
-        <Route path="/client/qatamaran" element={<Qatamaran />} />
-        <Route path="/client/padlr" element={<Padlr />} />
-        <Route path="/client/gopalan-enterprises" element={<GopalanEnterprises />} />
-        <Route path="/client/syed" element={<SyedBawkher />} />
-        <Route path="/client/raks" element={<Raks />} />
+        {/* CLIENT SLUG ROUTING */}
+        <Route path="/client" element={<ClientPage />} />
+        <Route path="/client/:slug" element={<ClientPage />} />
 
-
-        <Route path="/Ethos" element={<Ethos />} />
-        <Route path="/Careers" element={<Careers />} />
-        <Route path="/Services" element={<Services />} />
-        <Route path="/Contact" element={<Contact />} />
-        <Route path="/Experience" element={<Experience />} />
+        {/* OTHER PAGES */}
+        <Route path="/ethos" element={<Ethos />} />
+        <Route path="/careers" element={<Careers />} />
+        <Route path="/services" element={<Services />} />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="/experience" element={<Experience />} />
       </Routes>
     </Router>
   );

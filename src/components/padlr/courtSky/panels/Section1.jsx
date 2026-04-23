@@ -13,10 +13,9 @@ export default function Section1() {
         backgroundColor: "#8FC4E9",
       }}
     >
-      {/* CENTER CONTAINER (IMPORTANT FOR LARGE SCREENS) */}
+      {/* CENTER CONTAINER */}
       <div className="w-full max-w-[1440px] 2xl:max-w-[1600px] flex">
-
-        {/* ── LEFT PANEL — court photo ── */}
+        {/* ── LEFT PANEL ── */}
         <div className="relative w-1/2 h-screen overflow-hidden">
           <img
             src={courtImg1}
@@ -26,65 +25,69 @@ export default function Section1() {
         </div>
 
         {/* ── RIGHT PANEL ── */}
-        <div className="
+        <div
+          className="
           relative 
           w-1/2 
           h-screen 
           flex flex-col justify-between 
           px-6 md:px-10 xl:px-14 
           py-8 xl:py-12
-        ">
-
+        "
+        >
           {/* TOP ROW */}
-          <div className="flex justify-between items-start">
-
-            {/* SWATCH */}
-            <div className="left-0 top-0 z-10">
+          <div className="flex justify-between items-start gap-6">
+            {/* LEFT — SWATCH */}
+            <div className="absolute top-0 left-0">
               <img
                 src={courtImg2}
                 alt="swatches"
                 className="
-                  w-[140px] 
-                  md:w-[220px] 
-                  xl:w-[300px] 
-                  2xl:w-[360px]
-                  object-contain
-                "
+        w-[140px] 
+        md:w-[220px] 
+        xl:w-[340px] 
+        2xl:w-[360px]
+        object-contain
+      "
               />
             </div>
 
-            {/* TITLE */}
-            <div className="text-right z-10">
+            {/* RIGHT — TITLE */}
+            <div className="text-start translate-x-[55%] z-10">
               <h2
-                className="salo font-[400] leading-none text-start text-white"
+                className="salo font-[400] leading-none text-white text-start"
                 style={{
-                  fontSize: "clamp(64px, 12vw, 200px)",
+                  fontSize: "clamp(64px, 14vw, 200px)",
                 }}
               >
-                COURT<br />SKY
+                COURT
+                <br />
+                SKY
               </h2>
             </div>
-
           </div>
 
           {/* BOTTOM ROW */}
-          <div className="flex items-end justify-between">
-
+          <div className="flex items-center justify-between">
             {/* TEXT */}
             <div>
               <p
                 className="salo font-[400] leading-none text-start text-white"
                 style={{
-                  fontSize: "clamp(22px, 2.5vw, 42px)",
+                  fontSize: "clamp(22px, 4vw, 50px)",
                 }}
               >
-                BOLD,<br />RICH, AND<br />UNAPOLOGETIC.
+                BOLD,
+                <br />
+                RICH, AND
+                <br />
+                UNAPOLOGETIC.
               </p>
 
-              <p className="jost text-[13px] md:text-[16px] xl:text-[18px] text-white/80 mt-3">
+              <p className="jost text-[13px] text-start md:text-[16px] xl:text-[24px] text-white/80 mt-3">
                 Hex Precision
               </p>
-              <p className="jost text-[13px] md:text-[16px] xl:text-[18px] text-white/80">
+              <p className="jost text-[13px] text-start md:text-[16px] xl:text-[24px] text-white/80">
                 RGB Consistency
               </p>
             </div>
@@ -102,9 +105,7 @@ export default function Section1() {
                 2xl:w-[240px]
               "
             />
-
           </div>
-
         </div>
       </div>
     </section>

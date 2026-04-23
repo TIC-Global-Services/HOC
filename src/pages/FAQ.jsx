@@ -285,7 +285,7 @@ const FAQ = () => {
   };
 
   return (
-    <div className="min-h-screen mt-60 bg-black">
+    <div className="min-h-screen bg-black">
       <div className="justify-evenly md:items-start items-center   flex flex-col md:flex-row mx-auto py-32">
         <div className="mb-12 text-center md:text-left md:sticky md:top-32 md:h-fit">
           <h2 className="text-[#E3E1E6] salo text-5xl md:text-[90px] md:leading-[120px]">

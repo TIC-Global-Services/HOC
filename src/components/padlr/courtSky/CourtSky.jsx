@@ -1,5 +1,3 @@
-"use client";
-
 import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -44,7 +42,7 @@ export default function CourtSky() {
     <section ref={wrapperRef}>
       <div className="sticky top-0 h-screen overflow-hidden">
 
-        {/* TRACK — 400vw total */}
+        {/* TRACK */}
         <div
           ref={trackRef}
           className="flex h-full"
