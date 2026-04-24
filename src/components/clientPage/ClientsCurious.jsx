@@ -10,7 +10,7 @@ const ClientsCurious = () => {
   const [hovered, setHovered] = useState(false);
 
   return (
-    <section className="flex flex-col items-center justify-center text-center px-6 py-10 mt-6 md:mt-20 md:py-20">
+    <section className="flex flex-col items-center justify-center text-center px-6 py-10 mt-6 md:-mt-[0%] md:py-20">
 
       {/* TEXT */}
       <div className="leading-none">
@@ -18,7 +18,7 @@ const ClientsCurious = () => {
           CURIOUS ?
         </h2>
 
-        <p className="text-[20px] md:text-[60px] jost text-gray-700">
+        <p className="text-[20px] md:text-[60px] jost text-black tracking-tight font-[500]">
           let’s build your next big idea.
         </p>
       </div>

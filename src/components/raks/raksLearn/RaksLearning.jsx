@@ -1,6 +1,6 @@
-import rakathonImg from "../../assets/client/raks/img/rightImg.png";
-import raksLearnImg from "../../assets/client/raks/img/raksLearn.png"; // circular badge/logo
-import raksImg from "../../assets/client/syedBawkher/img/heroImg2.png"; // swap your video
+import rakathonImg from "../../../assets/client/raks/img/rightImg.png";
+import raksLearnImg from "../../../assets/client/raks/img/raksLearn.png"; // circular badge/logo
+import raksImg from "../../../assets/client/raks/img/heroImg2.png"; // swap your video
 
 const NAVY_BLUE = "#000085"; 
 
