@@ -3,7 +3,7 @@ import QataWannaKnow from "../../components/qatamaran/QataWannaKnow";
 import QataImageSec from "../../components/qatamaran/QataImageSec";
 import QataOwnTheCourt from "../../components/qatamaran/QataOwnTheCourt";
 import QataRefinedTailoring from "../../components/qatamaran/QataRefinedTailoring";
-import QataSaltSilk from "../../components/qatamaran/QataSaltSilk";
+import QataSaltSilk from "../../components/qatamaran/qataSaltSilk/QataSaltSilk";
 import Footer from "../Footer";
 import Navbar from "../../components/Navbar";
 

@@ -56,23 +56,14 @@ export default function GrowthEngine() {
           </div>
 
           {/* MIDDLE TEXT */}
-          <div className="flex flex-col justify-center px-6 md:px-10 xl:px-12 flex-1">
-            <p
-              className="salo text-white uppercase tracking-tight mb-4"
-              style={{ fontSize: "clamp(28px, 3vw, 56px)" }}
-            >
-              ABOUT
-            </p>
-
-            <p
-              className="jost text-white leading-[140%] tracking-tight border-y border-white py-4"
-              style={{ fontSize: "clamp(14px, 1.4vw, 22px)" }}
-            >
-              Padlr Is Built To Power Modern Digital Ecosystems. From Fragmented
-              Data To Unified Intelligence, Every Interaction Is Transformed
-              Into Actionable Insight.
-            </p>
-          </div>
+          <div className="flex flex-col justify-center md:mt-[20%]" style={{ width: "30%" }}>
+              <p className="salo md:text-[60px] font-[400] text-white text-start uppercase tracking-tight mb-5 px-6">ABOUT</p>
+              <p className="jost md:text-[26px] text-start font-[400] text-white leading-[140%] tracking-tight border-t-2 border-b-2 border-white py-4 px-6">
+                Syed Bawlher is Built On A Legacy Of Precision Tailoring And
+                Enduring Craftsmanship. From The First Measurement To The Final
+                Stitch, Every Garment Is Shaped With Intention – Transforming Your Experience.
+              </p>
+            </div>
 
           {/* RIGHT VIDEO */}
           <div className="relative flex-1 border-l border-white overflow-hidden">

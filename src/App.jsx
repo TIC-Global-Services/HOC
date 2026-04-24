@@ -47,11 +47,11 @@ function App() {
         <Route path="/client/:slug" element={<ClientPage />} />
 
         {/* OTHER PAGES */}
-        <Route path="/ethos" element={<Ethos />} />
-        <Route path="/careers" element={<Careers />} />
-        <Route path="/services" element={<Services />} />
-        <Route path="/contact" element={<Contact />} />
-        <Route path="/experience" element={<Experience />} />
+        <Route path="/Ethos" element={<Ethos />} />
+        <Route path="/Careers" element={<Careers />} />
+        <Route path="/Services" element={<Services />} />
+        <Route path="/Contact" element={<Contact />} />
+        <Route path="/Experience" element={<Experience />} />
       </Routes>
     </Router>
   );

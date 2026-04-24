@@ -117,7 +117,7 @@ const Home = () => {
       </div>
 
       {/* <SecondSection /> */}
-      {/*<LogosLoop />*/}
+      <LogosLoop />
       <ThirdSection />
       <div className="md:hidden block mb-10">
         <div className="h-10"></div>
@@ -296,7 +296,7 @@ import one from "../assets/1.webm";
 import iosVideo from "../assets/2.mp4"; // Your video for iOS/Safari
 import ShowReel from "../components/ShowReel";
 import AutoTextSlider from "../components/AutoTextSlider";
-// import LogosLoop from "../components/LogosLoop";
+import LogosLoop from "../components/LogosLoop";
 
 const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
 const isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);

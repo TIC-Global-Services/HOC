@@ -64,6 +64,16 @@ const Contact = () => {
             </Link>
             <div className="text-[14px] md:text-[19px] font-semibold flex gap-4 md:gap-14 items-center">
               <Link
+                to={"/client"}
+                className={`hover:text-black/50 ${
+                  isActiveRoute("/client")
+                    ? "text-[#060ebb] border-b-2 border-[#060ebb]"
+                    : ""
+                }`}
+              >
+                <h1>CLIENT</h1>
+              </Link>
+              <Link
                 to={"/Services"}
                 className={`hover:text-black/50 ${
                   isActiveRoute("/Services")
@@ -145,7 +155,6 @@ const Contact = () => {
         </div>
       </div>
       <Footer />
-
     </>
   );
 };
@@ -155,95 +164,149 @@ const categories = {
   experience: [
     {
       cx: 300,
-      cy: 200,
-      label: "Physical Computing",
-      dis: "Blends digital technology with physical interactions to create dynamic, immersive experiences.",
-    },
-    {
-      cx: 300,
       cy: 500,
-      label: "CGI + Motions Graphics",
-      dis: "High-end visual storytelling like Cinematic product animations Abstract brand visuals, Interactive brand experiences.",
-    },
-    {
-      cx: 300,
-      cy: 800,
-      label: "Experiential Mapping",
-      dis: "Visualizing and Analyzing how users or customers interact with a brand, space, or service over time. Branded Spaces & Installations, Digital Interactions, Luxury & High-Net-Worth Experiences.",
+      label: "Experiential Space Design",
+      dis: "We design brand experiences that live in space — conceptually led, environmentally built, and memorable long after they end. Spatial storytelling through objects, structure, and environment",
+      points: [
+        "Hybrid Activations via Experiential Marketing",
+        "Exhibition & Installation Design",
+        "Audience Journey & Staging Design",
+        "Pop-Up Space Design",
+      ],
     },
     {
       cx: 300,
       cy: 1150,
-      label: "Hybrid Communication Solutions",
-      dis: "Integrate multiple digital and physical communication channels to create seamless, interactive, and immersive brand experiences. These solutions blend traditional and emerging technologies to enhance engagement, storytelling, and customer interaction.",
+      label: "Motion & CGI",
+      dis: "The brand in motion | Moving image and digital craft that extends the brand into screen and space",
+      points: [
+        "Motion Identity & Animated Brand Systems",
+        "CGI & 3D World-Building",
+        "Screen-Based Installations & Digital Environments",
+      ],
     },
+    // {
+    //   cx: 300,
+    //   cy: 800,
+    //   label: "Experiential Mapping",
+    //   dis: "Visualizing how users interact with a brand across touchpoints.",
+    //   points: [
+    //     "Customer journey mapping & insights",
+    //     "Branded spaces & installations",
+    //     "Interactive digital environments",
+    //     "Luxury & high-net-worth experience design",
+    //   ],
+    // },
+    // {
+    //   cx: 300,
+    //   cy: 1150,
+    //   label: "Hybrid Communication Solutions",
+    //   dis: "Combining digital and physical channels for seamless brand experiences.",
+    //   points: [
+    //     "Omnichannel communication strategies",
+    //     "AR/VR & immersive storytelling",
+    //     "Integrated digital + physical campaigns",
+    //     "Cross-platform brand engagement systems",
+    //   ],
+    // },
   ],
   design: [
     {
       cx: 300,
-      cy: 200,
-      label: "Logo Design",
-      dis: "Crafting distinctive logos that embody your brand’s essence with artistic precision.",
-    },
-    {
-      cx: 300,
-      cy: 400,
-      label: "Visual Identity + Illustrations",
-      dis: "Creating immersive visual languages with bespoke illustrations and dynamic design elements.",
+      cy: 300,
+      label: "Brand Evolution Strategy",
+      dis: "Navigating brand growth, repositioning, and long-term relevance + Defining who you are, what you stand for, and how you show up",
+      points: [
+        "Positioning & Brand Architecture",
+        "Brand Evolution & Repositioning",
+        "Audience & Market Mapping",
+        "Brand Voice & Personality Development",
+      ],
     },
     {
       cx: 300,
       cy: 600,
-      label: "Brand Narrative + Content",
-      dis: "Weaving compelling stories that resonate, shaping your brand voice that captivates.",
+      label: "Brand Narrative & Content",
+      dis: "Crafting compelling stories and content that bring your brand to life.",
+      points: [
+        "Brand Story & Origin Narrative",
+        "Tone of Voice Development",
+        "Copywriting & Editorial Direction",
+        "Content Frameworks & Messaging Pillars",
+      ],
     },
     {
       cx: 300,
-      cy: 800,
-      label: "Social Media Package",
-      dis: "Aesthetic-driven content strategies to enhance engagement and brand presence.",
+      cy: 900,
+      label: "Logo & Visual Identity Design",
+      dis: "Designing  a narrative world for your brand via distinctive visuals that make your brand instantly recognizable.",
+      points: [
+        "Logo & Mark Design",
+        "Colour, Typography & Grid Systems",
+        "Illustration & Iconography",
+        "Brand Guidelines & Usage Systems",
+      ],
     },
-    {
-      cx: 300,
-      cy: 1000,
-      label: "Branding Tools Analogue",
-      dis: "Tactile branding solutions that bring your brand identity to life through print and physical mediums.",
-    },
-
     {
       cx: 300,
       cy: 1200,
-      label: "Product Based Communication Solutions ",
-      dis: "Innovative design strategies that connect your product with its audience seamlessly. We integrate branding and communication to amplify your product's engagement and market presence.",
+      label: "Social Media & Digital Branding",
+      dis: "Platform-ready identity systems and content frameworks",
+      points: [
+        "Platform Identity Systems",
+        "Social Media Frameworks & Templates",
+      ],
+    },
+    {
+      cx: 300,
+      cy: 1500,
+      label: "Environmental & Spatial Branding",
+      dis: "Bridging the brand disconnect between digital and physical presence ",
+      points: [
+        "Wayfinding & Environmental Signage",
+        "Environmental Branding",
+      ],
+    },
+
+    {
+      cx: 300,
+      cy: 1800,
+      label: "Analogue Branding Tools",
+      dis: "Designing tactile brand materials that bring your identity into the real world, via multisensory mediums.",
+      points: [
+        "Print & Publication Design",
+        "Packaging & Product Communication",
+        "Branded Collateral & Stationery",
+      ],
     },
   ],
 
-  build: [
-    {
-      cx: 300,
-      cy: 200,
-      label: "Brand Evolution Strategy",
-      dis: "Navigating brand growth, repositioning, and long-term relevance + Defining who you are, what you stand for, and how you show up.",
-    },
-    {
-      cx: 300,
-      cy: 400,
-      label: "Brand Narrative & Content",
-      dis: "Crafting compelling stories and content that bring your brand to life.",
-    },
-    {
-      cx: 300,
-      cy: 600,
-      label: "Logo & Visual Identity Design",
-      dis: "Designing  a narrative world for your brand via distinctive visuals that make your brand instantly recognizable.",
-    },
-    {
-      cx: 300,
-      cy: 800,
-      label: "Social Media & Digital Branding",
-      dis: "Platform-ready identity systems and content frameworks",
-    },
-  ],
+  // build: [
+  //   {
+  //     cx: 300,
+  //     cy: 200,
+  //     label: "Brand Evolution Strategy",
+  //     dis: "Navigating brand growth, repositioning, and long-term relevance + Defining who you are, what you stand for, and how you show up.",
+  //   },
+  //   {
+  //     cx: 300,
+  //     cy: 400,
+  //     label: "Brand Narrative & Content",
+  //     dis: "Crafting compelling stories and content that bring your brand to life.",
+  //   },
+  //   {
+  //     cx: 300,
+  //     cy: 600,
+  //     label: "Logo & Visual Identity Design",
+  //     dis: "Designing  a narrative world for your brand via distinctive visuals that make your brand instantly recognizable.",
+  //   },
+  //   {
+  //     cx: 300,
+  //     cy: 800,
+  //     label: "Social Media & Digital Branding",
+  //     dis: "Platform-ready identity systems and content frameworks",
+  //   },
+  // ],
 };
 
 import svgser from "../assets/svgser.png";
@@ -289,7 +352,7 @@ const MainServices = () => {
           end: "bottom center",
           scrub: 1,
         },
-      }
+      },
     );
   }, []);
   useEffect(() => {
@@ -365,7 +428,8 @@ const MainServices = () => {
                 color: "#F2F2F2",
                 duration: 0.5,
               });
-              gsap.to(`.label-text-${index} p`, {
+              gsap.to(`.label-text-${index} p`,
+                `.label-text-${index} li`, {
                 color: "#BFBFBF",
                 duration: 0.5,
               });
@@ -376,16 +440,18 @@ const MainServices = () => {
                   `.label-text-${index} div`,
                   `.label-text-${index} h1`,
                   `.label-text-${index} p`,
+                  
                 ],
                 {
                   color: "#F2F2F2",
                   duration: 0.5,
-                }
+                },
               );
               gsap.to(`.label-text-${index} p`, {
                 color: "#F2F2F2",
                 duration: 0.5,
               });
+              gsap.to(`.label-text-${index} li`, { color: "#F2F2F2", duration: 0.5 });
             }
           },
           onLeaveBack: () => {
@@ -395,11 +461,12 @@ const MainServices = () => {
                 `.label-text-${index} div`,
                 `.label-text-${index} h1`,
                 `.label-text-${index} p`,
+                `.label-text-${index} li`,
               ],
               {
                 color: "#676767",
                 duration: 0.5,
-              }
+              },
             );
           },
         },
@@ -422,7 +489,7 @@ const MainServices = () => {
         {/* desktop verison */}
         {/* Title */}
         <div className="flex  items-center  md:items-stretch relative flex-col -space-y-16 uppercase z-[100] text-[108px] font-[1000] text-[#F4ECE0] alinsa">
-          <div className="xl:flex hidden  relative "> 
+          <div className="xl:flex hidden  relative ">
             <h1 className="z-[100] xl:text-[108px]  ">Our</h1>
             <img
               src={wiresm}
@@ -445,7 +512,7 @@ const MainServices = () => {
           <h1 className=" xl:block hidden">Services</h1>
           <h1 className="  flex items-center  justify-center  !font-[400]   !text-xl  text-center xl:hidden  text-[#F4ECE0] alinsa"></h1>
           <div className="bg-[#242424] px-3 py-3 rounded-[76px] -bottom-16 md:-bottom-16 flex gap-2 absolute text-xs md:text-base jost text-white font-medium">
-            {["Experience", "Design", "Build"].map((item) => (
+            {["Experience", "Design"].map((item) => (
               <button
                 key={item}
                 className={`px-6 py-2 uppercase rounded-[59px] transition-all duration-300 ${
@@ -534,6 +601,7 @@ const MainServices = () => {
                       className="text-white"
                       title={item.label}
                       description={item.dis}
+                      points={item.points}
                       textRef={(el) => (textRefs.current[i] = el)}
                     />
                   </motion.div>
@@ -559,6 +627,7 @@ const MainServices = () => {
                     {item.label}
                   </h2>
                   <p className="text-[#BFBFBF] text-base">{item.dis}</p>
+                  <p className="text-[#BFBFBF] text-base">{item.points}</p>
                 </div>
               </div>
             </motion.div>
@@ -568,7 +637,7 @@ const MainServices = () => {
     </>
   );
 };
-const Label = ({ number, title, description, textRef }) => {
+const Label = ({ number, title, description, textRef, points = [] }) => {
   return (
     <div
       class={`flex gap-4 items-start text-left jost ml-[28rem] w-[40vw] ${
@@ -648,6 +717,16 @@ const Label = ({ number, title, description, textRef }) => {
         >
           {description}
         </p>
+
+        {points.length > 0 && (
+          <ul className="space-y-2">
+            {points.map((p, i) => (
+              <li key={i} className="text-[14px] text-[#BFBFBF] leading-[140%]">
+                • {p}
+              </li>
+            ))}
+          </ul>
+        )}
       </div>
     </div>
   );

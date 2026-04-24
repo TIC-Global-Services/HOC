@@ -65,6 +65,16 @@ const Careers = () => {
               </Link>
               <div className="text-[14px] md:text-[19px] font-semibold flex gap-4 md:gap-14 items-center">
                 <Link
+                  to={"/client"}
+                  className={`hover:text-black/50 ${
+                    isActiveRoute("/client")
+                      ? "text-[#060ebb] border-b-2 border-[#060ebb]"
+                      : ""
+                  }`}
+                >
+                  <h1>CLIENT</h1>
+                </Link>
+                <Link
                   to={"/Services"}
                   className={`hover:text-black/50 ${
                     isActiveRoute("/Services")
@@ -152,7 +162,7 @@ const Careers = () => {
             animate={{ x: 0, opacity: 1 }}
             transition={{ type: "spring", stiffness: 120, damping: 10 }}
           />
- {/* <motion.img
+          {/* <motion.img
             src={hand}
             className="w-[30px]   md:hidden block absolute z-[1] left-10 ml-5 top-14  "
             alt="Hand"
@@ -183,12 +193,12 @@ const Careers = () => {
                     duration: 6000, // Total loop duration
                     iterations: Infinity, // Loop forever
                     easing: "linear",
-                  }
+                  },
                 );
             }}
             id="ufo"
           />
-   {/* <motion.img
+          {/* <motion.img
             src={ufo}
             className="w-[40px] mt-20  md:hidden block absolute z-[20]   top-0"
             alt="UFO"
@@ -283,7 +293,7 @@ const JobListings = () => {
                     e.preventDefault(); // Prevents unwanted navigation issues
                     window.open(
                       "mailto:explore@hausofchaos.co?subject=Contact%20from%20Website",
-                      "_self"
+                      "_self",
                     );
                   }}
                 >
@@ -291,9 +301,10 @@ const JobListings = () => {
                 </button>
               </div>
 
-              <a href="https://www.linkedin.com/company/hausofchaos/" 
-              target="_blank"
-              > 
+              <a
+                href="https://www.linkedin.com/company/hausofchaos/"
+                target="_blank"
+              >
                 <motion.button
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}

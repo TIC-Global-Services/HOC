@@ -2,9 +2,9 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 import worldsmall from "../assets/worldsmall.png";
- 
+
 import logo2 from "../assets/logo2.png";
- 
+
 import MobileNav from "./MobileNav";
 
 import { motion } from "framer-motion";
@@ -59,6 +59,16 @@ const Contact = () => {
                 />
               </Link>
               <div className="text-[14px] md:text-[19px] font-semibold flex gap-4 md:gap-14 items-center">
+                <Link
+                  to={"/client"}
+                  className={`hover:text-black/50 ${
+                    isActiveRoute("/client")
+                      ? "text-[#060ebb] border-b-2 border-[#060ebb]"
+                      : ""
+                  }`}
+                >
+                  <h1>CLIENT</h1>
+                </Link>
                 <Link to={"/Services"} className=" hover:text-black/50">
                   <h1>SERVICES</h1>
                 </Link>
@@ -112,7 +122,6 @@ const Contact = () => {
         <JobListings scrollToBottom={scrollToBottom} />
         <JobListings2 scrollToBottom={scrollToBottom} />
 
-     
         {/* <Footer /> */}
       </div>
     </>
@@ -132,24 +141,74 @@ import svg6 from "../assets/hover/element6-min.png";
 
 import arrow from "../assets/down-arrow.png";
 const images = [
-  { src: "https://ik.imagekit.io/7da6fpjdo/hover/element3-min.png?updatedAt=1741945054680", className: "bottom-80 !w-1/4 left-0", link: "/Contact", rotate: 0 },
-  { src: "https://res.cloudinary.com/dek8wxl7o/image/upload/v1749622005/1_1_vtehrn.png", className: "bottom-10 !w-[40%] -left-10", link: "https://www.linkedin.com/company/hausofchaos/", rotate: -20 },
-  { src: "https://res.cloudinary.com/dek8wxl7o/image/upload/v1749308707/instagram_k17dfc.png", className: "bottom-[24rem] !w-[40%] left-[25rem]", link: "https://www.instagram.com/hausofchaos.co/", rotate: -20 },
-  { src: svg5, className: "bottom-28 !w-1/4 left-[30rem]", link: "/Contact", rotate: 8 },
+  {
+    src: "https://ik.imagekit.io/7da6fpjdo/hover/element3-min.png?updatedAt=1741945054680",
+    className: "bottom-80 !w-1/4 left-0",
+    link: "/Contact",
+    rotate: 0,
+  },
+  {
+    src: "https://res.cloudinary.com/dek8wxl7o/image/upload/v1749622005/1_1_vtehrn.png",
+    className: "bottom-10 !w-[40%] -left-10",
+    link: "https://www.linkedin.com/company/hausofchaos/",
+    rotate: -20,
+  },
+  {
+    src: "https://res.cloudinary.com/dek8wxl7o/image/upload/v1749308707/instagram_k17dfc.png",
+    className: "bottom-[24rem] !w-[40%] left-[25rem]",
+    link: "https://www.instagram.com/hausofchaos.co/",
+    rotate: -20,
+  },
+  {
+    src: svg5,
+    className: "bottom-28 !w-1/4 left-[30rem]",
+    link: "/Contact",
+    rotate: 8,
+  },
   // { src: fab, className: "bottom-0 !w-[40%] left-[40rem]", link: "/facebook-page", rotate: -12 },
-  { src: "https://res.cloudinary.com/dek8wxl7o/image/upload/v1749624895/Artboard_1_2440x_pxibcw.png", className: "bottom-20 !w-[40%] right-[4rem]", link: "mailto:explore@hausofchaos.co", rotate: 20 },
+  {
+    src: "https://res.cloudinary.com/dek8wxl7o/image/upload/v1749624895/Artboard_1_2440x_pxibcw.png",
+    className: "bottom-20 !w-[40%] right-[4rem]",
+    link: "mailto:explore@hausofchaos.co",
+    rotate: 20,
+  },
   // { src: dri, className: "bottom-0 !w-[40%] right-0", link: "/Contact", rotate: 10 },
-  { src: svg6, className: "bottom-80 !w-1/4 right-40", link: "/Contact", rotate: 10 },
+  {
+    src: svg6,
+    className: "bottom-80 !w-1/4 right-40",
+    link: "/Contact",
+    rotate: 10,
+  },
 ];
 const images2 = [
-  { src: "https://ik.imagekit.io/7da6fpjdo/hover/element3-min.png?updatedAt=1741945054680", className: "  bottom-20 left-0", link: "/Contact",rotate: 0 },
-  { src: "https://res.cloudinary.com/dek8wxl7o/image/upload/v1749622005/1_1_vtehrn.png", className: " w-[60%] top-[45%]  right-0", link: "https://www.linkedin.com/company/hausofchaos/" ,rotate: -20},
-  { src: "https://res.cloudinary.com/dek8wxl7o/image/upload/v1749308707/instagram_k17dfc.png", className: " w-[60%]  top-[40%] left-0", link: "https://www.instagram.com/hausofchaos.co/" ,rotate: -20},
-  { src: svg5, className: " bottom-20 right-0 ", link: "/Contact",rotate:8 },
+  {
+    src: "https://ik.imagekit.io/7da6fpjdo/hover/element3-min.png?updatedAt=1741945054680",
+    className: "  bottom-20 left-0",
+    link: "/Contact",
+    rotate: 0,
+  },
+  {
+    src: "https://res.cloudinary.com/dek8wxl7o/image/upload/v1749622005/1_1_vtehrn.png",
+    className: " w-[60%] top-[45%]  right-0",
+    link: "https://www.linkedin.com/company/hausofchaos/",
+    rotate: -20,
+  },
+  {
+    src: "https://res.cloudinary.com/dek8wxl7o/image/upload/v1749308707/instagram_k17dfc.png",
+    className: " w-[60%]  top-[40%] left-0",
+    link: "https://www.instagram.com/hausofchaos.co/",
+    rotate: -20,
+  },
+  { src: svg5, className: " bottom-20 right-0 ", link: "/Contact", rotate: 8 },
   // { src: fab, className: " bottom-60 right-0", link: "/facebook-page",rotate: -12 },
-  { src: "https://res.cloudinary.com/dek8wxl7o/image/upload/v1749624895/Artboard_1_2440x_pxibcw.png", className: "w-[60%]  bottom-40 left-20", link: "mailto:explore@hausofchaos.co", rotate: 20},
+  {
+    src: "https://res.cloudinary.com/dek8wxl7o/image/upload/v1749624895/Artboard_1_2440x_pxibcw.png",
+    className: "w-[60%]  bottom-40 left-20",
+    link: "mailto:explore@hausofchaos.co",
+    rotate: 20,
+  },
   // { src: dri, className: "bottom-72 left-10", link: "/Contact" ,rotate: 10},
-  { src: svg6, className: " top-40 left-48", link: "/Contact" ,rotate: 10},
+  { src: svg6, className: " top-40 left-48", link: "/Contact", rotate: 10 },
 ];
 
 const JobListings = ({ scrollToBottom }) => {
@@ -160,73 +219,75 @@ const JobListings = ({ scrollToBottom }) => {
   const handleClick = (link) => {
     if (!isDragging) {
       // Handle mailto links differently
-      if (link.startsWith('mailto:')) {
+      if (link.startsWith("mailto:")) {
         window.location.href = link;
       } else {
-        window.open(link, '_blank');
+        window.open(link, "_blank");
       }
     }
   };
 
   return (
-    <div ref={ref} className="w-full h-[100vh] hidden md:flex justify-center items-center relative overflow-hidden">
-    {isInView &&
-  images.map((img, index) => (
-    <motion.img
-      key={index}
-      src={img.src}
-      alt={`img-${index}`}
-      className={`absolute w-1/2 md:w-auto ${img.className}`}
-      initial={{ 
-        y: -1000, 
-        opacity: 0, 
-        rotate: img.rotate // Custom initial rotation
-      }}
-      animate={{ 
-        y: 0, 
-        opacity: 1, 
-        rotate: img.rotate, // Maintain assigned rotation
-        transition: {
-          type: "spring",
-          duration: 1.5,
-          delay: index * 0.2,
-          bounce: 0.2,
-          damping: 10,
-          stiffness: 100
-        }
-      }}
-      drag
-      dragTransition={{ bounceStiffness: 200, bounceDamping: 5 }}
-      dragConstraints={{
-        top: -400,
-        left: -1000,
-        right: 1000,
-        bottom: 200,
-      }}
-      onDragStart={() => setIsDragging(true)}
-      onDragEnd={() => setTimeout(() => setIsDragging(false), 50)}
-      onClick={() => handleClick(img.link)}
-      style={{ 
-        touchAction: "none",
-        cursor: "default",
-      }}
-      whileHover={{
-        scale: 1.1,
-        rotate: img.rotate + 5, // Slightly more tilt on hover
-        cursor: "grab"
-      }}
-      whileDrag={{
-        cursor: "grabbing"
-      }}
-    />
-  ))}
+    <div
+      ref={ref}
+      className="w-full h-[100vh] hidden md:flex justify-center items-center relative overflow-hidden"
+    >
+      {isInView &&
+        images.map((img, index) => (
+          <motion.img
+            key={index}
+            src={img.src}
+            alt={`img-${index}`}
+            className={`absolute w-1/2 md:w-auto ${img.className}`}
+            initial={{
+              y: -1000,
+              opacity: 0,
+              rotate: img.rotate, // Custom initial rotation
+            }}
+            animate={{
+              y: 0,
+              opacity: 1,
+              rotate: img.rotate, // Maintain assigned rotation
+              transition: {
+                type: "spring",
+                duration: 1.5,
+                delay: index * 0.2,
+                bounce: 0.2,
+                damping: 10,
+                stiffness: 100,
+              },
+            }}
+            drag
+            dragTransition={{ bounceStiffness: 200, bounceDamping: 5 }}
+            dragConstraints={{
+              top: -400,
+              left: -1000,
+              right: 1000,
+              bottom: 200,
+            }}
+            onDragStart={() => setIsDragging(true)}
+            onDragEnd={() => setTimeout(() => setIsDragging(false), 50)}
+            onClick={() => handleClick(img.link)}
+            style={{
+              touchAction: "none",
+              cursor: "default",
+            }}
+            whileHover={{
+              scale: 1.1,
+              rotate: img.rotate + 5, // Slightly more tilt on hover
+              cursor: "grab",
+            }}
+            whileDrag={{
+              cursor: "grabbing",
+            }}
+          />
+        ))}
 
       {/* <h1 className="absolute  cursor-pointer !bottom-2 md:bottom-10 tracking-wide text-[#0000FF]   text-center text-2xl md:text-[20px]"  onClick={scrollToBottom}>
         <img src={arrow} alt="Arrow" className="w-10" />
       </h1> */}
       {/* <div className=" absolute">Scroll Down</div> */}
     </div>
-    
   );
 };
 const JobListings2 = ({ scrollToBottom }) => {
@@ -237,7 +298,7 @@ const JobListings2 = ({ scrollToBottom }) => {
   const handleClick = (link) => {
     if (!isDragging) {
       // Handle mailto links differently
-      if (link.startsWith('mailto:')) {
+      if (link.startsWith("mailto:")) {
         window.location.href = link;
       } else {
         window.location.href = link;
@@ -257,13 +318,12 @@ const JobListings2 = ({ scrollToBottom }) => {
             src={img.src}
             alt={`img-${index}`}
             className={`absolute  w-1/2 md:w-auto  ${img.className}`}
-            initial={{ y: -1000, opacity: 0, 
-              rotate: img.rotate  }}
+            initial={{ y: -1000, opacity: 0, rotate: img.rotate }}
             animate={{
               y: 0,
               rotate: img.rotate, // Maintain assigned rotation
               opacity: 1,
-              
+
               transition: {
                 type: "spring",
                 duration: 1.5,
@@ -273,7 +333,6 @@ const JobListings2 = ({ scrollToBottom }) => {
                 stiffness: 100,
               },
             }}
-            
             drag
             dragTransition={{ bounceStiffness: 200, bounceDamping: 5 }}
             dragConstraints={{
@@ -292,7 +351,6 @@ const JobListings2 = ({ scrollToBottom }) => {
             whileHover={{
               scale: 1.1,
               cursor: "grab",
-
             }}
             whileDrag={{
               cursor: "grabbing",

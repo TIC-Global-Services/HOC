@@ -70,14 +70,18 @@ export default function QataOwnTheCourt() {
 
   useEffect(() => {
     const ctx = gsap.context(() => {
+
+      // ── ENTRY ANIMATION ──
       gsap.fromTo(
         titleRef.current,
         { opacity: 0, x: -60 },
-        { opacity: 1, x: 0, duration: 0.9, ease: "power3.out", delay: 0.05 },
+        { opacity: 1, x: 0, duration: 0.9, ease: "power3.out", delay: 0.05 }
       );
+
       itemRefs.current.forEach((el) => {
         const rot = parseFloat(el.dataset.rot);
         const delay = parseFloat(el.dataset.delay);
+
         gsap.fromTo(
           el,
           { y: -700, rotation: rot * 2.5, opacity: 0 },
@@ -88,10 +92,59 @@ export default function QataOwnTheCourt() {
             duration: 0.85,
             delay,
             ease: "bounce.out",
-          },
+            scrollTrigger: {
+              trigger: containerRef.current,
+              start: "center center",
+              toggleActions: "play none none none",
+            },
+          }
         );
+
+        // ── HOVER THROW ANIMATION ──
+        el.addEventListener("mouseenter", () => {
+          const rot = parseFloat(el.dataset.rot);
+          const section = containerRef.current.getBoundingClientRect();
+          const elRect = el.getBoundingClientRect();
+
+          // random throw direction away from current position
+          const elCenterX = elRect.left + elRect.width / 2 - section.left;
+          const elCenterY = elRect.top + elRect.height / 2 - section.top;
+          const sectionCenterX = section.width / 2;
+          const sectionCenterY = section.height / 2;
+
+          // throw away from center
+          const dirX = elCenterX < sectionCenterX ? -1 : 1;
+          const dirY = elCenterY < sectionCenterY ? -1 : 1;
+
+          const throwX = dirX * (80 + Math.random() * 120);
+          const throwY = dirY * (60 + Math.random() * 100);
+          const spinAngle = rot + (Math.random() - 0.5) * 80;
+
+          gsap.to(el, {
+            x: throwX,
+            y: throwY,
+            rotation: spinAngle,
+            scale: 1.15,
+            duration: 0.4,
+            ease: "power3.out",
+          });
+        });
+
+        el.addEventListener("mouseleave", () => {
+          const rot = parseFloat(el.dataset.rot);
+          gsap.to(el, {
+            x: 0,
+            y: 0,
+            rotation: rot,
+            scale: 1,
+            duration: 0.8,
+            ease: "elastic.out(1, 0.5)",
+          });
+        });
       });
+
     }, containerRef);
+
     return () => ctx.revert();
   }, []);
 
@@ -106,8 +159,8 @@ export default function QataOwnTheCourt() {
     >
       <h2
         ref={titleRef}
-        className="absolute left-[5%] top-[clamp(40px,8vh,90px)] z-10 opacity-0 m-0 salo font-medium 
-         text-[14px] md:text-[150px] leading-none tracking-[-0.02em] uppercase text-[#7ac9f0]"
+        className="absolute left-[5%] top-[clamp(40px,8vh,90px)] z-10 opacity-0 m-0 salo font-medium
+          text-[14px] md:text-[150px] leading-none tracking-[-0.02em] uppercase text-[#7ac9f0]"
       >
         <span style={{ display: "block" }}>OWN THE</span>
         <span style={{ display: "block" }}>COURT</span>
@@ -129,6 +182,8 @@ export default function QataOwnTheCourt() {
                   transform: `translate(-50%, ${item.y || 0}px) rotate(${item.r}deg)`,
                   transformOrigin: "center center",
                   willChange: "transform,opacity",
+                  pointerEvents: "auto",  // enable hover on each item
+                  cursor: "grab",
                 }}
               >
                 <img
@@ -144,7 +199,7 @@ export default function QataOwnTheCourt() {
                   draggable={false}
                 />
               </div>
-            )),
+            ))
           )}
         </div>
       </div>

@@ -11,11 +11,10 @@ import designImg from "../../assets/client/qatamaran/block4Top.png";
 import iconCoromandelImg from "../../assets/client/qatamaran/coromandelCoast.png";
 import glassIcon from "../../assets/client/qatamaran/heroFloat1.png";
 import craftWaterImg from "../../assets/client/qatamaran/block4Right.png";
-import topCubImage from '../../assets/client/qatamaran/syedCub.png'
-import bottomCubImage from '../../assets/client/qatamaran/syedCub.png'
-import tagImg1 from '../../assets/client/qatamaran/heroFloat3.png'
-import tagImg2 from '../../assets/client/qatamaran/heroFloat4.png'
-
+import topCubImage from "../../assets/client/qatamaran/syedCub.png";
+import bottomCubImage from "../../assets/client/qatamaran/syedCub.png";
+import tagImg1 from "../../assets/client/qatamaran/heroFloat3.png";
+import tagImg2 from "../../assets/client/qatamaran/heroFloat4.png";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -23,35 +22,64 @@ export default function QataRefinedTailoring() {
   const wrapperRef = useRef(null);
   const trackRef = useRef(null);
 
-  useEffect(() => {
-  if (window.innerWidth < 768) return;
+  // ICON REFS
+  const iconRefs = useRef([]);
 
-  const init = () => {
-    const totalScroll = trackRef.current.scrollWidth - window.innerWidth;
-
-    const ctx = gsap.context(() => {
-      gsap.to(trackRef.current, {
-        x: -totalScroll,
-        ease: "none",
-        scrollTrigger: {
-          trigger: wrapperRef.current,
-          start: "top top",
-          end: `+=${totalScroll}`,
-          pin: true,
-          pinSpacing: true,
-          scrub: 1,
-          anticipatePin: 1,
-        },
-      });
-    }, wrapperRef);
-
-    return () => ctx.revert();
+  const addIconRef = (el) => {
+    if (el && !iconRefs.current.includes(el)) {
+      iconRefs.current.push(el);
+    }
   };
 
-  // wait for DOM to fully paint before measuring
-  const raf = requestAnimationFrame(init);
-  return () => cancelAnimationFrame(raf);
-}, []);
+  useEffect(() => {
+    if (window.innerWidth < 768) return;
+
+    const track = trackRef.current;
+    const wrapper = wrapperRef.current;
+
+    // HORIZONTAL SCROLL (correct way)
+    const totalScroll = track.scrollWidth - window.innerWidth;
+
+    gsap.to(track, {
+      x: -totalScroll,
+      ease: "none",
+      scrollTrigger: {
+        trigger: wrapper,
+        start: "top top",
+        end: `+=${totalScroll}`,
+        pin: true,
+        scrub: 1,
+        anticipatePin: 1,
+      },
+    });
+
+    // MOMENTUM BASED ON SCROLLTRIGGER (IMPORTANT FIX)
+    const qs = iconRefs.current.map((el) => ({
+      el,
+      setX: gsap.quickTo(el, "x", { duration: 0.8, ease: "power3.out" }),
+      setY: gsap.quickTo(el, "y", { duration: 0.8, ease: "power3.out" }),
+      setR: gsap.quickTo(el, "rotation", { duration: 1, ease: "power3.out" }),
+    }));
+
+    ScrollTrigger.create({
+      trigger: wrapper,
+      start: "top top",
+      end: `+=${totalScroll}`,
+      scrub: true,
+      onUpdate: (self) => {
+        const velocity = self.getVelocity();
+
+        qs.forEach(({ el, setX, setY, setR }) => {
+          const speed = parseFloat(el.dataset.speed || 0.5);
+          const baseRotate = parseFloat(el.dataset.rotate || 0);
+
+          setX(velocity * speed * 0.02);
+          setY(velocity * speed * 0.01);
+          setR(baseRotate + velocity * speed * 0.01);
+        });
+      },
+    });
+  }, []);
 
   return (
     <section ref={wrapperRef}>
@@ -80,16 +108,20 @@ export default function QataRefinedTailoring() {
               {/* RIGHT PANEL */}
               <div className="relative w-1/2 h-full flex flex-col justify-between px-6 md:px-10 xl:px-14 py-10">
                 {/* FLOAT TREE */}
+
                 <img
+                  ref={addIconRef}
+                  data-speed="0.4"
                   src={treeImg}
-                  alt="tree"
+                  alt="icon"
                   className="
-                  absolute 
-                  bottom-0 left-0 
-                  w-[120px] md:w-[200px] xl:w-[280px]
-                  object-contain 
-                  z-10
-                "
+    absolute 
+    bottom-0 left-0 
+    w-[120px] md:w-[200px] xl:w-[280px]
+    object-contain 
+    z-10
+  "
+                  style={{ willChange: "transform" }}
                 />
 
                 {/* TITLE */}
@@ -129,8 +161,8 @@ export default function QataRefinedTailoring() {
             }}
           >
             {/* paragraph */}
-            <div className="md:absolute top-10 right-8 max-w-[400px]">
-              <p className="jost font-[400] text-start text-white/80 text-[14px] md:text-[18px] xl:text-[20px] leading-relaxed">
+            <div className="md:absolute top-[20%] right-[10%] max-w-[450px]">
+              <p className="jost font-[400] text-start text-white/80 text-[14px] md:text-[18px] xl:text-[26px] leading-relaxed">
                 Qatamaran is a modern prêt-à-porter menswear label rooted in the
                 rich heritage of Chennai’s tailoring tradition—where
                 craftsmanship, precision, and timeless elegance converge.
@@ -140,16 +172,23 @@ export default function QataRefinedTailoring() {
             </div>
 
             {/* image */}
-            <div className="md:absolute md:bottom-10 md:left-1/2 -translate-x-1/4">
-              <img
-                src={callOut}
-                alt="callOut_sticker"
-                className="w-[60px] md:w-[70px] xl:w-[150px] object-contain -rotate-12"
-              />
+            <div className="md:absolute md:bottom-10 md:left-[20%] -translate-x-1/4">
+              <div
+                ref={addIconRef}
+                data-speed="0.6"
+                data-rotate="-12"
+                style={{ willChange: "transform" }}
+              >
+                <img
+                  src={callOut}
+                  alt="icon"
+                  className="w-[60px] md:w-[70px] xl:w-[150px] object-contain -rotate-12"
+                />
+              </div>
             </div>
 
             {/* heading */}
-            <div className="md:absolute md:-right-80 md:-bottom-10 -translate-y-1/2 z-20">
+            <div className="md:absolute md:-right-[25%] md:-bottom-10 -translate-y-1/2 z-20">
               <h2
                 className="salo font-[400] text-white leading-none text-end"
                 style={{ fontSize: "clamp(48px, 20vw, 150px)" }}
@@ -176,7 +215,7 @@ export default function QataRefinedTailoring() {
               style={{ width: "40vw", flexShrink: 0 }}
             >
               {/* TOP-LEFT PIN */}
-              <div className="md:absolute md:top-15 md:left-10">
+              <div className="md:absolute md:top-[5%] md:left-10">
                 <div className="relative">
                   {/* pin image */}
                   <img
@@ -184,9 +223,6 @@ export default function QataRefinedTailoring() {
                     alt="tag"
                     className="w-[60px] md:w-[80px] xl:w-[290px] xl:h-[500px] object-cover -rotate-6"
                   />
-
-                  {/* optional pin dot */}
-                  <img src={tagImg1} alt="tagImage" className="absolute top-0 left-0 -translate-x-1/2 w-15 h-15 -rotate-6" />
                 </div>
               </div>
 
@@ -198,9 +234,6 @@ export default function QataRefinedTailoring() {
                     alt="tag"
                     className="w-[60px] md:w-[80px] xl:w-[290px] xl:h-[290px]  object-cover rotate-12"
                   />
-
-                  {/* optional pin dot */}
-                  <img src={tagImg2} alt="tagImage" className="absolute top-0 left-0 -translate-x-1/2 w-10 h-10 rotate-12" />
                 </div>
               </div>
             </div>
@@ -251,11 +284,17 @@ export default function QataRefinedTailoring() {
 
               {/* ── MIDDLE ── */}
               <div className="flex justify-end mt-6">
-                <img
-                  src={iconCoromandelImg}
-                  alt="iconCoromandel"
-                  className="w-[60px] md:w-[90px] xl:w-[120px] object-contain"
-                />
+                <div
+                  ref={addIconRef}
+                  data-speed="0.3"
+                  style={{ willChange: "transform" }}
+                >
+                  <img
+                    src={iconCoromandelImg}
+                    alt="icon"
+                    className="w-[60px] md:w-[90px] xl:w-[120px] object-contain"
+                  />
+                </div>
               </div>
 
               {/* ── BOTTOM TEXT CENTER ── */}
@@ -303,11 +342,18 @@ export default function QataRefinedTailoring() {
 
               {/* ICON */}
               <div className="w-full flex justify-center pb-10 md:pb-16">
-                <img
-                  src={glassIcon}
-                  alt="icon"
-                  className="w-[70px] md:w-[100px] xl:w-[140px] rotate-12 object-contain"
-                />
+                <div
+                  ref={addIconRef}
+                  data-speed="0.5"
+                  data-rotate="12"
+                  style={{ willChange: "transform" }}
+                >
+                  <img
+                    src={glassIcon}
+                    alt="icon"
+                    className="w-[70px] md:w-[100px] xl:w-[250px] rotate-12 object-contain"
+                  />
+                </div>
               </div>
             </div>
 

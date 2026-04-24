@@ -69,64 +69,74 @@ const Experience = () => {
                 />
               </Link>
               <div className="text-[14px] md:text-[19px] font-semibold flex gap-4 md:gap-14 items-center">
-                <Link 
-                  to={"/Services"} 
-                  className={`hover:text-gray-400 ${isActiveRoute('/Services') ? 'text-[#060ebb] border-b-2 border-[#060ebb]' : ''}`}
+                <Link
+                  to={"/client"}
+                  className={`hover:text-black/50 ${
+                    isActiveRoute("/client")
+                      ? "text-[#060ebb] border-b-2 border-[#060ebb]"
+                      : ""
+                  }`}
+                >
+                  <h1>CLIENT</h1>
+                </Link>
+                <Link
+                  to={"/Services"}
+                  className={`hover:text-gray-400 ${isActiveRoute("/Services") ? "text-[#060ebb] border-b-2 border-[#060ebb]" : ""}`}
                 >
                   <h1>SERVICES</h1>
                 </Link>
-                <Link 
-                  to={"/Experience"} 
-                  className={`hover:text-gray-400 ${isActiveRoute('/Experience') ? 'text-gray-400 border-b-2 border-text-gray-400' : ''}`}
+                <Link
+                  to={"/Experience"}
+                  className={`hover:text-gray-400 ${isActiveRoute("/Experience") ? "text-gray-400 border-b-2 border-text-gray-400" : ""}`}
                 >
                   <h1>EXPERIENCE LAB</h1>
                 </Link>
-                <Link 
-                  to={"/Ethos"} 
-                  className={`hover:text-gray-400 ${isActiveRoute('/Ethos') ? 'text-[#060ebb] border-b-2 border-[#060ebb]' : ''}`}
+                <Link
+                  to={"/Ethos"}
+                  className={`hover:text-gray-400 ${isActiveRoute("/Ethos") ? "text-[#060ebb] border-b-2 border-[#060ebb]" : ""}`}
                 >
                   <h1>ETHOS</h1>
                 </Link>
-                <Link 
-                  to={"/Careers"} 
-                  className={`hover:text-gray-400 ${isActiveRoute('/Careers') ? 'text-[#060ebb] border-b-2 border-[#060ebb]' : ''}`}
+                <Link
+                  to={"/Careers"}
+                  className={`hover:text-gray-400 ${isActiveRoute("/Careers") ? "text-[#060ebb] border-b-2 border-[#060ebb]" : ""}`}
                 >
                   <h1>CAREERS</h1>
                 </Link>
               </div>
               <Link to={"/Contact"}>
-            <motion.div
-              className={`py-2 px-4 rounded-full relative text-[12px] md:text-[13px] font-semibold flex items-center cursor-pointer ${
-                isToggled
-                  ? "bg-black text-white"
-                  : "bg-[#F0F0F0] text-[#060ebb]"
-              }`}
-              onClick={handleToggle}
-              initial={{ opacity: 1 }}
-              animate={{ opacity: 1 }}
-            >
-              <motion.h1
-                className={`mr-6 md:mr-9 text-center`}
-                animate={{
-                  x: isToggled ? "35px" : "0px",
-                  color: isToggled ? "#FFFFFF" : "#060ebb",
-                }}
-                transition={{ duration: 0.5 }}
-              >
-                CONTACT
-              </motion.h1>
-              <motion.img
-                className="w-[36px] md:w-[46px] h-[36px] md:h-[46px] absolute"
-                src={worldsmall}
-                alt="World"
-                animate={{
-                  x: isToggled ? "-50%" : "150%",
-                  rotate: isToggled ? 360 : 0,
-                }}
-                transition={{ duration: 0.8 }}
-              />
-            </motion.div>
-          </Link>
+                <motion.div
+                  className={`py-2 px-4 rounded-full relative text-[12px] md:text-[13px] font-semibold flex items-center cursor-pointer ${
+                    isToggled
+                      ? "bg-black text-white"
+                      : "bg-[#F0F0F0] text-[#060ebb]"
+                  }`}
+                  onClick={handleToggle}
+                  initial={{ opacity: 1 }}
+                  animate={{ opacity: 1 }}
+                >
+                  <motion.h1
+                    className={`mr-6 md:mr-9 text-center`}
+                    animate={{
+                      x: isToggled ? "35px" : "0px",
+                      color: isToggled ? "#FFFFFF" : "#060ebb",
+                    }}
+                    transition={{ duration: 0.5 }}
+                  >
+                    CONTACT
+                  </motion.h1>
+                  <motion.img
+                    className="w-[36px] md:w-[46px] h-[36px] md:h-[46px] absolute"
+                    src={worldsmall}
+                    alt="World"
+                    animate={{
+                      x: isToggled ? "-50%" : "150%",
+                      rotate: isToggled ? 360 : 0,
+                    }}
+                    transition={{ duration: 0.8 }}
+                  />
+                </motion.div>
+              </Link>
             </div>
           </div>
         </div>
@@ -211,7 +221,6 @@ const SecondSection = () => {
         </div>
         <div className="relative hidden md:flex justify-center items-center gap-10 h-[300px]">
           {/* LineLab Image */}
-      
 
           {/* Three Image */}
           <motion.img
@@ -243,7 +252,7 @@ const SecondSection = () => {
             alt="Lab"
           />
         </div>
-     
+
         <div className="relative md:hidden -mt-20 flex justify-center items-center gap-10 h-[300px]">
           {/* LineLab Image */}
           {/* <img
@@ -258,7 +267,7 @@ const SecondSection = () => {
             className="w-[95%] z-[10] absolute left-[0.5%]"
             alt="Lab"
             style={{
-              transform: `translateX(${moveImageOne(scrollY)}px)`, 
+              transform: `translateX(${moveImageOne(scrollY)}px)`,
             }}
             transition={{ duration: 0.4 }}
           />
@@ -271,7 +280,7 @@ const SecondSection = () => {
             className="w-[100%] z-[2] absolute -mt-2  right-[10%] !-mr-10"
             alt="Lab"
             style={{
-              transform: `translateX(${moveImageTwo(scrollY)}px)`, 
+              transform: `translateX(${moveImageTwo(scrollY)}px)`,
             }}
             transition={{ duration: 0.4 }}
           />
@@ -281,18 +290,14 @@ const SecondSection = () => {
             className="w-[40%] z-[1] right-[1rem] top-1/2 -mt-[5.5px] absolute"
             alt="Lab"
           /> */}
-
-
         </div>
         <h1 className="md:px-20   md:mt-0 -mt-28 md:-pt-40 px-4 text-xl md:text-2xl pb-[80px] text-white xl:w-[70%] lg:w-[77%] text-center jost">
           Born from our ethos, the Chaos Lab serves as a testing ground for the
           diverse narrative environments we experiment with and explore. Based
           in India, with plans for growth, we embrace a 'test-and-learn'
-          mindset. Our aim is to decode + disrupt conventional norms and
-          beliefs in experimental communication + experience design.
+          mindset. Our aim is to decode + disrupt conventional norms and beliefs
+          in experimental communication + experience design.
         </h1>
-
-       
       </div>
     </div>
   );
@@ -367,7 +372,7 @@ const Play = () => {
             </div>
           </div>
 
-          <div className= "w-full  py-10 relative md:hidden flex flex-col  text-center   items-center justify-center">
+          <div className="w-full  py-10 relative md:hidden flex flex-col  text-center   items-center justify-center">
             <h1 className="  alinsa   text-center text-5xl !font-medium whitespace-nowrap">
               PLAY GROUND
             </h1>
@@ -401,15 +406,21 @@ const Play = () => {
 // import playground1 from "../assets/hocpo/05080625-c986-468e-b4c1-1376ff24c56f-min.jpg";
 // import playground2 from "../assets/hocpo/54f31009-987f-4ed5-be3c-1500148ef995-min.jpg";
 // import playground3 from "../assets/hocpo/831bc518-1ffb-4c9c-a99d-356d62ccb9eb-min.jpg";
-import playgorund4 from "../assets/hocpo/TID05717-min.jpg"
-import playground5 from "../assets/hocpo/TID05724-min.jpg"
-import playground6 from "../assets/hocpo/TID05738-min.jpg"
-import playground7 from "../assets/hocpo/TID05735-min.jpg"
-import playground8 from "../assets/hocpo/TID05757-min.jpg"
+import playgorund4 from "../assets/hocpo/TID05717-min.jpg";
+import playground5 from "../assets/hocpo/TID05724-min.jpg";
+import playground6 from "../assets/hocpo/TID05738-min.jpg";
+import playground7 from "../assets/hocpo/TID05735-min.jpg";
+import playground8 from "../assets/hocpo/TID05757-min.jpg";
 
 const AutoFlipImages = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const images = [playground8, playgorund4, playground5, playground6, playground7];
+  const images = [
+    playground8,
+    playgorund4,
+    playground5,
+    playground6,
+    playground7,
+  ];
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -428,9 +439,9 @@ const AutoFlipImages = () => {
           initial={{ rotateY: index === currentIndex ? 0 : -180 }}
           animate={{ rotateY: index === currentIndex ? 0 : 180 }}
           transition={{ duration: 0.8 }}
-          style={{ 
+          style={{
             zIndex: index === currentIndex ? 1 : 0,
-            backfaceVisibility: 'hidden'
+            backfaceVisibility: "hidden",
           }}
         >
           <img
@@ -443,5 +454,3 @@ const AutoFlipImages = () => {
     </div>
   );
 };
- 
- 
