@@ -1,7 +1,7 @@
 import { useEffect, useRef } from "react";
 import gsap from "gsap";
 
-import craftImg from "../../../../assets/client/qatamaran/heroFloat3.png";
+import craftImg from "../../../../assets/client/raks/img/heroImg1.png";
 import treeLogoImg from "../../../../assets/client/qatamaran/heroFloat2.png";
 import silkCraft from "../../../../assets/client/qatamaran/silkImg.png";
 
@@ -76,7 +76,7 @@ export default function Section1() {
           style={{ willChange: "transform" }}
         >
           <img
-            src={craftImg}
+            src={raksLearnImg}
             alt="retro computer"
             className="object-contain md:-translate-x-[20%] pt-2"
             style={{ width: "clamp(110px, 12vw, 200px)" }}

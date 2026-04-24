@@ -77,7 +77,7 @@ export default function RaksOwnTheCourt() {
     >
       <h2
         ref={titleRef}
-        className="absolute left-[5%] top-[clamp(40px,8vh,90px)] z-10 opacity-0 m-0 salo font-medium text-[14px] md:text-[150px] leading-none tracking-[-0.02em] uppercase text-[#7ac9f0]"
+        className="absolute left-[5%] top-[clamp(40px,8vh,90px)] z-10 opacity-0 m-0 salo font-medium text-[14px] md:text-[150px] leading-none tracking-[-0.02em] uppercase text-[#000085]"
       >
         <span style={{ display: "block" }}>OWN THE</span>
         <span style={{ display: "block" }}>COURT</span>

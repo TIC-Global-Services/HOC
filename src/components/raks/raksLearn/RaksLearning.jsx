@@ -1,101 +1,84 @@
-import rakathonImg from "../../../assets/client/raks/img/rightImg.png";
-import raksLearnImg from "../../../assets/client/raks/img/raksLearn.png"; // circular badge/logo
-import raksImg from "../../../assets/client/raks/img/heroImg2.png"; // swap your video
+import { useEffect, useRef } from "react";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
-const NAVY_BLUE = "#000085"; 
+import Section1 from "../raksLearn/panels/Section1";
+import Section2 from "../raksLearn/panels/Section2";
+import Section3 from "../raksLearn/panels/Section3";
+import Section4 from "../raksLearn/panels/Section4";
+import Section5 from "../raksLearn/panels/Section5";
+import Section6 from "../raksLearn/panels/Section6";
+import Section7 from "../raksLearn/panels/Section7";
+import Section8 from "../raksLearn/panels/Section8";
+
+gsap.registerPlugin(ScrollTrigger);
 
 export default function RaksLearning() {
+  const wrapperRef = useRef(null);
+  const trackRef = useRef(null);
+
+  // ── Tune each section's width in vw ──
+  const sectionWidths = [120, 120, 100, 100, 100, 150, 150, 200];
+  const totalWidth = sectionWidths.reduce((a, b) => a + b, 0); 
+
+  useEffect(() => {
+    if (window.innerWidth < 768) return;
+
+    const ctx = gsap.context(() => {
+      const track = trackRef.current;
+      const wrapper = wrapperRef.current;
+
+      const totalScroll = track.scrollWidth - window.innerWidth;
+
+      gsap.to(track, {
+        x: -totalScroll,
+        ease: "none",
+        scrollTrigger: {
+          trigger: wrapper,
+          start: "top top",
+          end: `+=${totalScroll}`,
+          pin: true,
+          scrub: 1,
+          anticipatePin: 1,
+        },
+      });
+    }, wrapperRef);
+
+    return () => ctx.revert();
+  }, []);
+
+  const sections = [
+    { Component: Section1, width: sectionWidths[0] },
+    { Component: Section2, width: sectionWidths[1] },
+    { Component: Section3, width: sectionWidths[2] },
+    { Component: Section4, width: sectionWidths[3] },
+    { Component: Section5, width: sectionWidths[4] },
+    { Component: Section6, width: sectionWidths[5] },
+    { Component: Section7, width: sectionWidths[6] },
+    { Component: Section8, width: sectionWidths[7] },
+  ];
+
   return (
-    <section className="w-full min-h-screen" style={{ backgroundColor: NAVY_BLUE }}>
-      {/* ── TOP BAR ── */}
-      <div
-        className="flex items-center justify-between px-6 xl:px-10"
-        style={{ borderBottom: "2px solid white" }}
-      >
-        <h1 className="salo font-[400] md:text-[150px] text-[#FFCEC8] uppercase leading-none">
-          LEARNING REIMAGINED
-        </h1>
+    <section ref={wrapperRef}>
+      <div className="sticky top-0 h-screen overflow-visible">
 
-        <img
-          src={raksLearnImg}
-          alt="raksLearnImage"
-          className="object-contain self-start pt-2"
-          style={{ width: "clamp(110px, 14vw, 210px)" }}
-        />
-      </div>
-
-      {/* ── BOTTOM GRID ── */}
-      <div className="flex min-h-[60vh]">
-        {/* TRACKED / ANALYZED / OPTIMIZED + paddle badge */}
+        {/* TRACK */}
         <div
-          className="flex flex-col"
-          style={{ width: "38%", borderRight: "2px solid white" }}
+          ref={trackRef}
+          className="flex h-full"
+          style={{ width: `${totalWidth}vw` }}
         >
-          {/* TRACKED */}
-          <div
-            className="flex items-center px-6 xl:px-10 flex-1"
-            style={{ borderBottom: "2px solid white" }}
-          >
-            <span className="salo md:text-[120px] text-[#FFCEC8] font-[400] uppercase leading-none">
-              Class.
-            </span>
-          </div>
-
-          {/* ANALYZED */}
-          <div
-            className="flex items-center px-6 xl:px-8 flex-1"
-            style={{ borderBottom: "2px solid white" }}
-          >
-            <span className="salo md:text-[120px] text-[#FFCEC8] font-[400] uppercase leading-none">
-              Kids.
-            </span>
-          </div>
-
-          {/* OPTIMIZED  */}
-          <div
-            className="flex items-center px-6 xl:px-8 flex-1"
-            style={{ borderBottom: "2px solid white" }}
-          >
-            <span className="salo md:text-[120px] text-[#FFCEC8] font-[400] uppercase leading-none">
-                Perfected.
-            </span>
-          </div>
-
-          {/* bat */}
-          <div className="flex items-end justify-center py-6 xl:py-8">
-            <img
-              src={raksImg}
-              alt="qata tree logo"
-              className="md:w-[200px] object-contain bottom-0 bg-transparent"
-            />
-          </div>
+          {sections.map(({ Component, width }, i) => (
+            <div
+              key={i}
+              className="h-full flex-shrink-0"
+              style={{ width: `${width}vw` }}
+            >
+              <Component />
+            </div>
+          ))}
         </div>
 
-        {/*  ABOUT text */}
-        <div
-          className="flex flex-col justify-center"
-          style={{ width: "30%" }}
-        >
-          <p className="salo md:text-[60px] font-[400] text-[#FFCEC8] text-start uppercase tracking-tight mb-5">
-            ABOUT
-          </p>
-          <p className="jost capitalize font-regular md:text-[26px] text-start font-[400] text-[#FFCEC8] leading-[140%] tracking-tight border-t-2 border-b-2 border-white py-4">
-            RaK’s Institutions is a forward-thinking school rooted in the Reggio-Emilia philosophy, 
-            where children lead their own learning journeys. Through experiential, sports-integrated, and problem-based approaches.
-          </p>
-        </div>
-
-        {/* Image */}
-        <div
-          className="relative flex-1"
-          style={{ borderLeft: "2px solid white" }}
-        >
-          <img
-            src={rakathonImg}
-            alt="silkImg"
-            className="absolute inset-0 w-full h-full object-cover"
-          />
-        </div>
       </div>
     </section>
   );

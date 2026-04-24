@@ -115,12 +115,12 @@ export default function QataRefinedTailoring() {
                   src={treeImg}
                   alt="icon"
                   className="
-    absolute 
-    bottom-0 left-0 
-    w-[120px] md:w-[200px] xl:w-[280px]
-    object-contain 
-    z-10
-  "
+                  absolute 
+                  bottom-0 left-0 
+                  w-[120px] md:w-[200px] xl:w-[280px]
+                  object-contain 
+                  z-10
+                "
                   style={{ willChange: "transform" }}
                 />
 
@@ -154,14 +154,14 @@ export default function QataRefinedTailoring() {
           <div
             className="relative h-full flex flex-col py-10"
             style={{
-              width: "100vw",
+              width: "80vw",
               flexShrink: 0,
               backgroundSize: "cover",
               backgroundColor: "#1E382D",
             }}
           >
             {/* paragraph */}
-            <div className="md:absolute top-[20%] right-[10%] max-w-[450px]">
+            <div className="md:absolute top-[30%] right-[30%] max-w-[500px]">
               <p className="jost font-[400] text-start text-white/80 text-[14px] md:text-[18px] xl:text-[26px] leading-relaxed">
                 Qatamaran is a modern prêt-à-porter menswear label rooted in the
                 rich heritage of Chennai’s tailoring tradition—where
@@ -188,7 +188,7 @@ export default function QataRefinedTailoring() {
             </div>
 
             {/* heading */}
-            <div className="md:absolute md:-right-[25%] md:-bottom-10 -translate-y-1/2 z-20">
+            <div className="md:absolute md:-right-[22%] md:-bottom-10 -translate-y-1/2 md:translate-x-[10%] z-20">
               <h2
                 className="salo font-[400] text-white leading-none text-end"
                 style={{ fontSize: "clamp(48px, 20vw, 150px)" }}
