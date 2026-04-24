@@ -7,19 +7,18 @@ import cd from "../../assets/client/page/clientsCd.png";
 
 const ClientsCurious = () => {
   const [flipped, setFlipped] = useState(false);
+  const [hovered, setHovered] = useState(false);
 
   return (
     <section className="flex flex-col items-center justify-center text-center px-6 py-10 mt-6 md:mt-20 md:py-20">
 
-      {/* TEXT CONTENT WRAPPER */}
+      {/* TEXT */}
       <div className="leading-none">
-        {/* Heading */}
-        <h2 className="text-[50px] md:text-[150px] font-normal tracking-tight salo text-[#0000FF]">
+        <h2 className="text-[50px] md:text-[150px] salo text-[#0000FF]">
           CURIOUS ?
         </h2>
 
-        {/* Subtext */}
-        <p className="text-[20px] md:text-[60px] leading-none font-medium jost tracking-tighter text-gray-700">
+        <p className="text-[20px] md:text-[60px] jost text-gray-700">
           let’s build your next big idea.
         </p>
       </div>
@@ -28,23 +27,26 @@ const ClientsCurious = () => {
       <div
         className="relative mt-10 md:mt-[10%] right-[5%] cursor-pointer"
         onClick={() => setFlipped(!flipped)}
+        onMouseEnter={() => setHovered(true)}
+        onMouseLeave={() => setHovered(false)}
       >
 
-        {/* CD (behind) */}
-        <img
+        {/* CD ANIMATION */}
+        <motion.img
           src={cd}
           alt="CD"
-          className="
-            absolute top-1/2 right-[-60px]
-            w-[180px] md:w-[450px]
-            -translate-y-1/2 translate-x-[50%]
-            z-0
-          "
+          className="absolute top-0 right-0 w-[180px] md:w-[500px] -translate-y-1/2 z-0"
+          initial={{ x: 0, rotate: 0 }}
+          animate={{
+            x: hovered ? 320 : 0,   // slide out
+            rotate: hovered ? 180 : 0, // rotate
+          }}
+          transition={{ duration: 0.6, ease: "easeOut" }}
         />
 
-        {/* Flip Card */}
+        {/* FLIP CARD */}
         <motion.div
-          className="relative w-[260px] md:w-[500px] aspect-square"
+          className="relative w-[260px] md:w-[500px] aspect-square z-10"
           style={{ perspective: "1000px" }}
         >
           <motion.div
@@ -85,7 +87,6 @@ const ClientsCurious = () => {
         </motion.div>
 
       </div>
-
     </section>
   );
 };

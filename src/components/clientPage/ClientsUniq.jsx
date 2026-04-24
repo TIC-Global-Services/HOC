@@ -44,7 +44,7 @@ const ClientsUniq = () => {
                   -translate-y-1/2
                   z-0
                   transition-all duration-500
-                  group-hover:translate-x-[60%]
+                  group-hover:translate-x-[70%]
                   group-hover:rotate-[180deg]
                 "
               />
