@@ -17,7 +17,9 @@ export default function SyedTailorHeritage() {
   const iconRefs = useRef([]);
   iconRefs.current = [];
 
-  const addIconRef = (el) => { if (el) iconRefs.current.push(el); };
+  const addIconRef = (el) => {
+    if (el) iconRefs.current.push(el);
+  };
 
   useEffect(() => {
     if (window.innerWidth < 768) return;
@@ -84,7 +86,6 @@ export default function SyedTailorHeritage() {
     <section ref={wrapperRef}>
       <div className="sticky top-0 h-screen overflow-hidden">
         <div ref={trackRef} className="flex h-full">
-
           {/* ── BLOCK 1 (70vw) ── */}
           <div
             className="relative h-full flex-shrink-0"
@@ -97,113 +98,161 @@ export default function SyedTailorHeritage() {
           >
             <img
               src={tailorHeritageImg}
-              alt="tailor heritage"
+              alt=""
               className="absolute inset-0 w-full h-full object-cover"
             />
           </div>
 
           {/* ── BLOCK 2 (100vw) ── */}
           <div
-            className="relative h-full flex flex-col text-start justify-center px-10 flex-shrink-0"
+            className="relative h-full flex flex-col justify-center flex-shrink-0"
             style={{
               width: "100vw",
+              padding: "0 5%",
               backgroundImage: `url(${grid})`,
               backgroundSize: "cover",
               backgroundColor: "#EBE2CE",
             }}
           >
-            {/* ICON — button */}
+            {/* BUTTON ICON */}
             <div
               ref={addIconRef}
               data-speed="0.4"
               data-rotate="0"
-              className="absolute inset-0 top-[8%] md:translate-x-[38%]"
-              style={{ willChange: "transform" }}
+              className="absolute"
+              style={{
+                top: "10%",
+                left: "35%",
+                width: "clamp(80px,8vw,140px)",
+                willChange: "transform",
+              }}
             >
-              <img src={buttonImg} alt="icon" className="w-[120px] object-contain" />
+              <img src={buttonImg} className="w-full" />
             </div>
 
-            {/* heading */}
-            <h2 className="text-[80px] md:translate-x-36 md:text-[160px] xl:text-[200px] salo font-[400] leading-none text-[#262666]">
+            {/* HEADING */}
+            <div className="absolute top-[20%] left-[10%] text-start">
+            <h2
+              className="salo tracking-wider text-[#262666] leading-none"
+              style={{
+                fontSize: "clamp(60px,12vw,200px)",
+                maxWidth: "70%",
+              }}
+            >
               TAILOR <br /> HERITAGE
             </h2>
+            </div>
 
-            {/* bottom text */}
-            <p className="salo uppercase md:translate-x-36 font-bold tracking-tight text-[20px] md:text-[40px] text-[#262666] mt-10">
+            {/* SUB TEXT */}
+            <div className="absolute top-[80%] left-[10%] text-start">
+            <p
+              className="salo uppercase font-bold text-[#262666] leading-none"
+              style={{
+                fontSize: "clamp(18px,2.5vw,40px)",
+                marginTop: "2%",
+              }}
+            >
               Crafted <br /> In Heritage
             </p>
+            </div>
 
-            {/* right side para */}
-            <div className="absolute right-0 max-w-[485px]">
-              <p className="jost capitalize text-[#262666] tracking-normal text-[14px] md:text-[26px]">
-                Syed Bawkher is a heritage tailoring house built on generations
-                of craftsmanship—where tradition, precision, and timeless style
-                come together. Designed for the modern gentleman, it offers
-                bespoke garments, refined detailing, and an experience that goes
-                beyond just dressing.
+            {/* RIGHT PARA */}
+            <div
+              className="absolute"
+              style={{
+                right: "5%",
+                top: "50%",
+                transform: "translateY(-50%)",
+                maxWidth: "40%",
+              }}
+            >
+              <p
+                className="jost text-start capitalize text-[#262666]"
+                style={{
+                  fontSize: "clamp(14px,2vw,26px)",
+                  lineHeight: "140%",
+                }}
+              >
+                Syed Bawkher is a heritage tailoring house built on generations of craftsmanship—where tradition, 
+                precision, and timeless style come together. Designed for the modern gentleman, 
+                it offers bespoke garments, refined detailing, and an experience that goes beyond just dressing.
               </p>
             </div>
 
-            {/* ICON — syed logo */}
+            {/* LOGO */}
             <div
               ref={addIconRef}
               data-speed="0.3"
               data-rotate="-6"
-              className="md:translate-x-[40%]"
-              style={{ willChange: "transform" }}
+              className="absolute bottom-[5%] left-[40%]"
+              style={{
+                marginTop: "4%",
+                width: "clamp(120px,8vw,200px)",
+                willChange: "transform",
+              }}
             >
-              <img src={syedLogo} alt="icon" className="w-[195px] object-contain" />
+              <img src={syedLogo} className="w-full" />
             </div>
 
-            {/* bottom heading */}
-            <div className="absolute -right-[15%] bottom-0">
-              <h2 className="text-[80px] md:translate-x-[30%] md:text-[70px] xl:text-[150px] salo font-[400] leading-none text-white">
-                TIMEL<span className="text-[#262666]">ESS CRAFT</span>
+            {/* BOTTOM TITLE */}
+            <div
+              className="absolute"
+              style={{
+                bottom: "5%",
+                right: "-22%",
+              }}
+            >
+              <h2
+                className="salo tracking-normal text-white leading-none"
+                style={{
+                  fontSize: "clamp(50px,8vw,150px)",
+                }}
+              >
+                TIMEL<span style={{ color: "#262666" }}>ESS CRAFT</span>
               </h2>
+              <div className="bg-[#EBE2CE] "></div>
             </div>
           </div>
 
           {/* ── BLOCK 3 (30vw) ── */}
           <div
-            className="flex-shrink-0 flex items-start justify-end pr-[clamp(12px,2vw,40px)] pt-[clamp(12px,2vw,40px)]"
+            className="flex-shrink-0 flex items-start justify-center"
             style={{
               width: "30vw",
-              backgroundSize: "cover",
+              padding: "2%",
+              backgroundImage: `url(${grid})`,
               backgroundColor: "#ffffff",
             }}
           >
-            <div className="relative flex flex-col items-end w-full">
+            <div className="relative flex flex-col items-start w-full">
+              {/* MAIN IMAGE */}
+              <img
+                src={syedBawkherImg}
+                className="object-contain"
+                style={{
+                  top: "50%",
+                  right: "20%",
+                  width: "clamp(120px,20vw,300px)",
+                  transform: "rotate(-10deg)",
+                }}
+              />
 
-              {/* ICON — main image */}
-              <div
-              >
-                <img
-                  src={syedBawkherImg}
-                  alt="syed-image"
-                  className="object-contain -rotate-[20deg]"
-                  style={{ width: "clamp(120px, 25vw, 400px)" }}
-                />
-              </div>
-
-              {/* ICON — tag */}
+              {/* TAG */}
               <div
                 ref={addIconRef}
                 data-speed="0.25"
-                data-rotate="00"
                 className="absolute"
-                style={{ top: "10%", right: "5%", willChange: "transform" }}
+                style={{
+                  top: "5%",
+                  right: "90%",
+                  width: "clamp(60px,10vw,200px)",
+                  willChange: "transform",
+                }}
               >
-                <img
-                  src={tagElegantImg}
-                  alt="icon"
-                  className="md:-translate-x-[170%] object-contain"
-                  style={{ width: "clamp(60px, 12vw, 200px)" }}
-                />
+                <img src={tagElegantImg} className="w-full -rotate-[20deg]" />
               </div>
-
             </div>
           </div>
-
         </div>
       </div>
     </section>

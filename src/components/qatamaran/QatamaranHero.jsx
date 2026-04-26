@@ -77,7 +77,6 @@ const QatamaranHero = () => {
           className="relative w-full h-[500px] md:h-screen md:w-1/2 overflow-hidden flex-shrink-0"
           style={{
             backgroundImage: `url(${grid})`,
-            backgroundSize: "cover",
           }}
         >
           <img src={img1} className="float-1 absolute top-[10%] left-[10%] w-[50px] md:w-[80px] xl:w-[100px]" />
@@ -102,7 +101,7 @@ const QatamaranHero = () => {
         <div className="w-full md:w-1/2 flex items-center px-6 md:px-10 xl:px-14 py-10 md:py-0">
 
           <motion.p
-            className="jost capitalize text-start font-[500] tracking-tight text-black max-w-[656px] leading-[150%] text-[14px] md:text-[18px] xl:text-[22px] 2xl:text-[26px]"
+            className="jost capitalize text-start font-[500] tracking-tight text-black max-w-[656px] leading-[160%] text-[14px] md:text-[18px] xl:text-[26px] 2xl:text-[26px]"
             variants={containerVariants}
             initial="hidden"
             animate="visible"
@@ -110,9 +109,9 @@ const QatamaranHero = () => {
             <AnimatedText text="Qatamaran is a prêt-à-porter menswear label rooted in Chennai's rich tailoring heritage, designed for the modern gentleman who" />
 
             {/* highlighted span */}
-            <span className="inline-block overflow-hidden align-bottom mx-[0.25em]">
+            <span className="inline-block overflow-hidden align-bottom">
               <motion.span
-                className="inline-block salo font-[500] text-[#1E382D] text-[18px] md:text-[26px] xl:text-[32px] 2xl:text-[40px]"
+                className="inline-block salo font-[500] text-[#1E382D] text-[18px] md:text-[26px] xl:text-[40px] 2xl:text-[40px]"
                 variants={wordVariants}
               >
                 balances luxury with simplicity.

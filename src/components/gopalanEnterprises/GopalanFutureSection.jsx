@@ -21,7 +21,7 @@ const GopalanFuture = () => {
 
       {/* BOTTOM PARAGRAPH */}
       <div className="flex flex-col justify-start">
-      <p className="jost capitalize text-start text-[16px] font-[500] md:text-[26px] max-w-[800px] leading-[140%] tracking-tight text-black">
+      <p className="jost capitalize text-start text-[16px] font-[500] md:text-[26px] max-w-[850px] leading-[140%] tracking-tight text-black">
         A brand transformation shaped by legacy and growth—translating four decades of trust into a <span className="salo md:text-[44px] text-[#E96428]">cohesive identity</span> for a multi-vertical future. 
         An identity evolution rooted in heritage, designed to unify diverse verticals under a clear, future-ready visual system.
       </p>

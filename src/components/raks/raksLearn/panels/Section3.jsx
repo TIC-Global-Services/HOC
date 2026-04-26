@@ -18,11 +18,11 @@ const Section3 = () => {
   />
 
   {/* LEFT IMAGE */}
-  <div className="w-1/2 h-full md:ml-[10%] relative overflow-hidden">
+  <div className="w-1/2 h-full md:ml-[10%] relative overflow-visible">
     <img
       src={emPowerImg}
       alt="visual"
-      className="absolute inset-0 w-full h-full object-contain"
+      className="absolute inset-0 w-full h-full object-cover"
     />
   </div>
 
@@ -31,7 +31,7 @@ const Section3 = () => {
 
     <p className="jost text-black leading-[120%] text-start font-[500] tracking-tight
       text-[clamp(16px,4vw,60px)]">
-      "Empowering Voices. <br /> Inspiring Minds. <br /> Shaping Future."
+      "Empowering Voices. <br /> Inspiring Minds. <br /> Shaping The Future."
     </p>
 
     <img

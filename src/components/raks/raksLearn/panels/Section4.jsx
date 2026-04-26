@@ -9,7 +9,7 @@ import grid from "../../../../assets/client/padlr/img/checkBg.png";
 
 const Section4 = () => {
   return (
-    <section className="w-full h-screen flex relative overflow-hidden" 
+    <section className="w-full h-screen flex relative overflow-visible" 
     style={{
           backgroundImage: `url(${grid})`,
           backgroundSize: "cover",
@@ -62,11 +62,11 @@ const Section4 = () => {
         <img
           src={learnCallouts}
           alt="icon"
-          className="absolute object-contain"
+          className="absolute object-contain -rotate-6"
           style={{
             top: "clamp(20px,4vw,60px)",
             right: "clamp(20px,4vw,60px)",
-            width: "clamp(50px,12vw,200px)",
+            width: "clamp(50px,14vw,200px)",
           }}
         />
 
@@ -74,11 +74,11 @@ const Section4 = () => {
         <img
           src={viVidCallouts}
           alt="icon"
-          className="absolute object-contain"
+          className="absolute object-contain -rotate-12"
           style={{
-            bottom: "clamp(20px,4vw,60px)",
-            left: "clamp(20px,4vw,60px)",
-            width: "clamp(50px,12vw,200px)",
+            bottom: "5vh",
+            left: "-5vh",
+            width: "clamp(50px,18vw,300px)",
           }}
         />
 
@@ -90,7 +90,7 @@ const Section4 = () => {
           style={{
             bottom: "clamp(20px,4vw,60px)",
             right: "clamp(20px,4vw,60px)",
-            width: "clamp(50px,12vw,200px)",
+            width: "clamp(50px,18vw,300px)",
           }}
         />
 

@@ -24,8 +24,8 @@ const SyedHero = () => {
 
         {/* LEFT */}
         <div
-          className="relative w-full h-[500px] md:h-screen md:w-1/2 overflow-hidden flex-shrink-0 border-2"
-          style={{ backgroundImage: `url(${grid})`, backgroundSize: "cover" }}
+          className="relative w-full h-[500px] md:h-screen md:w-1/2 overflow-hidden flex-shrink-0"
+          style={{ backgroundImage: `url(${grid})`, }}
         >
           <img src={img1} className="float-1 absolute top-[10%] left-[10%] w-[50px] md:w-[80px] xl:w-[100px]" />
           <img src={img2} className="float-2 absolute top-[15%] right-[15%] w-[60px] md:w-[100px] xl:w-[120px]" />
@@ -59,7 +59,7 @@ const SyedHero = () => {
               craftsmanship and contemporary
             </AnimatedWord>
             {" "}
-            <AnimatedText text="technique, they epitomise the cardinal values of transparency, quality, and excellence in the service of the impeccable gentleman." />
+            <AnimatedText text="technique, they epitomise the cardinal values of transparency, quality, and excellence in the service of the impeccable gentleman." /> <br />
             <br />
             <AnimatedText text="Haus of Chaos created an analogue brochure for Syed Bawkher & Co., as a piece of literature to be remembered for its textual and textural richness. A philosophy of" />
             {" "}

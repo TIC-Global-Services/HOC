@@ -8,7 +8,7 @@ import grid from "../../assets/client/padlr/img/checkBg.png";
 
 const PadlrHero = () => {
   return (
-    <section className="w-full min-h-screen flex flex-col lg:flex-row">
+    <section className="w-full relative min-h-screen flex flex-col lg:flex-row">
       <style>{`
         @keyframes floatY {
           0%, 100% { transform: translateY(0px) rotate(var(--r)); }
@@ -23,7 +23,7 @@ const PadlrHero = () => {
       {/* LEFT */}
       <div
         className="relative w-full lg:w-[55%] xl:w-[50%] h-[500px] sm:h-[600px] lg:h-screen overflow-hidden flex-shrink-0"
-        style={{ backgroundImage: `url(${grid})`, backgroundSize: "cover" }}
+        style={{ backgroundImage: `url(${grid})`, }}
       >
         <img src={img2} className="float-1 absolute top-[10%] left-[8%] w-[50px] sm:w-[70px] md:w-[90px] lg:w-[110px]" />
         <img src={img1} className="float-2 absolute top-[12%] right-[10%] w-[60px] sm:w-[80px] md:w-[100px] lg:w-[120px]" />
@@ -47,27 +47,27 @@ const PadlrHero = () => {
       </div>
 
       {/* RIGHT */}
-      <div className="w-full lg:w-[45%] xl:w-[50%] flex items-center px-6 sm:px-10 lg:px-12 py-10 lg:py-0">
+      <div className="w-full lg:w-[45%] xl:w-[55%] flex items-center px-6 sm:px-10 lg:px-12 py-10 lg:py-0">
         <motion.p
           className="jost text-black text-start font-[500] leading-[150%]"
-          style={{ fontSize: "clamp(14px, 1.5vw, 26px)" }}
+          style={{ fontSize: "clamp(14px, 1.7vw, 26px)" }}
           variants={containerVariants}
           initial="hidden"
           animate="visible"
         >
           <AnimatedText text="Established In 2025, Padlr Is Set To Be Chennai's Premier Padel And" />
           {" "}
-          <AnimatedWord className="text-[#060EBB] font-[400] salo text-[clamp(18px,2vw,40px)]">Pickleball</AnimatedWord>
+          <AnimatedWord className="text-[#060EBB] font-[400] salo text-[clamp(18px,2.5vw,40px)]">Pickleball</AnimatedWord>
           {" "}
           <AnimatedText text="Destination. As A High-Performance, Tech-Forward Arena, Padlr Takes The Demands Of These Racquet Sports Seriously, With Ultra-Panoramic Padel Courts Licensed By" />
           {" "}
-          <AnimatedWord className="text-[#060EBB] font-[400] salo text-[clamp(18px,2vw,40px)]">SkyPadel</AnimatedWord>
+          <AnimatedWord className="text-[#060EBB] font-[400] salo text-[clamp(18px,2.5vw,40px)]">SkyPadel</AnimatedWord>
           {" "}
           <AnimatedText text=", Spain, Outfitted With Mondo Turf The First Of Its Kind In Chennai And Semi-Indoor Pickleball Courts Engineered To IPA Standards." />
           <br />
           <AnimatedText text="When Haus Of Chaos Partnered With Padlr, It Was Game, Set And A Match Like No Other. The Score? One Suave, Bold Identity In The Spirit Of All Things" />
           {" "}
-          <AnimatedWord className="text-[#060EBB] font-[400] salo text-[clamp(18px,2vw,40px)]">"Seriously Playful"</AnimatedWord>.
+          <AnimatedWord className="text-[#060EBB] font-[400] salo text-[clamp(18px,2.5vw,40px)]">"Seriously Playful"</AnimatedWord>.
         </motion.p>
       </div>
 

@@ -4,6 +4,8 @@ import gsap from "gsap";
 import batlogo from "../../../../assets/client/padlr/img/batIcon.png";
 import grid from "../../../../assets/client/padlr/img/checkBg.png";
 import rightImg from "../../../../assets/client/padlr/img/courtPanelImg.png";
+import courtImg2 from "../../../../assets/client/padlr/img/courtImg2.png";
+import courtImg3 from "../../../../assets/client/padlr/img/courtImg3.png";
 
 export default function Panel2() {
   const iconRefs = useRef([]);
@@ -51,26 +53,99 @@ export default function Panel2() {
 
   return (
     <section
-      className="w-full min-h-screen flex justify-center relative overflow-visible bg-[#8FC4E9]"
+      className="h-screen w-full flex relative overflow-hidden"
       style={{
         backgroundImage: `url(${grid})`,
         backgroundSize: "cover",
+        backgroundColor: "#8FC4E9",
       }}
     >
-      {/* CENTER CONTAINER */}
-      <div className="w-full max-w-[1440px] 2xl:max-w-[1600px] flex">
+      <div className="w-full h-full flex">
+        {/* LEFT PANEL */}
+        <div className="w-1/2 h-full flex flex-col justify-between relative">
+          {/* TOP */}
+          <div className="relative flex justify-end">
+            {/* SWATCH */}
+            <div
+              ref={addIconRef}
+              data-speed="0.3"
+              data-rotate="0"
+              className="absolute"
+              style={{
+                top: 0,
+                left: 0,
+                width: "clamp(140px,20vw,360px)",
+                willChange: "transform",
+              }}
+            >
+              <img src={courtImg2} alt="" className="w-full" />
+            </div>
 
-        {/* LEFT SIDE */}
-        <div className="w-1/2 h-screen flex flex-col justify-center px-6 md:px-10 xl:px-14">
+            {/* TITLE */}
+            <h2
+              className="absolute translate-y-[20%] left-[30%] salo text-start text-white leading-none"
+              style={{ fontSize: "clamp(80px,12vw,200px)" }}
+            >
+              COURT <br /> SKY
+            </h2>
+          </div>
 
+          {/* BOTTOM */}
+          <div className="flex -translate-y-[4%] justify-between">
+            {/* TEXT */}
+            <div className="max-w-[50%] px-[5%]">
+              <p
+                className="salo text-start text-white tracking-tight leading-none"
+                style={{ fontSize: "clamp(22px,3.5vw,50px)" }}
+              >
+                BOLD, <br />
+                RICH, AND <br />
+                UNAPOLOGETIC.
+              </p>
+
+              <p className="jost text-start text-white/80 mt-[6%] text-[clamp(12px,1.2vw,24px)]">
+                Hex Precision
+              </p>
+              <p className="jost text-start text-white/80 text-[clamp(12px,1.2vw,24px)]">
+                RGB Consistency
+              </p>
+            </div>
+
+            {/* IMAGE */}
+            <div
+              ref={addIconRef}
+              data-speed="0.6"
+              data-rotate="0"
+              className=""
+              style={{ willChange: "transform", }}
+            >
+              <img
+                src={courtImg3}
+                alt=""
+                style={{
+                  width: "clamp(120px,14vw,300px)",
+                  transform: "rotate(-5deg)",
+                }}
+              />
+            </div>
+          </div>
+        </div>
+
+        {/* RIGHT PANEL */}
+        <div className="w-1/2 relative flex items-center justify-center px-[5%]">
+          {/* TEXT */}
           <p
-            className="jost text-start font-[400] capitalize text-white/90 leading-[120%] tracking-tight max-w-[550px]
-            text-[16px] md:text-[22px] xl:text-[28px] 2xl:text-[34px]"
+            className="jost text-start capitalize tracking-tight text-white/90 max-w-[80%]"
+            style={{
+              fontSize: "clamp(16px,2vw,26px)",
+              lineHeight: "160%",
+            }}
           >
-            Padlr is a modern destination built around the fast-growing culture of
-            padel—where sport, community, and lifestyle come together.
-            Designed for both Performance and Experience, it offers premium courts,
-            vibrant social energy, and a space that goes beyond just playing the game
+            Padlr is a modern destination built around the fast-growing culture
+            of padel—where sport, community, and lifestyle come together.
+            Designed for both <span className="salo font-[400] text-[40px]">Performance and Experience</span>, it offers premium
+            courts, vibrant social energy, and a space that goes beyond just
+            playing the game
           </p>
 
           {/* LOGO */}
@@ -78,34 +153,16 @@ export default function Panel2() {
             ref={addIconRef}
             data-speed="0.5"
             data-rotate="-5"
-            data-rotate-change="20"
+            className="absolute right-[5%] bottom-[10%]"
             style={{ willChange: "transform" }}
           >
             <img
               src={batlogo}
               alt="logo"
-              className="mt-6 xl:mt-8 xl:translate-x-[150%] w-[140px] md:w-[160px] xl:w-[180px] 2xl:w-[200px] object-contain"
+              style={{ width: "clamp(120px,10vw,200px)" }}
             />
           </div>
-
         </div>
-
-        {/* RIGHT SIDE */}
-        <div className="w-1/2 relative h-screen overflow-visible">
-
-          {/* IMAGE */}
-          <div
-            className="absolute top-0 right-[-5%] h-full"
-          >
-            <img
-              src={rightImg}
-              alt="energy"
-              className="h-full w-auto max-w-none object-cover"
-            />
-          </div>
-
-        </div>
-
       </div>
     </section>
   );

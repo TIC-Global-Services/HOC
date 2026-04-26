@@ -26,7 +26,7 @@ const RaksHero = () => {
         {/* LEFT */}
         <div
           className="relative w-full h-[500px] md:h-screen md:w-1/2 overflow-hidden flex-shrink-0 border-2"
-          style={{ backgroundImage: `url(${grid})`, backgroundSize: "cover" }}
+          style={{ backgroundImage: `url(${grid})`, }}
         >
           <img src={img2} className="float-1 absolute top-[10%] left-[10%] w-[50px] md:w-[80px] xl:w-[100px]" />
           <img src={img1} className="float-2 absolute top-[15%] right-[15%] w-[60px] md:w-[100px] xl:w-[120px]" />

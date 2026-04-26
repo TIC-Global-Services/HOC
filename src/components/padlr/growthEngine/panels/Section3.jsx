@@ -5,6 +5,7 @@ import visualImg from "../../../../assets/client/padlr/img/visualImg.png";
 import spinIcon from "../../../../assets/client/padlr/img/heroImg1.png";
 import palatteImg from "../../../../assets/client/padlr/img/courtImg2.png";
 import attachIcon from "../../../../assets/client/padlr/img/attachIcon.png";
+import grid from "../../../../assets/client/padlr/img/checkBg.png";
 
 const Section3 = () => {
   const iconRefs = useRef([]);
@@ -51,71 +52,73 @@ const Section3 = () => {
   }, []);
 
   return (
-    <section className="relative w-full h-screen flex bg-white overflow-hidden">
-
+    <section className="relative h-screen flex bg-white overflow-hidden">
       {/* LEFT */}
-      <div className="relative w-1/2 h-full">
+      <div className="relative w-[40%] h-full">
         <img
           src={visualImg}
-          alt="visualImg"
-          className="absolute top-0 left-0 w-full h-full object-contain"
+          alt="visual"
+          className="absolute inset-0 left-0 w-full h-full object-contain object-[top]"
         />
       </div>
 
       {/* RIGHT */}
-      <div className="w-1/2 h-full flex flex-col justify-between px-6 md:px-10 xl:px-16 2xl:px-20 py-10">
-
-        {/* TOP ICON (momentum) */}
-        <div
-          ref={addIconRef}
-          data-speed="0.8"
-          data-rotate="0"
-          className="md:translate-x-[70%]"
-          style={{ willChange: "transform" }}
-        >
-          <img
-            src={spinIcon}
-            alt="icon"
-            className="w-[60px] md:w-[80px] xl:w-[150px] 2xl:w-[120px] object-contain"
-          />
-        </div>
-
-        {/* TEXT */}
-        <div className="max-w-[420px] md:max-w-[500px] xl:max-w-[600px]">
-          <p className="jost font-[500] text-start capitalize text-black text-[14px] md:text-[18px] xl:text-[25px] 2xl:text-[26px] leading-[130%] tracking-tight">
-            Maintains visual balance with neutral tones inspired by real court
-            elements. Communicates precision and modernity through a
-            distinctive, high-impact typeface
-          </p>
-        </div>
-
-        {/* BOTTOM IMAGE + PIN (momentum) */}
-        <div className="flex justify-center">
+      <div className="w-[60%] h-full flex flex-col justify-end items-center px-[4%] py-[4%]">
+          {/* TOP ICON */}
           <div
-            className="relative inline-block"
+            ref={addIconRef}
+            data-speed="0.8"
+            data-rotate="0"
+            className="flex justify-end"
+            style={{ willChange: "transform" }}
           >
-
-            {/* PIN */}
             <img
-              src={attachIcon}
-              alt="pin"
-              className="absolute -top-4 -left-4 md:-top-6 md:-left-6 xl:-top-[5%] xl:-left-[26%] w-[30px] md:w-[40px] xl:w-[50px] z-10"
-            />
-
-            {/* MAIN IMAGE */}
-            <img
-              src={palatteImg}
-              alt="palatteImg"
-              className="w-full max-w-[220px] md:max-w-[260px] xl:-translate-y-[20%] xl:max-w-[300px] 2xl:max-w-[380px] object-contain -rotate-[30deg]"
+              src={spinIcon}
+              alt="icon"
+              className="w-[clamp(60px,6vw,110px)] object-contain"
             />
           </div>
-        </div>
 
+          {/* TEXT */}
+          <div className="max-w-[80%]">
+            <p className="jost text-start capitalize font-[500] text-black tracking-tight leading-[130%] text-[clamp(14px,2vw,26px)]">
+              Maintains visual balance with neutral tones inspired by real court
+              elements. Communicates precision and modernity through a
+              distinctive, high-impact typeface
+            </p>
+          </div>
+
+          {/* BOTTOM IMAGE */}
+          <div className="flex justify-center">
+            <div className="relative">
+              {/* PIN */}
+              <img
+                src={attachIcon}
+                alt="pin"
+                className="absolute z-10"
+                style={{
+                  top: "-10%",
+                  left: "-20%",
+                  width: "clamp(28px,2.5vw,55px)",
+                }}
+              />
+
+              {/* MAIN IMAGE */}
+              <img
+                src={palatteImg}
+                alt="palette"
+                className="object-contain"
+                style={{
+                  width: "clamp(180px,10vw,300px)",
+                  transform: "rotate(-12deg)",
+                }}
+              />
+            </div>
+          </div>
       </div>
 
       {/* BOTTOM BAR */}
-      <div className="absolute bottom-0 left-0 w-full py-5 bg-[#0606BC]" />
-
+      <div className="absolute bottom-0 left-0 w-full h-[5%] bg-[#0606BC]" />
     </section>
   );
 };

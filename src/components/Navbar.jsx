@@ -47,12 +47,12 @@ const Navbar = () => {
             isSection2 ? "bg-white text-black" : "text-[#000000]"
           } transition-all py-2 duration-700`}
         >
-          <div className="flex py-4 jost px-4 md:px-10 justify-between items-start">
+          <div className="flex py-2 jost px-4 md:px-10 justify-between items-start">
             {/* Logo */}
             <Link to={"/"}>
               <img
                 src={logo2}
-                className="w-[80px] md:w-[110px] transition-all duration-700"
+                className="w-[80px] transition-all duration-700"
                 alt="Logo"
               />
             </Link>
@@ -62,7 +62,7 @@ const Navbar = () => {
               <Link
                 to={"/client"}
                 className={`hover:text-black/50 ${
-                  isActiveRoute("/Services")
+                  isActiveRoute("/client")
                     ? "text-[#060ebb] border-b-2 border-[#060ebb]"
                     : ""
                 }`}

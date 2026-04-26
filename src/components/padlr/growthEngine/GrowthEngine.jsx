@@ -15,7 +15,7 @@ export default function CourtSky() {
   useEffect(() => {
     if (window.innerWidth < 768) return;
 
-    const totalScroll = window.innerWidth * 2.5;
+    const totalScroll = window.innerWidth * 2;
 
     const ctx = gsap.context(() => {
       gsap.to(trackRef.current, {
@@ -38,13 +38,12 @@ export default function CourtSky() {
 
   return (
     <section ref={wrapperRef}>
-      <div className="sticky top-0 h-screen overflow-hidden">
+      <div className="sticky top-0 max-h-screen overflow-hidden">
 
         {/* TRACK — 300vw */}
         <div
           ref={trackRef}
           className="flex h-full"
-          style={{ width: "350vw" }}
         >
 
           {/* SECTION 1 */}
@@ -53,12 +52,12 @@ export default function CourtSky() {
           </div>
 
           {/* SECTION 2 */}
-          <div className="w-[140vw] h-full flex-shrink-0">
+          <div className="w-[100vw] h-full flex-shrink-0">
             <Section2 />
           </div>
 
           {/* SECTION 3 */}
-          <div className="w-[90vw] h-full flex-shrink-0">
+          <div className="w-[80vw] h-full flex-shrink-0">
             <Section3 />
           </div>
 

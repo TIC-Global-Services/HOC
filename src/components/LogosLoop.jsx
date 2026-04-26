@@ -1,20 +1,23 @@
 import LogoLoop from '../hooks/LogoLoop';
+import emImage from '../assets/Em-image.png';
+import arralyze from '../assets/arralyze.png';
+import modento from '../assets/modento.png';
+import denise from '../assets/denise.png';
+import mp from '../assets/mp.png';
+import nookees from '../assets/nookees.png';
 
-
-//image sources
 const imageLogos = [
-  { src: "/src/assets/Em-image.png", alt: "Company 1" },
-  { src: "/src/assets/arralyze.png", alt: "Company 2" },
-  { src: "/src/assets/modento.png", alt: "Company 3" },
-  { src: "/src/assets/denise.png", alt: "Company 4" },
-  { src: "/src/assets/mp.png", alt: "Company 5" },
-  { src: "/src/assets/nookees.png", alt: "Company 6" },
+  { src: emImage,  alt: "Company 1" },
+  { src: arralyze, alt: "Company 2" },
+  { src: modento,  alt: "Company 3" },
+  { src: denise,   alt: "Company 4" },
+  { src: mp,       alt: "Company 5" },
+  { src: nookees,  alt: "Company 6" },
 ];
 
 const LogosLoop = () => {
   return (
-    <div className='h-[200px] md:h-[300px] relative overflow-hidden mt-20 md:mt-0'>
-      {/* Basic horizontal loop */}
+    <div className='h-[200px] md:h-[250px] relative overflow-hidden mt-20 md:mt-10 lg:mt-10 xl:-mt-10'>
       <LogoLoop
         logos={imageLogos}
         speed={100}
@@ -27,8 +30,6 @@ const LogosLoop = () => {
         fadeOutColor="#ffffff"
         ariaLabel="Technology partners"
       />
-      
-      
     </div>
   );
 }

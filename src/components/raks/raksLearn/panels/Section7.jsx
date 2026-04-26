@@ -7,16 +7,15 @@ import grid from "../../../../assets/client/padlr/img/checkBg.png";
 
 const Section7 = () => {
   return (
-    <section className="w-[150vw] h-screen flex"
+    <section className="h-screen flex"
     style={{
             backgroundImage: `url(${grid})`,
-            backgroundSize: "cover",
             backgroundPosition: "center",
             backgroundColor: "white",
           }}>
 
-      {/* ───── LEFT IMAGE (50vw) ───── */}
-      <div className="w-[40vw] h-full relative overflow-hidden">
+      {/* ───── LEFT IMAGE  ───── */}
+      <div className="w-[50vw] h-full relative overflow-hidden">
         <img
           src={leftImg}
           alt="left"
@@ -24,7 +23,7 @@ const Section7 = () => {
         />
       </div>
 
-      {/* ───── CENTER CONTENT (50vw) ───── */}
+      {/* ───── CENTER CONTENT ───── */}
       <div className="w-[30vw] h-full flex items-center justify-center px-[clamp(20px,5vw,120px)]">
 
         {/* INNER WRAPPER */}
@@ -34,27 +33,27 @@ const Section7 = () => {
           <img
             src={centerIcon}
             alt="icon"
-            className="mx-auto object-contain -rotate-[20deg]"
-            style={{ width: "clamp(60px,12vw,200px)" }}
+            className="mx-auto object-contain"
+            style={{ width: "clamp(60px,14vw,200px)" }}
           />
 
           {/* HEADING */}
           <h2 className="salo text-start uppercase text-black leading-none
-            text-[clamp(40px,12vw,150px)]">
+            text-[clamp(40px,12vw,60px)]">
             Creative Play
           </h2>
 
           {/* PARAGRAPH */}
           <p className="jost text-start text-black leading-[140%] tracking-tight
-            text-[clamp(14px,2vw,25px)]">
-            Where Little Ideas Turn Into Big Creations A Space to Imagine, Build, and Grow Where Little Ideas Turn Into Big Creations Innovation.
+            text-[clamp(14px,1.8vw,30px)]">
+           Where Little Ideas Turn Into Big Creations A Space to Imagine, Build, and Grow Where Little Ideas Turn Into Big Creations Innovation.
           </p>
 
         </div>
 
       </div>
 
-      {/* ───── RIGHT IMAGE (50vw) ───── */}
+      {/* ───── RIGHT IMAGE ───── */}
       <div className="w-[80vw] h-full relative overflow-hidden">
         <img
           src={rightImg}

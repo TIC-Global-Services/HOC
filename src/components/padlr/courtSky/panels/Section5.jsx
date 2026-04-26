@@ -1,10 +1,10 @@
 import { useEffect, useRef } from "react";
 import gsap from "gsap";
 
-import courtImg1 from "../../../../assets/client/padlr/img/courtImg1.png";
+import courtImg1 from "../../../../assets/client/padlr/img/courtPanelImg.png";
 import grid from "../../../../assets/client/padlr/img/checkBg.png";
 
-export default function Section1() {
+export default function Section6() {
   return (
     <section
       className="h-screen flex justify-center overflow-hidden"

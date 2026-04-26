@@ -52,90 +52,94 @@ const Section3 = () => {
 
   return (
     <section
-      className="w-full min-h-screen flex justify-center bg-white"
+      className="w-full h-screen relative overflow-hidden"
       style={{
         backgroundImage: `url(${grid})`,
         backgroundSize: "cover",
       }}
     >
-      <div className="w-full max-w-[1440px] 2xl:max-w-[1600px] h-screen flex flex-col justify-between">
+      {/* TITLE */}
+      <h1
+        className="salo tracking-wider text-[#8FC4E9] absolute"
+        style={{
+          top: "10%",
+          left: "5%",
+          fontSize: "clamp(60px,12vw,200px)",
+          lineHeight: "1",
+        }}
+      >
+        TYPEFACE
+      </h1>
 
-        {/* ── TOP SECTION ── */}
-        <div className="flex justify-between items-start px-6 md:px-10 xl:px-14 pt-12 xl:pt-16">
+      {/* TOP IMAGE */}
+      <div
+        ref={addIconRef}
+        data-speed="0.35"
+        data-rotate="0"
+        className="absolute"
+        style={{
+          top: "0%",
+          right: "0%",
+          width: "clamp(180px,20vw,360px)",
+          willChange: "transform",
+        }}
+      >
+        <img src={topImg} alt="" className="w-full" />
+      </div>
 
-          {/* TITLE */}
-          <h1
-            className="salo text-[#8FC4E9] leading-none tracking-wide"
-            style={{ fontSize: "clamp(60px, 10vw, 180px)" }}
-          >
-            TYPEFACE
-          </h1>
+      {/* LEFT IMAGE */}
+      <div
+        ref={addIconRef}
+        data-speed="0.4"
+        data-rotate="0"
+        className="absolute"
+        style={{
+          bottom: "0%",
+          left: "0%",
+          width: "clamp(180px,20vw,360px)",
+          willChange: "transform",
+        }}
+      >
+        <img src={delightImg} alt="" className="w-full" />
+      </div>
 
-          {/* TOP IMAGE (momentum) */}
-          <div
-            ref={addIconRef}
-            data-speed="0.35"
-            data-rotate="-2"
-            className="w-[180px] md:w-[260px] xl:w-[320px] 2xl:w-[380px]"
-            style={{ willChange: "transform" }}
-          >
-            <img
-              src={topImg}
-              alt="court"
-              className="w-full h-full object-cover "
-            />
-          </div>
+      {/* TEXT */}
+      <div
+        className="jost text-start capitalize text-black absolute"
+        style={{
+          bottom: "5%",
+          left: "35%",
+          width: "35%",
+          fontSize: "clamp(14px,2vw,26px)",
+          lineHeight: "150%",
+        }}
+      >
+        The typography system balances bold expression with refined clarity—
+        where the primary typeface delivers a strong, modern identity, and the
+        secondary typeface ensures{" "}
+        <span
+          className="salo text-[#8FC4E9]"
+          style={{ fontSize: "clamp(18px,3vw,40px)" }}
+        >
+          versatility and seamless
+        </span>{" "}
+        readability across all brand touchpoints.
+      </div>
 
-        </div>
-
-        {/* ── BOTTOM SECTION ── */}
-        <div className="flex items-center justify-between px-6 md:px-10 xl:px-14 pb-10 xl:pb-14 gap-6 xl:gap-10">
-
-          {/* LEFT IMAGE */}
-          <div
-            ref={addIconRef}
-            data-speed="0.4"
-            data-rotate="1"
-            className="w-[180px] md:w-[260px] xl:w-[320px] 2xl:w-[360px]"
-            style={{ willChange: "transform" }}
-          >
-            <img
-              src={delightImg}
-              alt="delight"
-              className="w-full object-cover"
-            />
-          </div>
-
-          {/* TEXT */}
-          <div className="max-w-[450px] jost text-start capitalize text-black leading-[150%] tracking-tight
-            text-[14px] md:text-[18px] xl:text-[22px] 2xl:text-[26px]"
-          >
-            The typography system balances bold expression with refined clarity—
-            where the primary typeface delivers a strong, modern identity, and
-            the secondary typeface ensures{" "}
-            <span className="salo text-[#8FC4E9] text-[20px] md:text-[28px] xl:text-[34px] 2xl:text-[40px]">
-              versatility and seamless
-            </span>{" "}
-            readability across all brand touchpoints.
-          </div>
-
-          {/* RIGHT ICON */}
-          <div
-            ref={addIconRef}
-            data-speed="0.6"
-            data-rotate="-5"
-            className="w-[160px] md:w-[220px] xl:w-[280px] 2xl:w-[320px]"
-            style={{ willChange: "transform" }}
-          >
-            <img
-              src={paddle}
-              alt="paddle"
-              className="w-full object-contain"
-            />
-          </div>
-
-        </div>
-
+      {/* RIGHT ICON */}
+      <div
+        ref={addIconRef}
+        data-speed="0.6"
+        data-rotate="-8"
+        className="absolute"
+        style={{
+          bottom: "2%",
+          right: "5%",
+          width: "clamp(160px,14vw,300px)",
+          willChange: "transform",
+        }}
+      >
+        <img src={paddle} alt="" className="w-full" />
       </div>
     </section>
   );

@@ -9,10 +9,11 @@ import raksCenterImg from "../../../../assets/client/raks/img/raksInstituion.png
 
 const Section2 = () => {
   const iconRefs = useRef([]);
-  iconRefs.current = [];
 
   const addIconRef = (el) => {
-    if (el) iconRefs.current.push(el);
+    if (el && !iconRefs.current.includes(el)) {
+      iconRefs.current.push(el);
+    }
   };
 
   useEffect(() => {
@@ -52,7 +53,8 @@ const Section2 = () => {
   }, []);
 
   return (
-    <div className="h-screen flex-shrink-0 relative overflow-visible">
+    <div className="relative h-screen w-full overflow-visible">
+
       {/* BACKGROUND */}
       <div
         className="absolute inset-0"
@@ -63,88 +65,118 @@ const Section2 = () => {
         }}
       />
 
-      {/* CONTENT WRAPPER */}
-      <div className="relative w-full h-full max-w-[1600px] mx-auto">
-        {/* TOP LEFT (momentum) */}
+      {/* CONTENT */}
+      <div className="relative w-full h-full">
+
+        {/* TOP LEFT */}
         <div
           ref={addIconRef}
-          data-speed="0.3"
+          data-speed="0.5"
           data-rotate="-12"
-          className="absolute top-6 left-6 md:top-10 md:left-10 xl:top-14 xl:left-14"
-          style={{ willChange: "transform" }}
+          className="absolute"
+          style={{
+            top: "5vh",
+            left: "1vw",
+            width: "clamp(60px,18vw,300px)",
+            transform: "rotate(-12deg)",
+          }}
         >
-          <img
-            src={viVidImg}
-            alt="icon"
-            className="w-[60px] md:w-[90px] xl:w-[180px] 2xl:w-[160px] -rotate-12"
-          />
+          <img src={viVidImg} className="w-full object-contain" />
         </div>
 
         {/* TOP RIGHT */}
         <div
           ref={addIconRef}
           data-speed="0.5"
-          data-rotate="-12"
-          className="absolute top-6 right-6 md:top-10 md:right-10 xl:top-14 xl:right-14"
-          style={{ willChange: "transform" }}
+          data-rotate="-6"
+          className="absolute"
+          style={{
+            top: "5vh",
+            right: "10vw",
+            width: "clamp(60px,18vw,300px)",
+            transform: "rotate(-6deg)",
+          }}
         >
-          <img
-            src={innocenceImg}
-            alt="innocence"
-            className="w-[60px] md:w-[90px] xl:w-[180px] 2xl:w-[180px] -rotate-12"
-          />
+          <img src={innocenceImg} className="w-full object-contain" />
         </div>
 
-        {/* CENTER RIGHT */}
+        {/* CENTER RIGHT IMAGE */}
         <div
-          className="absolute top-1/2 -translate-y-1/2 right-6 md:right-10 xl:-right-[20%]"
+          className="absolute"
+          style={{
+            top: "50%",
+            right: "-10vw",
+            transform: "translateY(-50%)",
+            width: "clamp(120px,20vw,500px)",
+          }}
         >
-          <img
-            src={raksCenterImg}
-            alt="raks institution"
-            className="w-[60px] md:w-[90px] xl:w-[500px] 2xl:w-[500px]"
-          />
+          <img src={raksCenterImg} className="w-full object-contain overflow-visible" />
         </div>
 
-        {/* BOTTOM LEFT (momentum) */}
+        {/* BOTTOM LEFT */}
         <div
           ref={addIconRef}
           data-speed="0.7"
-          data-rotate="0"
-          className="absolute bottom-6 left-6 md:bottom-10 md:left-10 xl:bottom-14 xl:left-14"
-          style={{ willChange: "transform" }}
+          className="absolute"
+          style={{
+            bottom: "5vh",
+            left: "5vw",
+            width: "clamp(60px,18vw,300px)",
+          }}
         >
-          <img
-            src={playfulImg}
-            alt="icon"
-            className="w-[60px] md:w-[90px] xl:w-[200px] 2xl:w-[180px]"
-          />
+          <img src={playfulImg} className="w-full object-contain" />
         </div>
 
         {/* RIGHT BOTTOM TEXT */}
-        <div className="absolute bottom-6 right-6 md:bottom-10 md:right-10 xl:bottom-20 xl:right-14 text-right">
-          <p className="jost uppercase font-[500] text-black text-[14px] md:text-[28px] xl:text-[50px] tracking-tight 2xl:text-[52px] leading-[130%]">
-            CURIOUS MINDS & LEARNING REDEFINED
+        <div
+          className="absolute text-start"
+          style={{
+            bottom: "0vh",
+            right: "-5vw",
+           
+          }}
+        >
+          <p
+            className="jost uppercase font-[500] text-black"
+            style={{
+              fontSize: "clamp(14px,3.5vw,50px)",
+              lineHeight: "130%",
+            }}
+          >
+            CURIOUS MINDS & LEARNING <br /> REDEFINED
           </p>
         </div>
 
         {/* CENTER CONTENT */}
-        <div className="absolute inset-0 flex items-center justify-center px-6">
-          <div className="max-w-[900px] text-start space-y-6">
-            <h2
-              className="salo text-[#000085] uppercase leading-none"
-              style={{ fontSize: "clamp(48px, 10vw, 200px)" }}
-            >
-              PURPOSEFUL <br /> LEARNING
-            </h2>
+        <div
+          className="absolute text-start"
+          style={{
+            top: "50%",
+            left: "30vw",
+            transform: "translateY(-50%)",
+            maxWidth: "40vw",
+          }}
+        >
+          <h2
+            className="salo text-[#000085] uppercase leading-none"
+            style={{ fontSize: "clamp(40px,10vw,150px)" }}
+          >
+            PURPOSEFUL <br /> LEARNING
+          </h2>
 
-            <p className="jost text-black font-[500] capitalize text-[14px] md:text-[18px] xl:text-[40px] 2xl:text-[26px] tracking-tight leading-[140%]">
-              Shaped through curiosity and guided exploration, every experience
-              nurtures growth and understanding. A thoughtful blend of
-              creativity.
-            </p>
-          </div>
+          <p
+            className="jost text-black tracking-tight mt-4"
+            style={{
+              fontSize: "clamp(14px,1.8vw,26px)",
+              lineHeight: "140%",
+            }}
+          >
+            Shaped through curiosity and guided exploration, 
+            every experience nurtures growth and understanding. 
+            A thoughtful blend of creativity.
+          </p>
         </div>
+
       </div>
     </div>
   );

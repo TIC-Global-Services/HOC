@@ -13,7 +13,10 @@ export default function Section4() {
 
     const setX = gsap.quickTo(el, "x", { duration: 1, ease: "power3.out" });
     const setY = gsap.quickTo(el, "y", { duration: 0.8, ease: "power3.out" });
-    const setR = gsap.quickTo(el, "rotation", { duration: 1, ease: "power3.out" });
+    const setR = gsap.quickTo(el, "rotation", {
+      duration: 1,
+      ease: "power3.out",
+    });
 
     let lastScrollY = window.scrollY;
     let velocity = 0;
@@ -26,12 +29,11 @@ export default function Section4() {
 
       velocity += (delta - velocity) * 0.15;
 
-      const speed = 0.5; // control strength
-      const baseRotate = 0;
+      const speed = 0.5;
 
       setX(velocity * speed * 4);
       setY(velocity * speed * 0.8);
-      setR(baseRotate + velocity * speed * 0.6);
+      setR(velocity * speed * 0.6);
 
       rafId = requestAnimationFrame(tick);
     };
@@ -42,8 +44,8 @@ export default function Section4() {
   }, []);
 
   return (
-    <div
-      className="w-full h-screen relative overflow-hidden flex"
+    <section
+      className=" h-screen relative overflow-hidden"
       style={{
         backgroundImage: `url(${grid})`,
         backgroundSize: "cover",
@@ -51,42 +53,96 @@ export default function Section4() {
       }}
     >
       {/* LEFT IMAGE */}
-      <div className="absolute left-[6%] md:left-[8%] xl:left-[0%] top-1/2 -translate-y-1/2">
+      <div
+        className="absolute"
+        style={{
+          left: "0",
+          top: "50%",
+          transform: "translateY(-50%)",
+        }}
+      >
         <img
           src={brandImg}
-          alt="brand"
-          className="w-[260px] md:w-[380px] xl:w-[640px] 2xl:w-[640px] object-contain"
+          alt=""
+          style={{
+            width: "clamp(260px,40vw,640px)",
+          }}
         />
       </div>
 
       {/* RIGHT BLUE PANEL */}
-      <div className="absolute right-0 top-0 h-full w-[28%] md:w-[30%] xl:w-[32%] bg-[#8FC4E9] z-10" />
+      <div
+        className="absolute"
+        style={{
+          right: 0,
+          top: 0,
+          height: "100%",
+          width: "clamp(28%,30%,32%)",
+          backgroundColor: "#8FC4E9",
+        }}
+      />
 
-      {/* BRAND VOICE TEXT */}
-      <div className="absolute right-0 top-1/2 -translate-x-[75%] -translate-y-1/2 z-20 flex flex-col leading-none">
-        <div className="flex items-baseline">
-          <span className="salo text-[#8FC4E9]" style={{ fontSize: "clamp(80px, 14vw, 150px)" }}>B</span>
-          <span className="salo text-white" style={{ fontSize: "clamp(80px, 14vw, 150px)" }}>RAND</span>
-        </div>
+      {/* BRAND TEXT */}
+      <div
+        className="absolute z-20 text-start"
+        style={{
+          top: "50%",
+          right: "11%",
+          transform: "translateY(-50%)",
+        }}
+      >
+        <div style={{ lineHeight: "0.9" }}>
+          <div>
+            <span
+              className="salo text-[#8FC4E9]"
+              style={{ fontSize: "clamp(80px,12vw,150px)" }}
+            >
+              B
+            </span>
+            <span
+              className="salo text-white"
+              style={{ fontSize: "clamp(80px,12vw,150px)" }}
+            >
+              RAND
+            </span>
+          </div>
 
-        <div className="flex items-baseline">
-          <span className="salo text-[#8FC4E9]" style={{ fontSize: "clamp(80px, 14vw, 150px)" }}>V</span>
-          <span className="salo text-white" style={{ fontSize: "clamp(80px, 14vw, 150px)" }}>OICE</span>
+          <div>
+            <span
+              className="salo text-[#8FC4E9]"
+              style={{ fontSize: "clamp(80px,12vw,150px)" }}
+            >
+              V
+            </span>
+            <span
+              className="salo text-white"
+              style={{ fontSize: "clamp(80px,12vw,150px)" }}
+            >
+              OICE
+            </span>
+          </div>
         </div>
       </div>
 
-      {/* CIRCLE BADGE (momentum added) */}
+      {/* BADGE */}
       <div
         ref={badgeRef}
-        className="absolute left-1/2 bottom-[6%] md:bottom-[8%] xl:bottom-[10%] -translate-x-[10%] z-20"
-        style={{ willChange: "transform" }}
+        className="absolute z-20"
+        style={{
+          left: "50%",
+          bottom: "8%",
+          transform: "translateX(-50%)",
+          willChange: "transform",
+        }}
       >
         <img
           src={circleBadge}
-          alt="circle badge"
-          className="w-[120px] md:w-[160px] xl:w-[200px] 2xl:w-[240px] object-contain"
+          alt=""
+          style={{
+            width: "clamp(120px,12vw,240px)",
+          }}
         />
       </div>
-    </div>
+    </section>
   );
 }

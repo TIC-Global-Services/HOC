@@ -6,6 +6,8 @@ import Section1 from "../courtSky/panels/Section1";
 import Section2 from "../courtSky/panels/Section2";
 import Section3 from "../courtSky/panels/Section3";
 import Section4 from "../courtSky/panels/Section4";
+import Section5 from '../courtSky/panels/Section5';
+
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -46,16 +48,18 @@ export default function CourtSky() {
         <div
           ref={trackRef}
           className="flex h-full"
-          style={{ width: "400vw" }}
         >
 
           {/* GROUP 1 — Section1 + Section2 = 200vw */}
           <div className="flex h-full" style={{ width: "200vw", flexShrink: 0 }}>
-            <div style={{ width: "100vw", flexShrink: 0, height: "100%" }}>
+            <div style={{ width: "50vw", flexShrink: 0, height: "100%" }}>
               <Section1 />
             </div>
             <div style={{ width: "100vw", flexShrink: 0, height: "100%" }}>
               <Section2 />
+            </div>
+            <div style={{ width: "50vw", flexShrink: 0, height: "100%" }}>
+              <Section5 />
             </div>
           </div>
 
