@@ -58,7 +58,7 @@ const AutoTextSlider = () => {
         >
           {/* TITLE */}
 
-          <h1 className="text-base md:text-[42px] mb-6 uppercase text-[#060ebb] tracking-widest salo">
+          <h1 className="text-base md:text-[42px] mb-6 uppercase text-[#060ebb] tracking-normal salo">
             Client Testimonial
           </h1>
           
@@ -73,6 +73,20 @@ const AutoTextSlider = () => {
           </h2>
         </motion.div>
       </AnimatePresence>
+
+      {/* DOTS */}
+      <div className="flex gap-3 mt-6">
+        {slides.map((_, i) => (
+          <div
+            key={i}
+            className={`h-2 w-2 md:h-3 md:w-3 rounded-full transition-all duration-300 ${
+              i === index
+                ? "bg-[#060ebb] scale-125"
+                : "bg-[#060ebb]/30"
+            }`}
+          />
+        ))}
+      </div>
     </div>
   );
 };

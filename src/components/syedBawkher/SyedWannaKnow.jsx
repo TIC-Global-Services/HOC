@@ -1,8 +1,9 @@
-import React from 'react'
-import { motion, useScroll, useTransform, useSpring } from "framer-motion";
+import React from "react";
+import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef, useState, useEffect } from "react";
-import question from "../../assets/client/syedBawkher/img/question.png"; // ? icon
-import grid from "../../assets/client/padlr/img/checkBg.png"; // grid bg
+
+import question from "../../assets/client/syedBawkher/img/question.png";
+import grid from "../../assets/client/padlr/img/checkBg.png";
 
 const lines = ["Wann..", "Know", "More"];
 
@@ -14,10 +15,10 @@ const SyedWannaKnowMore = () => {
     offset: ["start end", "end start"],
   });
 
-  // PARTICLE TRAIL STATE
+  // PARTICLES
   const [particles, setParticles] = useState([]);
   const lastTimeRef = useRef(0);
-  const IMAGE_DELAY = 80;
+  const IMAGE_DELAY = 40;
 
   useEffect(() => {
     const handleMouseMove = (e) => {
@@ -31,7 +32,8 @@ const SyedWannaKnowMore = () => {
         e.clientX > rect.right ||
         e.clientY < rect.top ||
         e.clientY > rect.bottom
-      ) return;
+      )
+        return;
 
       const now = Date.now();
       if (now - lastTimeRef.current < IMAGE_DELAY) return;
@@ -44,8 +46,8 @@ const SyedWannaKnowMore = () => {
         id: Math.random(),
         x,
         y,
-        offsetX: (Math.random() - 0.5) * 120,
-        offsetY: (Math.random() - 0.5) * 120,
+        offsetX: (Math.random() - 0.5) * 60,
+        offsetY: (Math.random() - 0.5) * 60,
         scale: Math.random() * 0.4 + 0.8,
       };
 
@@ -94,19 +96,30 @@ const SyedWannaKnowMore = () => {
             ease: "easeOut",
           }}
           style={{
-            translateX: "-50%",
-            translateY: "-50%",
+            transform: "translate(0%, 0%)", // FIXED CENTER ALIGN
           }}
         />
       ))}
 
       {/* STATIC ICONS */}
-      <img src={question} className="absolute top-[10%] left-[10%] w-[40px] md:w-[60px]" />
-      <img src={question} className="absolute top-[15%] right-[15%] w-[40px] md:w-[60px]" />
-      <img src={question} className="absolute bottom-[10%] left-[15%] w-[40px] md:w-[60px]" />
-      <img src={question} className="absolute bottom-[15%] right-[10%] w-[40px] md:w-[60px]" />
+      <img
+        src={question}
+        className="absolute top-[10%] left-[10%] w-[40px] md:w-[60px]"
+      />
+      <img
+        src={question}
+        className="absolute top-[15%] right-[15%] w-[40px] md:w-[60px]"
+      />
+      <img
+        src={question}
+        className="absolute bottom-[10%] left-[15%] w-[40px] md:w-[60px]"
+      />
+      <img
+        src={question}
+        className="absolute bottom-[15%] right-[10%] w-[40px] md:w-[60px]"
+      />
 
-      {/* TEXT ANIMATION */}
+      {/* TEXT */}
       <div className="text-center leading-none px-4 overflow-hidden">
         {lines.map((line, lineIndex) => (
           <div key={lineIndex} className="flex justify-center flex-wrap">
