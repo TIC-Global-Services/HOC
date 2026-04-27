@@ -3,10 +3,13 @@ import {
   BrowserRouter as Router,
   Routes,
   Route,
-  useLocation,
   Navigate,
+  useLocation,
 } from "react-router-dom";
+
 import "./App.css";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import gsap from "gsap";
 
 import Landing from "./pages/Landing";
 import Ethos from "./pages/Ethos";
@@ -21,14 +24,11 @@ import SyedBawkher from "./pages/client/SyedBawkher";
 import GopalanEnterprises from "./pages/client/GopalanEnterprises";
 import Qatamaran from "./pages/client/Qatamaran";
 
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-
 /* SCROLL RESET */
 function ScrollToTop() {
   const { pathname } = useLocation();
 
   useEffect(() => {
-    ScrollTrigger.getAll().forEach((t) => t.kill(true));
     window.scrollTo(0, 0);
 
     setTimeout(() => {
@@ -39,14 +39,34 @@ function ScrollToTop() {
   return null;
 }
 
-function AppRoutes() {
-  const location = useLocation();
+/* BACK BUTTON REFRESH */
+function BackRefreshHandler() {
+  useEffect(() => {
+    const handlePopState = () => {
+      ScrollTrigger.getAll().forEach((t) => t.kill(true));
+      gsap.killTweensOf("*");
 
+      window.location.reload();
+    };
+
+    window.addEventListener("popstate", handlePopState);
+
+    return () => {
+      window.removeEventListener("popstate", handlePopState);
+    };
+  }, []);
+
+  return null;
+}
+
+/* INNER APP */
+function AppContent() {
   return (
     <>
       <ScrollToTop />
+      <BackRefreshHandler />
 
-      <Routes location={location} key={location.pathname}>
+      <Routes>
         <Route path="/" element={<Landing />} />
 
         <Route path="/client" element={<ClientPage />} />
@@ -75,7 +95,7 @@ function AppRoutes() {
 function App() {
   return (
     <Router>
-      <AppRoutes />
+      <AppContent />
     </Router>
   );
 }
