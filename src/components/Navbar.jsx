@@ -45,7 +45,6 @@ const Navbar = () => {
   const handleNav = (path) => {
     ScrollTrigger.getAll().forEach((t) => t.kill(true));
     gsap.killTweensOf("*");
-    window.scrollTo(0, 0);
     navigate(path);
   };
 

@@ -29,11 +29,25 @@ function ScrollToTop() {
   const { pathname } = useLocation();
 
   useEffect(() => {
+    // 1. LOCK scroll (prevents flicker)
+    document.body.style.overflow = "hidden";
+
+    //2. kill all GSAP
+    ScrollTrigger.getAll().forEach((t) => t.kill(true));
+    gsap.killTweensOf("*");
+
+    //3. force scroll to top instantly
     window.scrollTo(0, 0);
 
-    setTimeout(() => {
+    //4. wait for DOM + layout + GSAP init
+    const timer = setTimeout(() => {
       ScrollTrigger.refresh();
-    }, 100);
+
+      //5. unlock scroll AFTER everything ready
+      document.body.style.overflow = "";
+    }, 120); // slight delay is key
+
+    return () => clearTimeout(timer);
   }, [pathname]);
 
   return null;
@@ -57,6 +71,10 @@ function BackRefreshHandler() {
   }, []);
 
   return null;
+}
+
+ if ("scrollRestoration" in window.history) {
+  window.history.scrollRestoration = "manual";
 }
 
 /* INNER APP */
