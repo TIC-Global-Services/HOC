@@ -11,6 +11,11 @@ import "./App.css";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import gsap from "gsap";
 
+// disable browser scroll restore 
+if ("scrollRestoration" in window.history) {
+  window.history.scrollRestoration = "manual";
+}
+
 import Landing from "./pages/Landing";
 import Ethos from "./pages/Ethos";
 import Careers from "./pages/Careers";
@@ -24,28 +29,28 @@ import SyedBawkher from "./pages/client/SyedBawkher";
 import GopalanEnterprises from "./pages/client/GopalanEnterprises";
 import Qatamaran from "./pages/client/Qatamaran";
 
-/* SCROLL RESET */
+/* SCROLL RESET  */
 function ScrollToTop() {
   const { pathname } = useLocation();
 
   useEffect(() => {
-    // 1. LOCK scroll (prevents flicker)
+    // lock scroll
     document.body.style.overflow = "hidden";
 
-    //2. kill all GSAP
+    // clear GSAP
     ScrollTrigger.getAll().forEach((t) => t.kill(true));
     gsap.killTweensOf("*");
 
-    //3. force scroll to top instantly
+    // scroll to top
     window.scrollTo(0, 0);
 
-    //4. wait for DOM + layout + GSAP init
+    // wait for layout
     const timer = setTimeout(() => {
       ScrollTrigger.refresh();
 
-      //5. unlock scroll AFTER everything ready
+      // unlock scroll
       document.body.style.overflow = "";
-    }, 120); // slight delay is key
+    }, 120);
 
     return () => clearTimeout(timer);
   }, [pathname]);
@@ -53,14 +58,17 @@ function ScrollToTop() {
   return null;
 }
 
-/* BACK BUTTON REFRESH */
+/* BACK BUTTON FIX */
 function BackRefreshHandler() {
   useEffect(() => {
     const handlePopState = () => {
+      // clear GSAP
       ScrollTrigger.getAll().forEach((t) => t.kill(true));
       gsap.killTweensOf("*");
 
-      window.location.reload();
+      setTimeout(() => {
+        window.location.reload();
+      }, 10);
     };
 
     window.addEventListener("popstate", handlePopState);
@@ -71,10 +79,6 @@ function BackRefreshHandler() {
   }, []);
 
   return null;
-}
-
- if ("scrollRestoration" in window.history) {
-  window.history.scrollRestoration = "manual";
 }
 
 /* INNER APP */

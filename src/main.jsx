@@ -6,8 +6,6 @@ import SmoothScrolling from './utils/Smooth.jsx'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <SmoothScrolling>
       <App />
-    </SmoothScrolling>
   </StrictMode>,
 )

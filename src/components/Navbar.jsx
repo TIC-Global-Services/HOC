@@ -25,8 +25,8 @@ const Navbar = () => {
         setIsSection2(scrollY > firstSectionHeight * 0.2);
         setIsFixed(true);
       } else {
-        setIsSection2(true); // lock style
-        setIsFixed(false);   // stop fixed after first section
+        setIsSection2(true); 
+        setIsFixed(false);  
       }
     };
 
@@ -43,10 +43,19 @@ const Navbar = () => {
   };
 
   const handleNav = (path) => {
-    ScrollTrigger.getAll().forEach((t) => t.kill(true));
-    gsap.killTweensOf("*");
-    navigate(path);
-  };
+  ScrollTrigger.getAll().forEach((t) => t.kill(true));
+  gsap.killTweensOf("*");
+
+  if (location.pathname === path) {
+    window.scrollTo({
+      top: 0,
+      left: 0,
+      behavior: "instant",
+    });
+    return;
+  }
+  navigate(path);
+};
 
   return (
     <>
@@ -56,7 +65,7 @@ const Navbar = () => {
       </div>
 
       {/* Desktop Navigation */}
-      <div className="hidden md:block mb-40">
+      <div className="hidden md:block pt-[15%]">
         <div
           className={`${
             isFixed ? "fixed" : "absolute"
