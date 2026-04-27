@@ -25,13 +25,13 @@ const RaksHero = () => {
 
         {/* LEFT */}
         <div
-          className="relative w-full h-[500px] md:h-screen md:w-1/2 overflow-hidden flex-shrink-0 border-2"
+          className="relative w-full h-[500px] md:h-screen md:w-1/2 overflow-hidden flex-shrink-0"
           style={{ backgroundImage: `url(${grid})`, }}
         >
-          <img src={img2} className="float-1 absolute top-[10%] left-[10%] w-[50px] md:w-[80px] xl:w-[100px]" />
-          <img src={img1} className="float-2 absolute top-[15%] right-[15%] w-[60px] md:w-[100px] xl:w-[120px]" />
-          <img src={img4} className="float-3 absolute bottom-[10%] left-[10%] w-[100px] md:w-[140px] xl:w-[180px]" />
-          <img src={img3} className="float-4 absolute bottom-[10%] right-[10%] w-[100px] md:w-[140px] xl:w-[180px]" />
+          <img src={img2} className="float-1 absolute top-[10%] left-[10%] w-[50px] md:w-[80px] xl:w-[200px]" />
+          <img src={img1} className="float-2 absolute top-[15%] right-[15%] w-[60px] md:w-[100px] xl:w-[200px]" />
+          <img src={img4} className="float-3 absolute bottom-[10%] left-[10%] w-[100px] md:w-[140px] xl:w-[200px]" />
+          <img src={img3} className="float-4 absolute bottom-[10%] right-[10%] w-[100px] md:w-[140px] xl:w-[200px]" />
 
           <div className="w-full h-full flex flex-col items-center justify-center gap-4 md:gap-6 px-4">
             <h1
@@ -47,27 +47,27 @@ const RaksHero = () => {
         </div>
 
         {/* RIGHT */}
-        <div className="w-full md:w-1/2 flex items-center px-6 md:px-10 xl:px-14 py-10 md:py-0">
+        <div className="w-1/2 flex items-center px-6 md:px-10 xl:px-14 py-10 md:py-0">
           <motion.p
-            className="jost text-start font-[500] text-black max-w-[656px] leading-[140%] text-[14px] md:text-[18px] xl:text-[22px] 2xl:text-[26px]"
+            className="jost text-start font-[500] text-black max-w-[656px] leading-[150%] text-[14px] md:text-[18px] xl:text-[26px] 2xl:text-[26px]"
             variants={containerVariants}
             initial="hidden"
             animate="visible"
           >
             <AnimatedText text="RaK's Institutions is a future-forward school rooted in the" />
             {" "}
-            <AnimatedWord className="salo text-[#000085] text-[18px] md:text-[26px] xl:text-[32px] 2xl:text-[40px]">
+            <AnimatedWord className="salo text-[#000085] text-[18px] md:text-[26px] xl:text-[40px] 2xl:text-[40px]">
               Reggio Emilia philosophy,
             </AnimatedWord>
             {" "}
             <AnimatedText text="fostering experiential, interdisciplinary learning for children to grow with purpose. Embracing this spirit, Haus of Chaos crafted an identity for" />
             {" "}
-            <AnimatedWord className="salo text-[#000085] text-[18px] md:text-[26px] xl:text-[32px] 2xl:text-[40px]">
+            <AnimatedWord className="salo text-[#000085] text-[18px] md:text-[26px] xl:text-[40px] 2xl:text-[40px]">
               RaK's Pallikkoodam
             </AnimatedWord>
             {" "}
             <AnimatedText text="that is warm, attentive, and child-centric. The result is a playful yet thoughtful visual language and environment designed to nurture curiosity and lifelong learning." />
-            <img src={heroParaImg} alt="Binocular" className="inline ml-2 w-6 h-6 md:w-8 md:h-8 xl:w-10 xl:h-10 object-contain" />
+            <img src={heroParaImg} alt="Binocular" className="inline ml-2 w-12 h-12 object-contain" />
           </motion.p>
         </div>
 

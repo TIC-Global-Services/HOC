@@ -25,7 +25,11 @@ export default function SyedOwnTheCourt() {
   const itemRefs = useRef([]);
   itemRefs.current = [];
 
-  const addRef = (el) => { if (el) itemRefs.current.push(el); };
+  const addRef = (el) => {
+    if (el && !itemRefs.current.includes(el)) {
+      itemRefs.current.push(el);
+    }
+  };
 
   useEffect(() => {
     const ctx = gsap.context(() => {
@@ -45,24 +49,48 @@ export default function SyedOwnTheCourt() {
           { y: 0, rotation: rot, opacity: 1, duration: 0.85, delay, ease: "bounce.out" }
         );
 
-        el.addEventListener("mouseenter", () => {
-          const section = containerRef.current.getBoundingClientRect();
-          const elRect = el.getBoundingClientRect();
-          const dirX = (elRect.left + elRect.width / 2 - section.left) < section.width / 2 ? -1 : 1;
-          const dirY = (elRect.top + elRect.height / 2 - section.top) < section.height / 2 ? -1 : 1;
-          gsap.to(el, {
-            x: dirX * (80 + Math.random() * 120),
-            y: dirY * (60 + Math.random() * 100),
-            rotation: rot + (Math.random() - 0.5) * 80,
-            scale: 1.15,
-            duration: 0.4,
-            ease: "power3.out",
-          });
-        });
+        // 🔥 ESCAPE EFFECT
+        const moveAway = (e) => {
+          const rect = el.getBoundingClientRect();
 
-        el.addEventListener("mouseleave", () => {
-          gsap.to(el, { x: 0, y: 0, rotation: rot, scale: 1, duration: 0.8, ease: "elastic.out(1, 0.5)" });
-        });
+          const elX = rect.left + rect.width / 2;
+          const elY = rect.top + rect.height / 2;
+
+          const dx = elX - e.clientX;
+          const dy = elY - e.clientY;
+
+          const distance = Math.sqrt(dx * dx + dy * dy);
+
+          if (distance < 140) {
+            const force = (140 - distance) / 140;
+
+            const moveX = (dx / distance) * force * 90;
+            const moveY = (dy / distance) * force * 90;
+
+            gsap.to(el, {
+              x: moveX,
+              y: moveY,
+              rotation: rot + moveX * 0.2,
+              scale: 1.08,
+              duration: 0.3,
+              ease: "power3.out",
+            });
+          }
+        };
+
+        const reset = () => {
+          gsap.to(el, {
+            x: 0,
+            y: 0,
+            rotation: rot,
+            scale: 1,
+            duration: 0.8,
+            ease: "elastic.out(1, 0.5)",
+          });
+        };
+
+        el.addEventListener("mousemove", moveAway);
+        el.addEventListener("mouseleave", reset);
       });
     }, containerRef);
 
@@ -77,7 +105,7 @@ export default function SyedOwnTheCourt() {
     >
       <h2
         ref={titleRef}
-        className="absolute left-[5%] top-[clamp(40px,8vh,90px)] z-10 opacity-0 m-0 salo font-medium text-[14px] md:text-[150px] leading-none tracking-[-0.02em] uppercase text-[#262666]"
+        className="absolute left-[5%] top-[clamp(40px,8vh,90px)] z-10 opacity-0 salo font-medium text-[14px] md:text-[150px] leading-none uppercase text-[#262666]"
       >
         <span style={{ display: "block" }}>OWN THE</span>
         <span style={{ display: "block" }}>COURT</span>
@@ -96,11 +124,9 @@ export default function SyedOwnTheCourt() {
                   position: "absolute",
                   left: `${item.x}%`,
                   top: ROW_Y[ri],
-                  transform: `translate(-50%, ${item.y || 0}px) rotate(${item.r}deg)`,
-                  transformOrigin: "center center",
-                  willChange: "transform,opacity",
+                  transform: `translate(-50%, 0px) rotate(${item.r}deg)`,
                   pointerEvents: "auto",
-                  cursor: "grab",
+                  cursor: "pointer",
                 }}
               >
                 <img
@@ -110,7 +136,6 @@ export default function SyedOwnTheCourt() {
                     width: `clamp(${item.s * 0.6}px, ${item.s}px, ${item.s * 1.3}px)`,
                     display: "block",
                     filter: "drop-shadow(0 3px 10px rgba(0,60,160,0.18))",
-                    userSelect: "none",
                   }}
                   draggable={false}
                 />

@@ -3,15 +3,22 @@ import clientImg from "../../assets/client/gopalan/clientImg.png";
 
 const GopalanFuture = () => {
   return (
-    <section className="w-full min-h-screen bg-white text-white flex flex-col items-center justify-center  py-16">
+    <section className="relative w-full min-h-screen bg-white mt-[2%] overflow-hidden py-[6%]">
 
       {/* TOP HEADING */}
-      <h2 className="salo text-[40px] md:text-[120px] text-[#E96428]  text-center tracking-tight mb-2">
+      <h2
+        className="absolute salo text-[#E96428] tracking-tight leading-[100%]"
+        style={{
+          top: "5%",
+          left: "5%",
+          fontSize: "clamp(40px,8vw,120px)",
+        }}
+      >
         Building Legacy, Shaping the Future
       </h2>
 
-      {/* CENTER IMAGE */}
-      <div className="w-full flex justify-end mb-10">
+      {/* CENTER IMAGE (UNCHANGED POSITION) */}
+      <div className="w-full flex justify-end py-[8%]">
         <img
           src={clientImg}
           alt="Future"
@@ -20,12 +27,23 @@ const GopalanFuture = () => {
       </div>
 
       {/* BOTTOM PARAGRAPH */}
-      <div className="flex flex-col justify-start">
-      <p className="jost capitalize text-start text-[16px] font-[500] md:text-[26px] max-w-[850px] leading-[140%] tracking-tight text-black">
-        A brand transformation shaped by legacy and growth—translating four decades of trust into a <span className="salo md:text-[44px] text-[#E96428]">cohesive identity</span> for a multi-vertical future. 
-        An identity evolution rooted in heritage, designed to unify diverse verticals under a clear, future-ready visual system.
+      <p
+        className="absolute jost text-start capitalize text-black font-[500] leading-[140%] mb-[2%]  tracking-tight"
+        style={{
+          bottom: "0",
+          left: "5%",
+          fontSize: "clamp(16px,1.8vw,26px)",
+          maxWidth: "60%"
+        }}
+      >
+        A brand transformation shaped by legacy and growth—translating four
+        decades of trust into a{" "}
+        <span className="salo text-[40px] text-[#E96428]">
+          cohesive identity
+        </span>{" "}
+        for a multi-vertical future. An identity evolution rooted in heritage,
+        designed to unify diverse verticals under a clear, future-ready visual system.
       </p>
-      </div>
 
     </section>
   );

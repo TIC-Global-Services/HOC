@@ -97,7 +97,7 @@ const Section2 = () => {
             transform: "rotate(-6deg)",
           }}
         >
-          <img src={innocenceImg} className="w-full object-contain" />
+          <img src={innocenceImg} className="w-full object-contain z-[20]" />
         </div>
 
         {/* CENTER RIGHT IMAGE */}

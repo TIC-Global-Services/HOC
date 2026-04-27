@@ -38,12 +38,21 @@ export default function QataRefinedTailoring() {
       });
     }, wrapperRef);
 
-    return () => ctx.revert();
+    return () => {
+  ctx.revert();
+
+  ScrollTrigger.getAll().forEach(t => t.kill(true));
+  gsap.killTweensOf("*");
+
+  if (trackRef.current) {
+    gsap.set(trackRef.current, { x: 0 });
+  }
+};
   }, []);
 
   return (
     <section ref={wrapperRef}>
-      <div className="sticky top-0 h-screen overflow-hidden">
+      <div className="h-screen overflow-hidden">
         <div ref={trackRef} className="flex h-full">
           {/* SECTION GROUP */}
           <div

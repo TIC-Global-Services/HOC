@@ -21,6 +21,7 @@ export default function SyedTailorHeritage() {
     if (el) iconRefs.current.push(el);
   };
 
+
   useEffect(() => {
     if (window.innerWidth < 768) return;
 
@@ -84,7 +85,7 @@ export default function SyedTailorHeritage() {
 
   return (
     <section ref={wrapperRef}>
-      <div className="sticky top-0 h-screen overflow-hidden">
+      <div className="h-screen overflow-hidden">
         <div ref={trackRef} className="flex h-full">
           {/* ── BLOCK 1 (70vw) ── */}
           <div

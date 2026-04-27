@@ -34,6 +34,7 @@ export default function QataSaltSilk() {
         start: "top top",
         end: `+=${totalScroll}`,
         pin: true,
+        pinSpacing: true,
         scrub: 1,
         anticipatePin: 1,
       },
@@ -41,12 +42,21 @@ export default function QataSaltSilk() {
 
   }, wrapperRef);
 
-  return () => ctx.revert();
+  return () => {
+  ctx.revert();
+
+  ScrollTrigger.getAll().forEach(t => t.kill(true)); // remove pin
+  gsap.killTweensOf("*");
+
+  if (trackRef.current) {
+    gsap.set(trackRef.current, { x: 0 });
+  }
+};
 }, []);
 
   return (
     <section ref={wrapperRef}>
-      <div className="sticky top-0 h-screen overflow-hidden">
+      <div className="h-screen overflow-hidden">
 
         {/* TRACK */}
         <div

@@ -59,7 +59,7 @@ const SyedHero = () => {
               craftsmanship and contemporary
             </AnimatedWord>
             {" "}
-            <AnimatedText text="technique, they epitomise the cardinal values of transparency, quality, and excellence in the service of the impeccable gentleman." /> <br />
+            <AnimatedText text="technique, they epitomise the cardinal values of transparency, quality, and excellence in the service of the impeccable gentleman." />
             <br />
             <AnimatedText text="Haus of Chaos created an analogue brochure for Syed Bawkher & Co., as a piece of literature to be remembered for its textual and textural richness. A philosophy of" />
             {" "}

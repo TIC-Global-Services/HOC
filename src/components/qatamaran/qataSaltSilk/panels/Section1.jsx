@@ -1,7 +1,7 @@
 import { useEffect, useRef } from "react";
 import gsap from "gsap";
 
-import craftImg from "../../../../assets/client/qatamaran/heroFloat1.png";
+import craftImg from "../../../../assets/client/qatamaran/heroFloat3.png";
 import treeLogoImg from "../../../../assets/client/qatamaran/heroFloat2.png";
 import silkCraft from "../../../../assets/client/qatamaran/silkImg.png";
 
@@ -62,7 +62,7 @@ export default function Section1() {
         px-[clamp(20px,3vw,60px)] border-b border-white"
       >
         <h1
-          className="salo uppercase leading-none text-white
+          className="salo uppercase leading-none py-[1%] text-white
           text-[clamp(48px,10vw,200px)]"
         >
           Salt & Silk craft
@@ -78,7 +78,7 @@ export default function Section1() {
           <img
             src={craftImg}
             alt="retro computer"
-            className="object-contain md:-translate-x-[20%] pt-2"
+            className="object-contain md:-translate-x-[200%] pt-2"
             style={{ width: "clamp(110px, 12vw, 200px)" }}
           />
         </div>
@@ -129,7 +129,7 @@ export default function Section1() {
 
         {/* CENTER */}
         <div
-          className="flex flex-col justify-center md:mt-[20%]
+          className="flex flex-col justify-center md:mt-[9.5%]
           w-[26vw] min-w-[480px] max-w-[800px] text-start"
         >
           <p

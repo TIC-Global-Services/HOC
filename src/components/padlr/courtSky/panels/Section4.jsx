@@ -87,38 +87,27 @@ export default function Section4() {
         className="absolute z-20 text-start"
         style={{
           top: "50%",
-          right: "11%",
+          right: "13%",
           transform: "translateY(-50%)",
         }}
       >
-        <div style={{ lineHeight: "0.9" }}>
+        <div style={{ lineHeight: "1" }}>
           <div>
             <span
-              className="salo text-[#8FC4E9]"
-              style={{ fontSize: "clamp(80px,12vw,150px)" }}
+              className="salo  text-[#8FC4E9]"
+              style={{ fontSize: "clamp(80px,10vw,150px)" }}
             >
-              B
+              B <span className="text-white">RAND</span>
             </span>
-            <span
-              className="salo text-white"
-              style={{ fontSize: "clamp(80px,12vw,150px)" }}
-            >
-              RAND
-            </span>
+           
           </div>
 
           <div>
             <span
               className="salo text-[#8FC4E9]"
-              style={{ fontSize: "clamp(80px,12vw,150px)" }}
+              style={{ fontSize: "clamp(80px,10vw,150px)" }}
             >
-              V
-            </span>
-            <span
-              className="salo text-white"
-              style={{ fontSize: "clamp(80px,12vw,150px)" }}
-            >
-              OICE
+              V <span className="text-white">OICE</span>
             </span>
           </div>
         </div>

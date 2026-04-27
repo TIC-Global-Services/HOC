@@ -7,13 +7,14 @@ import RaksVideoSec from "../../components/raks/RaksVideoSec";
 import RaksWannaKnow from "../../components/raks/RaksWannaKnow";
 import RaksInstaImg from "../../components/raks/RaksInstaImg";
 import Navbar from "../../components/Navbar";
+import { useLocation } from "react-router-dom";
 
 const Raks = () => {
+  const location = useLocation();
+
   return (
-    <>
-      {/* Navbar */}
+    <div key={location.pathname}>
       <Navbar />
-      {/* Sections */}
       <RaksHero />
       <RaksInstitutionVideo />
       <RaksLearning />
@@ -21,9 +22,8 @@ const Raks = () => {
       <RaksWannaKnow />
       <RaksInstaImg />
       <RaksOwnTheCourt />
-      {/* Footer */}
       <Footer />
-    </>
+    </div>
   );
 };
 

@@ -141,8 +141,8 @@ const Section2 = () => {
               Performance <br /> Driven
             </h2>
 
-            <p className="jost font-[400] text-black capitalize tracking-tight leading-[140%] text-[clamp(14px,2vw,26px)] max-w-[70%]">
-              Move Better Every Day. Designed for Daily Motion, engineered for Performance built for Strength & Balance.
+            <p className="jost font-[500] text-black capitalize tracking-tight leading-[140%] text-[clamp(14px,2vw,26px)] max-w-[60%]">
+              Move Better Every Day. Designed <br /> for Daily Motion, engineered for Performance built for Strength & Balance.
             </p>
 
           </div>

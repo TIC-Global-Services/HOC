@@ -74,7 +74,7 @@ const Contact = () => {
                 <h1>CLIENT</h1>
               </Link>
               <Link
-                to={"/Services"}
+                to={"/services"}
                 className={`hover:text-black/50 ${
                   isActiveRoute("/Services")
                     ? "text-[#060ebb] border-b-2 border-[#060ebb]"
@@ -84,7 +84,7 @@ const Contact = () => {
                 <h1>SERVICES</h1>
               </Link>
               <Link
-                to={"/Experience"}
+                to={"/experience"}
                 className={`hover:text-black/50 ${
                   isActiveRoute("/Experience")
                     ? "text-[#060ebb] border-b-2 border-[#060ebb]"
@@ -94,7 +94,7 @@ const Contact = () => {
                 <h1>EXPERIENCE LAB</h1>
               </Link>
               <Link
-                to={"/Ethos"}
+                to={"/ethos"}
                 className={`hover:text-black/50 ${
                   isActiveRoute("/Ethos")
                     ? "text-[#060ebb] border-b-2 border-[#060ebb]"
@@ -104,7 +104,7 @@ const Contact = () => {
                 <h1>ETHOS</h1>
               </Link>
               <Link
-                to={"/Careers"}
+                to={"/careers"}
                 className={`hover:text-black/50 ${
                   isActiveRoute("/Careers")
                     ? "text-[#060ebb] border-b-2 border-[#060ebb]"
@@ -114,7 +114,7 @@ const Contact = () => {
                 <h1>CAREERS</h1>
               </Link>
             </div>
-            <Link to={"/Contact"}>
+            <Link to={"/contact"}>
               <motion.div
                 className={`py-2 px-4 rounded-full relative text-[12px] md:text-[13px] font-semibold flex items-center cursor-pointer ${
                   isToggled
@@ -164,7 +164,7 @@ const categories = {
   experience: [
     {
       cx: 300,
-      cy: 500,
+      cy: 200,
       label: "Experiential Space Design",
       dis: "We design brand experiences that live in space — conceptually led, environmentally built, and memorable long after they end. Spatial storytelling through objects, structure, and environment",
       points: [
@@ -176,7 +176,7 @@ const categories = {
     },
     {
       cx: 300,
-      cy: 1150,
+      cy: 800,
       label: "Motion & CGI",
       dis: "The brand in motion | Moving image and digital craft that extends the brand into screen and space",
       points: [
@@ -213,7 +213,7 @@ const categories = {
   design: [
     {
       cx: 300,
-      cy: 300,
+      cy: 150,
       label: "Brand Evolution Strategy",
       dis: "Navigating brand growth, repositioning, and long-term relevance + Defining who you are, what you stand for, and how you show up",
       points: [
@@ -225,7 +225,7 @@ const categories = {
     },
     {
       cx: 300,
-      cy: 600,
+      cy: 400,
       label: "Brand Narrative & Content",
       dis: "Crafting compelling stories and content that bring your brand to life.",
       points: [
@@ -237,7 +237,7 @@ const categories = {
     },
     {
       cx: 300,
-      cy: 900,
+      cy: 650,
       label: "Logo & Visual Identity Design",
       dis: "Designing  a narrative world for your brand via distinctive visuals that make your brand instantly recognizable.",
       points: [
@@ -249,7 +249,7 @@ const categories = {
     },
     {
       cx: 300,
-      cy: 1200,
+      cy: 930,
       label: "Social Media & Digital Branding",
       dis: "Platform-ready identity systems and content frameworks",
       points: [
@@ -259,7 +259,7 @@ const categories = {
     },
     {
       cx: 300,
-      cy: 1500,
+      cy: 1150,
       label: "Environmental & Spatial Branding",
       dis: "Bridging the brand disconnect between digital and physical presence ",
       points: [
@@ -270,7 +270,7 @@ const categories = {
 
     {
       cx: 300,
-      cy: 1800,
+      cy: 1350,
       label: "Analogue Branding Tools",
       dis: "Designing tactile brand materials that bring your identity into the real world, via multisensory mediums.",
       points: [

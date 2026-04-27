@@ -55,7 +55,6 @@ export default function Section3() {
       className="w-full h-screen flex text-white"
       style={{
         backgroundImage: `url(${grid})`,
-        backgroundSize: "cover",
         backgroundColor: "#ffffff",
       }}
     >

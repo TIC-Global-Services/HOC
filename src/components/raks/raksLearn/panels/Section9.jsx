@@ -1,9 +1,55 @@
+import React, { useEffect, useRef } from "react";
+import gsap from "gsap";
+
 import rightImg from "../../../../assets/client/raks/img/panel10.png";
 import topRightIcon from "../../../../assets/client/raks/img/heroImg1.png";
 import bottomLeftIcon from "../../../../assets/client/raks/img/heroImg3.png";
 import grid from "../../../../assets/client/padlr/img/checkBg.png";
 
 const Section9 = () => {
+  const iconRefs = useRef([]);
+
+  const addIconRef = (el) => {
+    if (el && !iconRefs.current.includes(el)) {
+      iconRefs.current.push(el);
+    }
+  };
+
+  useEffect(() => {
+    const qs = iconRefs.current.map((el) => ({
+      el,
+      setX: gsap.quickTo(el, "x", { duration: 1, ease: "power3.out" }),
+      setY: gsap.quickTo(el, "y", { duration: 0.8, ease: "power3.out" }),
+      setR: gsap.quickTo(el, "rotation", { duration: 1, ease: "power3.out" }),
+    }));
+
+    let lastScrollY = window.scrollY;
+    let velocity = 0;
+    let rafId;
+
+    const tick = () => {
+      const scrollY = window.scrollY;
+      const delta = scrollY - lastScrollY;
+      lastScrollY = scrollY;
+
+      velocity += (delta - velocity) * 0.15;
+
+      qs.forEach(({ el, setX, setY, setR }) => {
+        const speed = parseFloat(el.dataset.speed || 0.5);
+        const baseRotate = parseFloat(el.dataset.rotate || 0);
+
+        setX(velocity * speed * 2);
+        setY(velocity * speed * 0.5);
+        setR(baseRotate + velocity * speed * 0.4);
+      });
+
+      rafId = requestAnimationFrame(tick);
+    };
+
+    rafId = requestAnimationFrame(tick);
+    return () => cancelAnimationFrame(rafId);
+  }, []);
+
   return (
     <section
       className="relative h-screen overflow-hidden flex"
@@ -15,7 +61,7 @@ const Section9 = () => {
       }}
     >
 
-      {/* ───────── LEFT SIDE ───────── */}
+      {/* LEFT SIDE */}
       <div
         className="relative h-full flex items-center"
         style={{
@@ -25,12 +71,7 @@ const Section9 = () => {
       >
 
         {/* TEXT */}
-        <div
-          className="text-start"
-          style={{
-            maxWidth: "40vw",
-          }}
-        >
+        <div className="text-start" style={{ maxWidth: "40vw" }}>
           <h2
             className="salo uppercase text-[#000085] leading-none"
             style={{ fontSize: "clamp(40px,8vw,140px)" }}
@@ -52,8 +93,11 @@ const Section9 = () => {
 
         {/* TOP RIGHT ICON */}
         <img
+          ref={addIconRef}
+          data-speed="0.6"
+          data-rotate="0"
           src={topRightIcon}
-          alt=""
+          alt="icon"
           className="absolute"
           style={{
             top: "6vh",
@@ -64,8 +108,11 @@ const Section9 = () => {
 
         {/* BOTTOM LEFT ICON */}
         <img
+          ref={addIconRef}
+          data-speed="0.8"
+          data-rotate="0"
           src={bottomLeftIcon}
-          alt=""
+          alt="icon"
           className="absolute"
           style={{
             bottom: "6vh",
@@ -76,21 +123,12 @@ const Section9 = () => {
 
       </div>
 
-      {/* ───────── RIGHT SIDE ───────── */}
-      <div
-        className="relative h-full"
-        style={{
-          width: "40vw",
-        }}
-      >
+      {/* RIGHT SIDE */}
+      <div className="relative h-full" style={{ width: "40vw" }}>
         <img
           src={rightImg}
           alt=""
-          className="absolute -right-10 inset-0 w-full h-full"
-          style={{
-            objectFit: "cover",
-            objectPosition: "center",
-          }}
+          className="absolute -right-10 inset-0 w-full h-full object-cover"
         />
       </div>
 

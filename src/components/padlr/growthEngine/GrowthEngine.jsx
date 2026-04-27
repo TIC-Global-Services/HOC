@@ -57,7 +57,7 @@ export default function CourtSky() {
           </div>
 
           {/* SECTION 3 */}
-          <div className="w-[80vw] h-full flex-shrink-0">
+          <div className="w-[90vw] h-full flex-shrink-0">
             <Section3 />
           </div>
 

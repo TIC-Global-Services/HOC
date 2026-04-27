@@ -23,9 +23,8 @@ const ClientsUniq = () => {
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-x-20 gap-y-10 justify-items-center">
 
         {items.map((item, index) => (
-        <Link to={item.path} >
+        <Link key={item.title} to={item.path} >
           <motion.div
-            key={index}
             className="group"
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}

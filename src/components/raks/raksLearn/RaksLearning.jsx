@@ -23,14 +23,20 @@ export default function RaksLearning() {
   const sectionWidths = [120, 100, 100, 100, 60, 150, 150, 100,100,90];
   const totalWidth = sectionWidths.reduce((a, b) => a + b, 0); 
 
-  useEffect(() => {
-    if (window.innerWidth < 768) return;
+useEffect(() => {
+  if (window.innerWidth < 768) return;
 
-    const ctx = gsap.context(() => {
+  let ctx;
+
+  const init = () => {
+    ctx = gsap.context(() => {
       const track = trackRef.current;
       const wrapper = wrapperRef.current;
 
+      if (!track || !wrapper) return;
+
       const totalScroll = track.scrollWidth - window.innerWidth;
+      if (totalScroll <= 0) return;
 
       gsap.to(track, {
         x: -totalScroll,
@@ -42,13 +48,24 @@ export default function RaksLearning() {
           pin: true,
           scrub: 1,
           anticipatePin: 1,
+          invalidateOnRefresh: true,
         },
       });
     }, wrapperRef);
+  };
 
-    return () => ctx.revert();
-  }, []);
+  // WAIT for layout (CRITICAL)
+  const timer = setTimeout(init, 100);
 
+  return () => {
+    clearTimeout(timer);
+    ctx && ctx.revert();
+
+    if (trackRef.current) {
+      gsap.set(trackRef.current, { clearProps: "all" });
+    }
+  };
+}, []);
   const sections = [
     { Component: Section1, width: sectionWidths[0] },
     { Component: Section2, width: sectionWidths[1] },
@@ -65,7 +82,7 @@ export default function RaksLearning() {
 
   return (
     <section ref={wrapperRef}>
-      <div className="sticky top-0 h-screen overflow-visible">
+      <div className=" h-screen overflow-hidden">
 
         {/* TRACK */}
         <div

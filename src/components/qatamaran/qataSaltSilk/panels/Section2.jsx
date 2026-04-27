@@ -61,21 +61,20 @@ export default function Section2() {
         className="w-[100vw] h-full relative text-white overflow-hidden flex-shrink-0"
         style={{
           backgroundImage: `url(${grid})`,
-          backgroundSize: "cover",
           backgroundColor: "#ffffff",
         }}
       >
         <div className="absolute top-0 left-0 w-full py-[clamp(6px,1vw,14px)] bg-[#1E382D]" />
 
         {/* CENTER */}
-        <div className="absolute inset-0 flex items-center justify-center px-[clamp(20px,4vw,80px)] md:translate-x-[10%]">
+        <div className="absolute inset-0 flex items-center justify-center px-[clamp(20px,4vw,80px)] md:translate-x-[0%]">
           <div className="max-w-[900px] text-start space-y-[clamp(12px,2vw,30px)]">
             <h2 className="salo text-[#1E382D] uppercase tracking-tight leading-none text-[clamp(48px,12vw,200px)]">
               Tide bound <br /> Tailoring
             </h2>
 
-            <p className="jost text-black leading-[140%] capitalize font-[500] tracking-tight text-[clamp(14px,2vw,24px)]">
-              Classic techniques meet contemporary expression. Designed for the
+            <p className="jost text-black leading-[140%] font-[500] tracking-tight text-[clamp(14px,1.8vw,24px)] max-w-[600px]">
+              Classic techniques meet contemporary expression. <br /> Designed for the
               man who moves with quiet confidence.
             </p>
           </div>
@@ -135,11 +134,11 @@ export default function Section2() {
         <div
           className="absolute text-black max-w-[500px]"
           style={{
-            bottom: "clamp(20px,4vw,60px)",
-            right: "clamp(20px,4vw,60px)",
+            bottom: "3%",
+            right: "15%",
           }}
         >
-          <p className="jost leading-[120%] tracking-tight text-start font-medium text-[clamp(18px,2vw,60px)]">
+          <p className="jost leading-[120%] tracking-tight text-start font-medium text-[clamp(18px,2.5vw,60px)]">
             MODERN GENTLEMEN & <br /> TIMELESS STYLE
           </p>
         </div>
@@ -150,7 +149,6 @@ export default function Section2() {
         className="w-[150vw] h-full flex flex-shrink-0 text-white"
         style={{
           backgroundImage: `url(${grid})`,
-          backgroundSize: "cover",
           backgroundColor: "#ffffff",
         }}
       >

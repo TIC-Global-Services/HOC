@@ -63,13 +63,13 @@ const Section3 = () => {
       </div>
 
       {/* RIGHT */}
-      <div className="w-[60%] h-full flex flex-col justify-end items-center px-[4%] py-[4%]">
+      <div className="w-[50%] h-full flex flex-col gap-[10%] justify-center items-center px-[4%] py-[4%]">
           {/* TOP ICON */}
           <div
             ref={addIconRef}
             data-speed="0.8"
             data-rotate="0"
-            className="flex justify-end"
+            className="flex items-end justify-end"
             style={{ willChange: "transform" }}
           >
             <img
@@ -81,7 +81,7 @@ const Section3 = () => {
 
           {/* TEXT */}
           <div className="max-w-[80%]">
-            <p className="jost text-start capitalize font-[500] text-black tracking-tight leading-[130%] text-[clamp(14px,2vw,26px)]">
+            <p className="jost text-start capitalize font-[500] text-black tracking-tight leading-[130%] text-[clamp(14px,1.8vw,26px)]">
               Maintains visual balance with neutral tones inspired by real court
               elements. Communicates precision and modernity through a
               distinctive, high-impact typeface
@@ -97,7 +97,7 @@ const Section3 = () => {
                 alt="pin"
                 className="absolute z-10"
                 style={{
-                  top: "-10%",
+                  top: "0%",
                   left: "-20%",
                   width: "clamp(28px,2.5vw,55px)",
                 }}
@@ -107,9 +107,9 @@ const Section3 = () => {
               <img
                 src={palatteImg}
                 alt="palette"
-                className="object-contain"
+                className="object-contain "
                 style={{
-                  width: "clamp(180px,10vw,300px)",
+                  width: "clamp(180px,14vw,300px)",
                   transform: "rotate(-12deg)",
                 }}
               />
