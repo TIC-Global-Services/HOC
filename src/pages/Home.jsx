@@ -117,7 +117,9 @@ const Home = () => {
       </div>
 
       {/* <SecondSection /> */}
+      <div className="md:mt-20">
       <LogosLoop />
+      </div>
       <ThirdSection />
       <div className="md:hidden block mb-10">
         <div className="h-10"></div>
