@@ -12,6 +12,9 @@ import Section7 from "../raksLearn/panels/Section7";
 import Section8 from "../raksLearn/panels/Section8";
 import Section9 from "../raksLearn/panels/Section9";
 import Section10 from '../raksLearn/panels/Section10'
+import Section11 from '../raksLearn/panels/Section11'
+import Section12 from '../raksLearn/panels/Section12'
+
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -20,7 +23,7 @@ export default function RaksLearning() {
   const trackRef = useRef(null);
 
 
-  const sectionWidths = [120, 100, 100, 100, 60, 150, 150, 100,100,90];
+  const sectionWidths = [120, 100, 100, 100, 60, 150, 150, 100,100,90,100,50];
   const totalWidth = sectionWidths.reduce((a, b) => a + b, 0); 
 
 useEffect(() => {
@@ -54,7 +57,7 @@ useEffect(() => {
     }, wrapperRef);
   };
 
-  // WAIT for layout (CRITICAL)
+  // WAIT for layout
   const timer = setTimeout(init, 100);
 
   return () => {
@@ -77,6 +80,8 @@ useEffect(() => {
     { Component: Section8, width: sectionWidths[7] },
     { Component: Section10, width: sectionWidths[8] },
     { Component: Section9, width: sectionWidths[9] },
+    { Component: Section11, width: sectionWidths[10] },
+    { Component: Section12, width: sectionWidths[11] },
 
   ];
 

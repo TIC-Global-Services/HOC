@@ -4,10 +4,10 @@ import RaksInstitutionVideo from "../../components/raks/RaksInstituionVideo";
 import RaksLearning from "../../components/raks/raksLearn/RaksLearning";
 import RaksOwnTheCourt from "../../components/raks/RaksOwnTheCourt";
 import RaksVideoSec from "../../components/raks/RaksVideoSec";
-import RaksWannaKnow from "../../components/raks/RaksWannaKnow";
-import RaksInstaImg from "../../components/raks/RaksInstaImg";
 import Navbar from "../../components/Navbar";
 import { useLocation } from "react-router-dom";
+// import RaksWannaKnow from "../../components/raks/RaksWannaKnow";
+// import RaksInstaImg from "../../components/raks/RaksInstaImg";
 
 const Raks = () => {
   const location = useLocation();
@@ -19,8 +19,8 @@ const Raks = () => {
       <RaksInstitutionVideo />
       <RaksLearning />
       <RaksVideoSec />
-      <RaksWannaKnow />
-      <RaksInstaImg />
+    {/*  <RaksWannaKnow /> */}
+      {/* <RaksInstaImg /> */}
       <RaksOwnTheCourt />
       <Footer />
     </div>

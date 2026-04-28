@@ -72,65 +72,55 @@ export default function Section4() {
 
       {/* RIGHT BLUE PANEL */}
       <div
-        className="absolute"
+        className="absolute top-0 right-0 h-full flex items-center"
         style={{
-          right: 0,
-          top: 0,
-          height: "100%",
-          width: "clamp(28%,30%,32%)",
+          width: "clamp(320px,30vw,440px)",
           backgroundColor: "#8FC4E9",
         }}
-      />
-
-      {/* BRAND TEXT */}
-      <div
-        className="absolute z-20 text-start"
-        style={{
-          top: "50%",
-          right: "13%",
-          transform: "translateY(-50%)",
-        }}
       >
-        <div style={{ lineHeight: "1" }}>
-          <div>
-            <span
-              className="salo  text-[#8FC4E9]"
-              style={{ fontSize: "clamp(80px,10vw,150px)" }}
-            >
-              B <span className="text-white">RAND</span>
-            </span>
-           
-          </div>
+        {/* TEXT WRAPPER */}
+        <div className="relative w-full ">
+          {/* BRAND */}
+          <div className="relative tracking-normal leading-none">
+            {/* B LINE */}
+            <div className="relative">
+              {/* B outside */}
+              <span
+                className="absolute left-0 -translate-x-[100%] salo text-[#8FC4E9]"
+                style={{ fontSize: "clamp(80px,10vw,140px)" }}
+              >
+                B
+              </span>
 
-          <div>
-            <span
-              className="salo text-[#8FC4E9]"
-              style={{ fontSize: "clamp(80px,10vw,150px)" }}
-            >
-              V <span className="text-white">OICE</span>
-            </span>
+              {/* RAND inside */}
+              <span
+                className="absolute left-0 salo text-white"
+                style={{ fontSize: "clamp(80px,10vw,140px)" }}
+              >
+                RAND
+              </span>
+            </div>
+
+            {/* V LINE */}
+            <div className="relative tracking-normal">
+              {/* V outside */}
+              <span
+                className="absolute left-0 -translate-x-[100%] salo text-[#8FC4E9]"
+                style={{ fontSize: "clamp(80px,10vw,140px)" }}
+              >
+                V
+              </span>
+
+              {/* OICE inside */}
+              <span
+                className="absolute left-0 salo text-white"
+                style={{ fontSize: "clamp(80px,10vw,140px)" }}
+              >
+                OICE
+              </span>
+            </div>
           </div>
         </div>
-      </div>
-
-      {/* BADGE */}
-      <div
-        ref={badgeRef}
-        className="absolute z-20"
-        style={{
-          left: "50%",
-          bottom: "8%",
-          transform: "translateX(-50%)",
-          willChange: "transform",
-        }}
-      >
-        <img
-          src={circleBadge}
-          alt=""
-          style={{
-            width: "clamp(120px,12vw,240px)",
-          }}
-        />
       </div>
     </section>
   );
