@@ -78,67 +78,78 @@ export default function RaksOwnTheCourt() {
       mouse.y = e.clientY - rect.top;
     };
 
-    // FALLING ANIMATION ADDED
-    itemRefs.current.forEach((el, i) => {
-      gsap.fromTo(
-        el,
-        {
-          y: -window.innerHeight,
-          opacity: 0,
-        },
-        {
-          y: 0,
-          opacity: 1,
-          duration: 0.8 + Math.random() * 0.4,
-          delay: i * 0.05,
-          ease: "power2.out",
-        }
-      );
+    // ===== FALLING TIMELINE =====
+    const tl = gsap.timeline();
+
+    let index = 0;
+
+    ROWS.forEach((row) => {
+      row.forEach((item) => {
+        const el = itemRefs.current[index++];
+
+        tl.fromTo(
+          el,
+          {
+            y: -window.innerHeight,
+            opacity: 0,
+          },
+          {
+            y: 0,
+            opacity: 1,
+            duration: 1.2,
+            ease: "back.out(1.4)", // bounce
+          },
+          item.d // USE DELAY
+        );
+      });
     });
 
-    const animate = () => {
-      if (!containerRef.current) return;
+    // ===== START INTERACTION AFTER FALL =====
+    tl.add(() => {
+      const animate = () => {
+        if (!containerRef.current) return;
 
-      const parentRect = containerRef.current.getBoundingClientRect();
+        const parentRect = containerRef.current.getBoundingClientRect();
 
-      itemRefs.current.forEach((el) => {
-        const rect = el.getBoundingClientRect();
+        itemRefs.current.forEach((el) => {
+          const rect = el.getBoundingClientRect();
 
-        const elX = rect.left - parentRect.left + rect.width / 2;
-        const elY = rect.top - parentRect.top + rect.height / 2;
+          const elX = rect.left - parentRect.left + rect.width / 2;
+          const elY = rect.top - parentRect.top + rect.height / 2;
 
-        let dx = elX - mouse.x;
-        let dy = elY - mouse.y;
+          let dx = elX - mouse.x;
+          let dy = elY - mouse.y;
 
-        let distance = Math.sqrt(dx * dx + dy * dy) || 1;
+          let distance = Math.sqrt(dx * dx + dy * dy) || 1;
 
-        let moveX = 0;
-        let moveY = 0;
+          let moveX = 0;
+          let moveY = 0;
 
-        if (distance < radius) {
-          const force = (radius - distance) / radius;
+          if (distance < radius) {
+            const force = (radius - distance) / radius;
+            dx /= distance;
+            dy /= distance;
 
-          dx /= distance;
-          dy /= distance;
+            moveX = dx * force * 120;
+            moveY = dy * force * 120;
+          }
 
-          moveX = dx * force * 120;
-          moveY = dy * force * 120;
-        }
-
-        gsap.to(el, {
-          x: moveX,
-          y: moveY,
-          duration: 0.4,
-          ease: "power2.out",
+          gsap.to(el, {
+            x: moveX,
+            y: moveY,
+            duration: 0.4,
+            ease: "power2.out",
+          });
         });
-      });
+
+        rafId = requestAnimationFrame(animate);
+      };
 
       rafId = requestAnimationFrame(animate);
-    };
+    });
 
     const container = containerRef.current;
     container.addEventListener("mousemove", handleMove);
-    rafId = requestAnimationFrame(animate);
 
     return () => {
       container.removeEventListener("mousemove", handleMove);
@@ -155,15 +166,11 @@ export default function RaksOwnTheCourt() {
         backgroundSize: "cover",
       }}
     >
-      {/* TITLE */}
-      <h2
-        className="absolute left-[5%] top-[clamp(40px,8vh,90px)] z-10 m-0 salo font-medium text-[14px] md:text-[140px] leading-none tracking-[-0.02em] uppercase text-[#000085]"
-      >
-        <span style={{ display: "block" }}>OWN THE</span>
-        <span style={{ display: "block" }}>COURT</span>
+      <h2 className="absolute left-[5%] top-[clamp(40px,8vh,90px)] z-10 m-0 salo font-medium text-[14px] md:text-[140px] leading-none tracking-[-0.02em] uppercase text-[#000085]">
+        <span style={{display:"block"}}>OWN THE</span>
+        <span style={{display:"block"}}>COURT</span>
       </h2>
 
-      {/* ITEMS */}
       <div className="w-full max-w-[1600px] mx-auto relative h-full">
         {ROWS.map((row, ri) =>
           row.map((item, i) => (
