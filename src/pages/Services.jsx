@@ -721,7 +721,7 @@ const Label = ({ number, title, description, textRef, points = [] }) => {
         {points.length > 0 && (
           <ul className="space-y-2">
             {points.map((p, i) => (
-              <li key={i} className="text-[14px] text-[#BFBFBF] leading-[140%]">
+              <li key={i} className="text-[14px] text-[#BFBFBF] leading-[100%] pt-[1%]">
                 • {p}
               </li>
             ))}

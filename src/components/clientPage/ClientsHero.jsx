@@ -4,9 +4,9 @@ import starImg from "../../assets/client/page/endIcon.png";
 
 const ClientsHero = () => {
   return (
-    <div className="items-center flex-col relative justify-center h-[50vh] md:h-screen flex px-10 md:-mt-[10%]">
+    <div className="items-center flex-col relative justify-center h-[50vh] md:h-screen flex px-10 md:-mt-[5%]">
 
-      {/* CLIENT Title — relative wrapper anchors both decorative images */}
+      {/* CLIENT Title  */}
       <div className="relative inline-block">
 
         {/* Button image */}

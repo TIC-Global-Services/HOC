@@ -32,7 +32,7 @@ const JobListings = () => {
               initial={{ opacity: 0 }}
               animate={isInView ? { opacity: 1 } : {}}
               transition={{ delay: 0.3 }}
-              className="xl:text-[50px] lg:text-[42px] text-4xl md:leading-[50px] font-bold salo mb-6"
+              className="xl:text-[50px] lg:text-[42px] text-4xl md:leading-[50px] font-bold jost mb-6"
             >
               <span className="text-[#060ebb] hover:text-white ">E-mail us</span> if you are a
               creator, open to learning, nurturing, growing, and fostering the
@@ -42,7 +42,7 @@ const JobListings = () => {
             <div className="flex gap-4">
               <div className="flex justify-center items-center">
                 <button
-                  className="bg-white text-[#060ebb] px-6 py-3 rounded-full font-medium transition-colors duration-300 hover:bg-blue-600 hover:text-white"
+                  className="bg-white jost text-[#060ebb] px-6 py-3 rounded-full font-medium transition-colors duration-300 hover:bg-blue-600 hover:text-white"
                   onClick={(e) => {
                     e.preventDefault(); // Prevents unwanted navigation issues
                     window.open(
@@ -61,7 +61,7 @@ const JobListings = () => {
                 <motion.button
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
-                  className="border border-white px-6 py-3 rounded-full font-medium transition-colors duration-300 hover:bg-white hover:text-black"
+                  className="border jost border-white px-6 py-3 rounded-full font-medium transition-colors duration-300 hover:bg-white hover:text-black"
                 >
                   VIEW LINKEDIN
                 </motion.button>

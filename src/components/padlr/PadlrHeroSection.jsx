@@ -74,21 +74,21 @@ const PadlrHero = () => {
           h-full 
           w-full xl:w-[50%]
           flex items-center
-          
+          px-6 md:px-10 xl:px-14
         "
       >
         <p
-          className="jost text-black text-start font-[500] capitalize leading-[150%] max-w-[656px]"
-          style={{ fontSize: "clamp(14px, 1.7vw, 26px)" }}
+          className="jost text-black text-start font-[500] capitalize tracking-tight leading-[150%] max-w-[656px]"
+          style={{ fontSize: "clamp(14px, 1.6vw, 26px)" }}
         >
           Established in 2025, Padlr is set to be Chennai's premier padel and{" "}
-          <span className="text-[#060EBB] salo text-[clamp(18px,2.5vw,40px)]">
+          <span className="text-[#060EBB] salo text-[clamp(18px,2.3vw,40px)]">
             Pickleball
           </span>{" "}
           destination. As a high-performance, tech-forward arena, Padlr takes
           the demands of these racquet sports seriously, with ultra-panoramic
           padel courts licensed by{" "}
-          <span className="text-[#060EBB] salo text-[clamp(18px,2.5vw,40px)]">
+          <span className="text-[#060EBB] salo text-[clamp(18px,2.3vw,40px)]">
             SkyPadel
           </span>{" "}
           Spain, outfitted with Mondo turf — the first of its kind in Chennai —
@@ -97,7 +97,7 @@ const PadlrHero = () => {
           When Haus of Chaos partnered with Padlr, it was game, set and a match
           like no other. The score? One suave, bold identity in the spirit of
           all things{" "}
-          <span className="text-[#060EBB] salo text-[clamp(18px,2.5vw,40px)]">
+          <span className="text-[#060EBB] salo text-[clamp(18px,2.3vw,40px)]">
             "Seriously Playful"
           </span>
           .

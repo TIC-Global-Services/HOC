@@ -65,7 +65,7 @@ const Navbar = () => {
       </div>
 
       {/* Desktop Navigation */}
-      <div className="hidden md:block pt-[15%]">
+      <div className="hidden md:block pt-[10%]">
         <div
           className={`${
             isFixed ? "fixed" : "absolute"
@@ -73,7 +73,7 @@ const Navbar = () => {
             isSection2 ? "bg-white text-black" : "text-[#000000]"
           } transition-all py-2 duration-700`}
         >
-          <div className="flex py-2 jost px-4 md:px-10 justify-between items-start">
+          <div className="flex py-2 jost px-4 md:px-10 justify-between items-center">
 
             {/* Logo */}
             <img

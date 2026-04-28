@@ -49,7 +49,7 @@ const GopalanHero = () => {
           </div>
         </div>
 
-        {/* ───── RIGHT TEXT (ABSOLUTE CENTER RIGHT) ───── */}
+        {/* ───── RIGHT TEXT ───── */}
         <div
           className="absolute"
           style={{
