@@ -6,6 +6,8 @@ import RaksOwnTheCourt from "../../components/raks/RaksOwnTheCourt";
 import RaksVideoSec from "../../components/raks/RaksVideoSec";
 import Navbar from "../../components/Navbar";
 import { useLocation } from "react-router-dom";
+import MobRaksLearn from "../../components/raks/mobRaksLearn/MobRaksLearn";
+import MobRaksHero from "../../components/raks/mobLayout/mobRaksHero/MobRaksHero";
 // import RaksWannaKnow from "../../components/raks/RaksWannaKnow";
 // import RaksInstaImg from "../../components/raks/RaksInstaImg";
 
@@ -15,11 +17,26 @@ const Raks = () => {
   return (
     <div key={location.pathname}>
       <Navbar />
-      <RaksHero />
+      {/* Mob */}
+      <div className="md:hidden">
+        <MobRaksHero />
+      </div>
+
+      {/* Desktop */}
+      <div className="md:block hidden">
+        <RaksHero />
+      </div>
       <RaksInstitutionVideo />
-      <RaksLearning />
+      {/* Mob Layout */}
+      <div className="md:hidden">
+        <MobRaksLearn />
+      </div>
+      {/* Desktop Layout */}
+      <div className="md:block hidden">
+        <RaksLearning />
+      </div>
       <RaksVideoSec />
-    {/*  <RaksWannaKnow /> */}
+      {/*  <RaksWannaKnow /> */}
       {/* <RaksInstaImg /> */}
       <RaksOwnTheCourt />
       <Footer />

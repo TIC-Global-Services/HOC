@@ -1,93 +1,60 @@
 import React from "react";
-import computerImg from "../../../../assets/client/padlr/img/Group.png";
 import paddleLogoImg from "../../../../assets/client/padlr/img/heroImg2.png";
 import aboutVideo from "../../../../assets/client/padlr/vdo/Padlr_Animation 2.mp4";
 import MobSection2 from "./MobSection2";
-import MobSection3 from "./MobSection3";
 
 const MobGrowthEngine = () => {
   return (
     <>
-    <section className="w-full min-h-screen bg-[#0606BC] overflow-hidden flex flex-col">
-      {/* ── TOP BAR ── */}
-      <div
-        className="relative flex items-center px-5 border-b border-white"
-        style={{ height: "15%" }}
-      >
-        <h1 className="salo text-[60px] text-white uppercase leading-none">
-          GROWTH ENGINE
+    <section className="w-full bg-[#0606BC] text-white">
+      {/* TITLE */}
+      <div className="px-4 py-14">
+        <h1 className="text-start salo text-[60px] leading-none uppercase">
+          Growth Engine
         </h1>
       </div>
 
-      {/* ── TEXT GRID BOX ── */}
-      <div
-        className="border-b border-white"
-        style={{
-          height: "36vh", // 3 rows × 12vh
-          display: "grid",
-          gridTemplateRows: "repeat(3, 1fr)",
-        }}
-      >
-        {["TRACKED.", "ANALYZED.", "OPTIMIZED."].map((text, i) => (
-          <div key={i} className="flex items-center px-5 border-b border-white">
-            <span className="salo text-[60px] text-white uppercase">
-              {text}
-            </span>
+      {/* ROWS */}
+      <div className="flex flex-col border-t border-white">
+        {["Tracked.", "Analyzed.", "Optimized."].map((text, i) => (
+          <div key={i} className="border-b border-white px-4 py-10">
+            <h2 className="salo text-start text-[60px] leading-none uppercase">{text}</h2>
           </div>
         ))}
       </div>
+      {/*  ABOUT SECTION  */}
+      <div className="text-start px-4 py-16 relative">
+        {/* LOGO RIGHT */}
+        <img
+          src={paddleLogoImg}
+          alt=""
+          className="absolute right-4 top-6 w-[60px]"
+        />
 
-      {/* ── ABOUT TEXT ── */}
-      <div className="relative px-5 py-10">
-        {/* LOGO (TOP RIGHT) */}
-        <div
-          className="absolute"
-          style={{
-            top: "1rem",
-            right: "1rem",
-            width: "clamp(60px,10vw,120px)",
-          }}
-        >
-          <img src={paddleLogoImg} alt="" className="w-full object-contain" />
-        </div>
+        {/* ABOUT TITLE */}
+        <h2 className="salo text-[42px] leading-none uppercase mb-6">About</h2>
 
-        {/* CONTENT */}
-        <div
-        >
-          {/* TITLE */}
-          <p
-            className="salo text-start text-[60px] text-white uppercase mb-2"
-          >
-            ABOUT
-          </p>
-
-          {/* PARAGRAPH */}
-          <p
-            className="jost capitalize text-[16px] text-start text-white leading-[15px] border-t border-white"
-          >
-            Padlr is built to power modern digital ecosystems. From fragmented
-            data to unified intelligence, every interaction is transformed into
-            actionable insight.
-          </p>
-        </div>
+        {/* TEXT */}
+        <p className="jost capitalize font-[300] text-[16px] leading-[120%] max-w-[340px] pt-3">
+          Padlr is built to power modern digital ecosystems. From fragmented data to unified intelligence, every interaction is transformed into actionable insight.
+        </p>
       </div>
 
-      {/* ── VIDEO ── */}
-      <div className="flex-1 w-full overflow-visible">
+      {/* VIDEO */}
+      <div className="w-full bg-[#EAEAEA]">
         <video
           src={aboutVideo}
           autoPlay
           muted
           loop
           playsInline
-          className="w-full h-full object-cover"
+          className="w-full object-cover"
         />
       </div>
     </section>
 
-    {/* Sections*/}
+    {/* Sections */}
     <MobSection2 />
-    <MobSection3 />
 
     </>
   );

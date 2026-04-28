@@ -8,6 +8,7 @@ import Footer from "../Footer";
 import MobGrowthEngine from "../../components/padlr/mobileLayout/growthEngine/MobGrowthEngine";
 import MobCourtSky from "../../components/padlr/mobileLayout/courtSky/MobCourtSky";
 import PadlrVideoSec2 from "../../components/padlr/PadlrVideoSec2";
+import MobPadlrHero from "../../components/padlr/mobileLayout/padlrHero.jsx/MobPadlrHero";
 // import WannaKnowMore from "../../components/padlr/WannaKnowMore";
 // import PadlrImageSec from "../../components/padlr/PadlrImageSec";
 
@@ -17,7 +18,15 @@ const Padlr = () => {
       {/* Navbar */}
       <Navbar />
       {/* Sections */}
+      {/* Mob */}
+      <div className="md:hidden">
+      <MobPadlrHero />
+      </div>
+
+      {/* Desktop */}
+      <div className="md:block hidden">
       <PadlrHero />
+      </div>
 
       <div className="hidden md:block">
         <GrowthEngine />

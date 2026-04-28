@@ -1,10 +1,11 @@
 import React, { useEffect, useRef } from "react";
 import gsap from "gsap";
 
-import grid from "../../../../assets/client/padlr/img/checkBg.png";
+import grid from "../../../../assets/client/mobBg.png";
 import springImg from "../../../../assets/client/padlr/img/heroImg3.png";
 import canImg from "../../../../assets/client/padlr/img/heroImg4.png";
 import batImg from "../../../../assets/client/padlr/img/heroImg2.png";
+import MobSection3 from "./MobSection3";
 
 const MobSection2 = () => {
   const iconRefs = useRef([]);
@@ -52,75 +53,75 @@ const MobSection2 = () => {
   }, []);
 
   return (
+    <>
     <section className="relative h-screen w-full overflow-hidden">
+      {/* BACKGROUND */}
+      <div
+        className="absolute inset-0"
+        style={{
+          backgroundImage: `url(${grid})`,
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+        }}
+      />
 
-  {/* BACKGROUND */}
-  <div
-    className="absolute inset-0"
-    style={{
-      backgroundImage: `url(${grid})`,
-      backgroundSize: "cover",
-      backgroundPosition: "center",
-    }}
-  />
+      {/* TOP SPRING */}
+      <img
+        ref={addIconRef}
+        data-speed="0.3"
+        data-rotate="-12"
+        src={springImg}
+        className="absolute top-[20%] left-[5%] w-[110px] -rotate-12"
+      />
 
-  {/* ─── FLOAT ICONS ─── */}
+      {/* MIDDLE RIGHT CAN */}
+      <img
+        ref={addIconRef}
+        data-speed="0.5"
+        data-rotate="-12"
+        src={canImg}
+        className="absolute top-[65%] right-[5%] w-[100px] -rotate-12"
+      />
 
-  {/* TOP SPRING */}
-  <img
-    ref={addIconRef}
-    data-speed="0.3"
-    data-rotate="-12"
-    src={springImg}
-    className="absolute top-[5%] left-[5%] w-[80px] -rotate-12"
-  />
+      {/* BOTTOM BAT */}
+      <img
+        ref={addIconRef}
+        data-speed="0.7"
+        src={batImg}
+        className="absolute bottom-[8%] left-[5%] w-[110px]"
+      />
 
-  {/* MIDDLE RIGHT CAN */}
-  <img
-    ref={addIconRef}
-    data-speed="0.5"
-    data-rotate="-12"
-    src={canImg}
-    className="absolute top-[40%] right-[5%] w-[100px] -rotate-12"
-  />
+      {/* ─── CENTER CONTENT ─── */}
+      <div
+        className="absolute text-start px-5"
+        style={{
+          top: "50%",
+          left: "50%",
+          transform: "translate(-50%, -50%)",
+          width: "90%",
+        }}
+      >
+        {/* HEADING */}
+        <h2 className="salo  text-[#0606BC] uppercase leading-none text-[50px]">
+          Performance <br /> Driven
+        </h2>
 
-  {/* BOTTOM BAT */}
-  <img
-    ref={addIconRef}
-    data-speed="0.7"
-    src={batImg}
-    className="absolute bottom-[8%] left-[5%] w-[110px]"
-  />
+        {/* TEXT */}
+        <p className="jost font-[500] text-black text-[16px] leading-[100%] mt-3">
+          Move Better Every Day. Designed for Daily Motion, engineered for
+          Performance built for Strength & Balance.
+        </p>
 
-  {/* ─── CENTER CONTENT ─── */}
-  <div
-    className="absolute text-center px-5"
-    style={{
-      top: "50%",
-      left: "50%",
-      transform: "translate(-50%, -50%)",
-      width: "90%",
-    }}
-  >
+        {/* BOTTOM TEXT */}
+        <p className="jost uppercase text-black text-[25px] font-[500] mt-4">
+          Energy & Experience
+        </p>
+      </div>
+    </section>
 
-    {/* HEADING */}
-    <h2 className="salo text-[#0606BC] uppercase leading-none text-[32px]">
-      Performance <br /> Driven
-    </h2>
-
-    {/* TEXT */}
-    <p className="jost text-black text-[14px] leading-[140%] mt-3">
-      Move Better Every Day. Designed for Daily Motion, engineered for
-      Performance built for Strength & Balance.
-    </p>
-
-    {/* BOTTOM TEXT */}
-    <p className="jost uppercase text-black text-[18px] font-[500] mt-4">
-      Energy & Experience
-    </p>
-
-  </div>
-</section>
+    {/* Section 3 */}
+    <MobSection3 />
+    </>
   );
 };
 

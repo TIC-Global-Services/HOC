@@ -208,7 +208,6 @@ export default function SyedTailorHeritage() {
               >
                 TIMEL<span style={{ color: "#262666" }}>ESS CRAFT</span>
               </h2>
-              <div className="w-full h-[5%] bg-[#EBE2CE] "></div>
             </div>
           </div>
 
@@ -250,13 +249,8 @@ export default function SyedTailorHeritage() {
                 <img src={tagElegantImg} className="w-full -rotate-[20deg]" />
               </div>
             </div>
-
-            
           </div>
-          
         </div>
-        {/* BOTTOM STRIP */}
-      <div className="absolute bottom-0 left-0 w-full h-[5%] bg-[#EBE2CE]" />
       </div>
     </section>
   );

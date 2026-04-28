@@ -7,6 +7,8 @@ import SyedCraftmanShip from "../../components/syedBawkher/SyedCraftmanShip";
 import SyedDesignVideo from "../../components/syedBawkher/SyedDesignVideo";
 import SyedTailorHeritage from "../../components/syedBawkher/SyedTailorHeritage";
 import Navbar from "../../components/Navbar";
+import MobSyedSignature from "../../components/syedBawkher/mobSyedLayout/MobSyedSignature";
+import MobSyedHero from "../../components/syedBawkher/mobLayout/mobSyedHero/MobSyedHero";
 
 const SyedBawkher = () => {
   return (
@@ -14,8 +16,24 @@ const SyedBawkher = () => {
       {/* Navbar */}
       <Navbar />
       {/* Sections */}
+      {/* Mob */}
+      <div className="md:hidden">
+      <MobSyedHero />
+      </div>
+
+      {/* Desktop */}
+      <div className="md:block hidden">
       <SyedHero />
+      </div>
+      {/* Mob */}
+      <div className="md:hidden">
+      <MobSyedSignature />
+      </div>
+
+      {/* Desktop */}
+      <div className="md:block hidden">
       <SyedSignatureCraft />
+      </div>
       <SyedDesignVideo />
       <SyedTailorHeritage />
       <SyedWannaKnow />

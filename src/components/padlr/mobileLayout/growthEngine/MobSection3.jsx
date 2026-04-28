@@ -5,6 +5,7 @@ import visualImg from "../../../../assets/client/padlr/img/visualImg.png";
 import spinIcon from "../../../../assets/client/padlr/img/heroImg1.png";
 import palatteImg from "../../../../assets/client/padlr/img/courtImg2.png";
 import attachIcon from "../../../../assets/client/padlr/img/attachIcon.png";
+import grid from "../../../../assets/client/padlr/img/checkBg.png";
 
 const MobSection3 = () => {
   const iconRefs = useRef([]);
@@ -50,74 +51,63 @@ const MobSection3 = () => {
   }, []);
 
   return (
-    <section className="w-full h-auto bg-white flex flex-col justify-between py-[6%]">
+    <section className="relative w-full h-screen bg-white overflow-visible">
 
-      {/* TOP ROW */}
-      <div className="flex items-center justify-between"
+      {/* ─── TOP  ─── */}
+      <div
+        className="absolute top-0 left-0 w-full h-[50vh]"
+        style={{
+          backgroundImage: `url(${grid})`,
+          backgroundPosition: "center",
+        }}
       >
 
         {/* LEFT IMAGE */}
-        <div className="w-[55%]">
-          <img
-            src={visualImg}
-            alt="visual"
-            className="w-[80%] max-w-none object-contain"
-          />
-        </div>
+        <img
+          src={visualImg}
+          alt="visual"
+          className="absolute left-0 top-[30%] -translate-y-1/2 w-[60%] object-contain"
+        />
 
         {/* RIGHT TEXT */}
-        <div className="w-[45%]">
-          <p className="jost text-start text-black leading-[130%] text-[13px]">
+        <div className="absolute right-0 top-[10%] max-w-[140px]">
+          <p className="jost text-start capitalize text-black leading-[120%] text-[13px]">
             Maintains visual balance with neutral tones inspired by real court
             elements. Communicates precision and modernity through a
             distinctive, high-impact typeface
           </p>
         </div>
-      </div>
 
-      {/* CIRCLE ICON BELOW TEXT */}
-      <div
-        ref={addIconRef}
-        data-speed="0.8"
-        data-rotate="0"
-        className="flex justify-center mt-[6%]"
-      >
+        {/* SPIN ICON */}
         <img
           src={spinIcon}
           alt="icon"
-          className="w-[18%] object-contain"
+          className="absolute right-[10%] top-[40%] w-[60px]"
         />
+
       </div>
 
-      {/* BOTTOM CARD */}
-      <div className="flex justify-center mt-[8%]">
-        <div className="relative w-[60%]">
+      {/* ─── BOTTOM  ─── */}
+      <div className="absolute bottom-0 left-0 w-full h-[50vh] bg-white">
 
-          {/* PIN */}
+        {/* CARD */}
+        <div className="absolute top-[15%] left-1/2 -translate-x-1/2 w-[70%]">
           <img
             src={attachIcon}
             alt="pin"
-            className="absolute"
-            style={{
-              top: "-12%",
-              left: "-10%",
-              width: "20%",
-            }}
+            className="absolute top-[0%] left-[-15%] w-[20%] z-[30]"
           />
 
-          {/* CARD IMAGE */}
           <img
             src={palatteImg}
             alt="palette"
-            className="w-full object-contain"
-            style={{ transform: "rotate(-10deg)" }}
+            className="max-w-full rotate-[-10deg]"
           />
         </div>
+
+        {/* STRIP */}
+        <div className="absolute bottom-0 left-0 w-full h-[20px] bg-[#0606BC]" />
       </div>
-
-      {/* BOTTOM STRIP */}
-  <div className="w-full h-[20px] bg-[#0606BC] mt-[6%]" />
-
     </section>
   );
 };

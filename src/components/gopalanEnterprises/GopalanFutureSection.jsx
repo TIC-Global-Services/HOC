@@ -17,7 +17,7 @@ const GopalanFuture = () => {
         Building Legacy, Shaping the Future
       </h2>
 
-      {/* CENTER IMAGE (UNCHANGED POSITION) */}
+      {/* CENTER IMAGE */}
       <div className="w-full flex justify-end py-[8%]">
         <img
           src={clientImg}
