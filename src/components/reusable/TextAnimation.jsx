@@ -26,7 +26,7 @@ export const AnimatedText = ({ text, className }) => {
       animate="visible"
     >
       {words.map((word, i) => (
-        <span key={i} className="inline-block overflow-hidden align-bottom mr-[0.25em]">
+        <span key={i} className="inline-block overflow-hidden align-bottom mx-[0.05rem]">
           <motion.span className="inline-block" variants={wordVariants}>
             {word}
           </motion.span>
@@ -37,7 +37,7 @@ export const AnimatedText = ({ text, className }) => {
 };
 
 export const AnimatedWord = ({ children, className }) => (
-  <span className="inline-block overflow-hidden align-bottom mx-[0.1em]">
+  <span className="inline-block overflow-hidden align-bottom mx-[0.5em]">
     <motion.span className={`inline-block ${className}`} variants={wordVariants}>
       {children}
     </motion.span>
