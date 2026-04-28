@@ -40,7 +40,7 @@ const RaksHero = () => {
             >
               RAKS
             </h1>
-            <button className="rounded-full border-2 bg-[#060EBB] text-white flex items-center justify-center font-medium w-[180px] h-[50px] md:w-[200px] md:h-[60px] xl:w-[220px] xl:h-[70px] text-sm md:text-base">
+            <button className="jost rounded-full border-2 bg-[#060EBB] text-[#FFCEC8] flex items-center justify-center font-medium w-[180px] h-[50px] md:w-[200px] md:h-[60px] xl:w-[220px] xl:h-[70px] text-sm md:text-base">
               CHILDREN LEARNING
             </button>
           </div>

@@ -63,7 +63,7 @@ const GopalanHero = () => {
             className="jost text-black text-start capitalize tracking-tight font-[500]"
             style={{
               fontSize: "clamp(14px,1.8vw,26px)",
-              lineHeight: "140%",
+              lineHeight: "160%",
             }}
             variants={containerVariants}
             initial="hidden"

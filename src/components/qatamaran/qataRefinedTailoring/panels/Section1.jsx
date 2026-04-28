@@ -110,7 +110,7 @@ const Section1 = () => {
       className="absolute"
       style={{
         top: "30%",
-        right: "10%",
+        right: "20%",
         maxWidth: "clamp(260px,28vw,440px)",
       }}
     >
@@ -118,7 +118,7 @@ const Section1 = () => {
         className="jost text-start capitalize font-[400] leading-[150%] text-white/80"
         style={{
           fontSize: "clamp(14px,1.5vw,26px)",
-          lineHeight: "140%",
+          lineHeight: "160%",
         }}
       >
         Qatamaran is a modern prêt-à-porter menswear label rooted in the rich heritage of 

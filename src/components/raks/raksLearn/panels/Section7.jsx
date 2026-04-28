@@ -85,12 +85,12 @@ const Section7 = () => {
           />
 
           {/* HEADING */}
-          <h2 className="salo text-start uppercase text-black leading-none text-[clamp(40px,12vw,60px)]">
+          <h2 className="salo text-start uppercase text-black leading-none tracking-tight text-[clamp(40px,10vw,60px)]">
             Creative Play
           </h2>
 
           {/* PARAGRAPH */}
-          <p className="jost text-start text-black leading-[140%] tracking-tight text-[clamp(14px,1.8vw,30px)]">
+          <p className="jost text-start text-black leading-[120%] tracking-tight text-[clamp(14px,1.8vw,30px)]">
             Where Little Ideas Turn Into Big Creations A Space to Imagine, Build, and Grow Where Little Ideas Turn Into Big Creations Innovation.
           </p>
 

@@ -73,17 +73,17 @@ const Section9 = () => {
         {/* TEXT */}
         <div className="text-start" style={{ maxWidth: "40vw" }}>
           <h2
-            className="salo uppercase text-[#000085] leading-none"
-            style={{ fontSize: "clamp(40px,8vw,140px)" }}
+            className="salo uppercase text-[#000085] tracking-tight leading-none"
+            style={{ fontSize: "clamp(40px,10vw,120px)" }}
           >
             The RAKS Framework
           </h2>
 
           <p
-            className="jost text-black mt-4"
+            className="jost text-black tracking-tight mt-4"
             style={{
-              fontSize: "clamp(14px,1.5vw,25px)",
-              lineHeight: "140%",
+              fontSize: "clamp(14px,1.8vw,26px)",
+              lineHeight: "120%",
             }}
           >
             A thoughtful approach to shaping young minds through purpose,

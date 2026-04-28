@@ -71,15 +71,15 @@ const Section4 = () => {
       </div>
 
       {/* RIGHT CONTENT */}
-      <div className="w-1/2 h-full relative flex items-center justify-center px-[clamp(20px,4vw,80px)]">
+      <div className="w-1/2 h-full relative flex items-center justify-center px-[clamp(20px,5vw,80px)]">
 
         {/* CENTER TEXT */}
-        <div className="text-center max-w-[700px] space-y-[clamp(16px,2vw,30px)]">
-          <h2 className="salo text-start text-black uppercase leading-none text-[clamp(32px,5vw,80px)]">
-            Where Curiosity Meets a New Way of Learning
+        <div className="text-center max-w-[500px] space-y-[clamp(16px,2vw,30px)]">
+          <h2 className="salo text-start text-black uppercase leading-none text-[clamp(18px,2.5vw,40px)]">
+            Where Curiosity Meets a New Way of <br /> Learning
           </h2>
 
-          <p className="jost text-start text-black leading-[140%] tracking-tight text-[clamp(14px,1.5vw,22px)]">
+          <p className="jost text-start text-black leading-[120%] max-w-[400px] tracking-tight text-[clamp(14px,1.5vw,26px)]">
             “At RAKS Pallikkoodam, every student is nurtured to grow with confidence, curiosity, and 
             creativity—empowered to learn, explore, and shine every single day.”
           </p>

@@ -234,8 +234,8 @@ export default function SyedSignatureCraft() {
               </h2>
 
               <p
-                className="jost text-start text-black/50 leading-[120%]"
-                style={{ fontSize: "clamp(14px,2vw,26px)" }}
+                className="jost text-start text-[26px] text-black/50 leading-[130%]"
+                
               >
                 Crafted through generations of expertise, each piece reflects
                 precision and purpose. A seamless blend of heritage and

@@ -168,11 +168,8 @@ export default function SyedTailorHeritage() {
               }}
             >
               <p
-                className="jost text-start capitalize text-[#262666]"
-                style={{
-                  fontSize: "clamp(14px,2vw,26px)",
-                  lineHeight: "140%",
-                }}
+                className="jost text-start text-[26px] leading-[160%] capitalize text-[#262666]"
+                
               >
                 Syed Bawkher is a heritage tailoring house built on generations of craftsmanship—where tradition, 
                 precision, and timeless style come together. Designed for the modern gentleman, 
@@ -211,7 +208,7 @@ export default function SyedTailorHeritage() {
               >
                 TIMEL<span style={{ color: "#262666" }}>ESS CRAFT</span>
               </h2>
-              <div className="bg-[#EBE2CE] "></div>
+              <div className="w-full h-[5%] bg-[#EBE2CE] "></div>
             </div>
           </div>
 
@@ -253,8 +250,13 @@ export default function SyedTailorHeritage() {
                 <img src={tagElegantImg} className="w-full -rotate-[20deg]" />
               </div>
             </div>
+
+            
           </div>
+          
         </div>
+        {/* BOTTOM STRIP */}
+      <div className="absolute bottom-0 left-0 w-full h-[5%] bg-[#EBE2CE]" />
       </div>
     </section>
   );

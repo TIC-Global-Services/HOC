@@ -76,7 +76,7 @@ const Section6 = () => {
 
         {/* HEADING */}
         <div className="absolute" style={{ top: "5vh", left: "8vw" }}>
-          <h2 className="salo uppercase text-black leading-none"
+          <h2 className="salo uppercase text-black leading-none tracking-tight"
             style={{ fontSize: "clamp(40px,8vw,120px)" }}>
             Learn Beyond Limits
           </h2>
@@ -86,7 +86,7 @@ const Section6 = () => {
         <div className="absolute text-start"
           style={{ top: "22vh", left: "8vw", maxWidth: "650px" }}>
           <p className="jost text-black"
-            style={{ fontSize: "clamp(14px,1.5vw,26px)", lineHeight: "140%" }}>
+            style={{ fontSize: "clamp(14px,1.6vw,26px)", lineHeight: "100%" }}>
             From academics to arts and sports, every talent finds its place. A balanced approach to learning, creativity, and growth. Nurturing skills beyond the classroom for a brighter future.
           </p>
         </div>
