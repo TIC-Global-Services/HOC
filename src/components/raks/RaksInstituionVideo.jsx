@@ -1,12 +1,9 @@
 import { motion } from "framer-motion";
 import video from "../../assets/client/raks/vdo/Raks Animation 1.mp4";
 
-
 const RaksInstitutionVideo = () => {
   return (
-    <>
-    {/* Second Video */}
-    <section className="w-full min-h-screen relative overflow-hidden">
+    <section className="w-full relative overflow-hidden">
 
       <motion.video
         src={video}
@@ -14,11 +11,24 @@ const RaksInstitutionVideo = () => {
         loop
         muted
         playsInline
-        className="absolute top-0 left-0 w-full h-full object-cover"
+        preload="none"
+        className="
+          w-full 
+          h-[30vh]        
+          md:absolute 
+          md:top-0 
+          md:left-0 
+          md:w-full 
+          md:h-full 
+          md:object-cover
+          object-cover
+        "
       />
 
+      {/* Desktop height */}
+      <div className="hidden md:block h-screen" />
+
     </section>
-    </>
   );
 };
 

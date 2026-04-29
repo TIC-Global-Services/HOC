@@ -9,7 +9,7 @@ import { useLocation } from "react-router-dom";
 import MobRaksLearn from "../../components/raks/mobRaksLearn/MobRaksLearn";
 import MobRaksHero from "../../components/raks/mobLayout/mobRaksHero/MobRaksHero";
 import MobRaksWanna from "../../components/raks/RaksWannaKnow";
-// import RaksInstaImg from "../../components/raks/RaksInstaImg";
+import RaksInstaImg from "../../components/raks/RaksInstaImg";
 
 const Raks = () => {
   const location = useLocation();
@@ -40,7 +40,10 @@ const Raks = () => {
       <div className="md:hidden block">
         <MobRaksWanna />
       </div>
-      {/* <RaksInstaImg /> */}
+
+      <div className="md:hidden">
+      <RaksInstaImg />
+      </div>
       <RaksOwnTheCourt />
       <Footer />
     </div>

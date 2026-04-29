@@ -65,7 +65,7 @@ export default function Section1() {
           className="salo uppercase leading-none py-[1%] text-white
           text-[clamp(48px,10vw,200px)]"
         >
-          Salt & Silk craft
+          Salt <span className="jost"> & </span> Silk craft
         </h1>
 
         {/* craftImg momentum */}

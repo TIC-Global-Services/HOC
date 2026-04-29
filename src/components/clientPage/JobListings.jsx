@@ -82,9 +82,9 @@ const JobListings = () => {
                 animate={isInView ? { opacity: 1, x: 0 } : {}}
                 transition={{ delay: 0.2 * index }}
                 whileHover={{ x: 10 }}
-                className="border-b border-gray-800 py-4  transition-colors duration-300 hover:text-[#060ebb]"
+                className="border-b  border-gray-800 py-4  transition-colors duration-300 hover:text-[#060ebb]"
               >
-                <h2 className="text-xl font-medium">{position}</h2>
+                <h2 className="text-xl jost font-medium">{position}</h2>
               </motion.div>
             ))}
           </motion.div>
