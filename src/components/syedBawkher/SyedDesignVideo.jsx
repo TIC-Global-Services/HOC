@@ -5,8 +5,8 @@ const SyedDesignVideo = () => {
   return (
     <>
       {/* First Video */}
-      <section className="w-full min-h-screen bg-black flex items-center justify-center overflow-hidden">
-        <motion.video
+      <section className="w-full h-auto md:min-h-screen bg-black flex items-center justify-center overflow-hidden">
+        <video
           src={video}
           autoPlay
           loop

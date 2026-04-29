@@ -9,6 +9,8 @@ import SyedTailorHeritage from "../../components/syedBawkher/SyedTailorHeritage"
 import Navbar from "../../components/Navbar";
 import MobSyedSignature from "../../components/syedBawkher/mobSyedLayout/MobSyedSignature";
 import MobSyedHero from "../../components/syedBawkher/mobLayout/mobSyedHero/MobSyedHero";
+import SyedTailorMob from "../../components/syedBawkher/mobLayout/mobSyedTailor.jsx/SyedTailorMob";
+import MobSyedTheCourt from "../../components/syedBawkher/mobLayout/mobOwnTheCourt/MobSyedTheCourt";
 
 const SyedBawkher = () => {
   return (
@@ -18,27 +20,46 @@ const SyedBawkher = () => {
       {/* Sections */}
       {/* Mob */}
       <div className="md:hidden">
-      <MobSyedHero />
+        <MobSyedHero />
       </div>
 
       {/* Desktop */}
       <div className="md:block hidden">
-      <SyedHero />
+        <SyedHero />
       </div>
       {/* Mob */}
       <div className="md:hidden">
-      <MobSyedSignature />
+        <MobSyedSignature />
       </div>
 
       {/* Desktop */}
       <div className="md:block hidden">
-      <SyedSignatureCraft />
+        <SyedSignatureCraft />
       </div>
       <SyedDesignVideo />
-      <SyedTailorHeritage />
+
+      {/* Mob */}
+      <div className="md:hidden">
+        <SyedTailorMob />
+      </div>
+
+      {/* Desktop */}
+      <div className="md:block hidden">
+        <SyedTailorHeritage />
+      </div>
       <SyedWannaKnow />
       <SyedCraftmanShip />
-      <SyedOwnTheCourt />
+
+      {/* Mob */}
+      <div className="block md:hidden">
+        <MobSyedTheCourt />
+      </div>
+
+      {/* Desktop */}
+      <div className="md:block hidden">
+        <SyedOwnTheCourt />
+      </div>
+
       {/* Footer */}
       <Footer />
     </>

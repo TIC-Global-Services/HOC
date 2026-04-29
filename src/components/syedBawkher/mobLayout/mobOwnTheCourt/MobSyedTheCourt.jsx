@@ -1,13 +1,13 @@
 import { useEffect, useRef, useState } from "react";
 import gsap from "gsap";
 
-import grid from "../../assets/client/padlr/img/checkBg.png";
-import img1 from "../../assets/client/syedBawkher/img/heroImg1.png";
-import img2 from "../../assets/client/syedBawkher/img/heroImg2.png";
-import img3 from "../../assets/client/syedBawkher/img/heroImg3.png";
-import img4 from "../../assets/client/syedBawkher/img/heroImg4.png";
-import img5 from "../../assets/client/syedBawkher/img/elegantPairImg.png";
-import img6 from "../../assets/client/syedBawkher/img/signatureImg.png";
+import grid from "../../../../assets/client/padlr/img/checkBg.png";
+import img1 from "../../../../assets/client/syedBawkher/img/heroImg1.png";
+import img2 from "../../../../assets/client/syedBawkher/img/heroImg2.png";
+import img3 from "../../../../assets/client/syedBawkher/img/heroImg3.png";
+import img4 from "../../../../assets/client/syedBawkher/img/heroImg4.png";
+import img5 from "../../../../assets/client/syedBawkher/img/elegantPairImg.png";
+import img6 from "../../../../assets/client/syedBawkher/img/signatureImg.png";
 
 
 const IMGS = { circleB: img1, elpairing: img2, textural: img3, circleW: img4, elegant: img5, signature: img6 };
@@ -55,9 +55,10 @@ const ROWS = [
     { t: "elpairing", x: 92, s: 222, r: 0, d: 2.34 },
   ],
 ];
-const ROW_Y = ["25vh", "40vh", "50vh", "60vh", "70vh", "80vh", "90vh"];
 
-export default function SyedOwnTheCourt() {
+const ROW_Y = ["15vh", "25vh", "35vh", "45vh", "55vh", "65vh", "75vh"];
+
+export default function MobSyedTheCourt() {
   const containerRef = useRef(null);
   const itemRefs = useRef([]);
   const [isVisible, setIsVisible] = useState(false);
@@ -66,35 +67,21 @@ export default function SyedOwnTheCourt() {
     if (el) itemRefs.current[index] = el;
   };
 
-  // detect enter / leave
+  // visibility trigger
   useEffect(() => {
     const observer = new IntersectionObserver(
-      ([entry]) => {
-        setIsVisible(entry.isIntersecting);
-      },
+      ([entry]) => setIsVisible(entry.isIntersecting),
       { threshold: 0.3 }
     );
 
-    if (containerRef.current) {
-      observer.observe(containerRef.current);
-    }
+    if (containerRef.current) observer.observe(containerRef.current);
 
     return () => observer.disconnect();
   }, []);
 
-  // animation + hover
+  // Falling
   useEffect(() => {
     if (!isVisible) return;
-
-    const mouse = { x: 0, y: 0 };
-    const radius = 180;
-    let rafId;
-
-    const handleMove = (e) => {
-      const rect = containerRef.current.getBoundingClientRect();
-      mouse.x = e.clientX - rect.left;
-      mouse.y = e.clientY - rect.top;
-    };
 
     const tl = gsap.timeline();
     let index = 0;
@@ -104,11 +91,7 @@ export default function SyedOwnTheCourt() {
         const el = itemRefs.current[index++];
         if (!el) return;
 
-        // reset before animation
-        gsap.set(el, {
-          y: -window.innerHeight,
-          opacity: 0,
-        });
+        gsap.set(el, { y: -window.innerHeight, opacity: 0 });
 
         tl.to(
           el,
@@ -122,80 +105,23 @@ export default function SyedOwnTheCourt() {
         );
       });
     });
-
-    //hover repel
-    tl.add(() => {
-      const animate = () => {
-        const parentRect =
-          containerRef.current.getBoundingClientRect();
-
-        itemRefs.current.forEach((el) => {
-          if (!el) return;
-
-          const rect = el.getBoundingClientRect();
-
-          const elX =
-            rect.left - parentRect.left + rect.width / 2;
-          const elY =
-            rect.top - parentRect.top + rect.height / 2;
-
-          let dx = elX - mouse.x;
-          let dy = elY - mouse.y;
-
-          let distance = Math.sqrt(dx * dx + dy * dy) || 1;
-
-          let moveX = 0;
-          let moveY = 0;
-
-          if (distance < radius) {
-            const force = (radius - distance) / radius;
-            dx /= distance;
-            dy /= distance;
-
-            moveX = dx * force * 120;
-            moveY = dy * force * 120;
-          }
-
-          gsap.to(el, {
-            x: moveX,
-            y: moveY,
-            duration: 0.4,
-            ease: "power2.out",
-          });
-        });
-
-        rafId = requestAnimationFrame(animate);
-      };
-
-      rafId = requestAnimationFrame(animate);
-    });
-
-    containerRef.current.addEventListener("mousemove", handleMove);
-
-    return () => {
-      containerRef.current?.removeEventListener(
-        "mousemove",
-        handleMove
-      );
-      cancelAnimationFrame(rafId);
-    };
   }, [isVisible]);
 
   return (
     <section
       ref={containerRef}
-      className="w-full min-h-screen relative overflow-hidden"
+      className="w-full h-[80vh] relative overflow-hidden"
       style={{
         backgroundImage: `url(${grid})`,
         backgroundSize: "cover",
       }}
     >
-      <h2 className="absolute left-[5%] top-[clamp(40px,8vh,90px)] z-10 m-0 salo font-medium text-[14px] md:text-[140px] leading-none tracking-[-0.02em] uppercase text-[#262666]">
-        <span style={{ display: "block" }}>OWN THE</span>
-        <span style={{ display: "block" }}>COURT</span>
+      {/* MOBILE CENTER TEXT */}
+      <h2 className="absolute left-1/2 -translate-x-1/2 top-[60px] z-10 salo text-[#262666] text-[30px] leading-none uppercase text-center">
+        OWN THE COURT
       </h2>
 
-      <div className="w-full max-w-[1600px] mx-auto relative h-full">
+      <div className="w-full relative h-full">
         {isVisible &&
           ROWS.map((row, ri) =>
             row.map((item, i) => {
@@ -217,7 +143,7 @@ export default function SyedOwnTheCourt() {
                   <img
                     src={IMGS[item.t]}
                     alt=""
-                    width={item.s}
+                    width={item.s * 0.45}
                     draggable={false}
                   />
                 </div>
