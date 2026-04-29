@@ -2,7 +2,7 @@ import raksInstaImg from "../../assets/client/raks/img/raksInstaImg.png";
 
 const RaksInstaImg = () => {
   return (
-    <section className="w-full h-[50vh] overflow-hidden">
+    <section className="w-full h-[60vh] overflow-hidden">
       
       <img
         src={raksInstaImg}

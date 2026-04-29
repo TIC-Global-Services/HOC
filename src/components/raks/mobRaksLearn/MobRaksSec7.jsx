@@ -47,64 +47,63 @@ const MobRaksSec7 = () => {
 
   return (
     <section
-      className="w-full flex flex-col items-center text-center px-5 py-10 gap-8"
-      style={{
-        backgroundImage: `url(${grid})`,
-        backgroundSize: "cover",
-      }}
+     className="w-full min-h-[100dvh] flex flex-col items-center text-center px-5 py-6 gap-10"
+  style={{
+    backgroundImage: `url(${grid})`,
+    backgroundSize: "cover",
+  }}
     >
 
       {/* ─── TOP TEXT ─── */}
-      <div className="max-w-[320px] text-start">
-        <h2 className="salo text-black text-[26px] uppercase leading-none mb-3">
+      <div className="max-w-[320px] text-start pt-[20%]">
+        <h2 className="salo text-black text-[30px] uppercase leading-none mb-3">
           Learn Beyond Limits
         </h2>
 
-        <p className="jost text-black text-[16px] leading-[100%]">
-          From academics to arts and sports, every talent finds its place.
-          A balanced approach to learning, creativity, and growth.
+        <p className="jost text-black/50 text-[16px] leading-[100%]">
+          From academics to arts and sports, every talent finds its place. A balanced approach to learning, creativity, and growth.Nurturing skills beyond the classroom for a brighter future.
         </p>
       </div>
 
       {/* ─── CENTER IMAGE ─── */}
-      <div className="relative flex justify-center">
+      <div className="relative flex justify-center pt-[10%]">
 
         {/* PIN */}
         <img
           ref={addIconRef}
           src={pinImg}
-          className="absolute -top-4 -left-3 w-[60px]"
+          className="absolute top-8 left-2 w-[60px] z-[30]"
         />
 
         {/* IMAGE */}
         <img
-          ref={addIconRef}
           src={centerImg}
-          className="w-[70%] rotate-[-10deg]"
+          className="w-[80%] rotate-[-10deg]"
         />
 
       </div>
 
       {/* ─── BOTTOM HEADING ─── */}
-      <h3 className="salo text-[#000085] text-[28px] uppercase leading-none">
-        Curious Mind
+      <div className="flex justify-start self-start pt-[5%]">
+      <h3 className="salo text-start text-[#000085] text-[50px] uppercase leading-none">
+        Curious <br /> Mind
       </h3>
+      </div>
 
       {/* ─── RIGHT IMAGE ─── */}
-      <div className="relative">
+      <div className="relative justify-end self-end">
 
         {/* PIN */}
         <img
           ref={addIconRef}
           src={pinImg2}
-          className="absolute -top-4 -left-6 w-[60px]"
+          className="absolute -top-4 -left-6 w-[60px] z-[30] rotate-[-10deg]"
         />
 
         {/* IMAGE */}
         <img
-          ref={addIconRef}
           src={topRightImg}
-          className="w-[120px] rotate-[-10deg]"
+          className="w-[150px]  rotate-[-10deg]"
         />
 
       </div>
