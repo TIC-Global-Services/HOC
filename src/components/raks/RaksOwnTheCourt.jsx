@@ -1,4 +1,4 @@
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import gsap from "gsap";
 
 import grid from "../../assets/client/padlr/img/checkBg.png";
@@ -53,116 +53,131 @@ const ROWS = [
     { t: "play", x: 90, s: 200, r: 5, d: 2.14 },
   ],
 ];
-
 const ROW_Y = ["20vh", "35vh", "50vh", "60vh", "70vh", "85vh"];
 
 export default function RaksOwnTheCourt() {
   const containerRef = useRef(null);
   const itemRefs = useRef([]);
+  const [isVisible, setIsVisible] = useState(false);
 
-  //Indexed refs 
   const setRef = (el, index) => {
     if (el) itemRefs.current[index] = el;
   };
 
+  //detect section enter
   useEffect(() => {
-    if (!containerRef.current) return;
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        setIsVisible(entry.isIntersecting);
+      },
+      { threshold: 0.3 }
+    );
 
-    setTimeout(() => {
-      if (itemRefs.current.length === 0) return;
+    if (containerRef.current) {
+      observer.observe(containerRef.current);
+    }
 
-      const mouse = { x: 0, y: 0 };
-      const radius = 180;
-      let rafId;
+    return () => observer.disconnect();
+  }, []);
 
-      const handleMove = (e) => {
-        const rect = containerRef.current.getBoundingClientRect();
-        mouse.x = e.clientX - rect.left;
-        mouse.y = e.clientY - rect.top;
-      };
+  // animation + hover
+  useEffect(() => {
+    if (!isVisible) return;
 
-      // FALL ANIMATION 
-      const tl = gsap.timeline();
+    const mouse = { x: 0, y: 0 };
+    const radius = 180;
+    let rafId;
 
-      let index = 0;
+    const handleMove = (e) => {
+      const rect = containerRef.current.getBoundingClientRect();
+      mouse.x = e.clientX - rect.left;
+      mouse.y = e.clientY - rect.top;
+    };
 
-      ROWS.forEach((row) => {
-        row.forEach((item) => {
-          const el = itemRefs.current[index++];
+    const tl = gsap.timeline();
+    let index = 0;
+
+    ROWS.forEach((row) => {
+      row.forEach((item) => {
+        const el = itemRefs.current[index++];
+        if (!el) return;
+
+        // reset BEFORE animation
+        gsap.set(el, {
+          y: -window.innerHeight,
+          opacity: 0,
+        });
+
+        tl.to(
+          el,
+          {
+            y: 0,
+            opacity: 1,
+            duration: 1.2,
+            ease: "back.out(1.4)",
+          },
+          item.d
+        );
+      });
+    });
+
+    // hover interaction
+    tl.add(() => {
+      const animate = () => {
+        const parentRect =
+          containerRef.current.getBoundingClientRect();
+
+        itemRefs.current.forEach((el) => {
           if (!el) return;
 
-          tl.fromTo(
-            el,
-            { y: -window.innerHeight, opacity: 0 },
-            {
-              y: 0,
-              opacity: 1,
-              duration: 1.2,
-              ease: "back.out(1.4)",
-            },
-            item.d
-          );
-        });
-      });
+          const rect = el.getBoundingClientRect();
 
-      // MOUSE INTERACTION 
-      tl.add(() => {
-        const animate = () => {
-          const parentRect =
-            containerRef.current.getBoundingClientRect();
+          const elX =
+            rect.left - parentRect.left + rect.width / 2;
+          const elY =
+            rect.top - parentRect.top + rect.height / 2;
 
-          itemRefs.current.forEach((el) => {
-            if (!el) return;
+          let dx = elX - mouse.x;
+          let dy = elY - mouse.y;
 
-            const rect = el.getBoundingClientRect();
+          let distance = Math.sqrt(dx * dx + dy * dy) || 1;
 
-            const elX =
-              rect.left - parentRect.left + rect.width / 2;
-            const elY =
-              rect.top - parentRect.top + rect.height / 2;
+          let moveX = 0;
+          let moveY = 0;
 
-            let dx = elX - mouse.x;
-            let dy = elY - mouse.y;
+          if (distance < radius) {
+            const force = (radius - distance) / radius;
+            dx /= distance;
+            dy /= distance;
 
-            let distance = Math.sqrt(dx * dx + dy * dy) || 1;
+            moveX = dx * force * 120;
+            moveY = dy * force * 120;
+          }
 
-            let moveX = 0;
-            let moveY = 0;
-
-            if (distance < radius) {
-              const force = (radius - distance) / radius;
-              dx /= distance;
-              dy /= distance;
-
-              moveX = dx * force * 120;
-              moveY = dy * force * 120;
-            }
-
-            gsap.to(el, {
-              x: moveX,
-              y: moveY,
-              duration: 0.4,
-              ease: "power2.out",
-            });
+          gsap.to(el, {
+            x: moveX,
+            y: moveY,
+            duration: 0.4,
+            ease: "power2.out",
           });
-
-          rafId = requestAnimationFrame(animate);
-        };
+        });
 
         rafId = requestAnimationFrame(animate);
-      });
-
-      containerRef.current.addEventListener("mousemove", handleMove);
-
-      return () => {
-        containerRef.current?.removeEventListener(
-          "mousemove",
-          handleMove
-        );
-        cancelAnimationFrame(rafId);
       };
-    }, 0);
-  }, []);
+
+      rafId = requestAnimationFrame(animate);
+    });
+
+    containerRef.current.addEventListener("mousemove", handleMove);
+
+    return () => {
+      containerRef.current?.removeEventListener(
+        "mousemove",
+        handleMove
+      );
+      cancelAnimationFrame(rafId);
+    };
+  }, [isVisible]);
 
   return (
     <section
@@ -178,39 +193,36 @@ export default function RaksOwnTheCourt() {
         <span style={{ display: "block" }}>COURT</span>
       </h2>
 
-      <div className="w-full max-w-[1600px] mx-auto relative h-full">
-        {ROWS.map((row, ri) =>
-          row.map((item, i) => {
-            const flatIndex =
-              ROWS.slice(0, ri).reduce((acc, r) => acc + r.length, 0) + i;
 
-            return (
-              <div
-                key={`${ri}-${i}`}
-                ref={(el) => setRef(el, flatIndex)}
-                style={{
-                  position: "absolute",
-                  left: `${item.x}%`,
-                  top: ROW_Y[ri],
-                  transform: `translate(-50%, -50%) rotate(${item.r}deg)`,
-                  pointerEvents: "none",
-                }}
-              >
-                <img
-                  src={IMGS[item.t]}
-                  alt=""
-                  width={item.s}
-                  draggable={false}
+      <div className="w-full max-w-[1600px] mx-auto relative h-full">
+        {isVisible &&
+          ROWS.map((row, ri) =>
+            row.map((item, i) => {
+              const flatIndex =
+                ROWS.slice(0, ri).reduce((acc, r) => acc + r.length, 0) + i;
+
+              return (
+                <div
+                  key={`${ri}-${i}`}
+                  ref={(el) => setRef(el, flatIndex)}
                   style={{
-                    display: "block",
-                    filter:
-                      "drop-shadow(0 3px 10px rgba(0,60,160,0.18))",
+                    position: "absolute",
+                    left: `${item.x}%`,
+                    top: ROW_Y[ri],
+                    transform: `translate(-50%, -50%) rotate(${item.r}deg)`,
+                    pointerEvents: "none",
                   }}
-                />
-              </div>
-            );
-          })
-        )}
+                >
+                  <img
+                    src={IMGS[item.t]}
+                    alt=""
+                    width={item.s}
+                    draggable={false}
+                  />
+                </div>
+              );
+            })
+          )}
       </div>
     </section>
   );
