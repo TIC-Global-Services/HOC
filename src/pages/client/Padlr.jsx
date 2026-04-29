@@ -10,6 +10,7 @@ import MobCourtSky from "../../components/padlr/mobileLayout/courtSky/MobCourtSk
 import PadlrVideoSec2 from "../../components/padlr/PadlrVideoSec2";
 import MobPadlrHero from "../../components/padlr/mobileLayout/padlrHero.jsx/MobPadlrHero";
 import MobWannaKnowMore from "../../components/padlr/WannaKnowMore";
+import MobPadlrInstaImg from "../../components/padlr/MobPadlrInstaImg";
 // import PadlrImageSec from "../../components/padlr/PadlrImageSec";
 
 const Padlr = () => {
@@ -48,7 +49,10 @@ const Padlr = () => {
       <div className="md:hidden block">
         <MobWannaKnowMore />
       </div>
-      {/* <PadlrImageSec /> */}
+
+      <div className="md:hidden block">
+      <MobPadlrInstaImg />
+      </div>
       <OwnTheCourt />
       {/* Footer */}
       <Footer />
