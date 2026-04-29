@@ -8,13 +8,13 @@ const RaksVideoSec = () => {
     {/* Second Video */}
     <section className="w-full min-h-screen relative overflow-hidden">
 
-      <motion.video
+      <video
         src={video}
         autoPlay
         loop
         muted
         playsInline
-        className="w-full h-auto object-cover object-center"
+        className="w-full h-auto object-cover"
       />
 
     </section>

@@ -24,32 +24,6 @@ const AnimatedChar = ({ char, scrollYProgress, start, end }) => {
   );
 };
 
-const FloatingImage = ({ delay = 0, style }) => {
-  return (
-    <motion.img
-      src={question}
-      alt=""
-      initial={{ y: 0, rotate: 0 }}
-      animate={{
-        y: [0, -25, 0],
-        rotate: [0, 5, -5, 0],
-      }}
-      transition={{
-        duration: 5,
-        repeat: Infinity,
-        ease: "easeInOut",
-        delay,
-      }}
-      style={{
-        position: "absolute",
-        width: "clamp(60px, 8vw, 120px)",
-        pointerEvents: "none",
-        ...style,
-      }}
-    />
-  );
-};
-
 const QataWannaKnowMore = () => {
   const ref = useRef(null);
 
@@ -66,12 +40,6 @@ const QataWannaKnowMore = () => {
     >
       {/* IMAGE TRAIL */}
       <ImagesTrail image={question} />
-
-      {/* STATIC FLOATING */}
-      <FloatingImage delay={0} style={{ top: "8%", left: "6%" }} />
-      <FloatingImage delay={0.5} style={{ top: "18%", right: "8%" }} />
-      <FloatingImage delay={1} style={{ bottom: "18%", left: "10%" }} />
-      <FloatingImage delay={1.5} style={{ bottom: "8%", right: "6%" }} />
 
       {/* SCROLL TEXT */}
       <div className="relative z-[3] w-full h-full flex items-center justify-center overflow-hidden">

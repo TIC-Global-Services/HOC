@@ -8,7 +8,7 @@ import Navbar from "../../components/Navbar";
 import { useLocation } from "react-router-dom";
 import MobRaksLearn from "../../components/raks/mobRaksLearn/MobRaksLearn";
 import MobRaksHero from "../../components/raks/mobLayout/mobRaksHero/MobRaksHero";
-// import RaksWannaKnow from "../../components/raks/RaksWannaKnow";
+import MobRaksWanna from "../../components/raks/RaksWannaKnow";
 // import RaksInstaImg from "../../components/raks/RaksInstaImg";
 
 const Raks = () => {
@@ -36,7 +36,10 @@ const Raks = () => {
         <RaksLearning />
       </div>
       <RaksVideoSec />
-      {/*  <RaksWannaKnow /> */}
+
+      <div className="md:hidden block">
+        <MobRaksWanna />
+      </div>
       {/* <RaksInstaImg /> */}
       <RaksOwnTheCourt />
       <Footer />
