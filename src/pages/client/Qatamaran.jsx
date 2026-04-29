@@ -8,6 +8,7 @@ import Footer from "../Footer";
 import Navbar from "../../components/Navbar";
 import MobQataSalt from "../../components/qatamaran/mobLayout/qataSaltSilk/MobQataSalt";
 import MobQataHero from "../../components/qatamaran/mobLayout/mobQataHero.jsx/MobQataHero";
+import MobQataRefined from "../../components/qatamaran/mobLayout/qataRefinedTailoring/MobQataRefined";
 
 const Qatamaran = () => {
   return (
@@ -27,7 +28,9 @@ const Qatamaran = () => {
       {/* MobileLayout */}
       <div className="md:hidden">
       <MobQataSalt />
+      <MobQataRefined />
       </div>
+
 
       {/* Desktop Layout */}
       <div className="hidden md:block">

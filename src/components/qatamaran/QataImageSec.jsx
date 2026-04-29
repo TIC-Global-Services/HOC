@@ -2,12 +2,17 @@ import qataImg from "../../assets/client/qatamaran/qataSecImg.png";
 
 const QataImageSec = () => {
   return (
-    <section className="w-full h-auto md:min-h-screen flex">
-
+    <section className="w-full flex">
+      
       <img
         src={qataImg}
-        alt="Padlr"
-        className="w-full h-screen object-cover"
+        alt="Qatamaran"
+        className="
+          w-full 
+          h-[50vh]       
+          md:h-screen     
+          object-cover
+        "
       />
 
     </section>

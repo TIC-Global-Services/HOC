@@ -5,6 +5,7 @@ import topLeftImg from "../../../../assets/client/qatamaran/coromandelCoast.png"
 import bottomLeftImg from "../../../../assets/client/qatamaran/heroFloat1.png";
 import topRightImg from "../../../../assets/client/qatamaran/heroFloat4.png";
 import grid from "../../../../assets/client/padlr/img/checkBg.png";
+import MobQataSec3 from "./MobQataSec3";
 
 const MobQataSec2 = () => {
   const iconRefs = useRef([]);
@@ -120,6 +121,9 @@ const MobQataSec2 = () => {
           </div>
         </div>
       </section>
+
+      {/* Section 3 */}
+      <MobQataSec3 />
     </>
   );
 };
