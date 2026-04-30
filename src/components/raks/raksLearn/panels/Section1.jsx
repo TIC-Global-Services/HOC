@@ -72,7 +72,7 @@ export default function RaksLearning() {
           Learning Reimagined
         </h1>
 
-        <div className="absolute top-0 right-[30%] h-full flex items-center z-10">
+        <div className="absolute top-0 right-[20%] h-full flex items-center z-10">
           <img
             src={raksLearnImg}
             alt="retro computer"

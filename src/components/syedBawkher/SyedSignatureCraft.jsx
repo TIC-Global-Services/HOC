@@ -97,7 +97,7 @@ export default function SyedSignatureCraft() {
           style={{ backgroundColor: BEIGE }}>
              {/* ── TOP BAR ── */}
              <div
-               className="relative flex items-center px-6 border-b border-white flex-shrink-0"
+               className="relative flex items-center px-6 border-b-2 border-white flex-shrink-0"
                style={{ height: "28%" }}
              >
                <h1
@@ -107,7 +107,7 @@ export default function SyedSignatureCraft() {
                  Signature Craft
                </h1>
        
-               <div className="absolute top-0 right-[30%] h-full flex items-center z-10">
+               <div className="absolute top-0 right-[20%] h-full flex items-center z-10">
                  <img ref={addIconRef}
                    src={circleLogoImg}
                    alt="retro computer"
@@ -120,13 +120,13 @@ export default function SyedSignatureCraft() {
              <div className="flex flex-1 min-h-0 w-full">
                {/* LEFT COLUMN */}
                <div
-                 className="flex flex-col border-r border-white"
+                 className="flex flex-col border-r-2 border-white"
                  style={{ width: "30%" }}
                >
                  {["Measured.", "Crafted.", "Perfected."].map((text, i) => (
                    <div
                      key={i}
-                     className="flex items-center px-4 border-b border-white flex-1 min-h-0"
+                     className="flex items-center px-4 border-b-2 border-white flex-1 min-h-0"
                    >
                      <span
                        className="salo text-[#262666] uppercase leading-none"
@@ -167,7 +167,7 @@ export default function SyedSignatureCraft() {
                  </div>
        
                  {/* RIGHT IMAGE */}
-                 <div className="flex-1 relative border-l border-white overflow-hidden">
+                 <div className="flex-1 relative border-l-2 border-white overflow-hidden">
                    <img
                      src={craftImg}
                      alt="silk"
