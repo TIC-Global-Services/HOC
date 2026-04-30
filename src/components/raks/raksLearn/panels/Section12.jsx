@@ -7,7 +7,7 @@ const Section12 = () => {
       <img
         src={raksInstaImg}
         alt="Padlr"
-        className="w-full h-full object-cover"
+        className="w-full h-full object-contain"
       />
 
     </section>

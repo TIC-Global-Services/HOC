@@ -35,7 +35,7 @@ const Section5 = () => {
         className="absolute text-start"
         style={{
           top: "50%",
-          right: "6vw",              
+          right: "10%",              
           transform: "translateY(-50%)",
           maxWidth: "30vw",
         }}
@@ -43,7 +43,7 @@ const Section5 = () => {
         <h2
           className="salo uppercase text-white leading-none"
           style={{
-            fontSize: "clamp(40px,12vw,200px)",
+            fontSize: "clamp(40px,20vh,200px)",
           }}
         >
           Play <br /> Bold <br /> Win.

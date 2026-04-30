@@ -58,111 +58,90 @@ export default function RaksLearning() {
   }, []);
 
   return (
-    <section
-      className="w-full h-screen flex flex-col"
-      style={{ backgroundColor: NAVY_BLUE }}
-    >
+    <section className="w-full h-screen flex flex-col"
+    style={{ backgroundColor: NAVY_BLUE }}>
       {/* ── TOP BAR ── */}
       <div
-        className="flex items-center justify-between 
-            px-[clamp(20px,3vw,60px)] border-b py-[1%] border-white"
+        className="relative flex items-center px-6 border-b border-white flex-shrink-0"
+        style={{ height: "28%" }}
       >
         <h1
-          className="salo uppercase leading-none text-[#FFCEC8]
-              text-[clamp(48px,10vw,200px)]"
+          className="salo text-[#FFCEC8] uppercase leading-none tracking-tight"
+          style={{ fontSize: "clamp(36px, 12vw, 190px)" }}
         >
           Learning Reimagined
         </h1>
 
-        {/* craftImg momentum */}
-        <div
-          ref={addIconRef}
-          data-speed="0.4"
-          data-rotate="0"
-          style={{ willChange: "transform" }}
-        >
+        <div className="absolute top-0 right-[30%] h-full flex items-center z-10">
           <img
             src={raksLearnImg}
             alt="retro computer"
-            className="object-contain md:-translate-x-[200%] pt-2"
-            style={{ width: "clamp(110px, 12vw, 200px)" }}
+            className="object-contain h-[50%] w-auto"
           />
         </div>
       </div>
 
-      {/* ── GRID ── */}
-      <div className="flex flex-1">
-        {/* LEFT */}
+      {/* ── BOTTOM GRID ── */}
+      <div className="flex flex-1 min-h-0 w-full">
+        {/* LEFT COLUMN */}
         <div
-          className="flex flex-col 
-              w-[32vw] min-w-[320px] max-w-[700px]
-              border-r border-white"
+          className="flex flex-col border-r border-white"
+          style={{ width: "30%" }}
         >
           {["Class.", "Kids.", "Perfected."].map((text, i) => (
             <div
               key={i}
-              className="flex items-center 
-                    px-[clamp(20px,2vw,60px)] 
-                    flex-1 border-b border-white"
+              className="flex items-center px-4 border-b border-white flex-1 min-h-0"
             >
               <span
-                className="salo uppercase text-[#FFCEC8] leading-none
-                    text-[clamp(42px,6vw,120px)]"
+                className="salo text-[#FFCEC8] uppercase leading-none"
+                style={{ fontSize: "clamp(18px, 6vw, 120px)" }}
               >
                 {text}
               </span>
             </div>
           ))}
 
-          {/* tree logo momentum */}
-          <div className="flex items-end px-[clamp(20px,3vw,60px)] py-6">
-            <div
-              ref={addIconRef}
-              data-speed="0.6"
-              data-rotate="-16"
-              style={{ willChange: "transform" }}
-            >
-              <img
-                src={raksImg}
-                alt="logo"
-                className="rotate-[-16deg]"
-                style={{ width: "clamp(80px,10vw,120px)" }}
-              />
-            </div>
+          {/* LOGO ROW */}
+          <div className="flex items-center justify-end px-4 py-3 flex-shrink-0">
+            <img
+              src={raksImg}
+              alt="padlr logo"
+              className="object-contain"
+              style={{ width: "clamp(50px, 7vw, 120px)" }}
+            />
           </div>
         </div>
 
-        {/* CENTER */}
-        <div
-          className="flex flex-col justify-center md:mt-[9.5%]
-              w-[26vw] min-w-[480px] max-w-[800px] text-start"
-        >
-          <p
-            className="salo uppercase text-[#FFCEC8] mb-4 md:pl-[5%]
-                text-[clamp(32px,3.5vw,60px)]"
-          >
-            ABOUT
-          </p>
-
-          <p
-            className="jost text-[#FFCEC8] leading-[140%] 
-                border-y border-white py-4 md:pl-[5%]
-                text-[clamp(15px,12vw,26px)]"
-          >
-            RaK’s Institutions is a forward-thinking school rooted in the
+        {/* RIGHT BLOCK */}
+        <div className="flex flex-1 min-w-0 min-h-0">
+          {/* TEXT */}
+          <div className="flex flex-col justify-center text-start pt-[10%] w-[40%] min-w-0 flex-shrink-0">
+            <p
+              className="salo text-[#FFCEC8] uppercase mb-3 px-5"
+              style={{ fontSize: "clamp(18px, 3.8vw, 60px)" }}
+            >
+              ABOUT
+            </p>
+            <p
+              className="jost text-[#FFCEC8] leading-[140%] border-t-2 border-b-2 border-white py-3 px-5"
+              style={{ fontSize: "clamp(11px, 1.4vw, 26px)" }}
+            >
+             RaK’s Institutions is a forward-thinking school rooted in the
             Reggio-Emilia philosophy, where children lead their own learning
             journeys. Through experiential, sports-integrated, and problem-based
             approaches.
-          </p>
-        </div>
+            </p>
+          </div>
 
-        {/* RIGHT IMAGE */}
-        <div className="flex-1 relative border-l border-white overflow-hidden">
-          <img
-            src={rakathonImg}
-            alt="rakathon-image"
-            className="absolute inset-0 w-full h-full object-cover"
-          />
+          {/* RIGHT IMAGE */}
+          <div className="flex-1 relative border-l border-white overflow-hidden">
+            <img
+              src={rakathonImg}
+              alt="silk"
+              className="absolute inset-0 w-full h-full object-cover"
+            />
+          </div>
         </div>
       </div>
     </section>

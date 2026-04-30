@@ -54,7 +54,7 @@ const Section9 = () => {
     <section
       className="relative h-screen overflow-hidden flex"
       style={{
-        width: "90vw",
+        width: "100vw",
         backgroundImage: `url(${grid})`,
         backgroundPosition: "center",
         backgroundColor: "white",
@@ -124,11 +124,11 @@ const Section9 = () => {
       </div>
 
       {/* RIGHT SIDE */}
-      <div className="relative h-full" style={{ width: "40vw" }}>
+      <div className="w-[40vw] -right-[10%]  relative h-full  overflow-hidden">
         <img
           src={rightImg}
           alt=""
-          className="absolute -right-10 inset-0 w-full h-full object-cover"
+          className="w-full h-full aspect-9/16 object-cover"
         />
       </div>
 

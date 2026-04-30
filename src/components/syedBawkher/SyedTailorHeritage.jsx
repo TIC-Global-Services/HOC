@@ -147,7 +147,7 @@ export default function SyedTailorHeritage() {
             {/* SUB TEXT */}
             <div className="absolute top-[80%] left-[10%] text-start">
             <p
-              className="salo uppercase font-bold text-[#262666] leading-none"
+              className="salo uppercase text-[#262666] tracking-tight leading-none"
               style={{
                 fontSize: "clamp(18px,2.5vw,40px)",
                 marginTop: "2%",
@@ -168,7 +168,7 @@ export default function SyedTailorHeritage() {
               }}
             >
               <p
-                className="jost text-start text-[26px] leading-[160%] capitalize text-[#262666]"
+                className="jost text-start text-[26px] leading-[130%] capitalize text-[#262666]"
                 
               >
                 Syed Bawkher is a heritage tailoring house built on generations of craftsmanship—where tradition, 

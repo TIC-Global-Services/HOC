@@ -53,7 +53,7 @@ const ROWS = [
     { t: "circle", x: 50, s: 99, r: 5, d: 2.14 },
     { t: "spring", x: 60, s: 222, r: 0, d: 2.24 },
     { t: "can", x: 75, s: 164, r: 0, d: 2.34 },
-    { t: "spring", x: 85, s: 222, r: 0, d: 2.34 },
+    { t: "spring", x: 90, s: 222, r: 0, d: 2.34 },
   ],
 ];
 
@@ -193,9 +193,9 @@ export default function QataOwnTheCourt() {
       }}
     >
       {/* TITLE */}
-      <h2 className="absolute left-[5%] top-[clamp(40px,8vh,90px)] z-10 m-0 salo font-medium text-[14px] md:text-[140px] leading-none tracking-[-0.02em] uppercase text-[#1E382D]">
+      <h2 className="absolute left-[5%] text-start top-[clamp(40px,8vh,90px)] z-10 m-0 salo font-medium text-[14px] md:text-[140px] leading-none tracking-[-0.02em] uppercase text-[#1E382D]">
         <span style={{ display: "block" }}>OWN THE</span>
-        <span style={{ display: "block" }}>COURT</span>
+        <span style={{ display: "block", paddingLeft: "10px" }}>COURT</span>
       </h2>
 
       {/* IMAGES */}

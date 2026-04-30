@@ -79,7 +79,7 @@ const Section3 = () => {
         className="absolute"
         style={{
           top: "0%",
-          right: "0%",
+          right: "10%",
           width: "clamp(180px,20vw,360px)",
           willChange: "transform",
         }}

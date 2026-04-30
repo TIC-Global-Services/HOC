@@ -94,7 +94,7 @@ const Section1 = () => {
       </h2>
 
       <p
-        className="salo text-white uppercase pl-[2%] leading-none"
+        className="salo font-[400] text-white uppercase pl-[2%] leading-none tracking-tight "
         style={{ fontSize: "clamp(14px,4vw,40px)" }}
       >
         Crafted <br /> In Heritage
@@ -110,7 +110,7 @@ const Section1 = () => {
       className="absolute"
       style={{
         top: "30%",
-        right: "20%",
+        right: "5%",
         maxWidth: "clamp(260px,28vw,440px)",
       }}
     >
@@ -149,7 +149,7 @@ const Section1 = () => {
       className="absolute z-[10]"
       style={{
         bottom: "0%",
-        right: "-30%",
+        right: "-36%",
       }}
     >
       <h2

@@ -28,19 +28,19 @@ const RaksHero = () => {
         >
           <img
             src={img2}
-            className="float-1 absolute top-[10%] left-[10%] w-[50px] md:w-[80px] xl:w-[200px]"
+            className="float-1 absolute top-[10%] left-[10%] w-[50px] md:w-[80px] xl:w-[180px]"
           />
           <img
             src={img1}
-            className="float-2 absolute top-[15%] right-[15%] w-[60px] md:w-[100px] xl:w-[200px]"
+            className="float-2 absolute top-[15%] right-[15%] w-[60px] md:w-[100px] xl:w-[180px]"
           />
           <img
             src={img4}
-            className="float-3 absolute bottom-[10%] left-[10%] w-[100px] md:w-[140px] xl:w-[200px]"
+            className="float-3 absolute bottom-[10%] left-[10%] w-[100px] md:w-[140px] xl:w-[180px]"
           />
           <img
             src={img3}
-            className="float-4 absolute bottom-[10%] right-[10%] w-[100px] md:w-[140px] xl:w-[200px]"
+            className="float-4 absolute bottom-[10%] right-[10%] w-[100px] md:w-[140px] xl:w-[180px]"
           />
 
           <div className="w-full h-full flex flex-col items-center justify-center gap-4 md:gap-6 px-4">

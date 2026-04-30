@@ -32,11 +32,11 @@ const Section8 = () => {
       </div>
 
       {/* ───── CENTER IMAGE ───── */}
-      <div className="w-[50vw] h-full relative overflow-hidden flex items-center justify-center">
+      <div className="w-[40vw] h-full relative overflow-hidden">
         <img
           src={centerImg}
           alt="center"
-          className="w-full object-cover"
+          className="w-full h-full object-cover"
           
         />
       </div>

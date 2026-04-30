@@ -44,21 +44,21 @@ const SyedHero = () => {
           style={{ backgroundImage: `url(${grid})` }}
         >
           {/* FLOATING IMAGES */}
-          <img src={img1} className="float-1 absolute top-[10%] left-[10%] w-[40px] sm:w-[60px] md:w-[80px] xl:w-[100px]" />
-          <img src={img2} className="float-2 absolute top-[15%] right-[10%] w-[50px] sm:w-[80px] md:w-[100px] xl:w-[120px]" />
-          <img src={img3} className="float-3 absolute bottom-[10%] left-[8%] w-[80px] sm:w-[110px] md:w-[140px] xl:w-[180px]" />
-          <img src={img4} className="float-4 absolute bottom-[10%] right-[8%] w-[80px] sm:w-[110px] md:w-[140px] xl:w-[160px]" />
+          <img src={img1} className="float-1 absolute top-[5%] left-[10%] w-[40px] sm:w-[60px] md:w-[80px] xl:w-[120px]" />
+          <img src={img2} className="float-2 absolute top-[15%] right-[10%] w-[50px] sm:w-[80px] md:w-[100px] xl:w-[160px]" />
+          <img src={img3} className="float-3 absolute bottom-[10%] left-[8%] w-[80px] sm:w-[110px] md:w-[140px] xl:w-[160px]" />
+          <img src={img4} className="float-4 absolute bottom-[10%] right-[8%] w-[80px] sm:w-[110px] md:w-[140px] xl:w-[140px]" />
 
           {/* CENTER TEXT */}
           <div className="w-full h-full flex flex-col items-center justify-center gap-3 md:gap-6 px-4 text-center md:text-left">
             <h1
               className="font-[1000] alinsa text-[#060EBB] leading-none tracking-tight"
-              style={{ fontSize: "clamp(42px, 10vw, 180px)" }}
+              style={{ fontSize: "clamp(42px, 18vh, 180px)" }}
             >
               SYED BAWKHER
             </h1>
 
-            <button className="rounded-full border-2 bg-[#060EBB] text-white flex items-center justify-center font-medium w-[140px] h-[40px] sm:w-[180px] sm:h-[50px] md:w-[200px] md:h-[60px] xl:w-[220px] xl:h-[70px] text-xs sm:text-sm md:text-base">
+            <button className="jost rounded-full border-2 bg-[#060EBB] text-white flex items-center justify-center font-medium w-[140px] h-[40px] sm:w-[180px] sm:h-[50px] md:w-[200px] md:h-[60px] xl:w-[220px] xl:h-[70px] text-xs sm:text-sm md:text-base">
               FASHION
             </button>
           </div>

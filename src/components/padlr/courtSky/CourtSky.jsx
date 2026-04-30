@@ -66,11 +66,11 @@ export default function CourtSky() {
           </div>
 
           {/* GROUP 2 — Section3 + Section4 = 200vw */}
-          <div className="flex h-full" style={{ width: "350vw", flexShrink: 0 }}>
+          <div className="flex h-full" style={{ width: "330vw", flexShrink: 0 }}>
             <div style={{ width: "100vw", flexShrink: 0, height: "100%" }}>
               <Section3 />
             </div>
-            <div style={{ width: "100vw", flexShrink: 0, height: "100%" }}>
+            <div style={{ width: "80vw", flexShrink: 0, height: "100%" }}>
               <Section4 />
             </div>
 

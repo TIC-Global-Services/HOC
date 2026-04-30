@@ -63,11 +63,11 @@ const Section6 = () => {
     >
 
       {/* LEFT */}
-      <div className="relative h-full" style={{ width: "50vw" }}>
+      <div className="aspect-[9/16] h-full overflow-hidden" style={{ width: "40vw" }}>
         <img
           src={leftImg}
           alt=""
-          className="absolute inset-0 w-full h-full object-cover"
+          className="w-full h-full aspect-[9/16] object-cover"
         />
       </div>
 
@@ -84,7 +84,7 @@ const Section6 = () => {
 
         {/* PARAGRAPH */}
         <div className="absolute text-start"
-          style={{ top: "22vh", left: "8vw", maxWidth: "650px" }}>
+          style={{ top: "24vh", left: "8vw", maxWidth: "650px" }}>
           <p className="jost text-black"
             style={{ fontSize: "clamp(14px,1.6vw,26px)", lineHeight: "100%" }}>
             From academics to arts and sports, every talent finds its place. A balanced approach to learning, creativity, and growth. Nurturing skills beyond the classroom for a brighter future.
@@ -172,7 +172,7 @@ const Section6 = () => {
           className="salo uppercase tracking-tight text-start leading-none text-[#000085] absolute"
           style={{
             bottom: "8vh",
-            right: "8vw",
+            right: "14vw",
             fontSize: "clamp(30px,8vw,150px)",
           }}
         >

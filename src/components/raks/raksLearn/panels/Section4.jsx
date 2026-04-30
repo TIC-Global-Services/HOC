@@ -54,7 +54,7 @@ const Section4 = () => {
 
   return (
     <section
-      className="w-full h-screen flex relative overflow-visible"
+      className="h-screen flex relative overflow-visible"
       style={{
         backgroundImage: `url(${grid})`,
         backgroundSize: "cover",
@@ -62,11 +62,11 @@ const Section4 = () => {
       }}
     >
       {/* LEFT IMAGE */}
-      <div className="w-1/2 h-full relative">
+      <div className="w-[40vw] aspect-[9/16] h-full relative">
         <img
           src={leftImg}
           alt="visual"
-          className="absolute inset-0 w-full h-full object-cover"
+          className="absolute inset-0 w-full h-full aspect-[9/16] object-cover"
         />
       </div>
 

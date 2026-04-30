@@ -7,7 +7,7 @@ const Section7 = () => {
       <img
         src={img}
         alt="Padlr"
-        className="w-full h-full object-cover"
+        className="w-full h-full object-contain"
       />
 
     </section>

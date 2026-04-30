@@ -72,7 +72,7 @@ const Section4 = () => {
           style={{
             top: "5vh",
             left: "0vw",
-            width: "clamp(180px,26vw,545px)",
+            width: "clamp(180px,56vh,800px)",
           }}
         >
           <img src={designImg} className="w-full object-contain" />
@@ -98,8 +98,8 @@ const Section4 = () => {
         <div
           className="absolute"
           style={{
-            top: "40%",
-            left: "35vw",
+            top: "45%",
+            left: "40vw",
             transform: "translate(-50%, -50%)",
           }}
         >
@@ -120,20 +120,21 @@ const Section4 = () => {
           className="absolute"
           style={{
             bottom: "0vh",
-            padding:"4%",
+            padding:"6%",
             
           }}
         >
           <p
             className="jost text-start text-black capitalize leading-[150%] tracking-tight font-[500]"
             style={{
-              fontSize: "clamp(14px,1.8vw,26px)",
+              fontSize: "clamp(14px,4vh,26px)",
               lineHeight: "150%",
             }}
           >
             Qatamaran is a contemporary prêt-à-porter menswear label inspired by Chennai’s deep-rooted tailoring legacy. 
             Blending skilled craftsmanship with refined precision, the brand embodies a sense of enduring elegance. Created for 
-            <span className="text-[40px] salo text-[#1E382D]"> the modern gentleman,</span> 
+            <span style={{
+              fontSize: "clamp(18px,8vh,30px)"}} className=" salo text-[#1E382D]"> the modern gentleman,</span>{" "} 
             it seamlessly fuses tradition with a subtle touch of coastal influence, offering styles that are both sophisticated and effortlessly distinctive.
           </p>
         </div>

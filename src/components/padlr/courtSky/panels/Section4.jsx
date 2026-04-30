@@ -84,23 +84,23 @@ export default function Section4() {
       {/* BRAND TEXT */}
       <div
         className="absolute z-20 text-start"
-        style={{ top: "50%", right: "13%", transform: "translateY(-50%)" }}
+        style={{ top: "50%", right: "7.5%", transform: "translateY(-50%)" }}
       >
         <div style={{ lineHeight: "1" }}>
           <div>
             <span
-              className="salo text-[#8FC4E9]"
+              className="salo text-[#8FC4E9] tracking-wider"
               style={{ fontSize: "clamp(80px,10vw,150px)" }}
             >
-              B <span className="text-white">RAND</span>
+              B<span className="text-white">RAND</span>
             </span>
           </div>
           <div>
             <span
-              className="salo text-[#8FC4E9]"
+              className="salo text-[#8FC4E9] tracking-wider"
               style={{ fontSize: "clamp(80px,10vw,150px)" }}
             >
-              V <span className="text-white">OICE</span>
+              V<span className="text-white">OICE</span>
             </span>
           </div>
         </div>

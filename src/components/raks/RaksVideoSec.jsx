@@ -12,10 +12,10 @@ const RaksVideoSec = () => {
         muted
         playsInline
         className="
-          w-full 
-          h-[40vh]       
-          md:min-h-screen     
-          object-cover
+        w-full
+        h-[40vh]       
+        md:min-h-screen     
+        object-cover
         "
       />
 

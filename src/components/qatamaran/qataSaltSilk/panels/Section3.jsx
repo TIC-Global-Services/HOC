@@ -62,7 +62,7 @@ export default function Section3() {
       {/* ───── LEFT SIDE ───── */}
       <div className="flex flex-col justify-between
         w-[32vw] min-w-[280px] max-w-[520px]
-        py-[clamp(20px,4vw,60px)]
+        py-[clamp(20px,6vh,60px)]
         px-[clamp(16px,3vw,40px)]"
       >
 
@@ -87,12 +87,12 @@ export default function Section3() {
         {/* TEXT */}
         <div className="text-black text-start max-w-[480px]">
           <h2 className="salo uppercase mb-4 leading-[110%]
-            text-[clamp(26px,3vw,40px)]">
+            text-[clamp(26px,6vh,40px)]">
             Where Heritage Meets Modern Elegance
           </h2>
 
           <p className="jost leading-[140%] capitalize font-[500]
-            text-[clamp(14px,1.2vw,20px)]">
+            text-[clamp(14px,2vh,20px)]">
             At Qatamaran, every piece is thoughtfully crafted to embody timeless tailoring,
             coastal inspiration, and effortless sophistication—designed for the modern
             gentleman to wear with confidence and ease.
@@ -108,6 +108,7 @@ export default function Section3() {
             width: "clamp(80px,10vw,200px)",
             transform: "translateX(clamp(-40px,-6vw,-120px))",
             willChange: "transform",
+
           }}
         >
           <img

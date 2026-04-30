@@ -58,7 +58,7 @@ export default function Section2() {
 
       {/* ───────── BLOCK 1 ───────── */}
       <div
-        className="w-[100vw] h-full relative text-white overflow-hidden flex-shrink-0"
+        className="w-[80vw] h-full relative text-white overflow-hidden flex-shrink-0"
         style={{
           backgroundImage: `url(${grid})`,
           backgroundColor: "#ffffff",
@@ -67,9 +67,9 @@ export default function Section2() {
         <div className="absolute top-0 left-0 w-full py-[clamp(6px,1vw,14px)] bg-[#1E382D]" />
 
         {/* CENTER */}
-        <div className="absolute inset-0 flex items-center justify-center px-[clamp(20px,4vw,80px)] md:translate-x-[0%]">
-          <div className="max-w-[900px] text-start space-y-[clamp(12px,2vw,30px)]">
-            <h2 className="salo text-[#1E382D] uppercase tracking-tight leading-none text-[clamp(48px,12vw,200px)]">
+        <div className="absolute top-[20%] left-[20%] flex items-center justify-center px-[clamp(20px,4vw,80px)] md:translate-x-[0%]">
+          <div className="max-w-[900px] text-start space-y-[clamp(12px,0.5vw,14px)]">
+            <h2 className="salo text-[#1E382D] uppercase tracking-tight leading-none text-[clamp(48px,20vh,200px)]">
               Tide bound <br /> Tailoring
             </h2>
 
@@ -132,13 +132,13 @@ export default function Section2() {
 
         {/* TEXT */}
         <div
-          className="absolute text-black max-w-[500px]"
+          className="absolute text-black"
           style={{
-            bottom: "3%",
-            right: "15%",
+            bottom: "5%",
+            right: "5%",
           }}
         >
-          <p className="jost leading-[120%] tracking-tight text-start font-medium text-[clamp(18px,2.5vw,60px)]">
+          <p className="jost leading-[120%] tracking-tight text-start font-medium text-[clamp(18px,6.5vh,60px)]">
             MODERN GENTLEMEN & <br /> TIMELESS STYLE
           </p>
         </div>
@@ -146,15 +146,15 @@ export default function Section2() {
 
       {/* ───────── BLOCK 2 ───────── */}
       <div
-        className="w-[150vw] h-full flex flex-shrink-0 text-white"
+        className="w-[130vw] h-full flex flex-shrink-0 text-white"
         style={{
           backgroundImage: `url(${grid})`,
           backgroundColor: "#ffffff",
         }}
       >
         {/* LEFT */}
-        <div className="h-full w-[60vw] min-w-[280px] relative overflow-hidden">
-          <img src={qataLeftImg} className="absolute inset-0 w-full h-full object-cover" />
+        <div className="w-[45vw] h-full aspect-9/16 relative overflow-hidden">
+          <img src={qataLeftImg} className="absolute inset-0 w-full h-full aspect-9/16 object-cover" />
         </div>
 
         {/* CENTER */}

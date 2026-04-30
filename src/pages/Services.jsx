@@ -225,7 +225,7 @@ const categories = {
     },
     {
       cx: 300,
-      cy: 400,
+      cy: 450,
       label: "Brand Narrative & Content",
       dis: "Crafting compelling stories and content that bring your brand to life.",
       points: [
@@ -237,7 +237,7 @@ const categories = {
     },
     {
       cx: 300,
-      cy: 650,
+      cy: 700,
       label: "Logo & Visual Identity Design",
       dis: "Designing  a narrative world for your brand via distinctive visuals that make your brand instantly recognizable.",
       points: [
@@ -249,7 +249,7 @@ const categories = {
     },
     {
       cx: 300,
-      cy: 930,
+      cy: 980,
       label: "Social Media & Digital Branding",
       dis: "Platform-ready identity systems and content frameworks",
       points: [
@@ -259,7 +259,7 @@ const categories = {
     },
     {
       cx: 300,
-      cy: 1150,
+      cy: 1200,
       label: "Environmental & Spatial Branding",
       dis: "Bridging the brand disconnect between digital and physical presence ",
       points: [
@@ -270,7 +270,7 @@ const categories = {
 
     {
       cx: 300,
-      cy: 1350,
+      cy: 1450,
       label: "Analogue Branding Tools",
       dis: "Designing tactile brand materials that bring your identity into the real world, via multisensory mediums.",
       points: [
@@ -702,16 +702,16 @@ const Label = ({ number, title, description, textRef, points = [] }) => {
         </svg>
       </div>
 
-      <div>
+      <div className="flex flex-col gap-4">
         <h1
-          class={`text-3xl uppercase font-[400] mb-2 ${
+          class={`text-3xl jost uppercase font-[400] mb-2 ${
             number === 1 ? "text-white" : ""
           }`}
         >
           {title}
         </h1>
         <p
-          class={`text-lg w-[80%] font-[400] ${
+          class={`text-lg w-[80%] jost font-[400] leading-[20px] ${
             number === 1 ? "text-[#bfbfbf]" : ""
           }`}
         >
@@ -719,13 +719,13 @@ const Label = ({ number, title, description, textRef, points = [] }) => {
         </p>
 
         {points.length > 0 && (
-          <ul className="space-y-2">
+          <ol className="list-decimal space-y-0 pl-[5%]">
             {points.map((p, i) => (
-              <li key={i} className="text-[14px] text-[#BFBFBF] leading-[100%] pt-[1%]">
-                • {p}
+              <li key={i} className="jost text-[18px] text-[#BFBFBF] leading-[20px] pt-[1%] ">
+                {p}
               </li>
             ))}
-          </ul>
+          </ol>
         )}
       </div>
     </div>

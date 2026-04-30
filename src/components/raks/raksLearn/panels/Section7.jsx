@@ -61,7 +61,7 @@ const Section7 = () => {
     >
 
       {/* LEFT IMAGE */}
-      <div className="w-[50vw] h-full relative overflow-hidden">
+      <div className="w-[45vw] h-full relative overflow-hidden">
         <img
           src={leftImg}
           alt="left"
@@ -70,7 +70,7 @@ const Section7 = () => {
       </div>
 
       {/* CENTER CONTENT */}
-      <div className="w-[30vw] h-full flex items-center justify-center px-[clamp(20px,5vw,120px)]">
+      <div className="w-[20vw] h-full flex items-center justify-center px-5">
         <div className="text-center max-w-[500px] space-y-[clamp(16px,2vw,44px)]">
 
           {/* ICON (animated) */}
@@ -90,7 +90,7 @@ const Section7 = () => {
           </h2>
 
           {/* PARAGRAPH */}
-          <p className="jost text-start text-black leading-[120%] tracking-tight text-[clamp(14px,1.8vw,30px)]">
+          <p className="jost text-start text-black leading-[120%] tracking-tight text-[clamp(14px,1.5vw,30px)]">
             Where Little Ideas Turn Into Big Creations A Space to Imagine, Build, and Grow Where Little Ideas Turn Into Big Creations Innovation.
           </p>
 
@@ -98,7 +98,7 @@ const Section7 = () => {
       </div>
 
       {/* RIGHT IMAGE */}
-      <div className="w-[80vw] h-full relative overflow-hidden">
+      <div className="w-[70vw] h-full relative overflow-hidden">
         <img
           src={rightImg}
           alt="right"

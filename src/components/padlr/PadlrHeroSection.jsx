@@ -34,7 +34,7 @@ const PadlrHero = () => {
         />
         <img
           src={img4}
-          className="float-3 absolute bottom-[10%] left-[8%] w-[90px] sm:w-[120px] md:w-[150px] lg:w-[180px]"
+          className="float-3 absolute bottom-[10%] left-[8%] w-[90px] sm:w-[120px] md:w-[150px] lg:w-[160px]"
         />
         <img
           src={img3}
@@ -44,7 +44,7 @@ const PadlrHero = () => {
         <div className="w-full h-full flex flex-col items-center justify-center gap-4 sm:gap-6 px-4 text-center">
           <h2
             className="font-[1000] alinsa text-[#060EBB] leading-none tracking-tight"
-            style={{ fontSize: "clamp(60px, 12vw, 160px)" }}
+            style={{ fontSize: "clamp(60px, 20vh, 160px)" }}
           >
             PADLR
           </h2>

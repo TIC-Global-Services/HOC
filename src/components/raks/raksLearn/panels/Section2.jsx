@@ -131,16 +131,16 @@ const Section2 = () => {
         <div
           className="absolute text-start"
           style={{
-            bottom: "0vh",
-            right: "-5vw",
+            bottom: "2vh",
+            right: "5vw",
            
           }}
         >
           <p
             className="jost uppercase font-[500] text-black"
             style={{
-              fontSize: "clamp(14px,3.5vw,50px)",
-              lineHeight: "130%",
+              fontSize: "clamp(14px,6vh,50px)",
+              lineHeight: "120%",
             }}
           >
             CURIOUS MINDS & LEARNING <br /> REDEFINED
@@ -152,14 +152,14 @@ const Section2 = () => {
           className="absolute text-start"
           style={{
             top: "50%",
-            left: "30vw",
+            left: "25vw",
             transform: "translateY(-50%)",
             maxWidth: "40vw",
           }}
         >
           <h2
-            className="salo text-[#000085] uppercase leading-none"
-            style={{ fontSize: "clamp(40px,10vw,150px)" }}
+            className="salo text-[#000085] uppercase tracking-tight leading-none"
+            style={{ fontSize: "clamp(40px,20vh,150px)" }}
           >
             PURPOSEFUL <br /> LEARNING
           </h2>
@@ -168,7 +168,8 @@ const Section2 = () => {
             className="jost text-black tracking-tight mt-4"
             style={{
               fontSize: "clamp(14px,1.8vw,26px)",
-              lineHeight: "140%",
+              lineHeight: "120%",
+              paddingLeft: "15"
             }}
           >
             Shaped through curiosity and guided exploration, 

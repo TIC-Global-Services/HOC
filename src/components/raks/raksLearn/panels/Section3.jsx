@@ -62,19 +62,19 @@ const Section3 = () => {
       />
 
       {/* LEFT IMAGE */}
-      <div className="w-1/2 h-full md:ml-[10%] relative overflow-visible">
+      <div className="w-[40vw] h-full md:ml-[13%] aspect-[9/16] relative overflow-hidden">
         <img
           src={emPowerImg}
           alt="visual"
-          className="absolute inset-0 w-full h-full object-cover"
+          className="absolute inset-0 w-full h-full aspect-[9/16] object-cover"
         />
       </div>
 
       {/* RIGHT CONTENT */}
-      <div className="w-[50%] h-full flex flex-col items-center justify-center px-[clamp(20px,4vw,80px)] text-center relative z-10">
+      <div className="w-[40vw] h-full flex flex-col items-center justify-center px-[clamp(20px,4vw,80px)] text-center relative z-10">
         <p
           className="jost text-black leading-[120%] text-start font-[500] tracking-tight
-      text-[clamp(16px,4vw,60px)]"
+      text-[clamp(16px,4.5vh,60px)]"
         >
           "Empowering Voices. <br /> Inspiring Minds. <br /> Shaping The
           Future."

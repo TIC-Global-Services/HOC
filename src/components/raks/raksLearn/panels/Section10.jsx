@@ -14,7 +14,7 @@ const Section10 = () => {
     
       {/* ─── LEFT TEXT (30vw) ─── */}
       <div
-        className="h-full flex items-center"
+        className="h-full flex items-center justify-center"
         style={{
           width: "30vw",
           padding: "0 clamp(20px,4vw,80px)",
@@ -32,7 +32,7 @@ const Section10 = () => {
           <h2
             className="salo uppercase text-[#000085] leading-none tracking-tight"
             style={{
-              fontSize: "clamp(30px,12vw,150px)",
+              fontSize: "clamp(30px,20vh,150px)",
             }}
           >
             Learn <br /> Bold <br /> Build
