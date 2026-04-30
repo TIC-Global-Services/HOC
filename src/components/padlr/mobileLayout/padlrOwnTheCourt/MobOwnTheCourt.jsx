@@ -89,7 +89,7 @@ export default function MobOwnTheCourt() {
               <img
                 src={IMGS[item.t]}
                 alt=""
-                width={item.s * 0.45}
+                width={item.s * 0.8}
                 draggable={false}
                 style={{
                   display: "block",
