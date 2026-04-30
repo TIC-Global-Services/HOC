@@ -16,7 +16,7 @@ const AnimatedChar = ({ char, scrollYProgress, start, end }) => {
       style={{ opacity, y }}
       className="text-[#8FC4E9] font-[500] salo uppercase inline-block will-change-transform"
     >
-      <span style={{ fontSize: "clamp(40px, 14vw, 150px)" }}>
+      <span style={{ fontSize: "50px" }}>
         {char === " " ? "\u00A0" : char}
       </span>
     </motion.span>
@@ -34,7 +34,7 @@ const MobWannaKnowMore = () => {
   return (
     <section
       ref={ref}
-      className="w-full min-h-screen relative flex items-center justify-center overflow-hidden isolate"
+      className="w-full h-[80vh] relative flex items-center justify-center overflow-hidden isolate"
       style={{ backgroundImage: `url(${grid})`, backgroundSize: "cover" }}
     >
       {/* IMAGE TRAIL */}

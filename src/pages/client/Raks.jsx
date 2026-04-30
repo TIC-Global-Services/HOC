@@ -10,6 +10,7 @@ import MobRaksLearn from "../../components/raks/mobRaksLearn/MobRaksLearn";
 import MobRaksHero from "../../components/raks/mobLayout/mobRaksHero/MobRaksHero";
 import MobRaksWanna from "../../components/raks/RaksWannaKnow";
 import RaksInstaImg from "../../components/raks/RaksInstaImg";
+import MobRaksOwnTheCourt from "../../components/raks/mobLayout/mobRaksOwnCourt/MobRaksOwnTheCourt";
 
 const Raks = () => {
   const location = useLocation();
@@ -44,7 +45,15 @@ const Raks = () => {
       <div className="md:hidden">
       <RaksInstaImg />
       </div>
+
+      {/* Mobile */}
+      <div className="md:hidden">
+        <MobRaksOwnTheCourt />
+      </div>
+      {/* Desktop */}
+      <div className="hidden md:block">
       <RaksOwnTheCourt />
+      </div>
       <Footer />
     </div>
   );

@@ -7,7 +7,7 @@ import grid from "../../../../assets/client/padlr/img/checkBg.png";
 
 const MobCourtSec2 = () => {
   return (
-    <section className="w-full h-[80vh] flex flex-col"
+    <section className="w-full h-[90vh] flex flex-col overflow-hidden"
     style={{
             backgroundImage: `url(${grid})`,
             backgroundSize: "cover",
@@ -59,7 +59,7 @@ const MobCourtSec2 = () => {
       </div>
 
       {/* ─── BOTTOM TEXT  ─── */}
-      <div className="relative px-5 mt-[5%] pb-10">
+      <div className="relative px-5 mt-[15%] pb-10">
 
         <p className="jost text-start text-white/90 max-w-[250px] text-[14px] leading-[20px]">
           Padlr is a modern destination built around the fast-growing culture

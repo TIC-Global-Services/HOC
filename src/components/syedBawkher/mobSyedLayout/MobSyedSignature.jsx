@@ -1,4 +1,6 @@
-import React from "react";
+import React, { useRef } from "react";
+import useScrollFloat from "../../../hooks/useScrollFloat";
+
 import craftImg from "../../../assets/client/syedBawkher/img/signatureRightImg.png";
 import elegantLogoImg from "../../../assets/client/syedBawkher/img/signatureImg.png";
 import circleLogoImg from "../../../assets/client/syedBawkher/img/heroImg1.png";
@@ -6,18 +8,28 @@ import grid from "../../../assets/client/padlr/img/checkBg.png";
 import MobSyedSec2 from "./MobSyedSec2";
 
 const MobSyedSignature = () => {
+  const topIconRef = useRef(null);
+  const aboutIconRef = useRef(null);
+
+  // 👉 apply animation
+  useScrollFloat(topIconRef, { yFactor: 0.5, rFactor: 0.3 });
+  useScrollFloat(aboutIconRef, { yFactor: 0.7, rFactor: 0.4 });
+
   return (
     <>
-      <section className="w-full bg-[#EBE2CE] text-[#262666]">
+      <section className="w-full bg-[#EBE2CE] text-[#262666] relative">
+
         {/* TITLE */}
         <div className="px-4 py-14 relative">
+          
           {/* TITLE TEXT */}
           <h1 className="text-start salo text-[60px] leading-none uppercase">
             Signature Craft
           </h1>
 
-          {/* ICON RIGHT */}
+          {/* ICON RIGHT (ANIMATED) */}
           <img
+            ref={topIconRef}
             src={circleLogoImg}
             alt="icon"
             className="absolute right-4 top-0 -translate-y-1/2 w-[100px]"
@@ -35,16 +47,18 @@ const MobSyedSignature = () => {
           ))}
         </div>
 
-        {/*  ABOUT SECTION  */}
+        {/* ABOUT SECTION */}
         <div className="text-start px-4 py-16 relative">
-          {/* LOGO RIGHT */}
+
+          {/* LOGO RIGHT (ANIMATED) */}
           <img
+            ref={aboutIconRef}
             src={elegantLogoImg}
             alt=""
             className="absolute right-4 top-6 w-[150px]"
           />
 
-          {/* ABOUT TITLE */}
+          {/* TITLE */}
           <h2 className="salo text-[42px] leading-none uppercase mb-6">
             About
           </h2>
@@ -58,13 +72,14 @@ const MobSyedSignature = () => {
           </p>
         </div>
 
-        {/* ─── IMAGE ─── */}
+        {/* IMAGE */}
         <div className="w-full bg-[#EBE2CE]">
           <img src={craftImg} alt="about" className="w-[70%] object-cover" />
         </div>
+
       </section>
 
-      {/* MobSyedSections */}
+      {/* NEXT SECTION */}
       <MobSyedSec2 />
     </>
   );

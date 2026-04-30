@@ -70,16 +70,16 @@ const MobRaksSec4 = () => {
         />
       </div>
 
-      {/* ─── BOTTOM CONTENT (SAME LAYOUT) ─── */}
+      {/* ─── BOTTOM CONTENT  ─── */}
       <div className="relative w-full h-[40vh] flex items-center justify-center px-5">
 
         {/* CENTER TEXT */}
         <div className="text-start max-w-[300px] space-y-4">
-          <h2 className="salo text-black uppercase leading-none text-[30px]">
+          <h2 className="salo text-black uppercase leading-none tracking-tight text-[30px]">
             Where Curiosity Meets a <br /> New Way of  Learning
           </h2>
 
-          <p className="jost text-black/40 leading-[120%] tracking-tight text-[16px]">
+          <p className="jost text-black/40 leading-[16px] tracking-tight text-[16px]">
             “At RAKS Pallikkoodam, every student is nurtured to grow with
             confidence, curiosity, and creativity—empowered to learn,
             explore, and shine every single day.”

@@ -1,7 +1,6 @@
 import { useEffect, useRef } from "react";
 import gsap from "gsap";
 
-import centerVideo from "../../../../assets/client/qatamaran/Qatamaran_HOC_Website.mov";
 import topIcon from "../../../../assets/client/qatamaran/heroFloat1.png";
 import bottomIcon from "../../../../assets/client/qatamaran/heroFloat4.png";
 import grid from "../../../../assets/client/padlr/img/checkBg.png";
@@ -15,7 +14,6 @@ const MobQataSec4 = () => {
     }
   };
 
-  // light scroll animation
   useEffect(() => {
     const qs = iconRefs.current.map((el) => ({
       el,
@@ -51,65 +49,41 @@ const MobQataSec4 = () => {
 
   return (
     <section
-      className="w-full min-h-screen flex flex-col"
-      style={{
-        backgroundImage: `url(${grid})`,
-      }}
+      className="w-full flex flex-col justify-center px-10 py-10 gap-10"
+      style={{ backgroundImage: `url(${grid})` }}
     >
-      {/* ─── TOP CONTENT ─── */}
-      <div className="w-full h-[60vh] px-5 py-10 flex flex-col items-center gap-[15%]">
-        {/* TOP ICON */}
-        <div
-          ref={addIconRef}
-          data-speed="0.4"
-          data-rotate="-20"
-          className="w-[100px] self-start"
-        >
-          <img src={topIcon} alt="" className="w-full object-contain" />
-        </div>
-
-        {/* TEXT */}
-        <div className="text-black text-start max-w-[320px]">
-          <h2 className="salo uppercase text-[20px] leading-[110%] mb-3">
-            Where Heritage Meets Modern Elegance
-          </h2>
-
-          <p className="jost text-[16px] leading-[120%] font-[400]">
-            "At Qatamaran, every piece is thoughtfully crafted to embody
-            timeless tailoring, coastal inspiration, and effortless
-            sophistication—designed for the modern gentleman to wear with
-            confidence and ease."
-          </p>
-        </div>
-
-        {/* BOTTOM ICON */}
-        <div
-          ref={addIconRef}
-          data-speed="0.6"
-          data-rotate="-10"
-          className="w-[100px] self-start"
-        >
-          <img src={bottomIcon} alt="" className="w-full object-contain" />
-        </div>
+      {/* TOP ICON */}
+      <div
+        ref={addIconRef}
+        data-speed="0.4"
+        data-rotate="-20"
+        className="w-[100px]"
+      >
+        <img src={topIcon} alt="" className="w-full object-contain" />
       </div>
 
-      {/* ─── CENTER VIDEO ─── */}
-      <div className="w-full h-[40vh] relative overflow-hidden">
-        <video
-          src={centerVideo}
-          autoPlay
-          loop
-          muted
-          playsInline
-          className="w-full h-full object-cover"
-        />
+      {/* TEXT */}
+      <div className="text-black text-start max-w-[320px]">
+        <h2 className="salo uppercase text-[20px] leading-[110%] mb-3">
+          Where Heritage Meets Modern Elegance
+        </h2>
+
+        <p className="jost text-[16px] leading-[130%] font-[400]">
+          "At Qatamaran, every piece is thoughtfully crafted to embody
+          timeless tailoring, coastal inspiration, and effortless
+          sophistication—designed for the modern gentleman to wear with
+          confidence and ease."
+        </p>
       </div>
 
-      {/* ─── BOTTOM HEADING ─── */}
-      <div className="w-full h-[40vh] flex items-center justify-center px-5 py-10">
-        <h1 className="salo text-start max-w-[300px] uppercase text-[#1E382D] text-[50px] leading-[90%]">
-          Tidal <br /> Salt <br /> Stitch
-        </h1>
+      {/* BOTTOM ICON */}
+      <div
+        ref={addIconRef}
+        data-speed="0.6"
+        data-rotate="-10"
+        className="w-[100px]"
+      >
+        <img src={bottomIcon} alt="" className="w-full object-contain" />
       </div>
     </section>
   );

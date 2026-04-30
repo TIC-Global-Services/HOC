@@ -9,6 +9,17 @@ const MobRaksHero = () => {
   return (
     <section className="w-full min-h-screen flex flex-col mt-[25%]">
 
+      <style>{`
+        @keyframes floatY {
+          0%, 100% { transform: translateY(0px) rotate(var(--r)); }
+          50% { transform: translateY(-18px) rotate(var(--r)); }
+        }
+        .float-1 { --r: 6deg; animation: floatY 3.2s ease-in-out infinite; }
+        .float-2 { --r: -8deg; animation: floatY 4s ease-in-out 0.6s infinite; }
+        .float-3 { --r: 10deg; animation: floatY 3.6s ease-in-out 1.2s infinite; }
+        .float-4 { --r: -6deg; animation: floatY 4.4s ease-in-out 0.3s infinite; }
+      `}</style>
+
       {/* ─── TOP ─── */}
       <div
         className="relative w-full h-[65vh] flex items-center justify-center overflow-hidden"
@@ -18,10 +29,10 @@ const MobRaksHero = () => {
         }}
       >
         {/* STATIC IMAGES */}
-        <img src={img1} className="absolute top-[20%] left-[5%] w-[150px] -rotate-12" />
-        <img src={img2} className="absolute top-[20%] right-[5%] w-[100px] -rotate-12" />
-        <img src={img3} className="absolute bottom-[20%] left-[10%] w-[120px]" />
-        <img src={img4} className="absolute bottom-[20%] right-[10%] w-[130px]" />
+        <img src={img1} className="float-1 absolute top-[20%] left-[5%] w-[150px] -rotate-12" />
+        <img src={img2} className="float-2 absolute top-[20%] right-[5%] w-[100px] -rotate-12" />
+        <img src={img3} className="float-3 absolute bottom-[20%] left-[10%] w-[120px]" />
+        <img src={img4} className="float-4 absolute bottom-[20%] right-[10%] w-[130px]" />
 
         {/* CENTER CONTENT */}
         <div className="flex flex-col items-center justify-center gap-4 px-4 text-center">

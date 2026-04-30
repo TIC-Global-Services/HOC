@@ -20,13 +20,13 @@ const ClientsUniq = () => {
   return (
     <section className="px-4 md:px-16 py-16 md:py-24 text-center">
 
-      {/* 🔥 CURIOUS HEADING */}
+      {/* CURIOUS HEADING */}
       <div className="leading-none mb-10 md:mb-20">
         <h2 className="text-[50px] md:text-[150px] salo text-[#0000FF]">
           CURIOUS ?
         </h2>
 
-        <p className="text-[20px] md:text-[60px] jost text-black tracking-tight font-[500]">
+        <p className="text-[20px] md:text-[60px] jost text-black tracking-tight mt-4 font-[500]">
           let’s build your next big idea.
         </p>
       </div>

@@ -6,13 +6,19 @@ import ClientsCreativity from "../components/clientPage/ClientsCreativity";
 import ClientsUniq from "../components/clientPage/ClientsUniq";
 import ClientsHero from "../components/clientPage/ClientsHero";
 import Navbar from "../components/Navbar";
+import ClientHero from '../components/clientPage/mobLayout/ClientHero';
 
 const ClientPage = () => {
 
     return (
       <>
         <Navbar />
+        <div className='md:hidden'>
+        <ClientHero />
+        </div>
+        <div className='md:block hidden'>
         <ClientsHero />
+        </div>
         <ClientsCreativity />
        {/* <ClientsCurious /> */}
         <ClientsUniq />

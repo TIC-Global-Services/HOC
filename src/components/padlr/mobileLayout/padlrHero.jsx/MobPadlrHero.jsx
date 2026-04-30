@@ -3,10 +3,22 @@ import img2 from "../../../../assets/client/padlr/img/heroImg2.png";
 import img3 from "../../../../assets/client/padlr/img/heroImg3.png";
 import img4 from "../../../../assets/client/padlr/img/heroImg4.png";
 import grid from "../../../../assets/client/padlr/img/checkBg.png";
+import bottomIcon from "../../../../assets/client/padlr/img/Group.png";
 
 const MobPadlrHero = () => {
   return (
-    <section className="w-full min-h-screen flex flex-col mt-[25%]">
+    <section className="w-full min-h-screen flex flex-col mt-[25%] relative">
+
+      <style>{`
+        @keyframes floatY {
+          0%, 100% { transform: translateY(0px) rotate(var(--r)); }
+          50% { transform: translateY(-18px) rotate(var(--r)); }
+        }
+        .float-1 { --r: 6deg; animation: floatY 3.2s ease-in-out infinite; }
+        .float-2 { --r: -8deg; animation: floatY 4s ease-in-out 0.6s infinite; }
+        .float-3 { --r: 10deg; animation: floatY 3.6s ease-in-out 1.2s infinite; }
+        .float-4 { --r: -6deg; animation: floatY 4.4s ease-in-out 0.3s infinite; }
+      `}</style>
 
       {/* ─── TOP ─── */}
       <div
@@ -16,23 +28,11 @@ const MobPadlrHero = () => {
           backgroundPosition: "center",
         }}
       >
-        {/* FLOATING IMAGES  */}
-        <img
-          src={img2}
-          className="absolute top-[15%] left-[8%] w-[100px]"
-        />
-        <img
-          src={img1}
-          className="absolute top-[20%] right-[10%] w-[60px]"
-        />
-        <img
-          src={img4}
-          className="absolute bottom-[14%] left-[8%] w-[90px]"
-        />
-        <img
-          src={img3}
-          className="absolute bottom-[10%] right-[10%] w-[120px]"
-        />
+        {/* FLOATING IMAGES */}
+        <img src={img2} className="float-1 absolute top-[15%] left-[8%] w-[100px]" />
+        <img src={img1} className="float-2 absolute top-[20%] right-[10%] w-[60px]" />
+        <img src={img4} className="float-3 absolute bottom-[14%] left-[8%] w-[90px]" />
+        <img src={img3} className="float-4 absolute bottom-[10%] right-[10%] w-[120px]" />
 
         {/* CENTER TITLE */}
         <div className="flex flex-col items-center justify-center gap-4 px-4 text-center">
@@ -46,7 +46,7 @@ const MobPadlrHero = () => {
         </div>
       </div>
 
-      {/* ─── BOTTOM  ─── */}
+      {/* ─── BOTTOM ─── */}
       <div className="w-full flex-1 px-5 py-8 flex items-center">
         <p className="jost text-start font-medium text-[13px] leading-[24px] tracking-[-0.03em] capitalize">
           Established in 2025, Padlr is set to be Chennai's premier padel and{" "}
@@ -70,6 +70,13 @@ const MobPadlrHero = () => {
           </span>.
         </p>
       </div>
+
+      {/* BOTTOM RIGHT ICON */}
+      <img
+        src={bottomIcon}
+        alt=""
+        className="absolute right-8 bottom-0 w-[90px]"
+      />
 
     </section>
   );

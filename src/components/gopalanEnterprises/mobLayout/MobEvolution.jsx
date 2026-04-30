@@ -10,14 +10,14 @@ const MobEvolution = () => {
     <img
       src={brandImg}
       alt="Evolution"
-      className="w-full h-auto object-contain"
+      className="w-full object-contain"
     />
   </div>
 
   {/* TITLE */}
-  <div className="w-full flex-1 flex items-center justify-center px-4">
+  <div className="w-full h- flex-1 flex items-center justify-center px-4">
     <h2 className="salo uppercase text-[#CD684D] text-[48px] leading-none text-center">
-      Structured Evolution
+      Structured <br /> Evolution
     </h2>
   </div>
 

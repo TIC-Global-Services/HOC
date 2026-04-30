@@ -5,6 +5,7 @@ import grid from "../../../assets/client/padlr/img/checkBg.png";
 import elegantPairImg from "../../../assets/client/syedBawkher/img/elegantPairImg.png";
 import syedCircleImg from "../../../assets/client/syedBawkher/img/heroImg4.png";
 import texturalImg from "../../../assets/client/syedBawkher/img/heroImg3.png";
+import MobSyedSec3 from "./MobSyedSec3";
 
 const MobSyedSec2 = () => {
   const iconRefs = useRef([]);
@@ -117,6 +118,9 @@ const MobSyedSec2 = () => {
           </div>
         </div>
       </section>
+
+      {/* Section */}
+      <MobSyedSec3 />
     </>
   );
 };

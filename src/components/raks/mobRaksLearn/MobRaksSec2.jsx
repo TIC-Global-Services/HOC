@@ -100,14 +100,14 @@ const MobRaksSec2 = () => {
             width: "90%",
           }}
         >
-          <div className="flex flex-col gap-8 text-start">
+          <div className="flex flex-col gap-10 text-start">
             {/* HEADING */}
             <h2 className="salo text-[#000085] uppercase leading-none text-[50px]">
               PURPOSEFUL <br /> LEARNING
             </h2>
 
             {/* DESCRIPTION */}
-            <p className="jost font-[500] text-black/40 text-[16px] leading-[100%]">
+            <p className="jost font-[500] text-black/40 text-[16px] leading-[16px] tracking-tight">
               Shaped through curiosity and guided exploration, 
             every experience nurtures growth and understanding.<br />
             A thoughtful blend of creativity.
@@ -115,7 +115,7 @@ const MobRaksSec2 = () => {
 
             {/* TAGLINE */}
             <p className="jost uppercase text-black text-[22px] leading-[100%] tracking-tight font-[500]">
-              CURIOUS MINDS & LEARNING <br /> REDEFINED
+              CURIOUS MINDS & <br /> LEARNING  REDEFINED
             </p>
           </div>
         </div>

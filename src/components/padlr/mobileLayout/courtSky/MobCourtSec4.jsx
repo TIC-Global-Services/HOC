@@ -10,7 +10,7 @@ import circleImg from "../../../../assets/client/padlr/img/heroImg1.png";
 const MobCourtSec4 = () => {
   return (
     <section
-      className="w-full relative min-h-[100dvh] flex flex-col justify-between px-5 py-8"
+      className="w-full relative h-[90vh] flex flex-col justify-between px-5 py-8"
       style={{
         backgroundImage: `url(${grid})`,
         backgroundSize: "cover",
@@ -24,7 +24,7 @@ const MobCourtSec4 = () => {
         <img
           src={delightImg}
           alt=""
-          className="w-[200px] absolute top-0 left-0"
+          className="w-[220px] absolute top-0 left-0"
         />
 
         {/* RIGHT BAT */}
@@ -37,10 +37,10 @@ const MobCourtSec4 = () => {
       </div>
 
       {/* ─── CENTER TEXT ─── */}
-      <div className="mt-8 absolute left-[15%] top-[30%] max-w-[300px] text-start">
+      <div className="mt-8 absolute left-[10%] top-[35%] max-w-[300px] text-start">
 
         {/* HEADING */}
-        <h1 className="salo text-[#8FC4E9] text-[80px] leading-none mb-4">
+        <h1 className="salo text-[#8FC4E9] text-[80px] tracking-wider leading-none mb-4">
           TYPEFACE
         </h1>
 
@@ -49,7 +49,7 @@ const MobCourtSec4 = () => {
           The typography system balances bold expression with refined clarity—
           where the primary typeface delivers a strong, modern identity, and the
           secondary typeface ensures{" "}
-          <span className="salo text-[#8FC4E9] text-[20px]">
+          <span className="salo text-[#8FC4E9] text-[16px]">
             versatility and seamless
           </span>{" "}
           readability across all brand touchpoints.
@@ -71,7 +71,7 @@ const MobCourtSec4 = () => {
         <img
           src={topImg}
           alt=""
-          className="w-[200px] absolute bottom-[4%] right-0"
+          className="w-[220px] absolute bottom-[2%] right-0"
         />
 
       </div>

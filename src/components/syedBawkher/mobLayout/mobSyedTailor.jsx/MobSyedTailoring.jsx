@@ -1,9 +1,18 @@
-import React from "react";
+import React, { useRef } from "react";
+import useScrollFloat from "../../../../hooks/useScrollFloat";
+
 import grid from "../../../../assets/client/padlr/img/checkBg.png";
 import buttonImg from "../../../../assets/client/page/button.png";
 import syedLogo from "../../../../assets/client/syedBawkher/img/heroImg1.png";
 
 const MobSyedTailoring = () => {
+  const topRef = useRef(null);
+  const bottomRef = useRef(null);
+
+  // 👉 animation (different speeds = depth)
+  useScrollFloat(topRef, { yFactor: 0.4, rFactor: 0.3 });
+  useScrollFloat(bottomRef, { yFactor: 0.6, rFactor: 0.4 });
+
   return (
     <section
       className="w-full min-h-screen relative bg-[#EBE2CE] px-5 py-10 flex flex-col justify-between"
@@ -11,16 +20,20 @@ const MobSyedTailoring = () => {
         backgroundImage: `url(${grid})`,
       }}
     >
-      {/* TOP ICON */}
+
+      {/* ─── TOP ICON (ANIMATED) ─── */}
       <div className="w-full relative h-[120px]">
         <img
+          ref={topRef}
           src={buttonImg}
-          className="absolute left-1/2 -translate-x-1/2 top-1/2 w-[100px]"
+          alt="icon"
+          className="absolute left-[70%] -translate-x-1/2 top-1/2 w-[100px]"
         />
       </div>
 
       {/* ─── TEXT CONTENT ─── */}
       <div className="flex flex-col justify-center translate-x-[4%] text-start gap-6">
+
         {/* HEADING */}
         <h2 className="salo font-[400] uppercase text-[#262666] text-[100px] tracking-wide leading-none">
           Tailor <br /> Heritage
@@ -39,12 +52,19 @@ const MobSyedTailoring = () => {
           garments, refined detailing, and an experience that goes beyond just
           dressing.
         </p>
+
       </div>
 
-      {/* ─── BOTTOM ICON ─── */}
+      {/* ─── BOTTOM ICON (ANIMATED) ─── */}
       <div className="w-full flex justify-end">
-        <img src={syedLogo} className="w-[150px]" />
+        <img
+          ref={bottomRef}
+          src={syedLogo}
+          alt="icon"
+          className="w-[150px]"
+        />
       </div>
+
     </section>
   );
 };

@@ -3,7 +3,7 @@ import creativity from "../../assets/client/page/creativity.png";
 
 const ClientsCreativity = () => {
   return (
-    <div className="flex flex-col md:flex-row items-center justify-center md:-mt-[8%] gap-10 px-10">
+    <div className="flex flex-col md:flex-row items-center justify-center mt-[-50%] md:-mt-[8%] gap-10 px-10">
       {/* Left Image */}
       <motion.img
         src={creativity}

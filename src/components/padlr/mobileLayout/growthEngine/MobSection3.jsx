@@ -70,7 +70,7 @@ const MobSection3 = () => {
         />
 
         {/* RIGHT TEXT */}
-        <div className="absolute right-[2%] top-[10%] max-w-[140px]">
+        <div className="absolute right-[2%] top-[18%] max-w-[140px]">
           <p className="jost text-start capitalize text-black leading-[120%] text-[13px]">
             Maintains visual balance with neutral tones inspired by real court
             elements. Communicates precision and modernity through a
@@ -82,7 +82,7 @@ const MobSection3 = () => {
         <img
           src={spinIcon}
           alt="icon"
-          className="absolute right-[10%] top-[40%] w-[60px]"
+          className="absolute right-[10%] top-[50%] w-[60px]"
         />
 
       </div>
@@ -91,7 +91,7 @@ const MobSection3 = () => {
       <div className="absolute bottom-0 left-0 w-full h-[50vh] bg-white">
 
         {/* CARD */}
-        <div className="absolute top-[10%] left-1/2 -translate-x-1/2 w-[70%]">
+        <div className="absolute top-[10%] left-1/2 -translate-x-1/2 w-[60%]">
           <img
             src={attachIcon}
             alt="pin"

@@ -40,7 +40,7 @@ const JobListings = () => {
             </motion.h1>
 
             <div className="flex gap-4">
-              <div className="flex justify-center items-center">
+              <div className="flex md:justify-center md:items-center">
                 <button
                   className="bg-white jost text-[#060ebb] px-6 py-3 rounded-full font-medium transition-colors duration-300 hover:bg-blue-600 hover:text-white"
                   onClick={(e) => {

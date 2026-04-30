@@ -34,7 +34,7 @@ const MobRaksWanna = () => {
   return (
     <section
       ref={ref}
-      className="w-full min-h-screen relative flex items-center justify-center overflow-hidden isolate"
+      className="w-full h-[80vh] relative flex items-center justify-center overflow-hidden isolate"
       style={{ backgroundImage: `url(${grid})`, backgroundSize: "cover" }}
     >
       {/* IMAGE TRAIL */}
