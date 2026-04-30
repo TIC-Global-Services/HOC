@@ -152,7 +152,7 @@ const Section4 = () => {
           className="salo absolute text-white leading-none"
           style={{
             top: "10vh",
-            left: "0vw",
+            left: "1.5vw",
             fontSize: "clamp(40px,12vw,150px)",
           }}
         >

@@ -108,7 +108,7 @@ export default function RaksLearning() {
               src={raksImg}
               alt="padlr logo"
               className="object-contain"
-              style={{ width: "clamp(50px, 7vw, 120px)" }}
+              style={{ width: "clamp(50px, 14vw, 160px)" }}
             />
           </div>
         </div>

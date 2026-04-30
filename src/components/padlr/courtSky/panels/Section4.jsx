@@ -54,7 +54,7 @@ export default function Section4() {
     >
       {/* LEFT IMAGE */}
       <div
-        className="absolute"
+        className="absolute object-contain"
         style={{
           left: "0",
           top: "50%",
@@ -110,7 +110,7 @@ export default function Section4() {
         ref={badgeRef}
         className="absolute z-20"
         style={{
-          left: "50%",
+          left: "60%",
           bottom: "8%",
           transform: "translateX(-50%)",
           willChange: "transform",

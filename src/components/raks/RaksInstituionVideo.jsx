@@ -5,7 +5,7 @@ const RaksInstitutionVideo = () => {
   return (
     <section className="w-full relative overflow-hidden">
 
-      <motion.video
+      <video
         src={video}
         autoPlay
         loop

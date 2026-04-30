@@ -23,7 +23,7 @@ export default function RaksLearning() {
   const trackRef = useRef(null);
 
 
-  const sectionWidths = [120, 100, 80, 100, 60, 140, 135, 90,100,100,100,40];
+  const sectionWidths = [120, 100, 80, 100, 60, 140, 135, 90,100,100,60,40];
   const totalWidth = sectionWidths.reduce((a, b) => a + b, 0); 
 
 useEffect(() => {

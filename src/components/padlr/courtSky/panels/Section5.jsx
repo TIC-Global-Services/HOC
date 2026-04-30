@@ -22,7 +22,7 @@ export default function Section6() {
           <img
             src={courtImg1}
             alt="court"
-            className="absolute inset-0 w-full h-full object-cover"
+            className="absolute inset-0 w-full h-screen object-cover"
           />
         </div>
       </div>

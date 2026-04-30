@@ -34,8 +34,8 @@ const Section6 = () => {
   return (
     <section
       ref={ref}
-      className="w-full min-h-screen relative flex items-center justify-center overflow-hidden isolate"
-      style={{ backgroundImage: `url(${grid})`, backgroundSize: "cover" }}
+      className="w-[60vw] min-h-screen relative flex items-center justify-center overflow-hidden isolate"
+      style={{ backgroundImage: `url(${grid})`, backgroundSize: "cover", width: "60vw" }}
     >
       {/* IMAGE TRAIL */}
       <ImagesTrail image={question} />

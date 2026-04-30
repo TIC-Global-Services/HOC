@@ -31,7 +31,7 @@ const QatamaranHero = () => {
           />
           <img
             src={img2}
-            className="float-2 absolute top-[15%] right-[15%] w-[60px] md:w-[100px] xl:w-[120px]"
+            className="float-2 absolute top-[3%] right-[15%] w-[60px] md:w-[100px] xl:w-[120px]"
           />
           <img
             src={img3}

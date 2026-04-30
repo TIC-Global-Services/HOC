@@ -143,7 +143,7 @@ export default function SyedSignatureCraft() {
                      src={elegantLogoImg}
                      alt="padlr logo"
                      className="object-contain"
-                     style={{ width: "clamp(50px, 7vw, 120px)" }}
+                     style={{ width: "clamp(50px, 14vw, 160px)" }}
                    />
                  </div>
                </div>
@@ -202,7 +202,7 @@ export default function SyedSignatureCraft() {
           ))}
 
           {/* TEXT */}
-          <div className="absolute inset-0 flex items-center justify-center px-[5%]">
+          <div className="absolute top-[20%] flex items-center justify-center px-[5%]">
             <div style={{ maxWidth: "60%" }}>
               <h2
                 className="salo uppercase text-start text-[#262666] leading-none"
@@ -298,7 +298,7 @@ export default function SyedSignatureCraft() {
               <div
                 className="relative"
                 style={{
-                  width: "clamp(160px,20vw,350px)",
+                  width: "clamp(160px,40vh,350px)",
                   transform: "rotate(-10deg)",
                 }}
               >
