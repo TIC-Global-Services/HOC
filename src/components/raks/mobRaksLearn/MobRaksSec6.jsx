@@ -3,7 +3,7 @@ import panel5 from "../../../assets/client/raks/img/panel5.png";
 
 const MobRaksSec6 = () => {
   return (
-    <section className="w-full h-[50vh] overflow-hidden">
+    <section className="w-full overflow-hidden">
       
       <img
         src={panel5}

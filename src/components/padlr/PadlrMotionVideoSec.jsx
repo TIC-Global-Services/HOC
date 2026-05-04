@@ -16,7 +16,7 @@ const PadlrMotionVideoSec = () => {
         className="
         absolute inset-0
         w-full h-full
-        object-contain scale-105 md:scale-100 md:object-contain
+        object-contain scale-105 md:scale-130 md:object-contain
         "
       />
 

@@ -54,7 +54,7 @@ const MobRaksSec4 = () => {
 
   return (
     <section
-      className="w-full flex flex-col"
+      className="w-full min-h-screen flex flex-col"
       style={{
         backgroundImage: `url(${grid})`,
         backgroundSize: "cover",
@@ -62,16 +62,16 @@ const MobRaksSec4 = () => {
     >
 
       {/* ─── TOP IMAGE ─── */}
-      <div className="w-full h-[50vh] relative">
+      <div className="w-full h-full relative">
         <img
           src={leftImg}
           alt="visual"
-          className="absolute inset-0 w-full h-full object-cover"
+          className="w-full h-full object-cover"
         />
       </div>
 
       {/* ─── BOTTOM CONTENT  ─── */}
-      <div className="relative w-full h-[40vh] flex items-center justify-center px-5">
+      <div className="relative w-full h-[50vh] flex items-center justify-center px-5">
 
         {/* CENTER TEXT */}
         <div className="text-start max-w-[300px] space-y-4">
