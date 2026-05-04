@@ -64,17 +64,7 @@ const Contact = () => {
             </Link>
             <div className="text-[14px] md:text-[19px] font-semibold flex gap-4 md:gap-14 items-center">
               <Link
-                to={"/client"}
-                className={`hover:text-black/50 ${
-                  isActiveRoute("/client")
-                    ? "text-[#060ebb] border-b-2 border-[#060ebb]"
-                    : ""
-                }`}
-              >
-                <h1>CLIENT</h1>
-              </Link>
-              <Link
-                to={"/services"}
+                to={"/Services"}
                 className={`hover:text-black/50 ${
                   isActiveRoute("/Services")
                     ? "text-[#060ebb] border-b-2 border-[#060ebb]"
@@ -84,7 +74,7 @@ const Contact = () => {
                 <h1>SERVICES</h1>
               </Link>
               <Link
-                to={"/experience"}
+                to={"/Experience"}
                 className={`hover:text-black/50 ${
                   isActiveRoute("/Experience")
                     ? "text-[#060ebb] border-b-2 border-[#060ebb]"
@@ -94,7 +84,7 @@ const Contact = () => {
                 <h1>EXPERIENCE LAB</h1>
               </Link>
               <Link
-                to={"/ethos"}
+                to={"/Ethos"}
                 className={`hover:text-black/50 ${
                   isActiveRoute("/Ethos")
                     ? "text-[#060ebb] border-b-2 border-[#060ebb]"
@@ -104,7 +94,7 @@ const Contact = () => {
                 <h1>ETHOS</h1>
               </Link>
               <Link
-                to={"/careers"}
+                to={"/Careers"}
                 className={`hover:text-black/50 ${
                   isActiveRoute("/Careers")
                     ? "text-[#060ebb] border-b-2 border-[#060ebb]"
@@ -114,7 +104,7 @@ const Contact = () => {
                 <h1>CAREERS</h1>
               </Link>
             </div>
-            <Link to={"/contact"}>
+            <Link to={"/Contact"}>
               <motion.div
                 className={`py-2 px-4 rounded-full relative text-[12px] md:text-[13px] font-semibold flex items-center cursor-pointer ${
                   isToggled
@@ -150,7 +140,7 @@ const Contact = () => {
           </div>
         </div>
         {/* Absolutely Centered Text */}
-        <div className="  overflow-hidden  bg-black  z-[1] mx-auto overflow-x-visible  items-center  flex-col    relative justify-center  md:h-[190vh] mt-40 md:mt-20 rounded-t-3xl   px-4 flex md:px-10">
+        <div className="  overflow-hidden  bg-black  z-[1] mx-auto overflow-x-visible  items-center  flex-col    relative justify-center  md:h-[250vh] mt-40 md:mt-20 rounded-t-3xl   px-4 flex md:px-10">
           <MainServices />
         </div>
       </div>
@@ -185,35 +175,11 @@ const categories = {
         "Screen-Based Installations & Digital Environments",
       ],
     },
-    // {
-    //   cx: 300,
-    //   cy: 800,
-    //   label: "Experiential Mapping",
-    //   dis: "Visualizing how users interact with a brand across touchpoints.",
-    //   points: [
-    //     "Customer journey mapping & insights",
-    //     "Branded spaces & installations",
-    //     "Interactive digital environments",
-    //     "Luxury & high-net-worth experience design",
-    //   ],
-    // },
-    // {
-    //   cx: 300,
-    //   cy: 1150,
-    //   label: "Hybrid Communication Solutions",
-    //   dis: "Combining digital and physical channels for seamless brand experiences.",
-    //   points: [
-    //     "Omnichannel communication strategies",
-    //     "AR/VR & immersive storytelling",
-    //     "Integrated digital + physical campaigns",
-    //     "Cross-platform brand engagement systems",
-    //   ],
-    // },
   ],
   design: [
     {
       cx: 300,
-      cy: 150,
+      cy: 200,
       label: "Brand Evolution Strategy",
       dis: "Navigating brand growth, repositioning, and long-term relevance + Defining who you are, what you stand for, and how you show up",
       points: [
@@ -225,7 +191,7 @@ const categories = {
     },
     {
       cx: 300,
-      cy: 450,
+      cy: 500,
       label: "Brand Narrative & Content",
       dis: "Crafting compelling stories and content that bring your brand to life.",
       points: [
@@ -237,9 +203,9 @@ const categories = {
     },
     {
       cx: 300,
-      cy: 700,
+      cy: 800,
       label: "Logo & Visual Identity Design",
-      dis: "Designing  a narrative world for your brand via distinctive visuals that make your brand instantly recognizable.",
+      dis: "Designing a narrative world for your brand via distinctive visuals that make your brand instantly recognizable.",
       points: [
         "Logo & Mark Design",
         "Colour, Typography & Grid Systems",
@@ -249,7 +215,7 @@ const categories = {
     },
     {
       cx: 300,
-      cy: 980,
+      cy: 1100,
       label: "Social Media & Digital Branding",
       dis: "Platform-ready identity systems and content frameworks",
       points: [
@@ -259,18 +225,14 @@ const categories = {
     },
     {
       cx: 300,
-      cy: 1200,
+      cy: 1400,
       label: "Environmental & Spatial Branding",
-      dis: "Bridging the brand disconnect between digital and physical presence ",
-      points: [
-        "Wayfinding & Environmental Signage",
-        "Environmental Branding",
-      ],
+      dis: "Bridging the brand disconnect between digital and physical presence",
+      points: ["Wayfinding & Environmental Signage", "Environmental Branding"],
     },
-
     {
       cx: 300,
-      cy: 1450,
+      cy: 1700,
       label: "Analogue Branding Tools",
       dis: "Designing tactile brand materials that bring your identity into the real world, via multisensory mediums.",
       points: [
@@ -280,33 +242,6 @@ const categories = {
       ],
     },
   ],
-
-  // build: [
-  //   {
-  //     cx: 300,
-  //     cy: 200,
-  //     label: "Brand Evolution Strategy",
-  //     dis: "Navigating brand growth, repositioning, and long-term relevance + Defining who you are, what you stand for, and how you show up.",
-  //   },
-  //   {
-  //     cx: 300,
-  //     cy: 400,
-  //     label: "Brand Narrative & Content",
-  //     dis: "Crafting compelling stories and content that bring your brand to life.",
-  //   },
-  //   {
-  //     cx: 300,
-  //     cy: 600,
-  //     label: "Logo & Visual Identity Design",
-  //     dis: "Designing  a narrative world for your brand via distinctive visuals that make your brand instantly recognizable.",
-  //   },
-  //   {
-  //     cx: 300,
-  //     cy: 800,
-  //     label: "Social Media & Digital Branding",
-  //     dis: "Platform-ready identity systems and content frameworks",
-  //   },
-  // ],
 };
 
 import svgser from "../assets/svgser.png";
@@ -428,8 +363,7 @@ const MainServices = () => {
                 color: "#F2F2F2",
                 duration: 0.5,
               });
-              gsap.to(`.label-text-${index} p`,
-                `.label-text-${index} li`, {
+              gsap.to(`.label-text-${index} p`, {
                 color: "#BFBFBF",
                 duration: 0.5,
               });
@@ -440,7 +374,6 @@ const MainServices = () => {
                   `.label-text-${index} div`,
                   `.label-text-${index} h1`,
                   `.label-text-${index} p`,
-                  
                 ],
                 {
                   color: "#F2F2F2",
@@ -451,7 +384,6 @@ const MainServices = () => {
                 color: "#F2F2F2",
                 duration: 0.5,
               });
-              gsap.to(`.label-text-${index} li`, { color: "#F2F2F2", duration: 0.5 });
             }
           },
           onLeaveBack: () => {
@@ -461,7 +393,6 @@ const MainServices = () => {
                 `.label-text-${index} div`,
                 `.label-text-${index} h1`,
                 `.label-text-${index} p`,
-                `.label-text-${index} li`,
               ],
               {
                 color: "#676767",
@@ -538,7 +469,7 @@ const MainServices = () => {
         >
           {/* Inactive Path (Gray) */}
           <path
-            d="M0.200195 2.24512H268.2C287.056 2.24512 296.484 2.24512 302.342 8.10298C308.2 13.9608 308.2 23.3889 308.2 42.2451V1525.75"
+            d="M0.200195 2.24512H268.2C287.056 2.24512 296.484 2.24512 302.342 8.10298C308.2 13.9608 308.2 23.3889 308.2 42.2451V2500.75"
             stroke="#676767"
             strokeWidth="4"
           />
@@ -546,7 +477,7 @@ const MainServices = () => {
           {/* Active Path (Blue) */}
           <path
             ref={lineRef}
-            d="M0.200195 2.24512H268.2C287.056 2.24512 296.484 2.24512 302.342 8.10298C308.2 13.9608 308.2 23.3889 308.2 42.2451V1525.75"
+            d="M0.200195 2.24512H268.2C287.056 2.24512 296.484 2.24512 302.342 8.10298C308.2 13.9608 308.2 23.3889 308.2 42.2451V2500.75"
             stroke="#060ebb"
             strokeWidth="4"
           />
@@ -702,7 +633,7 @@ const Label = ({ number, title, description, textRef, points = [] }) => {
         </svg>
       </div>
 
-      <div className="flex flex-col gap-4">
+      <div>
         <h1
           class={`text-3xl jost uppercase font-[400] mb-2 ${
             number === 1 ? "text-white" : ""
@@ -711,22 +642,20 @@ const Label = ({ number, title, description, textRef, points = [] }) => {
           {title}
         </h1>
         <p
-          class={`text-lg w-[80%] jost font-[400] leading-[20px] ${
+          class={`text-lg jost w-[80%] font-[400] ${
             number === 1 ? "text-[#bfbfbf]" : ""
           }`}
         >
           {description}
         </p>
 
-        {points.length > 0 && (
-          <ol className="list-decimal space-y-0 pl-[5%]">
-            {points.map((p, i) => (
-              <li key={i} className="jost text-[18px] text-[#BFBFBF] leading-[20px] pt-[1%] ">
-                {p}
-              </li>
-            ))}
-          </ol>
-        )}
+        <div className="mt-3">
+          {points?.map((point, index) => (
+            <div key={index} className="jost text-[18px] font-[400]">
+              {index + 1}. {point}
+            </div>
+          ))}
+        </div>
       </div>
     </div>
   );
