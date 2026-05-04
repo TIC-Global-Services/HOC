@@ -56,11 +56,11 @@ const MobRaksSec7 = () => {
 
       {/* ─── TOP TEXT ─── */}
       <div className="max-w-[320px] text-start pt-[20%]">
-        <h2 className="salo text-black text-[30px] uppercase tracking-tight leading-none mb-3">
+        <h2 className="salo text-black text-[30px] uppercase tracking-tight leading-[30px] mb-3">
           Learn Beyond Limits
         </h2>
 
-        <p className="jost text-black/50 text-[16px] leading-[16px]">
+        <p className="jost text-black/50 text-[16px] leading-[16px] tracking-tight">
           From academics to arts and sports, every talent finds its place. A balanced approach to learning, creativity, and growth.Nurturing skills beyond the classroom for a brighter future.
         </p>
       </div>

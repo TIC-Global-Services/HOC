@@ -13,7 +13,7 @@ const MobRefineSec2 = () => {
 
   return (
     <section
-      className="w-full relative h-[80vh] flex flex-col py-[15%]"
+      className="w-full relative h-[90vh] flex flex-col py-[15%]"
       style={{ backgroundColor: "#1E382D" }}
     >
       {/* TOP LEFT */}

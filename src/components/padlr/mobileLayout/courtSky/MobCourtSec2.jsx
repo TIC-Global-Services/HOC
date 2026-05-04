@@ -7,7 +7,7 @@ import grid from "../../../../assets/client/padlr/img/checkBg.png";
 
 const MobCourtSec2 = () => {
   return (
-    <section className="w-full h-[90vh] flex flex-col overflow-hidden"
+    <section className="w-full h-[95vh] flex flex-col overflow-hidden"
     style={{
             backgroundImage: `url(${grid})`,
             backgroundSize: "cover",
@@ -33,16 +33,16 @@ const MobCourtSec2 = () => {
 
         {/* LEFT TEXT */}
         <div className="w-[55%]">
-          <p className="salo text-start text-white leading-none text-[30px]">
+          <p className="salo text-start text-white leading-none tracking-tight text-[30px]">
             BOLD, <br />
             RICH, AND <br />
             UNAPOLOGETIC.
           </p>
 
-          <p className="jost text-start leading-none text-white/80 mt-3 text-[14px]">
+          <p className="jost text-start leading-none tracking-tight text-white/80 mt-3 text-[14px]">
             Hex Precision
           </p>
-          <p className="jost text-start leading-none text-white/80 text-[14px]">
+          <p className="jost text-start leading-none tracking-tight text-white/80 text-[14px]">
             RGB Consistency
           </p>
         </div>
