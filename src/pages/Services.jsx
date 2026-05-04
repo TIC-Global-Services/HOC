@@ -561,9 +561,9 @@ const MainServices = () => {
                   <p className="text-[#BFBFBF] text-base">{item.dis}</p>
 
                   {/* NUMBERED POINTS */}
-                  <div className="mt-3 space-y-2">
+                  <div className="mt-3 space-y-1">
                     {item.points.map((point, index) => (
-                      <div key={index} className="flex gap-3">
+                      <div key={index} className="flex gap-1">
                         <span className="text-[#BFBFBF] font-semibold">
                           {index + 1}.
                         </span>
