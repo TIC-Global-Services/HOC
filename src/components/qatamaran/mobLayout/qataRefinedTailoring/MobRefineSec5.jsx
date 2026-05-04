@@ -59,13 +59,13 @@ const MobRefineSec5 = () => {
       {/* ─── BOTTOM ICONS ─── */}
       <div className="w-full flex justify-between items-end px-5 pt-10">
 
-        {/* LEFT ICON (ANIMATED) */}
-        <div ref={leftRef} className="w-[100px]">
+        {/* LEFT ICON */}
+        <div ref={leftRef} className="w-[120px] z-[30]">
           <img src={leftIcon} alt="icon" className="w-full object-contain" />
         </div>
 
-        {/* RIGHT ICON (ANIMATED) */}
-        <div ref={rightRef} className="w-[100px]">
+        {/* RIGHT ICON */}
+        <div ref={rightRef} className="w-[100px] absolute right-[10%] bottom-[20%] z-[30]">
           <img src={rightIcon} alt="icon" className="w-full object-contain" />
         </div>
 

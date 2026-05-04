@@ -26,7 +26,7 @@ const MobSection = () => {
         </div>
 
         {/* ABOUT SECTION */}
-        <div className="text-start px-4 py-16 relative">
+        <div className="text-start border-b border-white px-5 py-24 relative">
           {/* LOGO RIGHT */}
           <img
             src={paddleLogoImg}
@@ -35,17 +35,20 @@ const MobSection = () => {
           />
 
           {/* ABOUT TITLE */}
-          <h2 className="salo text-[42px] leading-none uppercase mb-6">
+          <h2 className="absolute bottom-4 salo text-[42px] leading-none uppercase">
             About
           </h2>
+          </div>
 
           {/* TEXT */}
-          <p className="jost capitalize font-[300] text-[16px] leading-[120%] max-w-[340px] pt-3">
+          <div className="text-start relative px-5 py-16">
+          <p className="absolute top-0 jost capitalize font-[300] text-[16px] leading-[120%] max-w-[340px] pt-3">
             Padlr is built to power modern digital ecosystems. From fragmented
             data to unified intelligence, every interaction is transformed into
             actionable insight.
           </p>
-        </div>
+          </div>
+        
 
         {/* VIDEO */}
         <div className="w-full bg-[#EAEAEA]">

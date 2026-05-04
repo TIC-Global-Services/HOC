@@ -58,7 +58,7 @@ const MobSection3 = () => {
         className="absolute top-0 left-0 w-full h-[50vh]"
         style={{
           backgroundImage: `url(${grid})`,
-          backgroundPosition: "center",
+          backgroundPosition: "cover",
         }}
       >
 

@@ -12,18 +12,16 @@ const MobCourtSec6 = () => {
 
         {/* BRAND */}
         <div className="salo text-[100px] leading-none tracking-wide">
-          <span className="text-[#8FC4E9] inline-block translate-x-[-0.15em]">
-            B
-          </span>
-          <span className="text-white">RAND</span>
+          <span className="text-[#8FC4E9] inline-block translate-x-[-0.20em]">
+            B<span className="text-white">RAND</span>
+          </span>  
         </div>
 
         {/* VOICE */}
         <div className="salo text-[100px] leading-none tracking-wide">
           <span className="text-[#8FC4E9] inline-block translate-x-[-0.15em]">
-            V
+            V<span className="text-white">OICE</span>
           </span>
-          <span className="text-white">OICE</span>
         </div>
 
       </div>

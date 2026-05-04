@@ -13,23 +13,23 @@ const MOBILE_NAV_ITEMS = [
   },
   {
     id: 1,
-    navTitle: "Client",
-    path: "/client"
-  },
-  {
-    id: 2,
     navTitle: "Services",
     path: "/Services"
   },
   {
-    id: 3,
+    id: 2,
     navTitle: "Experience Lab",
     path: "/Experience"
   },
   {
-    id: 4,
+    id: 3,
     navTitle: "Ethos",
     path: "/Ethos"
+  },
+  {
+    id: 4,
+    navTitle: "Client",
+    path: "/client"
   },
   {
     id: 5,

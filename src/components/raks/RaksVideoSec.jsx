@@ -3,7 +3,7 @@ import video from "../../assets/client/raks/vdo/Raks3.mp4";
 
 const RaksVideoSec = () => {
   return (
-    <section className="w-full relative h-screen overflow-hidden">
+    <section className="w-full relative md:h-screen overflow-hidden">
 
       <video
         src={video}
@@ -15,7 +15,7 @@ const RaksVideoSec = () => {
         w-full
         h-[40vh]       
         md:h-full     
-        object-contain scale-110
+        object-contain md:scale-110
         "
       />
 

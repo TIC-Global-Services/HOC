@@ -17,7 +17,7 @@ const AnimatedChar = ({ char, scrollYProgress, start, end }) => {
       style={{ opacity, y }}
       className="text-[#1E382D] font-[500] salo uppercase inline-block"
     >
-      <span style={{ fontSize: "clamp(40px, 20vh, 150px)" }}>
+      <span className="text-[50px] md:text-[150px]">
         {char === " " ? "\u00A0" : char}
       </span>
     </motion.span>
@@ -35,7 +35,7 @@ const QataWannaKnowMore = () => {
   return (
     <section
       ref={ref}
-      className="w-full h-[100dvh] relative flex items-center justify-center overflow-hidden isolate"
+      className="w-full h-[80dvh] md:h-[100dvh] relative flex items-center justify-center overflow-hidden isolate"
       style={{ backgroundImage: `url(${grid})`, backgroundSize: "cover" }}
     >
       {/* IMAGE TRAIL */}
