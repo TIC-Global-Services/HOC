@@ -10,6 +10,7 @@ const ShowReel = () => {
         autoPlay
         muted
         loop
+        controls={false}
         playsInline
         className="w-full h-full object-contain md:object-cover"
       />

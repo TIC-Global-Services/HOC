@@ -9,7 +9,6 @@ const MobSyedSec3 = () => {
   const topRef = useRef(null);
   const pinRef = useRef(null);
 
-  // 👉 apply animation
   useScrollFloat(topRef, { yFactor: 0.3, rFactor: 0.2 });   // subtle
   useScrollFloat(pinRef, { yFactor: 0.6, rFactor: 0.4 });   // more dynamic
 

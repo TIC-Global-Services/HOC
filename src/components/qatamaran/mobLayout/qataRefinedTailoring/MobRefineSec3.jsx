@@ -11,7 +11,6 @@ const MobRefineSec3 = () => {
   const topIconRef = useRef(null);
   const bottomIconRef = useRef(null);
 
-  // 👉 apply animation
   useScrollFloat(topIconRef, { yFactor: 0.4, rFactor: 0.3 });
   useScrollFloat(bottomIconRef, { yFactor: 0.6, rFactor: 0.4 });
 

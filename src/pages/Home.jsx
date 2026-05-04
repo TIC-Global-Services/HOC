@@ -315,6 +315,7 @@ const ThirdSection = () => {
           autoPlay
           muted
           loop
+          controls={false}
           playsInline
           className={`w-full h-full object-cover ${
             isIOS || isSafari ? "scale-75 border-2 border-white" : "scale-125"

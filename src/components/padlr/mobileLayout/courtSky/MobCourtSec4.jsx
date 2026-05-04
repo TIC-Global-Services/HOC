@@ -45,7 +45,7 @@ const MobCourtSec4 = () => {
         </h1>
 
         {/* PARAGRAPH */}
-        <p className="jost text-black text-[14px] capitalize leading-[13px]">
+        <p className="jost text-black text-[13px] capitalize leading-[13px]">
           The typography system balances bold expression with refined clarity—
           where the primary typeface delivers a strong, modern identity, and the
           secondary typeface ensures{" "}

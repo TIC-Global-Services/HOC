@@ -10,6 +10,7 @@ const PadlrVideoSec2 = () => {
         autoPlay
         loop
         muted
+        controls={false}
         playsInline
         className="absolute inset-0 w-full h-full object-contain"
       />

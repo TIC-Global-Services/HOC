@@ -83,6 +83,7 @@ export default function GrowthEngine() {
               src={aboutVideo}
               autoPlay
               muted
+              controls={false}
               loop
               playsInline
               className="w-full h-full object-cover object-[20%_30%]"

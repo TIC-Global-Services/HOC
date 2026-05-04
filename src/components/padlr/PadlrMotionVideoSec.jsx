@@ -10,12 +10,13 @@ const PadlrMotionVideoSec = () => {
         autoPlay
         loop
         muted
+        controls={false}
         playsInline
         preload="auto"
         className="
-          absolute inset-0
-          w-full h-full
-         object-contain scale-105 md:scale-0 md:object-contain
+        absolute inset-0
+        w-full h-full
+        object-contain scale-105 md:scale-100 md:object-contain
         "
       />
 

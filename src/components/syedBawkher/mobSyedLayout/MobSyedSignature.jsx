@@ -11,7 +11,6 @@ const MobSyedSignature = () => {
   const topIconRef = useRef(null);
   const aboutIconRef = useRef(null);
 
-  // 👉 apply animation
   useScrollFloat(topIconRef, { yFactor: 0.5, rFactor: 0.3 });
   useScrollFloat(aboutIconRef, { yFactor: 0.7, rFactor: 0.4 });
 

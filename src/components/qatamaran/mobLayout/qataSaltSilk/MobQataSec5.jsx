@@ -12,6 +12,7 @@ const MobQataSec5 = () => {
           src={centerVideo}
           autoPlay
           loop
+          controls={false}
           muted
           playsInline
           className="w-full h-full object-cover"

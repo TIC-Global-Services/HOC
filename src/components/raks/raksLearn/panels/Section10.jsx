@@ -46,6 +46,7 @@ const Section10 = () => {
           src={raksVideo}
           autoPlay
           loop
+          controls={false}
           muted
           playsInline
           className="absolute inset-0 w-full h-full object-cover"

@@ -9,7 +9,6 @@ const MobSyedTailoring = () => {
   const topRef = useRef(null);
   const bottomRef = useRef(null);
 
-  // 👉 animation (different speeds = depth)
   useScrollFloat(topRef, { yFactor: 0.4, rFactor: 0.3 });
   useScrollFloat(bottomRef, { yFactor: 0.6, rFactor: 0.4 });
 

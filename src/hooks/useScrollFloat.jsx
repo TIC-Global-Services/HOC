@@ -3,6 +3,7 @@ import gsap from "gsap";
 
 const useScrollFloat = (ref, options = {}) => {
   const {
+    xFactor = 0,
     yFactor = 0.6,
     rFactor = 0.3,
     ease = "power3.out",
@@ -12,15 +13,9 @@ const useScrollFloat = (ref, options = {}) => {
     const el = ref.current;
     if (!el) return;
 
-    const setY = gsap.quickTo(el, "y", {
-      duration: 0.8,
-      ease,
-    });
-
-    const setR = gsap.quickTo(el, "rotation", {
-      duration: 1,
-      ease,
-    });
+    const setX = gsap.quickTo(el, "x", { duration: 0.8, ease });
+    const setY = gsap.quickTo(el, "y", { duration: 0.8, ease });
+    const setR = gsap.quickTo(el, "rotation", { duration: 1, ease });
 
     let lastScrollY = window.scrollY;
     let velocity = 0;
@@ -33,6 +28,7 @@ const useScrollFloat = (ref, options = {}) => {
 
       velocity += (delta - velocity) * 0.15;
 
+      setX(velocity * xFactor);
       setY(velocity * yFactor);
       setR(velocity * rFactor);
 
@@ -41,7 +37,7 @@ const useScrollFloat = (ref, options = {}) => {
 
     raf = requestAnimationFrame(tick);
     return () => cancelAnimationFrame(raf);
-  }, [ref, yFactor, rFactor, ease]);
+  }, [ref, xFactor, yFactor, rFactor, ease]);
 };
 
 export default useScrollFloat;
