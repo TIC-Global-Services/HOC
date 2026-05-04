@@ -18,10 +18,9 @@ const MobSyedTailoringSec3 = () => {
 
         {/* MAIN IMAGE */}
         <img
-          ref={imgRef}
           src={syedBawkherImg}
           alt=""
-          className="w-[70%] mx-auto rotate-[-30deg] shadow-md"
+          className="w-[70%] mx-auto -rotate-[10deg]"
         />
 
         {/* TAG (ANIMATED - FOCUS) */}

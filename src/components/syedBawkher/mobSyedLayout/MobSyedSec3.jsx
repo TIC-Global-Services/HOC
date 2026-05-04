@@ -6,16 +6,13 @@ import bottomImg from "../../../assets/client/syedBawkher/img/syedBawkher4.png";
 import pinIcon from "../../../assets/client/syedBawkher/img/signatureImg.png";
 
 const MobSyedSec3 = () => {
-  const topRef = useRef(null);
-  const pinRef = useRef(null);
+const pinRef = useRef(null);
 
-  useScrollFloat(topRef, { yFactor: 0.3, rFactor: 0.2 }); // subtle
   useScrollFloat(pinRef, { yFactor: 0.6, rFactor: 0.4 }); // more dynamic
 
   return (
     <section className="relative w-full min-h-screen bg-white overflow-hidden px-5 py-12">
       <div
-        ref={topRef}
         className="absolute top-0 left-0 w-[65vw] sm:w-[75vw] max-w-[300px]"
       >
         <img src={topLeftImg} alt="" className="w-full h-full object-contain" />
@@ -38,7 +35,7 @@ const MobSyedSec3 = () => {
           ref={pinRef}
           src={pinIcon}
           alt="icon"
-          className="absolute -top-3 -left-3 w-[25vw] max-w-[100px] rotate-[-10deg]"
+          className="absolute -top-3 -left-5 w-[25vw] max-w-[100px] rotate-[-10deg] z-[30]"
         />
 
         <img

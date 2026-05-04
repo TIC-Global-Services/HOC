@@ -4,10 +4,10 @@ import grid from "../../../assets/client/padlr/img/checkBg.png";
 const MobRaksSec12 = () => {
   return (
     <section
-      className="w-full min-h-[60dvh] flex items-center justify-start px-5"
+      className="w-full h-[40dvh] flex items-center justify-start px-5"
       style={{ backgroundSize: "100vh", backgroundImage: `url(${grid})` }}
     >
-      <div className="max-w-[320px] text-start">
+      <div className="text-start">
         {/* HEADING */}
         <h2 className="salo text-[30px] text-[#000085] uppercase leading-[30px] mb-3">
           The Art of Growing <br /> Minds

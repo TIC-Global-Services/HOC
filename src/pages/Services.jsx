@@ -493,7 +493,7 @@ const MainServices = () => {
             <h1 className="z-[100] xl:text-[108px]  ">Our</h1>
             <img
               src={wiresm}
-              className="-ml-2 mt-8 w-xl:[80px] xl:h-[80px] lg:w-[70px] lg:w-[70px] w-[80px] h-[80px] object-cover"
+              className="-ml-2 mt-8 w-xl:[80px] xl:h-[80px] lg:w-[70px] w-[80px] h-[80px] object-cover"
               alt=""
             />
             <img
