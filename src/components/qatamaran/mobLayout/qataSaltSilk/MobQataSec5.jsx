@@ -12,7 +12,9 @@ const MobQataSec5 = () => {
           src={centerVideo}
           autoPlay
           loop
+          webkit-playsinline="true"
           controls={false}
+          preload="auto"
           muted
           playsInline
           className="w-full h-full object-cover"

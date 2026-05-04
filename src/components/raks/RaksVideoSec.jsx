@@ -11,6 +11,9 @@ const RaksVideoSec = () => {
         loop
         muted
         playsInline
+        webkit-playsinline="true"
+        controls={false}
+        preload="auto"
         className="
         w-full
         h-[40vh]       

@@ -7,11 +7,11 @@ const Section10 = () => {
     <section
       className="relative h-screen flex overflow-hidden"
       style={{
-                      backgroundImage: `url(${grid})`,
-                      backgroundPosition: "center",
-                      backgroundColor: "white",
-                    }}>
-    
+        backgroundImage: `url(${grid})`,
+        backgroundPosition: "center",
+        backgroundColor: "white",
+      }}
+    >
       {/* ─── LEFT TEXT (30vw) ─── */}
       <div
         className="h-full flex items-center justify-center"
@@ -46,9 +46,11 @@ const Section10 = () => {
           src={raksVideo}
           autoPlay
           loop
-          controls={false}
           muted
           playsInline
+          webkit-playsinline="true"
+          controls={false}
+          preload="auto"
           className="absolute inset-0 w-full h-full object-cover"
         />
       </div>

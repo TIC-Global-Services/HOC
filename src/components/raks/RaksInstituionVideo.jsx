@@ -11,7 +11,9 @@ const RaksInstitutionVideo = () => {
         loop
         muted
         playsInline
-        preload="none"
+        webkit-playsinline="true"
+        controls={false}
+        preload="auto"
         className="
           w-full 
           h-[30vh]        

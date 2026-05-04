@@ -12,6 +12,9 @@ const SyedDesignVideo = () => {
           loop
           muted
           playsInline
+          webkit-playsinline="true"
+          controls={false}
+          preload="auto"
           className="w-full max-h-[80vh] object-contain"
         />
       </section>

@@ -12,6 +12,7 @@ const PadlrMotionVideoSec = () => {
         muted
         controls={false}
         playsInline
+        webkit-playsinline="true"
         preload="auto"
         className="
         absolute inset-0

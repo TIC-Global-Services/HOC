@@ -11,6 +11,8 @@ const PadlrVideoSec2 = () => {
         loop
         muted
         controls={false}
+        webkit-playsinline="true"
+        preload="auto"
         playsInline
         className="absolute inset-0 w-full h-full object-contain"
       />
