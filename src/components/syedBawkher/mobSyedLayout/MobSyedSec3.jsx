@@ -11,14 +11,14 @@ const pinRef = useRef(null);
   useScrollFloat(pinRef, { yFactor: 0.6, rFactor: 0.4 }); // more dynamic
 
   return (
-    <section className="relative w-full min-h-screen bg-white overflow-hidden px-5 py-12">
+    <section className="relative w-full h-[110vh] bg-white overflow-hidden px-5 py-12">
       <div
-        className="absolute top-0 left-0 w-[65vw] sm:w-[75vw] max-w-[300px]"
+        className="absolute top-0 left-0 w-[70vw] sm:w-[75vw] max-w-[320px]"
       >
         <img src={topLeftImg} alt="" className="w-full h-full object-contain" />
       </div>
 
-      <div className="absolute inset-0 flex items-center justify-center px-5 py-[20vh]">
+      <div className="absolute inset-0 flex items-center justify-center px-5 py-[22vh] mt-[2%]">
         <p className="jost text-black text-[13px] leading-[24px] tracking-tight text-start max-w-[330px] capitalize">
           Full-canvas tailoring rooted in generations of expertise. 
           A seamless blend of time-honoured{" "}
@@ -30,7 +30,7 @@ const pinRef = useRef(null);
         </p>
       </div>
 
-      <div className="absolute bottom-[5%] left-1/2 -translate-x-1/2 w-[60vw] max-w-[220px]">
+      <div className="absolute bottom-[5%] left-1/2 -translate-x-1/2 w-[60vw] max-w-[240px]">
         <img
           ref={pinRef}
           src={pinIcon}

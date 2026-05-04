@@ -62,14 +62,14 @@ const ROW_Y = ["30vh", "40vh", "50vh", "60vh", "70vh", "78vh"];
 export default function MobOwnTheCourt() {
   return (
     <section
-      className="w-full h-[80vh] relative overflow-hidden"
+      className="w-full h-[85vh] relative overflow-hidden"
       style={{
         backgroundImage: `url(${grid})`,
         backgroundSize: "cover",
       }}
     >
       {/* MOBILE HEADING */}
-      <h2 className="absolute left-1/2 -translate-x-1/2 top-[60px] z-10 salo text-[#7ac9f0] text-[30px] uppercase text-center leading-none">
+      <h2 className="absolute left-1/2 -translate-x-1/2 top-[75px] z-10 salo text-[#7ac9f0] text-[30px] uppercase text-center leading-none">
         OWN THE COURT
       </h2>
 

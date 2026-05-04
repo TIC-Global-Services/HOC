@@ -15,7 +15,7 @@ const MobRefineSec5 = () => {
 
   return (
     <section
-      className="w-full h-[100vh] flex flex-col relative"
+      className="w-full h-screen flex flex-col relative"
       style={{
         backgroundImage: `url(${grid})`,
         backgroundSize: "cover",
@@ -60,12 +60,12 @@ const MobRefineSec5 = () => {
       <div className="w-full flex justify-between items-end px-5 pt-10">
 
         {/* LEFT ICON */}
-        <div ref={leftRef} className="w-[120px] z-[30]">
+        <div ref={leftRef} className="w-[100px] absolute left-[10%] bottom-[2%] z-[30]">
           <img src={leftIcon} alt="icon" className="w-full object-contain" />
         </div>
 
         {/* RIGHT ICON */}
-        <div ref={rightRef} className="w-[100px] absolute right-[10%] bottom-[20%] z-[30]">
+        <div ref={rightRef} className="w-[100px] absolute right-[10%] bottom-[12%] z-[30]">
           <img src={rightIcon} alt="icon" className="w-full object-contain" />
         </div>
 
