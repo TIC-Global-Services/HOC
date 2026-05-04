@@ -541,7 +541,7 @@ const MainServices = () => {
             ))}
           </AnimatePresence>
         </svg>
-        <div className="xl:hidden w-full  items-start text-left justify-center  flex flex-col gap-28 mt-32">
+        <div className="xl:hidden w-full items-start text-left justify-center flex flex-col gap-28 mt-32">
           {currentItems.map((item, i) => (
             <motion.div
               key={active + i}
@@ -557,8 +557,20 @@ const MainServices = () => {
                   <h2 className="text-white text-2xl font-medium mb-2">
                     {item.label}
                   </h2>
+
                   <p className="text-[#BFBFBF] text-base">{item.dis}</p>
-                  <p className="text-[#BFBFBF] text-base">{item.points}</p>
+
+                  {/* NUMBERED POINTS */}
+                  <div className="mt-3 space-y-2">
+                    {item.points.map((point, index) => (
+                      <div key={index} className="flex gap-3">
+                        <span className="text-[#BFBFBF] font-semibold">
+                          {index + 1}.
+                        </span>
+                        <p className="text-[#BFBFBF] text-base">{point}</p>
+                      </div>
+                    ))}
+                  </div>
                 </div>
               </div>
             </motion.div>
