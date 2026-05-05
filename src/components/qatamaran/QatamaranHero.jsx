@@ -45,7 +45,7 @@ const QatamaranHero = () => {
           <div className="w-full h-full flex flex-col items-center justify-center gap-4 md:gap-6 px-4">
             <h1
               className="font-[1000] uppercase alinsa text-[#060EBB] leading-none tracking-tight text-center"
-              style={{ fontSize: "clamp(48px, 8vw, 140px)" }}
+              style={{ fontSize: "clamp(48px, 12vh, 140px)" }}
             >
               Qatamaran
             </h1>
