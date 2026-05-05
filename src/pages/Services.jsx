@@ -232,7 +232,7 @@ const Contact = () => {
         </div>
       
       <div className="bg-black z-[1] mx-auto mt-40 md:mt-20 rounded-t-3xl relative">
-        <div className=" mt-[15%]"/>
+        <div/>
         <MainServices />
       </div>
       <Footer />
