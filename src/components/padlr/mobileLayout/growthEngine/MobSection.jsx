@@ -1,8 +1,12 @@
-import React from "react";
+import React, { useRef } from "react";
 import paddleLogoImg from "../../../../assets/client/padlr/img/heroImg2.png";
 import aboutVideo from "../../../../assets/client/padlr/vdo/Padlr_Animation 2.mp4";
+import useMobileVideoFix from "../../../../hooks/useMobileVideo";
 
 const MobSection = () => {
+  const videoRef = useRef(null);
+    
+      useMobileVideoFix(videoRef);
   return (
     <>
       <section className="w-full bg-[#0606BC] text-white relative">
@@ -53,6 +57,7 @@ const MobSection = () => {
         {/* VIDEO */}
         <div className="w-full bg-[#EAEAEA]">
           <video
+            ref={videoRef}
             src={aboutVideo}
             autoPlay
             muted

@@ -1,9 +1,16 @@
-import React from "react";
+import React, { useRef } from "react";
 import rakathonImg from "../../../assets/client/raks/img/rightImg.png";
 import raksLearnImg from "../../../assets/client/raks/img/raksLearn.png";
 import raksImg from "../../../assets/client/raks/img/heroImg2.png";
+import useScrollFloat from "../../../hooks/useScrollFloat";
 
 const MobRaksSec1 = () => {
+  const iconRef = useRef(null);
+
+  useScrollFloat(iconRef, {
+    yFactor: 0.6,
+    rFactor: 0.3,
+  });
   return (
     <>
       <section className="w-full bg-[#000085FF] text-[#FFCEC8]">
@@ -16,6 +23,7 @@ const MobRaksSec1 = () => {
 
           {/* ICON RIGHT */}
           <img
+          ref={iconRef}
             src={raksLearnImg}
             alt="icon"
             className="absolute right-4 top-0 -translate-y-1/2 w-[100px]"
@@ -37,8 +45,9 @@ const MobRaksSec1 = () => {
         <div className="text-start border-b border-white px-5 py-24 relative">
           {/* LOGO RIGHT */}
           <img
+          ref={iconRef}
             src={raksImg}
-            alt=""
+            alt="icon"
             className="absolute right-4 top-6 w-[150px]"
           />
 

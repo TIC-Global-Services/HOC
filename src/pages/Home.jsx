@@ -299,18 +299,23 @@ import iosVideo from "../assets/2.mp4"; // Your video for iOS/Safari
 import ShowReel from "../components/ShowReel";
 import AutoTextSlider from "../components/AutoTextSlider";
 import LogosLoop from "../components/LogosLoop";
+import useMobileVideoFix from "../hooks/useMobileVideo";
 
 const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
 const isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
 
 const ThirdSection = () => {
   const videoSource = isIOS || isSafari ? iosVideo : one;
+   const videoRef = useRef(null);
+      
+    useMobileVideoFix(videoRef);
 
   return (
     <div className="relative mt-20 md:-mt-40 md:flex md:min-h-[80vh]">
       {/* LEFT — VIDEO */}
       <div className="w-full md:absolute md:left-0 md:top-0 md:h-full md:w-[50%]">
         <video
+          ref={videoRef}
           id="loader-video"
           autoPlay
           muted

@@ -1,7 +1,12 @@
 import centerVideo from "../../../../assets/client/qatamaran/Qatamaran_HOC_Website.mov";
 import grid from "../../../../assets/client/padlr/img/checkBg.png";
+import useMobileVideoFix from "../../../../hooks/useMobileVideo";
+import { useRef } from "react";
 
 const MobQataSec5 = () => {
+  const videoRef = useRef(null);
+  
+    useMobileVideoFix(videoRef); 
   return (
     <section className="w-full"
     style={{ backgroundImage: `url(${grid})` }}>
@@ -9,6 +14,7 @@ const MobQataSec5 = () => {
       {/* VIDEO */}
       <div className="w-full h-[40vh] overflow-hidden">
         <video
+          ref={videoRef}
           src={centerVideo}
           autoPlay
           loop
