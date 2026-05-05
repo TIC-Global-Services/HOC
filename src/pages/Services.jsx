@@ -21,7 +21,7 @@ const categories = {
   experience: [
     {
       label: "Experiential Space Design",
-      dis: "We design brand experiences that live in space — conceptually led, environmentally built, and memorable long after they end.",
+      dis: "We design brand experiences that live in space — conceptually led, environmentally built, and memorable long after they end. Spatial storytelling through objects, structure, and environment",
       points: [
         "Hybrid Activations via Experiential Marketing",
         "Exhibition & Installation Design",
@@ -42,7 +42,7 @@ const categories = {
   design: [
     {
       label: "Brand Evolution Strategy",
-      dis: "Navigating brand growth, repositioning, and long-term relevance.",
+      dis: "Navigating brand growth, repositioning, and long-term relevance + Defining who you are, what you stand for, and how you show up",
       points: [
         "Positioning & Brand Architecture",
         "Brand Evolution & Repositioning",
@@ -62,7 +62,7 @@ const categories = {
     },
     {
       label: "Logo & Visual Identity Design",
-      dis: "Designing a narrative world for your brand via distinctive visuals.",
+      dis: "Designing  a narrative world for your brand via distinctive visuals that make your brand instantly recognizable.",
       points: [
         "Logo & Mark Design",
         "Colour, Typography & Grid Systems",
@@ -85,7 +85,7 @@ const categories = {
     },
     {
       label: "Analogue Branding Tools",
-      dis: "Designing tactile brand materials via multisensory mediums.",
+      dis: "Designing tactile brand materials that bring your identity into the real world, via multisensory mediums.",
       points: [
         "Print & Publication Design",
         "Packaging & Product Communication",
@@ -98,39 +98,138 @@ const categories = {
 const Contact = () => {
   const location = useLocation();
   const [isSection2, setIsSection2] = useState(false);
-  const [isToggled, setIsToggled] = useState(false);
+  const [isFixed, setIsFixed] = useState(true);
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsSection2(window.scrollY > window.innerHeight * 0.2);
+      const scrollPosition = window.scrollY;
+      const windowHeight = window.innerHeight;
+
+      setIsSection2(scrollPosition > windowHeight * 0.2); // Toggle theme at 20% height
+      setIsFixed(scrollPosition < windowHeight); // Navbar stays fixed only in the first section
     };
+
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+  const [isToggled, setIsToggled] = useState(false);
 
-  const isActiveRoute = (path) => location.pathname === path;
+  const handleToggle = () => {
+    setIsToggled(!isToggled);
+  };
+
+  const isActiveRoute = (path) => {
+    return location.pathname === path;
+  };
 
   return (
-    <div className="bg-white jost relative min-h-screen">
-      <div className="md:hidden"><MobileNav2 /></div>
-      <div className={`${isSection2 ? "bg-white text-black" : "text-black"} transition-all py-2 duration-700 md:block hidden fixed top-0 w-full z-[500]`}>
-        <div className="flex py-4 px-4 md:px-10 justify-between items-start">
-          <Link to="/"><img src={logo2} className="w-[110px]" alt="Logo" /></Link>
-          <div className="text-[19px] font-semibold flex gap-14 items-center">
-            {["client", "Services", "Experience", "Ethos", "Careers"].map((nav) => (
-              <Link key={nav} to={`/${nav}`} className={`hover:text-black/50 ${isActiveRoute(`/${nav}`) ? "text-[#060ebb] border-b-2 border-[#060ebb]" : ""}`}>
-                <h1 className="uppercase">{nav}</h1>
-              </Link>
-            ))}
-          </div>
-          <Link to="/Contact" onClick={(e) => { e.preventDefault(); setIsToggled(!isToggled); }}>
-            <motion.div className={`py-2 px-4 rounded-full relative text-[13px] font-semibold flex items-center cursor-pointer ${isToggled ? "bg-black text-white" : "bg-[#F0F0F0] text-[#060ebb]"}`}>
-              <motion.h1 animate={{ x: isToggled ? "35px" : "0px" }} className="mr-9">CONTACT</motion.h1>
-              <motion.img className="w-[46px] absolute" src={worldsmall} animate={{ x: isToggled ? "-50%" : "150%", rotate: isToggled ? 360 : 0 }} />
-            </motion.div>
-          </Link>
+    <>
+      <div className="bg-white jost relative" style={{ minHeight: "100vh" }}>
+        {/* Navbar */}
+        <div className="md:hidden">
+          <MobileNav2 />
         </div>
-      </div>
+        <div
+          className={`${
+            // isFixed  w-full z-[500] top-0 left-0 ${
+            isSection2 ? "bg-white text-black" : "  text-[#000000]"
+          } transition-all  py-2 duration-700 md:block hidden`}
+        >
+          <div className="flex py-4 jost px-4 md:px-10 justify-between items-start">
+            <Link to={"/"}>
+              <img
+                src={isSection2 ? logo2 : logo2}
+                className="w-[80px] md:w-[110px] transition-all duration-700"
+                alt="Logo"
+              />
+            </Link>
+            <div className="text-[14px] md:text-[19px] font-semibold flex gap-4 md:gap-14 items-center">
+              <Link
+                to={"/client"}
+                className={`hover:text-black/50 ${
+                  isActiveRoute("/client")
+                    ? "text-[#060ebb] border-b-2 border-[#060ebb]"
+                    : ""
+                }`}
+              >
+                <h1>CLIENT</h1>
+              </Link>
+              <Link
+                to={"/services"}
+                className={`hover:text-black/50 ${
+                  isActiveRoute("/Services")
+                    ? "text-[#060ebb] border-b-2 border-[#060ebb]"
+                    : ""
+                }`}
+              >
+                <h1>SERVICES</h1>
+              </Link>
+              <Link
+                to={"/experience"}
+                className={`hover:text-black/50 ${
+                  isActiveRoute("/Experience")
+                    ? "text-[#060ebb] border-b-2 border-[#060ebb]"
+                    : ""
+                }`}
+              >
+                <h1>EXPERIENCE LAB</h1>
+              </Link>
+              <Link
+                to={"/ethos"}
+                className={`hover:text-black/50 ${
+                  isActiveRoute("/Ethos")
+                    ? "text-[#060ebb] border-b-2 border-[#060ebb]"
+                    : ""
+                }`}
+              >
+                <h1>ETHOS</h1>
+              </Link>
+              <Link
+                to={"/careers"}
+                className={`hover:text-black/50 ${
+                  isActiveRoute("/Careers")
+                    ? "text-[#060ebb] border-b-2 border-[#060ebb]"
+                    : ""
+                }`}
+              >
+                <h1>CAREERS</h1>
+              </Link>
+            </div>
+            <Link to={"/contact"}>
+              <motion.div
+                className={`py-2 px-4 rounded-full relative text-[12px] md:text-[13px] font-semibold flex items-center cursor-pointer ${
+                  isToggled
+                    ? "bg-black text-white"
+                    : "bg-[#F0F0F0] text-[#060ebb]"
+                }`}
+                onClick={handleToggle}
+                initial={{ opacity: 1 }}
+                animate={{ opacity: 1 }}
+              >
+                <motion.h1
+                  className={`mr-6 md:mr-9 text-center`}
+                  animate={{
+                    x: isToggled ? "35px" : "0px",
+                    color: isToggled ? "#FFFFFF" : "#060ebb",
+                  }}
+                  transition={{ duration: 0.5 }}
+                >
+                  CONTACT
+                </motion.h1>
+                <motion.img
+                  className="w-[36px] md:w-[46px] h-[36px] md:h-[46px] absolute"
+                  src={worldsmall}
+                  alt="World"
+                  animate={{
+                    x: isToggled ? "-50%" : "150%",
+                    rotate: isToggled ? 360 : 0,
+                  }}
+                  transition={{ duration: 0.8 }}
+                />
+              </motion.div>
+            </Link>
+          </div>
+        </div>
       
       <div className="bg-black z-[1] mx-auto mt-40 md:mt-20 rounded-t-3xl relative">
         <div className=" mt-[15%]"/>
@@ -138,6 +237,7 @@ const Contact = () => {
       </div>
       <Footer />
     </div>
+    </>
   );
 };
 
@@ -250,7 +350,7 @@ const MainServices = () => {
         >
           {/* Static Background Path */}
           <path 
-            d={`M ${dynamicStartX} -120 H ${curveX - 20} c 15 0 20 5 20 20 V ${totalContentHeight}`} 
+            d={`M ${dynamicStartX} -120 H ${curveX - 20} c 15 0 20 5 20 20 V ${totalContentHeight + 230}`} 
             stroke="#242424" 
             strokeWidth="4" 
           />
@@ -258,7 +358,7 @@ const MainServices = () => {
           {/* Animated Active Path */}
           <path 
             ref={lineRef} 
-            d={`M ${dynamicStartX} -120 H ${curveX - 20} c 15 0 20 5 20 20 V ${totalContentHeight}`} 
+            d={`M ${dynamicStartX} -120 H ${curveX - 20} c 15 0 20 5 20 20 V ${totalContentHeight + 230}`} 
             stroke="#060ebb" 
             strokeWidth="4" 
           />
@@ -275,9 +375,9 @@ const MainServices = () => {
                   fill="#060ebb" 
                 />
                 <foreignObject 
-                  x={curveX -15} 
-                  y={finalCY - 25} 
-                  width="800" 
+                  x={curveX + 15} 
+                  y={finalCY - 20} 
+                  width="600" 
                   height="400" 
                   className={`label-text-${i} overflow-visible`}
                 >
@@ -293,11 +393,11 @@ const MainServices = () => {
         {currentItems.map((item, i) => (
           <div key={i} className="flex gap-4">
             <img src={svgser} alt="" className="w-6 h-6 mt-1" />
-            <div>
-              <h2 className="text-white text-2xl font-medium mb-2 uppercase">{item.label}</h2>
-              <p className="text-[#BFBFBF] mb-3">{item.dis}</p>
+            <div className="text-start">
+              <h2 className="text-white text-2xl jost font-medium mb-2 uppercase">{item.label}</h2>
+              <p className="jost text-[#BFBFBF] mb-3">{item.dis}</p>
               <div className="space-y-1">
-                {item.points.map((p, idx) => <p key={idx} className="text-[#BFBFBF] text-sm">{idx + 1}. {p}</p>)}
+                {item.points.map((p, idx) => <p key={idx} className="jost text-[#BFBFBF] text-sm">{idx + 1}. {p}</p>)}
               </div>
             </div>
           </div>
@@ -319,8 +419,8 @@ const Label = ({ title, description, points }) => (
       </svg>
     </div>
     <div>
-      <h1 className="text-[24px] uppercase font-bold text-[#676767] mb-2 tracking-wide">{title}</h1>
-      <p className="text-[16px] text-[#676767] leading-relaxed mb-4 w-full">{description}</p>
+      <h1 className=" text-[24px] uppercase font-bold text-[#676767] mb-2 tracking-wide">{title}</h1>
+      <p className=" text-[16px] text-[#676767] leading-relaxed mb-4 w-full">{description}</p>
       <div className="space-y-1">
         {points.map((p, i) => (
           <p key={i} className="text-[14px] text-[#676767] font-medium">
