@@ -75,3 +75,13 @@ body::-webkit-scrollbar-thumb {
   border-radius: 26px;
   outline: 1px solid slategrey;
 } */
+
+.main-services-height {
+  min-height: 240vh;
+}
+
+@media (max-height: 780px) {
+  .main-services-height {
+    min-height: 350vh;
+  }
+}

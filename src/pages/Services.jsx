@@ -150,7 +150,7 @@ const Contact = () => {
           </div>
         </div>
         {/* Absolutely Centered Text */}
-        <div className="  overflow-hidden  bg-black  z-[1] mx-auto overflow-x-visible  items-start  flex-col    relative justify-start  md:min-h-[240vh]  mt-40 md:mt-20 rounded-t-3xl   px-4 flex md:px-10">
+        <div className="main-services-height  overflow-hidden  bg-black  z-[1] mx-auto overflow-x-visible  items-start  flex-col    relative justify-start  mt-40 md:mt-20 rounded-t-3xl   px-4 flex md:px-10">
           <MainServices />
         </div>
       </div>
@@ -202,7 +202,7 @@ const categories = {
     },
     {
       cx: 300,
-      cy: 400,
+      cy: 500,
       label: "Brand Narrative & Content",
       dis: "Crafting compelling stories and content that bring your brand to life.",
       points: [
@@ -214,7 +214,7 @@ const categories = {
     },
     {
       cx: 300,
-      cy: 600,
+      cy: 800,
       label: "Logo & Visual Identity Design",
       dis: "Designing a narrative world for your brand via distinctive visuals that make your brand instantly recognizable.",
       points: [
@@ -226,7 +226,7 @@ const categories = {
     },
     {
       cx: 300,
-      cy: 800,
+      cy: 1100,
       label: "Social Media & Digital Branding",
       dis: "Platform-ready identity systems and content frameworks",
       points: [
@@ -236,14 +236,14 @@ const categories = {
     },
     {
       cx: 300,
-      cy: 950,
+      cy: 1400,
       label: "Environmental & Spatial Branding",
       dis: "Bridging the brand disconnect between digital and physical presence",
       points: ["Wayfinding & Environmental Signage", "Environmental Branding"],
     },
     {
       cx: 300,
-      cy: 1100,
+      cy: 1650,
       label: "Analogue Branding Tools",
       dis: "Designing tactile brand materials that bring your identity into the real world, via multisensory mediums.",
       points: [
@@ -480,7 +480,7 @@ const MainServices = () => {
         >
           {/* Inactive Path (Gray) */}
           <path
-            d="M0.200195 2.24512H268.2C287.056 2.24512 296.484 2.24512 302.342 8.10298C308.2 13.9608 308.2 23.3889 308.2 42.2451V1800.75"
+            d="M0.200195 2.24512H268.2C287.056 2.24512 296.484 2.24512 302.342 8.10298C308.2 13.9608 308.2 23.3889 308.2 42.2451V2500.75"
             stroke="#676767"
             strokeWidth="4"
           />
@@ -488,7 +488,7 @@ const MainServices = () => {
           {/* Active Path (Blue) */}
           <path
             ref={lineRef}
-            d="M0.200195 2.24512H268.2C287.056 2.24512 296.484 2.24512 302.342 8.10298C308.2 13.9608 308.2 23.3889 308.2 42.2451V1800.75"
+            d="M0.200195 2.24512H268.2C287.056 2.24512 296.484 2.24512 302.342 8.10298C308.2 13.9608 308.2 23.3889 308.2 42.2451V2500.75"
             stroke="#060ebb"
             strokeWidth="4"
           />
