@@ -164,6 +164,7 @@ const categories = {
   experience: [
     {
       cx: 300,
+      cy: 300,
       label: "Experiential Space Design",
       dis: "We design brand experiences that live in space — conceptually led, environmentally built, and memorable long after they end. Spatial storytelling through objects, structure, and environment",
       points: [
@@ -175,6 +176,7 @@ const categories = {
     },
     {
       cx: 300,
+      cy: 900,
       label: "Motion & CGI",
       dis: "The brand in motion | Moving image and digital craft that extends the brand into screen and space",
       points: [
@@ -510,7 +512,9 @@ const MainServices = () => {
           {/* Stops and Texts */}
           <AnimatePresence>
             {currentItems.map((item, i) => {
+              const isDesign = active.toLowerCase() === "design";
               const dynamicCY = gap * (i + 1);
+              const finalCY = isDesign ? dynamicCY : item.cy;
 
               return (
                 <motion.g
@@ -523,7 +527,7 @@ const MainServices = () => {
                   <motion.circle
                     ref={(el) => (stopsRef.current[i] = el)}
                     cx={item.cx + 8}
-                    cy={dynamicCY - 105}
+                    cy={finalCY - 105}
                     r="6"
                     fill="blue"
                     data-svg-origin="308 90"
@@ -531,7 +535,7 @@ const MainServices = () => {
 
                   <foreignObject
                     x={item.cx - 400}
-                    y={dynamicCY - 120}
+                    y={finalCY - 120}
                     width="400"
                     height="200"
                     className={`foreign-label !z-[700] label-text-${i} !overflow-visible`}
@@ -672,7 +676,7 @@ const Label = ({ number, title, description, textRef, points = [] }) => {
 
       <div>
         <h1
-          class={`text-[20px] jost uppercase font-[500] tracking-[0%] mb-2 ${
+          class={`text-[22px] jost uppercase font-[500] tracking-[0%] mb-2 ${
             number === 1 ? "text-white" : ""
           }`}
         >
