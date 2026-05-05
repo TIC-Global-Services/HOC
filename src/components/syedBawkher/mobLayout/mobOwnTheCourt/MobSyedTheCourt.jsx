@@ -74,7 +74,7 @@ export default function MobSyedTheCourt() {
     >
       {/* HEADING */}
       <h2 className="absolute left-1/2 -translate-x-1/2 top-[60px] z-10 salo text-[#262666] text-[30px] leading-none uppercase text-center">
-        OWN THE COURT
+        REFINED IDENTITY
       </h2>
 
       <div className="w-full relative h-full">

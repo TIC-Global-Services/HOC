@@ -59,7 +59,7 @@ const ROWS = [
 
 const ROW_Y = ["12vh", "30vh", "45vh", "60vh", "70vh", "85vh"];
 
-export default function QataOwnTheCourt() {
+export default function QataCoastal() {
   const containerRef = useRef(null);
   const itemRefs = useRef([]);
   const [isVisible, setIsVisible] = useState(false);
@@ -194,8 +194,8 @@ export default function QataOwnTheCourt() {
     >
       {/* TITLE */}
       <h2 className="absolute left-[5%] text-start top-[clamp(40px,8vh,90px)] z-10 m-0 salo font-medium text-[14px] md:text-[140px] leading-none tracking-[-0.02em] uppercase text-[#1E382D]">
-        <span style={{ display: "block" }}>OWN THE</span>
-        <span style={{ display: "block", paddingLeft: "10px" }}>COURT</span>
+        <span style={{ display: "block" }}>COASTAL</span>
+        <span style={{ display: "block", paddingLeft: "10px" }}>NARRATIVE</span>
       </h2>
 
       {/* IMAGES */}

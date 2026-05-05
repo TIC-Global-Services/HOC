@@ -1,7 +1,6 @@
 import QatamaranHero from "../../components/qatamaran/QatamaranHero";
 import QataWannaKnow from "../../components/qatamaran/QataWannaKnow";
 import QataImageSec from "../../components/qatamaran/QataImageSec";
-import QataOwnTheCourt from "../../components/qatamaran/QataOwnTheCourt";
 import QataRefinedTailoring from "../../components/qatamaran/qataRefinedTailoring/QataRefinedTailoring";
 import QataSaltSilk from "../../components/qatamaran/qataSaltSilk/QataSaltSilk";
 import Footer from "../Footer";
@@ -10,6 +9,7 @@ import MobQataSalt from "../../components/qatamaran/mobLayout/qataSaltSilk/MobQa
 import MobQataHero from "../../components/qatamaran/mobLayout/mobQataHero.jsx/MobQataHero";
 import MobQataRefined from "../../components/qatamaran/mobLayout/qataRefinedTailoring/MobQataRefined";
 import MobQataOwnTheCourt from "../../components/qatamaran/mobLayout/mobQataOwnCourt/MobQataOwnTheCourt";
+import QataCoastal from "../../components/qatamaran/QataCoastal";
 
 const Qatamaran = () => {
   return (
@@ -49,7 +49,7 @@ const Qatamaran = () => {
 
       {/* Desktop */}
       <div className="hidden md:block">
-      <QataOwnTheCourt />
+      <QataCoastal />
       </div>
       {/* Footer */}
       <Footer />

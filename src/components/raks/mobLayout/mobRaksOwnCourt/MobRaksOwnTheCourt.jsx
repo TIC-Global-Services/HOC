@@ -75,7 +75,7 @@ export default function MobRaksOwnTheCourt() {
     >
       {/* HEADING */}
       <h2 className="absolute left-1/2 -translate-x-1/2 top-[65px] z-10 salo text-[#000085] text-[30px] uppercase leading-none text-center">
-        OWN THE COURT
+        YOUNG EXPLORERS
       </h2>
 
       <div className="w-full relative h-full">

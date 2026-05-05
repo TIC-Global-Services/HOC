@@ -70,7 +70,7 @@ export default function MobQataOwnTheCourt() {
     >
       {/* MOBILE HEADING */}
       <h2 className="absolute left-1/2 -translate-x-1/2 top-[60px] z-10 salo text-[#1E382D] text-[30px] uppercase text-center leading-none">
-        OWN THE COURT
+        COASTAL NARRATIVE
       </h2>
 
       {/* STATIC IMAGES */}

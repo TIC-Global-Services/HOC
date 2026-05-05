@@ -82,29 +82,26 @@ export default function Section4() {
         }}
       />
       {/* BRAND TEXT */}
-      <div
-        className="absolute z-20 text-start"
-        style={{ top: "50%", right: "7.5%", transform: "translateY(-50%)" }}
+      <div className="absolute inset-0 flex items-center justify-end z-20 pr-[12%]">
+  <div style={{ lineHeight: "1", textAlign: "left" }}>
+    <div>
+      <span
+        className="salo text-start text-[#8FC4E9] tracking-wider"
+        style={{ fontSize: "clamp(80px,8vw,140px)" }}
       >
-        <div style={{ lineHeight: "1" }}>
-          <div>
-            <span
-              className="salo text-[#8FC4E9] tracking-wider"
-              style={{ fontSize: "clamp(80px,10vw,150px)" }}
-            >
-              B<span className="text-white">RAND</span>
-            </span>
-          </div>
-          <div>
-            <span
-              className="salo text-[#8FC4E9] tracking-wider"
-              style={{ fontSize: "clamp(80px,10vw,150px)" }}
-            >
-              V<span className="text-white">OICE</span>
-            </span>
-          </div>
-        </div>
-      </div>
+        B<span className="text-white">RAND</span>
+      </span>
+    </div>
+    <div>
+      <span
+        className="salo text-start text-[#8FC4E9] tracking-wider"
+        style={{ fontSize: "clamp(80px,8vw,140px)" }}
+      >
+        V<span className="text-white">OICE</span>
+      </span>
+    </div>
+  </div>
+</div>
       {/* BADGE */}
       <div
         ref={badgeRef}
