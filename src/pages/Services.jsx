@@ -282,40 +282,71 @@ const MainServices = () => {
   }, []);
 
   useEffect(() => {
+  if (!lineRef.current) return;
+
+  const ctx = gsap.context(() => {
     const GreenLine = lineRef.current;
     const length = GreenLine.getTotalLength();
-    gsap.set(GreenLine, { strokeDasharray: length, strokeDashoffset: length });
 
+    // Set initial state
+    gsap.set(GreenLine, {
+      strokeDasharray: length,
+      strokeDashoffset: length,
+    });
+
+    // Animate with proper reverse support
     gsap.to(GreenLine, {
       strokeDashoffset: 0,
       ease: "none",
       scrollTrigger: {
-        trigger: GreenLine,
-        start: "top 80%",
-        end: "bottom 20%",
-        scrub: true,
+        trigger: GreenLine.parentElement, 
+        start: "top bottom",             
+        end: "bottom top",
+        scrub: 1,                       
+        invalidateOnRefresh: true,
       },
     });
 
+    // Stops animation (clean + no conflicts)
     stopsRef.current.forEach((stop, index) => {
       if (!stop) return;
-      gsap.fromTo(stop, { scale: 0 }, {
-        scale: 1,
-        scrollTrigger: {
-          trigger: stop,
-          start: "top 80%",
-          scrub: true,
-          onEnter: () => {
-            gsap.to(`.label-text-${index} h1, .label-text-${index} .num-icon`, { color: "#F2F2F2", fill: "#060ebb", duration: 0.5 });
-            gsap.to(`.label-text-${index} p, .label-text-${index} span`, { color: "#BFBFBF", duration: 0.5 });
+
+      gsap.fromTo(
+        stop,
+        { scale: 0 },
+        {
+          scale: 1,
+          scrollTrigger: {
+            trigger: stop,
+            start: "top 85%",
+            end: "top 60%",
+            scrub: 1,
+            onEnter: () => {
+              gsap.to(`.label-text-${index} h1, .label-text-${index} .num-icon`, {
+                color: "#F2F2F2",
+                fill: "#060ebb",
+                duration: 0.3,
+              });
+              gsap.to(`.label-text-${index} p, .label-text-${index} span`, {
+                color: "#BFBFBF",
+                duration: 0.3,
+              });
+            },
+            onLeaveBack: () => {
+              gsap.to(`.label-text-${index} h1, .label-text-${index} p, .label-text-${index} .num-icon, .label-text-${index} span`, {
+                color: "#676767",
+                fill: "#676767",
+                duration: 0.3,
+              });
+            },
           },
-          onLeaveBack: () => {
-            gsap.to(`.label-text-${index} h1, .label-text-${index} p, .label-text-${index} .num-icon, .label-text-${index} span`, { color: "#676767", fill: "#676767", duration: 0.5 });
-          },
-        },
-      });
+        }
+      );
     });
-  }, [active, currentItems]);
+  });
+
+  return () => ctx.revert(); 
+}, [active]);
 
   return (
     <div className="flex flex-col items-center md:items-start w-full py-32 md:px-20 relative overflow-visible transition-all duration-500">
@@ -375,7 +406,7 @@ const MainServices = () => {
                   fill="#060ebb" 
                 />
                 <foreignObject 
-                  x={curveX + 15} 
+                  x={curveX + 20} 
                   y={finalCY - 20} 
                   width="600" 
                   height="400" 
@@ -408,7 +439,7 @@ const MainServices = () => {
 };
 
 const Label = ({ title, description, points }) => (
-  <div className="flex gap-6 items-start text-left jost max-w-[550px]">
+  <div className="flex gap-4 items-start text-left jost max-w-[500px]">
     <div className="mt-2 shrink-0">
       <svg width="28" height="28" viewBox="0 0 33 32" className="num-icon" fill="#676767">
          <path d="M19.5509 28.6184L21.5812 26.5881V20.9292H27.2401L29.2704 18.8989H19.5509V28.6184Z" />
@@ -419,7 +450,7 @@ const Label = ({ title, description, points }) => (
       </svg>
     </div>
     <div>
-      <h1 className=" text-[24px] uppercase font-bold text-[#676767] mb-2 tracking-wide">{title}</h1>
+      <h1 className=" text-[24px] uppercase font-bold text-[#676767] mb-2 tracking-tight">{title}</h1>
       <p className=" text-[16px] text-[#676767] leading-relaxed mb-4 w-full">{description}</p>
       <div className="space-y-1">
         {points.map((p, i) => (
