@@ -306,9 +306,42 @@ const isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
 
 const ThirdSection = () => {
   const videoSource = isIOS || isSafari ? iosVideo : one;
-   const videoRef = useRef(null);
-      
-    useMobileVideoFix(videoRef);
+
+  const videoRef = useRef(null);
+
+  useEffect(() => {
+    const video = videoRef.current;
+    if (!video) return;
+
+    let hasPlayed = false; 
+
+    const playVideo = () => {
+      if (hasPlayed) return;
+      hasPlayed = true;
+
+      video.muted = true;
+      video.playsInline = true;
+      video.setAttribute("playsinline", "");
+
+      const promise = video.play();
+      if (promise !== undefined) {
+        promise.catch(() => {
+          hasPlayed = false; // allow retry on interaction
+        });
+      }
+    };
+
+    //wait until video metadata is ready (Safari safe)
+    video.addEventListener("loadedmetadata", playVideo);
+
+    const handleTouch = () => playVideo();
+    window.addEventListener("touchstart", handleTouch, { once: true });
+
+    return () => {
+      video.removeEventListener("loadedmetadata", playVideo);
+      window.removeEventListener("touchstart", handleTouch);
+    };
+  }, []);
 
   return (
     <div className="relative mt-20 md:-mt-40 md:flex md:min-h-[80vh]">
