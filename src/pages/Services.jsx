@@ -64,6 +64,16 @@ const Contact = () => {
             </Link>
             <div className="text-[14px] md:text-[19px] font-semibold flex gap-4 md:gap-14 items-center">
               <Link
+                to={"/client"}
+                className={`hover:text-black/50 ${
+                  isActiveRoute("/client")
+                    ? "text-[#060ebb] border-b-2 border-[#060ebb]"
+                    : ""
+                }`}
+              >
+                <h1>CLIENT</h1>
+              </Link>
+              <Link
                 to={"/Services"}
                 className={`hover:text-black/50 ${
                   isActiveRoute("/Services")
@@ -140,11 +150,12 @@ const Contact = () => {
           </div>
         </div>
         {/* Absolutely Centered Text */}
-        <div className="  overflow-hidden  bg-black  z-[1] mx-auto overflow-x-visible  items-center  flex-col    relative justify-center  md:h-[250vh] mt-40 md:mt-20 rounded-t-3xl   px-4 flex md:px-10">
+        <div className="  overflow-hidden  bg-black  z-[1] mx-auto overflow-x-visible  items-start  flex-col    relative justify-start  md:min-h-[240vh]  mt-40 md:mt-20 rounded-t-3xl   px-4 flex md:px-10">
           <MainServices />
         </div>
       </div>
       <Footer />
+    
     </>
   );
 };
@@ -191,7 +202,7 @@ const categories = {
     },
     {
       cx: 300,
-      cy: 500,
+      cy: 400,
       label: "Brand Narrative & Content",
       dis: "Crafting compelling stories and content that bring your brand to life.",
       points: [
@@ -203,7 +214,7 @@ const categories = {
     },
     {
       cx: 300,
-      cy: 800,
+      cy: 600,
       label: "Logo & Visual Identity Design",
       dis: "Designing a narrative world for your brand via distinctive visuals that make your brand instantly recognizable.",
       points: [
@@ -215,7 +226,7 @@ const categories = {
     },
     {
       cx: 300,
-      cy: 1100,
+      cy: 800,
       label: "Social Media & Digital Branding",
       dis: "Platform-ready identity systems and content frameworks",
       points: [
@@ -225,14 +236,14 @@ const categories = {
     },
     {
       cx: 300,
-      cy: 1400,
+      cy: 950,
       label: "Environmental & Spatial Branding",
       dis: "Bridging the brand disconnect between digital and physical presence",
       points: ["Wayfinding & Environmental Signage", "Environmental Branding"],
     },
     {
       cx: 300,
-      cy: 1700,
+      cy: 1100,
       label: "Analogue Branding Tools",
       dis: "Designing tactile brand materials that bring your identity into the real world, via multisensory mediums.",
       points: [
@@ -469,7 +480,7 @@ const MainServices = () => {
         >
           {/* Inactive Path (Gray) */}
           <path
-            d="M0.200195 2.24512H268.2C287.056 2.24512 296.484 2.24512 302.342 8.10298C308.2 13.9608 308.2 23.3889 308.2 42.2451V2500.75"
+            d="M0.200195 2.24512H268.2C287.056 2.24512 296.484 2.24512 302.342 8.10298C308.2 13.9608 308.2 23.3889 308.2 42.2451V1800.75"
             stroke="#676767"
             strokeWidth="4"
           />
@@ -477,7 +488,7 @@ const MainServices = () => {
           {/* Active Path (Blue) */}
           <path
             ref={lineRef}
-            d="M0.200195 2.24512H268.2C287.056 2.24512 296.484 2.24512 302.342 8.10298C308.2 13.9608 308.2 23.3889 308.2 42.2451V2500.75"
+            d="M0.200195 2.24512H268.2C287.056 2.24512 296.484 2.24512 302.342 8.10298C308.2 13.9608 308.2 23.3889 308.2 42.2451V1800.75"
             stroke="#060ebb"
             strokeWidth="4"
           />
@@ -583,7 +594,7 @@ const MainServices = () => {
 const Label = ({ number, title, description, textRef, points = [] }) => {
   return (
     <div
-      class={`flex gap-4 items-start text-left jost ml-[28rem] w-[40vw] ${
+      class={`flex gap-4 items-start text-left jost ml-[26rem] w-[40vw] ${
         number === 1 ? "text-white" : "text-[#242424]"
       } px-4`}
       ref={textRef}
@@ -647,14 +658,14 @@ const Label = ({ number, title, description, textRef, points = [] }) => {
 
       <div>
         <h1
-          class={`text-3xl jost uppercase font-[400] mb-2 ${
+          class={`text-[20px] jost uppercase font-[500] tracking-[0%] mb-2 ${
             number === 1 ? "text-white" : ""
           }`}
         >
           {title}
         </h1>
         <p
-          class={`text-lg jost w-[80%] font-[400] ${
+          class={`text-[16px] jost w-[80%] font-[500] tracking-[0%] leading-[21px] ${
             number === 1 ? "text-[#bfbfbf]" : ""
           }`}
         >
@@ -663,9 +674,9 @@ const Label = ({ number, title, description, textRef, points = [] }) => {
 
         <div className="mt-3">
           {points?.map((point, index) => (
-            <div key={index} className="jost text-[18px] font-[400]">
+            <p key={index} className="jost  text-[14px] font-[400] tracking-[0%] leading-[21px]">
               {index + 1}. {point}
-            </div>
+            </p>
           ))}
         </div>
       </div>
