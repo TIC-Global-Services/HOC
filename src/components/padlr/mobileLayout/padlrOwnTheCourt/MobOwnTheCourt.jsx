@@ -69,7 +69,7 @@ export default function MobOwnTheCourt() {
       }}
     >
       {/* MOBILE HEADING */}
-      <h2 className="absolute left-1/2 -translate-x-1/2 top-[70px] z-10 salo text-[#7ac9f0] text-[30px] uppercase text-center leading-none">
+      <h2 className="absolute left-1/2 -translate-x-1/2 top-[60px] z-10 salo text-[#7ac9f0] text-[30px] uppercase text-center leading-none">
         OWN THE COURT
       </h2>
 

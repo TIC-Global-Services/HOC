@@ -68,7 +68,7 @@ export default function MobRaksOwnTheCourt() {
       }}
     >
       {/* HEADING */}
-      <h2 className="absolute left-1/2 -translate-x-1/2 top-[80px] z-10 salo text-[#000085] text-[30px] uppercase leading-none text-center">
+      <h2 className="absolute left-1/2 -translate-x-1/2 top-[65px] z-10 salo text-[#000085] text-[30px] uppercase leading-none text-center">
         OWN THE COURT
       </h2>
 
