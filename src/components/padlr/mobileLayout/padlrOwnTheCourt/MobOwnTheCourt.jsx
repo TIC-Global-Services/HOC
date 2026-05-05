@@ -14,62 +14,69 @@ const IMGS = {
 };
 
 const ROWS = [
-  [{ t: "can", x: 60, s: 164, r: 0 }],
+  [{ t: "can", x: 60, s: 100, r: 0 }],
   [
-    { t: "spring", x: 40, s: 222, r: -30 },
-    { t: "bat", x: 60, s: 144, r: 0 },
-    { t: "spring", x: 70, s: 222, r: 30 },
+    { t: "spring", x: 40, s: 100, r: -30 },
+    { t: "bat", x: 60, s: 100, r: 0 },
+    { t: "spring", x: 70, s: 100, r: 30 },
   ],
   [
-    { t: "can", x: 30, s: 164, r: -18 },
+    { t: "can", x: 30, s: 100, r: -18 },
     { t: "circle", x: 45, s: 99, r: 8 },
-    { t: "bat", x: 60, s: 144, r: 0 },
+    { t: "bat", x: 60, s: 100, r: 0 },
     { t: "circle", x: 75, s: 99, r: 8 },
   ],
   [
-    { t: "spring", x: 35, s: 222, r: 26 },
-    { t: "can", x: 45, s: 164, r: -20 },
-    { t: "circle", x: 55, s: 99, r: 5 },
-    { t: "spring", x: 65, s: 222, r: 0 },
-    { t: "bat", x: 75, s: 144, r: 26 },
-    { t: "can", x: 85, s: 164, r: -20 },
+    { t: "bat", x: 25, s: 100, r: 26 },
+    { t: "spring", x: 38, s: 100, r: -20 },
+    { t: "can", x: 48, s: 99, r: 5 },
+    { t: "circle", x: 58, s: 100, r: 0 },
+    { t: "bat", x: 75, s: 100, r: 26 },
   ],
   [
-    { t: "can", x: 25, s: 164, r: -26 },
+    { t: "spring", x: 20, s: 100, r: 26 },
+    { t: "can", x: 35, s: 100, r: -20 },
+    { t: "circle", x: 55, s: 99, r: 5 },
+    { t: "spring", x: 65, s: 100, r: 0 },
+    { t: "bat", x: 75, s: 100, r: 26 },
+    { t: "can", x: 85, s: 100, r: -20 },
+  ],
+  [
+    { t: "can", x: 15, s: 100, r: -26 },
     { t: "circle", x: 35, s: 99, r: 12 },
-    { t: "spring", x: 45, s: 222, r: 0 },
-    { t: "bat", x: 55, s: 144, r: -24 },
-    { t: "can", x: 65, s: 164, r: 18 },
+    { t: "spring", x: 45, s: 100, r: 0 },
+    { t: "bat", x: 55, s: 100, r: -24 },
+    { t: "can", x: 65, s: 100, r: 18 },
     { t: "circle", x: 75, s: 99, r: 5 },
-    { t: "bat", x: 85, s: 144, r: -24 },
+    { t: "bat", x: 85, s: 100, r: -24 },
     { t: "circle", x: 90, s: 99, r: 5 },
   ],
   [
-    { t: "bat", x: 5, s: 144, r: 0 },
-    { t: "spring", x: 15, s: 222, r: -10 },
-    { t: "bat", x: 30, s: 144, r: 0 },
-    { t: "can", x: 40, s: 164, r: 0 },
+    { t: "bat", x: 5, s: 100, r: 0 },
+    { t: "spring", x: 15, s: 100, r: -10 },
+    { t: "bat", x: 30, s: 100, r: 0 },
+    { t: "can", x: 40, s: 100, r: 0 },
     { t: "circle", x: 50, s: 99, r: 5 },
-    { t: "spring", x: 60, s: 222, r: 0 },
-    { t: "can", x: 75, s: 164, r: 0 },
-    { t: "spring", x: 85, s: 222, r: 0 },
+    { t: "spring", x: 60, s: 100, r: 0 },
+    { t: "can", x: 75, s: 100, r: 0 },
+    { t: "spring", x: 85, s: 100, r: 0 },
   ],
 ];
 
 //Mobile spacing
-const ROW_Y = ["30vh", "40vh", "50vh", "60vh", "70vh", "78vh"];
+const ROW_Y = ["20vh", "28vh", "38vh","48vh", "58vh", "66vh", "75vh"];
 
 export default function MobOwnTheCourt() {
   return (
     <section
-      className="w-full h-[85vh] relative overflow-hidden"
+      className="w-full h-[80vh] relative overflow-hidden"
       style={{
         backgroundImage: `url(${grid})`,
         backgroundSize: "cover",
       }}
     >
       {/* MOBILE HEADING */}
-      <h2 className="absolute left-1/2 -translate-x-1/2 top-[60px] z-10 salo text-[#7ac9f0] text-[30px] uppercase text-center leading-none">
+      <h2 className="absolute left-1/2 -translate-x-1/2 top-[70px] z-10 salo text-[#7ac9f0] text-[30px] uppercase text-center leading-none">
         OWN THE COURT
       </h2>
 
@@ -89,7 +96,7 @@ export default function MobOwnTheCourt() {
               <img
                 src={IMGS[item.t]}
                 alt=""
-                width={item.s * 0.8}
+                width={item.s * 1}
                 draggable={false}
                 style={{
                   display: "block",

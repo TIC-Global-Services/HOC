@@ -26,6 +26,12 @@ const ROWS = [
     { t: "raks", x: 70, s: 100, r: 0 },
   ],
   [
+    { t: "pragma", x: 35, s: 100, r: -20 },
+    { t: "vivid", x: 45, s: 100, r: -20 },
+    { t: "vivid", x: 65, s: 100, r: 20 },
+    { t: "innocence", x: 75, s: 100, r: 20 },
+  ],
+  [
     { t: "play", x: 25, s: 100, r: -18 },
     { t: "pragma", x: 40, s: 100, r: 8 },
     { t: "innocence", x: 62, s: 100, r: 0 },
@@ -56,7 +62,7 @@ const ROWS = [
   ],
 ];
 
-const ROW_Y = ["30vh", "38vh", "46vh", "52vh", "58vh", "66vh", "72vh"];
+const ROW_Y = ["20vh", "30vh", "38vh", "44vh", "52vh", "60vh", "68vh", "75vh"];
 
 export default function MobRaksOwnTheCourt() {
   return (
@@ -88,7 +94,7 @@ export default function MobRaksOwnTheCourt() {
                 <img
                   src={IMGS[item.t]}
                   alt=""
-                  width={item.s * 1}
+                  width={item.s * 1.2}
                   draggable={false}
                   className="block"
                 />
