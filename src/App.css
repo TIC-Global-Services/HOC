@@ -77,11 +77,6 @@ body::-webkit-scrollbar-thumb {
 } */
 
 .main-services-height {
-  min-height: 240vh;
+  min-height: 250vh;
 }
 
-@media (max-height: 780px) {
-  .main-services-height {
-    min-height: 350vh;
-  }
-}

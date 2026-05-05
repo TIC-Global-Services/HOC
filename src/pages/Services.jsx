@@ -155,7 +155,6 @@ const Contact = () => {
         </div>
       </div>
       <Footer />
-    
     </>
   );
 };
@@ -165,7 +164,6 @@ const categories = {
   experience: [
     {
       cx: 300,
-      cy: 200,
       label: "Experiential Space Design",
       dis: "We design brand experiences that live in space — conceptually led, environmentally built, and memorable long after they end. Spatial storytelling through objects, structure, and environment",
       points: [
@@ -177,7 +175,6 @@ const categories = {
     },
     {
       cx: 300,
-      cy: 800,
       label: "Motion & CGI",
       dis: "The brand in motion | Moving image and digital craft that extends the brand into screen and space",
       points: [
@@ -190,7 +187,6 @@ const categories = {
   design: [
     {
       cx: 300,
-      cy: 200,
       label: "Brand Evolution Strategy",
       dis: "Navigating brand growth, repositioning, and long-term relevance + Defining who you are, what you stand for, and how you show up",
       points: [
@@ -202,7 +198,6 @@ const categories = {
     },
     {
       cx: 300,
-      cy: 500,
       label: "Brand Narrative & Content",
       dis: "Crafting compelling stories and content that bring your brand to life.",
       points: [
@@ -214,7 +209,6 @@ const categories = {
     },
     {
       cx: 300,
-      cy: 800,
       label: "Logo & Visual Identity Design",
       dis: "Designing a narrative world for your brand via distinctive visuals that make your brand instantly recognizable.",
       points: [
@@ -226,7 +220,6 @@ const categories = {
     },
     {
       cx: 300,
-      cy: 1100,
       label: "Social Media & Digital Branding",
       dis: "Platform-ready identity systems and content frameworks",
       points: [
@@ -236,14 +229,12 @@ const categories = {
     },
     {
       cx: 300,
-      cy: 1400,
       label: "Environmental & Spatial Branding",
       dis: "Bridging the brand disconnect between digital and physical presence",
       points: ["Wayfinding & Environmental Signage", "Environmental Branding"],
     },
     {
       cx: 300,
-      cy: 1650,
       label: "Analogue Branding Tools",
       dis: "Designing tactile brand materials that bring your identity into the real world, via multisensory mediums.",
       points: [
@@ -274,6 +265,29 @@ const MainServices = () => {
 
   const [active, setActive] = useState("Experience");
   const currentItems = categories[active.toLowerCase()] || [];
+  const [svgHeight, setSvgHeight] = useState(window.innerHeight * 2.5);
+  const gap = svgHeight / (currentItems.length + 1);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setSvgHeight(window.innerHeight * 2.5);
+    };
+
+    handleResize();
+
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
+  useEffect(() => {
+    requestAnimationFrame(() => {
+      ScrollTrigger.refresh();
+    });
+  }, [svgHeight, active]);
+
   // useEffect(() => {
   //   // Reset ref arrays when tab changes
   //   stopsRef.current = [];
@@ -471,10 +485,10 @@ const MainServices = () => {
         </div>
 
         <svg
-          className="line absolute xl:block hidden left-1/2 xl:ml-[8%] lg:ml-[10%]  overflow-visible mt-9 transform -translate-x-1/2"
+          className="line absolute xl:block hidden left-1/2 xl:ml-[8%] lg:ml-[10%] overflow-visible mt-9 transform -translate-x-1/2"
           width="600"
-          height="4000"
-          viewBox="0 0 600 4000"
+          height={svgHeight}
+          viewBox={`0 0 600 ${svgHeight}`}
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
         >
@@ -492,64 +506,64 @@ const MainServices = () => {
             stroke="#060ebb"
             strokeWidth="4"
           />
+
           {/* Stops and Texts */}
           <AnimatePresence>
-            {currentItems.map((item, i) => (
-              <motion.g
-                key={active + i}
-                className="!overflow-visible "
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0, y: -20 }}
-                // transition={{ duration: 0.5, delay: i * 0.1 }}
-              >
-                <motion.circle
-                  ref={(el) => (stopsRef.current[i] = el)}
-                  cx={item.cx + 8}
-                  cy={item.cy - 105}
-                  r="6"
-                  fill="blue"
-                  data-svg-origin="308 90"
-                  // initial={{ scale: 0 }}
-                  // animate={{ scale: 1 }}
-                  // transition={{ duration: 0.3, delay: i * 0.1 }}
-                />
+            {currentItems.map((item, i) => {
+              const dynamicCY = gap * (i + 1);
 
-                <foreignObject
-                  x={item.cx - 400}
-                  y={item.cy - 120}
-                  width="400"
-                  height="200"
-                  className={`foreign-label !z-[700] label-text-${i} !overflow-visible`}
-                  style={{
-                    // Safari fix for foreignObject rendering
-                    transform: "translate3d(0,0,0)",
-                    WebkitTransform: "translateZ(0)",
-                  }}
+              return (
+                <motion.g
+                  key={active + i}
+                  className="!overflow-visible"
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: -20 }}
                 >
-                  <motion.div
-                    initial={{ opacity: 0, x: -20 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    exit={{ opacity: 0, x: 20 }}
-                    transition={{ duration: 0.5, delay: i * 0.1 }}
+                  <motion.circle
+                    ref={(el) => (stopsRef.current[i] = el)}
+                    cx={item.cx + 8}
+                    cy={dynamicCY - 105}
+                    r="6"
+                    fill="blue"
+                    data-svg-origin="308 90"
+                  />
+
+                  <foreignObject
+                    x={item.cx - 400}
+                    y={dynamicCY - 120}
+                    width="400"
+                    height="200"
+                    className={`foreign-label !z-[700] label-text-${i} !overflow-visible`}
                     style={{
-                      position: "relative",
-                      zIndex: 700 + i, // Ensure proper stacking
-                      WebkitBackfaceVisibility: "hidden",
+                      transform: "translate3d(0,0,0)",
+                      WebkitTransform: "translateZ(0)",
                     }}
                   >
-                    <Label
-                      number={i + 1}
-                      className="text-white"
-                      title={item.label}
-                      description={item.dis}
-                      points={item.points}
-                      textRef={(el) => (textRefs.current[i] = el)}
-                    />
-                  </motion.div>
-                </foreignObject>
-              </motion.g>
-            ))}
+                    <motion.div
+                      initial={{ opacity: 0, x: -20 }}
+                      animate={{ opacity: 1, x: 0 }}
+                      exit={{ opacity: 0, x: 20 }}
+                      transition={{ duration: 0.5, delay: i * 0.1 }}
+                      style={{
+                        position: "relative",
+                        zIndex: 700 + i,
+                        WebkitBackfaceVisibility: "hidden",
+                      }}
+                    >
+                      <Label
+                        number={i + 1}
+                        className="text-white"
+                        title={item.label}
+                        description={item.dis}
+                        points={item.points}
+                        textRef={(el) => (textRefs.current[i] = el)}
+                      />
+                    </motion.div>
+                  </foreignObject>
+                </motion.g>
+              );
+            })}
           </AnimatePresence>
         </svg>
         <div className="xl:hidden w-full items-start text-left justify-center flex flex-col gap-28 mt-32">
@@ -674,7 +688,10 @@ const Label = ({ number, title, description, textRef, points = [] }) => {
 
         <div className="mt-3">
           {points?.map((point, index) => (
-            <p key={index} className="jost  text-[14px] font-[400] tracking-[0%] leading-[21px]">
+            <p
+              key={index}
+              className="jost  text-[14px] font-[400] tracking-[0%] leading-[21px]"
+            >
               {index + 1}. {point}
             </p>
           ))}
