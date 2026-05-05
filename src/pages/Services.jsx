@@ -1,172 +1,27 @@
-import React from "react";
+import React, { useState, useEffect, useRef, useLayoutEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { useState, useEffect } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+// Assets
 import worldsmall from "../assets/worldsmall.png";
-// import tvpng from "../assets/tv.png";
-// import logo from "../assets/logo.png";
 import logo2 from "../assets/logo2.png";
-// import befooter from "../assets/befooter.png";
-// import hand from "../assets/hand.png";
-// import ufo from "../assets/ufo.png";
-import Footer from "./Footer";
-
 import grid from "../assets/lines.png";
-import { motion } from "framer-motion";
-// import { div, label } from "framer-motion/client";
+import svgser from "../assets/svgser.png";
+import wiresm from "../assets/wiresm.png";
+import plugservicesleft from "../assets/left.png";
+import plugservicesright from "../assets/right.png";
+import Footer from "./Footer";
 import MobileNav2 from "./MobileNav";
-const Contact = () => {
-  const location = useLocation();
-  const [isSection2, setIsSection2] = useState(false);
-  const [isFixed, setIsFixed] = useState(true);
 
-  useEffect(() => {
-    const handleScroll = () => {
-      const scrollPosition = window.scrollY;
-      const windowHeight = window.innerHeight;
+gsap.registerPlugin(ScrollTrigger);
 
-      setIsSection2(scrollPosition > windowHeight * 0.2); // Toggle theme at 20% height
-      setIsFixed(scrollPosition < windowHeight); // Navbar stays fixed only in the first section
-    };
-
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
-  const [isToggled, setIsToggled] = useState(false);
-
-  const handleToggle = () => {
-    setIsToggled(!isToggled);
-  };
-
-  const isActiveRoute = (path) => {
-    return location.pathname === path;
-  };
-
-  return (
-    <>
-      <div className="bg-white jost relative" style={{ minHeight: "100vh" }}>
-        {/* Navbar */}
-        <div className="md:hidden">
-          <MobileNav2 />
-        </div>
-        <div
-          className={`${
-            // isFixed  w-full z-[500] top-0 left-0 ${
-            isSection2 ? "bg-white text-black" : "  text-[#000000]"
-          } transition-all  py-2 duration-700 md:block hidden`}
-        >
-          <div className="flex py-4 jost px-4 md:px-10 justify-between items-start">
-            <Link to={"/"}>
-              <img
-                src={isSection2 ? logo2 : logo2}
-                className="w-[80px] md:w-[110px] transition-all duration-700"
-                alt="Logo"
-              />
-            </Link>
-            <div className="text-[14px] md:text-[19px] font-semibold flex gap-4 md:gap-14 items-center">
-              <Link
-                to={"/client"}
-                className={`hover:text-black/50 ${
-                  isActiveRoute("/client")
-                    ? "text-[#060ebb] border-b-2 border-[#060ebb]"
-                    : ""
-                }`}
-              >
-                <h1>CLIENT</h1>
-              </Link>
-              <Link
-                to={"/Services"}
-                className={`hover:text-black/50 ${
-                  isActiveRoute("/Services")
-                    ? "text-[#060ebb] border-b-2 border-[#060ebb]"
-                    : ""
-                }`}
-              >
-                <h1>SERVICES</h1>
-              </Link>
-              <Link
-                to={"/Experience"}
-                className={`hover:text-black/50 ${
-                  isActiveRoute("/Experience")
-                    ? "text-[#060ebb] border-b-2 border-[#060ebb]"
-                    : ""
-                }`}
-              >
-                <h1>EXPERIENCE LAB</h1>
-              </Link>
-              <Link
-                to={"/Ethos"}
-                className={`hover:text-black/50 ${
-                  isActiveRoute("/Ethos")
-                    ? "text-[#060ebb] border-b-2 border-[#060ebb]"
-                    : ""
-                }`}
-              >
-                <h1>ETHOS</h1>
-              </Link>
-              <Link
-                to={"/Careers"}
-                className={`hover:text-black/50 ${
-                  isActiveRoute("/Careers")
-                    ? "text-[#060ebb] border-b-2 border-[#060ebb]"
-                    : ""
-                }`}
-              >
-                <h1>CAREERS</h1>
-              </Link>
-            </div>
-            <Link to={"/Contact"}>
-              <motion.div
-                className={`py-2 px-4 rounded-full relative text-[12px] md:text-[13px] font-semibold flex items-center cursor-pointer ${
-                  isToggled
-                    ? "bg-black text-white"
-                    : "bg-[#F0F0F0] text-[#060ebb]"
-                }`}
-                onClick={handleToggle}
-                initial={{ opacity: 1 }}
-                animate={{ opacity: 1 }}
-              >
-                <motion.h1
-                  className={`mr-6 md:mr-9 text-center`}
-                  animate={{
-                    x: isToggled ? "35px" : "0px",
-                    color: isToggled ? "#FFFFFF" : "#060ebb",
-                  }}
-                  transition={{ duration: 0.5 }}
-                >
-                  CONTACT
-                </motion.h1>
-                <motion.img
-                  className="w-[36px] md:w-[46px] h-[36px] md:h-[46px] absolute"
-                  src={worldsmall}
-                  alt="World"
-                  animate={{
-                    x: isToggled ? "-50%" : "150%",
-                    rotate: isToggled ? 360 : 0,
-                  }}
-                  transition={{ duration: 0.8 }}
-                />
-              </motion.div>
-            </Link>
-          </div>
-        </div>
-        {/* Absolutely Centered Text */}
-        <div className="main-services-height  overflow-hidden  bg-black  z-[1] mx-auto overflow-x-visible  items-start  flex-col    relative justify-start  mt-40 md:mt-20 rounded-t-3xl   px-4 flex md:px-10">
-          <MainServices />
-        </div>
-      </div>
-      <Footer />
-    </>
-  );
-};
-
-export default Contact;
 const categories = {
   experience: [
     {
-      cx: 300,
-      cy: 300,
       label: "Experiential Space Design",
-      dis: "We design brand experiences that live in space — conceptually led, environmentally built, and memorable long after they end. Spatial storytelling through objects, structure, and environment",
+      dis: "We design brand experiences that live in space — conceptually led, environmentally built, and memorable long after they end.",
       points: [
         "Hybrid Activations via Experiential Marketing",
         "Exhibition & Installation Design",
@@ -175,8 +30,6 @@ const categories = {
       ],
     },
     {
-      cx: 300,
-      cy: 900,
       label: "Motion & CGI",
       dis: "The brand in motion | Moving image and digital craft that extends the brand into screen and space",
       points: [
@@ -188,9 +41,8 @@ const categories = {
   ],
   design: [
     {
-      cx: 300,
       label: "Brand Evolution Strategy",
-      dis: "Navigating brand growth, repositioning, and long-term relevance + Defining who you are, what you stand for, and how you show up",
+      dis: "Navigating brand growth, repositioning, and long-term relevance.",
       points: [
         "Positioning & Brand Architecture",
         "Brand Evolution & Repositioning",
@@ -199,7 +51,6 @@ const categories = {
       ],
     },
     {
-      cx: 300,
       label: "Brand Narrative & Content",
       dis: "Crafting compelling stories and content that bring your brand to life.",
       points: [
@@ -210,9 +61,8 @@ const categories = {
       ],
     },
     {
-      cx: 300,
       label: "Logo & Visual Identity Design",
-      dis: "Designing a narrative world for your brand via distinctive visuals that make your brand instantly recognizable.",
+      dis: "Designing a narrative world for your brand via distinctive visuals.",
       points: [
         "Logo & Mark Design",
         "Colour, Typography & Grid Systems",
@@ -221,7 +71,6 @@ const categories = {
       ],
     },
     {
-      cx: 300,
       label: "Social Media & Digital Branding",
       dis: "Platform-ready identity systems and content frameworks",
       points: [
@@ -230,15 +79,13 @@ const categories = {
       ],
     },
     {
-      cx: 300,
       label: "Environmental & Spatial Branding",
       dis: "Bridging the brand disconnect between digital and physical presence",
       points: ["Wayfinding & Environmental Signage", "Environmental Branding"],
     },
     {
-      cx: 300,
       label: "Analogue Branding Tools",
-      dis: "Designing tactile brand materials that bring your identity into the real world, via multisensory mediums.",
+      dis: "Designing tactile brand materials via multisensory mediums.",
       points: [
         "Print & Publication Design",
         "Packaging & Product Communication",
@@ -248,459 +95,241 @@ const categories = {
   ],
 };
 
-import svgser from "../assets/svgser.png";
-// import blackgrid from "../assets/blackgrid.png";
-import wiresm from "../assets/wiresm.png";
-import plugservicesleft from "../assets/left.png";
-import plugservicesright from "../assets/right.png";
-import gsap from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { useRef } from "react";
-import { AnimatePresence } from "framer-motion";
-gsap.registerPlugin(ScrollTrigger);
-const MainServices = () => {
-  const plugRightRef = useRef(null);
+const Contact = () => {
+  const location = useLocation();
+  const [isSection2, setIsSection2] = useState(false);
+  const [isToggled, setIsToggled] = useState(false);
 
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsSection2(window.scrollY > window.innerHeight * 0.2);
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  const isActiveRoute = (path) => location.pathname === path;
+
+  return (
+    <div className="bg-white jost relative min-h-screen">
+      <div className="md:hidden"><MobileNav2 /></div>
+      <div className={`${isSection2 ? "bg-white text-black" : "text-black"} transition-all py-2 duration-700 md:block hidden fixed top-0 w-full z-[500]`}>
+        <div className="flex py-4 px-4 md:px-10 justify-between items-start">
+          <Link to="/"><img src={logo2} className="w-[110px]" alt="Logo" /></Link>
+          <div className="text-[19px] font-semibold flex gap-14 items-center">
+            {["client", "Services", "Experience", "Ethos", "Careers"].map((nav) => (
+              <Link key={nav} to={`/${nav}`} className={`hover:text-black/50 ${isActiveRoute(`/${nav}`) ? "text-[#060ebb] border-b-2 border-[#060ebb]" : ""}`}>
+                <h1 className="uppercase">{nav}</h1>
+              </Link>
+            ))}
+          </div>
+          <Link to="/Contact" onClick={(e) => { e.preventDefault(); setIsToggled(!isToggled); }}>
+            <motion.div className={`py-2 px-4 rounded-full relative text-[13px] font-semibold flex items-center cursor-pointer ${isToggled ? "bg-black text-white" : "bg-[#F0F0F0] text-[#060ebb]"}`}>
+              <motion.h1 animate={{ x: isToggled ? "35px" : "0px" }} className="mr-9">CONTACT</motion.h1>
+              <motion.img className="w-[46px] absolute" src={worldsmall} animate={{ x: isToggled ? "-50%" : "150%", rotate: isToggled ? 360 : 0 }} />
+            </motion.div>
+          </Link>
+        </div>
+      </div>
+      
+      <div className="bg-black z-[1] mx-auto mt-40 md:mt-20 rounded-t-3xl relative">
+        <div className=" mt-[15%]"/>
+        <MainServices />
+      </div>
+      <Footer />
+    </div>
+  );
+};
+
+const MainServices = () => {
+  const [active, setActive] = useState("Experience");
+  const plugRightRef = useRef(null);
   const lineRef = useRef(null);
   const stopsRef = useRef([]);
-  const textRefs = useRef([]);
 
-  const [active, setActive] = useState("Experience");
   const currentItems = categories[active.toLowerCase()] || [];
-  const [svgHeight, setSvgHeight] = useState(window.innerHeight * 2.5);
-  const gap = svgHeight / (currentItems.length + 1);
+  const ITEM_SPACING = active === "Experience" ? 450 : 380;
+  const totalContentHeight = currentItems.length * ITEM_SPACING;
+  const svgHeight = totalContentHeight + 100;
+
+  const [vw, setVw] = useState(window.innerWidth);
 
   useEffect(() => {
-    const handleResize = () => {
-      setSvgHeight(window.innerHeight * 2.5);
-    };
-
-    handleResize();
-
+    const handleResize = () => setVw(window.innerWidth);
     window.addEventListener("resize", handleResize);
-
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
+    return () => window.removeEventListener("resize", handleResize);
   }, []);
 
-  useEffect(() => {
-    requestAnimationFrame(() => {
-      ScrollTrigger.refresh();
-    });
-  }, [svgHeight, active]);
+  // Calculate dynamic horizontal points
+  // Adjust these multipliers to fine-tune the alignment with your plug
+  const dynamicStartX = -(vw * 0.2); // Starts 20% of screen width to the left
+  const curveX = 120;
 
-  // useEffect(() => {
-  //   // Reset ref arrays when tab changes
-  //   stopsRef.current = [];
-  //   textRefs.current = [];
-  // }, [active]); // Add active as dependency
-
-  useEffect(() => {
-    // Right plug animation
-    gsap.fromTo(
-      plugRightRef.current,
-      {
-        x: 100, // Start off-screen to the right
-        // rotation: -15,
-        ease: "power4.out",
-      },
-      {
-        x: 0,
-        // rotation: 0,
-        scrollTrigger: {
-          trigger: ".alinsa", // Use the title container as trigger
-          start: "top center",
-          end: "bottom center",
-          scrub: 1,
-        },
-      },
-    );
-  }, []);
-  useEffect(() => {
+  useLayoutEffect(() => {
     ScrollTrigger.refresh();
+  }, [active, svgHeight]);
+
+  useEffect(() => {
+    gsap.fromTo(plugRightRef.current, { x: 100 }, {
+      x: 0,
+      scrollTrigger: {
+        trigger: ".alinsa",
+        start: "top center",
+        end: "bottom center",
+        scrub: 1,
+      },
+    });
   }, []);
 
   useEffect(() => {
     const GreenLine = lineRef.current;
-    const stops = stopsRef.current;
-    const texts = textRefs.current;
-
     const length = GreenLine.getTotalLength();
+    gsap.set(GreenLine, { strokeDasharray: length, strokeDashoffset: length });
 
-    gsap.set(GreenLine, {
-      strokeWidth: 4,
-      strokeDasharray: length,
-      strokeDashoffset: length,
-      // Remove willChange
-    });
-
-    gsap.set(stops, {
-      autoAlpha: 1,
-      scale: 0,
-      transformOrigin: "center",
-      // Force hardware acceleration
-      transformStyle: "preserve-3d",
-      force3D: true,
-    });
-
-    gsap.set(texts, {
-      color: "#676767",
-      opacity: 1,
-      // Remove willChange and add Safari-specific fixes
-      transform: "translate3d(0,0,0)",
-      WebkitFontSmoothing: "subpixel-antialiased",
-    });
-    ScrollTrigger.defaults({
-      markers: false,
-      toggleActions: "play none none reverse",
-      // Safari optimization
-      onRefresh: (self) =>
-        self.progress && self.animation.progress(self.progress),
-    });
     gsap.to(GreenLine, {
-      strokeDashoffset: 0, // Animate to reveal the full path
+      strokeDashoffset: 0,
       ease: "none",
       scrollTrigger: {
         trigger: GreenLine,
-        start: "top bottom",
-        end: "bottom top",
+        start: "top 80%",
+        end: "bottom 20%",
         scrub: true,
       },
     });
 
-    stops.forEach((stop, index) => {
-      gsap.to(stop, {
+    stopsRef.current.forEach((stop, index) => {
+      if (!stop) return;
+      gsap.fromTo(stop, { scale: 0 }, {
         scale: 1,
-        duration: 0.5,
-        ease: "elastic.out(1, 0.5)",
         scrollTrigger: {
           trigger: stop,
           start: "top 80%",
-          end: "top 50%",
           scrub: true,
           onEnter: () => {
-            // Different colors based on active tab
-            if (active.toLowerCase() === "experience") {
-              gsap.to(`.label-text-${index} div`, {
-                color: "#F2F2F2",
-                duration: 0.5,
-              });
-              gsap.to(`.label-text-${index} h1`, {
-                color: "#F2F2F2",
-                duration: 0.5,
-              });
-              gsap.to(`.label-text-${index} p`, {
-                color: "#BFBFBF",
-                duration: 0.5,
-              });
-            } else {
-              // Design tab - all elements white
-              gsap.to(
-                [
-                  `.label-text-${index} div`,
-                  `.label-text-${index} h1`,
-                  `.label-text-${index} p`,
-                ],
-                {
-                  color: "#F2F2F2",
-                  duration: 0.5,
-                },
-              );
-              gsap.to(`.label-text-${index} p`, {
-                color: "#F2F2F2",
-                duration: 0.5,
-              });
-            }
+            gsap.to(`.label-text-${index} h1, .label-text-${index} .num-icon`, { color: "#F2F2F2", fill: "#060ebb", duration: 0.5 });
+            gsap.to(`.label-text-${index} p, .label-text-${index} span`, { color: "#BFBFBF", duration: 0.5 });
           },
           onLeaveBack: () => {
-            // Revert to gray colors
-            gsap.to(
-              [
-                `.label-text-${index} div`,
-                `.label-text-${index} h1`,
-                `.label-text-${index} p`,
-              ],
-              {
-                color: "#676767",
-                duration: 0.5,
-              },
-            );
+            gsap.to(`.label-text-${index} h1, .label-text-${index} p, .label-text-${index} .num-icon, .label-text-${index} span`, { color: "#676767", fill: "#676767", duration: 0.5 });
           },
         },
       });
     });
-  }, [active]);
+  }, [active, currentItems]);
 
   return (
-    <>
-      <div className="flex  flex-col justify-start items-center   md:items-start overflow-x-visible  w-full md:justify-start h-full md:px-16 py-32 md:py-32">
-        {/* Background Grid */}
-        <div
-          className="absolute z-[-1]  inset-0 opacity-100"
-          style={{
-            backgroundImage: `url(${grid})`,
-            backgroundSize: "cover",
-            opacity: "0.1",
-          }}
-        />
-        {/* desktop verison */}
-        {/* Title */}
-        <div className="flex  items-center  md:items-stretch relative flex-col -space-y-16 uppercase z-[100] text-[108px] font-[1000] text-[#F4ECE0] alinsa">
-          <div className="xl:flex hidden  relative ">
-            <h1 className="z-[100] xl:text-[108px]  ">Our</h1>
-            <img
-              src={wiresm}
-              className="-ml-2 mt-8 w-xl:[80px] xl:h-[80px] lg:w-[70px] w-[80px] h-[80px] object-cover"
-              alt=""
-            />
-            <img
-              src={plugservicesleft}
-              className="absolute  w-full left-52 -top-28 scale-[1.2] z-[100]"
-              alt=""
-            />
-            <img
-              ref={plugRightRef}
-              src={plugservicesright}
-              className="absolute w-full scale-[1.3]  -right-[35%] mr-2.5 -mt-1 -top-28 z-[90]"
-              alt=""
-              style={{ transformOrigin: "right center" }}
-            />
-          </div>
-          <h1 className=" xl:block hidden">Services</h1>
-          <h1 className="  flex items-center  justify-center  !font-[400]   !text-xl  text-center xl:hidden  text-[#F4ECE0] alinsa"></h1>
-          <div className="bg-[#242424] px-3 py-3 rounded-[76px] -bottom-16 md:-bottom-16 flex gap-2 absolute text-xs md:text-base jost text-white font-medium">
-            {["Experience", "Design"].map((item) => (
-              <button
-                key={item}
-                className={`px-6 py-2 uppercase rounded-[59px] transition-all duration-300 ${
-                  active === item
-                    ? "bg-[#060ebb] text-white"
-                    : "bg-black text-[#C9C9C9] hover:bg-[#174DD5] hover:text-white"
-                }`}
-                onClick={() => setActive(item)}
-              >
-                {item}
-              </button>
-            ))}
-          </div>
+    <div className="flex flex-col items-center md:items-start w-full py-32 md:px-20 relative overflow-visible transition-all duration-500">
+      <div className="absolute inset-0 opacity-10 pointer-events-none" style={{ backgroundImage: `url(${grid})`, backgroundSize: "cover" }} />
+      
+      <div className="flex items-center md:items-stretch relative flex-col -space-y-16 uppercase z-[100] text-[108px] font-[1000] text-[#F4ECE0] alinsa mb-10">
+        <div className="xl:flex hidden relative">
+          <h1 className="z-[110]">Our</h1>
+          <img src={wiresm} className="-ml-2 mt-8 w-[80px] h-[80px] object-cover" alt="" />
+          <img src={plugservicesleft} className="absolute w-full left-52 -top-28 scale-[1.2] z-[100]" alt="Left Plug" />
+          <img ref={plugRightRef} src={plugservicesright} className="absolute w-full scale-[1.2] -right-[20%] -top-28 z-[90]" alt="Right Plug" />
         </div>
+        <h1 className="xl:block hidden z-[110]">Services</h1>
+        
+        <div className="bg-[#242424] px-3 py-3 rounded-[76px] flex gap-2 absolute -bottom-16 text-base jost text-white font-medium z-[120]">
+          {["Experience", "Design"].map((item) => (
+            <button key={item} className={`px-6 py-2 uppercase rounded-[59px] transition-all duration-300 ${active === item ? "bg-[#060ebb]" : "bg-black text-[#C9C9C9]"}`} onClick={() => setActive(item)}>
+              {item}
+            </button>
+          ))}
+        </div>
+      </div>
 
-        <svg
-          className="line absolute xl:block hidden left-1/2 xl:ml-[8%] lg:ml-[10%] overflow-visible mt-9 transform -translate-x-1/2"
-          width="600"
+      {/* FIXED SVG LINE LOGIC */}
+      <div className="hidden xl:block relative w-full -mt-[140px] overflow-visible" style={{ height: svgHeight }}>
+       <svg
+          className="overflow-visible absolute left-1/2 " 
+          width={vw * 0.5} 
           height={svgHeight}
-          viewBox={`0 0 600 ${svgHeight}`}
+          viewBox={`0 0 ${vw * 0.5} ${svgHeight}`}
           fill="none"
-          xmlns="http://www.w3.org/2000/svg"
         >
-          {/* Inactive Path (Gray) */}
-          <path
-            d="M0.200195 2.24512H268.2C287.056 2.24512 296.484 2.24512 302.342 8.10298C308.2 13.9608 308.2 23.3889 308.2 42.2451V2500.75"
-            stroke="#676767"
-            strokeWidth="4"
+          {/* Static Background Path */}
+          <path 
+            d={`M ${dynamicStartX} -120 H ${curveX - 20} c 15 0 20 5 20 20 V ${totalContentHeight}`} 
+            stroke="#242424" 
+            strokeWidth="4" 
+          />
+          
+          {/* Animated Active Path */}
+          <path 
+            ref={lineRef} 
+            d={`M ${dynamicStartX} -120 H ${curveX - 20} c 15 0 20 5 20 20 V ${totalContentHeight}`} 
+            stroke="#060ebb" 
+            strokeWidth="4" 
           />
 
-          {/* Active Path (Blue) */}
-          <path
-            ref={lineRef}
-            d="M0.200195 2.24512H268.2C287.056 2.24512 296.484 2.24512 302.342 8.10298C308.2 13.9608 308.2 23.3889 308.2 42.2451V2500.75"
-            stroke="#060ebb"
-            strokeWidth="4"
-          />
-
-          {/* Stops and Texts */}
-          <AnimatePresence>
-            {currentItems.map((item, i) => {
-              const isDesign = active.toLowerCase() === "design";
-              const dynamicCY = gap * (i + 1);
-              const finalCY = isDesign ? dynamicCY : item.cy;
-
-              return (
-                <motion.g
-                  key={active + i}
-                  className="!overflow-visible"
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  exit={{ opacity: 0, y: -20 }}
+          {currentItems.map((item, i) => {
+            const finalCY = (i + 1) * ITEM_SPACING - 50;
+            return (
+              <g key={active + i} className="overflow-visible">
+                <circle 
+                  ref={(el) => (stopsRef.current[i] = el)} 
+                  cx={curveX} 
+                  cy={finalCY} 
+                  r="6" 
+                  fill="#060ebb" 
+                />
+                <foreignObject 
+                  x={curveX -15} 
+                  y={finalCY - 25} 
+                  width="800" 
+                  height="400" 
+                  className={`label-text-${i} overflow-visible`}
                 >
-                  <motion.circle
-                    ref={(el) => (stopsRef.current[i] = el)}
-                    cx={item.cx + 8}
-                    cy={finalCY - 105}
-                    r="6"
-                    fill="blue"
-                    data-svg-origin="308 90"
-                  />
-
-                  <foreignObject
-                    x={item.cx - 400}
-                    y={finalCY - 120}
-                    width="400"
-                    height="200"
-                    className={`foreign-label !z-[700] label-text-${i} !overflow-visible`}
-                    style={{
-                      transform: "translate3d(0,0,0)",
-                      WebkitTransform: "translateZ(0)",
-                    }}
-                  >
-                    <motion.div
-                      initial={{ opacity: 0, x: -20 }}
-                      animate={{ opacity: 1, x: 0 }}
-                      exit={{ opacity: 0, x: 20 }}
-                      transition={{ duration: 0.5, delay: i * 0.1 }}
-                      style={{
-                        position: "relative",
-                        zIndex: 700 + i,
-                        WebkitBackfaceVisibility: "hidden",
-                      }}
-                    >
-                      <Label
-                        number={i + 1}
-                        className="text-white"
-                        title={item.label}
-                        description={item.dis}
-                        points={item.points}
-                        textRef={(el) => (textRefs.current[i] = el)}
-                      />
-                    </motion.div>
-                  </foreignObject>
-                </motion.g>
-              );
-            })}
-          </AnimatePresence>
+                   <Label title={item.label} description={item.dis} points={item.points} />
+                </foreignObject>
+              </g>
+            );
+          })}
         </svg>
-        <div className="xl:hidden w-full items-start text-left justify-center flex flex-col gap-28 mt-32">
-          {currentItems.map((item, i) => (
-            <motion.div
-              key={active + i}
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -20 }}
-              transition={{ duration: 0.5, delay: i * 0.1 }}
-              className="flex flex-col gap-4 px-4"
-            >
-              <div className="flex gap-4 items-start text-left">
-                <img src={svgser} alt="" className="w-6 h-6" />
-                <div>
-                  <h2 className="text-white text-2xl font-medium mb-2">
-                    {item.label}
-                  </h2>
+      </div>
 
-                  <p className="text-[#BFBFBF] text-base">{item.dis}</p>
-
-                  {/* NUMBERED POINTS */}
-                  <div className="mt-3 space-y-1">
-                    {item.points.map((point, index) => (
-                      <div key={index} className="flex gap-1">
-                        <span className="text-[#BFBFBF] font-semibold">
-                          {index + 1}.
-                        </span>
-                        <p className="text-[#BFBFBF] text-base">{point}</p>
-                      </div>
-                    ))}
-                  </div>
-                </div>
+      <div className="xl:hidden w-full flex flex-col gap-20 mt-32 px-4">
+        {currentItems.map((item, i) => (
+          <div key={i} className="flex gap-4">
+            <img src={svgser} alt="" className="w-6 h-6 mt-1" />
+            <div>
+              <h2 className="text-white text-2xl font-medium mb-2 uppercase">{item.label}</h2>
+              <p className="text-[#BFBFBF] mb-3">{item.dis}</p>
+              <div className="space-y-1">
+                {item.points.map((p, idx) => <p key={idx} className="text-[#BFBFBF] text-sm">{idx + 1}. {p}</p>)}
               </div>
-            </motion.div>
-          ))}
-        </div>
-      </div>
-    </>
-  );
-};
-const Label = ({ number, title, description, textRef, points = [] }) => {
-  return (
-    <div
-      class={`flex gap-4 items-start text-left jost ml-[26rem] w-[40vw] ${
-        number === 1 ? "text-white" : "text-[#242424]"
-      } px-4`}
-      ref={textRef}
-    >
-      <div
-        class={`font-[500] number-text text-3xl mb-2 ${
-          number === 1 ? "text-[#0000ff]" : ""
-        }`}
-      >
-        <svg
-          width="33"
-          height="32"
-          viewBox="0 0 33 32"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <g clip-path="url(#clip0_20_2512)">
-            <g clip-path="url(#clip1_20_2512)">
-              <path
-                d="M19.5509 28.6184L21.5812 26.5881V20.9292H27.2401L29.2704 18.8989H19.5509V28.6184Z"
-                fill="#E3E1E6"
-              />
-              <path
-                d="M15.4759 1.01491C15.4759 3.95236 15.4759 12.016 15.4759 14.8238C12.7113 14.8238 4.54689 14.8238 1.66703 14.8238L0.651886 15.8389L1.66703 16.8541H15.4759C15.4759 17.9196 15.4759 29.2807 15.4759 30.663L16.4911 31.6781L17.5063 30.663V16.8541H31.3151L32.3303 15.8389L31.3151 14.8238C29.8752 14.8238 18.615 14.8238 17.5063 14.8238V1.01491L16.4911 -0.000244141L15.4759 1.01491Z"
-                fill="#E3E1E6"
-              />
-              <path
-                d="M3.71173 18.8989L5.74203 20.9292H11.401V26.5881L13.4312 28.6184V18.8989H3.71173Z"
-                fill="#E3E1E6"
-              />
-              <path
-                d="M13.4312 12.7793V3.05981L11.401 5.09011V10.7491H5.74203L3.71173 12.7793H13.4312Z"
-                fill="#E3E1E6"
-              />
-              <path
-                d="M19.5509 12.7793H29.2704L27.2401 10.7491H21.5812V5.09011L19.5509 3.05981V12.7793Z"
-                fill="#E3E1E6"
-              />
-            </g>
-          </g>
-          <defs>
-            <clipPath id="clip0_20_2512">
-              <rect
-                width="32"
-                height="32"
-                fill="white"
-                transform="translate(0.330017)"
-              />
-            </clipPath>
-            <clipPath id="clip1_20_2512">
-              <rect
-                width="32"
-                height="32"
-                fill="white"
-                transform="translate(0.330017)"
-              />
-            </clipPath>
-          </defs>
-        </svg>
-      </div>
-
-      <div>
-        <h1
-          class={`text-[22px] jost uppercase font-[500] tracking-[0%] mb-2 ${
-            number === 1 ? "text-white" : ""
-          }`}
-        >
-          {title}
-        </h1>
-        <p
-          class={`text-[16px] jost w-[80%] font-[500] tracking-[0%] leading-[21px] ${
-            number === 1 ? "text-[#bfbfbf]" : ""
-          }`}
-        >
-          {description}
-        </p>
-
-        <div className="mt-3">
-          {points?.map((point, index) => (
-            <p
-              key={index}
-              className="jost  text-[14px] font-[400] tracking-[0%] leading-[21px]"
-            >
-              {index + 1}. {point}
-            </p>
-          ))}
-        </div>
+            </div>
+          </div>
+        ))}
       </div>
     </div>
   );
 };
+
+const Label = ({ title, description, points }) => (
+  <div className="flex gap-6 items-start text-left jost max-w-[550px]">
+    <div className="mt-2 shrink-0">
+      <svg width="28" height="28" viewBox="0 0 33 32" className="num-icon" fill="#676767">
+         <path d="M19.5509 28.6184L21.5812 26.5881V20.9292H27.2401L29.2704 18.8989H19.5509V28.6184Z" />
+         <path d="M15.4759 1.01491C15.4759 3.95236 15.4759 12.016 15.4759 14.8238C12.7113 14.8238 4.54689 14.8238 1.66703 14.8238L0.651886 15.8389L1.66703 16.8541H15.4759C15.4759 17.9196 15.4759 29.2807 15.4759 30.663L16.4911 31.6781L17.5063 30.663V16.8541H31.3151L32.3303 15.8389L31.3151 14.8238C29.8752 14.8238 18.615 14.8238 17.5063 14.8238V1.01491L16.4911 -0.000244141L15.4759 1.01491Z" />
+         <path d="M3.71173 18.8989L5.74203 20.9292H11.401V26.5881L13.4312 28.6184V18.8989H3.71173Z" />
+         <path d="M13.4312 12.7793V3.05981L11.401 5.09011V10.7491H5.74203L3.71173 12.7793H13.4312Z" />
+         <path d="M19.5509 12.7793H29.2704L27.2401 10.7491H21.5812V5.09011L19.5509 3.05981V12.7793Z" />
+      </svg>
+    </div>
+    <div>
+      <h1 className="text-[24px] uppercase font-bold text-[#676767] mb-2 tracking-wide">{title}</h1>
+      <p className="text-[16px] text-[#676767] leading-relaxed mb-4 w-full">{description}</p>
+      <div className="space-y-1">
+        {points.map((p, i) => (
+          <p key={i} className="text-[14px] text-[#676767] font-medium">
+            <span className="mr-2">{i + 1}.</span>{p}
+          </p>
+        ))}
+      </div>
+    </div>
+  </div>
+);
+
+export default Contact;
