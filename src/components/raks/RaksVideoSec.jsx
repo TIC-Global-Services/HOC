@@ -1,6 +1,6 @@
 import { useRef } from "react";
 import useMobileVideoFix from "../../hooks/useMobileVideo";
-import video from "../../assets/client/raks/vdo/Raks3.mp4";
+import video from "../../assets/client/raks/vdo/Raks Animation V3.mp4";
 
 const RaksVideoSec = () => {
   const videoRef = useRef(null);
@@ -8,8 +8,7 @@ const RaksVideoSec = () => {
   useMobileVideoFix(videoRef);
 
   return (
-    <section className="w-full h-[30vh] md:h-screen relative overflow-hidden bg-white">
-
+    <section className="w-full h-[40vh] md:h-auto relative overflow-hidden bg-white">
       <video
         ref={videoRef}
         src={video}
@@ -22,15 +21,13 @@ const RaksVideoSec = () => {
         disablePictureInPicture
         controlsList="nodownload nofullscreen noremoteplayback"
         className="
-          absolute inset-0
-          w-full h-full
-          object-cover md:object-contain
-          scale-[1.02] md:scale-[1.01]
-          -translate-y-[1px]
-          bg-white
-        "
+        w-full
+        h-[40vh] md:h-auto
+        object-cover md:object-fill
+        block
+      "
+        style={{ transform: "translateZ(0)" }}
       />
-
     </section>
   );
 };
