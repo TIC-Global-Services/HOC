@@ -53,7 +53,7 @@ const SyedHero = () => {
           <div className="w-full h-full flex flex-col items-center justify-center gap-3 md:gap-6 px-4 text-center md:text-left">
             <h1
               className="font-[1000] alinsa text-[#060EBB] leading-none tracking-tight"
-              style={{ fontSize: "clamp(42px, 18vh, 180px)" }}
+              style={{ fontSize: "clamp(42px, 16vh, 180px)" }}
             >
               SYED BAWKHER
             </h1>

@@ -351,7 +351,7 @@ const MainServices = () => {
 
   return (
     <div className="flex flex-col items-center md:items-start w-full py-32 md:px-20 relative overflow-hidden transition-all duration-500">
-      <div className="absolute inset-0 opacity-10 pointer-events-none" style={{ backgroundImage: `url(${grid})`, backgroundSize: "cover" }} />
+      <div className="absolute inset-0 opacity-10 pointer-events-none" style={{ backgroundImage: `url(${grid})`, backgroundSize: "contain" }} />
       
       <div className="flex items-center md:items-stretch relative flex-col -space-y-16 uppercase z-[100] text-[108px] font-[1000] text-[#F4ECE0] alinsa mb-10">
         <div className="xl:flex hidden relative">
