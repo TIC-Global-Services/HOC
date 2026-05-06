@@ -31,7 +31,8 @@ const categories = {
     },
     {
       label: "Motion & CGI",
-      dis: "The brand in motion | Moving image and digital craft that extends the brand into screen and space",
+      dis:[ "The brand in motion | Moving image and digital", <br />,
+       "craft that extends the brand into screen and space"],
       points: [
         "Motion Identity & Animated Brand Systems",
         "CGI & 3D World-Building",
@@ -85,7 +86,7 @@ const categories = {
     },
     {
       label: "Analogue Branding Tools",
-      dis: "Designing tactile brand materials that bring your identity into the real world, via multisensory mediums.",
+      dis: ["Designing tactile brand materials that bring your identity into the real world, via multisensory",<br />, "mediums."],
       points: [
         "Print & Publication Design",
         "Packaging & Product Communication",
@@ -450,11 +451,11 @@ const Label = ({ title, description, points }) => (
       </svg>
     </div>
     <div>
-      <h1 className=" text-[24px] uppercase font-bold text-[#676767] mb-2 tracking-tight">{title}</h1>
-      <p className=" text-[16px] text-[#676767] leading-relaxed mb-4 w-full">{description}</p>
+      <h1 className=" text-[30px] uppercase font-[500] text-[#676767] leading-[30px] mb-2 tracking-tight">{title}</h1>
+      <p className=" text-[20px] text-[#676767] leading-[21px] tracking-normal mb-4 w-full">{description}</p>
       <div className="space-y-1">
         {points.map((p, i) => (
-          <p key={i} className="text-[14px] text-[#676767] font-medium">
+          <p key={i} className="text-[18px] text-[#676767] tracking-normal leading-[21px] font-medium">
             <span className="mr-2">{i + 1}.</span>{p}
           </p>
         ))}
