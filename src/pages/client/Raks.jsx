@@ -18,42 +18,31 @@ const Raks = () => {
   return (
     <div key={location.pathname}>
       <Navbar />
-      {/* Mob */}
-      <div className="md:hidden">
-        <MobRaksHero />
-      </div>
 
-      {/* Desktop */}
-      <div className="md:block hidden">
-        <RaksHero />
-      </div>
+      {/* Hero */}
+      <div className="md:hidden"><MobRaksHero /></div>
+      <div className="md:block hidden"><RaksHero /></div>
+
       <RaksInstitutionVideo />
-      {/* Mob Layout */}
-      <div className="md:hidden">
-        <MobRaksLearn />
-      </div>
-      {/* Desktop Layout */}
-      <div className="md:block hidden">
-        <RaksLearning />
-      </div>
+
+      {/* Learning */}
+      <div className="md:hidden"><MobRaksLearn /></div>
+      <div className="md:block hidden"><RaksLearning /></div>
+
       <RaksVideoSec />
 
-      <div className="md:hidden block">
+      {/*  mobile-only sections grouped in one wrapper */}
+      <div className="md:hidden">
         <MobRaksWanna />
-      </div>
-
-      <div className="md:hidden">
-      <RaksInstaImg />
-      </div>
-
-      {/* Mobile */}
-      <div className="md:hidden">
+        <RaksInstaImg />
         <MobRaksOwnTheCourt />
       </div>
-      {/* Desktop */}
-      <div className="hidden md:block">
-      <RaksOwnTheCourt />
+
+      {/* Desktop section pulled up to close gap after video */}
+      <div className="hidden md:block -mt-[3px]">
+        <RaksOwnTheCourt />
       </div>
+
       <Footer />
     </div>
   );

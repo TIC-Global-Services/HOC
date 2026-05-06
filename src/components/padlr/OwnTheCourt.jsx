@@ -56,7 +56,7 @@ const ROWS = [
     { t: "spring", x: 85, s: 222, r: 0, d: 2.34 },
   ],
 ];
-const ROW_Y = ["12vh", "30vh", "45vh", "60vh", "70vh", "85vh"];
+const ROW_Y = ["18vh", "30vh", "45vh", "60vh", "70vh", "85vh"];
 
 export default function OwnTheCourt() {
   const containerRef = useRef(null);

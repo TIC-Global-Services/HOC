@@ -326,10 +326,6 @@ const MainServices = () => {
           gsap.to(`.label-text-${index} h1`, { color: "#F2F2F2", duration: 0.3 });
           gsap.to(`.label-text-${index} p`, { color: "#BFBFBF", duration: 0.3 });
           gsap.to(`.label-text-${index} span`, { color: "#BFBFBF", duration: 0.3 });
-          gsap.to(`.label-text-${index} .num-icon path`, {
-            attr: { fill: "#060ebb" },
-            duration: 0.3,
-          });
         },
         onLeaveBack: () => {
           gsap.to([
@@ -337,10 +333,6 @@ const MainServices = () => {
             `.label-text-${index} p`,
             `.label-text-${index} span`,
           ], { color: "#676767", duration: 0.3 });
-          gsap.to(`.label-text-${index} .num-icon path`, {
-            attr: { fill: "#676767" },
-            duration: 0.3,
-          });
         },
       });
     });
@@ -406,7 +398,7 @@ const MainServices = () => {
                   fill="#060ebb" 
                 />
                 <foreignObject 
-                  x={curveX + 20} 
+                  x={curveX + 50} 
                   y={finalCY - 20} 
                   width="600" 
                   height="400" 
@@ -440,8 +432,8 @@ const MainServices = () => {
 
 const Label = ({ title, description, points }) => (
   <div className="flex gap-4 items-start text-left jost max-w-[500px]">
-    <div className="mt-2 shrink-0">
-      <svg width="28" height="28" viewBox="0 0 33 32" className="num-icon" fill="#676767">
+    <div className="shrink-0">
+      <svg width="32" height="32" viewBox="0 0 33 30" className="num-icon" fill="#ffffff">
          <path d="M19.5509 28.6184L21.5812 26.5881V20.9292H27.2401L29.2704 18.8989H19.5509V28.6184Z" />
          <path d="M15.4759 1.01491C15.4759 3.95236 15.4759 12.016 15.4759 14.8238C12.7113 14.8238 4.54689 14.8238 1.66703 14.8238L0.651886 15.8389L1.66703 16.8541H15.4759C15.4759 17.9196 15.4759 29.2807 15.4759 30.663L16.4911 31.6781L17.5063 30.663V16.8541H31.3151L32.3303 15.8389L31.3151 14.8238C29.8752 14.8238 18.615 14.8238 17.5063 14.8238V1.01491L16.4911 -0.000244141L15.4759 1.01491Z" />
          <path d="M3.71173 18.8989L5.74203 20.9292H11.401V26.5881L13.4312 28.6184V18.8989H3.71173Z" />
@@ -450,7 +442,7 @@ const Label = ({ title, description, points }) => (
       </svg>
     </div>
     <div>
-      <h1 className=" text-[30px] uppercase font-[500] text-[#676767] leading-[30px] mb-2 tracking-tight">{title}</h1>
+      <h1 className=" text-[30px] uppercase font-[500] text-[#676767] leading-[30px] mb-4 tracking-tight">{title}</h1>
       <p className=" text-[20px] text-[#676767] leading-[21px] tracking-normal mb-4 w-full">{description}</p>
       <div className="space-y-1">
         {points.map((p, i) => (
