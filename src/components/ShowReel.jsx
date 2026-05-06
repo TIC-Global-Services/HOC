@@ -1,25 +1,26 @@
 import React, { useRef } from "react";
-import showReel from "../assets/showReel.mp4";
 import useMobileVideoFix from "../hooks/useMobileVideo";
 
 const ShowReel = () => {
   const videoRef = useRef(null);
-        
-      useMobileVideoFix(videoRef);
+
+  useMobileVideoFix(videoRef);
+
   return (
     <section className="w-full h-auto md:h-screen overflow-hidden relative">
-
       <video
-      ref={videoRef}
-        src={showReel}
+        ref={videoRef}
         autoPlay
         muted
         loop
-        controls={false}
         playsInline
+        webkit-playsinline="true"
+        preload="auto"
+        controls={false}
         className="w-full h-full object-contain md:object-cover"
-      />
-
+      >
+        <source src="/video/showReel.mp4" type="video/mp4" />
+      </video>
     </section>
   );
 };

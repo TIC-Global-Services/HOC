@@ -344,7 +344,7 @@ const ThirdSection = () => {
   }, []);
 
   return (
-    <div className="relative mt-20 md:-mt-40 md:flex md:min-h-[80vh]">
+    <div className="relative mt-0 md:-mt-40 md:flex md:min-h-[80vh]">
       {/* LEFT — VIDEO */}
       <div className="w-full md:absolute md:left-0 md:top-0 md:h-full md:w-[50%]">
         <video

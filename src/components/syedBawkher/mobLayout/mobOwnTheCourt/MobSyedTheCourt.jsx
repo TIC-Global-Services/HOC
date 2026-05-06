@@ -61,19 +61,19 @@ const ROWS = [
   ],
 ];
 
-const ROW_Y = ["15vh", "25vh", "35vh", "45vh", "55vh", "65vh", "75vh"];
+const ROW_Y = ["21vh", "30vh", "40vh", "50vh", "60vh", "70vh", "80vh"];
 
 export default function MobSyedTheCourt() {
   return (
     <section
-      className="w-full h-[80vh] relative overflow-hidden"
+      className="w-full h-[85vh] relative overflow-hidden"
       style={{
         backgroundImage: `url(${grid})`,
         backgroundSize: "cover",
       }}
     >
       {/* HEADING */}
-      <h2 className="absolute left-1/2 -translate-x-1/2 top-[60px] z-10 salo text-[#262666] text-[30px] leading-none uppercase text-center">
+      <h2 className="absolute left-1/2 -translate-x-1/2 top-[70px] z-10 salo text-[#262666] text-[30px] leading-none uppercase text-center">
         REFINED IDENTITY
       </h2>
 
@@ -96,7 +96,7 @@ export default function MobSyedTheCourt() {
                 <img
                   src={IMGS[item.t]}
                   alt=""
-                  width={item.s * 0.8}
+                  width={item.s * 0.7}
                   draggable={false}
                 />
               </div>
