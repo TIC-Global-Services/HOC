@@ -77,7 +77,7 @@ const Landing = () => {
           </Link>
           <div className="text-[14px] md:text-[19px] font-semibold hidden md:flex gap-4 md:gap-14 items-center">
             <Link to={"./client"} className="hover:text-white/50">
-              <h1>CLIENT</h1>
+              <h1>CLIENTS</h1>
             </Link>
             <Link to={"./Services"} className="hover:text-white/50">
               <h1>SERVICES</h1>

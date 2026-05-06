@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import MobileNav from "../pages/MobileNav";
-import { useLocation, useNavigate } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import gsap from "gsap";
@@ -25,8 +25,8 @@ const Navbar = () => {
         setIsSection2(scrollY > firstSectionHeight * 0.2);
         setIsFixed(true);
       } else {
-        setIsSection2(true); 
-        setIsFixed(false);  
+        setIsSection2(true);
+        setIsFixed(false);
       }
     };
 
@@ -43,19 +43,19 @@ const Navbar = () => {
   };
 
   const handleNav = (path) => {
-  ScrollTrigger.getAll().forEach((t) => t.kill(true));
-  gsap.killTweensOf("*");
+    ScrollTrigger.getAll().forEach((t) => t.kill(true));
+    gsap.killTweensOf("*");
 
-  if (location.pathname === path) {
-    window.scrollTo({
-      top: 0,
-      left: 0,
-      behavior: "instant",
-    });
-    return;
-  }
-  navigate(path);
-};
+    if (location.pathname === path) {
+      window.scrollTo({
+        top: 0,
+        left: 0,
+        behavior: "instant",
+      });
+      return;
+    }
+    navigate(path);
+  };
 
   return (
     <>
@@ -74,7 +74,6 @@ const Navbar = () => {
           } transition-all py-2 duration-700`}
         >
           <div className="flex py-2 jost px-4 md:px-10 justify-between items-center">
-
             {/* Logo */}
             <img
               src={logo2}
@@ -85,7 +84,6 @@ const Navbar = () => {
 
             {/* Navigation Links */}
             <div className="text-[14px] md:text-[19px] font-semibold flex gap-4 md:gap-14 items-center">
-
               <h1
                 onClick={() => handleNav("/client")}
                 className={`cursor-pointer hover:text-black/50 ${
@@ -107,6 +105,17 @@ const Navbar = () => {
               >
                 SERVICES
               </h1>
+
+              <Link
+                to={"/Experience"}
+                className={`hover:text-black/50 ${
+                  isActiveRoute("/Experience")
+                    ? "text-[#060ebb] border-b-2 border-[#060ebb]"
+                    : ""
+                }`}
+              >
+                <h1>EXPERIENCE LAB</h1>
+              </Link>
 
               <h1
                 onClick={() => handleNav("/ethos")}
@@ -164,7 +173,6 @@ const Navbar = () => {
                 />
               </motion.div>
             </div>
-
           </div>
         </div>
       </div>

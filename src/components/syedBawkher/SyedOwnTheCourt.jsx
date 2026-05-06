@@ -13,49 +13,54 @@ import img6 from "../../assets/client/syedBawkher/img/signatureImg.png";
 const IMGS = { circleB: img1, elpairing: img2, textural: img3, circleW: img4, elegant: img5, signature: img6 };
 
 const ROWS = [
-  [{ t: "textural", x: 62, s: 164, r: 0, d: 0.05 }],
-  [{ t: "circleB", x: 62, s: 164, r: 0, d: 0.05 }],
+  [{ t: "textural", x: 62, s: 220, r: 0, d: 0.05 }],
+
   [
-    { t: "elpairing", x: 50, s: 222, r: -30, d: 0.22 },
-    { t: "circleW", x: 63, s: 144, r: 0, d: 0.32 },
-    { t: "signature", x: 70, s: 222, r: 0, d: 0.22 },
+    { t: "elpairing", x: 50, s: 236, r: -30, d: 0.22 },
+    { t: "signature", x: 70, s: 236, r: 30, d: 0.22 },
+  ],
+
+  [
+    { t: "circleB", x: 55, s: 161, r: 0, d: 0.05 },
+    { t: "circleW", x: 65, s: 154, r: 0, d: 0.32 },
+  ],
+  
+  [
+    { t: "circleB", x: 40, s: 164, r: -18, d: 0.46 },
+    { t: "circleW", x: 50, s: 99, r: 8, d: 0.56 },
+    { t: "textural", x: 60, s: 220, r: 0, d: 0.66 },
+    { t: "signature", x: 75, s: 200, r: 8, d: 0.56 },
   ],
   [
-    { t: "circleB", x: 44, s: 164, r: -18, d: 0.46 },
-    { t: "circleW", x: 59, s: 99, r: 8, d: 0.56 },
-    { t: "textural", x: 73, s: 144, r: 0, d: 0.66 },
-    { t: "signature", x: 80, s: 99, r: 8, d: 0.56 },
+    { t: "elegant", x: 20, s: 236, r: 26, d: 0.8 },
+    { t: "elpairing", x: 35, s: 164, r: -20, d: 0.9 },
+    { t: "circleB", x: 47, s: 164, r: 5, d: 1.0 },
+    { t: "textural", x: 60, s: 220, r: 0, d: 1.1 },
+    { t: "signature", x: 74, s: 200, r: 0, d: 0.8 },
+    { t: "circleW", x: 85, s: 164, r: -20, d: 0.9 },
   ],
   [
-    { t: "elegant", x: 37, s: 222, r: 26, d: 0.8 },
-    { t: "elpairing", x: 51, s: 164, r: -20, d: 0.9 },
-    { t: "circleB", x: 64, s: 99, r: 5, d: 1.0 },
-    { t: "textural", x: 77, s: 222, r: 0, d: 1.1 },
-    { t: "signature", x: 83, s: 144, r: 26, d: 0.8 },
-    { t: "circleW", x: 90, s: 164, r: -20, d: 0.9 },
+    { t: "elpairing", x: 10, s: 164, r: -26, d: 1.22 },
+    { t: "circleW", x: 20, s: 99, r: 12, d: 1.32 },
+    { t: "textural", x: 35, s: 220, r: 0, d: 1.42 },
+    { t: "signature", x: 50, s: 161, r: -24, d: 1.52 },
+    { t: "elegant", x: 65, s: 220, r: 18, d: 1.62 },
+    { t: "signature", x: 78, s: 200, r: 5, d: 2.14 },
+    { t: "circleB", x: 90, s: 161, r: -24, d: 1.52 },
+   
   ],
   [
-    { t: "elpairing", x: 30, s: 164, r: -26, d: 1.22 },
-    { t: "circleW", x: 43, s: 99, r: 12, d: 1.32 },
-    { t: "textural", x: 55, s: 222, r: 0, d: 1.42 },
-    { t: "signature", x: 66, s: 144, r: -24, d: 1.52 },
-    { t: "elegant", x: 78, s: 164, r: 18, d: 1.62 },
-    { t: "signature", x: 84, s: 99, r: 5, d: 2.14 },
-    { t: "circleB", x: 87, s: 144, r: -24, d: 1.52 },
-    { t: "textural", x: 95, s: 99, r: 5, d: 2.14 },
-  ],
-  [
-    { t: "circleB", x: 5, s: 144, r: 0, d: 1.74 },
-    { t: "signature", x: 15, s: 222, r: -10, d: 1.84 },
-    { t: "elpairing", x: 32, s: 144, r: 0, d: 1.94 },
+    { t: "circleB", x: 5, s: 161, r: 0, d: 1.74 },
+    { t: "signature", x: 18, s: 236, r: -10, d: 1.84 },
+    { t: "elpairing", x: 32, s: 161, r: 0, d: 1.94 },
     { t: "circleW", x: 46, s: 164, r: 0, d: 2.04 },
-    { t: "textural", x: 60, s: 99, r: 5, d: 2.14 },
-    { t: "elegant", x: 66, s: 222, r: 0, d: 2.24 },
+    { t: "textural", x: 60, s: 220, r: 5, d: 2.14 },
+    { t: "elegant", x: 66, s: 236, r: 0, d: 2.24 },
     { t: "circleW", x: 82, s: 164, r: 0, d: 2.34 },
-    { t: "elpairing", x: 92, s: 222, r: 0, d: 2.34 },
+    { t: "elpairing", x: 92, s: 236, r: 0, d: 2.34 },
   ],
 ];
-const ROW_Y = ["25vh", "40vh", "50vh", "60vh", "70vh", "80vh", "90vh"];
+const ROW_Y = ["10vh", "22vh", "35vh", "50vh", "67vh", "78vh", "90vh"];
 
 export default function SyedOwnTheCourt() {
   const containerRef = useRef(null);

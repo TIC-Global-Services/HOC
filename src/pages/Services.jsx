@@ -153,10 +153,10 @@ const Contact = () => {
                     : ""
                 }`}
               >
-                <h1>CLIENT</h1>
+                <h1>CLIENTS</h1>
               </Link>
               <Link
-                to={"/services"}
+                to={"/Services"}
                 className={`hover:text-black/50 ${
                   isActiveRoute("/Services")
                     ? "text-[#060ebb] border-b-2 border-[#060ebb]"
@@ -166,7 +166,7 @@ const Contact = () => {
                 <h1>SERVICES</h1>
               </Link>
               <Link
-                to={"/experience"}
+                to={"/Experience"}
                 className={`hover:text-black/50 ${
                   isActiveRoute("/Experience")
                     ? "text-[#060ebb] border-b-2 border-[#060ebb]"
@@ -176,7 +176,7 @@ const Contact = () => {
                 <h1>EXPERIENCE LAB</h1>
               </Link>
               <Link
-                to={"/ethos"}
+                to={"/Ethos"}
                 className={`hover:text-black/50 ${
                   isActiveRoute("/Ethos")
                     ? "text-[#060ebb] border-b-2 border-[#060ebb]"
@@ -186,7 +186,7 @@ const Contact = () => {
                 <h1>ETHOS</h1>
               </Link>
               <Link
-                to={"/careers"}
+                to={"/Careers"}
                 className={`hover:text-black/50 ${
                   isActiveRoute("/Careers")
                     ? "text-[#060ebb] border-b-2 border-[#060ebb]"
@@ -196,7 +196,7 @@ const Contact = () => {
                 <h1>CAREERS</h1>
               </Link>
             </div>
-            <Link to={"/contact"}>
+            <Link to={"/Contact"}>
               <motion.div
                 className={`py-2 px-4 rounded-full relative text-[12px] md:text-[13px] font-semibold flex items-center cursor-pointer ${
                   isToggled
@@ -241,6 +241,8 @@ const Contact = () => {
     </>
   );
 };
+
+export default Contact;
 
 const MainServices = () => {
   const [active, setActive] = useState("Experience");
@@ -442,7 +444,7 @@ const Label = ({ title, description, points }) => (
       </svg>
     </div>
     <div>
-      <h1 className=" text-[30px] uppercase font-[500] text-[#676767] leading-[30px] mb-4 tracking-tight">{title}</h1>
+      <h1 className=" text-[30px] uppercase font-[500] text-[#676767] leading-[35px] mb-4 tracking-tight">{title}</h1>
       <p className=" text-[20px] text-[#676767] leading-[21px] tracking-normal mb-4 w-full">{description}</p>
       <div className="space-y-1">
         {points.map((p, i) => (
@@ -455,4 +457,3 @@ const Label = ({ title, description, points }) => (
   </div>
 );
 
-export default Contact;

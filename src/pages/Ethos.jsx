@@ -81,6 +81,16 @@ const Ethos = () => {
               </Link>
               <div className="text-[14px] md:text-[19px] font-semibold flex gap-4 md:gap-14 items-center">
                 <Link
+                  to={"/client"}
+                  className={`hover:text-black/50 ${
+                    isActiveRoute("/Services")
+                      ? "text-[#060ebb] border-b-2 border-[#060ebb]"
+                      : ""
+                  }`}
+                >
+                  <h1>CLIENTS</h1>
+                </Link>
+                <Link
                   to={"/Services"}
                   className={`hover:text-black/50 ${
                     isActiveRoute("/Services")

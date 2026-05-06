@@ -28,7 +28,7 @@ const MOBILE_NAV_ITEMS = [
   },
   {
     id: 4,
-    navTitle: "Client",
+    navTitle: "Clients",
     path: "/client"
   },
   {

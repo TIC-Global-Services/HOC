@@ -77,7 +77,7 @@ const Experience = () => {
                       : ""
                   }`}
                 >
-                  <h1>CLIENT</h1>
+                  <h1>CLIENTS</h1>
                 </Link>
                 <Link
                   to={"/Services"}
