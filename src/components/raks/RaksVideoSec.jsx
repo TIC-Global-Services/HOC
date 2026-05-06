@@ -8,7 +8,10 @@ const RaksVideoSec = () => {
   useMobileVideoFix(videoRef);
 
   return (
-    <section className="w-full h-[40vh] md:h-auto relative overflow-hidden bg-white">
+    <section
+      className="w-full relative bg-white -mb-[2px]"
+      style={{ fontSize: 0, lineHeight: 0 }}
+    >
       <video
         ref={videoRef}
         src={video}
@@ -20,13 +23,12 @@ const RaksVideoSec = () => {
         controls={false}
         disablePictureInPicture
         controlsList="nodownload nofullscreen noremoteplayback"
-        className="
-        w-full
-        h-[40vh] md:h-auto
-        object-cover md:object-fill
-        block
-      "
-        style={{ transform: "translateZ(0)" }}
+        className="w-full h-[40vh] md:w-full md:h-auto block"
+        style={{
+          transform: "translateZ(0)",
+          display: "block",
+          verticalAlign: "bottom",
+        }}
       />
     </section>
   );

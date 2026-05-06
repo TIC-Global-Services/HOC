@@ -251,7 +251,7 @@ const MainServices = () => {
   const currentItems = categories[active.toLowerCase()] || [];
   const ITEM_SPACING = active === "Experience" ? 450 : 380;
   const totalContentHeight = currentItems.length * ITEM_SPACING;
-  const svgHeight = totalContentHeight + 100;
+  const svgHeight = totalContentHeight - 50;
 
   const [vw, setVw] = useState(window.innerWidth);
 
@@ -285,70 +285,69 @@ const MainServices = () => {
   useEffect(() => {
   if (!lineRef.current) return;
 
+  stopsRef.current = stopsRef.current.slice(0, currentItems.length);
+
   const ctx = gsap.context(() => {
     const GreenLine = lineRef.current;
     const length = GreenLine.getTotalLength();
 
-    // Set initial state
     gsap.set(GreenLine, {
       strokeDasharray: length,
       strokeDashoffset: length,
     });
 
-    // Animate with proper reverse support
     gsap.to(GreenLine, {
       strokeDashoffset: 0,
       ease: "none",
       scrollTrigger: {
-        trigger: GreenLine.parentElement, 
-        start: "top bottom",             
+        trigger: GreenLine.parentElement,
+        start: "top bottom",
         end: "bottom top",
-        scrub: 1,                       
+        scrub: 1,
         invalidateOnRefresh: true,
       },
     });
 
-    // Stops animation (clean + no conflicts)
     stopsRef.current.forEach((stop, index) => {
       if (!stop) return;
 
-      gsap.fromTo(
-        stop,
-        { scale: 0 },
-        {
-          scale: 1,
-          scrollTrigger: {
-            trigger: stop,
-            start: "top 85%",
-            end: "top 60%",
-            scrub: 1,
-            onEnter: () => {
-              gsap.to(`.label-text-${index} h1, .label-text-${index} .num-icon`, {
-                color: "#F2F2F2",
-                fill: "#060ebb",
-                duration: 0.3,
-              });
-              gsap.to(`.label-text-${index} p, .label-text-${index} span`, {
-                color: "#BFBFBF",
-                duration: 0.3,
-              });
-            },
-            onLeaveBack: () => {
-              gsap.to(`.label-text-${index} h1, .label-text-${index} p, .label-text-${index} .num-icon, .label-text-${index} span`, {
-                color: "#676767",
-                fill: "#676767",
-                duration: 0.3,
-              });
-            },
-          },
-        }
-      );
+      gsap.set(stop, {
+        scale: 1,
+        transformOrigin: "center center",
+        attr: { fill: "#060ebb" },
+      });
+
+      // Only handle label text color on scroll
+      ScrollTrigger.create({
+        trigger: stop,
+        start: "top 85%",
+        end: "top 60%",
+        onEnter: () => {
+          gsap.to(`.label-text-${index} h1`, { color: "#F2F2F2", duration: 0.3 });
+          gsap.to(`.label-text-${index} p`, { color: "#BFBFBF", duration: 0.3 });
+          gsap.to(`.label-text-${index} span`, { color: "#BFBFBF", duration: 0.3 });
+          gsap.to(`.label-text-${index} .num-icon path`, {
+            attr: { fill: "#060ebb" },
+            duration: 0.3,
+          });
+        },
+        onLeaveBack: () => {
+          gsap.to([
+            `.label-text-${index} h1`,
+            `.label-text-${index} p`,
+            `.label-text-${index} span`,
+          ], { color: "#676767", duration: 0.3 });
+          gsap.to(`.label-text-${index} .num-icon path`, {
+            attr: { fill: "#676767" },
+            duration: 0.3,
+          });
+        },
+      });
     });
   });
 
-  return () => ctx.revert(); 
+  return () => ctx.revert();
 }, [active]);
-
   return (
     <div className="flex flex-col items-center md:items-start w-full py-32 md:px-20 relative overflow-hidden transition-all duration-500">
       <div className="absolute inset-0 opacity-10 pointer-events-none" style={{ backgroundImage: `url(${grid})`, backgroundSize: "contain" }} />
@@ -396,7 +395,7 @@ const MainServices = () => {
           />
 
           {currentItems.map((item, i) => {
-            const finalCY = (i + 1) * ITEM_SPACING - 50;
+            const finalCY = (i + 1) * ITEM_SPACING - 300 ;
             return (
               <g key={active + i} className="overflow-visible">
                 <circle 
