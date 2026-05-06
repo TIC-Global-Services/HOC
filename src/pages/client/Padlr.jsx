@@ -17,54 +17,38 @@ import MobOwnTheCourt from "../../components/padlr/mobileLayout/padlrOwnTheCourt
 const Padlr = () => {
   return (
     <>
-      {/* Navbar */}
       <Navbar />
-      {/* Sections */}
-      {/* Mob */}
-      <div className="md:hidden">
-        <MobPadlrHero />
+
+      {/* Hero */}
+      <div className="md:hidden"><MobPadlrHero /></div>
+      <div className="md:block hidden"><PadlrHero /></div>
+
+      {/* Growth Engine */}
+      <div className="hidden md:block"><GrowthEngine /></div>
+      <div className="md:hidden"><MobGrowthEngine /></div>
+
+      {/* Videos grouped — no gap between them */}
+      <div className="flex flex-col">
+        <PadlrMotionVideoSec />
+        <PadlrVideoSec2 />
       </div>
 
-      {/* Desktop */}
-      <div className="md:block hidden">
-        <PadlrHero />
-      </div>
+      {/* Court Sky */}
+      <div className="hidden md:block"><CourtSky /></div>
 
-      <div className="hidden md:block">
-        <GrowthEngine />
-      </div>
-      <div className="md:hidden">
-        <MobGrowthEngine />
-      </div>
-
-      <PadlrMotionVideoSec />
-      <PadlrVideoSec2 />
-
-      <div className="hidden md:block">
-        <CourtSky />
-      </div>
+      {/* All mobile-only sections in ONE wrapper */}
       <div className="md:hidden">
         <MobCourtSky />
-      </div>
-
-      <div className="md:hidden block">
         <MobWannaKnowMore />
-      </div>
-
-      <div className="md:hidden block">
-      <MobPadlrInstaImg />
-      </div>
-
-      {/* Mob */}
-      <div className="md:hidden">
+        <MobPadlrInstaImg />
         <MobOwnTheCourt />
       </div>
 
       {/* Desktop */}
       <div className="hidden md:block">
-      <OwnTheCourt />
+        <OwnTheCourt />
       </div>
-      {/* Footer */}
+
       <Footer />
     </>
   );
