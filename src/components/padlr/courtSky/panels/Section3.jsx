@@ -2,7 +2,7 @@ import React, { useEffect, useRef } from "react";
 import gsap from "gsap";
 
 import grid from "../../../../assets/client/padlr/img/checkBg.png";
-import delightImg from "../../../../assets/client/padlr/img/courtPanelImg4.png";
+import highlyExplose from "../../../../assets/client/padlr/img/courtPanelImg.png";
 import topImg from "../../../../assets/client/padlr/img/courtPanelImg3.png";
 import paddle from "../../../../assets/client/padlr/img/batIcon.png";
 
@@ -64,7 +64,7 @@ const Section3 = () => {
         style={{
           top: "10%",
           left: "5%",
-          fontSize: "clamp(60px,12vw,200px)",
+          fontSize: "clamp(60px,25vh,200px)",
           lineHeight: "1",
         }}
       >
@@ -80,7 +80,7 @@ const Section3 = () => {
         style={{
           top: "0%",
           right: "10%",
-          width: "clamp(180px,20vw,360px)",
+          width: "clamp(180px,50vh,360px)",
           willChange: "transform",
         }}
       >
@@ -96,11 +96,11 @@ const Section3 = () => {
         style={{
           bottom: "0%",
           left: "0%",
-          width: "clamp(180px,20vw,360px)",
+          width: "clamp(180px,50vh,360px)",
           willChange: "transform",
         }}
       >
-        <img src={delightImg} alt="" className="w-full" />
+        <img src={highlyExplose} alt="" className="w-full" />
       </div>
 
       {/* TEXT */}
@@ -110,7 +110,7 @@ const Section3 = () => {
           bottom: "5%",
           left: "35%",
           width: "35%",
-          fontSize: "clamp(14px,2vw,26px)",
+          fontSize: "clamp(14px,4vh,26px)",
           lineHeight: "150%",
         }}
       >
@@ -119,7 +119,7 @@ const Section3 = () => {
         secondary typeface ensures{" "}
         <span
           className="salo text-[#8FC4E9]"
-          style={{ fontSize: "clamp(18px,3vw,40px)" }}
+          style={{ fontSize: "clamp(18px,6vh,40px)" }}
         >
           versatility and seamless
         </span>{" "}
@@ -133,9 +133,9 @@ const Section3 = () => {
         data-rotate="-8"
         className="absolute"
         style={{
-          bottom: "2%",
+          bottom: "5%",
           right: "5%",
-          width: "clamp(160px,14vw,300px)",
+          width: "clamp(140px,12vh,250px)",
           willChange: "transform",
         }}
       >

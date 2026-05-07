@@ -14,6 +14,7 @@ import plugservicesleft from "../assets/left.png";
 import plugservicesright from "../assets/right.png";
 import Footer from "./Footer";
 import MobileNav2 from "./MobileNav";
+import GridOverlay from "../components/GridOverlay";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -251,7 +252,7 @@ const MainServices = () => {
   const stopsRef = useRef([]);
 
   const currentItems = categories[active.toLowerCase()] || [];
-  const ITEM_SPACING = active === "Experience" ? 450 : 380;
+  const ITEM_SPACING = active === "Experience" ? 320 : 300;
   const totalContentHeight = currentItems.length * ITEM_SPACING;
   const svgHeight = totalContentHeight - 50;
 
@@ -344,7 +345,8 @@ const MainServices = () => {
 }, [active]);
   return (
     <div className="flex flex-col items-center md:items-start w-full py-32 md:px-20 relative overflow-hidden transition-all duration-500">
-      <div className="absolute inset-0 opacity-10 pointer-events-none" style={{ backgroundImage: `url(${grid})`, backgroundSize: "contain" }} />
+      {/* Grid Lines */}
+      <GridOverlay size={120} opacity={0.10}/>
       
       <div className="flex items-center md:items-stretch relative flex-col -space-y-16 uppercase z-[100] text-[108px] font-[1000] text-[#F4ECE0] alinsa mb-10">
         <div className="xl:flex hidden relative">
@@ -356,7 +358,7 @@ const MainServices = () => {
         <h1 className="xl:block hidden z-[110]">Services</h1>
         
         <div className="bg-[#242424] px-3 py-3 rounded-[76px] flex gap-2 absolute -bottom-16 text-base jost text-white font-medium z-[120]">
-          {["Experience", "Design"].map((item) => (
+          {["Design", "Experience" ].map((item) => (
             <button key={item} className={`px-6 py-2 uppercase rounded-[59px] transition-all duration-300 ${active === item ? "bg-[#060ebb]" : "bg-black text-[#C9C9C9]"}`} onClick={() => setActive(item)}>
               {item}
             </button>
@@ -389,7 +391,7 @@ const MainServices = () => {
           />
 
           {currentItems.map((item, i) => {
-            const finalCY = (i + 1) * ITEM_SPACING - 300 ;
+            const finalCY = (i + 1) * ITEM_SPACING - 200 ;
             return (
               <g key={active + i} className="overflow-visible">
                 <circle 

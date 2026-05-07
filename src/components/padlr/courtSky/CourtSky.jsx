@@ -9,6 +9,7 @@ import Section4 from "../courtSky/panels/Section4";
 import Section5 from '../courtSky/panels/Section5';
 import Section6 from '../courtSky/panels/Section6';
 import Section7 from '../courtSky/panels/Section7';
+import Section8 from "./panels/Section8";
 
 
 gsap.registerPlugin(ScrollTrigger);
@@ -21,7 +22,7 @@ export default function CourtSky() {
     if (window.innerWidth < 768) return;
 
     // Fixed calculation — avoids sub-pixel scrollWidth issues on wide screens
-    const totalScroll = window.innerWidth * 3.7;
+    const totalScroll = window.innerWidth * 4.4;
 
     const ctx = gsap.context(() => {
       gsap.to(trackRef.current, {
@@ -53,20 +54,20 @@ export default function CourtSky() {
         >
 
           {/* GROUP 1 — Section1 + Section2 = 200vw */}
-          <div className="flex h-full" style={{ width: "180vw", flexShrink: 0 }}>
+          <div className="flex h-full" style={{ width: "195vw", flexShrink: 0 }}>
             <div style={{ width: "50vw", flexShrink: 0, height: "100%" }}>
               <Section1 />
             </div>
             <div style={{ width: "100vw", flexShrink: 0, height: "100%" }}>
               <Section2 />
             </div>
-            <div style={{ width: "30vw", flexShrink: 0, height: "100%" }}>
+            <div style={{ width: "45vw", flexShrink: 0, height: "100%" }}>
               <Section5 />
             </div>
           </div>
 
           {/* GROUP 2 — Section3 + Section4 = 200vw */}
-          <div className="flex h-full" style={{ width: "290vw", flexShrink: 0 }}>
+          <div className="flex h-full" style={{ width: "340vw", flexShrink: 0 }}>
             <div style={{ width: "100vw", flexShrink: 0, height: "100%" }}>
               <Section3 />
             </div>
@@ -74,12 +75,16 @@ export default function CourtSky() {
               <Section4 />
             </div>
 
-            <div style={{ width: "60vw", flexShrink: 0, height: "100%" }}>
-              <Section6 />
+            <div style={{ width: "50vw", flexShrink: 0, height: "100%" }}>
+              <Section8 />
             </div>
 
             <div style={{ width: "50vw", flexShrink: 0, height: "100%" }}>
               <Section7 />
+            </div>
+
+            <div style={{ width: "60vw", flexShrink: 0, height: "100%" }}>
+              <Section6 />
             </div>
           </div>
 

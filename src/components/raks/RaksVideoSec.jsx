@@ -9,7 +9,7 @@ const RaksVideoSec = () => {
 
   return (
     <section
-      className="w-full relative bg-white -mb-[2px]"
+      className="w-full md:hidden relative bg-white -mb-[2px]"
       style={{ fontSize: 0, lineHeight: 0 }}
     >
       <video
@@ -23,7 +23,7 @@ const RaksVideoSec = () => {
         controls={false}
         disablePictureInPicture
         controlsList="nodownload nofullscreen noremoteplayback"
-        className="w-full h-[40vh] md:w-full md:h-auto block"
+        className="w-full h-[40vh]"
         style={{
           transform: "translateZ(0)",
           display: "block",

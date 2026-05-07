@@ -17,12 +17,12 @@ const Section8 = () => {
         <div className=" space-y-[clamp(10px,2vw,30px)] text-start">
           
           <h2 className="salo capitalize text-[#000085] tracking-tight leading-none
-            text-[clamp(30px,8vw,120px)]">
-            The Art of Growing Minds
+            text-[clamp(30px,20vh,120px)]">
+            The Art of <br /> Growing Minds
           </h2>
 
           <p className="jost capitalize font-[500] text-black leading-[160%] tracking-tight
-            text-[clamp(14px,2vw,26px)]">
+            text-[clamp(14px,4vh,26px)]">
             Haus of Chaos app branding exercise—an exploration of childhood and the Reggio Emilia philosophy. 
             Through playful geometries, modular systems, and <span className="md:text-[40px] salo text-[#000085]">expressive visuals</span>, 
             the identity balances clarity with imagination while remaining cohesive across institutions.

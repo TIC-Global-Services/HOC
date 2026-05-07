@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { AnimatedText, AnimatedWord, containerVariants } from "../reusable/TextAnimation";
-import grid from "../../assets/client/padlr/img/checkBg.png";
+import GridOverlay from "../GridOverlay";
 
 const GopalanHero = () => {
   return (
@@ -8,15 +8,14 @@ const GopalanHero = () => {
 
       {/* MAIN WRAPPER */}
       <div className="relative w-full max-w-[1600px] h-full">
+        
 
         {/* ───── LEFT PANEL ───── */}
         <div
-          className="relative h-full "
-          style={{
-            width: "55vw",
-            backgroundImage: `url(${grid})`,
-          }}
+          className="relative md:w-1/2 h-full "
         >
+          {/* GRID */}
+          <GridOverlay color="0,0,0" opacity={0.15} size={100} position="99px 0px" />
           <div
             className="absolute"
             style={{

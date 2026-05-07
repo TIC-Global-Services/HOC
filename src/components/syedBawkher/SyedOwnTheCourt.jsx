@@ -197,7 +197,7 @@ export default function SyedOwnTheCourt() {
     >
       <h2 className="absolute text-start left-[5%] top-[clamp(40px,8vh,90px)] z-10 m-0 salo font-medium text-[14px] md:text-[140px] leading-none tracking-[-0.02em] uppercase text-[#262666]">
         <span style={{ display: "block" }}>REFINED</span>
-        <span style={{ display: "block" }} className="pl-5">IDENTITY</span>
+        <span style={{ display: "block" }}>IDENTITY</span>
       </h2>
 
       <div className="w-full max-w-[1600px] mx-auto relative h-full">

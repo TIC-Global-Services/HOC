@@ -107,7 +107,7 @@ const Section2 = () => {
             top: "50%",
             right: "-10vw",
             transform: "translateY(-50%)",
-            width: "clamp(120px,20vw,500px)",
+            width: "clamp(120px,50vh,500px)",
           }}
         >
           <img src={raksCenterImg} className="w-full object-contain overflow-visible" />

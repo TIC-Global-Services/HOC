@@ -92,91 +92,102 @@ export default function SyedSignatureCraft() {
   return (
     <div className="h-screen w-[320vw] overflow-hidden">
       <div ref={containerRef} className="flex h-full">
-          <section ref={(el) => (sectionsRef.current[0] = el)}
-          className="w-[120vw] h-full flex flex-col"
-          style={{ backgroundColor: BEIGE }}>
-             {/* ── TOP BAR ── */}
-             <div
-               className="relative flex items-center px-6 border-b-2 border-white flex-shrink-0"
-               style={{ height: "28%" }}
-             >
-               <h1
-                 className="salo text-[#262666] uppercase leading-none tracking-tight"
-                 style={{ fontSize: "clamp(36px, 12vw, 190px)" }}
-               >
-                 Signature Craft
-               </h1>
-       
-               <div className="absolute top-0 right-[20%] h-full flex items-center z-10">
-                 <img ref={addIconRef}
-                   src={circleLogoImg}
-                   alt="retro computer"
-                   className="object-contain h-[60%] w-auto"
-                 />
-               </div>
-             </div>
-       
-             {/* ── BOTTOM GRID ── */}
-             <div className="flex flex-1 min-h-0 w-full">
-               {/* LEFT COLUMN */}
-               <div
-                 className="flex flex-col border-r-2 border-white"
-                 style={{ width: "30%" }}
-               >
-                 {["Measured.", "Crafted.", "Perfected."].map((text, i) => (
-                   <div
-                     key={i}
-                     className="flex items-center px-4 border-b-2 border-white flex-1 min-h-0"
-                   >
-                     <span
-                       className="salo text-[#262666] uppercase leading-none"
-                       style={{ fontSize: "clamp(18px, 6vw, 120px)" }}
-                     >
-                       {text}
-                     </span>
-                   </div>
-                 ))}
-       
-                 {/* LOGO ROW */}
-                 <div className="flex items-center justify-end px-4 py-3 flex-shrink-0">
-                   <img ref={addIconRef}
-                     src={elegantLogoImg}
-                     alt="padlr logo"
-                     className="object-contain"
-                     style={{ width: "clamp(50px, 14vw, 160px)" }}
-                   />
-                 </div>
-               </div>
-       
-               {/* RIGHT BLOCK */}
-               <div className="flex flex-1 min-w-0 min-h-0">
-                 {/* TEXT */}
-                 <div className="flex flex-col justify-center text-start pt-[10%] w-[40%] min-w-0 flex-shrink-0">
-                   <p
-                     className="salo text-[#262666] uppercase mb-3 px-5"
-                     style={{ fontSize: "clamp(18px, 3.8vw, 60px)" }}
-                   >
-                     ABOUT
-                   </p>
-                   <p
-                     className="jost text-[#262666] leading-[140%] border-t-2 border-b-2 border-white py-3 px-5"
-                     style={{ fontSize: "clamp(11px, 1.4vw, 26px)" }}
-                   >
-                    Syed Bawkher is built on a legacy of precision tailoring and enduring craftsmanship. From the first measurement to the final stitch, every garment is shaped with intent—transforming fine materials into expressions of timeless elegance.
-                   </p>
-                 </div>
-       
-                 {/* RIGHT IMAGE */}
-                 <div className="flex-1 relative border-l-2 border-white overflow-hidden">
-                   <img
-                     src={craftImg}
-                     alt="silk"
-                     className="absolute inset-0 w-full h-full object-cover"
-                   />
-                 </div>
-               </div>
-             </div>
-           </section>
+        <section
+          ref={(el) => (sectionsRef.current[0] = el)}
+          className="w-[120vw] h-screen overflow-hidden flex"
+          style={{ backgroundColor: BEIGE }}
+        >
+          {/* ───────── LEFT MAIN BOX ───────── */}
+          <div
+            className="w-[60%] h-full border-r-2 border-white flex flex-col"
+            style={{ backgroundColor: BEIGE }}
+          >
+            {/* ───────── TOP BAR ───────── */}
+            <div className="relative border-b-2 border-white px-6 py-5">
+              <h1
+                className="salo text-start text-[#262666] uppercase leading-none tracking-normal"
+                style={{ fontSize: "clamp(36px, 9vw, 190px)" }}
+              >
+                Signature Craft
+              </h1>
+
+              {/* TOP ICON */}
+              <div className="absolute top-0 right-[8%] h-full flex items-center z-10">
+                <img
+                  ref={addIconRef}
+                  src={circleLogoImg}
+                  alt="retro computer"
+                  className="object-contain h-[80%] w-auto"
+                />
+              </div>
+            </div>
+
+            {/* ───────── BOTTOM CONTENT ───────── */}
+            <div className="flex flex-1 min-h-0">
+              {/* LEFT COLUMN */}
+              <div className="w-[50%] border-r-2 border-white flex flex-col">
+                {["Measured.", "Crafted.", "Perfected."].map((text, i) => (
+                  <div
+                    key={i}
+                    className="flex items-center px-6 border-b-2 border-white flex-1"
+                  >
+                    <span
+                      className="salo text-[#262666] uppercase leading-none"
+                      style={{ fontSize: "clamp(18px, 6vw, 120px)" }}
+                    >
+                      {text}
+                    </span>
+                  </div>
+                ))}
+
+                {/* LOGO */}
+                <div className="flex items-center justify-end px-4 py-4">
+                  <img
+                    ref={addIconRef}
+                    src={elegantLogoImg}
+                    alt="elegant logo"
+                    className="object-contain"
+                    style={{ width: "clamp(80px, 12vw, 300px)" }}
+                  />
+                </div>
+              </div>
+
+              {/* ABOUT SECTION */}
+              <div className="w-[50%] flex flex-col justify-center text-start">
+                <div className="flex flex-col">
+                  {/* ABOUT TITLE */}
+                  <p
+                    className="salo text-[#262666] uppercase px-5"
+                    style={{ fontSize: "clamp(18px, 4vw, 60px)" }}
+                  >
+                    ABOUT
+                  </p>
+
+                  {/* ABOUT TEXT */}
+                  <p
+                    className="jost capitalize text-[#262666] leading-[140%] border-t-2 border-b-2 border-white px-5 py-10"
+                    style={{ fontSize: "clamp(11px, 1.6vw, 26px)" }}
+                  >
+                    Syed Bawkher is built on a legacy of precision tailoring and
+                    enduring craftsmanship. From the first measurement to the
+                    final stitch, every garment is shaped with intent
+                    transforming fine materials into timeless elegance.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* ───────── RIGHT IMAGE ───────── */}
+          <div className="w-[40%] h-screen overflow-hidden relative">
+            <img
+              src={craftImg}
+              alt="craft"
+              className="w-full h-full object-cover"
+            />
+          </div>
+        </section>
+
 
         {/* ───────── SECTION 2 ───────── */}
         <div
@@ -205,16 +216,14 @@ export default function SyedSignatureCraft() {
           <div className="absolute top-[20%] flex items-center justify-center px-[5%]">
             <div style={{ maxWidth: "60%" }}>
               <h2
-                className="salo uppercase text-start text-[#262666] leading-none"
-                style={{ fontSize: "clamp(48px,20vh,200px)" }}
+                className="salo uppercase text-start text-[#262666] tracking-tight leading-none"
+                style={{ fontSize: "clamp(48px,22vh,200px)" }}
               >
                 Precision <br /> Tailored
               </h2>
 
-              <p
-                className="jost text-start text-[24px] text-black/50 leading-[120%]"
-                
-              >
+              <p style={{ fontSize: "clamp(12px,20vh,26px)" }} 
+              className="jost text-start text-black/50 leading-[120%] tracking-tight mt-2 pl-3">
                 Crafted through generations of expertise, each piece reflects
                 precision and purpose. A seamless blend of heritage and
                 refinement, tailored for the modern gentleman.
@@ -240,7 +249,7 @@ export default function SyedSignatureCraft() {
             className="relative"
             style={{
               left: "-10%",
-              bottom: "5%",
+              bottom: "0%",
               width: "clamp(260px,40vw,680px)",
             }}
           >
@@ -254,22 +263,22 @@ export default function SyedSignatureCraft() {
               right: "10%",
               top: "5%",
               bottom: "5%",
-              width: "clamp(320px,35vw,500px)",
+              width: "clamp(320px,35vw,550px)",
             }}
           >
             {/* TEXT (TOP) */}
             <p
               className="jost text-start text-black capitalize"
               style={{
-                fontSize: "clamp(14px,1.6vw,26px)",
-                lineHeight: "140%",
+                fontSize: "clamp(14px,3.5vh,26px)",
+                lineHeight: "150%",
               }}
             >
               Full-canvas tailoring rooted in generations of expertise. A
               seamless blend of time-honoured{" "}
               <span
                 className="salo font-[500] tracking-tight text-[#262666]"
-                style={{ fontSize: "clamp(18px,2.5vw,40px)" }}
+                style={{ fontSize: "clamp(18px,5vh,40px)" }}
               >
                 craftsmanship and modern refinement.
               </span>{" "}
@@ -285,7 +294,7 @@ export default function SyedSignatureCraft() {
                 ref={addIconRef}
                 className="absolute z-[20]"
                 style={{
-                  left: "10%",
+                  left: "0%",
                   top: "0%",
                   width: "clamp(120px,10vw,180px)",
                   transform: "rotate(30deg)",
@@ -298,7 +307,7 @@ export default function SyedSignatureCraft() {
               <div
                 className="relative"
                 style={{
-                  width: "clamp(160px,40vh,350px)",
+                  width: "clamp(160px,45vh,400px)",
                   transform: "rotate(-10deg)",
                 }}
               >

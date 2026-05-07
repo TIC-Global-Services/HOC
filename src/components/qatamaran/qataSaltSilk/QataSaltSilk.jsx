@@ -68,7 +68,7 @@ export default function QataSaltSilk() {
             <Section1 />
           </div>
 
-          <div className="w-[210vw] h-full flex-shrink-0">
+          <div className="w-[205vw] h-full flex-shrink-0">
             <Section2 />
           </div>
 

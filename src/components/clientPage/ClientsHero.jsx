@@ -9,7 +9,7 @@ const ClientsHero = () => {
       {/* CLIENT Title  */}
       <div className="relative inline-block">
 
-        {/* Button image */}
+        {/* Button image
         <motion.img
           src={button}
           className="absolute w-[50px] md:w-[160px] z-[1]"
@@ -21,7 +21,7 @@ const ClientsHero = () => {
           initial={{ x: -100, opacity: 0 }}
           animate={{ x: 0, opacity: 1 }}
           transition={{ type: "spring", stiffness: 120, damping: 10 }}
-        />
+        /> */}
 
         {/* CLIENTS text*/}
         <motion.h1

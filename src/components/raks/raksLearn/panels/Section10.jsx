@@ -30,7 +30,7 @@ const Section10 = () => {
           }}
         >
           <h2
-            className="salo uppercase text-[#000085] leading-none tracking-tight"
+            className="salo uppercase text-[#000085] leading-none tracking-normal"
             style={{
               fontSize: "clamp(30px,20vh,150px)",
             }}

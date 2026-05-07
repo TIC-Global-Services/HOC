@@ -72,7 +72,7 @@ const Careers = () => {
                       : ""
                   }`}
                 >
-                  <h1>CLIENT</h1>
+                  <h1>CLIENTS</h1>
                 </Link>
                 <Link
                   to={"/Services"}
@@ -255,7 +255,7 @@ const JobListings = () => {
   const isInView = useInView(ref, { once: true }); // Trigger animation only once when in view
 
   const positions = [
-    "UI/UX Designer // Product Designer",
+    "Product Designer",
     "Motion Designer",
     "Illustrator/Multimedia Designer",
     "Experimental Graphic Designer",

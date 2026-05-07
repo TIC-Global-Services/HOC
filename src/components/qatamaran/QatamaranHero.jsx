@@ -3,7 +3,7 @@ import img1 from "../../assets/client/qatamaran/heroFloat1.png";
 import img2 from "../../assets/client/qatamaran/heroFloat2.png";
 import img3 from "../../assets/client/qatamaran/heroFloat3.png";
 import img4 from "../../assets/client/qatamaran/heroFloat4.png";
-import grid from "../../assets/client/padlr/img/checkBg.png";
+import GridOverlay from "../GridOverlay";
 
 const QatamaranHero = () => {
   return (
@@ -23,11 +23,12 @@ const QatamaranHero = () => {
         {/* LEFT SIDE */}
         <div
           className="relative w-full h-[500px] md:h-screen md:w-1/2 overflow-hidden flex-shrink-0"
-          style={{ backgroundImage: `url(${grid})` }}
         >
+          {/* GRID */}
+          <GridOverlay color="0,0,0" opacity={0.15} size={100} position="99px 0px" />
           <img
             src={img1}
-            className="float-1 absolute top-[10%] left-[10%] w-[50px] md:w-[80px] xl:w-[100px]"
+            className="float-1 absolute top-[10%] left-[10%] w-[50px] md:w-[80px] xl:w-[120px]"
           />
           <img
             src={img2}
@@ -35,11 +36,11 @@ const QatamaranHero = () => {
           />
           <img
             src={img3}
-            className="float-3 absolute bottom-[10%] left-[10%] w-[100px] md:w-[140px] xl:w-[180px]"
+            className="float-3 absolute bottom-[8%] left-[10%] w-[100px] md:w-[140px] xl:w-[220px]"
           />
           <img
             src={img4}
-            className="float-4 absolute bottom-[10%] right-[10%] w-[100px] md:w-[140px] xl:w-[180px]"
+            className="float-4 absolute bottom-[8%] right-[10%] w-[100px] md:w-[140px] xl:w-[220px]"
           />
 
           <div className="w-full h-full flex flex-col items-center justify-center gap-4 md:gap-6 px-4">

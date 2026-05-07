@@ -43,7 +43,7 @@ export default function CourtSky() {
         {/* TRACK — 300vw */}
         <div
           ref={trackRef}
-          className="flex h-full"
+          className="flex h-full w-[300vw]"
         >
 
           {/* SECTION 1 */}
@@ -57,7 +57,7 @@ export default function CourtSky() {
           </div>
 
           {/* SECTION 3 */}
-          <div className="w-[90vw] h-full flex-shrink-0">
+          <div className="w-[80vw] h-full flex-shrink-0">
             <Section3 />
           </div>
 

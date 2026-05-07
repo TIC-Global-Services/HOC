@@ -72,7 +72,7 @@ const Section4 = () => {
           style={{
             top: "5vh",
             left: "0vw",
-            width: "clamp(180px,56vh,800px)",
+            width: "clamp(180px,52vh,800px)",
           }}
         >
           <img src={designImg} className="w-full object-contain" />
@@ -88,7 +88,7 @@ const Section4 = () => {
         >
           <h2
             className="salo text-[#1E382D] leading-none text-right"
-            style={{ fontSize: "clamp(40px,12vw,150px)" }}
+            style={{ fontSize: "clamp(40px,10vw,150px)" }}
           >
             TIMELESS
           </h2>
@@ -99,7 +99,7 @@ const Section4 = () => {
           className="absolute"
           style={{
             top: "45%",
-            left: "40vw",
+            left: "45vw",
             transform: "translate(-50%, -50%)",
           }}
         >
@@ -107,7 +107,7 @@ const Section4 = () => {
             ref={addIconRef}
             data-speed="0.3"
             style={{
-              width: "clamp(60px,8vw,120px)",
+              width: "clamp(60px,12vw,150px)",
               willChange: "transform",
             }}
           >
@@ -153,7 +153,7 @@ const Section4 = () => {
           style={{
             top: "10vh",
             left: "1.5vw",
-            fontSize: "clamp(40px,12vw,150px)",
+            fontSize: "clamp(40px,10vw,150px)",
           }}
         >
           TAILORING

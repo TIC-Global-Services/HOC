@@ -146,14 +146,14 @@ export default function Section2() {
 
       {/* ───────── BLOCK 2 ───────── */}
       <div
-        className="w-[130vw] h-full flex flex-shrink-0 text-white"
+        className="w-[125vw] h-full flex flex-shrink-0 text-white"
         style={{
           backgroundImage: `url(${grid})`,
           backgroundColor: "#ffffff",
         }}
       >
         {/* LEFT */}
-        <div className="w-[45vw] h-full aspect-9/16 relative overflow-hidden">
+        <div className="w-[50vw] h-full aspect-9/16 relative overflow-hidden">
           <img src={qataLeftImg} className="absolute inset-0 w-full h-full aspect-9/16 object-cover" />
         </div>
 
@@ -176,8 +176,8 @@ export default function Section2() {
         </div>
 
         {/* RIGHT */}
-        <div className="h-full w-[30vw] min-w-[260px] relative overflow-hidden">
-          <img src={qataRightImg} className="absolute inset-0 w-full h-full object-cover" />
+        <div className="h-full w-[40vw] aspect-9/16 relative overflow-hidden">
+          <img src={qataRightImg} className="absolute inset-0 w-full h-full aspect-9/16 object-cover" />
         </div>
       </div>
     </section>

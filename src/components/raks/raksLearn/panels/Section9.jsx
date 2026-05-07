@@ -71,10 +71,10 @@ const Section9 = () => {
       >
 
         {/* TEXT */}
-        <div className="text-start" style={{ maxWidth: "40vw" }}>
+        <div className="text-start">
           <h2
             className="salo uppercase text-[#000085] tracking-tight leading-none"
-            style={{ fontSize: "clamp(40px,10vw,120px)" }}
+            style={{ fontSize: "clamp(40px,20vh,120px)" }}
           >
             The RAKS Framework
           </h2>
@@ -82,7 +82,7 @@ const Section9 = () => {
           <p
             className="jost text-black tracking-tight mt-4"
             style={{
-              fontSize: "clamp(14px,1.8vw,26px)",
+              fontSize: "clamp(14px,4vh,26px)",
               lineHeight: "120%",
             }}
           >
@@ -95,14 +95,14 @@ const Section9 = () => {
         <img
           ref={addIconRef}
           data-speed="0.6"
-          data-rotate="0"
+          data-rotate="20"
           src={topRightIcon}
           alt="icon"
           className="absolute"
           style={{
             top: "6vh",
-            right: "4vw",
-            width: "clamp(50px,10vw,150px)",
+            right: "0%",
+            width: "clamp(150px,30vh,300px)",
           }}
         />
 
@@ -110,14 +110,14 @@ const Section9 = () => {
         <img
           ref={addIconRef}
           data-speed="0.8"
-          data-rotate="0"
+          data-rotate="-15"
           src={bottomLeftIcon}
           alt="icon"
           className="absolute"
           style={{
             bottom: "6vh",
             left: "4vw",
-            width: "clamp(50px,10vw,150px)",
+            width: "clamp(50px,30vh,300px)",
           }}
         />
 

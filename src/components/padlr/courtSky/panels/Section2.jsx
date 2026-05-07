@@ -20,7 +20,10 @@ export default function Panel2() {
       el,
       setX: gsap.quickTo(el, "x", { duration: 1, ease: "power3.out" }),
       setY: gsap.quickTo(el, "y", { duration: 0.8, ease: "power3.out" }),
-      setR: gsap.quickTo(el, "rotation", { duration: 1, ease: "power3.out" }),
+      setR: gsap.quickTo(el, "rotation", {
+        duration: 1,
+        ease: "power3.out",
+      }),
     }));
 
     let lastScrollY = window.scrollY;
@@ -62,19 +65,17 @@ export default function Panel2() {
     >
       <div className="w-full h-full flex">
         {/* LEFT PANEL */}
-        <div className="w-1/2 h-full flex flex-col justify-between relative">
+        <div className="w-1/2 h-full relative">
           {/* TOP */}
-          <div className="relative flex justify-end">
-            {/* SWATCH */}
+          <div className="relative h-[45vh] flex items-start">
+            {/* IMAGE */}
             <div
               ref={addIconRef}
               data-speed="0.3"
               data-rotate="0"
-              className="absolute"
+              className="relative z-10"
               style={{
-                top: 0,
-                left: 0,
-                width: "clamp(140px,20vw,360px)",
+                width: "clamp(180px,50vh,400px)",
                 willChange: "transform",
               }}
             >
@@ -82,52 +83,74 @@ export default function Panel2() {
             </div>
 
             {/* TITLE */}
-            <h2
-              className="absolute translate-y-[20%] left-[30%] salo text-start text-white leading-none"
-              style={{ fontSize: "clamp(80px,12vw,200px)" }}
+            <div
+              className="relative z-20"
+              style={{
+                marginLeft: "-10%",
+                marginTop: "8%",
+              }}
             >
-              COURT <br /> SKY
-            </h2>
+              <h2
+                className="salo text-start text-white leading-none"
+                style={{
+                  fontSize: "clamp(80px,30vh,200px)",
+                }}
+              >
+                COURT <br /> SKY
+              </h2>
+            </div>
           </div>
 
-          {/* BOTTOM */}
-          <div className="flex -translate-y-[4%] justify-between">
-            {/* TEXT */}
-            <div className="max-w-[50%] px-[5%]">
-              <p
-                className="salo text-start text-white tracking-tight leading-none"
-                style={{ fontSize: "clamp(22px,3.5vw,50px)" }}
-              >
-                BOLD, <br />
-                RICH, AND <br />
-                UNAPOLOGETIC.
-              </p>
-
-              <p className="jost text-start text-white/80 mt-[6%] text-[clamp(12px,1.2vw,24px)]">
-                Hex Precision
-              </p>
-              <p className="jost text-start text-white/80 text-[clamp(12px,1.2vw,24px)]">
-                RGB Consistency
-              </p>
-            </div>
-
-            {/* IMAGE */}
-            <div
-              ref={addIconRef}
-              data-speed="0.6"
-              data-rotate="0"
-              className=""
-              style={{ willChange: "transform", }}
+          {/* BOTTOM TEXT */}
+          <div className="absolute left-[5%] bottom-[5%] max-w-[50%]">
+            <p
+              className="salo text-start text-white tracking-tight leading-none"
+              style={{
+                fontSize: "clamp(22px,6vh,50px)",
+              }}
             >
-              <img
-                src={courtImg3}
-                alt=""
-                style={{
-                  width: "clamp(120px,14vw,300px)",
-                  transform: "rotate(-5deg)",
-                }}
-              />
-            </div>
+              BOLD, <br />
+              RICH, AND <br />
+              UNAPOLOGETIC.
+            </p>
+
+            <p
+              className="jost text-start text-white/80 leading-none tracking-tight mt-[6%]"
+              style={{
+                fontSize: "clamp(12px,5vh,24px)",
+              }}
+            >
+              Hex Precision
+            </p>
+
+            <p
+              className="jost text-start leading-none tracking-tight text-white/80"
+              style={{
+                fontSize: "clamp(12px,5vh,24px)",
+              }}
+            >
+              RGB Consistency
+            </p>
+          </div>
+
+          {/* BOTTOM IMAGE */}
+          <div
+            ref={addIconRef}
+            data-speed="0.6"
+            data-rotate="0"
+            className="absolute right-[5%] bottom-[4%]"
+            style={{
+              willChange: "transform",
+            }}
+          >
+            <img
+              src={courtImg3}
+              alt=""
+              style={{
+                width: "clamp(120px,30vh,400px)",
+                transform: "rotate(-5deg)",
+              }}
+            />
           </div>
         </div>
 
@@ -137,15 +160,23 @@ export default function Panel2() {
           <p
             className="jost text-start capitalize tracking-tight text-white/90 max-w-[80%]"
             style={{
-              fontSize: "clamp(16px,2vw,26px)",
+              fontSize: "clamp(16px,4vh,26px)",
               lineHeight: "160%",
             }}
           >
             Padlr is a modern destination built around the fast-growing culture
             of padel—where sport, community, and lifestyle come together.
-            Designed for both <span className="salo font-[400] text-[40px]">Performance and Experience</span>, it offers premium
-            courts, vibrant social energy, and a space that goes beyond just
-            playing the game
+            Designed for both{" "}
+            <span
+              className="salo font-[400]"
+              style={{
+                fontSize: "clamp(20px,6vh,40px)",
+              }}
+            >
+              Performance and Experience
+            </span>
+            , it offers premium courts, vibrant social energy, and a space that
+            goes beyond just playing the game.
           </p>
 
           {/* LOGO */}
@@ -153,13 +184,17 @@ export default function Panel2() {
             ref={addIconRef}
             data-speed="0.5"
             data-rotate="-5"
-            className="absolute right-[5%] bottom-[10%]"
-            style={{ willChange: "transform" }}
+            className="absolute right-[5%] bottom-[8%]"
+            style={{
+              willChange: "transform",
+            }}
           >
             <img
               src={batlogo}
               alt="logo"
-              style={{ width: "clamp(120px,10vw,200px)" }}
+              style={{
+                width: "clamp(120px,25vh,200px)",
+              }}
             />
           </div>
         </div>

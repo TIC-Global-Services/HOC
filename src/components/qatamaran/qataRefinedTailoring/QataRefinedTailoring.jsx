@@ -70,13 +70,13 @@ export default function QataRefinedTailoring() {
 
           <div
             className="flex h-full"
-            style={{ width: "140vw", flexShrink: 0 }}
+            style={{ width: "135vw", flexShrink: 0 }}
           >
-            <div style={{ width: "40vw", height: "100%" }}>
+            <div style={{ width: "50vw", height: "100%" }}>
               <Section2 />
             </div>
 
-            <div style={{ width: "100vw", height: "100%" }}>
+            <div style={{ width: "85vw", height: "100%" }}>
               <Section3 />
             </div>
           </div>

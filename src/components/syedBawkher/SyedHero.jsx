@@ -5,6 +5,7 @@ import img2 from "../../assets/client/syedBawkher/img/heroImg2.png";
 import img3 from "../../assets/client/syedBawkher/img/heroImg3.png";
 import img4 from "../../assets/client/syedBawkher/img/heroImg4.png";
 import grid from "../../assets/client/padlr/img/checkBg.png";
+import GridOverlay from "../../components/GridOverlay";
 
 const fadeUp = {
   hidden: {
@@ -37,17 +38,28 @@ const SyedHero = () => {
       `}</style>
 
       <div className="w-full max-w-[1440px] 2xl:max-w-[1600px] flex flex-col md:flex-row relative">
-
         {/* LEFT */}
-        <div
-          className="relative w-full h-[500px] md:h-screen md:w-1/2 overflow-hidden flex-shrink-0"
-          style={{ backgroundImage: `url(${grid})` }}
-        >
+
+        <div className="relative w-full h-[500px] md:h-screen md:w-1/2 overflow-hidden flex-shrink-0">
+          {/* GRID */}
+          <GridOverlay color="0,0,0" opacity={0.15} size={100} position="99px 0px" />
           {/* FLOATING IMAGES */}
-          <img src={img1} className="float-1 absolute top-[5%] left-[10%] w-[40px] sm:w-[60px] md:w-[80px] xl:w-[120px]" />
-          <img src={img2} className="float-2 absolute top-[15%] right-[10%] w-[50px] sm:w-[80px] md:w-[100px] xl:w-[160px]" />
-          <img src={img3} className="float-3 absolute bottom-[10%] left-[8%] w-[80px] sm:w-[110px] md:w-[140px] xl:w-[160px]" />
-          <img src={img4} className="float-4 absolute bottom-[10%] right-[8%] w-[80px] sm:w-[110px] md:w-[140px] xl:w-[140px]" />
+          <img
+            src={img1}
+            className="float-1 absolute top-[5%] left-[10%] w-[40px] sm:w-[60px] md:w-[80px] xl:w-[120px]"
+          />
+          <img
+            src={img2}
+            className="float-2 absolute top-[15%] right-[10%] w-[50px] sm:w-[80px] md:w-[100px] xl:w-[160px]"
+          />
+          <img
+            src={img3}
+            className="float-3 absolute bottom-[10%] left-[8%] w-[80px] sm:w-[110px] md:w-[140px] xl:w-[160px]"
+          />
+          <img
+            src={img4}
+            className="float-4 absolute bottom-[10%] right-[8%] w-[80px] sm:w-[110px] md:w-[140px] xl:w-[140px]"
+          />
 
           {/* CENTER TEXT */}
           <div className="w-full h-full flex flex-col items-center justify-center gap-3 md:gap-6 px-4 text-center md:text-left">
@@ -64,48 +76,67 @@ const SyedHero = () => {
           </div>
         </div>
 
-        {/* RIGHT TEXT */}
-        <div
+        {/* RIGHT SIDE TEXT */}
+        <motion.div
+          initial={{ opacity: 0, y: 80 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
           className="
-            w-full 
-            md:absolute md:right-0 md:top-1/2 md:-translate-y-1/2 
-            px-5 sm:px-8 md:px-10 xl:px-6 
-            py-8 md:py-0
-            md:max-w-[50%]
-          "
+          absolute
+          top-0
+          right-0
+          h-screen
+          w-full md:w-1/2
+          flex items-center
+          justify-center
+          px-6 md:px-8 xl:px-10
+          overflow-hidden
+        "
         >
-          <motion.p
-            variants={fadeUp}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, amount: 0.3 }}
-            className="
-              jost capitalize text-black font-[500]
-              leading-[140%] text-start tracking-tight
-              text-[13px] sm:text-[15px] md:text-[18px] xl:text-[25px]
-              max-w-[600px]
+          <div className="w-full max-w-[42vw]">
+            <p
+              className="
+              jost capitalize text-start font-[500]
+              tracking-tight text-black
+              leading-[180%]
             "
-          >
-            Since 1904, Syed Bawkher & Co. has been a mainstay of the sartorial scene in Madras, and remains one of the oldest continual bespoke tailoring houses in the world. Marrying the custodial heritage of five generations with refined{" "}
-            
-            <span className="text-[#262666] salo text-[16px] sm:text-[20px] md:text-[24px] xl:text-[30px]">
-              Craftsmanship and contemporary
-            </span>{" "}
-            
-            technique, they epitomise the cardinal values of transparency, quality, and excellence in the service of the impeccable gentleman.
-            
-            <br /><br />
-            
-            Haus of Chaos created an analogue brochure for Syed Bawkher & Co., as a piece of literature to be remembered for its textual and textural richness. A philosophy of{" "}
-            
-            <span className="text-[#262666] salo text-[16px] sm:text-[20px] md:text-[24px] xl:text-[30px]">
-              "experience and encounter"
-            </span>{" "}
-            
-            informed Haus of Chaos' process towards an object that materially imparts the sophistication intrinsic to Syed Bawkher.
-          </motion.p>
-        </div>
-
+              style={{
+                fontSize: "clamp(12px,3.5vh,26px)",
+              }}
+            >
+              Since 1904, Syed Bawkher & Co. has been a mainstay of the
+              sartorial scene in Madras, and remains one of the oldest continual
+              bespoke tailoring houses in the world. Marrying the custodial
+              heritage of five generations with refined{" "}
+              <span
+                className="text-[#262666] salo"
+                style={{
+                  fontSize: "clamp(18px,6vh,40px)",
+                }}
+              >
+                Craftsmanship and contemporary
+              </span>{" "}
+              technique, they epitomise the cardinal values of transparency,
+              quality, and excellence in the service of the impeccable
+              gentleman.
+              <br />
+              <br />
+              Haus of Chaos created an analogue brochure for Syed Bawkher & Co.,
+              as a piece of literature to be remembered for its textual and
+              textural richness. A philosophy of{" "}
+              <span
+                className="text-[#262666] salo"
+                style={{
+                  fontSize: "clamp(18px,6vh,40px)",
+                }}
+              >
+                "experience and encounter"
+              </span>{" "}
+              informed Haus of Chaos' process towards an object that materially
+              imparts the sophistication intrinsic to Syed Bawkher.
+            </p>
+          </div>
+        </motion.div>
       </div>
     </section>
   );

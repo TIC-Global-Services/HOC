@@ -3,7 +3,7 @@ import img1 from "../../assets/client/padlr/img/heroImg1.png";
 import img2 from "../../assets/client/padlr/img/heroImg2.png";
 import img3 from "../../assets/client/padlr/img/heroImg3.png";
 import img4 from "../../assets/client/padlr/img/heroImg4.png";
-import grid from "../../assets/client/padlr/img/checkBg.png";
+import GridOverlay from "../GridOverlay";
 
 const PadlrHero = () => {
   return (
@@ -22,15 +22,16 @@ const PadlrHero = () => {
       {/* LEFT */}
       <div
         className="relative w-full lg:w-[50%] xl:w-[50%] h-[500px] sm:h-[600px] lg:h-screen overflow-hidden flex-shrink-0"
-        style={{ backgroundImage: `url(${grid})` }}
       >
+        {/* GRID */}
+          <GridOverlay color="0,0,0" opacity={0.15} size={100} position="99px 0px" />
         <img
           src={img2}
-          className="float-1 absolute top-[10%] left-[8%] w-[50px] sm:w-[70px] md:w-[90px] lg:w-[110px]"
+          className="float-1 absolute top-[15%] left-[8%] w-[50px] sm:w-[70px] md:w-[90px] lg:w-[150px]"
         />
         <img
           src={img1}
-          className="float-2 absolute top-[12%] right-[10%] w-[60px] sm:w-[80px] md:w-[100px] lg:w-[120px]"
+          className="float-2 absolute top-[15%] right-[10%] w-[60px] sm:w-[80px] md:w-[100px] lg:w-[150px]"
         />
         <img
           src={img4}

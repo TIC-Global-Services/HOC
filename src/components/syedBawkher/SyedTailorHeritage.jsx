@@ -8,6 +8,7 @@ import buttonImg from "../../assets/client/page/button.png";
 import syedLogo from "../../assets/client/syedBawkher/img/heroImg1.png";
 import syedBawkherImg from "../../assets/client/syedBawkher/img/syedBawkher4.png";
 import tagElegantImg from "../../assets/client/syedBawkher/img/signatureImg.png";
+import video from "../../assets/client/syedBawkher/vdo/Brochure_animation.mp4";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -20,7 +21,6 @@ export default function SyedTailorHeritage() {
   const addIconRef = (el) => {
     if (el) iconRefs.current.push(el);
   };
-
 
   useEffect(() => {
     if (window.innerWidth < 768) return;
@@ -133,28 +133,28 @@ export default function SyedTailorHeritage() {
 
             {/* HEADING */}
             <div className="absolute top-[20%] left-[10%] text-start">
-            <h2
-              className="salo tracking-wider text-[#262666] leading-none"
-              style={{
-                fontSize: "clamp(60px,12vw,200px)",
-                maxWidth: "70%",
-              }}
-            >
-              TAILOR <br /> HERITAGE
-            </h2>
+              <h2
+                className="salo tracking-wider text-[#262666] leading-none"
+                style={{
+                  fontSize: "clamp(60px,25vh,200px)",
+                  maxWidth: "70%",
+                }}
+              >
+                TAILOR <br /> HERITAGE
+              </h2>
             </div>
 
             {/* SUB TEXT */}
             <div className="absolute top-[80%] left-[10%] text-start">
-            <p
-              className="salo uppercase text-[#262666] tracking-tight leading-none"
-              style={{
-                fontSize: "clamp(18px,2.5vw,40px)",
-                marginTop: "2%",
-              }}
-            >
-              Crafted <br /> In Heritage
-            </p>
+              <p
+                className="salo uppercase text-[#262666] tracking-tight leading-none"
+                style={{
+                  fontSize: "clamp(18px,2.5vw,40px)",
+                  marginTop: "2%",
+                }}
+              >
+                Crafted <br /> In Heritage
+              </p>
             </div>
 
             {/* RIGHT PARA */}
@@ -167,13 +167,12 @@ export default function SyedTailorHeritage() {
                 maxWidth: "40%",
               }}
             >
-              <p
-                className="jost text-start text-[26px] leading-[130%] capitalize text-[#262666]"
-                
-              >
-                Syed Bawkher is a heritage tailoring house built on generations of craftsmanship—where tradition, 
-                precision, and timeless style come together. Designed for the modern gentleman, 
-                it offers bespoke garments, refined detailing, and an experience that goes beyond just dressing.
+              <p className="jost text-start text-[26px] leading-[130%] capitalize text-[#262666]">
+                Syed Bawkher is a heritage tailoring house built on generations
+                of craftsmanship—where tradition, precision, and timeless style
+                come together. Designed for the modern gentleman, it offers
+                bespoke garments, refined detailing, and an experience that goes
+                beyond just dressing.
               </p>
             </div>
 
@@ -185,7 +184,7 @@ export default function SyedTailorHeritage() {
               className="absolute bottom-[5%] left-[40%]"
               style={{
                 marginTop: "4%",
-                width: "clamp(120px,8vw,200px)",
+                width: "clamp(120px,20vh,250px)",
                 willChange: "transform",
               }}
             >
@@ -229,7 +228,7 @@ export default function SyedTailorHeritage() {
                 style={{
                   top: "50%",
                   right: "20%",
-                  width: "clamp(120px,20vw,300px)",
+                  width: "clamp(120px,50vh,400px)",
                   transform: "rotate(-10deg)",
                 }}
               />
@@ -242,7 +241,7 @@ export default function SyedTailorHeritage() {
                 style={{
                   top: "5%",
                   right: "90%",
-                  width: "clamp(60px,10vw,200px)",
+                  width: "clamp(60px,20vh,200px)",
                   willChange: "transform",
                 }}
               >
@@ -250,8 +249,95 @@ export default function SyedTailorHeritage() {
               </div>
             </div>
           </div>
+
+          {/* Block 4 */}
+          {/* ─── DESKTOP ─── */}
+          <div className="w-[100vw] h-screen relative overflow-hidden flex-shrink-0">
+            <video
+              src={video}
+              autoPlay
+              loop
+              muted
+              playsInline
+              className="absolute top-0 left-0 w-full h-full object-cover"
+            />
+          </div>
+
+          {/* Block 5 */}
+          <div className="w-[60vw] h-screen relative overflow-hidden flex-shrink-0">
+          <SyedWannaKnowMore />
+          </div>
+
         </div>
       </div>
     </section>
   );
 }
+
+import React from 'react';
+import { motion, useScroll, useTransform } from "framer-motion";
+import question from "../../assets/client/syedBawkher/img/question.png";
+import ImagesTrail from "../../components/ImagesTrail";
+
+const lines = ["Wann..", "Know", "More"];
+
+const AnimatedChar = ({ char, scrollYProgress, start, end }) => {
+  const opacity = useTransform(scrollYProgress, [start, end], [0, 1]);
+  const y = useTransform(scrollYProgress, [start, end], [-50, 0]);
+
+  return (
+    <motion.span
+      style={{ opacity, y }}
+      className="text-[#262666] font-[500] salo uppercase inline-block will-change-transform"
+    >
+      <span className='text-[50px] md:text-[150px]'>
+        {char === " " ? "\u00A0" : char}
+      </span>
+    </motion.span>
+  );
+};
+
+const SyedWannaKnowMore = () => {
+  const ref = useRef(null);
+
+  const { scrollYProgress } = useScroll({
+    target: ref,
+    offset: ["start center", "center center"],
+  });
+
+  return (
+    <section
+      ref={ref}
+      className="w-full md:h-screen relative flex items-center justify-center overflow-hidden isolate"
+      style={{ backgroundImage: `url(${grid})`, backgroundSize: "cover" }}
+    >
+      {/* IMAGE TRAIL */}
+      <ImagesTrail image={question} />
+
+      {/* SCROLL TEXT */}
+      <div className="relative z-[3] w-full h-full flex items-center justify-center overflow-hidden">
+        <div className="text-center leading-none px-4 max-w-full">
+          {lines.map((line, lineIndex) => (
+            <div key={lineIndex} className="flex justify-center flex-wrap">
+              {line.split("").map((char, i) => {
+                const index = lineIndex * 10 + i;
+                const start = index / 35;
+                const end = start + 0.12;
+
+                return (
+                  <AnimatedChar
+                    key={i}
+                    char={char}
+                    scrollYProgress={scrollYProgress}
+                    start={start}
+                    end={end}
+                  />
+                );
+              })}
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+};

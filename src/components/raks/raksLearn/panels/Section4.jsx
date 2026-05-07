@@ -74,12 +74,12 @@ const Section4 = () => {
       <div className="w-1/2 h-full relative flex items-center justify-center px-[clamp(20px,5vw,80px)]">
 
         {/* CENTER TEXT */}
-        <div className="text-center max-w-[500px] space-y-[clamp(16px,2vw,30px)]">
-          <h2 className="salo text-start text-black uppercase leading-none text-[clamp(18px,2.5vw,40px)]">
+        <div className="text-center max-w-[500px] space-y-[clamp(16px,4vh,30px)]">
+          <h2 className="salo text-start text-black uppercase leading-none text-[clamp(18px,6vh,42px)]">
             Where Curiosity Meets a New Way of <br /> Learning
           </h2>
 
-          <p className="jost text-start text-black leading-[120%] max-w-[400px] tracking-tight text-[clamp(14px,1.5vw,26px)]">
+          <p className="jost text-start text-black leading-[120%] max-w-[420px] tracking-tight text-[clamp(14px,3vh,28px)]">
             “At RAKS Pallikkoodam, every student is nurtured to grow with confidence, curiosity, and 
             creativity—empowered to learn, explore, and shine every single day.”
           </p>
@@ -97,8 +97,8 @@ const Section4 = () => {
           className="absolute object-contain"
           style={{
             top: "clamp(20px,4vw,60px)",
-            left: "clamp(20px,4vw,60px)",
-            width: "clamp(50px,12vw,200px)",
+            left: "clamp(20px,2vw,60px)",
+            width: "clamp(50px,30vh,250px)",
           }}
         />
 
@@ -112,8 +112,8 @@ const Section4 = () => {
           className="absolute object-contain"
           style={{
             top: "clamp(20px,4vw,60px)",
-            right: "clamp(20px,4vw,60px)",
-            width: "clamp(50px,14vw,200px)",
+            right: "clamp(20px,2vw,20px)",
+            width: "clamp(50px,30vh,250px)",
           }}
         />
 
@@ -142,7 +142,7 @@ const Section4 = () => {
           className="absolute object-contain"
           style={{
             bottom: "clamp(20px,4vw,60px)",
-            right: "clamp(20px,4vw,60px)",
+            right: "clamp(20px,2vw,20px)",
             width: "clamp(50px,18vw,300px)",
           }}
         />

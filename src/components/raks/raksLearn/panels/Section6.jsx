@@ -77,7 +77,7 @@ const Section6 = () => {
         {/* HEADING */}
         <div className="absolute" style={{ top: "5vh", left: "8vw" }}>
           <h2 className="salo uppercase text-black leading-none tracking-tight"
-            style={{ fontSize: "clamp(40px,8vw,120px)" }}>
+            style={{ fontSize: "clamp(40px,20vh,120px)" }}>
             Learn Beyond Limits
           </h2>
         </div>
@@ -86,7 +86,7 @@ const Section6 = () => {
         <div className="absolute text-start"
           style={{ top: "24vh", left: "8vw", maxWidth: "650px" }}>
           <p className="jost text-black"
-            style={{ fontSize: "clamp(14px,1.6vw,26px)", lineHeight: "100%" }}>
+            style={{ fontSize: "clamp(14px,4vh,26px)", lineHeight: "120%" }}>
             From academics to arts and sports, every talent finds its place. A balanced approach to learning, creativity, and growth. Nurturing skills beyond the classroom for a brighter future.
           </p>
         </div>
@@ -95,7 +95,7 @@ const Section6 = () => {
         <div
           className="absolute"
           style={{
-            top: "25%",
+            top: "30%",
             left: "80%",
             transform: "translate(-50%, -50%) rotate(-10deg)",
           }}
@@ -109,9 +109,9 @@ const Section6 = () => {
             alt="icon"
             className="absolute z-10"
             style={{
-              top: "6%",
-              left: "-30%",
-              width: "clamp(40px,6vw,120px)",
+              top: "0%",
+              left: "-34%",
+              width: "clamp(40px,20vh,250px)",
             }}
           />
 
@@ -124,7 +124,7 @@ const Section6 = () => {
             alt="icon"
             className="object-contain"
             style={{
-              width: "clamp(80px,14vw,350px)",
+              width: "clamp(80px,40vh,350px)",
             }}
           />
         </div>
@@ -148,8 +148,8 @@ const Section6 = () => {
             className="absolute z-10"
             style={{
               top: "-8%",
-              left: "-8%",
-              width: "clamp(40px,6vw,120px)",
+              left: "-15%",
+              width: "clamp(40px,20vh,200px)",
             }}
           />
 
@@ -162,7 +162,7 @@ const Section6 = () => {
             alt="icon"
             className="object-contain"
             style={{
-              width: "clamp(200px,24vw,500px)",
+              width: "clamp(200px,50vh,500px)",
             }}
           />
         </div>
@@ -171,9 +171,9 @@ const Section6 = () => {
         <h3
           className="salo uppercase tracking-tight text-start leading-none text-[#000085] absolute"
           style={{
-            bottom: "8vh",
+            bottom: "0vh",
             right: "14vw",
-            fontSize: "clamp(30px,8vw,150px)",
+            fontSize: "clamp(30px,20vh,150px)",
           }}
         >
           Curious <br /> Mind
