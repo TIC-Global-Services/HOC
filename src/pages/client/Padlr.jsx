@@ -12,7 +12,7 @@ import MobWannaKnowMore from "../../components/padlr/WannaKnowMore";
 import MobPadlrInstaImg from "../../components/padlr/MobPadlrInstaImg";
 import MobOwnTheCourt from "../../components/padlr/mobileLayout/padlrOwnTheCourt/MobOwnTheCourt";
 // import PadlrImageSec from "../../components/padlr/PadlrImageSec";
-// import PadlrVideoSec2 from "../../components/padlr/PadlrVideoSec2";
+import PadlrVideoSec2 from "../../components/padlr/PadlrVideoSec2";
 
 const Padlr = () => {
   return (
@@ -30,7 +30,7 @@ const Padlr = () => {
       {/* Videos grouped — no gap between them */}
       <div className="flex flex-col">
         <PadlrMotionVideoSec />
-        {/* <PadlrVideoSec2 /> */}
+        <PadlrVideoSec2 />
       </div>
 
       {/* Court Sky */}

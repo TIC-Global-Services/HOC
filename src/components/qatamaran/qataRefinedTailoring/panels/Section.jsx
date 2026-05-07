@@ -5,11 +5,6 @@ export default function Section() {
   return (
     <section
       className="h-screen w-full overflow-hidden"
-      style={{
-        backgroundImage: `url(${grid})`,
-        backgroundSize: "cover",
-        backgroundColor: "#8FC4E9",
-      }}
     >
       <div className="relative w-full h-full">
         <img

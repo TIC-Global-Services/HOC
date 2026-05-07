@@ -3,6 +3,7 @@ import emPowerImg from "../../../../assets/client/raks/img/panel2.png";
 import viVidImg from "../../../../assets/client/raks/img/heroImg1.png";
 import grid from "../../../../assets/client/padlr/img/checkBg.png";
 import gsap from "gsap";
+import GridOverlay from "../../../GridOverlay";
 
 const Section3 = () => {
   const iconRefs = useRef([]);
@@ -53,13 +54,14 @@ const Section3 = () => {
     <section className="h-screen flex flex-shrink-0 relative overflow-visible">
       {/* BACKGROUND */}
       <div
-        className="absolute inset-0"
-        style={{
-          backgroundImage: `url(${grid})`,
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-        }}
-      />
+        className="absolute inset-0" />
+
+        <GridOverlay
+            color="0,0,0"
+            opacity={0.15}
+            size={100}
+            position="99px 0px"
+          />
 
       {/* LEFT IMAGE */}
       <div className="w-[40vw] h-full md:ml-[13%] aspect-[9/16] relative overflow-hidden">

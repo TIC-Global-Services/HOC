@@ -1,31 +1,31 @@
 import { motion } from "framer-motion";
-import button from "../../assets/client/page/button.png";
+import heroCallout from "../../assets/client/page/hero-callouts.png";
 import starImg from "../../assets/client/page/endIcon.png";
 
 const ClientsHero = () => {
   return (
-    <div className="items-center flex-col relative justify-center h-[50vh] md:h-screen flex px-10 md:-mt-[5%]">
+    <div className="items-center flex-col relative justify-center h-[50vh] md:h-screen flex px-10 md:-mt-[10%]">
 
       {/* CLIENT Title  */}
       <div className="relative inline-block">
 
-        {/* Button image
+        {/* Button image */}
         <motion.img
-          src={button}
-          className="absolute w-[50px] md:w-[160px] z-[1]"
+          src={heroCallout}
+          className="absolute w-[50px] md:w-[200px] z-[1]"
           style={{
-            left: "20%",     
+            left: "5%",     
             bottom: "-10px", 
           }}
           alt="Button"
           initial={{ x: -100, opacity: 0 }}
           animate={{ x: 0, opacity: 1 }}
           transition={{ type: "spring", stiffness: 120, damping: 10 }}
-        /> */}
+        />
 
         {/* CLIENTS text*/}
         <motion.h1
-          className="relative font-[1000] px-10 mt-40 md:!mt-20 md:leading-[0px] md:tracking-tight text-7xl md:text-[clamp(2rem,18vw,260px)] alinsa text-[#0000FF] z-[10]"
+          className="relative font-[1000] px-10 mt-40 md:!mt-20 md:leading-[0px] md:tracking-tight text-7xl md:text-[clamp(2rem,35vh,260px)] alinsa text-[#0000FF] z-[10]"
           initial={{ scale: 0.8, opacity: 0 }}
           animate={{ scale: 1, opacity: 1 }}
           transition={{ duration: 0.5, ease: "easeOut" }}

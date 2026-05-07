@@ -2,15 +2,24 @@ import React from "react";
 
 import centerImg from "../../../../assets/client/raks/img/panel8.png";
 import grid from "../../../../assets/client/padlr/img/checkBg.png";
+import GridOverlay from "../../../GridOverlay";
 
 const Section8 = () => {
   return (
-    <section className="h-screen flex overflow-hidden"
-    style={{
-                backgroundImage: `url(${grid})`,
-                backgroundPosition: "center",
-                backgroundColor: "white",
-              }}>
+    <section className="relative h-screen flex overflow-hidden"
+    >
+      {/* GRID */}
+      <div className="absolute inset-0 z-0 pointer-events-none">
+        <GridOverlay
+          color="0,0,0"
+          opacity={0.15}
+          size={100}
+          position="99px 0px"
+        />
+      </div>
+
+      {/* CONTENT */}
+      <div className="relative z-10 flex w-full h-full">
 
       {/* ───── LEFT TEXT ───── */}
       <div className="w-[50vw] h-full flex items-center px-[clamp(20px,4vw,80px)]">
@@ -39,6 +48,7 @@ const Section8 = () => {
           className="w-full h-full object-cover"
           
         />
+      </div>
       </div>
     </section>
   );

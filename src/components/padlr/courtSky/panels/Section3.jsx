@@ -5,6 +5,7 @@ import grid from "../../../../assets/client/padlr/img/checkBg.png";
 import highlyExplose from "../../../../assets/client/padlr/img/courtPanelImg.png";
 import topImg from "../../../../assets/client/padlr/img/courtPanelImg3.png";
 import paddle from "../../../../assets/client/padlr/img/batIcon.png";
+import GridOverlay from "../../../GridOverlay";
 
 const Section3 = () => {
   const iconRefs = useRef([]);
@@ -51,13 +52,17 @@ const Section3 = () => {
   }, []);
 
   return (
-    <section
-      className="w-full h-screen relative overflow-hidden"
-      style={{
-        backgroundImage: `url(${grid})`,
-        backgroundSize: "cover",
-      }}
-    >
+    <section className="w-full h-screen relative overflow-hidden">
+
+      {/* Grid */}
+      <GridOverlay
+            color="0,0,0"
+            opacity={0.15}
+            size={100}
+            position="99px 0px"
+          />
+
+
       {/* TITLE */}
       <h1
         className="salo tracking-wider text-[#8FC4E9] absolute"

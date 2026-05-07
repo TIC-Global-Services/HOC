@@ -7,6 +7,7 @@ import tagIcon2 from "../../../../assets/client/qatamaran/heroFloat4.png";
 import grid from "../../../../assets/client/padlr/img/checkBg.png";
 
 import useScrollFloat from "../../../../hooks/useScrollFloat";
+import GridOverlay from "../../../GridOverlay";
 
 const Section2 = () => {
   // refs
@@ -32,13 +33,17 @@ const Section2 = () => {
     <section
       className="relative h-screen flex overflow-visible"
       style={{
-        width: "100vw",
         flexShrink: 0,
-        backgroundImage: `url(${grid})`,
         backgroundSize: "cover",
         backgroundColor: "white",
       }}
     >
+       <GridOverlay
+          color="0,0,0"
+          opacity={0.15}
+          size={100}
+          position="99px 0px"
+        />
       {/* LEFT PANEL */}
       <div className="relative h-full" style={{ width: "40vw" }}>
 

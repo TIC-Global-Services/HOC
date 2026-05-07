@@ -8,6 +8,7 @@ import img3 from "../../assets/client/syedBawkher/img/heroImg3.png";
 import img4 from "../../assets/client/syedBawkher/img/heroImg4.png";
 import img5 from "../../assets/client/syedBawkher/img/elegantPairImg.png";
 import img6 from "../../assets/client/syedBawkher/img/signatureImg.png";
+import GridOverlay from "../../components/GridOverlay";
 
 
 const IMGS = { circleB: img1, elpairing: img2, textural: img3, circleW: img4, elegant: img5, signature: img6 };
@@ -190,11 +191,15 @@ export default function SyedOwnTheCourt() {
     <section
       ref={containerRef}
       className="w-full min-h-screen relative overflow-hidden"
-      style={{
-        backgroundImage: `url(${grid})`,
-        backgroundSize: "cover",
-      }}
     >
+
+    <GridOverlay
+                color="0,0,0"
+                opacity={0.15}
+                size={100}
+                position="99px 0px"
+              />
+
       <h2 className="absolute text-start left-[5%] top-[clamp(40px,8vh,90px)] z-10 m-0 salo font-medium text-[14px] md:text-[140px] leading-none tracking-[-0.02em] uppercase text-[#262666]">
         <span style={{ display: "block" }}>REFINED</span>
         <span style={{ display: "block" }}>IDENTITY</span>

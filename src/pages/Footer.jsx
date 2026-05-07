@@ -4,6 +4,7 @@ import { useState } from "react";
 import emailjs from "@emailjs/browser";
 import grid from "../assets/lines.png";
 import { Link } from "react-router-dom";
+import GridOverlay from '../components/GridOverlay'
 
 const Footer = () => {
   return (
@@ -59,9 +60,15 @@ const HausOfChaos = () => {
       {/* Background Grid Overlay */}
       <div
         className="absolute inset-0 opacity-50 rotate-[0.5deg]"
-        style={{ backgroundImage: `url(${grid})`, backgroundSize: "cover" }}
       />
 
+      <GridOverlay
+            color="0,0,0"
+            opacity={0.20}
+            size={100}
+            position="99px 0px"
+          />
+        
       {/* Main Content */}
       <div className="relative px-4 py-20 md:px-20 md:py-48 min-h-screen flex flex-col justify-between">
         {/* Logo and Description */}

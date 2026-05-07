@@ -7,6 +7,7 @@ import img2 from "../../assets/client/raks/img/heroImg2.png";
 import img3 from "../../assets/client/raks/img/heroImg3.png";
 import img4 from "../../assets/client/raks/img/heroImg4.png";
 import img5 from "../../assets/client/raks/img/raksLearn.png";
+import GridOverlay from '../../components/GridOverlay'
 
 const IMGS = {
   vivid: img1,
@@ -183,11 +184,14 @@ export default function RaksOwnTheCourt() {
     <section
       ref={containerRef}
       className="w-full min-h-screen relative overflow-hidden"
-      style={{
-        backgroundImage: `url(${grid})`,
-        backgroundSize: "cover",
-      }}
     >
+      <GridOverlay
+            color="0,0,0"
+            opacity={0.15}
+            size={100}
+            position="99px 0px"
+          />
+
       <h2 className="absolute left-[5%] text-start top-[clamp(40px,8vh,90px)] z-10 m-0 salo font-medium text-[14px] md:text-[140px] leading-none tracking-[-0.02em] uppercase text-[#000085]">
         <span style={{ display: "block" }}>YOUNG</span>
         <span style={{ display: "block" }}>EXPLORERS</span>

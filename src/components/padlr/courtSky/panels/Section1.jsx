@@ -8,11 +8,6 @@ export default function Section1() {
   return (
     <section
       className="h-screen flex justify-center overflow-hidden"
-      style={{
-        backgroundImage: `url(${grid})`,
-        backgroundSize: "cover",
-        backgroundColor: "#8FC4E9",
-      }}
     >
       {/* FULL WIDTH CONTAINER */}
       <div className="w-full h-full flex">

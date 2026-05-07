@@ -7,6 +7,7 @@ import learnCallouts from "../../../../assets/client/raks/img/raksLearn.png";
 import viVidCallouts from "../../../../assets/client/raks/img/heroImg1.png";
 import pragmaCallouts from "../../../../assets/client/raks/img/heroImg4.png";
 import grid from "../../../../assets/client/padlr/img/checkBg.png";
+import GridOverlay from "../../../GridOverlay";
 
 const Section4 = () => {
   const iconRefs = useRef([]);
@@ -54,13 +55,15 @@ const Section4 = () => {
 
   return (
     <section
-      className="h-screen flex relative overflow-visible"
-      style={{
-        backgroundImage: `url(${grid})`,
-        backgroundSize: "cover",
-        backgroundPosition: "center",
-      }}
-    >
+      className="h-screen flex relative overflow-visible">
+
+        <GridOverlay
+            color="0,0,0"
+            opacity={0.15}
+            size={100}
+            position="99px 0px"
+          />
+
       {/* LEFT IMAGE */}
       <div className="w-[40vw] aspect-[9/16] h-full relative">
         <img

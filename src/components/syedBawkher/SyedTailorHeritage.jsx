@@ -9,6 +9,7 @@ import syedLogo from "../../assets/client/syedBawkher/img/heroImg1.png";
 import syedBawkherImg from "../../assets/client/syedBawkher/img/syedBawkher4.png";
 import tagElegantImg from "../../assets/client/syedBawkher/img/signatureImg.png";
 import video from "../../assets/client/syedBawkher/vdo/Brochure_animation.mp4";
+import GridOverlay from "../../components/GridOverlay";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -106,146 +107,177 @@ export default function SyedTailorHeritage() {
 
           {/* ── BLOCK 2 (100vw) ── */}
           <div
-            className="relative h-full flex flex-col justify-center flex-shrink-0"
+            className="relative h-full flex-shrink-0 overflow-visible"
             style={{
               width: "100vw",
-              padding: "0 5%",
-              backgroundImage: `url(${grid})`,
-              backgroundSize: "cover",
               backgroundColor: "#EBE2CE",
             }}
           >
-            {/* BUTTON ICON */}
-            <div
-              ref={addIconRef}
-              data-speed="0.4"
-              data-rotate="0"
-              className="absolute"
-              style={{
-                top: "10%",
-                left: "35%",
-                width: "clamp(80px,8vw,140px)",
-                willChange: "transform",
-              }}
-            >
-              <img src={buttonImg} className="w-full" />
+            {/* GRID */}
+            <div className="absolute inset-0 z-0 pointer-events-none">
+              <GridOverlay
+                color="0,0,0"
+                opacity={0.15}
+                size={100}
+                position="99px 0px"
+              />
             </div>
 
-            {/* HEADING */}
-            <div className="absolute top-[20%] left-[10%] text-start">
-              <h2
-                className="salo tracking-wider text-[#262666] leading-none"
+            {/* CONTENT */}
+            <div
+              className="relative z-10 h-full flex flex-col justify-center"
+              style={{
+                padding: "0 5%",
+              }}
+            >
+              {/* BUTTON ICON */}
+              <div
+                ref={addIconRef}
+                data-speed="0.4"
+                data-rotate="0"
+                className="absolute"
                 style={{
-                  fontSize: "clamp(60px,25vh,200px)",
-                  maxWidth: "70%",
+                  top: "10%",
+                  left: "35%",
+                  width: "clamp(80px,8vw,140px)",
+                  willChange: "transform",
                 }}
               >
-                TAILOR <br /> HERITAGE
-              </h2>
-            </div>
+                <img src={buttonImg} className="w-full" />
+              </div>
 
-            {/* SUB TEXT */}
-            <div className="absolute top-[80%] left-[10%] text-start">
-              <p
-                className="salo uppercase text-[#262666] tracking-tight leading-none"
+              {/* HEADING */}
+              <div className="absolute top-[20%] left-[10%] text-start">
+                <h2
+                  className="salo tracking-wider text-[#262666] leading-none"
+                  style={{
+                    fontSize: "clamp(60px,25vh,200px)",
+                    maxWidth: "70%",
+                  }}
+                >
+                  TAILOR <br /> HERITAGE
+                </h2>
+              </div>
+
+              {/* SUB TEXT */}
+              <div className="absolute top-[80%] left-[10%] text-start">
+                <p
+                  className="salo uppercase text-[#262666] tracking-tight leading-none"
+                  style={{
+                    fontSize: "clamp(18px,2.5vw,40px)",
+                    marginTop: "2%",
+                  }}
+                >
+                  Crafted <br /> In Heritage
+                </p>
+              </div>
+
+              {/* RIGHT PARA */}
+              <div
+                className="absolute"
                 style={{
-                  fontSize: "clamp(18px,2.5vw,40px)",
-                  marginTop: "2%",
+                  right: "5%",
+                  top: "50%",
+                  transform: "translateY(-50%)",
+                  maxWidth: "40%",
                 }}
               >
-                Crafted <br /> In Heritage
-              </p>
-            </div>
+                <p className="jost text-start text-[26px] leading-[130%] capitalize text-[#262666]">
+                  Syed Bawkher is a heritage tailoring house built on
+                  generations of craftsmanship—where tradition, precision, and
+                  timeless style come together. Designed for the modern
+                  gentleman, it offers bespoke garments, refined detailing, and
+                  an experience that goes beyond just dressing.
+                </p>
+              </div>
 
-            {/* RIGHT PARA */}
-            <div
-              className="absolute"
-              style={{
-                right: "5%",
-                top: "50%",
-                transform: "translateY(-50%)",
-                maxWidth: "40%",
-              }}
-            >
-              <p className="jost text-start text-[26px] leading-[130%] capitalize text-[#262666]">
-                Syed Bawkher is a heritage tailoring house built on generations
-                of craftsmanship—where tradition, precision, and timeless style
-                come together. Designed for the modern gentleman, it offers
-                bespoke garments, refined detailing, and an experience that goes
-                beyond just dressing.
-              </p>
-            </div>
-
-            {/* LOGO */}
-            <div
-              ref={addIconRef}
-              data-speed="0.3"
-              data-rotate="-6"
-              className="absolute bottom-[5%] left-[40%]"
-              style={{
-                marginTop: "4%",
-                width: "clamp(120px,20vh,250px)",
-                willChange: "transform",
-              }}
-            >
-              <img src={syedLogo} className="w-full" />
-            </div>
-
-            {/* BOTTOM TITLE */}
-            <div
-              className="absolute"
-              style={{
-                bottom: "5%",
-                right: "-22%",
-              }}
-            >
-              <h2
-                className="salo tracking-normal text-white leading-none"
+              {/* LOGO */}
+              <div
+                ref={addIconRef}
+                data-speed="0.3"
+                data-rotate="-6"
+                className="absolute bottom-[5%] left-[40%]"
                 style={{
-                  fontSize: "clamp(50px,8vw,150px)",
+                  marginTop: "4%",
+                  width: "clamp(120px,20vh,250px)",
+                  willChange: "transform",
                 }}
               >
-                TIMEL<span style={{ color: "#262666" }}>ESS CRAFT</span>
-              </h2>
+                <img src={syedLogo} className="w-full" />
+              </div>
+
+              {/* BOTTOM TITLE */}
+              <div
+                className="absolute"
+                style={{
+                  bottom: "5%",
+                  right: "-22%",
+                }}
+              >
+                <h2
+                  className="salo tracking-normal text-white leading-none"
+                  style={{
+                    fontSize: "clamp(50px,8vw,150px)",
+                  }}
+                >
+                  TIMEL<span style={{ color: "#262666" }}>ESS CRAFT</span>
+                </h2>
+              </div>
             </div>
           </div>
 
           {/* ── BLOCK 3 (30vw) ── */}
           <div
-            className="flex-shrink-0 flex items-start justify-center"
+            className="relative flex-shrink-0 overflow-visible"
             style={{
-              width: "30vw",
-              padding: "2%",
-              backgroundImage: `url(${grid})`,
+              width: "35vw",
               backgroundColor: "#ffffff",
             }}
           >
-            <div className="relative flex flex-col items-start w-full">
-              {/* MAIN IMAGE */}
-              <img
-                src={syedBawkherImg}
-                className="object-contain"
-                style={{
-                  top: "50%",
-                  right: "20%",
-                  width: "clamp(120px,50vh,400px)",
-                  transform: "rotate(-10deg)",
-                }}
+            {/* GRID */}
+            <div className="absolute inset-0 z-0 pointer-events-none">
+              <GridOverlay
+                color="0,0,0"
+                opacity={0.15}
+                size={100}
+                position="99px 0px"
               />
+            </div>
 
-              {/* TAG */}
-              <div
-                ref={addIconRef}
-                data-speed="0.25"
-                className="absolute"
-                style={{
-                  top: "5%",
-                  right: "90%",
-                  width: "clamp(60px,20vh,200px)",
-                  willChange: "transform",
-                }}
-              >
-                <img src={tagElegantImg} className="w-full -rotate-[20deg]" />
+            {/* CONTENT */}
+            <div
+              className="relative z-10 h-full flex items-start justify-center"
+              style={{
+                padding: "2%",
+              }}
+            >
+              <div className="relative flex flex-col w-full">
+                {/* MAIN IMAGE */}
+                <img
+                  src={syedBawkherImg}
+                  className="object-contain"
+                  style={{
+                    top: "60%",
+                    right: "20%",
+                    width: "clamp(120px,40vh,400px)",
+                    transform: "rotate(-10deg)",
+                  }}
+                />
+
+                {/* TAG */}
+                <div
+                  ref={addIconRef}
+                  data-speed="0.25"
+                  className="absolute"
+                  style={{
+                    top: "5%",
+                    right: "90%",
+                    width: "clamp(60px,20vh,200px)",
+                    willChange: "transform",
+                  }}
+                >
+                  <img src={tagElegantImg} className="w-full -rotate-[20deg]" />
+                </div>
               </div>
             </div>
           </div>
@@ -265,21 +297,20 @@ export default function SyedTailorHeritage() {
 
           {/* Block 5 */}
           <div className="w-[60vw] h-screen relative overflow-hidden flex-shrink-0">
-          <SyedWannaKnowMore />
+            <SyedWannaKnowMore />
           </div>
-
         </div>
       </div>
     </section>
   );
 }
 
-import React from 'react';
+import React from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import question from "../../assets/client/syedBawkher/img/question.png";
 import ImagesTrail from "../../components/ImagesTrail";
 
-const lines = ["Wann..", "Know", "More"];
+const lines = ["Wanna..", "Know", "More"];
 
 const AnimatedChar = ({ char, scrollYProgress, start, end }) => {
   const opacity = useTransform(scrollYProgress, [start, end], [0, 1]);
@@ -290,7 +321,7 @@ const AnimatedChar = ({ char, scrollYProgress, start, end }) => {
       style={{ opacity, y }}
       className="text-[#262666] font-[500] salo uppercase inline-block will-change-transform"
     >
-      <span className='text-[50px] md:text-[150px]'>
+      <span className="text-[50px] md:text-[150px]">
         {char === " " ? "\u00A0" : char}
       </span>
     </motion.span>
@@ -309,8 +340,13 @@ const SyedWannaKnowMore = () => {
     <section
       ref={ref}
       className="w-full md:h-screen relative flex items-center justify-center overflow-hidden isolate"
-      style={{ backgroundImage: `url(${grid})`, backgroundSize: "cover" }}
     >
+      <GridOverlay
+        color="0,0,0"
+        opacity={0.15}
+        size={100}
+        position="99px 0px"
+      />
       {/* IMAGE TRAIL */}
       <ImagesTrail image={question} />
 

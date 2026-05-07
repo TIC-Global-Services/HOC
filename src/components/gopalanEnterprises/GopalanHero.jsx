@@ -1,46 +1,40 @@
 import { motion } from "framer-motion";
-import { AnimatedText, AnimatedWord, containerVariants } from "../reusable/TextAnimation";
+import {
+  AnimatedText,
+  AnimatedWord,
+  containerVariants,
+} from "../reusable/TextAnimation";
 import GridOverlay from "../GridOverlay";
 
 const GopalanHero = () => {
   return (
-    <section className="relative w-full h-screen overflow-hidden flex  justify-center">
-
-      {/* MAIN WRAPPER */}
-      <div className="relative w-full max-w-[1600px] h-full">
-        
-
-        {/* ───── LEFT PANEL ───── */}
-        <div
-          className="relative md:w-1/2 h-full "
-        >
+    <section className="w-full min-h-screen flex justify-center">
+      <div className="w-full flex flex-col md:flex-row relative">
+        {/* ───── LEFT SIDE ───── */}
+        <div className="relative w-full h-[500px] md:h-screen md:w-1/2 overflow-hidden flex-shrink-0">
           {/* GRID */}
-          <GridOverlay color="0,0,0" opacity={0.15} size={100} position="99px 0px" />
-          <div
-            className="absolute"
-            style={{
-              top: "50%",
-              left: "6vw",
-              transform: "translateY(-50%)",
-              maxWidth: "40vw",
-            }}
-          >
+          <GridOverlay
+            color="0,0,0"
+            opacity={0.15}
+            size={100}
+            position="99px 0px"
+          />
+
+          {/* CONTENT */}
+          <div className="w-full h-full flex flex-col items-center justify-center gap-4 md:gap-6 px-4">
             <h1
-              className="alinsa text-start text-[#060EBB] leading-none"
-              style={{
-                fontSize: "clamp(48px,8vw,140px)",
-                fontWeight: 1000,
-              }}
+              className="font-[1000] alinsa text-[#060EBB] leading-none tracking-tight text-center"
+              style={{ fontSize: "clamp(48px, 9vw, 140px)" }}
             >
               GOPALAN GROUPS
             </h1>
 
             <button
-              className="rounded-full bg-[#060EBB] text-white mt-6"
+              className="jost rounded-full border-2 bg-[#060EBB] text-white flex items-center justify-center font-medium"
               style={{
-                width: "clamp(140px,12vw,220px)",
-                height: "clamp(40px,4vw,70px)",
-                fontSize: "clamp(12px,1vw,16px)",
+                width: "clamp(160px, 18vw, 240px)",
+                height: "clamp(50px, 6vw, 80px)",
+                fontSize: "clamp(12px, 1vw, 16px)",
               }}
             >
               SPORTS & LIFESTYLE
@@ -50,34 +44,51 @@ const GopalanHero = () => {
 
         {/* ───── RIGHT TEXT ───── */}
         <div
-          className="absolute"
-          style={{
-            top: "50%",
-            right: "3vw",
-            transform: "translateY(-50%)",
-            maxWidth: "39%",
-          }}
+          className="
+          absolute 
+          top-0 
+          right-0 
+          h-full 
+          w-full md:w-1/2
+        "
         >
-          <motion.p
-            className="jost text-black text-start capitalize tracking-tight font-[500]"
-            style={{
-              fontSize: "clamp(14px,1.8vw,26px)",
-              lineHeight: "160%",
-            }}
-            variants={containerVariants}
-            initial="hidden"
-            animate="visible"
+          {/* INNER ANIMATION CONTAINER */}
+          <motion.div
+            initial={{ opacity: 0, y: 80 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
+            className="
+            absolute
+            top-[25%]
+            left-0
+            ml-[5%] xl:ml-[8%] 2xl:ml-[15%]
+            w-[85%]
+            max-w-[420px]
+            lg:max-w-[541px]
+            xl:max-w-[560px]
+            2xl:max-w-[580px]
+            flex justify-start
+          "
           >
-            <AnimatedText text="Reimagining Gopalan Group's identity meant balancing four decades of trust with a future-ready vision. The refined" />
-            <AnimatedWord
-              className="salo text-[40px] text-[#E96428]"
+            <p
+              className="jost text-start font-[500] capitalize text-black leading-[160%]"
+              style={{
+                fontSize: "clamp(14px,4vh,26px)",
+              }}
             >
-              logomark
-            </AnimatedWord>
-            <AnimatedText text="and evolved palette retain architectural roots while introducing a sense of dynamism, adaptability, and modernity. Through a modular, multi-tiered visual system, each vertical gains its own identity while remaining part of a cohesive whole—resulting in a brand that is grounded." />
-          </motion.p>
+              Reimagining Gopalan Group's identity meant balancing four decades
+              of trust with a future-ready vision. The refined{" "}
+              <span className="salo text-[#E96428] text-[clamp(18px,6vh,40px)]">
+                logomark
+              </span>{" "}
+              and evolved palette retain architectural roots while introducing a
+              sense of dynamism, adaptability, and modernity. Through a modular,
+              multi-tiered visual system, each vertical gains its own identity
+              while remaining part of a cohesive whole resulting in a brand that
+              is grounded.
+            </p>
+          </motion.div>
         </div>
-
       </div>
     </section>
   );

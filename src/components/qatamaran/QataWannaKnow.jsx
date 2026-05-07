@@ -5,6 +5,7 @@ import grid from "../../assets/client/padlr/img/checkBg.png";
 import question from "../../assets/client/qatamaran/question.png";
 
 import ImagesTrail from "../../components/ImagesTrail";
+import GridOverlay from "../GridOverlay";
 
 const lines = ["Wann..", "Know", "More"];
 
@@ -36,8 +37,13 @@ const QataWannaKnowMore = () => {
     <section
       ref={ref}
       className="w-full h-[80dvh] md:h-[100dvh] relative flex items-center justify-center overflow-hidden isolate"
-      style={{ backgroundImage: `url(${grid})`, backgroundSize: "cover" }}
     >
+      <GridOverlay
+            color="0,0,0"
+            opacity={0.15}
+            size={100}
+            position="99px 0px"
+          />
       {/* IMAGE TRAIL */}
       <ImagesTrail image={question} />
 

@@ -37,7 +37,7 @@ const SyedHero = () => {
         .float-4 { --r: -6deg; animation: floatY 4.4s ease-in-out 0.3s infinite; }
       `}</style>
 
-      <div className="w-full max-w-[1440px] 2xl:max-w-[1600px] flex flex-col md:flex-row relative">
+      <div className="w-full flex flex-col md:flex-row relative">
         {/* LEFT */}
 
         <div className="relative w-full h-[500px] md:h-screen md:w-1/2 overflow-hidden flex-shrink-0">

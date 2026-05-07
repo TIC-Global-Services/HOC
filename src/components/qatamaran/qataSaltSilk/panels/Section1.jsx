@@ -53,22 +53,25 @@ export default function Section1() {
 
   return (
     <section
-      className="w-full h-screen flex flex-col"
-      style={{ backgroundColor: GREEN }}
-    >
-      {/* ── TOP BAR ── */}
-      <div
-        className="flex items-center justify-between 
-        px-[clamp(20px,3vw,60px)] border-b border-white"
+  className="w-full h-screen overflow-hidden flex"
+  style={{ backgroundColor: GREEN }}
+>
+  {/* ───────── LEFT MAIN BOX ───────── */}
+  <div
+    className="w-[60%] h-full border-r border-white flex flex-col"
+    style={{ backgroundColor: GREEN }}
+  >
+    {/* ───────── TOP BAR ───────── */}
+    <div className="relative border-b border-white px-6 py-5">
+      <h1
+        className="salo text-start text-white uppercase leading-none tracking-tight"
+        style={{ fontSize: "clamp(36px, 9vw, 190px)" }}
       >
-        <h1
-          className="salo uppercase leading-none py-[1%] text-white
-          text-[clamp(48px,10vw,200px)]"
-        >
-          Salt <span className="jost"> & </span> Silk craft
-        </h1>
+        Salt <span className="jost">&</span> Silk Craft
+      </h1>
 
-        {/* craftImg momentum */}
+      {/* TOP ICON */}
+      <div className="absolute top-0 right-[8%] h-full flex items-center z-10">
         <div
           ref={addIconRef}
           data-speed="0.4"
@@ -78,86 +81,81 @@ export default function Section1() {
           <img
             src={craftImg}
             alt="retro computer"
-            className="object-contain md:-translate-x-[200%] pt-2"
+            className="object-contain h-[70%] w-auto"
             style={{ width: "clamp(110px, 12vw, 200px)" }}
           />
         </div>
       </div>
+    </div>
 
-      {/* ── GRID ── */}
-      <div className="flex flex-1">
-
-        {/* LEFT */}
-        <div
-          className="flex flex-col 
-          w-[32vw] min-w-[320px] max-w-[700px]
-          border-r border-white"
-        >
-          {["Heritage.", "Craft.", "Voyage."].map((text, i) => (
-            <div
-              key={i}
-              className="flex items-center 
-                px-[clamp(20px,2vw,60px)] 
-                flex-1 border-b border-white"
+    {/* ───────── BOTTOM CONTENT ───────── */}
+    <div className="flex flex-1 min-h-0">
+      {/* LEFT COLUMN */}
+      <div className="w-[50%] border-r border-white flex flex-col">
+        {["Heritage.", "Craft.", "Voyage."].map((text, i) => (
+          <div
+            key={i}
+            className="flex items-center px-6 border-b border-white flex-1"
+          >
+            <span
+              className="salo text-white uppercase leading-none"
+              style={{ fontSize: "clamp(18px, 6vw, 120px)" }}
             >
-              <span
-                className="salo uppercase text-white leading-none
-                text-[clamp(42px,6vw,120px)]"
-              >
-                {text}
-              </span>
-            </div>
-          ))}
+              {text}
+            </span>
+          </div>
+        ))}
 
-          {/* tree logo momentum */}
-          <div className="flex items-end px-[clamp(20px,3vw,60px)] py-6">
-            <div
-              ref={addIconRef}
-              data-speed="0.6"
-              data-rotate="16"
-              style={{ willChange: "transform" }}
-            >
-              <img
-                src={treeLogoImg}
-                alt="logo"
-                className="rotate-[16deg]"
-                style={{ width: "clamp(80px,7vw,120px)" }}
-              />
-            </div>
+        {/* LOGO */}
+        <div className="flex items-center justify-start px-4 py-4">
+          <div
+            ref={addIconRef}
+            data-speed="0.6"
+            data-rotate="16"
+            style={{ willChange: "transform" }}
+          >
+            <img
+              src={treeLogoImg}
+              alt="logo"
+              className="rotate-[16deg] object-contain"
+              style={{ width: "clamp(80px, 10vh, 300px)" }}
+            />
           </div>
         </div>
+      </div>
 
-        {/* CENTER */}
-        <div
-          className="flex flex-col justify-center md:mt-[9.5%]
-          w-[26vw] min-w-[480px] max-w-[800px] text-start"
-        >
+      {/* ABOUT SECTION */}
+      <div className="w-[50%] flex flex-col justify-center text-start">
+        <div className="flex flex-col">
+          {/* ABOUT TITLE */}
           <p
-            className="salo uppercase text-white mb-4 md:pl-[5%]
-            text-[clamp(32px,3.5vw,60px)]"
+            className="salo text-white uppercase px-5"
+            style={{ fontSize: "clamp(18px, 4vw, 60px)" }}
           >
             ABOUT
           </p>
 
+          {/* ABOUT TEXT */}
           <p
-            className="jost text-white leading-[140%] 
-            border-y border-white py-4 md:pl-[5%]
-            text-[clamp(15px,12vw,26px)]"
+            className="jost text-white leading-[140%] border-t border-b border-white px-5 py-10"
+            style={{ fontSize: "clamp(11px, 1.6vw, 26px)" }}
           >
             Rooted in seaside heritage, shaped by skilled hands. A balance of
             fluid elegance and structured precision.
           </p>
         </div>
-
-        {/* RIGHT IMAGE */}
-        <div className="flex-1 relative border-l border-white overflow-hidden">
-          <img
-            src={silkCraft}
-            alt="silk"
-            className="absolute inset-0 w-full h-full object-cover"
-          />
-        </div>
       </div>
-    </section>
+    </div>
+  </div>
+
+  {/* ───────── RIGHT IMAGE ───────── */}
+  <div className="w-[40%] h-screen overflow-hidden relative">
+    <img
+      src={silkCraft}
+      alt="silk"
+      className="w-full h-full object-cover"
+    />
+  </div>
+</section>
   );
 }

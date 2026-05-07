@@ -6,6 +6,7 @@ import img1 from "../../assets/client/qatamaran/heroFloat1.png";
 import img2 from "../../assets/client/qatamaran/heroFloat2.png";
 import img3 from "../../assets/client/qatamaran/heroFloat3.png";
 import img4 from "../../assets/client/qatamaran/heroFloat4.png";
+import GridOverlay from "../../components/GridOverlay";
 
 const IMGS = {
   circle: img1,
@@ -187,11 +188,13 @@ export default function QataCoastal() {
     <section
       ref={containerRef}
       className="w-full min-h-screen relative overflow-hidden"
-      style={{
-        backgroundImage: `url(${grid})`,
-        backgroundSize: "cover",
-      }}
     >
+      <GridOverlay
+            color="0,0,0"
+            opacity={0.15}
+            size={100}
+            position="99px 0px"
+          />
       {/* TITLE */}
       <h2 className="absolute left-[5%] text-start top-[clamp(40px,8vh,90px)] z-10 m-0 salo font-medium text-[14px] md:text-[140px] leading-none tracking-[-0.02em] uppercase text-[#1E382D]">
         <span style={{ display: "block" }}>COASTAL</span>

@@ -6,6 +6,7 @@ import viVidImg from "../../../../assets/client/raks/img/heroImg1.png";
 import innocenceImg from "../../../../assets/client/raks/img/heroImg3.png";
 import playfulImg from "../../../../assets/client/raks/img/heroImg2.png";
 import raksCenterImg from "../../../../assets/client/raks/img/raksInstituion.png";
+import GridOverlay from '../../../../components/GridOverlay'
 
 const Section2 = () => {
   const iconRefs = useRef([]);
@@ -58,12 +59,14 @@ const Section2 = () => {
       {/* BACKGROUND */}
       <div
         className="absolute inset-0"
-        style={{
-          backgroundImage: `url(${grid})`,
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-        }}
       />
+
+      <GridOverlay
+            color="0,0,0"
+            opacity={0.15}
+            size={100}
+            position="99px 0px"
+          />
 
       {/* CONTENT */}
       <div className="relative w-full h-full">
@@ -92,7 +95,7 @@ const Section2 = () => {
           className="absolute"
           style={{
             top: "5vh",
-            right: "10vw",
+            right: "20vw",
             width: "clamp(60px,18vw,300px)",
             transform: "rotate(-6deg)",
           }}

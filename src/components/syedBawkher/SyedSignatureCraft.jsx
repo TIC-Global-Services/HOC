@@ -12,6 +12,7 @@ import texturalImg from "../../assets/client/syedBawkher/img/heroImg3.png";
 import syedLeftImg from "../../assets/client/syedBawkher/img/signatureRightImg.png";
 import tagImg from "../../assets/client/syedBawkher/img/signatureImg.png";
 import syedCardImg from "../../assets/client/syedBawkher/img/syedBawkher4.png";
+import GridOverlay from "../../components/GridOverlay";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -94,168 +95,189 @@ export default function SyedSignatureCraft() {
       <div ref={containerRef} className="flex h-full">
         <section
           ref={(el) => (sectionsRef.current[0] = el)}
-          className="w-[120vw] h-screen overflow-hidden flex"
+          className="h-screen shrink-0 flex overflow-hidden"
           style={{ backgroundColor: BEIGE }}
         >
-          {/* ───────── LEFT MAIN BOX ───────── */}
-          <div
-            className="w-[60%] h-full border-r-2 border-white flex flex-col"
-            style={{ backgroundColor: BEIGE }}
-          >
-            {/* ───────── TOP BAR ───────── */}
-            <div className="relative border-b-2 border-white px-6 py-5">
+          {/* ───────── LEFT CONTENT PANEL ───────── */}
+          <div className="w-[70vw] h-full flex flex-col border-r-2 border-white relative">
+            {/* TOP AREA */}
+            <div className="relative border-b-2 border-white px-[3vw] py-[3vh]">
+              {/* TITLE */}
               <h1
-                className="salo text-start text-[#262666] uppercase leading-none tracking-normal"
-                style={{ fontSize: "clamp(36px, 9vw, 190px)" }}
+                className="salo uppercase text-start leading-none text-[#262666]"
+                style={{
+                  fontSize: "clamp(50px,10vw,220px)",
+                  lineHeight: "0.9",
+                }}
               >
                 Signature Craft
               </h1>
 
-              {/* TOP ICON */}
-              <div className="absolute top-0 right-[8%] h-full flex items-center z-10">
+              {/* FLOATING ICON */}
+              <div className="absolute top-[10%] right-[6%]">
                 <img
                   ref={addIconRef}
                   src={circleLogoImg}
-                  alt="retro computer"
-                  className="object-contain h-[80%] w-auto"
+                  alt=""
+                  className="w-auto object-contain"
+                  style={{
+                    height: "clamp(80px,10vw,220px)",
+                  }}
                 />
               </div>
             </div>
 
-            {/* ───────── BOTTOM CONTENT ───────── */}
+            {/* BOTTOM CONTENT */}
             <div className="flex flex-1 min-h-0">
-              {/* LEFT COLUMN */}
-              <div className="w-[50%] border-r-2 border-white flex flex-col">
+              {/* LEFT WORD STACK */}
+              <div className="w-[45%] border-r-2 border-white flex flex-col">
                 {["Measured.", "Crafted.", "Perfected."].map((text, i) => (
                   <div
                     key={i}
-                    className="flex items-center px-6 border-b-2 border-white flex-1"
+                    className="flex-1 border-b-2 border-white flex items-center px-[3vw]"
                   >
                     <span
-                      className="salo text-[#262666] uppercase leading-none"
-                      style={{ fontSize: "clamp(18px, 6vw, 120px)" }}
+                      className="salo uppercase text-[#262666]"
+                      style={{
+                        fontSize: "clamp(26px,6vw,110px)",
+                        lineHeight: "0.9",
+                      }}
                     >
                       {text}
                     </span>
                   </div>
                 ))}
 
-                {/* LOGO */}
-                <div className="flex items-center justify-end px-4 py-4">
+                {/* BOTTOM LOGO */}
+                <div className="flex items-center justify-end px-[2vw] py-[3vh]">
                   <img
                     ref={addIconRef}
                     src={elegantLogoImg}
-                    alt="elegant logo"
+                    alt=""
                     className="object-contain"
-                    style={{ width: "clamp(80px, 12vw, 300px)" }}
+                    style={{
+                      width: "clamp(100px,12vw,260px)",
+                    }}
                   />
                 </div>
               </div>
 
-              {/* ABOUT SECTION */}
-              <div className="w-[50%] flex flex-col justify-center text-start">
-                <div className="flex flex-col">
-                  {/* ABOUT TITLE */}
-                  <p
-                    className="salo text-[#262666] uppercase px-5"
-                    style={{ fontSize: "clamp(18px, 4vw, 60px)" }}
-                  >
-                    ABOUT
-                  </p>
+              {/* RIGHT ABOUT */}
+              <div className="w-[55%] flex flex-col justify-center">
+                <p
+                  className="salo text-start px-[5%] uppercase text-[#262666]"
+                  style={{
+                    fontSize: "clamp(20px,4vw,60px)",
+                  }}
+                >
+                  About
+                </p>
 
-                  {/* ABOUT TEXT */}
-                  <p
-                    className="jost capitalize text-[#262666] leading-[140%] border-t-2 border-b-2 border-white px-5 py-10"
-                    style={{ fontSize: "clamp(11px, 1.6vw, 26px)" }}
-                  >
-                    Syed Bawkher is built on a legacy of precision tailoring and
-                    enduring craftsmanship. From the first measurement to the
-                    final stitch, every garment is shaped with intent
-                    transforming fine materials into timeless elegance.
-                  </p>
-                </div>
+                <p
+                  className="jost text-[#262666] px-[5%] text-start capitalize border-t-2 border-b-2 border-white py-[4vh] mt-[2vh]"
+                  style={{
+                    fontSize: "clamp(14px,1.8vw,28px)",
+                    lineHeight: "150%",
+                  }}
+                >
+                  Syed Bawkher is built on a legacy of precision tailoring and
+                  enduring craftsmanship. From the first measurement to the
+                  final stitch, every garment is shaped with intent —
+                  transforming fine materials into timeless elegance.
+                </p>
               </div>
             </div>
           </div>
 
-          {/* ───────── RIGHT IMAGE ───────── */}
-          <div className="w-[40%] h-screen overflow-hidden relative">
+          {/* ───────── RIGHT IMAGE BLOCK ───────── */}
+          <div className="h-screen shrink-0 flex items-end overflow-hidden">
             <img
               src={craftImg}
-              alt="craft"
-              className="w-full h-full object-cover"
+              alt=""
+              className="h-screen w-auto object-cover"
             />
           </div>
         </section>
-
-
         {/* ───────── SECTION 2 ───────── */}
         <div
           ref={(el) => (sectionsRef.current[1] = el)}
-          className="w-[100vw] h-screen relative"
-          style={{ backgroundImage: `url(${grid})`, backgroundSize: "cover" }}
+          className="w-[100vw] h-screen relative overflow-hidden"
         >
-          {/* FLOATING IMAGES */}
-          {[
-            { img: syedCircleImg, top: "10%", left: "5%" },
-            { img: texturalImg, top: "10%", right: "15%" },
-            { img: elegantPairImg, bottom: "10%", left: "5%" },
-          ].map((item, i) => (
-            <div
-              key={i}
-              ref={addIconRef}
-              data-speed="0.8"
-              className="absolute"
-              style={{ ...item, width: "clamp(80px,14vw,320px)" }}
-            >
-              <img src={item.img} className="w-full" />
-            </div>
-          ))}
-
-          {/* TEXT */}
-          <div className="absolute top-[20%] flex items-center justify-center px-[5%]">
-            <div style={{ maxWidth: "60%" }}>
-              <h2
-                className="salo uppercase text-start text-[#262666] tracking-tight leading-none"
-                style={{ fontSize: "clamp(48px,22vh,200px)" }}
+          {/* GRID */}
+          <div className="absolute inset-0 z-0 pointer-events-none">
+            <GridOverlay
+              color="0,0,0"
+              opacity={0.15}
+              size={100}
+              position="99px 0px"
+            />
+          </div>
+          {/* Content */}
+          <div className="relative z-10 h-full">
+            {/* FLOATING IMAGES */}
+            {[
+              { img: syedCircleImg, top: "10%", left: "5%" },
+              { img: texturalImg, top: "10%", right: "15%" },
+              { img: elegantPairImg, bottom: "10%", left: "5%" },
+            ].map((item, i) => (
+              <div
+                key={i}
+                ref={addIconRef}
+                data-speed="0.8"
+                className="absolute"
+                style={{ ...item, width: "clamp(80px,14vw,320px)" }}
               >
-                Precision <br /> Tailored
-              </h2>
+                <img src={item.img} className="w-full" />
+              </div>
+            ))}
 
-              <p style={{ fontSize: "clamp(12px,20vh,26px)" }} 
-              className="jost text-start text-black/50 leading-[120%] tracking-tight mt-2 pl-3">
-                Crafted through generations of expertise, each piece reflects
-                precision and purpose. A seamless blend of heritage and
-                refinement, tailored for the modern gentleman.
+            {/* TEXT */}
+            <div className="absolute top-[20%] flex items-center justify-center px-[8%]">
+              <div style={{ maxWidth: "60%" }}>
+                <h2
+                  className="salo uppercase text-start text-[#262666] tracking-tight leading-none"
+                  style={{ fontSize: "clamp(48px,22vh,200px)" }}
+                >
+                  Precision <br /> Tailored
+                </h2>
+
+                <p
+                  style={{ fontSize: "clamp(12px,20vh,26px)" }}
+                  className="jost text-start text-black/50 leading-[120%] tracking-tight mt-2 pl-3"
+                >
+                  Crafted through generations of expertise, each piece reflects
+                  precision and purpose. A seamless blend of heritage and
+                  refinement, tailored for the modern gentleman.
+                </p>
+              </div>
+            </div>
+
+            {/* Bottom Text */}
+            <div className="absolute bottom-[10%] right-[10%]">
+              <p className="jost font-[500] tracking-tight uppercase text-base md:text-[40px] ">
+                DETAIL & DISCIPLINE
               </p>
             </div>
           </div>
+        </div>
 
-          {/* Bottom Text */}
-          <div className="absolute bottom-[10%] right-[10%]">
-            <p className="jost font-[500] tracking-tight uppercase text-base md:text-[40px] ">
-              DETAIL & DISCIPLINE
-            </p>
-          </div>
+        {/* ───────── SECTION 4 (AUTO IMAGE BLOCK) ───────── */}
+        <div
+          ref={(el) => (sectionsRef.current[2] = el)}
+          className="h-screen shrink-0 flex items-end overflow-hidden"
+        >
+          <img
+            src={syedLeftImg}
+            alt=""
+            className="h-screen w-auto object-contain"
+          />
         </div>
 
         {/* ───────── SECTION 3 ───────── */}
         <div
-          ref={(el) => (sectionsRef.current[2] = el)}
-          className="w-[80vw] h-full relative bg-white overflow-visible"
+          ref={(el) => (sectionsRef.current[3] = el)}
+          className="w-[45vw] h-full relative bg-white overflow-visible"
         >
-          {/* LEFT IMAGE */}
-          <div
-            className="relative"
-            style={{
-              left: "-10%",
-              bottom: "0%",
-              width: "clamp(260px,40vw,680px)",
-            }}
-          >
-            <img src={syedLeftImg} className="w-full object-cover" />
-          </div>
-
           {/* RIGHT CONTENT */}
           <div
             className="absolute flex flex-col justify-between"

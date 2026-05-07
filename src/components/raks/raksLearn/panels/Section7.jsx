@@ -5,6 +5,7 @@ import leftImg from "../../../../assets/client/raks/img/panel6.png";
 import rightImg from "../../../../assets/client/raks/img/panel7.png";
 import centerIcon from "../../../../assets/client/raks/img/heroImg2.png";
 import grid from "../../../../assets/client/padlr/img/checkBg.png";
+import GridOverlay from "../../../GridOverlay";
 
 const Section7 = () => {
   const iconRefs = useRef([]);
@@ -52,13 +53,21 @@ const Section7 = () => {
 
   return (
     <section
-      className="h-screen flex"
-      style={{
-        backgroundImage: `url(${grid})`,
-        backgroundPosition: "center",
-        backgroundColor: "white",
-      }}
+      className="relative h-screen flex"
     >
+
+      {/* GRID */}
+      <div className="absolute inset-0 z-0 pointer-events-none">
+        <GridOverlay
+          color="0,0,0"
+          opacity={0.15}
+          size={100}
+          position="99px 0px"
+        />
+      </div>
+
+      {/* CONTENT */}
+      <div className="relative z-10 flex w-full h-full">
 
       {/* LEFT IMAGE */}
       <div className="w-[45vw] h-full relative overflow-hidden">
@@ -105,7 +114,7 @@ const Section7 = () => {
           className="absolute inset-0 w-full h-full object-cover"
         />
       </div>
-
+      </div>
     </section>
   );
 };

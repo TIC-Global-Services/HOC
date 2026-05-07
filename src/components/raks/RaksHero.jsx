@@ -20,13 +20,16 @@ const RaksHero = () => {
         .float-4 { --r: -6deg; animation: floatY 4.4s ease-in-out 0.3s infinite; }
       `}</style>
 
-      <div className="w-full max-w-[1440px] 2xl:max-w-[1600px] flex flex-col md:flex-row relative">
+      <div className="w-full flex flex-col md:flex-row relative">
         {/* LEFT */}
-        <div
-          className="relative w-full h-[500px] md:h-screen md:w-1/2 overflow-hidden flex-shrink-0"
-        >
+        <div className="relative w-full h-[500px] md:h-screen md:w-1/2 overflow-hidden flex-shrink-0">
           {/* GRID */}
-          <GridOverlay color="0,0,0" opacity={0.15} size={100} position="99px 0px" />
+          <GridOverlay
+            color="0,0,0"
+            opacity={0.15}
+            size={100}
+            position="99px 0px"
+          />
           <img
             src={img2}
             className="float-1 absolute top-[10%] left-[10%] w-[50px] md:w-[80px] xl:w-[180px]"
@@ -77,8 +80,12 @@ const RaksHero = () => {
               absolute 
               top-[25%]
               left-0 
-              ml-[5%]
-              max-w-[590px] 
+              ml-[5%] xl:ml-[6%] 2xl:ml-[10%]
+              w-[85%]
+             max-w-[420px]
+             lg:max-w-[520px]
+             xl:max-w-[590px]
+             2xl:max-w-[700px]
               flex justify-start
             "
           >
@@ -93,9 +100,9 @@ const RaksHero = () => {
               <span className="salo text-[#000085] text-[18px] md:text-[26px] xl:text-[40px]">
                 RaK's Pallikkoodam
               </span>{" "}
-              that is warm, attentive, and child-centric.
-              The result is a playful yet thoughtful visual language and
-              environment designed to nurture curiosity and lifelong learning.
+              that is warm, attentive, and child-centric. The result is a
+              playful yet thoughtful visual language and environment designed to
+              nurture curiosity and lifelong learning.
               <img
                 src={heroParaImg}
                 alt="Binocular"

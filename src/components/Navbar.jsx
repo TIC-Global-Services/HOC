@@ -13,24 +13,35 @@ const Navbar = () => {
   const navigate = useNavigate();
 
   const [isSection2, setIsSection2] = useState(false);
-  const [isFixed, setIsFixed] = useState(true);
   const [isToggled, setIsToggled] = useState(false);
 
+  // SHOW / HIDE NAVBAR
+  const [showNavbar, setShowNavbar] = useState(true);
+
   useEffect(() => {
+    let lastScrollY = window.scrollY;
+
     const handleScroll = () => {
       const scrollY = window.scrollY;
       const firstSectionHeight = window.innerHeight;
 
-      if (scrollY <= firstSectionHeight) {
-        setIsSection2(scrollY > firstSectionHeight * 0.2);
-        setIsFixed(true);
+      // SECTION COLOR CHANGE
+      setIsSection2(scrollY > firstSectionHeight * 0.2);
+
+      // NAVBAR HIDE / SHOW
+      if (scrollY > lastScrollY && scrollY > 100) {
+        // SCROLL DOWN
+        setShowNavbar(false);
       } else {
-        setIsSection2(true);
-        setIsFixed(false);
+        // SCROLL UP
+        setShowNavbar(true);
       }
+
+      lastScrollY = scrollY;
     };
 
     window.addEventListener("scroll", handleScroll);
+
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
@@ -54,27 +65,46 @@ const Navbar = () => {
       });
       return;
     }
+
     navigate(path);
   };
 
   return (
     <>
-      {/* Mobile Navigation */}
+      {/* MOBILE NAV */}
       <div className="md:hidden">
         <MobileNav />
       </div>
 
-      {/* Desktop Navigation */}
-      <div className="hidden md:block pt-[10%]">
+      {/* DESKTOP NAV */}
+      <div className="hidden md:block">
+
         <div
-          className={`${
-            isFixed ? "fixed" : "absolute"
-          } w-full z-[500] top-0 left-0 ${
-            isSection2 ? "bg-white text-black" : "text-[#000000]"
-          } transition-all py-2 duration-700`}
+          className={`
+            fixed
+            top-0
+            left-0
+            w-full
+            z-[500]
+            py-2
+            transition-all
+            duration-500
+            transform
+            ${
+              showNavbar
+                ? "translate-y-0"
+                : "-translate-y-full"
+            }
+            ${
+              isSection2
+                ? "bg-white text-black"
+                : "text-[#000000]"
+            }
+          `}
         >
           <div className="flex py-2 jost px-4 md:px-10 justify-between items-center">
-            {/* Logo */}
+
+            {/* LOGO */}
             <img
               src={logo2}
               onClick={() => handleNav("/")}
@@ -82,8 +112,9 @@ const Navbar = () => {
               alt="Logo"
             />
 
-            {/* Navigation Links */}
+            {/* NAVIGATION LINKS */}
             <div className="text-[14px] md:text-[19px] font-semibold flex gap-4 md:gap-14 items-center">
+
               <h1
                 onClick={() => handleNav("/client")}
                 className={`cursor-pointer hover:text-black/50 ${
@@ -140,14 +171,26 @@ const Navbar = () => {
               </h1>
             </div>
 
-            {/* Contact Button */}
+            {/* CONTACT BUTTON */}
             <div onClick={() => handleNav("/contact")}>
               <motion.div
-                className={`py-2 px-4 rounded-full relative text-[12px] md:text-[13px] font-semibold flex items-center cursor-pointer ${
-                  isToggled
-                    ? "bg-black text-white"
-                    : "bg-[#F0F0F0] text-[#060ebb]"
-                }`}
+                className={`
+                  py-2
+                  px-4
+                  rounded-full
+                  relative
+                  text-[12px]
+                  md:text-[13px]
+                  font-semibold
+                  flex
+                  items-center
+                  cursor-pointer
+                  ${
+                    isToggled
+                      ? "bg-black text-white"
+                      : "bg-[#F0F0F0] text-[#060ebb]"
+                  }
+                `}
                 onClick={handleToggle}
               >
                 <motion.h1

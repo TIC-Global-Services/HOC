@@ -6,11 +6,11 @@ import Section1 from "../courtSky/panels/Section1";
 import Section2 from "../courtSky/panels/Section2";
 import Section3 from "../courtSky/panels/Section3";
 import Section4 from "../courtSky/panels/Section4";
-import Section5 from '../courtSky/panels/Section5';
-import Section6 from '../courtSky/panels/Section6';
-import Section7 from '../courtSky/panels/Section7';
+import Section5 from "../courtSky/panels/Section5";
+import Section6 from "../courtSky/panels/Section6";
+import Section7 from "../courtSky/panels/Section7";
 import Section8 from "./panels/Section8";
-
+import Section9 from "./panels/Section9";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -21,10 +21,9 @@ export default function CourtSky() {
   useEffect(() => {
     if (window.innerWidth < 768) return;
 
-    // Fixed calculation — avoids sub-pixel scrollWidth issues on wide screens
-    const totalScroll = window.innerWidth * 4.4;
-
     const ctx = gsap.context(() => {
+      const totalScroll = trackRef.current.scrollWidth - window.innerWidth;
+
       gsap.to(trackRef.current, {
         x: -totalScroll,
         ease: "none",
@@ -36,6 +35,7 @@ export default function CourtSky() {
           pinSpacing: true,
           scrub: 1,
           anticipatePin: 1,
+          invalidateOnRefresh: true,
         },
       });
     }, wrapperRef);
@@ -46,48 +46,64 @@ export default function CourtSky() {
   return (
     <section ref={wrapperRef}>
       <div className="sticky top-0 h-screen overflow-hidden">
-
         {/* TRACK */}
-        <div
-          ref={trackRef}
-          className="flex h-full"
-        >
-
-          {/* GROUP 1 — Section1 + Section2 = 200vw */}
-          <div className="flex h-full" style={{ width: "195vw", flexShrink: 0 }}>
-            <div style={{ width: "50vw", flexShrink: 0, height: "100%" }}>
+        <div ref={trackRef} className="flex h-full w-max">
+          {/* GROUP 1 */}
+          <div className="flex h-full shrink-0">
+            <div style={{ width: "50vw", flexShrink: 0 }}>
               <Section1 />
             </div>
-            <div style={{ width: "100vw", flexShrink: 0, height: "100%" }}>
+
+            <div style={{ width: "100vw", flexShrink: 0 }}>
               <Section2 />
             </div>
-            <div style={{ width: "45vw", flexShrink: 0, height: "100%" }}>
+
+            {/* AUTO WIDTH IMAGE */}
+            <div
+              style={{
+                flexShrink: 0,
+              }}
+            >
               <Section5 />
             </div>
           </div>
 
-          {/* GROUP 2 — Section3 + Section4 = 200vw */}
-          <div className="flex h-full" style={{ width: "340vw", flexShrink: 0 }}>
-            <div style={{ width: "100vw", flexShrink: 0, height: "100%" }}>
+          {/* GROUP 2 */}
+          <div className="flex h-full shrink-0">
+            <div style={{ width: "100vw", flexShrink: 0 }}>
               <Section3 />
             </div>
-            <div style={{ width: "80vw", flexShrink: 0, height: "100%" }}>
+
+            {/* AUTO WIDTH IMAGE */}
+            <div
+              style={{
+                flexShrink: 0,
+              }}
+            >
+              <Section9 />
+            </div>
+
+            <div style={{ width: "40vw", flexShrink: 0 }}>
               <Section4 />
             </div>
 
-            <div style={{ width: "50vw", flexShrink: 0, height: "100%" }}>
+            <div style={{ width: "50vw", flexShrink: 0 }}>
               <Section8 />
             </div>
 
-            <div style={{ width: "50vw", flexShrink: 0, height: "100%" }}>
+            {/* AUTO WIDTH */}
+            <div
+              style={{
+                flexShrink: 0,
+              }}
+            >
               <Section7 />
             </div>
 
-            <div style={{ width: "60vw", flexShrink: 0, height: "100%" }}>
+            <div style={{ width: "60vw", flexShrink: 0 }}>
               <Section6 />
             </div>
           </div>
-
         </div>
       </div>
     </section>

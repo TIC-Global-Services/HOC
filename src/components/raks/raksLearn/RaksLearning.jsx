@@ -11,11 +11,10 @@ import Section6 from "../raksLearn/panels/Section6";
 import Section7 from "../raksLearn/panels/Section7";
 import Section8 from "../raksLearn/panels/Section8";
 import Section9 from "../raksLearn/panels/Section9";
-import Section10 from '../raksLearn/panels/Section10'
-import Section11 from '../raksLearn/panels/Section11'
-import Section12 from '../raksLearn/panels/Section12'
+import Section10 from "../raksLearn/panels/Section10";
+import Section11 from "../raksLearn/panels/Section11";
+import Section12 from "../raksLearn/panels/Section12";
 import Section13 from "./panels/Section13";
-
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -23,53 +22,73 @@ export default function RaksLearning() {
   const wrapperRef = useRef(null);
   const trackRef = useRef(null);
 
+  const sectionWidths = [
+    120, // 1
+    100, // 2
+    80,  // 3
+    100, // 4
+    60,  // 5
+    140, // 6
+    135, // 7
+    90,  // 8
+    100, // 10
+    100, // 9
+    60,  // 11
+    60,  // 13
+  ];
 
-  const sectionWidths = [120, 100, 80, 100, 60, 140, 135, 90,100,100,30,60,60];
-  const totalWidth = sectionWidths.reduce((a, b) => a + b, 0); 
+  const totalWidth =
+    sectionWidths.reduce((a, b) => a + b, 0);
 
-useEffect(() => {
-  if (window.innerWidth < 768) return;
+  useEffect(() => {
+    if (window.innerWidth < 768) return;
 
-  let ctx;
+    let ctx;
 
-  const init = () => {
-    ctx = gsap.context(() => {
-      const track = trackRef.current;
-      const wrapper = wrapperRef.current;
+    const init = () => {
+      ctx = gsap.context(() => {
+        const track = trackRef.current;
+        const wrapper = wrapperRef.current;
 
-      if (!track || !wrapper) return;
+        if (!track || !wrapper) return;
 
-      const totalScroll = track.scrollWidth - window.innerWidth;
-      if (totalScroll <= 0) return;
+        // USE REAL WIDTH INCLUDING AUTO IMAGE SECTION
+        const totalScroll =
+          track.scrollWidth - window.innerWidth;
 
-      gsap.to(track, {
-        x: -totalScroll,
-        ease: "none",
-        scrollTrigger: {
-          trigger: wrapper,
-          start: "top top",
-          end: `+=${totalScroll}`,
-          pin: true,
-          scrub: 1,
-          anticipatePin: 1,
-          invalidateOnRefresh: true,
-        },
-      });
-    }, wrapperRef);
-  };
+        if (totalScroll <= 0) return;
 
-  // WAIT for layout
-  const timer = setTimeout(init, 100);
+        gsap.to(track, {
+          x: -totalScroll,
+          ease: "none",
+          scrollTrigger: {
+            trigger: wrapper,
+            start: "top top",
+            end: `+=${totalScroll}`,
+            pin: true,
+            scrub: 1,
+            anticipatePin: 1,
+            invalidateOnRefresh: true,
+          },
+        });
+      }, wrapperRef);
+    };
 
-  return () => {
-    clearTimeout(timer);
-    ctx && ctx.revert();
+    const timer = setTimeout(init, 100);
 
-    if (trackRef.current) {
-      gsap.set(trackRef.current, { clearProps: "all" });
-    }
-  };
-}, []);
+    return () => {
+      clearTimeout(timer);
+
+      ctx && ctx.revert();
+
+      if (trackRef.current) {
+        gsap.set(trackRef.current, {
+          clearProps: "all",
+        });
+      }
+    };
+  }, []);
+
   const sections = [
     { Component: Section1, width: sectionWidths[0] },
     { Component: Section2, width: sectionWidths[1] },
@@ -81,17 +100,12 @@ useEffect(() => {
     { Component: Section8, width: sectionWidths[7] },
     { Component: Section10, width: sectionWidths[8] },
     { Component: Section9, width: sectionWidths[9] },
-    { Component: Section13, width: sectionWidths[12] },
-    { Component: Section12, width: sectionWidths[11] },
-    { Component: Section11, width: sectionWidths[10] },
-    
-    
-
+    { Component: Section13, width: sectionWidths[11] },
   ];
 
   return (
     <section ref={wrapperRef}>
-      <div className=" h-screen overflow-hidden">
+      <div className="h-screen overflow-hidden">
 
         {/* TRACK */}
         <div
@@ -99,6 +113,8 @@ useEffect(() => {
           className="flex h-full"
           style={{ width: `${totalWidth}vw` }}
         >
+
+          {/* NORMAL VW SECTIONS */}
           {sections.map(({ Component, width }, i) => (
             <div
               key={i}
@@ -108,8 +124,21 @@ useEffect(() => {
               <Component />
             </div>
           ))}
-        </div>
 
+          {/* IMAGE SECTION */}
+          <div className="h-screen flex-shrink-0">
+            <Section12 />
+          </div>
+
+          {/* SECTION 11  */}
+          <div
+            className="h-full flex-shrink-0"
+            style={{ width: `${sectionWidths[10]}vw` }}
+          >
+            <Section11 />
+          </div>
+
+        </div>
       </div>
     </section>
   );

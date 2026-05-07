@@ -5,6 +5,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Section1 from "../growthEngine/panels/Section1";
 import Section2 from "../growthEngine/panels/Section2";
 import Section3 from "../growthEngine/panels/Section3";
+import Section4 from "./panels/Section4";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -15,35 +16,53 @@ export default function CourtSky() {
   useEffect(() => {
     if (window.innerWidth < 768) return;
 
-    const totalScroll = window.innerWidth * 2;
-
     const ctx = gsap.context(() => {
-      gsap.to(trackRef.current, {
+      const track = trackRef.current;
+      const wrapper = wrapperRef.current;
+
+      if (!track || !wrapper) return;
+
+      // USE REAL TRACK WIDTH
+      const totalScroll =
+        track.scrollWidth - window.innerWidth;
+
+      if (totalScroll <= 0) return;
+
+      gsap.to(track, {
         x: -totalScroll,
         ease: "none",
         scrollTrigger: {
-          trigger: wrapperRef.current,
+          trigger: wrapper,
           start: "top top",
           end: `+=${totalScroll}`,
           pin: true,
           pinSpacing: true,
           scrub: 1,
           anticipatePin: 1,
+          invalidateOnRefresh: true,
         },
       });
     }, wrapperRef);
 
-    return () => ctx.revert();
+    return () => {
+      ctx.revert();
+
+      if (trackRef.current) {
+        gsap.set(trackRef.current, {
+          clearProps: "all",
+        });
+      }
+    };
   }, []);
 
   return (
     <section ref={wrapperRef}>
-      <div className="sticky top-0 max-h-screen overflow-hidden">
+      <div className="sticky top-0 h-screen overflow-hidden">
 
-        {/* TRACK — 300vw */}
+        {/* TRACK */}
         <div
           ref={trackRef}
-          className="flex h-full w-[300vw]"
+          className="flex h-full"
         >
 
           {/* SECTION 1 */}
@@ -56,8 +75,13 @@ export default function CourtSky() {
             <Section2 />
           </div>
 
+          {/* AUTO WIDTH IMAGE SECTION */}
+          <div className="h-full flex-shrink-0">
+            <Section4 />
+          </div>
+
           {/* SECTION 3 */}
-          <div className="w-[80vw] h-full flex-shrink-0">
+          <div className="w-[40vw] h-full flex-shrink-0">
             <Section3 />
           </div>
 

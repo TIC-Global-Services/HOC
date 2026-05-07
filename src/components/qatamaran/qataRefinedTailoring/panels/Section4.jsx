@@ -4,6 +4,7 @@ import designImg from "../../../../assets/client/qatamaran/block4Top.png";
 import iconCoromandelImg from "../../../../assets/client/qatamaran/coromandelCoast.png";
 import glassIcon from "../../../../assets/client/qatamaran/heroFloat1.png";
 import grid from "../../../../assets/client/padlr/img/checkBg.png";
+import GridOverlay from "../../../GridOverlay";
 
 const Section4 = () => {
   const iconRefs = useRef([]);
@@ -59,84 +60,109 @@ const Section4 = () => {
     >
       {/* ─── LEFT SIDE ─── */}
       <div
-        className="relative h-full"
+        className="relative h-full overflow-hidden"
         style={{
           width: "60vw",
-          backgroundImage: `url(${grid})`,
           backgroundColor: "white",
         }}
       >
-        {/* IMAGE */}
-        <div
-          className="absolute"
-          style={{
-            top: "5vh",
-            left: "0vw",
-            width: "clamp(180px,52vh,800px)",
-          }}
-        >
-          <img src={designImg} className="w-full object-contain" />
+        {/* GRID */}
+        <div className="absolute inset-0 z-0 pointer-events-none">
+          <GridOverlay
+            color="0,0,0"
+            opacity={0.15}
+            size={100}
+            position="99px 0px"
+          />
         </div>
 
-        {/* TIMELESS */}
-        <div
-          className="absolute"
-          style={{
-            top: "10vh",
-            right: "0vw",
-          }}
-        >
-          <h2
-            className="salo text-[#1E382D] leading-none text-right"
-            style={{ fontSize: "clamp(40px,10vw,150px)" }}
-          >
-            TIMELESS
-          </h2>
-        </div>
-
-        {/* CENTER ICON */}
-        <div
-          className="absolute"
-          style={{
-            top: "45%",
-            left: "45vw",
-            transform: "translate(-50%, -50%)",
-          }}
-        >
+        {/* CONTENT */}
+        <div className="relative z-10 h-full">
+          {/* IMAGE */}
           <div
-            ref={addIconRef}
-            data-speed="0.3"
+            className="absolute"
             style={{
-              width: "clamp(60px,12vw,150px)",
-              willChange: "transform",
+              top: "5vh",
+              left: "0vw",
+              width: "clamp(180px,52vh,800px)",
             }}
           >
-            <img src={iconCoromandelImg} className="w-full object-contain -rotate-12" />
+            <img src={designImg} className="w-full object-contain" />
           </div>
-        </div>
 
-        {/* TEXT */}
-        <div
-          className="absolute"
-          style={{
-            bottom: "0vh",
-            padding:"6%",
-            
-          }}
-        >
-          <p
-            className="jost text-start text-black capitalize leading-[150%] tracking-tight font-[500]"
+          {/* TIMELESS */}
+          <div
+            className="absolute"
             style={{
-              fontSize: "clamp(14px,4vh,26px)",
-              lineHeight: "150%",
+              top: "10vh",
+              right: "0vw",
             }}
           >
-            Qatamaran is a contemporary prêt-à-porter menswear label inspired by Chennai’s deep-rooted tailoring legacy. 
-            Blending skilled craftsmanship with refined precision, the brand embodies a sense of enduring elegance. Created for 
-            <span style={{
-              fontSize: "clamp(18px,8vh,30px)"}} className=" salo text-[#1E382D]"> the modern gentleman,</span>{" "} 
-            it seamlessly fuses tradition with a subtle touch of coastal influence, offering styles that are both sophisticated and effortlessly distinctive.
-          </p>
+            <h2
+              className="salo text-[#1E382D] leading-none text-right"
+              style={{ fontSize: "clamp(40px,10vw,150px)" }}
+            >
+              TIMELESS
+            </h2>
+          </div>
+
+          {/* CENTER ICON */}
+          <div
+            className="absolute"
+            style={{
+              top: "45%",
+              left: "45vw",
+              transform: "translate(-50%, -50%)",
+            }}
+          >
+            <div
+              ref={addIconRef}
+              data-speed="0.3"
+              style={{
+                width: "clamp(60px,12vw,150px)",
+                willChange: "transform",
+              }}
+            >
+              <img
+                src={iconCoromandelImg}
+                className="w-full object-contain -rotate-12"
+              />
+            </div>
+          </div>
+
+          {/* TEXT */}
+          <div
+            className="absolute"
+            style={{
+              bottom: "0vh",
+              padding: "6%",
+            }}
+          >
+            <p
+              className="jost text-start text-black capitalize leading-[150%] tracking-tight font-[500]"
+              style={{
+                fontSize: "clamp(14px,4vh,26px)",
+                lineHeight: "150%",
+              }}
+            >
+              Qatamaran is a contemporary prêt-à-porter menswear label inspired
+              by Chennai’s deep-rooted tailoring legacy. Blending skilled
+              craftsmanship with refined precision, the brand embodies a sense
+              of enduring elegance. Created for
+              <span
+                style={{
+                  fontSize: "clamp(18px,8vh,30px)",
+                }}
+                className=" salo text-[#1E382D]"
+              >
+                {" "}
+                the modern gentleman,
+              </span>{" "}
+              it seamlessly fuses tradition with a subtle touch of coastal
+              influence, offering styles that are both sophisticated and
+              effortlessly distinctive.
+            </p>
+          </div>
         </div>
       </div>
 

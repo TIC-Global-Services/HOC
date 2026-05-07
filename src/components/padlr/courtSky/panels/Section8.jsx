@@ -1,17 +1,11 @@
 import React, { useRef } from 'react'
 import video2 from "../../../../assets/client/padlr/vdo/Padlr_Animation 3.mp4";
-import useMobileVideoFix from "../../../../hooks/useMobileVideo";
 
 const Section8 = () => {
-  const videoRef = useRef(null);
-    
-      useMobileVideoFix(videoRef);
 
   return (
     <section className="w-full min-h-screen relative bg-[#0506C3] overflow-hidden">
-
       <video
-        ref={videoRef}
         src={video2}
         autoPlay
         loop
@@ -22,7 +16,6 @@ const Section8 = () => {
         playsInline
         className="absolute inset-0 w-full h-full object-contain"
       />
-
     </section>
   )
 }

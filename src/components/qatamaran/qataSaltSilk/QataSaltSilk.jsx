@@ -13,7 +13,7 @@ export default function QataSaltSilk() {
   const trackRef = useRef(null);
 
   // widths of each section in vw
-  const sectionWidths = [120, 210, 100];
+  const sectionWidths = [120, 205, 100];
   const totalWidth = sectionWidths.reduce((a, b) => a + b, 0);
 
   useEffect(() => {

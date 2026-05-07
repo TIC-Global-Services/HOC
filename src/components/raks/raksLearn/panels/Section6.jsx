@@ -7,6 +7,7 @@ import centerImg from "../../../../assets/client/raks/img/pallikoodam.png";
 import pinImg from "../../../../assets/client/raks/img/heroImg1.png";
 import pinImg2 from "../../../../assets/client/raks/img/heroImg2.png";
 import grid from "../../../../assets/client/padlr/img/checkBg.png";
+import GridOverlay from "../../../GridOverlay";
 
 const Section6 = () => {
   const iconRefs = useRef([]);
@@ -55,12 +56,20 @@ const Section6 = () => {
   return (
     <section
       className="relative h-screen flex overflow-hidden"
-      style={{
-        backgroundImage: `url(${grid})`,
-        backgroundPosition: "center",
-        backgroundColor: "white",
-      }}
     >
+
+      {/* GRID */}
+      <div className="absolute inset-0 z-0 pointer-events-none">
+        <GridOverlay
+          color="0,0,0"
+          opacity={0.15}
+          size={100}
+          position="99px 0px"
+        />
+      </div>
+
+      {/* CONTENT */}
+      <div className="relative z-10 flex w-full h-full">
 
       {/* LEFT */}
       <div className="aspect-[9/16] h-full overflow-hidden" style={{ width: "40vw" }}>
@@ -179,6 +188,7 @@ const Section6 = () => {
           Curious <br /> Mind
         </h3>
 
+      </div>
       </div>
     </section>
   );

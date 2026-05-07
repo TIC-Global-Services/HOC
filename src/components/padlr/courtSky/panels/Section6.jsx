@@ -4,8 +4,9 @@ import { useRef } from "react";
 import grid from "../../../../assets/client/padlr/img/checkBg.png";
 import question from "../../../../assets/client/padlr/img/questionIcon.png";
 import ImagesTrail from "../../../../components/ImagesTrail";
+import GridOverlay from '../../../GridOverlay';
 
-const lines = ["Wann..", "Know", "More"];
+const lines = ["Wanna..", "Know", "More"];
 
 const AnimatedChar = ({ char, scrollYProgress, start, end }) => {
   const opacity = useTransform(scrollYProgress, [start, end], [0, 1]);
@@ -34,9 +35,15 @@ const Section6 = () => {
   return (
     <section
       ref={ref}
-      className="w-[60vw] min-h-screen relative flex items-center justify-center overflow-hidden isolate"
-      style={{ backgroundImage: `url(${grid})`, backgroundSize: "cover", width: "60vw" }}
-    >
+      className="w-[60vw] min-h-screen relative flex items-center justify-center overflow-hidden isolate">
+        {/* Grid */}
+      <GridOverlay
+            color="0,0,0"
+            opacity={0.15}
+            size={100}
+            position="99px 0px"
+          />
+
       {/* IMAGE TRAIL */}
       <ImagesTrail image={question} />
 

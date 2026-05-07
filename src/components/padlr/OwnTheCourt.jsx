@@ -6,6 +6,7 @@ import img1 from "../../assets/client/padlr/img/heroImg1.png";
 import img2 from "../../assets/client/padlr/img/heroImg2.png";
 import img3 from "../../assets/client/padlr/img/heroImg3.png";
 import img4 from "../../assets/client/padlr/img/heroImg4.png";
+import GridOverlay from "../GridOverlay";
 
 const IMGS = {
   circle: img1,
@@ -185,15 +186,20 @@ export default function OwnTheCourt() {
   return (
     <section
       ref={containerRef}
-      className="w-full min-h-screen relative overflow-hidden"
-      style={{
-        backgroundImage: `url(${grid})`,
-        backgroundSize: "cover",
-      }}
-    >
-      <h2 className="absolute left-[5%] top-[clamp(40px,8vh,90px)] z-10 m-0 salo font-medium text-[14px] md:text-[120px] leading-none tracking-[-0.02em] uppercase text-[#7ac9f0]">
+      className="w-full min-h-screen relative overflow-hidden">
+
+        {/* Grid */}
+      <GridOverlay
+            color="0,0,0"
+            opacity={0.15}
+            size={100}
+            position="99px 0px"
+          />
+
+
+      <h2 className="absolute left-[5%] top-[clamp(40px,8vh,90px)] text-start z-10 m-0 salo font-medium text-[14px] md:text-[120px] leading-none tracking-[-0.02em] uppercase text-[#7ac9f0]">
         <span style={{ display: "block" }}>OWN THE</span>
-        <span style={{ display: "block" }}>COURT</span>
+        <span style={{ display: "block" }} className="pl-[5%]">COURT</span>
       </h2>
 
       <div className="w-full max-w-[1600px] mx-auto relative h-full">

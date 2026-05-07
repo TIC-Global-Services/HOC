@@ -5,6 +5,7 @@ import grid from "../../../../assets/client/padlr/img/checkBg.png";
 import springImg from "../../../../assets/client/padlr/img/heroImg3.png";
 import canImg from "../../../../assets/client/padlr/img/heroImg4.png";
 import batImg from "../../../../assets/client/padlr/img/heroImg2.png";
+import GridOverlay from "../../../GridOverlay";
 
 const Section2 = () => {
   const iconRefs = useRef([]);
@@ -55,13 +56,15 @@ const Section2 = () => {
 
       {/* BACKGROUND */}
       <div
-        className="absolute inset-0"
-        style={{
-          backgroundImage: `url(${grid})`,
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-        }}
-      />
+        className="absolute inset-0"/>
+
+        {/* Grid */}
+      <GridOverlay
+            color="0,0,0"
+            opacity={0.15}
+            size={100}
+            position="99px 0px"
+          />
 
       {/* CONTENT */}
       <div className="relative w-full h-full">

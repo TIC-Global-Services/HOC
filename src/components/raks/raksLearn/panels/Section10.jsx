@@ -1,17 +1,22 @@
 import React from "react";
 import raksVideo from "../../../../assets/client/raks/vdo/raks.mp4";
 import grid from "../../../../assets/client/padlr/img/checkBg.png";
+import GridOverlay from "../../../GridOverlay";
 
 const Section10 = () => {
   return (
     <section
       className="relative h-screen flex overflow-hidden"
       style={{
-        backgroundImage: `url(${grid})`,
-        backgroundPosition: "center",
         backgroundColor: "white",
       }}
     >
+      <GridOverlay
+            color="0,0,0"
+            opacity={0.15}
+            size={100}
+            position="99px 0px"
+          />
       {/* ─── LEFT TEXT (30vw) ─── */}
       <div
         className="h-full flex items-center justify-center"

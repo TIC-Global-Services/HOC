@@ -6,6 +6,7 @@ import grid from "../../../../assets/client/padlr/img/checkBg.png";
 import rightImg from "../../../../assets/client/padlr/img/courtPanelImg.png";
 import courtImg2 from "../../../../assets/client/padlr/img/courtImg2.png";
 import courtImg3 from "../../../../assets/client/padlr/img/courtImg3.png";
+import GridOverlay from "../../../../components/GridOverlay";
 
 export default function Panel2() {
   const iconRefs = useRef([]);
@@ -58,11 +59,18 @@ export default function Panel2() {
     <section
       className="h-screen w-full flex relative overflow-hidden"
       style={{
-        backgroundImage: `url(${grid})`,
-        backgroundSize: "cover",
         backgroundColor: "#8FC4E9",
       }}
-    >
+>
+        {/* Grid */}
+      <GridOverlay
+            color="0,0,0"
+            opacity={0.15}
+            size={100}
+            position="99px 0px"
+          />
+
+
       <div className="w-full h-full flex">
         {/* LEFT PANEL */}
         <div className="w-1/2 h-full relative">
@@ -75,7 +83,7 @@ export default function Panel2() {
               data-rotate="0"
               className="relative z-10"
               style={{
-                width: "clamp(180px,50vh,400px)",
+                width: "clamp(180px,40vh,400px)",
                 willChange: "transform",
               }}
             >
@@ -86,14 +94,14 @@ export default function Panel2() {
             <div
               className="relative z-20"
               style={{
-                marginLeft: "-10%",
+                marginLeft: "-8%",
                 marginTop: "8%",
               }}
             >
               <h2
                 className="salo text-start text-white leading-none"
                 style={{
-                  fontSize: "clamp(80px,30vh,200px)",
+                  fontSize: "clamp(80px,25vh,200px)",
                 }}
               >
                 COURT <br /> SKY
@@ -138,7 +146,7 @@ export default function Panel2() {
             ref={addIconRef}
             data-speed="0.6"
             data-rotate="0"
-            className="absolute right-[5%] bottom-[4%]"
+            className="absolute right-[0%] bottom-[4%]"
             style={{
               willChange: "transform",
             }}
@@ -147,7 +155,7 @@ export default function Panel2() {
               src={courtImg3}
               alt=""
               style={{
-                width: "clamp(120px,30vh,400px)",
+                width: "clamp(120px,40vh,400px)",
                 transform: "rotate(-5deg)",
               }}
             />
