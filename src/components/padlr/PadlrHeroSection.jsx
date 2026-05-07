@@ -24,7 +24,7 @@ const PadlrHero = () => {
         className="relative w-full lg:w-[50%] xl:w-[50%] h-[500px] sm:h-[600px] lg:h-screen overflow-hidden flex-shrink-0"
       >
         {/* GRID */}
-          <GridOverlay color="0,0,0" opacity={0.15} size={100} position="99px 0px" />
+          <GridOverlay color="0,0,0" opacity={0.20} size={100} position="99px 0px" />
         <img
           src={img2}
           className="float-1 absolute top-[15%] left-[8%] w-[50px] sm:w-[70px] md:w-[90px] lg:w-[150px]"

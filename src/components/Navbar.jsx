@@ -77,7 +77,7 @@ const Navbar = () => {
       </div>
 
       {/* DESKTOP NAV */}
-      <div className="hidden md:block">
+      <div className="hidden md:block pt-[10%]">
 
         <div
           className={`

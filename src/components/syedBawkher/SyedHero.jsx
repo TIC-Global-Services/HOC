@@ -42,7 +42,7 @@ const SyedHero = () => {
 
         <div className="relative w-full h-[500px] md:h-screen md:w-1/2 overflow-hidden flex-shrink-0">
           {/* GRID */}
-          <GridOverlay color="0,0,0" opacity={0.15} size={100} position="99px 0px" />
+          <GridOverlay color="0,0,0" opacity={0.20} size={100} position="99px 0px" />
           {/* FLOATING IMAGES */}
           <img
             src={img1}

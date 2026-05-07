@@ -26,7 +26,7 @@ const RaksHero = () => {
           {/* GRID */}
           <GridOverlay
             color="0,0,0"
-            opacity={0.15}
+            opacity={0.20}
             size={100}
             position="99px 0px"
           />

@@ -25,7 +25,7 @@ const QatamaranHero = () => {
           className="relative w-full h-[500px] md:h-screen md:w-1/2 overflow-hidden flex-shrink-0"
         >
           {/* GRID */}
-          <GridOverlay color="0,0,0" opacity={0.15} size={100} position="99px 0px" />
+          <GridOverlay color="0,0,0" opacity={0.20} size={100} position="99px 0px" />
           <img
             src={img1}
             className="float-1 absolute top-[10%] left-[10%] w-[50px] md:w-[80px] xl:w-[120px]"
