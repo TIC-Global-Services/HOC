@@ -29,46 +29,21 @@ export default function SyedSignatureCraft() {
   };
 
   useEffect(() => {
+  const init = () => {
     const container = containerRef.current;
     const sections = sectionsRef.current;
 
+    ScrollTrigger.getAll().forEach((t) => t.kill());
+
     const widths = sections.map((s) => s.offsetWidth);
+
     const totalWidthPx = widths.reduce((acc, w) => acc + w, 0);
+
     const totalScroll = totalWidthPx - window.innerWidth;
 
-    gsap.set(container, { width: totalWidthPx });
-
-    const qs = iconRefs.current.map((el) => ({
-      setX: gsap.quickTo(el, "x", { duration: 1, ease: "power3.out" }),
-      setY: gsap.quickTo(el, "y", { duration: 0.8, ease: "power3.out" }),
-      setR: gsap.quickTo(el, "rotation", { duration: 1, ease: "power3.out" }),
-      el,
-    }));
-
-    let lastScrollY = window.scrollY;
-    let velocity = 0;
-    let rafId;
-
-    const tick = () => {
-      const scrollY = window.scrollY;
-      const delta = scrollY - lastScrollY;
-      lastScrollY = scrollY;
-
-      velocity += (delta - velocity) * 0.15;
-
-      qs.forEach(({ el, setX, setY, setR }) => {
-        const speed = parseFloat(el.dataset.speed || 0.5);
-        const baseRotate = parseFloat(el.dataset.rotate || 0);
-
-        setX(velocity * speed * 10);
-        setY(velocity * speed * 1);
-        setR(baseRotate + velocity * speed * 0.6);
-      });
-
-      rafId = requestAnimationFrame(tick);
-    };
-
-    rafId = requestAnimationFrame(tick);
+    gsap.set(container, {
+      width: totalWidthPx,
+    });
 
     gsap.to(container, {
       x: -totalScroll,
@@ -84,15 +59,21 @@ export default function SyedSignatureCraft() {
       },
     });
 
-    return () => {
-      cancelAnimationFrame(rafId);
-      ScrollTrigger.getAll().forEach((t) => t.kill());
-    };
-  }, []);
+    ScrollTrigger.refresh();
+  };
+
+  // WAIT FOR FULL PAGE + IMAGES
+  window.addEventListener("load", init);
+
+  return () => {
+    window.removeEventListener("load", init);
+    ScrollTrigger.getAll().forEach((t) => t.kill());
+  };
+}, []);
 
   return (
-    <div className="h-screen w-[320vw] overflow-hidden">
-      <div ref={containerRef} className="flex h-full">
+    <div className="h-screen overflow-hidden">
+      <div ref={containerRef} className="flex h-full w-max">
         <section
           ref={(el) => (sectionsRef.current[0] = el)}
           className="h-screen shrink-0 flex overflow-hidden"
