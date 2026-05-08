@@ -97,7 +97,7 @@ const MobSection5 = () => {
             className="
               jost
               text-[16px]
-              leading-[130%]
+              leading-[120%]
               font-[400]
             "
           >
