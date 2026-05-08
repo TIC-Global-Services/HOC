@@ -1,7 +1,7 @@
 import { useRef } from "react";
 
-import topImage from "../../../assets/client/gopalan/PanelImg2.png";
-import bottomImage from "../../../assets/client/gopalan/panelImg1.png";
+import topImage from "../../../assets/client/gopalan/panelImg2.png";
+import bottomImage from "../../../assets/client/gopalan/PanelImg1.png";
 
 import tagIcon from "../../../assets/client/gopalan/heroImg2.png";
 import tagIcon2 from "../../../assets/client/gopalan/heroImg3.png";
