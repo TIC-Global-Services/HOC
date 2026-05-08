@@ -9,7 +9,7 @@ import Section4 from "./panels/Section4";
 
 gsap.registerPlugin(ScrollTrigger);
 
-export default function CourtSky() {
+export default function GrowthEngine() {
   const wrapperRef = useRef(null);
   const trackRef = useRef(null);
 
@@ -71,7 +71,7 @@ export default function CourtSky() {
           </div>
 
           {/* SECTION 2 */}
-          <div className="w-[100vw] h-full flex-shrink-0">
+          <div className="w-[80vw] h-full flex-shrink-0">
             <Section2 />
           </div>
 

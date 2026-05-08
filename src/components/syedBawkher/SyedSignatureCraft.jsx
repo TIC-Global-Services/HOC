@@ -5,7 +5,6 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import craftImg from "../../assets/client/syedBawkher/img/signatureRightImg.png";
 import elegantLogoImg from "../../assets/client/syedBawkher/img/signatureImg.png";
 import circleLogoImg from "../../assets/client/syedBawkher/img/heroImg1.png";
-import grid from "../../assets/client/padlr/img/checkBg.png";
 import elegantPairImg from "../../assets/client/syedBawkher/img/elegantPairImg.png";
 import syedCircleImg from "../../assets/client/syedBawkher/img/heroImg4.png";
 import texturalImg from "../../assets/client/syedBawkher/img/heroImg3.png";
@@ -22,94 +21,179 @@ export default function SyedSignatureCraft() {
   const containerRef = useRef(null);
   const sectionsRef = useRef([]);
   const iconRefs = useRef([]);
-  iconRefs.current = [];
 
   const addIconRef = (el) => {
-    if (el) iconRefs.current.push(el);
-  };
+  if (el && !iconRefs.current.includes(el)) {
+    iconRefs.current.push(el);
+  }
+};
 
   useEffect(() => {
+  const container = containerRef.current;
+  if (!container) return;
+
+  let ctx;
+  let cleanupRAF;
+
+  // ── Total horizontal scroll distance ──
+  const getTotal = () =>
+    Math.max(
+      sectionsRef.current
+        .filter(Boolean)
+        .reduce((acc, s) => acc + s.offsetWidth, 0) -
+        window.innerWidth,
+      0
+    );
+
   const init = () => {
-    const container = containerRef.current;
-    const sections = sectionsRef.current;
+    // ── ICON MOMENTUM via scroll delta ──
+    const qs = iconRefs.current.map((el) => ({
+      el,
+      setX: gsap.quickTo(el, "x", {
+        duration: 1,
+        ease: "power3.out",
+      }),
+      setY: gsap.quickTo(el, "y", {
+        duration: 0.8,
+        ease: "power3.out",
+      }),
+      setR: gsap.quickTo(el, "rotation", {
+        duration: 1,
+        ease: "power3.out",
+      }),
+    }));
 
-    ScrollTrigger.getAll().forEach((t) => t.kill());
+    let lastScrollY = window.scrollY;
+    let velocity = 0;
+    let rafId;
 
-    const widths = sections.map((s) => s.offsetWidth);
+    const tick = () => {
+      const scrollY = window.scrollY;
+      const delta = scrollY - lastScrollY;
 
-    const totalWidthPx = widths.reduce((acc, w) => acc + w, 0);
+      lastScrollY = scrollY;
 
-    const totalScroll = totalWidthPx - window.innerWidth;
+      velocity += (delta - velocity) * 0.15;
 
-    gsap.set(container, {
-      width: totalWidthPx,
-    });
+      qs.forEach(({ el, setX, setY, setR }) => {
+        const speed = parseFloat(el.dataset.speed || 0.5);
+        const baseRotate = parseFloat(el.dataset.rotate || 0);
 
-    gsap.to(container, {
-      x: -totalScroll,
-      ease: "none",
-      scrollTrigger: {
-        trigger: container.parentElement,
-        start: "top top",
-        end: `+=${totalScroll}`,
-        scrub: 1,
-        pin: true,
-        anticipatePin: 1,
-        invalidateOnRefresh: true,
-      },
-    });
+        setX(velocity * speed * 4);
+        setY(velocity * speed * 0.8);
+        setR(baseRotate + velocity * speed * 0.6);
+      });
 
+      rafId = requestAnimationFrame(tick);
+    };
+
+    rafId = requestAnimationFrame(tick);
+
+    // ── HORIZONTAL SCROLL ──
+    ctx = gsap.context(() => {
+      gsap.to(container, {
+        x: () => -getTotal(),
+        ease: "none",
+        scrollTrigger: {
+          trigger: container.parentElement,
+          start: "top top",
+          end: () => `+=${getTotal()}`,
+          pin: true,
+          scrub: 1.5,
+          anticipatePin: 1,
+          invalidateOnRefresh: true,
+        },
+      });
+    }, container.parentElement);
+
+    // Refresh AFTER ScrollTrigger is registered
     ScrollTrigger.refresh();
+
+    // RAF cleanup
+    return () => cancelAnimationFrame(rafId);
   };
 
-  // WAIT FOR FULL PAGE + IMAGES
-  window.addEventListener("load", init);
+  // ── Wait for all images before measuring ──
+  const images = Array.from(container.querySelectorAll("img"));
+  const pending = images.filter((img) => !img.complete);
+
+  const cleanupListeners = [];
+
+  if (pending.length === 0) {
+    cleanupRAF = init();
+  } else {
+    let loaded = 0;
+
+    const onLoad = () => {
+      loaded++;
+
+      if (loaded >= pending.length) {
+        cleanupRAF = init();
+      }
+    };
+
+    pending.forEach((img) => {
+      img.addEventListener("load", onLoad);
+      img.addEventListener("error", onLoad);
+
+      cleanupListeners.push(() => {
+        img.removeEventListener("load", onLoad);
+        img.removeEventListener("error", onLoad);
+      });
+    });
+  }
 
   return () => {
-    window.removeEventListener("load", init);
-    ScrollTrigger.getAll().forEach((t) => t.kill());
+    cleanupRAF?.();
+
+    cleanupListeners.forEach((fn) => fn());
+
+    ctx?.revert();
   };
 }, []);
 
   return (
-    <div className="h-screen overflow-hidden">
+    <div className="h-screen">
       <div ref={containerRef} className="flex h-full w-max">
+
+        {/* ───────── SECTION 1 ───────── */}
         <section
           ref={(el) => (sectionsRef.current[0] = el)}
           className="h-screen shrink-0 flex overflow-hidden"
           style={{ backgroundColor: BEIGE }}
         >
-          {/* ───────── LEFT CONTENT PANEL ───────── */}
+          {/* LEFT CONTENT PANEL */}
           <div className="w-[70vw] h-full flex flex-col border-r-2 border-white relative">
+
             {/* TOP AREA */}
             <div className="relative border-b-2 border-white px-[3vw] py-[3vh]">
-              {/* TITLE */}
               <h1
                 className="salo uppercase text-start leading-none text-[#262666]"
-                style={{
-                  fontSize: "clamp(50px,10vw,220px)",
-                  lineHeight: "0.9",
-                }}
+                style={{ fontSize: "clamp(50px,10vw,220px)", lineHeight: "0.9" }}
               >
                 Signature Craft
               </h1>
 
               {/* FLOATING ICON */}
-              <div className="absolute top-[10%] right-[6%]">
+              <div
+                ref={addIconRef}
+                data-speed="0.3"
+                data-rotate="0"
+                className="absolute top-[10%] right-[6%]"
+                style={{ willChange: "transform" }}
+              >
                 <img
-                  ref={addIconRef}
                   src={circleLogoImg}
                   alt=""
                   className="w-auto object-contain"
-                  style={{
-                    height: "clamp(80px,10vw,220px)",
-                  }}
+                  style={{ height: "clamp(80px,10vw,220px)" }}
                 />
               </div>
             </div>
 
             {/* BOTTOM CONTENT */}
             <div className="flex flex-1 min-h-0">
+
               {/* LEFT WORD STACK */}
               <div className="w-[45%] border-r-2 border-white flex flex-col">
                 {["Measured.", "Crafted.", "Perfected."].map((text, i) => (
@@ -119,10 +203,7 @@ export default function SyedSignatureCraft() {
                   >
                     <span
                       className="salo uppercase text-[#262666]"
-                      style={{
-                        fontSize: "clamp(26px,6vw,110px)",
-                        lineHeight: "0.9",
-                      }}
+                      style={{ fontSize: "clamp(26px,6vw,110px)", lineHeight: "0.9" }}
                     >
                       {text}
                     </span>
@@ -133,11 +214,14 @@ export default function SyedSignatureCraft() {
                 <div className="flex items-center justify-end px-[2vw] py-[3vh]">
                   <img
                     ref={addIconRef}
+                    data-speed="0.2"
+                    data-rotate="5"
                     src={elegantLogoImg}
                     alt=""
                     className="object-contain"
                     style={{
                       width: "clamp(100px,12vw,260px)",
+                      willChange: "transform",
                     }}
                   />
                 </div>
@@ -147,19 +231,14 @@ export default function SyedSignatureCraft() {
               <div className="w-[55%] flex flex-col justify-center">
                 <p
                   className="salo text-start px-[5%] uppercase text-[#262666]"
-                  style={{
-                    fontSize: "clamp(20px,4vw,60px)",
-                  }}
+                  style={{ fontSize: "clamp(20px,4vw,60px)" }}
                 >
                   About
                 </p>
 
                 <p
                   className="jost text-[#262666] px-[5%] text-start capitalize border-t-2 border-b-2 border-white py-[4vh] mt-[2vh]"
-                  style={{
-                    fontSize: "clamp(14px,1.8vw,28px)",
-                    lineHeight: "150%",
-                  }}
+                  style={{ fontSize: "clamp(14px,1.8vw,28px)", lineHeight: "150%" }}
                 >
                   Syed Bawkher is built on a legacy of precision tailoring and
                   enduring craftsmanship. From the first measurement to the
@@ -170,7 +249,7 @@ export default function SyedSignatureCraft() {
             </div>
           </div>
 
-          {/* ───────── RIGHT IMAGE BLOCK ───────── */}
+          {/* RIGHT IMAGE BLOCK */}
           <div className="h-screen shrink-0 flex items-end overflow-hidden">
             <img
               src={craftImg}
@@ -179,41 +258,47 @@ export default function SyedSignatureCraft() {
             />
           </div>
         </section>
+
         {/* ───────── SECTION 2 ───────── */}
         <div
           ref={(el) => (sectionsRef.current[1] = el)}
-          className="w-[100vw] h-screen relative overflow-hidden"
+          className="w-[80vw] h-screen relative overflow-hidden"
         >
           {/* GRID */}
           <div className="absolute inset-0 z-0 pointer-events-none">
-            <GridOverlay
-              color="0,0,0"
-              opacity={0.15}
-              size={100}
-              position="99px 0px"
-            />
+            <GridOverlay color="0,0,0" opacity={0.15} size={100} position="99px 0px" />
           </div>
-          {/* Content */}
+
+          {/* CONTENT */}
           <div className="relative z-10 h-full">
+
             {/* FLOATING IMAGES */}
             {[
-              { img: syedCircleImg, top: "10%", left: "5%" },
-              { img: texturalImg, top: "10%", right: "15%" },
-              { img: elegantPairImg, bottom: "10%", left: "5%" },
+              { img: syedCircleImg, top: "10%", left: "5%",   speed: "0.6", rotate: "8"  },
+              { img: texturalImg,   top: "10%", right: "15%", speed: "0.4", rotate: "-5" },
+              { img: elegantPairImg,bottom: "10%", left: "5%",speed: "0.5", rotate: "3"  },
             ].map((item, i) => (
               <div
                 key={i}
                 ref={addIconRef}
-                data-speed="0.8"
+                data-speed={item.speed}
+                data-rotate={item.rotate}
                 className="absolute"
-                style={{ ...item, width: "clamp(80px,14vw,320px)" }}
+                style={{
+                  top: item.top,
+                  right: item.right,
+                  bottom: item.bottom,
+                  left: item.left,
+                  width: "clamp(80px,14vw,320px)",
+                  willChange: "transform",
+                }}
               >
-                <img src={item.img} className="w-full" />
+                <img src={item.img} className="w-full" alt="" />
               </div>
             ))}
 
-            {/* TEXT */}
-            <div className="absolute top-[20%] flex items-center justify-center px-[8%]">
+            {/* HEADING TEXT */}
+            <div className="absolute top-[20%] flex items-center justify-center px-[10%]">
               <div style={{ maxWidth: "60%" }}>
                 <h2
                   className="salo uppercase text-start text-[#262666] tracking-tight leading-none"
@@ -221,9 +306,8 @@ export default function SyedSignatureCraft() {
                 >
                   Precision <br /> Tailored
                 </h2>
-
                 <p
-                  style={{ fontSize: "clamp(12px,20vh,26px)" }}
+                  style={{ fontSize: "clamp(12px,3.5vh,26px)" }}
                   className="jost text-start text-black/50 leading-[120%] tracking-tight mt-2 pl-3"
                 >
                   Crafted through generations of expertise, each piece reflects
@@ -233,16 +317,16 @@ export default function SyedSignatureCraft() {
               </div>
             </div>
 
-            {/* Bottom Text */}
+            {/* BOTTOM TEXT */}
             <div className="absolute bottom-[10%] right-[10%]">
-              <p className="jost font-[500] tracking-tight uppercase text-base md:text-[40px] ">
+              <p className="jost font-[500] tracking-tight uppercase text-base md:text-[40px]">
                 DETAIL & DISCIPLINE
               </p>
             </div>
           </div>
         </div>
 
-        {/* ───────── SECTION 4 (AUTO IMAGE BLOCK) ───────── */}
+        {/* ───────── SECTION 3 — AUTO-WIDTH IMAGE BLOCK ───────── */}
         <div
           ref={(el) => (sectionsRef.current[2] = el)}
           className="h-screen shrink-0 flex items-end overflow-hidden"
@@ -254,12 +338,11 @@ export default function SyedSignatureCraft() {
           />
         </div>
 
-        {/* ───────── SECTION 3 ───────── */}
+        {/* ───────── SECTION 4 ───────── */}
         <div
           ref={(el) => (sectionsRef.current[3] = el)}
           className="w-[45vw] h-full relative bg-white overflow-visible"
         >
-          {/* RIGHT CONTENT */}
           <div
             className="absolute flex flex-col justify-between"
             style={{
@@ -269,13 +352,10 @@ export default function SyedSignatureCraft() {
               width: "clamp(320px,35vw,550px)",
             }}
           >
-            {/* TEXT (TOP) */}
+            {/* TEXT */}
             <p
               className="jost text-start text-black capitalize"
-              style={{
-                fontSize: "clamp(14px,3.5vh,26px)",
-                lineHeight: "150%",
-              }}
+              style={{ fontSize: "clamp(14px,3.5vh,26px)", lineHeight: "150%" }}
             >
               Full-canvas tailoring rooted in generations of expertise. A
               seamless blend of time-honoured{" "}
@@ -290,20 +370,22 @@ export default function SyedSignatureCraft() {
               sophistication.
             </p>
 
-            {/* IMAGE WRAPPER (BOTTOM) */}
+            {/* IMAGE WRAPPER */}
             <div className="relative flex justify-center">
               {/* TAG */}
               <div
                 ref={addIconRef}
+                data-speed="0.35"
+                data-rotate="30"
                 className="absolute z-[20]"
                 style={{
                   left: "0%",
                   top: "0%",
                   width: "clamp(120px,10vw,180px)",
-                  transform: "rotate(30deg)",
+                  willChange: "transform",
                 }}
               >
-                <img src={tagImg} className="w-full -rotate-[20deg]" />
+                <img src={tagImg} className="w-full -rotate-[20deg]" alt="" />
               </div>
 
               {/* CARD */}
@@ -314,11 +396,12 @@ export default function SyedSignatureCraft() {
                   transform: "rotate(-10deg)",
                 }}
               >
-                <img src={syedCardImg} className="w-full object-contain" />
+                <img src={syedCardImg} className="w-full object-contain" alt="" />
               </div>
             </div>
           </div>
         </div>
+
       </div>
     </div>
   );

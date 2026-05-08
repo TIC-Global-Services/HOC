@@ -1,4 +1,6 @@
 import { useEffect, useRef } from "react";
+import React from "react";
+import { motion, useScroll, useTransform } from "framer-motion";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
@@ -9,38 +11,130 @@ import syedLogo from "../../assets/client/syedBawkher/img/heroImg1.png";
 import syedBawkherImg from "../../assets/client/syedBawkher/img/syedBawkher4.png";
 import tagElegantImg from "../../assets/client/syedBawkher/img/signatureImg.png";
 import video from "../../assets/client/syedBawkher/vdo/Brochure_animation.mp4";
+import question from "../../assets/client/syedBawkher/img/question.png";
 import GridOverlay from "../../components/GridOverlay";
+import ImagesTrail from "../../components/ImagesTrail";
 
 gsap.registerPlugin(ScrollTrigger);
+
+const lines = ["Wanna..", "Know", "More"];
+
+const AnimatedChar = ({ char, scrollYProgress, start, end }) => {
+  const opacity = useTransform(scrollYProgress, [start, end], [0, 1]);
+  const y = useTransform(scrollYProgress, [start, end], [-50, 0]);
+
+  return (
+    <motion.span
+      style={{ opacity, y }}
+      className="text-[#262666] font-[500] salo uppercase inline-block will-change-transform"
+    >
+      <span className="text-[50px] md:text-[150px]">
+        {char === " " ? "\u00A0" : char}
+      </span>
+    </motion.span>
+  );
+};
+
+const SyedWannaKnowMore = () => {
+  const ref = useRef(null);
+
+  // scrollYProgress works here because GSAP pins the page vertically
+  // while translating horizontally — vertical scroll progress is still valid
+  const { scrollYProgress } = useScroll({
+    target: ref,
+    offset: ["start center", "center center"],
+  });
+
+  return (
+    <section
+      ref={ref}
+      className="w-full h-full relative flex items-center justify-center overflow-hidden isolate"
+    >
+      <GridOverlay
+        color="0,0,0"
+        opacity={0.15}
+        size={100}
+        position="99px 0px"
+      />
+
+      {/* IMAGE TRAIL */}
+      <ImagesTrail image={question} />
+
+      {/* ANIMATED TEXT */}
+      <div className="relative z-[3] w-full h-full flex items-center justify-center overflow-hidden">
+        <div className="text-center leading-none px-4 max-w-full">
+          {lines.map((line, lineIndex) => (
+            <div key={lineIndex} className="flex justify-center flex-wrap">
+              {line.split("").map((char, i) => {
+                const index = lineIndex * 10 + i;
+                const start = index / 35;
+                const end = start + 0.12;
+                return (
+                  <AnimatedChar
+                    key={i}
+                    char={char}
+                    scrollYProgress={scrollYProgress}
+                    start={start}
+                    end={end}
+                  />
+                );
+              })}
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+};
 
 export default function SyedTailorHeritage() {
   const wrapperRef = useRef(null);
   const trackRef = useRef(null);
   const iconRefs = useRef([]);
-  iconRefs.current = [];
 
   const addIconRef = (el) => {
-    if (el) iconRefs.current.push(el);
+    if (el && !iconRefs.current.includes(el)) {
+      iconRefs.current.push(el);
+    }
   };
 
   useEffect(() => {
     if (window.innerWidth < 768) return;
 
-    // ── ICON MOMENTUM via real scroll delta ──
+    const track = trackRef.current;
+    const wrapper = wrapperRef.current;
+
+    if (!track || !wrapper) return;
+
+    let ctx;
+    let rafId;
+
+    // total horizontal distance
+    const getTotal = () => Math.max(track.scrollWidth - window.innerWidth, 0);
+
     const qs = iconRefs.current.map((el) => ({
       el,
-      setX: gsap.quickTo(el, "x", { duration: 1, ease: "power3.out" }),
-      setY: gsap.quickTo(el, "y", { duration: 0.8, ease: "power3.out" }),
-      setR: gsap.quickTo(el, "rotation", { duration: 1, ease: "power3.out" }),
+      setX: gsap.quickTo(el, "x", {
+        duration: 1,
+        ease: "power3.out",
+      }),
+      setY: gsap.quickTo(el, "y", {
+        duration: 0.8,
+        ease: "power3.out",
+      }),
+      setR: gsap.quickTo(el, "rotation", {
+        duration: 1,
+        ease: "power3.out",
+      }),
     }));
 
     let lastScrollY = window.scrollY;
     let velocity = 0;
-    let rafId;
 
     const tick = () => {
       const scrollY = window.scrollY;
       const delta = scrollY - lastScrollY;
+
       lastScrollY = scrollY;
 
       velocity += (delta - velocity) * 0.15;
@@ -59,36 +153,36 @@ export default function SyedTailorHeritage() {
 
     rafId = requestAnimationFrame(tick);
 
-    // ── HORIZONTAL SCROLL ──
-    const ctx = gsap.context(() => {
-      const totalScroll = trackRef.current.scrollWidth - window.innerWidth;
-
-      gsap.to(trackRef.current, {
-        x: -totalScroll,
+    // HORIZONTAL SCROLL
+    ctx = gsap.context(() => {
+      gsap.to(track, {
+        x: () => -getTotal(),
         ease: "none",
         scrollTrigger: {
-          trigger: wrapperRef.current,
+          trigger: wrapper,
           start: "top top",
-          end: `+=${totalScroll}`,
+          end: () => `+=${getTotal()}`,
           pin: true,
           scrub: 1,
           anticipatePin: 1,
           invalidateOnRefresh: true,
         },
       });
-    }, wrapperRef);
+    }, wrapper);
+
+    ScrollTrigger.refresh();
 
     return () => {
       cancelAnimationFrame(rafId);
-      ctx.revert();
+      ctx?.revert();
     };
   }, []);
 
   return (
-    <section ref={wrapperRef}>
-      <div className="h-screen overflow-hidden">
-        <div ref={trackRef} className="flex h-full">
-          {/* ── BLOCK 1 (70vw) ── */}
+    <section ref={wrapperRef} className="min-h-screen relative">
+      <div className="min-h-screen ">
+        <div ref={trackRef} className="flex h-screen">
+          {/* ── BLOCK 1 — Hero image (70vw) ── */}
           <div
             className="relative h-full flex-shrink-0"
             style={{
@@ -105,15 +199,11 @@ export default function SyedTailorHeritage() {
             />
           </div>
 
-          {/* ── BLOCK 2 (100vw) ── */}
+          {/* ── BLOCK 2 — Main text panel (100vw) ── */}
           <div
-            className="relative h-full flex-shrink-0 overflow-visible"
-            style={{
-              width: "100vw",
-              backgroundColor: "#EBE2CE",
-            }}
+            className="relative h-screen flex-shrink-0 overflow-visible"
+            style={{ width: "100vw", backgroundColor: "#EBE2CE" }}
           >
-            {/* GRID */}
             <div className="absolute inset-0 z-0 pointer-events-none">
               <GridOverlay
                 color="0,0,0"
@@ -123,12 +213,9 @@ export default function SyedTailorHeritage() {
               />
             </div>
 
-            {/* CONTENT */}
             <div
               className="relative z-10 h-full flex flex-col justify-center"
-              style={{
-                padding: "0 5%",
-              }}
+              style={{ padding: "0 5%" }}
             >
               {/* BUTTON ICON */}
               <div
@@ -143,7 +230,7 @@ export default function SyedTailorHeritage() {
                   willChange: "transform",
                 }}
               >
-                <img src={buttonImg} className="w-full" />
+                <img src={buttonImg} alt="" className="w-full" />
               </div>
 
               {/* HEADING */}
@@ -203,22 +290,14 @@ export default function SyedTailorHeritage() {
                   willChange: "transform",
                 }}
               >
-                <img src={syedLogo} className="w-full" />
+                <img src={syedLogo} alt="" className="w-full" />
               </div>
 
               {/* BOTTOM TITLE */}
-              <div
-                className="absolute"
-                style={{
-                  bottom: "5%",
-                  right: "-22%",
-                }}
-              >
+              <div className="absolute" style={{ bottom: "5%", right: "-22%" }}>
                 <h2
                   className="salo tracking-normal text-white leading-none"
-                  style={{
-                    fontSize: "clamp(50px,8vw,150px)",
-                  }}
+                  style={{ fontSize: "clamp(50px,8vw,150px)" }}
                 >
                   TIMEL<span style={{ color: "#262666" }}>ESS CRAFT</span>
                 </h2>
@@ -226,15 +305,11 @@ export default function SyedTailorHeritage() {
             </div>
           </div>
 
-          {/* ── BLOCK 3 (30vw) ── */}
+          {/* ── BLOCK 3 — Portrait + tag (35vw) ── */}
           <div
-            className="relative flex-shrink-0 overflow-visible"
-            style={{
-              width: "35vw",
-              backgroundColor: "#ffffff",
-            }}
+            className="relative h-screen flex-shrink-0 overflow-visible"
+            style={{ width: "35vw", backgroundColor: "#ffffff" }}
           >
-            {/* GRID */}
             <div className="absolute inset-0 z-0 pointer-events-none">
               <GridOverlay
                 color="0,0,0"
@@ -244,17 +319,15 @@ export default function SyedTailorHeritage() {
               />
             </div>
 
-            {/* CONTENT */}
             <div
               className="relative z-10 h-full flex items-start justify-center"
-              style={{
-                padding: "2%",
-              }}
+              style={{ padding: "2%" }}
             >
-              <div className="relative flex flex-col w-full">
+              <div className="relative flex flex-col w-full translate-y-6">
                 {/* MAIN IMAGE */}
                 <img
                   src={syedBawkherImg}
+                  alt=""
                   className="object-contain"
                   style={{
                     top: "60%",
@@ -268,6 +341,7 @@ export default function SyedTailorHeritage() {
                 <div
                   ref={addIconRef}
                   data-speed="0.25"
+                  data-rotate="-20"
                   className="absolute"
                   style={{
                     top: "5%",
@@ -276,14 +350,17 @@ export default function SyedTailorHeritage() {
                     willChange: "transform",
                   }}
                 >
-                  <img src={tagElegantImg} className="w-full -rotate-[20deg]" />
+                  <img
+                    src={tagElegantImg}
+                    alt=""
+                    className="w-full -rotate-[20deg]"
+                  />
                 </div>
               </div>
             </div>
           </div>
 
-          {/* Block 4 */}
-          {/* ─── DESKTOP ─── */}
+          {/* ── BLOCK 4 — Video (100vw) ── */}
           <div className="w-[100vw] h-screen relative overflow-hidden flex-shrink-0">
             <video
               src={video}
@@ -295,7 +372,7 @@ export default function SyedTailorHeritage() {
             />
           </div>
 
-          {/* Block 5 */}
+          {/* ── BLOCK 5 — Wanna Know More (60vw) ── */}
           <div className="w-[60vw] h-screen relative overflow-hidden flex-shrink-0">
             <SyedWannaKnowMore />
           </div>
@@ -304,76 +381,3 @@ export default function SyedTailorHeritage() {
     </section>
   );
 }
-
-import React from "react";
-import { motion, useScroll, useTransform } from "framer-motion";
-import question from "../../assets/client/syedBawkher/img/question.png";
-import ImagesTrail from "../../components/ImagesTrail";
-
-const lines = ["Wanna..", "Know", "More"];
-
-const AnimatedChar = ({ char, scrollYProgress, start, end }) => {
-  const opacity = useTransform(scrollYProgress, [start, end], [0, 1]);
-  const y = useTransform(scrollYProgress, [start, end], [-50, 0]);
-
-  return (
-    <motion.span
-      style={{ opacity, y }}
-      className="text-[#262666] font-[500] salo uppercase inline-block will-change-transform"
-    >
-      <span className="text-[50px] md:text-[150px]">
-        {char === " " ? "\u00A0" : char}
-      </span>
-    </motion.span>
-  );
-};
-
-const SyedWannaKnowMore = () => {
-  const ref = useRef(null);
-
-  const { scrollYProgress } = useScroll({
-    target: ref,
-    offset: ["start center", "center center"],
-  });
-
-  return (
-    <section
-      ref={ref}
-      className="w-full md:h-screen relative flex items-center justify-center overflow-hidden isolate"
-    >
-      <GridOverlay
-        color="0,0,0"
-        opacity={0.15}
-        size={100}
-        position="99px 0px"
-      />
-      {/* IMAGE TRAIL */}
-      <ImagesTrail image={question} />
-
-      {/* SCROLL TEXT */}
-      <div className="relative z-[3] w-full h-full flex items-center justify-center overflow-hidden">
-        <div className="text-center leading-none px-4 max-w-full">
-          {lines.map((line, lineIndex) => (
-            <div key={lineIndex} className="flex justify-center flex-wrap">
-              {line.split("").map((char, i) => {
-                const index = lineIndex * 10 + i;
-                const start = index / 35;
-                const end = start + 0.12;
-
-                return (
-                  <AnimatedChar
-                    key={i}
-                    char={char}
-                    scrollYProgress={scrollYProgress}
-                    start={start}
-                    end={end}
-                  />
-                );
-              })}
-            </div>
-          ))}
-        </div>
-      </div>
-    </section>
-  );
-};

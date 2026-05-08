@@ -1,36 +1,50 @@
 import Footer from "../Footer";
 import GopalanHero from "../../components/gopalanEnterprises/GopalanHero";
-import GopalanFutureSection from "../../components/gopalanEnterprises/GopalanFutureSection";
-import GopalanEvolution from "../../components/gopalanEnterprises/GopalanEvolution";
-import GopalanWannaKnow from "../../components/gopalanEnterprises/GopalanWannaKnow";
 import Navbar from "../../components/Navbar";
 import MobGopalanHero from "../../components/gopalanEnterprises/mobLayout/MobGopalanHero";
-import MobEvolution from "../../components/gopalanEnterprises/mobLayout/MobEvolution";
-import MobFuture from "../../components/gopalanEnterprises/mobLayout/MobFuture";
-
+import GopalanGroupVideo from "../../components/gopalanEnterprises/GopalanGroupVideo";
+import GopalanLegacy from "../../components/gopalanEnterprises/gopalanLegacy/GopalanLegacy";
+import GopalanModernLegacy from "../../components/gopalanEnterprises/GopalanModernLegacy";
+import MobGopalanLegacy from "../../components/gopalanEnterprises/mobGopalanLegacy/MobGopalanLegacy";
+import MobModernLegacy from "../../components/gopalanEnterprises/mobLayout/MobModernLegacy";
 
 const GopalanEnterprises = () => {
   return (
     <>
-      {/* Navbar */}
+      {/* NAVBAR */}
       <Navbar />
-      {/* Sections */}
-      {/* Mob */}
+
+      {/* MOBILE HERO */}
       <div className="block md:hidden">
-      <MobGopalanHero />
-      <MobFuture />
-      <MobEvolution />
+        <MobGopalanHero />
       </div>
 
-      {/* Desktop */}
-      <div className="md:block hidden">
-      <GopalanHero />
-      <GopalanFutureSection />
-      <GopalanEvolution />
+      {/* DESKTOP HERO */}
+      <div className="hidden md:block">
+        <GopalanHero />
       </div>
 
-      <GopalanWannaKnow />
-      {/* Footer */}
+      {/* BOTH MOBILE + DESKTOP */}
+      <GopalanGroupVideo />
+
+      {/* Mob */}
+
+      <div className="block md:hidden">
+        <MobGopalanLegacy />
+      </div>
+
+      {/* DESKTOP ONLY */}
+      <div className="hidden md:block">
+        <GopalanLegacy />
+        <GopalanModernLegacy />
+      </div>
+
+      {/* Mobile */}
+      <div className="block md:hidden">
+      <MobModernLegacy />
+      </div>
+
+      {/* FOOTER */}
       <Footer />
     </>
   );

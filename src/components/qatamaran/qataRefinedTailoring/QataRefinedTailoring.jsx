@@ -76,7 +76,7 @@ export default function QataRefinedTailoring() {
               <Section2 />
             </div>
 
-            <div style={{ width: "85vw", height: "100%" }}>
+            <div style={{ width: "89vw", height: "100%" }}>
               <Section3 />
             </div>
           </div>

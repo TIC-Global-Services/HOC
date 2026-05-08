@@ -5,7 +5,7 @@ import grid from "../../assets/client/padlr/img/checkBg.png";
 import question from "../../assets/client/raks/img/question.png";
 import ImagesTrail from "../../components/ImagesTrail";
 
-const lines = ["Wann..", "Know", "More"];
+const lines = ["Wanna..", "Know", "More"];
 
 const AnimatedChar = ({ char, scrollYProgress, start, end }) => {
   const opacity = useTransform(scrollYProgress, [start, end], [0, 1]);

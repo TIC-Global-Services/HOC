@@ -7,7 +7,7 @@ import question from "../../assets/client/qatamaran/question.png";
 import ImagesTrail from "../../components/ImagesTrail";
 import GridOverlay from "../GridOverlay";
 
-const lines = ["Wann..", "Know", "More"];
+const lines = ["Wanna..", "Know", "More"];
 
 const AnimatedChar = ({ char, scrollYProgress, start, end }) => {
   const opacity = useTransform(scrollYProgress, [start, end], [0, 1]);

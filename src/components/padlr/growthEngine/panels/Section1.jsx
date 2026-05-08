@@ -2,7 +2,7 @@ import computerImg from "../../../../assets/client/padlr/img/Group.png";
 import paddleLogoImg from "../../../../assets/client/padlr/img/heroImg2.png";
 import aboutVideo from "../../../../assets/client/padlr/vdo/Padlr_Animation 2.mp4";
 
-export default function GrowthEngine() {
+export default function Section1() {
   return (
     <section className="w-full h-screen bg-[#0606BC] overflow-hidden flex">
       {/* ───────── LEFT CONTENT ───────── */}
