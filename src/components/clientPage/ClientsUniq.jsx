@@ -23,7 +23,7 @@ const ClientsUniq = () => {
       {/* CURIOUS HEADING */}
       <div className="leading-none mb-10 md:mb-20">
         <h2 className="text-[50px] md:text-[150px] salo text-[#0000FF]">
-          CURIOUS <span className="jost">?</span>
+          CURIOUS <span className="font-[Arial]">?</span>
         </h2>
 
         <p className="text-[20px] md:text-[60px] jost text-black tracking-tight mt-4 font-[500]">

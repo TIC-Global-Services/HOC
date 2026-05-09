@@ -3,29 +3,46 @@ import { useEffect } from "react";
 const useMobileVideo = (videoRef) => {
   useEffect(() => {
     const video = videoRef.current;
+
     if (!video) return;
 
+    // Required for iOS Safari
     video.muted = true;
+    video.defaultMuted = true;
+    video.playsInline = true;
+
     video.setAttribute("muted", "");
     video.setAttribute("playsinline", "");
-    video.setAttribute("webkit-playsinline", "");
+    video.setAttribute("webkit-playsinline", "true");
 
-    const playVideo = () => {
-      const promise = video.play();
-      if (promise !== undefined) {
-        promise.catch(() => {});
+    const playVideo = async () => {
+      try {
+        await video.play();
+      } catch (err) {
+        console.log("Autoplay blocked:", err);
       }
     };
 
-    //IMPORTANT: wait until video is ready
-    video.addEventListener("loadeddata", playVideo);
+    // Safari fix
+    const handleCanPlay = () => {
+      setTimeout(() => {
+        playVideo();
+      }, 100);
+    };
 
-    // fallback for iOS interaction
-    const handleTouch = () => playVideo();
-    window.addEventListener("touchstart", handleTouch, { once: true });
+    video.addEventListener("canplay", handleCanPlay);
+
+    // Fallback after first touch
+    const handleTouch = () => {
+      playVideo();
+    };
+
+    window.addEventListener("touchstart", handleTouch, {
+      once: true,
+    });
 
     return () => {
-      video.removeEventListener("loadeddata", playVideo);
+      video.removeEventListener("canplay", handleCanPlay);
       window.removeEventListener("touchstart", handleTouch);
     };
   }, [videoRef]);
