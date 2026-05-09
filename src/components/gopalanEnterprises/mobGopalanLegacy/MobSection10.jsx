@@ -28,17 +28,17 @@ const MobSection10 = () => {
   });
 
   return (
-    <section className="relative w-full h-[80vh] overflow-hidden flex items-center justify-center bg-white">
+    <section className="relative w-full h-screen overflow-hidden flex items-center justify-center bg-white">
 
       {/* MOBILE CONTENT */}
       <div className="relative w-full h-full">
 
         {/* ─── TOP IMAGE ─── */}
         <div
-          className="absolute top-[10%] left-1/2 -translate-x-1/2"
+          className="absolute top-[12%] left-1/2 -translate-x-1/2"
           style={{
-            width: "220px",
-            height: "280px",
+            width: "300px",
+            height: "300px",
           }}
         >
 
@@ -49,8 +49,8 @@ const MobSection10 = () => {
             alt="tag"
             className="absolute z-10 -rotate-12"
             style={{
-              top: "-10%",
-              left: "0%",
+              top: "-15%",
+              left: "15%",
               width: "90px",
             }}
           />
@@ -70,8 +70,8 @@ const MobSection10 = () => {
         <div
           className="absolute bottom-[8%] left-1/2 -translate-x-1/2"
           style={{
-            width: "290px",
-            height: "290px",
+            width: "300px",
+            height: "300px",
           }}
         >
 

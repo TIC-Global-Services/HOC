@@ -1,6 +1,7 @@
 import { useEffect, useRef } from "react";
 import gsap from "gsap";
-import callOut from "../../../assets/client/gopalan/heroImg4.png";
+import callOutCenter from "../../../assets/client/gopalan/heroImg4.png";
+import callOutTop from "../../../assets/client/gopalan/heroImg1.png";
 import GridOverlay from "../../../components/GridOverlay";
 
 const Section9 = () => {
@@ -55,15 +56,14 @@ const Section9 = () => {
         backgroundColor: "#E96428", // base color
       }}
     >
-        <GridOverlay
-          color="0,0,0"
-          opacity={0.15}
-          size={100}
-          position="99px 0px"
-        />
+      <GridOverlay
+        color="0,0,0"
+        opacity={0.15}
+        size={100}
+        position="99px 0px"
+      />
       {/* ─── LEFT PANEL (GRID) ─── */}
       <div className="relative w-[50vw] h-full ">
-        
         {/* TITLE */}
         <div
           className="absolute text-start"
@@ -91,6 +91,22 @@ const Section9 = () => {
 
       {/* ─── RIGHT PANEL  ─── */}
       <div className="relative w-[70vw] h-full">
+        {/* TOP RIGHT ICON */}
+        <div
+          ref={addIconRef}
+          data-speed="0.35"
+          data-rotate="10"
+          className="absolute z-[5]"
+          style={{
+            top: "8%",
+            right: "6%",
+            width: "clamp(70px,16vw,250px)",
+            willChange: "transform",
+          }}
+        >
+          <img src={callOutTop} alt="" className="w-full rotate-[10deg]" />
+        </div>
+
         {/* TEXT */}
         <div
           className="absolute"
@@ -107,10 +123,12 @@ const Section9 = () => {
               lineHeight: "160%",
             }}
           >
-            Gopalan Group is a legacy-driven enterprise rooted in over four decades of architectural excellence, trust, and innovation. 
-            Evolving from a renowned real estate brand into a diversified multi-vertical conglomerate, 
-            the Group seamlessly blends heritage with contemporary vision. 
-            From landmark residential and commercial developments to ventures across hospitality, education, aerospace.
+            Gopalan Group is a legacy-driven enterprise rooted in over four
+            decades of architectural excellence, trust, and innovation. Evolving
+            from a renowned real estate brand into a diversified multi-vertical
+            conglomerate, the Group seamlessly blends heritage with contemporary
+            vision. From landmark residential and commercial developments to
+            ventures across hospitality, education, aerospace.
           </p>
         </div>
 
@@ -128,7 +146,7 @@ const Section9 = () => {
             willChange: "transform",
           }}
         >
-          <img src={callOut} className="w-full" />
+          <img src={callOutCenter} className="w-full" />
         </div>
 
         {/* HEADING

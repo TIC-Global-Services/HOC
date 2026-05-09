@@ -62,7 +62,7 @@ const Section6 = () => {
 
           {/* CENTER CONTENT */}
           <div className="w-full h-full flex items-center justify-center">
-            <div className="w-full max-w-[520px] flex flex-col gap-[clamp(18px,2vw,36px)]">
+            <div className="w-full max-w-[540px] flex flex-col gap-[clamp(18px,2vw,36px)]">
 
               {/* HEADING */}
               <h2
@@ -87,8 +87,8 @@ const Section6 = () => {
                   leading-[140%]
                   tracking-tight
                   text-start
-                  max-w-[390px]
-                  text-[clamp(14px,1.2vw,24px)]
+                  max-w-[400px]
+                  text-[clamp(14px,1.5vw,24px)]
                 "
               >
                 At Gopalan Group, every space is thoughtfully envisioned

@@ -58,12 +58,12 @@ const ROWS = [
 ];
 
 //better mobile spacing
-const ROW_Y = ["18vh", "32vh", "45vh", "58vh", "70vh", "78vh"];
+const ROW_Y = ["30vh", "40vh", "50vh", "60vh", "70vh", "80vh"];
 
 export default function MobModernLegacy() {
   return (
     <section
-      className="w-full h-[80vh] relative overflow-hidden"
+      className="w-full h-[85vh] relative overflow-hidden"
     >
         <GridOverlay
             color="0,0,0"
@@ -72,7 +72,7 @@ export default function MobModernLegacy() {
             position="99px 0px"
           />
       {/* MOBILE HEADING */}
-      <h2 className="absolute left-1/2 -translate-x-1/2 top-[60px] z-10 salo text-[#E96428] text-[30px] uppercase text-center leading-none">
+      <h2 className="absolute left-1/2 -translate-x-1/2 top-[75px] z-10 salo text-[#E96428] text-[30px] uppercase text-center leading-none">
         MODERN LEGACY
       </h2>
 
@@ -92,7 +92,7 @@ export default function MobModernLegacy() {
               <img
                 src={IMGS[item.t]}
                 alt=""
-                width={item.s * 0.8}
+                width={item.s * 0.6}
                 draggable={false}
                 style={{
                   display: "block",

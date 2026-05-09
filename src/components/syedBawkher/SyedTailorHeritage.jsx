@@ -202,7 +202,7 @@ export default function SyedTailorHeritage() {
           {/* ── BLOCK 2 — Main text panel (100vw) ── */}
           <div
             className="relative h-screen flex-shrink-0 overflow-visible"
-            style={{ width: "100vw", backgroundColor: "#EBE2CE" }}
+            style={{ width: "80vw", backgroundColor: "#EBE2CE" }}
           >
             <div className="absolute inset-0 z-0 pointer-events-none">
               <GridOverlay
@@ -225,8 +225,8 @@ export default function SyedTailorHeritage() {
                 className="absolute"
                 style={{
                   top: "10%",
-                  left: "35%",
-                  width: "clamp(80px,8vw,140px)",
+                  left: "34%",
+                  width: "clamp(80px,20vh,140px)",
                   willChange: "transform",
                 }}
               >
@@ -234,9 +234,9 @@ export default function SyedTailorHeritage() {
               </div>
 
               {/* HEADING */}
-              <div className="absolute top-[20%] left-[10%] text-start">
+              <div className="absolute top-[20%] left-[5%] text-start">
                 <h2
-                  className="salo tracking-wider text-[#262666] leading-none"
+                  className="salo tracking-wide text-[#262666] leading-none"
                   style={{
                     fontSize: "clamp(60px,25vh,200px)",
                     maxWidth: "70%",
@@ -247,7 +247,7 @@ export default function SyedTailorHeritage() {
               </div>
 
               {/* SUB TEXT */}
-              <div className="absolute top-[80%] left-[10%] text-start">
+              <div className="absolute top-[80%] left-[5%] text-start">
                 <p
                   className="salo uppercase text-[#262666] tracking-tight leading-none"
                   style={{
@@ -294,7 +294,7 @@ export default function SyedTailorHeritage() {
               </div>
 
               {/* BOTTOM TITLE */}
-              <div className="absolute" style={{ bottom: "3%", right: "-22%" }}>
+              <div className="absolute" style={{ bottom: "3%", right: "-27.5%" }}>
                 <h2
                   className="salo tracking-normal text-white leading-none"
                   style={{ fontSize: "clamp(50px,8vw,150px)" }}

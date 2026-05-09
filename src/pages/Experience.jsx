@@ -141,7 +141,7 @@ const Experience = () => {
           </div>
         </div>
         {/* Absolutely Centered Text */}
-        <div className="items-center flex-col  bg-black mt-20 md:mt-14 relative justify-center !h-screen  flex ">
+        <div className="items-center flex-col  bg-black mt-20 md:mt-14 relative justify-center min-h-screen  flex ">
           <SecondSection />
         </div>
         {/* <div className="items-center flex-col   -mt-20 relative justify-center !h-screen  flex "> */}
@@ -349,11 +349,10 @@ const Play = () => {
       {/* Grid Overlay */}
       <div
         className="absolute inset-0   -ml-2.5 opacity-50"
-        style={{
-          backgroundImage: `url(${grid})`,
-          backgroundSize: "cover",
-        }}
       />
+
+      {/* Grid */}
+      <GridOverlay color="255,255,255" opacity={0.90}/>
 
       {/* Main Content */}
       <div className="relative flex flex-col justify-between">
@@ -411,6 +410,7 @@ import playground5 from "../assets/hocpo/TID05724-min.jpg";
 import playground6 from "../assets/hocpo/TID05738-min.jpg";
 import playground7 from "../assets/hocpo/TID05735-min.jpg";
 import playground8 from "../assets/hocpo/TID05757-min.jpg";
+import GridOverlay from "../components/GridOverlay.jsx";
 
 const AutoFlipImages = () => {
   const [currentIndex, setCurrentIndex] = useState(0);

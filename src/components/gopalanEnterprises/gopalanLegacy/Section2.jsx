@@ -1,9 +1,9 @@
 import React, { useEffect, useRef } from "react";
 import gsap from "gsap";
 
-
 import GridOverlay from "../../GridOverlay";
 import evolutionImg from "../../../assets/client/gopalan/heroImg2.png";
+import systemImg from "../../../assets/client/gopalan/heroImg4.png";
 
 const Section2 = () => {
   const iconRefs = useRef([]);
@@ -51,22 +51,19 @@ const Section2 = () => {
 
   return (
     <div className="h-screen w-full relative overflow-visible">
-
       {/* BACKGROUND */}
-      <div
-        className="absolute inset-0"/>
+      <div className="absolute inset-0" />
 
-        {/* Grid */}
+      {/* Grid */}
       <GridOverlay
-            color="0,0,0"
-            opacity={0.15}
-            size={100}
-            position="99px 0px"
-          />
+        color="0,0,0"
+        opacity={0.15}
+        size={100}
+        position="99px 0px"
+      />
 
       {/* CONTENT */}
       <div className="relative w-full h-full">
-
         {/* TOP LEFT */}
         <div
           ref={addIconRef}
@@ -82,6 +79,25 @@ const Section2 = () => {
             src={evolutionImg}
             alt=""
             className="w-[clamp(60px,10vw,190px)]"
+          />
+        </div>
+
+        {/* TOP RIGHT ICON */}
+        <div
+          ref={addIconRef}
+          data-speed="0.25"
+          data-rotate="-8"
+          className="absolute"
+          style={{
+            top: "12%",
+            right: "6%",
+            willChange: "transform",
+          }}
+        >
+          <img
+            src={systemImg}
+            alt=""
+            className="w-[clamp(60px,9vw,170px)] rotate-[12deg]"
           />
         </div>
 
@@ -101,15 +117,14 @@ const Section2 = () => {
         {/* CENTER CONTENT */}
         <div className="absolute inset-0 flex items-center justify-center px-[5%]">
           <div className="max-w-[70%] text-start space-y-[2%]">
-
             <h2 className="salo text-[#E96428] uppercase leading-none text-[clamp(28px,8vw,150px)]">
-                Vision Driven <br /> Legacy Built
+              Vision Driven <br /> Legacy Built
             </h2>
 
             <p className="jost font-[500] text-black tracking-tight leading-[140%] text-[clamp(14px,2vw,26px)] ">
-             Timeless craftsmanship meets contemporary vision. Designed for those who value legacy, precision, and progress.
+              Timeless craftsmanship meets contemporary vision. Designed for
+              those who value legacy, <br /> precision, and progress.
             </p>
-
           </div>
         </div>
       </div>

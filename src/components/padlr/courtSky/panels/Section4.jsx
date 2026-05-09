@@ -75,7 +75,7 @@ export default function Section4() {
       />
 
       {/* BRAND TEXT */}
-      <div className="absolute inset-0 flex items-center justify-end z-20 pr-[19%]">
+      <div className="absolute inset-0 flex items-center justify-end z-20 pr-[19.5%]">
         <div style={{ lineHeight: "1", textAlign: "left" }}>
           <div>
             <span

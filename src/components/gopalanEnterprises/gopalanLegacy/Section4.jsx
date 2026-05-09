@@ -51,7 +51,7 @@ const Section4 = () => {
             A brand transformation shaped by legacy and growth
             translating four decades of trust into a{" "}
 
-            <span className="salo text-[#E96428] text-[clamp(24px,4vw,60px)]">
+            <span className="salo text-[#E96428] text-[clamp(24px,3.5vw,60px)]">
               cohesive identity
             </span>{" "}
 

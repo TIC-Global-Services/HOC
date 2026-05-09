@@ -53,22 +53,19 @@ const Section2 = () => {
 
   return (
     <div className="h-screen w-full relative overflow-hidden">
-
       {/* BACKGROUND */}
-      <div
-        className="absolute inset-0"/>
+      <div className="absolute inset-0" />
 
-        {/* Grid */}
+      {/* Grid */}
       <GridOverlay
-            color="0,0,0"
-            opacity={0.15}
-            size={100}
-            position="99px 0px"
-          />
+        color="0,0,0"
+        opacity={0.15}
+        size={100}
+        position="99px 0px"
+      />
 
       {/* CONTENT */}
       <div className="relative w-full h-full">
-
         {/* TOP LEFT */}
         <div
           ref={addIconRef}
@@ -116,11 +113,7 @@ const Section2 = () => {
             left: "5%",
           }}
         >
-          <img
-            src={batImg}
-            alt=""
-            className="w-[clamp(70px,12vw,270px)]"
-          />
+          <img src={batImg} alt="" className="w-[clamp(70px,12vw,270px)]" />
         </div>
 
         {/* RIGHT BOTTOM TEXT */}
@@ -138,16 +131,31 @@ const Section2 = () => {
 
         {/* CENTER CONTENT */}
         <div className="absolute inset-0 flex items-center justify-center px-[5%]">
-          <div className="max-w-[60%] text-start space-y-[2%]">
-
-            <h2 className="salo text-[#0606BC] uppercase leading-none text-[clamp(28px,8vw,150px)]">
+          <div
+            className="text-start space-y-[2%]"
+            style={{
+              width: "clamp(520px,38vw,760px)",
+            }}
+          >
+            <h2
+              className="salo text-[#0606BC] uppercase leading-none"
+              style={{
+                fontSize: "clamp(28px,8vw,150px)",
+              }}
+            >
               Performance <br /> Driven
             </h2>
 
-            <p className="jost font-[500] text-black capitalize tracking-tight leading-[140%] text-[clamp(14px,2vw,26px)] max-w-[55%]">
-              Move Better Every Day. Designed for Daily Motion, engineered for Performance built for Strength & Balance.
+            <p
+              className="jost font-[500] text-black capitalize tracking-tight leading-[140%]"
+              style={{
+                fontSize: "clamp(14px,2vw,26px)",
+                width: "30ch",
+              }}
+            >
+              Move Better Every Day. Designed for Daily Motion, engineered for
+              Performance built for Strength & Balance.
             </p>
-
           </div>
         </div>
       </div>

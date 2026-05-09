@@ -21,10 +21,8 @@ const MobSection1 = () => {
 
   return (
     <section className="w-full bg-[#E96428] text-white">
-
       {/* TITLE */}
       <div className="px-4 py-14 relative">
-
         <h1 className="text-start salo text-[60px] leading-none uppercase">
           Legacy & Future
         </h1>
@@ -46,77 +44,72 @@ const MobSection1 = () => {
 
       {/* ROWS */}
       <div className="flex flex-col border-t border-white">
-
-        {["Legacy.", "Evolution.", "Cohesion."].map(
-          (text, i) => (
-            <div
-              key={i}
-              className="
+        {["Legacy.", "Evolution.", "Cohesion."].map((text, i) => (
+          <div
+            key={i}
+            className="
                 border-b
                 border-white
                 px-4
                 py-10
               "
-            >
-              <h2
-                className="
+          >
+            <h2
+              className="
                   salo
                   text-start
                   text-[60px]
                   leading-none
                   uppercase
                 "
-              >
-                {text}
-              </h2>
-            </div>
-          )
-        )}
-
+            >
+              {text}
+            </h2>
+          </div>
+        ))}
       </div>
 
       {/* ABOUT SECTION */}
-      <div className="text-start px-4 py-[50%] relative">
+      <div className="text-start px-6 pt-20 pb-10 relative flex flex-col">
+        {/* TOP CONTENT */}
+        <div>
+          {/* TITLE */}
+          <h2 className="salo text-[60px] leading-none uppercase">About</h2>
 
-        {/* LOGO RIGHT */}
-        <img
-          ref={treeRef}
-          src={strokeImg}
-          alt="icon"
-          className="
-            absolute
-            right-4
-            bottom-0
-            w-[160px]
-          "
-        />
-
-        {/* TITLE */}
-        <h2 className="salo text-[60px] leading-none uppercase">
-          About
-        </h2>
-
-        {/* TEXT */}
-        <p
-          className="
+          {/* TEXT */}
+          <p
+            className="
             jost
             capitalize
             font-[300]
             text-[16px]
-            leading-[120%]
-            max-w-[400px]
+            leading-[20px]
+            max-w-[320px]
             pt-4
           "
-        >
-         For over four decades, Gopalan Group has shaped spaces and
-        experiences through a legacy built on trust, quality, and
-         innovation.
-        </p>
+          >
+            For over four decades, Gopalan Group has shaped spaces and
+            experiences through a legacy built on trust, quality, and
+            innovation.
+          </p>
+        </div>
+
+        {/* BOTTOM ICON */}
+        <div className="flex justify-end pt-12">
+          <img
+            ref={treeRef}
+            src={strokeImg}
+            alt="icon"
+            className="
+        w-[160px]
+        -rotate-[24deg]
+      "
+          />
+        </div>
       </div>
 
       {/* VIDEO */}
       <div className="w-full bg-[#EAEAEA] overflow-hidden">
-
         <video
           autoPlay
           muted
@@ -128,14 +121,9 @@ const MobSection1 = () => {
             object-cover
           "
         >
-          <source
-            src={GEVideo}
-            type="video/mp4"
-          />
+          <source src={GEVideo} type="video/mp4" />
         </video>
-
       </div>
-
     </section>
   );
 };

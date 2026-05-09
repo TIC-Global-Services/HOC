@@ -84,7 +84,7 @@ const Section3 = () => {
         className="absolute"
         style={{
           top: "0%",
-          right: "5%",
+          right: "2.5%",
           width: "clamp(180px,50vh,360px)",
           willChange: "transform",
         }}
@@ -113,7 +113,7 @@ const Section3 = () => {
         className="jost text-start capitalize text-black absolute"
         style={{
           bottom: "5%",
-          left: "35%",
+          left: "33.5%",
           width: "38%",
           fontSize: "clamp(14px,4vh,26px)",
           lineHeight: "150%",
@@ -140,7 +140,7 @@ const Section3 = () => {
         style={{
           bottom: "5%",
           right: "5%",
-          width: "clamp(140px,12vh,250px)",
+          width: "clamp(140px,20vh,350px)",
           willChange: "transform",
         }}
       >

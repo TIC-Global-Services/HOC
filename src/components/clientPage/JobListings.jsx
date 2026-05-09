@@ -6,7 +6,7 @@ const JobListings = () => {
   const isInView = useInView(ref, { once: true }); // Trigger animation only once when in view
 
   const positions = [
-    "UI/UX Designer // Product Designer",
+    "Product Designer",
     "Motion Designer",
     "Illustrator/Multimedia Designer",
     "Experimental Graphic Designer",

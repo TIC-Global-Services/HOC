@@ -58,7 +58,7 @@ const GopalanHero = () => {
             alt=""
             className="float-1 absolute top-[15%] left-[10%] object-contain"
             style={{
-              width: "clamp(70px, 20vh, 150px)",
+              width: "clamp(70px, 30vh, 150px)",
             }}
           />
 
@@ -76,7 +76,7 @@ const GopalanHero = () => {
             alt=""
             className="float-3 absolute bottom-[12%] left-[8%] object-contain"
             style={{
-              width: "clamp(100px, 20vh, 150px)",
+              width: "clamp(100px, 30vh, 150px)",
             }}
           />
 

@@ -63,10 +63,7 @@ export default function RaksLearning() {
       style={{ backgroundColor: NAVY_BLUE }}
     >
       {/* ───────── LEFT MAIN BOX ───────── */}
-      <div
-        className="w-[60%] h-full border-r border-white flex flex-col"
-        
-      >
+      <div className="w-[60%] h-full border-r border-white flex flex-col">
         {/* ───────── TOP BAR ───────── */}
         <div className="relative border-b border-white px-6 py-5">
           <h1
@@ -79,6 +76,9 @@ export default function RaksLearning() {
           {/* TOP ICON */}
           <div className="absolute top-0 right-[8%] h-full flex items-center z-10">
             <img
+              ref={addIconRef}
+              data-speed="0.35"
+              data-rotate="-8"
               src={raksLearnImg}
               alt="retro computer"
               className="object-contain h-[50%] w-auto"
@@ -107,6 +107,9 @@ export default function RaksLearning() {
             {/* LOGO */}
             <div className="flex items-center justify-end px-4 py-4">
               <img
+                ref={addIconRef}
+                data-speed="0.35"
+                data-rotate="-8"
                 src={raksImg}
                 alt="raks logo"
                 className="object-contain"
