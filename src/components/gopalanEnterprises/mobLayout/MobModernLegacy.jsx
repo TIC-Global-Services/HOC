@@ -58,7 +58,7 @@ const ROWS = [
 ];
 
 //better mobile spacing
-const ROW_Y = ["30vh", "40vh", "50vh", "60vh", "70vh", "80vh"];
+const ROW_Y = ["25vh", "35vh", "45vh", "57vh", "68vh", "80vh"];
 
 export default function MobModernLegacy() {
   return (
@@ -92,7 +92,7 @@ export default function MobModernLegacy() {
               <img
                 src={IMGS[item.t]}
                 alt=""
-                width={item.s * 0.6}
+                width={item.s * 0.7}
                 draggable={false}
                 style={{
                   display: "block",

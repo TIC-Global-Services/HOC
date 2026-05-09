@@ -246,7 +246,7 @@ const Contact = () => {
 export default Contact;
 
 const MainServices = () => {
-  const [active, setActive] = useState("Experience");
+  const [active, setActive] = useState("Design");
   const plugRightRef = useRef(null);
   const lineRef = useRef(null);
   const stopsRef = useRef([]);

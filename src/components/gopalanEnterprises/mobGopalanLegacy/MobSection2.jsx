@@ -7,14 +7,14 @@ import GridOverlay from "../../GridOverlay";
 
 const MobSection2 = () => {
   const topLeftRef = useRef(null);
-  const topRightRef = useRef(null);
+  const bottomRightRef = useRef(null);
 
   useScrollFloat(topLeftRef, {
     yFactor: 0.3,
     rFactor: 0.2,
   });
 
-  useScrollFloat(topRightRef, {
+  useScrollFloat(bottomRightRef, {
     yFactor: 0.5,
     rFactor: 0.3,
   });
@@ -33,7 +33,7 @@ const MobSection2 = () => {
       </div>
 
       {/* MAIN CONTENT */}
-      <div className="relative z-10 flex flex-col px-8 pt-10 pb-10">
+      <div className="relative z-10 flex flex-col h-full px-8 pt-10 pb-10">
 
         {/* TOP ICON ROW */}
         <div className="flex items-start justify-between">
@@ -44,14 +44,6 @@ const MobSection2 = () => {
             src={topLeftImg}
             alt=""
             className="w-[110px] -rotate-12"
-          />
-
-          {/* TOP RIGHT ICON */}
-          <img
-            ref={topRightRef}
-            src={topRightImg}
-            alt=""
-            className="w-[90px] rotate-12"
           />
         </div>
 
@@ -77,6 +69,14 @@ const MobSection2 = () => {
             MODERN LEGACY & <br /> REFINED STYLE
           </p>
         </div>
+
+        {/* BOTTOM RIGHT ICON */}
+        <img
+          ref={bottomRightRef}
+          src={topRightImg}
+          alt=""
+          className="absolute bottom-10 right-6 w-[100px] rotate-12"
+        />
 
       </div>
     </section>

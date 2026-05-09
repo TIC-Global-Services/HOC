@@ -30,32 +30,63 @@ export default function SyedSignatureCraft() {
 
   useEffect(() => {
     const container = containerRef.current;
+
     if (!container) return;
 
     let ctx;
-    let cleanupRAF;
+    let rafId;
 
-    // ── Total horizontal scroll distance ──
-    const getTotal = () =>
-      Math.max(
-        sectionsRef.current
-          .filter(Boolean)
-          .reduce((acc, s) => acc + s.offsetWidth, 0) - window.innerWidth,
-        0,
-      );
+    // TOTAL WIDTH
+
+    const getTotal = () => {
+      return Math.max(container.scrollWidth - window.innerWidth, 0);
+    };
+
+    // INIT
 
     const init = () => {
-      // ── ICON MOMENTUM via scroll delta ──
+      ctx = gsap.context(() => {
+        // HORIZONTAL SCROLL
+        gsap.to(container, {
+          x: () => -getTotal(),
+
+          ease: "none",
+
+          scrollTrigger: {
+            trigger: container.parentElement,
+
+            start: "top top",
+
+            end: () => `+=${getTotal()}`,
+
+            pin: true,
+
+            scrub: 1.2,
+
+            anticipatePin: 1,
+
+            invalidateOnRefresh: true,
+
+            fastScrollEnd: true,
+          },
+        });
+      }, container);
+
+      // FLOATING ICONS
+
       const qs = iconRefs.current.map((el) => ({
         el,
+
         setX: gsap.quickTo(el, "x", {
           duration: 1,
           ease: "power3.out",
         }),
+
         setY: gsap.quickTo(el, "y", {
           duration: 0.8,
           ease: "power3.out",
         }),
+
         setR: gsap.quickTo(el, "rotation", {
           duration: 1,
           ease: "power3.out",
@@ -64,10 +95,10 @@ export default function SyedSignatureCraft() {
 
       let lastScrollY = window.scrollY;
       let velocity = 0;
-      let rafId;
 
       const tick = () => {
         const scrollY = window.scrollY;
+
         const delta = scrollY - lastScrollY;
 
         lastScrollY = scrollY;
@@ -76,10 +107,13 @@ export default function SyedSignatureCraft() {
 
         qs.forEach(({ el, setX, setY, setR }) => {
           const speed = parseFloat(el.dataset.speed || 0.5);
+
           const baseRotate = parseFloat(el.dataset.rotate || 0);
 
           setX(velocity * speed * 4);
+
           setY(velocity * speed * 0.8);
+
           setR(baseRotate + velocity * speed * 0.6);
         });
 
@@ -88,64 +122,50 @@ export default function SyedSignatureCraft() {
 
       rafId = requestAnimationFrame(tick);
 
-      // ── HORIZONTAL SCROLL ──
-      ctx = gsap.context(() => {
-        gsap.to(container, {
-          x: () => -getTotal(),
-          ease: "none",
-          scrollTrigger: {
-            trigger: container.parentElement,
-            start: "top top",
-            end: () => `+=${getTotal()}`,
-            pin: true,
-            scrub: 1.5,
-            anticipatePin: 1,
-            invalidateOnRefresh: true,
-          },
-        });
-      }, container.parentElement);
-
-      // Refresh AFTER ScrollTrigger is registered
-      ScrollTrigger.refresh();
-
-      // RAF cleanup
-      return () => cancelAnimationFrame(rafId);
+      // FINAL REFRESH
+      requestAnimationFrame(() => {
+        ScrollTrigger.refresh();
+      });
     };
 
-    // ── Wait for all images before measuring ──
-    const images = Array.from(container.querySelectorAll("img"));
-    const pending = images.filter((img) => !img.complete);
 
-    const cleanupListeners = [];
+    // WAIT FOR FULL PAGE LOAD
 
-    if (pending.length === 0) {
-      cleanupRAF = init();
+    const handleLoad = () => {
+      setTimeout(() => {
+        init();
+
+        ScrollTrigger.refresh();
+      }, 500);
+    };
+
+    if (document.readyState === "complete") {
+      handleLoad();
     } else {
-      let loaded = 0;
-
-      const onLoad = () => {
-        loaded++;
-
-        if (loaded >= pending.length) {
-          cleanupRAF = init();
-        }
-      };
-
-      pending.forEach((img) => {
-        img.addEventListener("load", onLoad);
-        img.addEventListener("error", onLoad);
-
-        cleanupListeners.push(() => {
-          img.removeEventListener("load", onLoad);
-          img.removeEventListener("error", onLoad);
-        });
-      });
+      window.addEventListener("load", handleLoad);
     }
 
-    return () => {
-      cleanupRAF?.();
+    // RESIZE REFRESH
+  
+    let resizeTimeout;
 
-      cleanupListeners.forEach((fn) => fn());
+    const handleResize = () => {
+      clearTimeout(resizeTimeout);
+
+      resizeTimeout = setTimeout(() => {
+        ScrollTrigger.refresh();
+      }, 300);
+    };
+
+    window.addEventListener("resize", handleResize);
+    return () => {
+      cancelAnimationFrame(rafId);
+
+      clearTimeout(resizeTimeout);
+
+      window.removeEventListener("load", handleLoad);
+
+      window.removeEventListener("resize", handleResize);
 
       ctx?.revert();
     };
@@ -153,7 +173,11 @@ export default function SyedSignatureCraft() {
 
   return (
     <div className="h-screen">
-      <div ref={containerRef} className="flex h-full w-max">
+      <div
+        ref={containerRef}
+        className="flex h-full"
+        style={{ width: "max-content" }}
+      >
         {/* ───────── SECTION 1 ───────── */}
         <section
           ref={(el) => (sectionsRef.current[0] = el)}
@@ -324,36 +348,35 @@ export default function SyedSignatureCraft() {
               </div>
             ))}
 
-           
             {/* HEADING TEXT */}
-<div className="absolute top-[20%] left-[12vw] flex items-center justify-center px-[10%]">
-  <div
-    style={{
-      width: "clamp(520px, 38vw, 760px)",
-    }}
-  >
-    <h2
-      className="salo uppercase text-start text-[#262666] tracking-tight leading-none"
-      style={{
-        fontSize: "clamp(48px,22vh,200px)",
-      }}
-    >
-      Precision <br /> Tailored
-    </h2>
+            <div className="absolute top-[20%] left-[12vw] flex items-center justify-center px-[10%]">
+              <div
+                style={{
+                  width: "clamp(520px, 38vw, 760px)",
+                }}
+              >
+                <h2
+                  className="salo uppercase text-start text-[#262666] tracking-tight leading-none"
+                  style={{
+                    fontSize: "clamp(48px,22vh,200px)",
+                  }}
+                >
+                  Precision <br /> Tailored
+                </h2>
 
-    <p
-      className="jost text-start text-black/50 leading-[120%] tracking-tight mt-2 pl-3"
-      style={{
-        fontSize: "clamp(12px,3.5vh,26px)",
-        width: "42ch",
-      }}
-    >
-      Crafted through generations of expertise, each piece reflects
-      precision and purpose. A seamless blend of heritage and
-      refinement, tailored for the modern gentleman.
-    </p>
-  </div>
-</div>
+                <p
+                  className="jost text-start text-black/50 leading-[120%] tracking-tight mt-2 pl-3"
+                  style={{
+                    fontSize: "clamp(12px,3.5vh,26px)",
+                    width: "42ch",
+                  }}
+                >
+                  Crafted through generations of expertise, each piece reflects
+                  precision and purpose. A seamless blend of heritage and
+                  refinement, tailored for the modern gentleman.
+                </p>
+              </div>
+            </div>
 
             {/* BOTTOM TEXT */}
             <div className="absolute bottom-[10%] right-[10%]">

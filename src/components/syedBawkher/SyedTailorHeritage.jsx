@@ -108,72 +108,129 @@ export default function SyedTailorHeritage() {
 
     let ctx;
     let rafId;
+    let resizeTimeout;
 
-    // total horizontal distance
-    const getTotal = () => Math.max(track.scrollWidth - window.innerWidth, 0);
-
-    const qs = iconRefs.current.map((el) => ({
-      el,
-      setX: gsap.quickTo(el, "x", {
-        duration: 1,
-        ease: "power3.out",
-      }),
-      setY: gsap.quickTo(el, "y", {
-        duration: 0.8,
-        ease: "power3.out",
-      }),
-      setR: gsap.quickTo(el, "rotation", {
-        duration: 1,
-        ease: "power3.out",
-      }),
-    }));
-
-    let lastScrollY = window.scrollY;
-    let velocity = 0;
-
-    const tick = () => {
-      const scrollY = window.scrollY;
-      const delta = scrollY - lastScrollY;
-
-      lastScrollY = scrollY;
-
-      velocity += (delta - velocity) * 0.15;
-
-      qs.forEach(({ el, setX, setY, setR }) => {
-        const speed = parseFloat(el.dataset.speed || 0.5);
-        const baseRotate = parseFloat(el.dataset.rotate || 0);
-
-        setX(velocity * speed * 4);
-        setY(velocity * speed * 0.8);
-        setR(baseRotate + velocity * speed * 0.6);
-      });
-
-      rafId = requestAnimationFrame(tick);
+    const getTotal = () => {
+      return Math.max(track.scrollWidth - window.innerWidth, 0);
     };
 
-    rafId = requestAnimationFrame(tick);
+    const init = () => {
+      ctx = gsap.context(() => {
+        // HORIZONTAL SCROLL
+        gsap.to(track, {
+          x: () => -getTotal(),
 
-    // HORIZONTAL SCROLL
-    ctx = gsap.context(() => {
-      gsap.to(track, {
-        x: () => -getTotal(),
-        ease: "none",
-        scrollTrigger: {
-          trigger: wrapper,
-          start: "top top",
-          end: () => `+=${getTotal()}`,
-          pin: true,
-          scrub: 1,
-          anticipatePin: 1,
-          invalidateOnRefresh: true,
-        },
+          ease: "none",
+
+          scrollTrigger: {
+            trigger: wrapper,
+
+            start: "top top",
+
+            end: () => `+=${getTotal()}`,
+
+            pin: true,
+
+            scrub: 1.2,
+
+            anticipatePin: 1,
+
+            invalidateOnRefresh: true,
+
+            fastScrollEnd: true,
+          },
+        });
+      }, wrapper);
+
+  
+      const qs = iconRefs.current.map((el) => ({
+        el,
+
+        setX: gsap.quickTo(el, "x", {
+          duration: 1,
+          ease: "power3.out",
+        }),
+
+        setY: gsap.quickTo(el, "y", {
+          duration: 0.8,
+          ease: "power3.out",
+        }),
+
+        setR: gsap.quickTo(el, "rotation", {
+          duration: 1,
+          ease: "power3.out",
+        }),
+      }));
+
+      let lastScrollY = window.scrollY;
+      let velocity = 0;
+
+      const tick = () => {
+        const scrollY = window.scrollY;
+
+        const delta = scrollY - lastScrollY;
+
+        lastScrollY = scrollY;
+
+        velocity += (delta - velocity) * 0.15;
+
+        qs.forEach(({ el, setX, setY, setR }) => {
+          const speed = parseFloat(el.dataset.speed || 0.5);
+
+          const baseRotate = parseFloat(el.dataset.rotate || 0);
+
+          setX(velocity * speed * 4);
+
+          setY(velocity * speed * 0.8);
+
+          setR(baseRotate + velocity * speed * 0.6);
+        });
+
+        rafId = requestAnimationFrame(tick);
+      };
+
+      rafId = requestAnimationFrame(tick);
+
+      // FINAL REFRESH
+      requestAnimationFrame(() => {
+        ScrollTrigger.refresh();
       });
-    }, wrapper);
+    };
 
-    ScrollTrigger.refresh();
+
+    const handleLoad = () => {
+      setTimeout(() => {
+        init();
+
+        ScrollTrigger.refresh();
+      }, 500);
+    };
+
+    if (document.readyState === "complete") {
+      handleLoad();
+    } else {
+      window.addEventListener("load", handleLoad);
+    }
+
+    const handleResize = () => {
+      clearTimeout(resizeTimeout);
+
+      resizeTimeout = setTimeout(() => {
+        ScrollTrigger.refresh();
+      }, 300);
+    };
+
+    window.addEventListener("resize", handleResize);
 
     return () => {
       cancelAnimationFrame(rafId);
+
+      clearTimeout(resizeTimeout);
+
+      window.removeEventListener("load", handleLoad);
+
+      window.removeEventListener("resize", handleResize);
+
       ctx?.revert();
     };
   }, []);
@@ -181,7 +238,11 @@ export default function SyedTailorHeritage() {
   return (
     <section ref={wrapperRef} className="min-h-screen relative">
       <div className="min-h-screen ">
-        <div ref={trackRef} className="flex h-screen">
+        <div
+          ref={trackRef}
+          className="flex h-screen"
+          style={{ width: "max-content" }}
+        >
           {/* ── BLOCK 1 — Hero image (70vw) ── */}
           <div
             className="relative h-full flex-shrink-0"
@@ -294,7 +355,10 @@ export default function SyedTailorHeritage() {
               </div>
 
               {/* BOTTOM TITLE */}
-              <div className="absolute" style={{ bottom: "3%", right: "-27.5%" }}>
+              <div
+                className="absolute"
+                style={{ bottom: "3%", right: "-27.5%" }}
+              >
                 <h2
                   className="salo tracking-normal text-white leading-none"
                   style={{ fontSize: "clamp(50px,8vw,150px)" }}

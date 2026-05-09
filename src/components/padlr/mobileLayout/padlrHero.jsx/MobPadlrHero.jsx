@@ -2,7 +2,7 @@ import img1 from "../../../../assets/client/padlr/img/heroImg1.png";
 import img2 from "../../../../assets/client/padlr/img/heroImg2.png";
 import img3 from "../../../../assets/client/padlr/img/heroImg3.png";
 import img4 from "../../../../assets/client/padlr/img/heroImg4.png";
-import bottomIcon from "../../../../assets/client/padlr/img/Group.png";
+// import bottomIcon from "../../../../assets/client/padlr/img/Group.png";
 import GridOverlay from "../../../GridOverlay";
 
 const MobPadlrHero = () => {
@@ -94,12 +94,12 @@ const MobPadlrHero = () => {
         </p>
       </div>
 
-      {/* BOTTOM RIGHT ICON */}
+      {/* BOTTOM RIGHT ICON
       <img
         src={bottomIcon}
         alt=""
         className="absolute right-8 bottom-0 w-[90px]"
-      />
+      /> */}
     </section>
   );
 };
