@@ -6,44 +6,35 @@ const useMobileVideo = (videoRef) => {
 
     if (!video) return;
 
-    // Required for iOS Safari
     video.muted = true;
     video.defaultMuted = true;
     video.playsInline = true;
-
-    video.setAttribute("muted", "");
-    video.setAttribute("playsinline", "");
-    video.setAttribute("webkit-playsinline", "true");
 
     const playVideo = async () => {
       try {
         await video.play();
       } catch (err) {
-        console.log("Autoplay blocked:", err);
+        console.log(err);
       }
     };
 
-    // Safari fix
-    const handleCanPlay = () => {
-      setTimeout(() => {
-        playVideo();
-      }, 100);
-    };
-
-    video.addEventListener("canplay", handleCanPlay);
-
-    // Fallback after first touch
-    const handleTouch = () => {
+    const onReady = () => {
       playVideo();
     };
 
-    window.addEventListener("touchstart", handleTouch, {
+    video.addEventListener("loadedmetadata", onReady);
+
+    const touchStart = () => {
+      playVideo();
+    };
+
+    document.addEventListener("touchstart", touchStart, {
       once: true,
     });
 
     return () => {
-      video.removeEventListener("canplay", handleCanPlay);
-      window.removeEventListener("touchstart", handleTouch);
+      video.removeEventListener("loadedmetadata", onReady);
+      document.removeEventListener("touchstart", touchStart);
     };
   }, [videoRef]);
 };

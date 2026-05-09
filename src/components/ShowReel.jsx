@@ -7,18 +7,17 @@ const ShowReel = () => {
   useMobileVideo(videoRef);
 
   return (
-    <section className="w-full h-screen overflow-hidden relative bg-black">
+    <section className="w-full md:h-screen overflow-hidden relative bg-white">
       <video
         ref={videoRef}
+        src="/video/showReel2.mp4"
         autoPlay
         muted
         loop
         playsInline
-        preload="auto"
-        className="w-full h-full object-cover"
-      >
-        <source src="/video/showReel2.mp4" type="video/mp4" />
-      </video>
+        preload="metadata"
+        className="w-full h-full object-contain md:object-cover"
+      />
     </section>
   );
 };
