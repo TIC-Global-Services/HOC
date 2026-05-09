@@ -95,7 +95,7 @@ const Section2 = () => {
           className="absolute"
           style={{
             top: "5vh",
-            right: "20vw",
+            right: "25vw",
             width: "clamp(60px,18vw,300px)",
             transform: "rotate(-6deg)",
           }}
@@ -110,7 +110,7 @@ const Section2 = () => {
             top: "50%",
             right: "-10vw",
             transform: "translateY(-50%)",
-            width: "clamp(120px,50vh,500px)",
+            width: "clamp(120px,70vh,500px)",
           }}
         >
           <img src={raksCenterImg} className="w-full object-contain overflow-visible" />
@@ -135,7 +135,7 @@ const Section2 = () => {
           className="absolute text-start"
           style={{
             bottom: "2vh",
-            right: "5vw",
+            right: "10vw",
            
           }}
         >

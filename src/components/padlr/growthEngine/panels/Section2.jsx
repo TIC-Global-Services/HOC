@@ -95,7 +95,7 @@ const Section2 = () => {
           className="absolute"
           style={{
             top: "25%",
-            right: "15%",
+            right: "5%",
           }}
         >
           <img
@@ -128,7 +128,7 @@ const Section2 = () => {
           className="absolute text-right"
           style={{
             bottom: "15%",
-            right: "10%",
+            right: "5%",
           }}
         >
           <p className="jost uppercase font-[500] text-black tracking-tight leading-[130%] text-[clamp(14px,3vw,60px)]">
@@ -144,8 +144,8 @@ const Section2 = () => {
               Performance <br /> Driven
             </h2>
 
-            <p className="jost font-[500] text-black capitalize tracking-tight leading-[140%] text-[clamp(14px,2vw,26px)] max-w-[60%]">
-              Move Better Every Day. Designed <br /> for Daily Motion, engineered for Performance built for Strength & Balance.
+            <p className="jost font-[500] text-black capitalize tracking-tight leading-[140%] text-[clamp(14px,2vw,26px)] max-w-[55%]">
+              Move Better Every Day. Designed for Daily Motion, engineered for Performance built for Strength & Balance.
             </p>
 
           </div>

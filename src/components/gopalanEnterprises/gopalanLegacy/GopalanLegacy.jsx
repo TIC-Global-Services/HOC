@@ -75,7 +75,7 @@ export default function GopalanLegacy() {
               <Section1 />
             </div>
 
-            <div className="w-[80vw] h-full shrink-0">
+            <div className="w-[60vw] h-full shrink-0">
               <Section2 />
             </div>
 

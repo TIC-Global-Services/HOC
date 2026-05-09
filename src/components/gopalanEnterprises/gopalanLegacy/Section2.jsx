@@ -89,7 +89,7 @@ const Section2 = () => {
         <div
           className="absolute text-right"
           style={{
-            bottom: "10%",
+            bottom: "5%",
             right: "10%",
           }}
         >
@@ -107,7 +107,7 @@ const Section2 = () => {
             </h2>
 
             <p className="jost font-[500] text-black tracking-tight leading-[140%] text-[clamp(14px,2vw,26px)] ">
-             Timeless craftsmanship meets contemporary vision. <br /> Designed for those who value legacy, precision, and progress.
+             Timeless craftsmanship meets contemporary vision. Designed for those who value legacy, precision, and progress.
             </p>
 
           </div>

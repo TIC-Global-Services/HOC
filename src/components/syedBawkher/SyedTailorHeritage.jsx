@@ -294,7 +294,7 @@ export default function SyedTailorHeritage() {
               </div>
 
               {/* BOTTOM TITLE */}
-              <div className="absolute" style={{ bottom: "5%", right: "-22%" }}>
+              <div className="absolute" style={{ bottom: "3%", right: "-22%" }}>
                 <h2
                   className="salo tracking-normal text-white leading-none"
                   style={{ fontSize: "clamp(50px,8vw,150px)" }}
@@ -308,7 +308,7 @@ export default function SyedTailorHeritage() {
           {/* ── BLOCK 3 — Portrait + tag (35vw) ── */}
           <div
             className="relative h-screen flex-shrink-0 overflow-visible"
-            style={{ width: "35vw", backgroundColor: "#ffffff" }}
+            style={{ width: "34vw", backgroundColor: "#ffffff" }}
           >
             <div className="absolute inset-0 z-0 pointer-events-none">
               <GridOverlay
@@ -332,7 +332,7 @@ export default function SyedTailorHeritage() {
                   style={{
                     top: "60%",
                     right: "20%",
-                    width: "clamp(120px,40vh,400px)",
+                    width: "clamp(120px,45vh,400px)",
                     transform: "rotate(-10deg)",
                   }}
                 />
@@ -344,9 +344,9 @@ export default function SyedTailorHeritage() {
                   data-rotate="-20"
                   className="absolute"
                   style={{
-                    top: "5%",
-                    right: "90%",
-                    width: "clamp(60px,20vh,200px)",
+                    top: "0%",
+                    right: "80%",
+                    width: "clamp(60px,30vh,200px)",
                     willChange: "transform",
                   }}
                 >

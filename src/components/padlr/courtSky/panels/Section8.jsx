@@ -1,5 +1,5 @@
 import React, { useRef } from 'react'
-import video2 from "../../../../assets/client/padlr/vdo/Padlr_Animation 3.mp4";
+import video2 from "../../../../assets/client/padlr/vdo/Padlr_Animation_3.mp4";
 
 const Section8 = () => {
 

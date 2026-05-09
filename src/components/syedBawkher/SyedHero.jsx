@@ -46,19 +46,19 @@ const SyedHero = () => {
           {/* FLOATING IMAGES */}
           <img
             src={img1}
-            className="float-1 absolute top-[5%] left-[10%] w-[40px] sm:w-[60px] md:w-[80px] xl:w-[120px]"
+            className="float-1 absolute top-[5%] left-[10%] w-[40px] sm:w-[60px] md:w-[80px] xl:w-[130px]"
           />
           <img
             src={img2}
-            className="float-2 absolute top-[15%] right-[10%] w-[50px] sm:w-[80px] md:w-[100px] xl:w-[160px]"
+            className="float-2 absolute top-[15%] right-[10%] w-[50px] sm:w-[80px] md:w-[100px] xl:w-[180px]"
           />
           <img
             src={img3}
-            className="float-3 absolute bottom-[10%] left-[8%] w-[80px] sm:w-[110px] md:w-[140px] xl:w-[160px]"
+            className="float-3 absolute bottom-[10%] left-[8%] w-[80px] sm:w-[110px] md:w-[140px] xl:w-[180px]"
           />
           <img
             src={img4}
-            className="float-4 absolute bottom-[10%] right-[8%] w-[80px] sm:w-[110px] md:w-[140px] xl:w-[140px]"
+            className="float-4 absolute bottom-[10%] right-[8%] w-[80px] sm:w-[110px] md:w-[140px] xl:w-[160px]"
           />
 
           {/* CENTER TEXT */}

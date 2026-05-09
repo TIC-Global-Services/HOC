@@ -1,11 +1,31 @@
-import React from "react";
+import React, { useRef } from "react";
 
 import topIcon from "../../../assets/client/gopalan/heroImg3.png";
 import bottomIcon from "../../../assets/client/gopalan/heroImg2.png";
 
 import GridOverlay from "../../GridOverlay";
+import useScrollFloat from "../../../hooks/useScrollFloat";
 
 const Section6 = () => {
+  const topIconRef = useRef(null);
+  const bottomIconRef = useRef(null);
+
+  // TOP ICON FLOAT
+  useScrollFloat(topIconRef, {
+    y: 20,
+    x: 10,
+    rotate: 8,
+    duration: 3,
+  });
+
+  // BOTTOM ICON FLOAT
+  useScrollFloat(bottomIconRef, {
+    y: 25,
+    x: -10,
+    rotate: -8,
+    duration: 3.5,
+  });
+
   return (
     <section className="relative h-screen overflow-hidden">
       
@@ -26,7 +46,10 @@ const Section6 = () => {
         <div className="relative w-[50vw] h-full">
 
           {/* TOP LEFT ICON */}
-          <div className="absolute top-[12%] left-[10%]">
+          <div
+            ref={topIconRef}
+            className="absolute top-[12%] left-[10%] will-change-transform"
+          >
             <img
               src={topIcon}
               alt="top icon"
@@ -77,7 +100,10 @@ const Section6 = () => {
           </div>
 
           {/* BOTTOM RIGHT ICON */}
-          <div className="absolute bottom-[5%] right-[10%]">
+          <div
+            ref={bottomIconRef}
+            className="absolute bottom-[5%] right-[10%] will-change-transform"
+          >
             <img
               src={bottomIcon}
               alt="bottom icon"

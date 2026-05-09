@@ -69,13 +69,13 @@ export default function Section4() {
           right: 0,
           top: 0,
           height: "100%",
-          width: "50%",
+          width: "55%",
           backgroundColor: "#8FC4E9",
         }}
       />
 
       {/* BRAND TEXT */}
-      <div className="absolute inset-0 flex items-center justify-end z-20 pr-[14%]">
+      <div className="absolute inset-0 flex items-center justify-end z-20 pr-[19%]">
         <div style={{ lineHeight: "1", textAlign: "left" }}>
           <div>
             <span
@@ -98,24 +98,25 @@ export default function Section4() {
       </div>
 
       {/* BADGE */}
-      <div
-        ref={badgeRef}
-        className="absolute z-20"
-        style={{
-          left: "10%",
-          bottom: "8%",
-          transform: "translateX(-50%)",
-          willChange: "transform",
-        }}
-      >
-        <img
-          src={circleBadge}
-          alt=""
-          style={{
-            width: "clamp(120px,12vw,240px)",
-          }}
-        />
-      </div>
+    <div
+      ref={badgeRef}
+      className="
+        absolute
+        left-[60px]
+        bottom-[30px]
+        w-[180px]
+        aspect-square
+      "
+      style={{
+        willChange: "transform",
+      }}
+    >
+      <img
+        src={circleBadge}
+        alt=""
+        className="w-full h-full object-contain"
+      />
+    </div>
 
     </section>
   );

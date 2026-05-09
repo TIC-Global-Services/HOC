@@ -70,7 +70,7 @@ export default function CourtSky() {
 
           {/* GROUP 2 */}
           <div className="flex h-full shrink-0">
-            <div style={{ width: "100vw", flexShrink: 0 }}>
+            <div style={{ width: "80vw", flexShrink: 0 }}>
               <Section3 />
             </div>
 

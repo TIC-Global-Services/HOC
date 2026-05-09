@@ -1,9 +1,21 @@
-import React from "react";
+import React, { useRef } from "react";
 
 import minimalImg from "../../../assets/client/gopalan/heroImg1.png";
 import GridOverlay from "../../GridOverlay";
 
+import useScrollFloat from "../../../hooks/useScrollFloat";
+
 const Section4 = () => {
+  const iconRef = useRef(null);
+
+  // FLOAT ANIMATION
+  useScrollFloat(iconRef, {
+    y: 20,
+    x: -10,
+    rotate: 8,
+    duration: 3,
+  });
+
   return (
     <section className="relative h-screen overflow-hidden">
       
@@ -50,7 +62,15 @@ const Section4 = () => {
         </div>
 
         {/* SEPARATE ICON */}
-        <div className="absolute bottom-[8%] right-[8%]">
+        <div
+          ref={iconRef}
+          className="
+            absolute
+            bottom-[8%]
+            right-[8%]
+            will-change-transform
+          "
+        >
           <img
             src={minimalImg}
             alt="icon"
