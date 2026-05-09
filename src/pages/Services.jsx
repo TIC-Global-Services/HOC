@@ -346,7 +346,7 @@ const MainServices = () => {
   return (
     <div className="flex flex-col items-center md:items-start w-full py-32 md:px-20 relative overflow-hidden transition-all duration-500">
       {/* Grid Lines */}
-      <GridOverlay size={120} opacity={0.10}/>
+      <GridOverlay size={100} opacity={0.15} position="99px 0px"/>
       
       <div className="flex items-center md:items-stretch relative flex-col -space-y-16 uppercase z-[100] text-[108px] font-[1000] text-[#F4ECE0] alinsa mb-10">
         <div className="xl:flex hidden relative">
