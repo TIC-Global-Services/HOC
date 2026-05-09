@@ -8,7 +8,7 @@ const GopalanGroupVideo = () => {
   useMobileVideoFix(videoRef); 
 
   return (
-    <section className="w-full min-h-screen relative overflow-hidden">
+    <section className="w-full md:min-h-screen relative overflow-hidden">
 
       <video
         ref={videoRef} 

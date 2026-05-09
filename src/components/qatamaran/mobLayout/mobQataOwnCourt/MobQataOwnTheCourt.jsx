@@ -1,10 +1,11 @@
 import React from "react";
 
-import grid from "../../../../assets/client/padlr/img/checkBg.png";
 import img1 from "../../../../assets/client/qatamaran/heroFloat1.png";
 import img2 from "../../../../assets/client/qatamaran/heroFloat2.png";
 import img3 from "../../../../assets/client/qatamaran/heroFloat3.png";
 import img4 from "../../../../assets/client/qatamaran/heroFloat4.png";
+
+import GridOverlay from "../../../GridOverlay";
 
 const IMGS = {
   circle: img1,
@@ -61,20 +62,25 @@ const ROW_Y = ["18vh", "32vh", "45vh", "58vh", "70vh", "78vh"];
 
 export default function MobQataOwnTheCourt() {
   return (
-    <section
-      className="w-full h-[80vh] relative overflow-hidden"
-      style={{
-        backgroundImage: `url(${grid})`,
-        backgroundSize: "cover",
-      }}
-    >
+    <section className="w-full h-[80vh] relative overflow-hidden bg-white">
+
+      {/* GRID */}
+      <div className="absolute inset-0 z-0 pointer-events-none">
+        <GridOverlay
+          color="0,0,0"
+          opacity={0.15}
+          size={100}
+          position="99px 0px"
+        />
+      </div>
+
       {/* MOBILE HEADING */}
       <h2 className="absolute left-1/2 -translate-x-1/2 top-[60px] z-10 salo text-[#1E382D] text-[30px] uppercase text-center leading-none">
         COASTAL NARRATIVE
       </h2>
 
       {/* STATIC IMAGES */}
-      <div className="w-full relative h-full">
+      <div className="w-full relative h-full z-10">
         {ROWS.map((row, ri) =>
           row.map((item, i) => (
             <div

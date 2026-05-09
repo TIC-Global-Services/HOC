@@ -5,6 +5,7 @@ import topImg from "../../../../assets/client/qatamaran/block4Top.png";
 import leftIcon from "../../../../assets/client/qatamaran/heroFloat1.png";
 import rightIcon from "../../../../assets/client/qatamaran/coromandelCoast.png";
 import grid from "../../../../assets/client/padlr/img/checkBg.png";
+import GridOverlay from "../../../GridOverlay";
 
 const MobRefineSec5 = () => {
   const leftRef = useRef(null);
@@ -15,13 +16,17 @@ const MobRefineSec5 = () => {
 
   return (
     <section
-      className="w-full h-screen flex flex-col relative"
-      style={{
-        backgroundImage: `url(${grid})`,
-        backgroundSize: "cover",
-        backgroundColor: "#ffffff",
-      }}
-    >
+      className="w-full h-screen flex flex-col relative">
+
+        {/* GRID */}
+      <div className="absolute inset-0 z-0 pointer-events-none">
+        <GridOverlay
+          color="0,0,0"
+          opacity={0.15}
+          size={100}
+          position="99px 0px"
+        />
+      </div>
 
       {/* ─── TOP IMAGE ─── */}
       <div className="w-full">

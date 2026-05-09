@@ -1,10 +1,11 @@
 import React, { useRef } from "react";
 import useScrollFloat from "../../../hooks/useScrollFloat";
 
-import grid from "../../../assets/client/padlr/img/checkBg.png";
 import elegantPairImg from "../../../assets/client/syedBawkher/img/elegantPairImg.png";
 import syedCircleImg from "../../../assets/client/syedBawkher/img/heroImg4.png";
 import texturalImg from "../../../assets/client/syedBawkher/img/heroImg3.png";
+
+import GridOverlay from "../../GridOverlay";
 import MobSyedSec3 from "./MobSyedSec3";
 
 const MobSyedSec2 = () => {
@@ -12,45 +13,60 @@ const MobSyedSec2 = () => {
   const middleRef = useRef(null);
   const bottomRef = useRef(null);
 
-  useScrollFloat(topRef, { xFactor: 0.6, yFactor: 0.15, rFactor: 0.12 });
-  useScrollFloat(middleRef, { xFactor: 1.0, yFactor: 0.25, rFactor: 0 });
-  useScrollFloat(bottomRef, { xFactor: 1.4, yFactor: 0.35, rFactor: 0 });
+  useScrollFloat(topRef, {
+    xFactor: 0.6,
+    yFactor: 0.15,
+    rFactor: 0.12,
+  });
+
+  useScrollFloat(middleRef, {
+    xFactor: 1.0,
+    yFactor: 0.25,
+    rFactor: 0,
+  });
+
+  useScrollFloat(bottomRef, {
+    xFactor: 1.4,
+    yFactor: 0.35,
+    rFactor: 0,
+  });
 
   return (
     <>
       <section className="relative h-screen w-full overflow-hidden">
-        {/* BACKGROUND */}
-        <div
-          className="absolute inset-0"
-          style={{
-            backgroundImage: `url(${grid})`,
-            backgroundSize: "cover",
-            backgroundPosition: "center",
-          }}
-        />
+
+        {/* GRID */}
+        <div className="absolute inset-0 z-0 pointer-events-none">
+          <GridOverlay
+            color="0,0,0"
+            opacity={0.15}
+            size={100}
+            position="99px 0px"
+          />
+        </div>
 
         {/* IMAGES */}
         <img
           ref={topRef}
           src={syedCircleImg}
-          className="absolute top-[15%] left-[5%] w-[150px] -rotate-12"
+          className="absolute top-[15%] left-[5%] w-[150px] -rotate-12 z-10"
         />
 
         <img
           ref={middleRef}
           src={texturalImg}
-          className="absolute top-[10%] right-[5%] w-[150px]"
+          className="absolute top-[10%] right-[5%] w-[150px] z-10"
         />
 
         <img
           ref={bottomRef}
           src={elegantPairImg}
-          className="absolute bottom-[15%] right-[5%] w-[200px]"
+          className="absolute bottom-[15%] right-[5%] w-[200px] z-10"
         />
 
         {/* CONTENT */}
         <div
-          className="absolute px-5"
+          className="absolute px-5 z-10"
           style={{
             top: "50%",
             left: "50%",
@@ -59,6 +75,7 @@ const MobSyedSec2 = () => {
           }}
         >
           <div className="flex flex-col gap-8 text-start">
+
             <h2 className="salo text-[#262666] uppercase leading-none text-[50px]">
               PRECISION <br /> TAILORED
             </h2>

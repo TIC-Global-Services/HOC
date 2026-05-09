@@ -5,7 +5,8 @@ import topCubImage from "../../../../assets/client/qatamaran/syedCub.png";
 import bottomCubImage from "../../../../assets/client/qatamaran/syedCub.png";
 import tagIcon from "../../../../assets/client/qatamaran/heroFloat3.png";
 import tagIcon2 from "../../../../assets/client/qatamaran/heroFloat4.png";
-import grid from "../../../../assets/client/padlr/img/checkBg.png";
+
+import GridOverlay from "../../../GridOverlay";
 
 const MobRefineSec3 = () => {
   const topIconRef = useRef(null);
@@ -15,17 +16,21 @@ const MobRefineSec3 = () => {
   useScrollFloat(bottomIconRef, { yFactor: 0.6, rFactor: 0.4 });
 
   return (
-    <section
-      className="relative w-full h-[70vh] overflow-hidden"
-      style={{
-        backgroundImage: `url(${grid})`,
-        backgroundColor: "white",
-      }}
-    >
+    <section className="relative w-full h-[70vh] overflow-hidden bg-white">
+
+      {/* GRID */}
+      <div className="absolute inset-0 z-0 pointer-events-none">
+        <GridOverlay
+          color="0,0,0"
+          opacity={0.15}
+          size={100}
+          position="99px 0px"
+        />
+      </div>
 
       {/* ─── TOP LEFT IMAGE ─── */}
       <div
-        className="absolute"
+        className="absolute z-10"
         style={{
           top: "8%",
           left: "15%",
@@ -57,7 +62,7 @@ const MobRefineSec3 = () => {
 
       {/* ─── BOTTOM RIGHT IMAGE ─── */}
       <div
-        className="absolute"
+        className="absolute z-10"
         style={{
           bottom: "5%",
           right: "6%",

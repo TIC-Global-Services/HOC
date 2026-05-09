@@ -3,7 +3,8 @@ import img2 from "../../../../assets/client/raks/img/heroImg2.png";
 import img3 from "../../../../assets/client/raks/img/heroImg3.png";
 import img4 from "../../../../assets/client/raks/img/heroImg4.png";
 import heroParaImg from "../../../../assets/client/raks/img/heroParaIcon.png";
-import grid from "../../../../assets/client/padlr/img/checkBg.png";
+
+import GridOverlay from "../../../GridOverlay";
 
 const MobRaksHero = () => {
   return (
@@ -11,31 +12,114 @@ const MobRaksHero = () => {
 
       <style>{`
         @keyframes floatY {
-          0%, 100% { transform: translateY(0px) rotate(var(--r)); }
-          50% { transform: translateY(-18px) rotate(var(--r)); }
+          0%, 100% {
+            transform: translateY(0px) rotate(var(--r));
+          }
+
+          50% {
+            transform: translateY(-18px) rotate(var(--r));
+          }
         }
-        .float-1 { --r: 6deg; animation: floatY 3.2s ease-in-out infinite; }
-        .float-2 { --r: -8deg; animation: floatY 4s ease-in-out 0.6s infinite; }
-        .float-3 { --r: 10deg; animation: floatY 3.6s ease-in-out 1.2s infinite; }
-        .float-4 { --r: -6deg; animation: floatY 4.4s ease-in-out 0.3s infinite; }
+
+        .float-1 {
+          --r: 6deg;
+          animation: floatY 3.2s ease-in-out infinite;
+        }
+
+        .float-2 {
+          --r: -8deg;
+          animation: floatY 4s ease-in-out 0.6s infinite;
+        }
+
+        .float-3 {
+          --r: 10deg;
+          animation: floatY 3.6s ease-in-out 1.2s infinite;
+        }
+
+        .float-4 {
+          --r: -6deg;
+          animation: floatY 4.4s ease-in-out 0.3s infinite;
+        }
       `}</style>
 
       {/* ─── TOP ─── */}
       <div
-        className="relative w-full h-[65vh] flex items-center justify-center overflow-hidden"
-        style={{
-          backgroundImage: `url(${grid})`,
-          backgroundPosition: "center",
-        }}
+        className="
+          relative
+          w-full
+          h-[65vh]
+          flex
+          items-center
+          justify-center
+          overflow-hidden
+          bg-white
+        "
       >
+
+        {/* GRID */}
+        <div className="absolute inset-0 z-0 pointer-events-none">
+          <GridOverlay
+            color="0,0,0"
+            opacity={0.15}
+            size={100}
+            position="99px 0px"
+          />
+        </div>
+
         {/* STATIC IMAGES */}
-        <img src={img1} className="float-1 absolute top-[20%] left-[5%] w-[150px] -rotate-12" />
-        <img src={img2} className="float-2 absolute top-[20%] right-[5%] w-[100px] -rotate-12" />
-        <img src={img3} className="float-3 absolute bottom-[20%] left-[10%] w-[120px]" />
-        <img src={img4} className="float-4 absolute bottom-[20%] right-[10%] w-[130px]" />
+        <img
+          src={img1}
+          className="
+            float-1
+            absolute
+            top-[20%]
+            left-[5%]
+            w-[150px]
+            -rotate-12
+            z-10
+          "
+        />
+
+        <img
+          src={img2}
+          className="
+            float-2
+            absolute
+            top-[20%]
+            right-[5%]
+            w-[100px]
+            -rotate-12
+            z-10
+          "
+        />
+
+        <img
+          src={img3}
+          className="
+            float-3
+            absolute
+            bottom-[20%]
+            left-[10%]
+            w-[120px]
+            z-10
+          "
+        />
+
+        <img
+          src={img4}
+          className="
+            float-4
+            absolute
+            bottom-[20%]
+            right-[10%]
+            w-[130px]
+            z-10
+          "
+        />
 
         {/* CENTER CONTENT */}
-        <div className="flex flex-col items-center justify-center gap-4 px-4 text-center">
+        <div className="relative z-10 flex flex-col items-center justify-center gap-4 px-4 text-center">
+
           <h1 className="alinsa text-[#060EBB] text-[60px] leading-none uppercase">
             RAKS
           </h1>
@@ -48,31 +132,40 @@ const MobRaksHero = () => {
 
       {/* ─── BOTTOM ─── */}
       <div className="w-full text-start flex-1 px-5 py-8 flex items-center">
+
         <p className="jost font-medium text-[13px] leading-[24px] tracking-[-0.03em] capitalize text-black">
           RaK's Institutions is a future-forward school rooted in the{" "}
+
           <span className="salo text-[#000085] text-[20px] leading-[24px] capitalize">
             Reggio Emilia philosophy,
           </span>{" "}
+
           fostering experiential, interdisciplinary learning for children to
-          grow with purpose. Embracing this spirit, Haus of Chaos crafted an
-          identity for{" "}
+          grow with purpose. Embracing this spirit, Haus of Chaos crafted
+          an identity for{" "}
+
           <span className="salo text-[#000085] text-[20px] leading-[24px] capitalize">
             RaK's Pallikkoodam
           </span>{" "}
+
           that is warm, attentive, and child-centric.
-          <br />
-          The result is a playful yet thoughtful visual language and environment
-          designed to nurture curiosity and lifelong learning.
-          
+          The result is a playful yet thoughtful visual language and
+          environment designed to nurture curiosity and lifelong learning.
+
           {/* INLINE ICON */}
           <img
             src={heroParaImg}
             alt="icon"
-            className="inline-block ml-2 w-[30px] h-[30px] object-contain"
+            className="
+              inline-block
+              ml-2
+              w-[30px]
+              h-[30px]
+              object-contain
+            "
           />
         </p>
       </div>
-
     </section>
   );
 };

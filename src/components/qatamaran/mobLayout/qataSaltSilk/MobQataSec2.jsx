@@ -4,7 +4,8 @@ import useScrollFloat from "../../../../hooks/useScrollFloat";
 import topLeftImg from "../../../../assets/client/qatamaran/coromandelCoast.png";
 import bottomLeftImg from "../../../../assets/client/qatamaran/heroFloat1.png";
 import topRightImg from "../../../../assets/client/qatamaran/heroFloat4.png";
-import grid from "../../../../assets/client/padlr/img/checkBg.png";
+
+import GridOverlay from "../../../GridOverlay";
 
 const MobQataSec2 = () => {
   const topLeftRef = useRef(null);
@@ -16,39 +17,43 @@ const MobQataSec2 = () => {
   useScrollFloat(bottomLeftRef, { yFactor: 0.7, rFactor: 0.4 });
 
   return (
-    <section className="relative h-screen w-full overflow-hidden">
-      {/* BACKGROUND */}
-      <div
-        className="absolute inset-0"
-        style={{
-          backgroundImage: `url(${grid})`,
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-        }}
-      />
+    <section className="relative h-screen w-full overflow-hidden bg-white">
+
+      {/* GRID */}
+      <div className="absolute inset-0 z-0 pointer-events-none">
+        <GridOverlay
+          color="0,0,0"
+          opacity={0.15}
+          size={100}
+          position="99px 0px"
+        />
+      </div>
 
       {/* IMAGES */}
       <img
         ref={topLeftRef}
         src={topLeftImg}
-        className="absolute top-[15%] left-[5%] w-[110px] -rotate-12"
+        alt=""
+        className="absolute top-[15%] left-[5%] w-[110px] -rotate-12 z-10"
       />
 
       <img
         ref={topRightRef}
         src={topRightImg}
-        className="absolute top-[65%] right-[5%] w-[110px] -rotate-12"
+        alt=""
+        className="absolute top-[65%] right-[5%] w-[110px] -rotate-12 z-10"
       />
 
       <img
         ref={bottomLeftRef}
         src={bottomLeftImg}
-        className="absolute bottom-[8%] left-[5%] w-[110px] -rotate-12"
+        alt=""
+        className="absolute bottom-[8%] left-[5%] w-[110px] -rotate-12 z-10"
       />
 
       {/* CONTENT */}
       <div
-        className="absolute px-5"
+        className="absolute px-5 z-10"
         style={{
           top: "50%",
           left: "50%",

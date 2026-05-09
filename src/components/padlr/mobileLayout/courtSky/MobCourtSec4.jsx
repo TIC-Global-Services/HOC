@@ -1,21 +1,26 @@
 import React from "react";
 
-import grid from "../../../../assets/client/padlr/img/checkBg.png";
+
 import delightImg from "../../../../assets/client/padlr/img/courtPanelImg4.png";
 import topImg from "../../../../assets/client/padlr/img/courtPanelImg3.png";
 import paddle from "../../../../assets/client/padlr/img/batIcon.png";
 import circleImg from "../../../../assets/client/padlr/img/heroImg1.png";
+import GridOverlay from "../../../GridOverlay";
 
 
 const MobCourtSec4 = () => {
   return (
     <section
-      className="w-full relative h-[100vh] flex flex-col justify-between px-5 py-8"
-      style={{
-        backgroundImage: `url(${grid})`,
-        backgroundSize: "cover",
-      }}
-    >
+      className="w-full relative h-[100vh] flex flex-col justify-between px-5 py-8">
+        {/* GRID */}
+      <div className="absolute inset-0 z-0 pointer-events-none">
+        <GridOverlay
+          color="0,0,0"
+          opacity={0.15}
+          size={100}
+          position="99px 0px"
+        />
+      </div>
 
       {/* ─── TOP ROW ─── */}
       <div className="flex justify-between items-start">

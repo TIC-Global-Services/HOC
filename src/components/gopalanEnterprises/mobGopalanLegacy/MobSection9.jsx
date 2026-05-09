@@ -37,7 +37,7 @@ const MobSection9 = () => {
           inset-0
           w-full
           h-full
-          object-contain
+          object-cover
         "
       />
     </section>

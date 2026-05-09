@@ -3,7 +3,8 @@ import useScrollFloat from "../../../../hooks/useScrollFloat";
 
 import topIcon from "../../../../assets/client/qatamaran/heroFloat1.png";
 import bottomIcon from "../../../../assets/client/qatamaran/heroFloat4.png";
-import grid from "../../../../assets/client/padlr/img/checkBg.png";
+
+import GridOverlay from "../../../GridOverlay";
 
 const MobQataSec4 = () => {
   const topRef = useRef(null);
@@ -13,20 +14,29 @@ const MobQataSec4 = () => {
   useScrollFloat(bottomRef, { yFactor: 0.3, rFactor: 0.18 });
 
   return (
-    <section
-      className="w-full flex flex-col justify-center px-10 py-10 gap-10"
-      style={{
-        backgroundImage: `url(${grid})`,
-        backgroundSize: "cover",
-      }}
-    >
+    <section className="w-full relative overflow-hidden bg-white flex flex-col justify-center px-10 py-10 gap-10">
+
+      {/* GRID */}
+      <div className="absolute inset-0 z-0 pointer-events-none">
+        <GridOverlay
+          color="0,0,0"
+          opacity={0.15}
+          size={100}
+          position="99px 0px"
+        />
+      </div>
+
       {/* TOP ICON */}
-      <div ref={topRef} className="w-[100px]">
-        <img src={topIcon} alt="" className="w-full object-contain -rotate-20" />
+      <div ref={topRef} className="w-[100px] relative z-10">
+        <img
+          src={topIcon}
+          alt=""
+          className="w-full object-contain -rotate-20"
+        />
       </div>
 
       {/* TEXT */}
-      <div className="text-black text-start max-w-[320px]">
+      <div className="text-black text-start max-w-[320px] relative z-10">
         <h2 className="salo uppercase text-[20px] leading-[110%] mb-3">
           Where Heritage Meets Modern Elegance
         </h2>
@@ -40,8 +50,12 @@ const MobQataSec4 = () => {
       </div>
 
       {/* BOTTOM ICON */}
-      <div ref={bottomRef} className="w-[100px]">
-        <img src={bottomIcon} alt="" className="w-full object-contain -rotate-10" />
+      <div ref={bottomRef} className="w-[100px] relative z-10">
+        <img
+          src={bottomIcon}
+          alt=""
+          className="w-full object-contain -rotate-10"
+        />
       </div>
     </section>
   );

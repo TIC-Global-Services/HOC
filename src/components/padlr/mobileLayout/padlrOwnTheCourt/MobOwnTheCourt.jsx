@@ -1,10 +1,11 @@
 import React from "react";
 
-import grid from "../../../../assets/client/padlr/img/checkBg.png";
 import img1 from "../../../../assets/client/padlr/img/heroImg1.png";
 import img2 from "../../../../assets/client/padlr/img/heroImg2.png";
 import img3 from "../../../../assets/client/padlr/img/heroImg3.png";
 import img4 from "../../../../assets/client/padlr/img/heroImg4.png";
+
+import GridOverlay from "../../../GridOverlay";
 
 const IMGS = {
   circle: img1,
@@ -64,24 +65,29 @@ const ROWS = [
 ];
 
 //Mobile spacing
-const ROW_Y = ["20vh", "28vh", "38vh","48vh", "58vh", "66vh", "75vh"];
+const ROW_Y = ["20vh", "28vh", "38vh", "48vh", "58vh", "66vh", "75vh"];
 
 export default function MobOwnTheCourt() {
   return (
-    <section
-      className="w-full h-[80vh] relative overflow-hidden"
-      style={{
-        backgroundImage: `url(${grid})`,
-        backgroundSize: "cover",
-      }}
-    >
+    <section className="w-full h-[80vh] relative overflow-hidden bg-white">
+
+      {/* GRID */}
+      <div className="absolute inset-0 z-0 pointer-events-none">
+        <GridOverlay
+          color="0,0,0"
+          opacity={0.15}
+          size={100}
+          position="99px 0px"
+        />
+      </div>
+
       {/* MOBILE HEADING */}
       <h2 className="absolute left-1/2 -translate-x-1/2 top-[70px] z-10 salo text-[#7ac9f0] text-[30px] uppercase text-center leading-none">
         OWN THE COURT
       </h2>
 
       {/* STATIC GRID */}
-      <div className="w-full relative h-full">
+      <div className="w-full relative h-full z-10">
         {ROWS.map((row, ri) =>
           row.map((item, i) => (
             <div

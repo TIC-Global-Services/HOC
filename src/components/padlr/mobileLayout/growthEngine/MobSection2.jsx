@@ -1,10 +1,11 @@
 import React, { useEffect, useRef } from "react";
 import gsap from "gsap";
 
-import grid from "../../../../assets/client/mobBg.png";
 import springImg from "../../../../assets/client/padlr/img/heroImg3.png";
 import canImg from "../../../../assets/client/padlr/img/heroImg4.png";
 import batImg from "../../../../assets/client/padlr/img/heroImg2.png";
+
+import GridOverlay from "../../../GridOverlay";
 
 const MobSection2 = () => {
   const iconRefs = useRef([]);
@@ -53,16 +54,17 @@ const MobSection2 = () => {
 
   return (
     <>
-      <section className="relative h-screen w-full overflow-hidden">
-        {/* BACKGROUND */}
-        <div
-          className="absolute inset-0"
-          style={{
-            backgroundImage: `url(${grid})`,
-            backgroundSize: "cover",
-            backgroundPosition: "center",
-          }}
-        />
+      <section className="relative h-screen w-full overflow-hidden bg-white">
+
+        {/* GRID */}
+        <div className="absolute inset-0 z-0 pointer-events-none">
+          <GridOverlay
+            color="0,0,0"
+            opacity={0.15}
+            size={100}
+            position="99px 0px"
+          />
+        </div>
 
         {/* TOP SPRING */}
         <img
@@ -70,7 +72,8 @@ const MobSection2 = () => {
           data-speed="0.3"
           data-rotate="-12"
           src={springImg}
-          className="absolute top-[20%] left-[5%] w-[110px] -rotate-12"
+          alt=""
+          className="absolute top-[20%] left-[5%] w-[110px] -rotate-12 z-10"
         />
 
         {/* MIDDLE RIGHT CAN */}
@@ -79,7 +82,8 @@ const MobSection2 = () => {
           data-speed="0.5"
           data-rotate="-12"
           src={canImg}
-          className="absolute top-[65%] right-[5%] w-[100px] -rotate-12"
+          alt=""
+          className="absolute top-[65%] right-[5%] w-[100px] -rotate-12 z-10"
         />
 
         {/* BOTTOM BAT */}
@@ -87,12 +91,14 @@ const MobSection2 = () => {
           ref={addIconRef}
           data-speed="0.7"
           src={batImg}
-          className="absolute bottom-[8%] left-[5%] w-[110px]"
+          alt=""
+          className="absolute bottom-[8%] left-[5%] w-[110px] z-10"
         />
 
         {/* ─── CENTER CONTENT ─── */}
-        <div className="absolute inset-0 flex items-center left-[8%] px-5">
+        <div className="absolute inset-0 flex items-center left-[8%] px-5 z-10">
           <div className="w-full text-left space-y-6">
+
             {/* HEADING */}
             <h2 className="salo text-[#0606BC] uppercase leading-[0.95] text-[clamp(32px,14vw,50px)]">
               Performance <br /> Driven

@@ -6,6 +6,7 @@ import spinIcon from "../../../../assets/client/padlr/img/heroImg1.png";
 import palatteImg from "../../../../assets/client/padlr/img/courtImg2.png";
 import attachIcon from "../../../../assets/client/padlr/img/attachIcon.png";
 import grid from "../../../../assets/client/padlr/img/checkBg.png";
+import GridOverlay from "../../../GridOverlay";
 
 const MobSection3 = () => {
   const iconRefs = useRef([]);
@@ -52,25 +53,27 @@ const MobSection3 = () => {
 
   return (
     <section className="relative w-full h-screen bg-white overflow-visible">
-
-      {/* ─── TOP  ─── */}
-      <div
-        className="absolute top-0 left-0 w-full h-[50vh]"
-        style={{
-          backgroundImage: `url(${grid})`,
-          backgroundPosition: "cover",
-        }}
-      >
+      {/* ─── TOP ─── */}
+      <div className="absolute top-0 left-0 w-full h-[50vh] z-10 overflow-hidden">
+        {/* GRID */}
+        <div className="absolute inset-0 z-0 pointer-events-none">
+          <GridOverlay
+            color="0,0,0"
+            opacity={0.15}
+            size={100}
+            position="99px 0px"
+          />
+        </div>
 
         {/* LEFT IMAGE */}
         <img
           src={visualImg}
           alt="visual"
-          className="absolute left-0 top-[30%] -translate-y-1/2 w-[60%] object-contain"
+          className="absolute left-0 top-[30%] -translate-y-1/2 w-[60%] object-contain z-10"
         />
 
         {/* RIGHT TEXT */}
-        <div className="absolute right-[2%] top-[18%] max-w-[140px]">
+        <div className="absolute right-[2%] top-[18%] max-w-[140px] z-10">
           <p className="jost text-start capitalize text-black leading-[120%] text-[13px]">
             Maintains visual balance with neutral tones inspired by real court
             elements. Communicates precision and modernity through a
@@ -80,16 +83,17 @@ const MobSection3 = () => {
 
         {/* SPIN ICON */}
         <img
+          ref={addIconRef}
+          data-speed="0.5"
+          data-rotate="0"
           src={spinIcon}
           alt="icon"
-          className="absolute right-[10%] top-[50%] w-[60px]"
+          className="absolute right-[10%] top-[50%] w-[60px] z-10"
         />
-
       </div>
 
       {/* ─── BOTTOM  ─── */}
       <div className="absolute bottom-0 left-0 w-full h-[50vh] bg-white">
-
         {/* CARD */}
         <div className="absolute top-[10%] left-1/2 -translate-x-1/2 w-[60%]">
           <img

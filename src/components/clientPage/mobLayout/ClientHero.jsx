@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import button from "../../../assets/client/page/button.png";
+import heroCallout from "../../../assets/client/page/hero-callouts.png";
 import starImg from "../../../assets/client/page/endIcon.png";
 
 const ClientHero = () => {
@@ -9,14 +9,18 @@ const ClientHero = () => {
       {/* TITLE BLOCK */}
       <div className="relative flex items-center justify-center">
 
-        {/* BUTTON ICON */}
+        {/* Button image */}
         <motion.img
-          src={button}
-          alt="button"
-          className="absolute w-[50px] left-[0%] bottom-[25px] z-[1]"
-          initial={{ x: -40, opacity: 0 }}
+          src={heroCallout}
+          className="absolute w-[60px] z-[1]"
+          style={{
+            left: "0%",     
+            bottom: "15px", 
+          }}
+          alt="Button"
+          initial={{ x: -100, opacity: 0 }}
           animate={{ x: 0, opacity: 1 }}
-          transition={{ duration: 0.4, ease: "easeOut" }}
+          transition={{ type: "spring", stiffness: 120, damping: 10 }}
         />
 
         {/* CLIENTS TEXT */}

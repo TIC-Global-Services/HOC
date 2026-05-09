@@ -3,19 +3,25 @@ import React from "react";
 import courtImg2 from "../../../../assets/client/padlr/img/courtImg2.png";
 import courtImg3 from "../../../../assets/client/padlr/img/courtImg3.png";
 import batlogo from "../../../../assets/client/padlr/img/batIcon.png";
-import grid from "../../../../assets/client/padlr/img/checkBg.png";
+
+import GridOverlay from "../../../GridOverlay";
 
 const MobCourtSec2 = () => {
   return (
-    <section className="w-full h-[95vh] flex flex-col overflow-hidden"
-    style={{
-            backgroundImage: `url(${grid})`,
-            backgroundSize: "cover",
-            backgroundColor: "#8FC4E9",
-          }}>
+    <section className="w-full h-[95vh] flex flex-col overflow-hidden relative bg-[#8FC4E9]">
 
-      {/* ─── TOP  ─── */}
-      <div className="relative w-full">
+      {/* GRID */}
+      <div className="absolute inset-0 z-0 pointer-events-none">
+        <GridOverlay
+          color="0,0,0"
+          opacity={0.15}
+          size={100}
+          position="99px 0px"
+        />
+      </div>
+
+      {/* ─── TOP ─── */}
+      <div className="relative w-full z-10">
         <img
           src={courtImg2}
           alt=""
@@ -29,7 +35,7 @@ const MobCourtSec2 = () => {
       </div>
 
       {/* ─── MIDDLE CONTENT ─── */}
-      <div className="flex items-end justify-between px-5 py-8 gap-4">
+      <div className="flex items-end justify-between px-5 py-8 gap-4 relative z-10">
 
         {/* LEFT TEXT */}
         <div className="w-[55%]">
@@ -42,6 +48,7 @@ const MobCourtSec2 = () => {
           <p className="jost text-start leading-none tracking-tight text-white/80 mt-3 text-[14px]">
             Hex Precision
           </p>
+
           <p className="jost text-start leading-none tracking-tight text-white/80 text-[14px]">
             RGB Consistency
           </p>
@@ -58,8 +65,8 @@ const MobCourtSec2 = () => {
 
       </div>
 
-      {/* ─── BOTTOM TEXT  ─── */}
-      <div className="relative px-5 mt-[15%] pb-10">
+      {/* ─── BOTTOM TEXT ─── */}
+      <div className="relative px-5 mt-[15%] pb-10 z-10">
 
         <p className="jost text-start text-white/90 max-w-[250px] text-[14px] leading-[20px]">
           Padlr is a modern destination built around the fast-growing culture

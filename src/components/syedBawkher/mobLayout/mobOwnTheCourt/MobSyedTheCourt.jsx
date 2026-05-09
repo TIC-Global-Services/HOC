@@ -1,12 +1,13 @@
 import React from "react";
 
-import grid from "../../../../assets/client/padlr/img/checkBg.png";
 import img1 from "../../../../assets/client/syedBawkher/img/heroImg1.png";
 import img2 from "../../../../assets/client/syedBawkher/img/heroImg2.png";
 import img3 from "../../../../assets/client/syedBawkher/img/heroImg3.png";
 import img4 from "../../../../assets/client/syedBawkher/img/heroImg4.png";
 import img5 from "../../../../assets/client/syedBawkher/img/elegantPairImg.png";
 import img6 from "../../../../assets/client/syedBawkher/img/signatureImg.png";
+
+import GridOverlay from "../../../GridOverlay";
 
 const IMGS = {
   circleB: img1,
@@ -61,27 +62,60 @@ const ROWS = [
   ],
 ];
 
-const ROW_Y = ["21vh", "30vh", "40vh", "50vh", "60vh", "70vh", "80vh"];
+const ROW_Y = [
+  "21vh",
+  "30vh",
+  "40vh",
+  "50vh",
+  "60vh",
+  "70vh",
+  "80vh",
+];
 
 export default function MobSyedTheCourt() {
   return (
     <section
-      className="w-full h-[85vh] relative overflow-hidden"
-      style={{
-        backgroundImage: `url(${grid})`,
-        backgroundSize: "cover",
-      }}
+      className="w-full h-[85vh] relative overflow-hidden bg-white"
     >
+
+      {/* GRID */}
+      <div className="absolute inset-0 z-0 pointer-events-none">
+        <GridOverlay
+          color="0,0,0"
+          opacity={0.15}
+          size={100}
+          position="99px 0px"
+        />
+      </div>
+
       {/* HEADING */}
-      <h2 className="absolute left-1/2 -translate-x-1/2 top-[70px] z-10 salo text-[#262666] text-[30px] leading-none uppercase text-center">
+      <h2
+        className="
+          absolute
+          left-1/2
+          -translate-x-1/2
+          top-[70px]
+          z-10
+          salo
+          text-[#262666]
+          text-[30px]
+          leading-none
+          uppercase
+          text-center
+        "
+      >
         REFINED IDENTITY
       </h2>
 
-      <div className="w-full relative h-full">
+      <div className="w-full relative h-full z-10">
+
         {ROWS.map((row, ri) =>
           row.map((item, i) => {
             const flatIndex =
-              ROWS.slice(0, ri).reduce((acc, r) => acc + r.length, 0) + i;
+              ROWS.slice(0, ri).reduce(
+                (acc, r) => acc + r.length,
+                0
+              ) + i;
 
             return (
               <div

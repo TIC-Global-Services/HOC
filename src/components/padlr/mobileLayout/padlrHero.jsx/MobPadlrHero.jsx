@@ -2,13 +2,12 @@ import img1 from "../../../../assets/client/padlr/img/heroImg1.png";
 import img2 from "../../../../assets/client/padlr/img/heroImg2.png";
 import img3 from "../../../../assets/client/padlr/img/heroImg3.png";
 import img4 from "../../../../assets/client/padlr/img/heroImg4.png";
-import grid from "../../../../assets/client/padlr/img/checkBg.png";
 import bottomIcon from "../../../../assets/client/padlr/img/Group.png";
+import GridOverlay from "../../../GridOverlay";
 
 const MobPadlrHero = () => {
   return (
     <section className="w-full min-h-screen flex flex-col mt-[25%] relative">
-
       <style>{`
         @keyframes floatY {
           0%, 100% { transform: translateY(0px) rotate(var(--r)); }
@@ -21,21 +20,44 @@ const MobPadlrHero = () => {
       `}</style>
 
       {/* ─── TOP ─── */}
-      <div
-        className="relative w-full h-[60vh] flex items-center justify-center overflow-hidden"
-        style={{
-          backgroundImage: `url(${grid})`,
-          backgroundPosition: "center",
-        }}
-      >
+      <div className="relative w-full h-[60vh] flex items-center justify-center overflow-hidden z-10">
+        {/* GRID */}
+        <div className="absolute inset-0 z-0 pointer-events-none">
+          <GridOverlay
+            color="0,0,0"
+            opacity={0.15}
+            size={100}
+            position="99px 0px"
+          />
+        </div>
+
         {/* FLOATING IMAGES */}
-        <img src={img2} className="float-1 absolute top-[15%] left-[8%] w-[100px]" />
-        <img src={img1} className="float-2 absolute top-[20%] right-[10%] w-[60px]" />
-        <img src={img4} className="float-3 absolute bottom-[14%] left-[8%] w-[90px]" />
-        <img src={img3} className="float-4 absolute bottom-[10%] right-[10%] w-[120px]" />
+        <img
+          src={img2}
+          alt=""
+          className="float-1 absolute top-[15%] left-[8%] w-[100px] z-10"
+        />
+
+        <img
+          src={img1}
+          alt=""
+          className="float-2 absolute top-[20%] right-[10%] w-[60px] z-10"
+        />
+
+        <img
+          src={img4}
+          alt=""
+          className="float-3 absolute bottom-[14%] left-[8%] w-[90px] z-10"
+        />
+
+        <img
+          src={img3}
+          alt=""
+          className="float-4 absolute bottom-[10%] right-[10%] w-[120px] z-10"
+        />
 
         {/* CENTER TITLE */}
-        <div className="flex flex-col items-center justify-center gap-4 px-4 text-center">
+        <div className="flex flex-col items-center justify-center gap-4 px-4 text-center relative z-10">
           <h2 className="alinsa text-[#060EBB] text-[50px] leading-none">
             PADLR
           </h2>
@@ -67,7 +89,8 @@ const MobPadlrHero = () => {
           all things{" "}
           <span className="salo text-[#060EBB] font-normal text-[20px] leading-[24px] capitalize">
             "Seriously Playful"
-          </span>.
+          </span>
+          .
         </p>
       </div>
 
@@ -77,7 +100,6 @@ const MobPadlrHero = () => {
         alt=""
         className="absolute right-8 bottom-0 w-[90px]"
       />
-
     </section>
   );
 };
