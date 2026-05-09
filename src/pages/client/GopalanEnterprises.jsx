@@ -7,6 +7,7 @@ import GopalanLegacy from "../../components/gopalanEnterprises/gopalanLegacy/Gop
 import GopalanModernLegacy from "../../components/gopalanEnterprises/GopalanModernLegacy";
 import MobGopalanLegacy from "../../components/gopalanEnterprises/mobGopalanLegacy/MobGopalanLegacy";
 import MobModernLegacy from "../../components/gopalanEnterprises/mobLayout/MobModernLegacy";
+import ViewNext from "../../components/ViewNext";
 
 const GopalanEnterprises = () => {
   return (
@@ -41,8 +42,15 @@ const GopalanEnterprises = () => {
 
       {/* Mobile */}
       <div className="block md:hidden">
-      <MobModernLegacy />
+        <MobModernLegacy />
       </div>
+
+      {/* View Next */}
+      <ViewNext
+        activeClient="gopalan"
+        titleColor="#E96428"
+        heading="VIEW NEXT?"
+      />
 
       {/* FOOTER */}
       <Footer />

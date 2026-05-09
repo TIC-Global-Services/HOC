@@ -13,6 +13,7 @@ import MobPadlrInstaImg from "../../components/padlr/MobPadlrInstaImg";
 import MobOwnTheCourt from "../../components/padlr/mobileLayout/padlrOwnTheCourt/MobOwnTheCourt";
 // import PadlrImageSec from "../../components/padlr/PadlrImageSec";
 import PadlrVideoSec2 from "../../components/padlr/PadlrVideoSec2";
+import ViewNext from "../../components/ViewNext";
 
 const Padlr = () => {
   return (
@@ -20,12 +21,20 @@ const Padlr = () => {
       <Navbar />
 
       {/* Hero */}
-      <div className="md:hidden"><MobPadlrHero /></div>
-      <div className="md:block hidden"><PadlrHero /></div>
+      <div className="md:hidden">
+        <MobPadlrHero />
+      </div>
+      <div className="md:block hidden">
+        <PadlrHero />
+      </div>
 
       {/* Growth Engine */}
-      <div className="hidden md:block"><GrowthEngine /></div>
-      <div className="md:hidden"><MobGrowthEngine /></div>
+      <div className="hidden md:block">
+        <GrowthEngine />
+      </div>
+      <div className="md:hidden">
+        <MobGrowthEngine />
+      </div>
 
       {/* Videos grouped — no gap between them */}
       <div className="flex flex-col">
@@ -34,7 +43,9 @@ const Padlr = () => {
       </div>
 
       {/* Court Sky */}
-      <div className="hidden md:block"><CourtSky /></div>
+      <div className="hidden md:block">
+        <CourtSky />
+      </div>
 
       {/* All mobile-only sections in ONE wrapper */}
       <div className="md:hidden">
@@ -48,6 +59,12 @@ const Padlr = () => {
       <div className="hidden md:block">
         <OwnTheCourt />
       </div>
+
+      <ViewNext
+        activeClient="padlr"
+        titleColor="#8FC4E9"
+        heading="VIEW NEXT?"
+      />
 
       <Footer />
     </>

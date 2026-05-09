@@ -10,6 +10,7 @@ import MobQataHero from "../../components/qatamaran/mobLayout/mobQataHero.jsx/Mo
 import MobQataRefined from "../../components/qatamaran/mobLayout/qataRefinedTailoring/MobQataRefined";
 import MobQataOwnTheCourt from "../../components/qatamaran/mobLayout/mobQataOwnCourt/MobQataOwnTheCourt";
 import QataCoastal from "../../components/qatamaran/QataCoastal";
+import ViewNext from "../../components/ViewNext";
 
 const Qatamaran = () => {
   return (
@@ -19,19 +20,18 @@ const Qatamaran = () => {
       {/* Sections */}
       {/* Mob */}
       <div className="md:hidden">
-      <MobQataHero />
+        <MobQataHero />
       </div>
 
       {/* Desktop */}
       <div className="md:block hidden">
-      <QatamaranHero />
+        <QatamaranHero />
       </div>
       {/* MobileLayout */}
       <div className="md:hidden">
-      <MobQataSalt />
-      <MobQataRefined />
+        <MobQataSalt />
+        <MobQataRefined />
       </div>
-
 
       {/* Desktop Layout */}
       <div className="hidden md:block">
@@ -49,8 +49,16 @@ const Qatamaran = () => {
 
       {/* Desktop */}
       <div className="hidden md:block">
-      <QataCoastal />
+        <QataCoastal />
       </div>
+
+      {/* View Next */}
+      <ViewNext
+        activeClient="qatamaran"
+        titleColor="#1E382D"
+        heading="VIEW NEXT?"
+      />
+
       {/* Footer */}
       <Footer />
     </>

@@ -11,6 +11,7 @@ import MobRaksHero from "../../components/raks/mobLayout/mobRaksHero/MobRaksHero
 import MobRaksWanna from "../../components/raks/RaksWannaKnow";
 import RaksInstaImg from "../../components/raks/RaksInstaImg";
 import MobRaksOwnTheCourt from "../../components/raks/mobLayout/mobRaksOwnCourt/MobRaksOwnTheCourt";
+import ViewNext from "../../components/ViewNext";
 
 const Raks = () => {
   const location = useLocation();
@@ -20,14 +21,22 @@ const Raks = () => {
       <Navbar />
 
       {/* Hero */}
-      <div className="md:hidden"><MobRaksHero /></div>
-      <div className="md:block hidden"><RaksHero /></div>
+      <div className="md:hidden">
+        <MobRaksHero />
+      </div>
+      <div className="md:block hidden">
+        <RaksHero />
+      </div>
 
       <RaksInstitutionVideo />
 
       {/* Learning */}
-      <div className="md:hidden"><MobRaksLearn /></div>
-      <div className="md:block hidden"><RaksLearning /></div>
+      <div className="md:hidden">
+        <MobRaksLearn />
+      </div>
+      <div className="md:block hidden">
+        <RaksLearning />
+      </div>
 
       <RaksVideoSec />
 
@@ -42,6 +51,9 @@ const Raks = () => {
       <div className="hidden md:block -mt-[3px]">
         <RaksOwnTheCourt />
       </div>
+
+      {/* View Next */}
+      <ViewNext activeClient="raks" titleColor="#000085" heading="VIEW NEXT?" />
 
       <Footer />
     </div>

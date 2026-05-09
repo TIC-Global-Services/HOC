@@ -3,57 +3,25 @@ import logo1 from "../assets/logo.png";
 import { useState } from "react";
 import emailjs from "@emailjs/browser";
 import grid from "../assets/lines.png";
-
-import {
-  Link,
-  useNavigate,
-  useLocation,
-} from "react-router-dom";
-
-import GridOverlay from "../components/GridOverlay";
+import { Link } from "react-router-dom";
+import GridOverlay from '../components/GridOverlay'
 
 const Footer = () => {
   return (
-    <div className="jost">
+    <div className=" jost">
       <HausOfChaos />
     </div>
   );
 };
 
 const HausOfChaos = () => {
-  const navigate = useNavigate();
-  const location = useLocation();
-
-  // CLIENT ROUTES ONLY
-  const routes = [
-    "/client",
-    "/client/qatamaran",
-    "/client/padlr",
-    "/client/gopalan-enterprises",
-    "/client/syed",
-    "/client/raks",
-  ];
-
-  const currentIndex = routes.indexOf(location.pathname);
-
-  const nextRoute =
-    currentIndex < routes.length - 1
-      ? routes[currentIndex + 1]
-      : null;
-
-  // SHOW ONLY ON CLIENT PAGES
-  const showNavigation = routes.includes(location.pathname);
-
   const [formData, setFormData] = useState({
     name: "",
     email: "",
   });
 
   const handleChange = (e) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value,
-    });
+    setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
   const handleSubmit = (e) => {
@@ -66,144 +34,68 @@ const HausOfChaos = () => {
 
     emailjs
       .send(
-        "service_ovftt7v",
-        "template_0r29jul",
+        "service_ovftt7v", // Your EmailJS service ID
+        "template_0r29jul", // Your EmailJS template ID
         {
-          from_name: formData.name,
-          user_email: formData.email,
-          to_name: "ria yukta",
-          to_email: "explore@hausofchaos.co",
-          message:
-            "Hello, I would like to connect with you and learn more.",
+          from_name: formData.name, // User's Name
+          user_email: formData.email, // User's Email
+          to_name: "ria yukta", // Author's Name (Optional)
+          to_email: "explore@hausofchaos.co", // Replace with the author's email
+          message: "Hello, I would like to connect with you and learn more.", // Static message
         },
-        "-nw3YwvbkpZVhBsF8"
+        "-nw3YwvbkpZVhBsF8" // Your EmailJS Public Key
       )
       .then(() => {
         alert("Email sent successfully!");
-
-        setFormData({
-          name: "",
-          email: "",
-        });
+        setFormData({ name: "", email: "" }); // Clear form after submission
       })
       .catch((error) => {
         console.error("Error sending email:", error);
-
         alert("Failed to send email. Please try again.");
       });
   };
 
-  // SMOOTH INTERNAL NAVIGATION
-  const handleInternalNavigation = (path) => {
-    navigate(path, {
-      state: {
-        internalNavigation: true,
-      },
-    });
-
-    window.scrollTo(0, 0);
-  };
-
   return (
     <div className="min-h-screen bg-[#060ebb] text-white relative">
-
       {/* Background Grid Overlay */}
-      <div className="absolute inset-0 opacity-50 rotate-[0.5deg]" />
-
-      <GridOverlay
-        color="0,0,0"
-        opacity={0.20}
-        size={100}
-        position="99px 0px"
+      <div
+        className="absolute inset-0 opacity-50 rotate-[0.5deg]"
       />
 
+      <GridOverlay
+            color="0,0,0"
+            opacity={0.20}
+            size={100}
+            position="99px 0px"
+          />
+        
       {/* Main Content */}
       <div className="relative px-4 py-20 md:px-20 md:py-48 min-h-screen flex flex-col justify-between">
-
-        {/* TOP NAVIGATION */}
-        {showNavigation && (
-          <div className="absolute top-10 left-0 w-full px-4 md:px-20 z-30">
-
-            <div className="flex items-center justify-between">
-
-              {/* BACK */}
-              {location.pathname !== "/client" ? (
-                <button
-                  onClick={() =>
-                    handleInternalNavigation("/client")
-                  }
-                  className="
-                    uppercase
-                    text-sm
-                    md:text-base
-                    tracking-wide
-                    hover:opacity-70
-                    transition-all
-                  "
-                >
-                  [Back]
-                </button>
-              ) : (
-                <div />
-              )}
-
-              {/* NEXT */}
-              {nextRoute && (
-                <button
-                  onClick={() =>
-                    handleInternalNavigation(nextRoute)
-                  }
-                  className="
-                    uppercase
-                    text-sm
-                    md:text-base
-                    tracking-wide
-                    hover:opacity-70
-                    transition-all
-                  "
-                >
-                  [Next]
-                </button>
-              )}
-            </div>
-          </div>
-        )}
-
         {/* Logo and Description */}
         <img
           src={logo1}
           className="w-1/2 md:hidden block mb-8"
           alt="Haus Of Chaos"
         />
-
         <div className="flex">
-
           <div className="md:max-w-xl">
-
             <img
               src={logo1}
               className="md:w-40 md:block hidden mb-4"
               alt="Haus Of Chaos"
             />
-
             <p className="text-lg md:block hidden text-left mb-6">
               Step into the chaos of creativity <br />
-              Where bold ideas and designs <br />
-              collide Stay ahead with innovative <br />
-              thoughts Experience transformative <br />
-              journeys Embrace the unexpected <br />
-              and disrupt the norm
+              Where bold ideas and designs <br /> collide Stay ahead with
+              innovative <br />
+              thoughts Experience transformative <br /> journeys Embrace the
+              unexpected <br /> and disrupt the norm
             </p>
           </div>
 
           {/* Newsletter Form */}
           <div className="max-w-xl mt-20 ml-auto">
-
-            <form
-              className="space-y-4 flex flex-col"
-              onSubmit={handleSubmit}
-            >
-
+            <form className="space-y-4 flex flex-col" onSubmit={handleSubmit}>
               <div>
                 <input
                   type="text"
@@ -214,7 +106,6 @@ const HausOfChaos = () => {
                   className="w-full p-4 bg-white/10 backdrop-blur-sm text-white placeholder-white border border-white/20 focus:outline-none focus:border-white/40"
                 />
               </div>
-
               <div>
                 <input
                   type="email"
@@ -225,13 +116,11 @@ const HausOfChaos = () => {
                   className="w-full mt-6 p-4 bg-white/10 backdrop-blur-sm text-white placeholder-white border border-white/20 focus:outline-none focus:border-white/40"
                 />
               </div>
-
               <p className="text-sm text-left opacity-80">
                 Where ideas collide and stories unfold, Haus of Chaos transforms
                 narratives into immersive brand experiences. Explore innovation,
-                redefine design, and disrupt the ordinary with us.
+                redefine design, and disrupt the ordinary with us.{" "}
               </p>
-
               <button
                 type="submit"
                 className="px-12 py-3 w-fit border-2 border-white bg-black text-[#E3E1E6] rounded-full hover:bg-black/90 transition-colors"
@@ -244,34 +133,24 @@ const HausOfChaos = () => {
 
         {/* Footer Section */}
         <div className="relative whitespace-normal md:pt-16 pt-6 md:pb-0 pb-20">
-
           <div className="flex md:justify-end gap-4 text-sm">
-
-            <a
-              href="mailto:explore@hausofchaos.co"
-              className="hover:underline"
-            >
+            <a href="mailto:explore@hausofchaos.co" className="hover:underline">
               MAIL
             </a>
-
             <span>|</span>
-
             <a
               href="https://www.linkedin.com/company/105575916/"
               className="hover:underline"
               target="_blank"
-              rel="noreferrer"
+
             >
               LINKEDIN
             </a>
-
             <span>|</span>
-
             <a
               href="https://www.instagram.com/hausofchaos.co/"
               className="hover:underline"
               target="_blank"
-              rel="noreferrer"
             >
               INSTAGRAM
             </a>
@@ -280,27 +159,22 @@ const HausOfChaos = () => {
 
         {/* Bottom Footer */}
         <div className="absolute left-0 px-4 md:px-20 bottom-6 md:bottom-10 flex flex-col-reverse md:flex-row items-start md:gap-0 gap-12 md:justify-between w-full">
-
           <Link
             to="/"
-            onClick={() => window.scrollTo(0, 0)}
+            onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
           >
             <div className="text-md !-mt-10 ">
-              <span className="uppercase">
-                2025 © Haus Of Chaos
-              </span>{" "}
-              Ltd.
+              <span className="  uppercase">2025 © Haus Of Chaos  </span>Ltd.
             </div>
           </Link>
 
-          <div className="text-sm md:!-mt-10 md:text-base">
+        
+          <div className="text-sm   md:!-mt-10  md:text-base">
             Design by{" "}
-
             <a
               href="https://theinternetcompany.one/"
               className="hover:underline"
               target="_blank"
-              rel="noreferrer"
             >
               TIC GLOBAL
             </a>

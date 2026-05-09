@@ -11,6 +11,7 @@ import MobSyedSignature from "../../components/syedBawkher/mobSyedLayout/MobSyed
 import MobSyedHero from "../../components/syedBawkher/mobLayout/mobSyedHero/MobSyedHero";
 import SyedTailorMob from "../../components/syedBawkher/mobLayout/mobSyedTailor.jsx/SyedTailorMob";
 import MobSyedTheCourt from "../../components/syedBawkher/mobLayout/mobOwnTheCourt/MobSyedTheCourt";
+import ViewNext from "../../components/ViewNext";
 
 const SyedBawkher = () => {
   return (
@@ -59,6 +60,9 @@ const SyedBawkher = () => {
       <div className="md:block hidden">
         <SyedOwnTheCourt />
       </div>
+
+      {/* View Next */}
+      <ViewNext activeClient="syed" titleColor="#262666" heading="VIEW NEXT?" />
 
       {/* Footer */}
       <Footer />
