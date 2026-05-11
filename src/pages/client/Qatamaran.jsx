@@ -1,5 +1,5 @@
 import QatamaranHero from "../../components/qatamaran/QatamaranHero";
-import QataWannaKnow from "../../components/qatamaran/QataWannaKnow";
+// import QataWannaKnow from "../../components/qatamaran/QataWannaKnow";
 import QataImageSec from "../../components/qatamaran/QataImageSec";
 import QataRefinedTailoring from "../../components/qatamaran/qataRefinedTailoring/QataRefinedTailoring";
 import QataSaltSilk from "../../components/qatamaran/qataSaltSilk/QataSaltSilk";
@@ -39,7 +39,7 @@ const Qatamaran = () => {
         <QataRefinedTailoring />
       </div>
       <QataImageSec />
-      <QataWannaKnow />
+      {/* <QataWannaKnow /> */}
 
       {/* Mobile */}
 

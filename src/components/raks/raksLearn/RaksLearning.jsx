@@ -12,7 +12,7 @@ import Section7 from "../raksLearn/panels/Section7";
 import Section8 from "../raksLearn/panels/Section8";
 import Section9 from "../raksLearn/panels/Section9";
 import Section10 from "../raksLearn/panels/Section10";
-import Section11 from "../raksLearn/panels/Section11";
+// import Section11 from "../raksLearn/panels/Section11";
 import Section12 from "../raksLearn/panels/Section12";
 import Section13 from "./panels/Section13";
 
@@ -130,13 +130,13 @@ export default function RaksLearning() {
             <Section12 />
           </div>
 
-          {/* SECTION 11  */}
+          {/* SECTION 11 
           <div
             className="h-full flex-shrink-0"
             style={{ width: `${sectionWidths[10]}vw` }}
           >
             <Section11 />
-          </div>
+          </div> */}
 
         </div>
       </div>

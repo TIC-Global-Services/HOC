@@ -17,75 +17,75 @@ import ImagesTrail from "../../components/ImagesTrail";
 
 gsap.registerPlugin(ScrollTrigger);
 
-const lines = ["Wanna..", "Know", "More"];
+// const lines = ["Wanna..", "Know", "More"];
 
-const AnimatedChar = ({ char, scrollYProgress, start, end }) => {
-  const opacity = useTransform(scrollYProgress, [start, end], [0, 1]);
-  const y = useTransform(scrollYProgress, [start, end], [-50, 0]);
+// const AnimatedChar = ({ char, scrollYProgress, start, end }) => {
+//   const opacity = useTransform(scrollYProgress, [start, end], [0, 1]);
+//   const y = useTransform(scrollYProgress, [start, end], [-50, 0]);
 
-  return (
-    <motion.span
-      style={{ opacity, y }}
-      className="text-[#262666] font-[500] salo uppercase inline-block will-change-transform"
-    >
-      <span className="text-[50px] md:text-[150px]">
-        {char === " " ? "\u00A0" : char}
-      </span>
-    </motion.span>
-  );
-};
+//   return (
+//     <motion.span
+//       style={{ opacity, y }}
+//       className="text-[#262666] font-[500] salo uppercase inline-block will-change-transform"
+//     >
+//       <span className="text-[50px] md:text-[150px]">
+//         {char === " " ? "\u00A0" : char}
+//       </span>
+//     </motion.span>
+//   );
+// };
 
-const SyedWannaKnowMore = () => {
-  const ref = useRef(null);
+// const SyedWannaKnowMore = () => {
+//   const ref = useRef(null);
 
-  // scrollYProgress works here because GSAP pins the page vertically
-  // while translating horizontally — vertical scroll progress is still valid
-  const { scrollYProgress } = useScroll({
-    target: ref,
-    offset: ["start center", "center center"],
-  });
+//   // scrollYProgress works here because GSAP pins the page vertically
+//   // while translating horizontally — vertical scroll progress is still valid
+//   const { scrollYProgress } = useScroll({
+//     target: ref,
+//     offset: ["start center", "center center"],
+//   });
 
-  return (
-    <section
-      ref={ref}
-      className="w-full h-full relative flex items-center justify-center overflow-hidden isolate"
-    >
-      <GridOverlay
-        color="0,0,0"
-        opacity={0.15}
-        size={100}
-        position="99px 0px"
-      />
+//   return (
+//     <section
+//       ref={ref}
+//       className="w-full h-full relative flex items-center justify-center overflow-hidden isolate"
+//     >
+//       <GridOverlay
+//         color="0,0,0"
+//         opacity={0.15}
+//         size={100}
+//         position="99px 0px"
+//       />
 
-      {/* IMAGE TRAIL */}
-      <ImagesTrail image={question} />
+//       {/* IMAGE TRAIL */}
+//       <ImagesTrail image={question} />
 
-      {/* ANIMATED TEXT */}
-      <div className="relative z-[3] w-full h-full flex items-center justify-center overflow-hidden">
-        <div className="text-center leading-none px-4 max-w-full">
-          {lines.map((line, lineIndex) => (
-            <div key={lineIndex} className="flex justify-center flex-wrap">
-              {line.split("").map((char, i) => {
-                const index = lineIndex * 10 + i;
-                const start = index / 35;
-                const end = start + 0.12;
-                return (
-                  <AnimatedChar
-                    key={i}
-                    char={char}
-                    scrollYProgress={scrollYProgress}
-                    start={start}
-                    end={end}
-                  />
-                );
-              })}
-            </div>
-          ))}
-        </div>
-      </div>
-    </section>
-  );
-};
+//       {/* ANIMATED TEXT */}
+//       <div className="relative z-[3] w-full h-full flex items-center justify-center overflow-hidden">
+//         <div className="text-center leading-none px-4 max-w-full">
+//           {lines.map((line, lineIndex) => (
+//             <div key={lineIndex} className="flex justify-center flex-wrap">
+//               {line.split("").map((char, i) => {
+//                 const index = lineIndex * 10 + i;
+//                 const start = index / 35;
+//                 const end = start + 0.12;
+//                 return (
+//                   <AnimatedChar
+//                     key={i}
+//                     char={char}
+//                     scrollYProgress={scrollYProgress}
+//                     start={start}
+//                     end={end}
+//                   />
+//                 );
+//               })}
+//             </div>
+//           ))}
+//         </div>
+//       </div>
+//     </section>
+//   );
+// };
 
 export default function SyedTailorHeritage() {
   const wrapperRef = useRef(null);
@@ -436,10 +436,10 @@ export default function SyedTailorHeritage() {
             />
           </div>
 
-          {/* ── BLOCK 5 — Wanna Know More (60vw) ── */}
+          {/* ── BLOCK 5 — Wanna Know More (60vw) ──
           <div className="w-[60vw] h-screen relative overflow-hidden flex-shrink-0">
             <SyedWannaKnowMore />
-          </div>
+          </div> */}
         </div>
       </div>
     </section>

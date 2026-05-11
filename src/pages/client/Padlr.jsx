@@ -8,7 +8,7 @@ import Footer from "../Footer";
 import MobGrowthEngine from "../../components/padlr/mobileLayout/growthEngine/MobGrowthEngine";
 import MobCourtSky from "../../components/padlr/mobileLayout/courtSky/MobCourtSky";
 import MobPadlrHero from "../../components/padlr/mobileLayout/padlrHero.jsx/MobPadlrHero";
-import MobWannaKnowMore from "../../components/padlr/WannaKnowMore";
+// import MobWannaKnowMore from "../../components/padlr/WannaKnowMore";
 import MobPadlrInstaImg from "../../components/padlr/MobPadlrInstaImg";
 import MobOwnTheCourt from "../../components/padlr/mobileLayout/padlrOwnTheCourt/MobOwnTheCourt";
 // import PadlrImageSec from "../../components/padlr/PadlrImageSec";
@@ -50,7 +50,7 @@ const Padlr = () => {
       {/* All mobile-only sections in ONE wrapper */}
       <div className="md:hidden">
         <MobCourtSky />
-        <MobWannaKnowMore />
+        {/* <MobWannaKnowMore /> */}
         <MobPadlrInstaImg />
         <MobOwnTheCourt />
       </div>

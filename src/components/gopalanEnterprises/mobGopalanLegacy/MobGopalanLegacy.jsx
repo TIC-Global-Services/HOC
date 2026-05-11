@@ -8,7 +8,7 @@ import MobSection4 from './MobSection4'
 import MobSection6 from './MobSection6'
 import MobSection8 from './MobSection8'
 import MobSection9 from './MobSection9'
-import GopalanWannaKnowMore from '../GopalanWannaKnow'
+// import GopalanWannaKnowMore from '../GopalanWannaKnow'
 import MobSection10 from './MobSection10'
 
 const MobGopalanLegacy = () => {
@@ -22,7 +22,7 @@ const MobGopalanLegacy = () => {
       <MobSection6 />
       <MobSection7 />
       <MobSection8 />
-      <GopalanWannaKnowMore />
+      {/* <GopalanWannaKnowMore /> */}
       <MobSection9 />
       <MobSection10 />
     </>

@@ -10,7 +10,7 @@ import Section5 from "./Section5";
 import Section6 from "./Section6";
 import Section8 from "./Section8";
 import Section9 from "./Section9";
-import WannaSec from "./WannaSec";
+// import WannaSec from "./WannaSec";
 import Section10 from "./Section10";
 import Section11 from "./Section11";
 import Section7 from "./Section7";
@@ -133,9 +133,9 @@ export default function GopalanLegacy() {
           {/* GROUP 3 */}
           <div className="flex h-full shrink-0">
 
-            <div className="w-[60vw] h-full shrink-0">
+            {/* <div className="w-[60vw] h-full shrink-0">
               <WannaSec />
-            </div>
+            </div> */}
 
             <div
               className="w-[50vw] h-screen shrink-0"

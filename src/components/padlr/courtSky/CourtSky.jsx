@@ -7,7 +7,7 @@ import Section2 from "../courtSky/panels/Section2";
 import Section3 from "../courtSky/panels/Section3";
 import Section4 from "../courtSky/panels/Section4";
 import Section5 from "../courtSky/panels/Section5";
-import Section6 from "../courtSky/panels/Section6";
+// import Section6 from "../courtSky/panels/Section6";
 import Section7 from "../courtSky/panels/Section7";
 import Section8 from "./panels/Section8";
 import Section9 from "./panels/Section9";
@@ -100,9 +100,9 @@ export default function CourtSky() {
               <Section7 />
             </div>
 
-            <div style={{ width: "60vw", flexShrink: 0 }}>
+            {/* <div style={{ width: "60vw", flexShrink: 0 }}>
               <Section6 />
-            </div>
+            </div> */}
           </div>
         </div>
       </div>
