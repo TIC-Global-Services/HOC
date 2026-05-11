@@ -30,7 +30,7 @@ export default function RaksLearning() {
     60,  // 5
     140, // 6
     135, // 7
-    90,  // 8
+    85,  // 8
     100, // 10
     100, // 9
     60,  // 11

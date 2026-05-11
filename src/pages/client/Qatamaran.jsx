@@ -38,8 +38,8 @@ const Qatamaran = () => {
         <QataSaltSilk />
         <QataRefinedTailoring />
       </div>
-      <QataWannaKnow />
       <QataImageSec />
+      <QataWannaKnow />
 
       {/* Mobile */}
 
