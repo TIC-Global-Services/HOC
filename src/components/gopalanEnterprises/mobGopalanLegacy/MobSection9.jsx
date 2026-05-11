@@ -34,7 +34,6 @@ const MobSection9 = () => {
         webkit-playsinline="true"
         className="
           absolute
-          inset-0
           w-full
           h-full
           object-cover

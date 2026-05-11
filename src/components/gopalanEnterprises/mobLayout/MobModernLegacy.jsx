@@ -8,57 +8,47 @@ import GridOverlay from "../../../components/GridOverlay";
 
 
 const IMGS = {
-  circle: img1,
-  bat: img2,
-  spring: img3,
-  can: img4,
+  minimal: img1,
+  evolution: img2,
+  quality: img3,
+  stroke: img4,
 };
 
 const ROWS = [
-  [{ t: "can", x: 60, s: 164, r: 0 }],
+  [{ t: "quality", x: 60, s: 100, r: 0 }],
+  [{ t: "quality", x: 60, s: 100, r: 20 }],
   [
-    { t: "spring", x: 50, s: 222, r: -30 },
-    { t: "bat", x: 60, s: 144, r: 0 },
-    { t: "spring", x: 70, s: 222, r: 30 },
+    { t: "evolution", x: 50, s: 100, r: 0 },
+    { t: "quality", x: 60, s: 100, r: 30 },
+    { t: "quality", x: 70, s: 100, r: 30 },
   ],
   [
-    { t: "can", x: 40, s: 164, r: -18 },
-    { t: "circle", x: 50, s: 99, r: 8 },
-    { t: "bat", x: 60, s: 144, r: 0 },
-    { t: "circle", x: 70, s: 99, r: 8 },
+    { t: "evolution", x: 40, s: 100, r: 0 },
+    { t: "minimal", x: 55, s: 150, r: 20 },
+    { t: "stroke", x: 75, s: 100, r: 0 },
   ],
   [
-    { t: "spring", x: 35, s: 222, r: 26 },
-    { t: "can", x: 45, s: 164, r: -20 },
-    { t: "circle", x: 55, s: 99, r: 5 },
-    { t: "spring", x: 65, s: 222, r: 0 },
-    { t: "bat", x: 75, s: 144, r: 26 },
-    { t: "can", x: 85, s: 164, r: -20 },
+    { t: "stroke", x: 30, s: 100, r: 0 },
+    { t: "quality", x: 50, s: 100, r: 30 },
+    { t: "quality", x: 65, s: 100, r: 30 },
+    { t: "stroke", x: 80, s: 100, r: 0 },
   ],
   [
-    { t: "can", x: 25, s: 164, r: -26 },
-    { t: "circle", x: 35, s: 99, r: 12 },
-    { t: "spring", x: 45, s: 222, r: 0 },
-    { t: "bat", x: 55, s: 144, r: -24 },
-    { t: "can", x: 65, s: 164, r: 18 },
-    { t: "circle", x: 75, s: 99, r: 5 },
-    { t: "bat", x: 85, s: 144, r: -24 },
-    { t: "circle", x: 90, s: 99, r: 5 },
+    { t: "stroke", x: 20, s: 100, r: 0 },
+    { t: "evolution", x: 40, s: 100, r: 12 },
+    { t: "quality", x: 60, s: 100, r: 0 },
+    { t: "quality", x: 75, s: 100, r: -24 },
   ],
   [
-    { t: "bat", x: 5, s: 144, r: 0 },
-    { t: "spring", x: 15, s: 222, r: -10 },
-    { t: "bat", x: 30, s: 144, r: 0 },
-    { t: "can", x: 40, s: 164, r: 0 },
-    { t: "circle", x: 50, s: 99, r: 5 },
-    { t: "spring", x: 60, s: 222, r: 0 },
-    { t: "can", x: 75, s: 164, r: 0 },
-    { t: "spring", x: 85, s: 222, r: 0 },
+    { t: "minimal", x: 15, s: 120, r: 0 },
+    { t: "minimal", x: 35, s: 120, r: -10 },
+    { t: "evolution", x: 60, s: 100, r: 0 },
+    { t: "evolution", x: 75, s: 100, r: 0 },
   ],
 ];
 
 //better mobile spacing
-const ROW_Y = ["25vh", "35vh", "45vh", "57vh", "68vh", "80vh"];
+const ROW_Y = ["22vh","27vh", "35vh", "45vh", "57vh", "68vh", "78vh"];
 
 export default function MobModernLegacy() {
   return (
@@ -92,7 +82,7 @@ export default function MobModernLegacy() {
               <img
                 src={IMGS[item.t]}
                 alt=""
-                width={item.s * 0.7}
+                width={item.s * 1.2}
                 draggable={false}
                 style={{
                   display: "block",
