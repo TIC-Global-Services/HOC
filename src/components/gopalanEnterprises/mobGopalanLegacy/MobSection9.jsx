@@ -2,8 +2,7 @@ import React, { useRef } from "react";
 
 import useMobileVideoFix from "../../../hooks/useMobileVideo";
 
-import mobileVideo from "../../../assets/client/gopalan/GE_Pattern_Animation.mp4";
-
+import mobileVideo from "../../../assets/client/gopalan/patternGif.mp4";
 
 const MobSection9 = () => {
   const videoRef = useRef(null);
@@ -15,12 +14,12 @@ const MobSection9 = () => {
       className="
         relative
         w-full
-        h-[50vh]
+        h-[60vh]
         overflow-hidden
+        leading-none
         bg-[#f0ebd4]
       "
     >
-
       {/* VIDEO */}
       <video
         ref={videoRef}
@@ -33,11 +32,13 @@ const MobSection9 = () => {
         controls={false}
         webkit-playsinline="true"
         className="
-          absolute
-          w-full
-          h-full
-          object-cover
-        "
+        absolute
+        inset-0
+        w-full
+        h-full
+        object-cover
+        scale-[1.01]
+      "
       />
     </section>
   );
