@@ -1,5 +1,5 @@
 import React from "react";
-import Video from '../../../assets/client/gopalan/GE_Pattern_Animation.mp4'
+import Video from '../../../assets/client/gopalan/patternGif.mp4'
 
 const Section10 = () => {
   return (
