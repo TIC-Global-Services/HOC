@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import heroCallout from "../../assets/client/page/hero-callouts.png";
+import heroCallout from "../../assets/client/page/hoc-callout.png";
 import starImg from "../../assets/client/page/endIcon.png";
 
 const ClientsHero = () => {
@@ -15,7 +15,8 @@ const ClientsHero = () => {
           className="absolute w-[50px] md:w-[200px] z-[1]"
           style={{
             left: "5%",     
-            bottom: "-10px", 
+            bottom: "100%", 
+            rotate: "-15deg",
           }}
           alt="Button"
           initial={{ x: -100, opacity: 0 }}

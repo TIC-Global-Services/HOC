@@ -1,6 +1,6 @@
 import React from "react";
 
-import leftImg from "../../../assets/client/raks/img/panel4.png";
+import leftImg from "../../../assets/client/raks/img/Panel4.jpg";
 
 import GridOverlay from "../../GridOverlay";
 

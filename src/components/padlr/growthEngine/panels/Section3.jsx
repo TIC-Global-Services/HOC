@@ -24,7 +24,7 @@ const Section3 = () => {
         <p
           className="jost text-start capitalize font-[500] text-black tracking-tight leading-[130%]"
           style={{
-            fontSize: "clamp(14px,4vh,26px)",
+            fontSize: "clamp(14px,4vh,24px)",
           }}
         >
           Maintains visual balance with neutral tones inspired by real court

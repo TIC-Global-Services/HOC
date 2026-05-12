@@ -147,9 +147,9 @@ const Section2 = () => {
             </h2>
 
             <p
-              className="jost font-[500] text-black capitalize tracking-tight leading-[140%]"
+              className="jost  text-black capitalize tracking-tight leading-[140%]"
               style={{
-                fontSize: "clamp(14px,2vw,26px)",
+                fontSize: "clamp(14px,2vw,24px)",
                 width: "30ch",
               }}
             >

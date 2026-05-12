@@ -99,7 +99,7 @@ const Section7 = () => {
           </h2>
 
           {/* PARAGRAPH */}
-          <p className="jost text-start text-black leading-[120%] tracking-tight text-[clamp(14px,1.5vw,30px)]">
+          <p className="jost text-start text-black leading-[120%] tracking-tight text-[clamp(14px,1.5vw,24px)]">
             Where Little Ideas Turn Into Big Creations A Space to Imagine, Build, and Grow Where Little Ideas Turn Into Big Creations Innovation.
           </p>
 

@@ -1,4 +1,4 @@
-import leftImg from "../../../../assets/client/raks/img/panel4.png";
+import leftImg from "../../../../assets/client/raks/img/Panel4.jpg";
 import grid from "../../../../assets/client/padlr/img/checkBg.png";
 import GridOverlay from "../../../GridOverlay";
 
@@ -33,7 +33,7 @@ const Section5 = () => {
         <img
           src={leftImg}
           alt=""
-          className="w-full h-full object-cover"
+          className="w-full h-full object-cover object-bottom"
           style={{
             objectPosition: "center",
           }}

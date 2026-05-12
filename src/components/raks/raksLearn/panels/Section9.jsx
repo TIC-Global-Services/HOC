@@ -90,11 +90,11 @@ const Section9 = () => {
             <p
               className="jost text-black tracking-tight mt-4"
               style={{
-                fontSize: "clamp(14px,4vh,26px)",
+                fontSize: "clamp(14px,4vh,24px)",
                 lineHeight: "120%",
               }}
             >
-              A thoughtful approach to shaping young minds through purpose,
+              A thoughtful approach to shaping young minds through <br />purpose,
               rhythm, and meaningful learning.
             </p>
           </div>

@@ -265,7 +265,7 @@ export default function SyedSignatureCraft() {
                 <p
                   className="jost text-[#262666] px-[5%] text-start capitalize border-t-2 border-b-2 border-white py-[4vh] mt-[2vh]"
                   style={{
-                    fontSize: "clamp(14px,1.8vw,28px)",
+                    fontSize: "clamp(14px,1.8vw,24px)",
                     lineHeight: "150%",
                   }}
                 >
@@ -365,9 +365,9 @@ export default function SyedSignatureCraft() {
                 </h2>
 
                 <p
-                  className="jost text-start text-black/50 leading-[120%] tracking-tight mt-2 pl-3"
+                  className="jost text-start text-black leading-[120%] tracking-tight mt-2 pl-3"
                   style={{
-                    fontSize: "clamp(12px,3.5vh,26px)",
+                    fontSize: "clamp(12px,3.5vh,24px)",
                     width: "42ch",
                   }}
                 >
@@ -422,7 +422,7 @@ export default function SyedSignatureCraft() {
               <p
                 className="jost text-start text-black capitalize"
                 style={{
-                  fontSize: "clamp(14px,3.5vh,26px)",
+                  fontSize: "clamp(14px,3.5vh,24px)",
                   lineHeight: "150%",
                 }}
               >
@@ -430,7 +430,7 @@ export default function SyedSignatureCraft() {
                 seamless blend of time-honoured{" "}
                 <span
                   className="salo font-[500] tracking-tight text-[#262666]"
-                  style={{ fontSize: "clamp(18px,5vh,40px)" }}
+                  style={{ fontSize: "clamp(18px,5vh,36px)" }}
                 >
                   craftsmanship and modern refinement.
                 </span>{" "}
@@ -450,7 +450,7 @@ export default function SyedSignatureCraft() {
                   style={{
                     left: "0%",
                     top: "0%",
-                    width: "clamp(120px,10vw,180px)",
+                    width: "clamp(120px,10vw,160px)",
                     willChange: "transform",
                   }}
                 >
@@ -461,7 +461,7 @@ export default function SyedSignatureCraft() {
                 <div
                   className="relative"
                   style={{
-                    width: "clamp(160px,45vh,400px)",
+                    width: "clamp(160px,45vh,380px)",
                     transform: "rotate(-10deg)",
                   }}
                 >

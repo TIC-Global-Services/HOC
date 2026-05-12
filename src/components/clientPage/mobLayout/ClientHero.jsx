@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import heroCallout from "../../../assets/client/page/hero-callouts.png";
+import heroCallout from "../../../assets/client/page/hoc-callout.png";
 import starImg from "../../../assets/client/page/endIcon.png";
 
 const ClientHero = () => {

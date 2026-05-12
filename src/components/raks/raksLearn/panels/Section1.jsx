@@ -132,7 +132,7 @@ export default function RaksLearning() {
               {/* ABOUT TEXT */}
               <p
                 className="jost text-[#FFCEC8] leading-[140%] border-t border-b border-white px-5 py-10"
-                style={{ fontSize: "clamp(11px, 1.6vw, 26px)" }}
+                style={{ fontSize: "clamp(11px, 1.6vw, 24px)" }}
               >
                 RaK’s Institutions is a forward-thinking school rooted in the
                 Reggio-Emilia philosophy, where children lead their own learning

@@ -10,8 +10,6 @@ const JobListings = () => {
     "Motion Designer",
     "Illustrator/Multimedia Designer",
     "Experimental Graphic Designer",
-    "Experimental Graphic Designer",
-    "Experimental Graphic Designer",
 
   ];
 

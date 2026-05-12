@@ -115,7 +115,7 @@ const Section3 = () => {
           bottom: "5%",
           left: "33.5%",
           width: "38%",
-          fontSize: "clamp(14px,4vh,26px)",
+          fontSize: "clamp(14px,4vh,24px)",
           lineHeight: "150%",
         }}
       >
@@ -124,7 +124,7 @@ const Section3 = () => {
         secondary typeface ensures{" "}
         <span
           className="salo text-[#8FC4E9]"
-          style={{ fontSize: "clamp(18px,6vh,40px)" }}
+          style={{ fontSize: "clamp(18px,6vh,36px)" }}
         >
           versatility and seamless
         </span>{" "}

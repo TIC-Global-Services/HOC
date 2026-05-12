@@ -3,7 +3,7 @@ import gsap from "gsap";
 
 import leftImg from "../../../../assets/client/raks/img/panel5.png";
 import topRightImg from "../../../../assets/client/raks/img/panel6Left.png";
-import centerImg from "../../../../assets/client/raks/img/pallikoodam.png";
+import centerImg from "../../../../assets/client/raks/img/panel11.png";
 import pinImg from "../../../../assets/client/raks/img/heroImg1.png";
 import pinImg2 from "../../../../assets/client/raks/img/heroImg2.png";
 import grid from "../../../../assets/client/padlr/img/checkBg.png";
@@ -95,7 +95,7 @@ const Section6 = () => {
         <div className="absolute text-start"
           style={{ top: "24vh", left: "8vw", maxWidth: "650px" }}>
           <p className="jost text-black"
-            style={{ fontSize: "clamp(14px,4vh,26px)", lineHeight: "120%" }}>
+            style={{ fontSize: "clamp(14px,4vh,24px)", lineHeight: "120%" }}>
             From academics to arts and sports, every talent finds its place. A balanced approach to learning, creativity, and growth. Nurturing skills beyond the classroom for a brighter future.
           </p>
         </div>

@@ -138,7 +138,7 @@ export default function Section1() {
           {/* ABOUT TEXT */}
           <p
             className="jost text-white leading-[140%] border-t border-b border-white px-5 py-10"
-            style={{ fontSize: "clamp(11px, 1.6vw, 26px)" }}
+            style={{ fontSize: "clamp(11px, 1.6vw, 24px)" }}
           >
             Rooted in seaside heritage, shaped by skilled hands. A balance of
             fluid elegance and structured precision.

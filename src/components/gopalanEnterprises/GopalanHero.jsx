@@ -92,7 +92,7 @@ const GopalanHero = () => {
           {/* CONTENT */}
           <div className="w-full h-full flex flex-col items-center justify-center gap-4 md:gap-6 px-4 relative z-10">
             <h1
-              className="font-[1000] alinsa text-[#060EBB] leading-none tracking-tight text-start"
+              className="font-[1000] alinsa text-[#060EBB] leading-none text-center tracking-tight "
               style={{ fontSize: "clamp(48px, 18vh, 140px)" }}
             >
               GOPALAN GROUPS
@@ -103,10 +103,10 @@ const GopalanHero = () => {
               style={{
                 width: "clamp(160px, 18vw, 240px)",
                 height: "clamp(50px, 6vw, 80px)",
-                fontSize: "clamp(12px, 1vw, 16px)",
+                fontSize: "clamp(12px, 1vw, 20px)",
               }}
             >
-              SPORTS & LIFESTYLE
+              Multi-vertica
             </button>
           </div>
         </div>
@@ -142,12 +142,12 @@ const GopalanHero = () => {
             <p
               className="jost text-start font-[500] capitalize text-black leading-[160%]"
               style={{
-                fontSize: "clamp(14px,4vh,26px)",
+                fontSize: "clamp(14px,4vh,24px)",
               }}
             >
               Reimagining Gopalan Group's identity meant balancing four decades
               of trust with a future-ready vision. The refined{" "}
-              <span className="salo text-[#E96428] text-[clamp(18px,6vh,40px)]">
+              <span className="salo text-[#E96428] text-[clamp(18px,6vh,36px)]">
                 logomark
               </span>{" "}
               and evolved palette retain architectural roots while introducing a

@@ -78,7 +78,7 @@ export default function Section2() {
                 Tide bound <br /> Tailoring
               </h2>
 
-              <p className="jost text-black leading-[140%] font-[500] tracking-tight text-[clamp(14px,1.8vw,24px)] max-w-[600px]">
+              <p className="jost text-black leading-[140%]  tracking-tight text-[clamp(14px,1.8vw,24px)] max-w-[600px]">
                 Classic techniques meet contemporary expression. <br /> Designed
                 for the man who moves with quiet confidence.
               </p>
@@ -144,7 +144,7 @@ export default function Section2() {
             }}
           >
             <p className="jost leading-[120%] tracking-tight text-start font-medium text-[clamp(18px,6.5vh,60px)]">
-              MODERN GENTLEMEN & <br /> TIMELESS STYLE
+              MODERN GENTLEMEN <br />&  TIMELESS STYLE
             </p>
           </div>
         </div>
@@ -164,16 +164,16 @@ export default function Section2() {
 
         <div className="relative z-10 h-full flex">
           {/* LEFT */}
-          <div className="w-[50vw] h-full aspect-9/16 relative overflow-hidden">
+          <div className="h-full flex items-center justify-center">
             <img
               src={qataLeftImg}
-              className="absolute inset-0 w-full h-full aspect-9/16 object-cover"
+              className="h-full w-auto object-contain"
             />
           </div>
 
           {/* CENTER */}
           <div className="flex-1 flex flex-col items-center justify-center gap-[clamp(20px,4vw,80px)] px-[clamp(20px,4vw,80px)] text-start">
-            <p className="jost text-black leading-[140%] max-w-[500px] tracking-tight font-[500] capitalize text-[clamp(18px,4vw,40px)]">
+            <p className="jost text-black leading-[140%] max-w-[500px] tracking-tight font-[500] capitalize text-[clamp(18px,4vw,40px)] [hanging-punctuation:first]" style={{ textIndent: "-0.5ch" }}>
               "Honoring Heritage refining craft defining modern elegance"
             </p>
 

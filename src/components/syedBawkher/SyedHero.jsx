@@ -62,7 +62,7 @@ const SyedHero = () => {
           />
 
           {/* CENTER TEXT */}
-          <div className="w-full h-full flex flex-col items-center justify-center gap-3 md:gap-6 px-4 text-center md:text-left">
+          <div className="w-full h-full flex flex-col items-center justify-center gap-3 md:gap-6 px-4 text-center ">
             <h1
               className="font-[1000] alinsa text-[#060EBB] leading-none tracking-tight"
               style={{ fontSize: "clamp(42px, 16vh, 180px)" }}
@@ -101,7 +101,7 @@ const SyedHero = () => {
               leading-[180%]
             "
               style={{
-                fontSize: "clamp(12px,3.5vh,26px)",
+                fontSize: "clamp(12px,3.5vh,24px)",
               }}
             >
               Since 1904, Syed Bawkher & Co. has been a mainstay of the
@@ -111,7 +111,7 @@ const SyedHero = () => {
               <span
                 className="text-[#262666] salo"
                 style={{
-                  fontSize: "clamp(18px,6vh,40px)",
+                  fontSize: "clamp(18px,6vh,36px)",
                 }}
               >
                 Craftsmanship and contemporary
@@ -127,7 +127,7 @@ const SyedHero = () => {
               <span
                 className="text-[#262666] salo"
                 style={{
-                  fontSize: "clamp(18px,6vh,40px)",
+                  fontSize: "clamp(18px,6vh,36px)",
                 }}
               >
                 "experience and encounter"

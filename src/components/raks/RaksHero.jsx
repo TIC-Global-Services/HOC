@@ -49,10 +49,10 @@ const RaksHero = () => {
 
           <div className="w-full h-full flex flex-col items-center justify-center gap-4 md:gap-6 px-4">
             <h1
-              className="font-[1000] alinsa text-[#060EBB] leading-none tracking-tight text-center"
-              style={{ fontSize: "clamp(60px, 10vw, 160px)" }}
+              className="font-[1000] alinsa text-[#060EBB] leading-none tracking-tight text-center uppercase"
+              style={{ fontSize: "clamp(60px, 10vw, 100px)" }}
             >
-              RAKS
+              RAKS <br />Pallikoodam
             </h1>
 
             <button className="jost rounded-full border-2 bg-[#060EBB] text-white flex items-center justify-center font-medium w-[180px] h-[50px] md:w-[200px] md:h-[60px] xl:w-[220px] xl:h-[70px] text-sm md:text-base">
@@ -89,15 +89,15 @@ const RaksHero = () => {
               flex justify-start
             "
           >
-            <p className="jost text-start font-[500] capitalize text-black  leading-[150%] text-[14px] md:text-[18px] xl:text-[26px]">
+            <p className="jost text-start font-[500] capitalize text-black  leading-[150%] text-[14px] md:text-[18px] xl:text-[24px]">
               RaK's Institutions is a future-forward school rooted in the{" "}
-              <span className="salo text-[#000085] text-[18px] md:text-[26px] xl:text-[40px]">
+              <span className="salo text-[#000085] text-[18px] md:text-[26px] xl:text-[36px]">
                 Reggio Emilia philosophy,
               </span>{" "}
               fostering experiential, interdisciplinary learning for children to
               grow with purpose. Embracing this spirit, Haus of Chaos crafted an
               identity for{" "}
-              <span className="salo text-[#000085] text-[18px] md:text-[26px] xl:text-[40px]">
+              <span className="salo text-[#000085] text-[18px] md:text-[26px] xl:text-[36px]">
                 RaK's Pallikkoodam
               </span>{" "}
               that is warm, attentive, and child-centric. The result is a
@@ -106,7 +106,7 @@ const RaksHero = () => {
               <img
                 src={heroParaImg}
                 alt="Binocular"
-                className="inline-block ml-2 size-[12%] object-cover"
+                className="inline-block mr-6 size-[14%] object-contain"
               />
             </p>
           </motion.div>

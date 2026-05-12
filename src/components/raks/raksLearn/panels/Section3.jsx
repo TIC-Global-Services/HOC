@@ -75,12 +75,13 @@ const Section3 = () => {
       {/* RIGHT CONTENT */}
       <div className="w-[40vw] h-full flex flex-col items-center justify-center px-[clamp(20px,4vw,80px)] text-center relative z-10">
         <p
-          className="jost text-black leading-[120%] text-start font-[500] tracking-tight
-      text-[clamp(16px,4.5vh,60px)]"
+          className="jost text-black leading-[120%] text-start font-[500] tracking-tight text-[clamp(16px,4.5vh,60px)]"
+          style={{ textIndent: "-0.8ch" }}
         >
           "Empowering Voices. <br /> Inspiring Minds. <br /> Shaping The
           Future."
         </p>
+
 
         <div ref={addIconRef} data-speed="0.5" data-rotate="-12">
           <img

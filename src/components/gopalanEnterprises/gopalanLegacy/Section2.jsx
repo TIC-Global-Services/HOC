@@ -110,7 +110,7 @@ const Section2 = () => {
           }}
         >
           <p className="jost uppercase font-[500] text-black tracking-tight leading-[130%] text-[clamp(14px,3vw,60px)]">
-            MODERN LEGACY & REFINED STYLE
+            MODERN LEGACY & <br /> REFINED STYLE
           </p>
         </div>
 
@@ -121,9 +121,9 @@ const Section2 = () => {
               Vision Driven <br /> Legacy Built
             </h2>
 
-            <p className="jost font-[500] text-black tracking-tight leading-[140%] text-[clamp(14px,2vw,26px)] ">
-              Timeless craftsmanship meets contemporary vision. Designed for
-              those who value legacy, <br /> precision, and progress.
+            <p className="jost  text-black tracking-tight leading-[140%] text-[clamp(14px,2vw,24px)] ">
+              Timeless craftsmanship meets contemporary vision. <br /> Designed for
+              those who value legacy,  precision, and progress.
             </p>
           </div>
         </div>

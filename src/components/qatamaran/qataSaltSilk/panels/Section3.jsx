@@ -90,14 +90,14 @@ export default function Section3() {
           <div className="text-black text-start max-w-[480px]">
             <h2
               className="salo uppercase mb-4 leading-[110%]
-            text-[clamp(26px,6vh,40px)]"
+            text-[clamp(26px,6vh,50px)]"
             >
-              Where Heritage Meets Modern Elegance
+              Where Heritage Meets <br />Modern Elegance
             </h2>
 
             <p
-              className="jost leading-[140%] capitalize font-[500]
-            text-[clamp(14px,2vh,20px)]"
+              className="jost leading-[140%] capitalize 
+            text-[clamp(14px,3vh,24px)]"
             >
               At Qatamaran, every piece is thoughtfully crafted to embody
               timeless tailoring, coastal inspiration, and effortless

@@ -146,7 +146,7 @@ const Section2 = () => {
               lineHeight: "120%",
             }}
           >
-            CURIOUS MINDS & LEARNING <br /> REDEFINED
+            CURIOUS MINDS & <br />LEARNING  REDEFINED
           </p>
         </div>
 
@@ -170,7 +170,7 @@ const Section2 = () => {
           <p
             className="jost text-black tracking-tight mt-4"
             style={{
-              fontSize: "clamp(14px,1.8vw,26px)",
+              fontSize: "clamp(14px,1.8vw,24px)",
               lineHeight: "120%",
               paddingLeft: "15"
             }}

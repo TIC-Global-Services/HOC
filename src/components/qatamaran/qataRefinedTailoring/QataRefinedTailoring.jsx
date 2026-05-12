@@ -8,6 +8,7 @@ import Section2 from "../qataRefinedTailoring/panels/Section2";
 import Section3 from "../qataRefinedTailoring/panels/Section3";
 import Section4 from "../qataRefinedTailoring/panels/Section4";
 import Section5 from "../qataRefinedTailoring/panels/Section5";
+import QataImageSec from "../QataImageSec";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -83,7 +84,7 @@ export default function QataRefinedTailoring() {
 
           <div
             className="flex h-full"
-            style={{ width: "130vw", flexShrink: 0 }}
+            style={{ width: "230vw", flexShrink: 0 }}
           >
             <div style={{ width: "100vw", height: "100%" }}>
               <Section4 />
@@ -91,6 +92,9 @@ export default function QataRefinedTailoring() {
 
             <div style={{ width: "30vw", height: "100%" }}>
               <Section5 />
+            </div>
+            <div style={{ width: "100vw", height: "100%" }}>
+              <QataImageSec />
             </div>
           </div>
         </div>

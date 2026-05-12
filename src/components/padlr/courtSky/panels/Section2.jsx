@@ -168,7 +168,7 @@ export default function Panel2() {
           <p
             className="jost text-start capitalize tracking-tight text-white/90 max-w-[80%]"
             style={{
-              fontSize: "clamp(16px,4vh,26px)",
+              fontSize: "clamp(16px,4vh,24px)",
               lineHeight: "160%",
             }}
           >
@@ -178,7 +178,7 @@ export default function Panel2() {
             <span
               className="salo font-[400]"
               style={{
-                fontSize: "clamp(20px,6vh,40px)",
+                fontSize: "clamp(20px,6vh,36px)",
               }}
             >
               Performance and Experience

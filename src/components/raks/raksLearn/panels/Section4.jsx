@@ -79,10 +79,10 @@ const Section4 = () => {
         {/* CENTER TEXT */}
         <div className="text-center max-w-[500px] space-y-[clamp(16px,4vh,30px)]">
           <h2 className="salo text-start text-black uppercase leading-none text-[clamp(18px,6vh,42px)]">
-            Where Curiosity Meets a New Way of <br /> Learning
+            Where Curiosity Meets a <br />New Way of  Learning
           </h2>
 
-          <p className="jost text-start text-black leading-[120%] max-w-[420px] tracking-tight text-[clamp(14px,3vh,28px)]">
+          <p className="jost text-start text-black leading-[120%] max-w-[420px] tracking-tight text-[clamp(14px,3vh,26px)]">
             “At RAKS Pallikkoodam, every student is nurtured to grow with confidence, curiosity, and 
             creativity—empowered to learn, explore, and shine every single day.”
           </p>

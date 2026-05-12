@@ -141,7 +141,7 @@ const Section4 = () => {
             <p
               className="jost text-start text-black capitalize leading-[150%] tracking-tight font-[500]"
               style={{
-                fontSize: "clamp(14px,4vh,26px)",
+                fontSize: "clamp(14px,4vh,24px)",
                 lineHeight: "150%",
               }}
             >
@@ -151,7 +151,7 @@ const Section4 = () => {
               of enduring elegance. Created for
               <span
                 style={{
-                  fontSize: "clamp(18px,8vh,30px)",
+                  fontSize: "clamp(18px,8vh,36px)",
                 }}
                 className=" salo text-[#1E382D]"
               >

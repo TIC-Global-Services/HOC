@@ -45,13 +45,13 @@ const Section4 = () => {
               leading-[160%]
               tracking-tight
               text-start
-              text-[clamp(14px,2vw,26px)]
+              text-[clamp(14px,2vw,24px)]
             "
           >
             A brand transformation shaped by legacy and growth
             translating four decades of trust into a{" "}
 
-            <span className="salo text-[#E96428] text-[clamp(24px,3.5vw,60px)]">
+            <span className="salo text-[#E96428] text-[clamp(24px,3.5vw,36px)]">
               cohesive identity
             </span>{" "}
 
