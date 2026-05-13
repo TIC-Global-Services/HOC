@@ -18,7 +18,7 @@ const items = [
   { img: img2, backImg: img2back, title: "PADLR", path: "/client/padlr" },
   { img: img3, backImg: img3back, title: "GOPALAN ENTERPRISES", path: "/client/gopalan-enterprises" },
   { img: img4, backImg: img4back, title: "SYED BAWKHER", path: "/client/syed" },
-  { img: img5, backImg: img5back, title: "RAKS", path: "/client/raks" },
+  { img: img5, backImg: img5back, title: "RAKS PALLIKOODAM", path: "/client/raks" },
 ];
 
 const ClientsUniq = () => {

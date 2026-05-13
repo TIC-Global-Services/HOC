@@ -125,6 +125,7 @@ const Contact = () => {
 // import svg4 from "../assets/hover/element3-min.png";
 import svg5 from "../assets/hover/element5-min.png";
 import svg6 from "../assets/hover/element6-min.png";
+import flowerImg from '../assets/hover/flowerImg.png'
 // https://ik.imagekit.io/7da6fpjdo/hover/element5-min.png?updatedAt=1741945058062
 
 // import lin from "../assets/lin.png";
@@ -136,7 +137,7 @@ import svg6 from "../assets/hover/element6-min.png";
 import arrow from "../assets/down-arrow.png";
 const images = [
   {
-    src: "https://ik.imagekit.io/7da6fpjdo/hover/element3-min.png?updatedAt=1741945054680",
+    src: flowerImg,
     className: "bottom-80 !w-1/4 left-0",
     link: "/Contact",
     rotate: 0,
@@ -176,7 +177,7 @@ const images = [
 ];
 const images2 = [
   {
-    src: "https://ik.imagekit.io/7da6fpjdo/hover/element3-min.png?updatedAt=1741945054680",
+    src: flowerImg,
     className: "  bottom-20 left-0",
     link: "/Contact",
     rotate: 0,

@@ -117,7 +117,7 @@ const Home = () => {
       </div>
 
       {/* <SecondSection /> */}
-      <div className="md:mt-20">
+      <div className="md:mt-10 md:mb-20">
       <LogosLoop />
       </div>
       <ThirdSection />

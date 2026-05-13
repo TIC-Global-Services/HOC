@@ -11,7 +11,7 @@ const QataImageSec = () => {
           w-full 
           h-[50vh]       
           md:h-screen     
-          object-cover
+          object-cover object-[40%_80%]
         "
       />
 

@@ -70,13 +70,13 @@ const Section6 = () => {
                   salo
                   uppercase
                   text-black
-                  leading-none
+                  leading-[41px]
                   tracking-tight
                   text-start
                   text-[clamp(24px,2.8vw,54px)]
                 "
               >
-                Where Legacy Meets Modern Vision
+                Where Legacy Meets <br /> Modern Vision
               </h2>
 
               {/* PARAGRAPH */}
@@ -87,14 +87,14 @@ const Section6 = () => {
                   leading-[140%]
                   tracking-tight
                   text-start
-                  max-w-[400px]
+                  w-[40ch] max-w-[400px]
                   text-[clamp(14px,1.5vw,24px)]
                 "
               >
                 At Gopalan Group, every space is thoughtfully envisioned
                 to embody timeless architecture, modern innovation, and
                 enduring excellence—crafted to inspire elevated living
-                with trust, purpose, and sophistication.
+                with trust, <br/> purpose, and sophistication.
               </p>
             </div>
           </div>

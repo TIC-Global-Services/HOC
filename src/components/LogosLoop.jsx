@@ -1,28 +1,51 @@
 import LogoLoop from '../hooks/LogoLoop';
-import emImage from '../assets/Em-image.png';
-import arralyze from '../assets/arralyze.png';
-import modento from '../assets/modento.png';
-import denise from '../assets/denise.png';
-import mp from '../assets/mp.png';
-import nookees from '../assets/nookees.png';
+
+import padlr from '../assets/client/page/clientsLogo/padlr.png';
+import syed from '../assets/client/page/clientsLogo/syedLogo.png';
+import raks from '../assets/client/page/clientsLogo/raks.jpg';
+import qatamaran from '../assets/client/page/clientsLogo/qata.jpg';
+import gopalan from '../assets/client/page/clientsLogo/GE.jpg';
 
 const imageLogos = [
-  { src: emImage,  alt: "Company 1" },
-  { src: arralyze, alt: "Company 2" },
-  { src: modento,  alt: "Company 3" },
-  { src: denise,   alt: "Company 4" },
-  { src: mp,       alt: "Company 5" },
-  { src: nookees,  alt: "Company 6" },
+  {
+    src: qatamaran,
+    alt: "Company 1",
+    width: 250,
+    height: 250,
+  },
+  {
+    src: padlr,
+    alt: "Company 2",
+    width: 140,
+    height: 140,
+  },
+  {
+    src: gopalan,
+    alt: "Company 3",
+    width: 220,
+    height: 100,
+  },
+  {
+    src: syed,
+    alt: "Company 4",
+    width: 250,
+    height: 250,
+  },
+  {
+    src: raks,
+    alt: "Company 5",
+    width: 120,
+    height: 120,
+  },
 ];
 
 const LogosLoop = () => {
   return (
-    <div className='h-[200px] md:h-[250px] relative overflow-hidden mt-20 md:mt-10 lg:mt-10 xl:-mt-10'>
+    <div className='h-[200px] md:h-[200px] relative place-items-center overflow-hidden mt-20 md:mt-10 lg:mt-10 xl:-mt-10'>
       <LogoLoop
         logos={imageLogos}
         speed={100}
         direction="left"
-        logoHeight={60}
         gap={70}
         hoverSpeed={0}
         scaleOnHover
@@ -32,6 +55,6 @@ const LogosLoop = () => {
       />
     </div>
   );
-}
+};
 
 export default LogosLoop;

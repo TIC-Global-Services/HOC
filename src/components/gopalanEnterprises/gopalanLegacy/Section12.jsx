@@ -28,7 +28,7 @@ const Section12 = () => {
               text-[#E96428]
               text-start
               leading-none
-              tracking-tight
+              tracking-normal
               text-[clamp(50px,20vh,140px)]
             "
           >

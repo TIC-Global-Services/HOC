@@ -173,8 +173,8 @@ export default function Section2() {
 
           {/* CENTER */}
           <div className="flex-1 flex flex-col items-center justify-center gap-[clamp(20px,4vw,80px)] px-[clamp(20px,4vw,80px)] text-start">
-            <p className="jost text-black leading-[140%] max-w-[500px] tracking-tight font-[500] capitalize text-[clamp(18px,4vw,40px)] [hanging-punctuation:first]" style={{ textIndent: "-0.5ch" }}>
-              "Honoring Heritage refining craft defining modern elegance"
+            <p className="jost text-black leading-[140%] pl-[6%] w-[18ch] tracking-tight font-[500] capitalize text-[clamp(18px,20vh,40px)] [hanging-punctuation:first]" style={{ textIndent: "-0.5ch" }}>
+              "Honoring Heritage <span className="pl-1">refining craft defining</span> modern elegance"
             </p>
 
             {/* tree icon momentum */}

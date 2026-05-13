@@ -37,7 +37,7 @@ const allClients = [
   },
   {
     id: "raks",
-    title: "RAKS",
+    title: "RAKS PALLIKOODAM",
     image: img5,
     link: "/client/raks",
   },
