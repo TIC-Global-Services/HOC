@@ -24,7 +24,7 @@ const MobSection3 = () => {
       {/* CONTENT */}
       <div className="w-full h-[60vh] flex flex-col items-center justify-center px-5 py-10 gap-6">
 
-        <p className="jost text-black text-start font-[500] text-[20px] leading-[160%] tracking-tight capitalize max-w-[450px]">
+        <p className="jost text-black text-start font-[500] text-[20px] leading-[160%] tracking-tight capitalize max-w-[450px] w-[28ch]">
           A brand transformation shaped by legacy and growth—translating four 
           decades of trust into a <span className="text-[30px] salo text-[#E96428]"> cohesive identity </span> for a multi-vertical future. 
           An identity evolution rooted in heritage, designed to 

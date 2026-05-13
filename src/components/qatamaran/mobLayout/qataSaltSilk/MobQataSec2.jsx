@@ -66,7 +66,7 @@ const MobQataSec2 = () => {
             Tide bound <br /> Tailoring
           </h2>
 
-          <p className="jost font-[500] text-black/40 text-[16px] leading-[100%]">
+          <p className="jost font-[500] text-black/40 text-[16px] w-[28ch] leading-[100%]">
             Classic techniques meet contemporary expression. Designed for the
             man who moves with quiet confidence.
           </p>

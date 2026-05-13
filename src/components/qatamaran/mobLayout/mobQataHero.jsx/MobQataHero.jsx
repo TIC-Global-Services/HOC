@@ -73,7 +73,7 @@ const MobQataHero = () => {
 
       {/* ─── BOTTOM (TEXT) ─── */}
       <div className="w-full text-start flex-1 px-5 py-8 flex items-center">
-        <p className="jost font-medium text-[13px] leading-[24px] tracking-[-0.03em] capitalize text-black">
+        <p className="jost font-medium text-[13px] leading-[24px] tracking-[-0.03em] w-[42ch] pl-[2%] capitalize text-black">
           Qatamaran is a prêt-à-porter menswear label rooted in Chennai's rich
           tailoring heritage, designed for the modern gentleman who{" "}
           <span className="salo text-[#1E382D] text-[20px] leading-[24px] capitalize">

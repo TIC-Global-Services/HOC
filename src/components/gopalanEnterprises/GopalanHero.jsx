@@ -106,7 +106,7 @@ const GopalanHero = () => {
                 fontSize: "clamp(12px, 1vw, 20px)",
               }}
             >
-              Multi-vertica
+              MULTI_VERTICA
             </button>
           </div>
         </div>

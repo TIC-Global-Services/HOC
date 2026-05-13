@@ -16,7 +16,6 @@ const MobRaksSec3 = () => {
 
   return (
     <section className="w-full h-screen flex flex-col relative overflow-hidden bg-white">
-
       {/* GRID */}
       <div className="absolute inset-0 z-0 pointer-events-none">
         <GridOverlay
@@ -29,32 +28,24 @@ const MobRaksSec3 = () => {
 
       {/* ─── TOP IMAGE ─── */}
       <div className="w-full relative z-10">
-        <img
-          src={topImg}
-          alt=""
-          className="w-full h-full object-cover"
-        />
+        <img src={topImg} alt="" className="w-full h-full object-cover" />
       </div>
 
       {/* ─── BOTTOM CONTENT ─── */}
-      <div className="w-full h-full flex items-center justify-between px-5 relative z-10">
-
+      <div className="w-full h-full flex items-center justify-around relative z-10">
         {/* LEFT ICON */}
         <div ref={iconRef} className="w-[120px]">
-          <img
-            src={leftIcon}
-            alt="icon"
-            className="w-full object-contain"
-          />
+          <img src={leftIcon} alt="icon" className="w-full object-contain" />
         </div>
 
         {/* RIGHT TEXT */}
-        <div className="max-w-[200px] text-start">
-
+        <div className="max-w-[240px] text-start">
           <p className="jost text-black text-[16px] leading-[120%] capitalize">
-            "Empowering Voices. <br />
-            Inspiring Minds. <br />
-            Shaping The Future."
+            <span className="block">"Empowering Voices.</span>
+
+            <span className="block translate-x-2">Inspiring Minds.</span>
+
+            <span className="block translate-x-2">Shaping The Future."</span>
           </p>
         </div>
       </div>

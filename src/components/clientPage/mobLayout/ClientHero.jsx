@@ -15,7 +15,7 @@ const ClientHero = () => {
           className="absolute w-[60px] z-[1]"
           style={{
             left: "0%",     
-            bottom: "15px", 
+            bottom: "30px", 
           }}
           alt="Button"
           initial={{ x: -100, opacity: 0 }}

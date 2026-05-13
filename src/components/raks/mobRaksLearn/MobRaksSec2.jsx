@@ -151,10 +151,9 @@ const MobRaksSec2 = () => {
             </h2>
 
             {/* DESCRIPTION */}
-            <p className="jost font-[500] text-black/40 text-[16px] leading-[16px] tracking-tight">
+            <p className="jost font-[500] text-black/40 text-[16px] leading-[16px] w-[25ch] tracking-tight">
               Shaped through curiosity and guided exploration,
               every experience nurtures growth and understanding.
-              <br />
               A thoughtful blend of creativity.
             </p>
 

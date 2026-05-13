@@ -50,7 +50,7 @@ const MobGopalanHero = () => {
 
       {/* ─── BOTTOM ─── */}
       <div className="w-full text-start flex-1 px-5 py-8 flex items-center">
-        <p className="jost font-medium text-[13px] leading-[24px] tracking-[-0.03em] capitalize text-black">
+        <p className="jost font-medium text-[13px] leading-[24px] w-[42ch] pl-[2%] tracking-[-0.03em] capitalize text-black">
           Reimagining Gopalan Group's identity meant balancing four decades of
           trust with a future-ready vision. The refined{" "}
           

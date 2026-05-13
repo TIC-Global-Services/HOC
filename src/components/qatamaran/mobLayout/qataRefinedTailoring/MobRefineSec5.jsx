@@ -48,7 +48,7 @@ const MobRefineSec5 = () => {
           </h2>
 
           {/* PARAGRAPH */}
-          <p className="jost text-black text-[16px] leading-[22px] capitalize">
+          <p className="jost text-black text-[16px] leading-[22px] w-[35ch] capitalize">
             Qatamaran is a contemporary prêt-à-porter menswear label inspired by Chennai’s deep-rooted tailoring legacy. 
             Blending skilled craftsmanship with refined precision, the brand embodies a sense of enduring elegance. 
             Created for{" "}
