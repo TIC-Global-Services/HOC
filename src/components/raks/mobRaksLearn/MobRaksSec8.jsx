@@ -1,11 +1,22 @@
-import React from "react";
+import React, { useRef } from "react";
 
 import topImg from "../../../assets/client/raks/img/panel6.png";
 import iconImg from "../../../assets/client/raks/img/heroImg2.png";
 
 import GridOverlay from "../../GridOverlay";
+import useScrollFloat from "../../../hooks/useScrollFloat";
 
 const MobRaksSec8 = () => {
+
+  const iconRef = useRef(null);
+
+  // ICON FLOAT ANIMATION
+  useScrollFloat(iconRef, {
+    xFactor: 0.25,
+    yFactor: 0.25,
+    rFactor: 0.10,
+  });
+
   return (
     <section className="w-full min-h-screen flex flex-col relative overflow-hidden bg-white">
 
@@ -33,6 +44,7 @@ const MobRaksSec8 = () => {
 
         {/* ICON (CENTER) */}
         <img
+          ref={iconRef}
           src={iconImg}
           alt="Icon"
           className="w-[150px]"

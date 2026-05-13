@@ -50,7 +50,13 @@ const ViewNext = ({
   titleColor = "#9bc7f0",
 
   // TEXT
-  heading = "VIEW NEXT?",
+  heading = (
+    <>
+      <span className="salo">VIEW NEXT</span>
+       <span className="font-[Arial] inline-block normal-case"
+      style={{ fontFamily: "Arial" }}>?</span>
+    </>
+  ),
 }) => {
   // REMOVE ACTIVE CLIENT
   const clients = allClients
@@ -59,10 +65,8 @@ const ViewNext = ({
 
   return (
     <section className="relative w-full py-20 md:py-28 overflow-hidden">
-      
       {/* HEADING */}
       <div className="flex justify-center mb-16 md:mb-24">
-        
         <motion.h2
           initial={{ opacity: 0, y: 70 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -99,7 +103,6 @@ const ViewNext = ({
       >
         {clients.map((item, index) => (
           <Link key={item.id} to={item.link}>
-            
             <motion.div
               className="group"
               initial={{
@@ -117,7 +120,6 @@ const ViewNext = ({
                 ease: [0.22, 1, 0.36, 1],
               }}
             >
-              
               {/* CARD */}
               <div
                 className="
@@ -126,7 +128,6 @@ const ViewNext = ({
                   aspect-square
                 "
               >
-                
                 {/* CD */}
                 <img
                   src={cd}
@@ -152,7 +153,6 @@ const ViewNext = ({
                     rounded-[6px]
                   "
                 >
-                  
                   <img
                     src={item.image}
                     alt={item.title}

@@ -2,7 +2,7 @@ import React, { useEffect, useRef } from "react";
 import gsap from "gsap";
 
 import topRightImg from "../../../assets/client/raks/img/panel6Left.png";
-import centerImg from "../../../assets/client/raks/img/pallikoodam.png";
+import centerImg from "../../../assets/client/raks/img/panel11.png";
 import pinImg from "../../../assets/client/raks/img/heroImg1.png";
 import pinImg2 from "../../../assets/client/raks/img/heroImg2.png";
 
@@ -106,7 +106,7 @@ const MobRaksSec7 = () => {
         <img
           ref={addIconRef}
           src={pinImg}
-          className="absolute top-8 left-2 w-[60px] z-[30]"
+          className="absolute top-12 left-2 w-[120px] z-[30]"
         />
 
         {/* IMAGE */}
@@ -133,9 +133,9 @@ const MobRaksSec7 = () => {
           src={pinImg2}
           className="
             absolute
-            -top-4
-            -left-6
-            w-[60px]
+            -top-10
+            right-20      
+            w-[120px]
             z-[30]
             rotate-[-10deg]
           "
