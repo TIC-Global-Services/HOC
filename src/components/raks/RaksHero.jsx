@@ -52,7 +52,7 @@ const RaksHero = () => {
               className="font-[1000] alinsa text-[#060EBB] leading-none tracking-tight text-center uppercase"
               style={{ fontSize: "clamp(60px, 15vh, 100px)" }}
             >
-              RAKS <br />Pallikoodam
+              RAKS <br />INSTITUTIONS
             </h1>
 
             <button className="jost rounded-full border-2 bg-[#060EBB] text-white flex items-center justify-center font-medium w-[180px] h-[50px] md:w-[200px] md:h-[60px] xl:w-[220px] xl:h-[70px] text-sm md:text-base">

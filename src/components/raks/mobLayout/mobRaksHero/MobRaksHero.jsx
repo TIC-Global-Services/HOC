@@ -121,7 +121,7 @@ const MobRaksHero = () => {
         <div className="relative z-10 flex flex-col items-center justify-center gap-4 px-4 text-center">
 
           <h1 className="alinsa text-[#060EBB] text-[60px] leading-none uppercase">
-            RAKS <br /> PALLIKOODAM
+            RAKS <br /> INSTITUTIONS
           </h1>
 
           <button className="jost rounded-full bg-[#060EBB] text-white px-6 py-3 text-[10px]">
