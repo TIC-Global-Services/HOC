@@ -71,7 +71,7 @@ const SyedHero = () => {
             </h1>
 
             <button className="jost rounded-full border-2 bg-[#060EBB] text-white flex items-center justify-center font-medium w-[140px] h-[40px] sm:w-[180px] sm:h-[50px] md:w-[200px] md:h-[60px] xl:w-[220px] xl:h-[70px] text-xs sm:text-sm md:text-base">
-              FASHION
+              FASHION & LIFESTYLE
             </button>
           </div>
         </div>
@@ -93,12 +93,12 @@ const SyedHero = () => {
           overflow-hidden
         "
         >
-          <div className="w-full max-w-[42vw]">
+          <div className="w-full max-w-[50vw]">
             <p
               className="
               jost capitalize text-start font-[500]
               tracking-tight text-black
-              leading-[180%]
+              leading-[41px] w-[45.5ch]
             "
               style={{
                 fontSize: "clamp(12px,3.5vh,24px)",
@@ -111,7 +111,7 @@ const SyedHero = () => {
               <span
                 className="text-[#262666] salo"
                 style={{
-                  fontSize: "clamp(18px,6vh,36px)",
+                  fontSize: "clamp(18px,5vh,40px)",
                 }}
               >
                 Craftsmanship and contemporary
@@ -127,7 +127,7 @@ const SyedHero = () => {
               <span
                 className="text-[#262666] salo"
                 style={{
-                  fontSize: "clamp(18px,6vh,36px)",
+                  fontSize: "clamp(18px,5vh,40px)",
                 }}
               >
                 "experience and encounter"

@@ -56,7 +56,7 @@ const RaksHero = () => {
             </h1>
 
             <button className="jost rounded-full border-2 bg-[#060EBB] text-white flex items-center justify-center font-medium w-[180px] h-[50px] md:w-[200px] md:h-[60px] xl:w-[220px] xl:h-[70px] text-sm md:text-base">
-              CHILDREN LEARNING
+              INTERNATIONAL SCHOOL
             </button>
           </div>
         </div>
@@ -78,7 +78,7 @@ const RaksHero = () => {
             transition={{ duration: 0.8, ease: "easeOut" }}
             className="
               absolute 
-              top-[25%]
+              lg:top-[18%] xl:top-[25%]
               left-0 
               ml-[5%] xl:ml-[6%] 2xl:ml-[10%]
               w-[85%]
@@ -89,15 +89,15 @@ const RaksHero = () => {
               flex justify-start
             "
           >
-            <p className="jost text-start font-[500] capitalize text-black  leading-[150%] text-[14px] md:text-[18px] xl:text-[24px]">
+            <p className="jost text-start font-[500] capitalize text-black  leading-[45px] text-[14px] md:text-[18px] xl:text-[26px] w-[42ch]">
               RaK's Institutions is a future-forward school rooted in the{" "}
-              <span className="salo text-[#000085] text-[18px] md:text-[26px] xl:text-[36px]">
+              <span className="salo text-[#000085] text-[18px] md:text-[26px] xl:text-[40px]">
                 Reggio Emilia philosophy,
               </span>{" "}
               fostering experiential, interdisciplinary learning for children to
               grow with purpose. Embracing this spirit, Haus of Chaos crafted an
               identity for{" "}
-              <span className="salo text-[#000085] text-[18px] md:text-[26px] xl:text-[36px]">
+              <span className="salo text-[#000085] text-[18px] md:text-[26px] xl:text-[40px]">
                 RaK's Pallikkoodam
               </span>{" "}
               that is warm, attentive, and child-centric. The result is a

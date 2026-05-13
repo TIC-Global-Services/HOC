@@ -10,7 +10,7 @@ const SyedDesignVideo = () => {
   return (
     <>
       {/* First Video */}
-      <section className="w-full h-auto md:h-screen bg-black flex items-center justify-center overflow-hidden">
+      <section className="w-full h-auto md:min-h-screen bg-black flex items-center justify-center overflow-hidden">
         <video
           ref={videoRef} 
           src={video}
@@ -21,7 +21,7 @@ const SyedDesignVideo = () => {
           webkit-playsinline="true"
           controls={false}
           preload="auto"
-          className="w-full h-full object-contain"
+          className="w-full h-full object-cover"
         />
       </section>
     </>

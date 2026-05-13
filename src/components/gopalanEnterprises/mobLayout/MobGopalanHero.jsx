@@ -43,7 +43,7 @@ const MobGopalanHero = () => {
           </h1>
 
           <button className="jost rounded-full bg-[#060EBB] text-white px-6 py-3 text-[12px]">
-            SPORTS & LIFESTYLE
+            MULTI-VERTICAL
           </button>
         </div>
       </div>

@@ -116,13 +116,13 @@ const Section2 = () => {
 
         {/* CENTER CONTENT */}
         <div className="absolute inset-0 flex items-center justify-center px-[5%]">
-          <div className="max-w-[70%] text-start space-y-[2%]">
-            <h2 className="salo text-[#E96428] uppercase leading-none text-[clamp(28px,8vw,150px)]">
+          <div className="max-w-[80%] text-start space-y-[2%]">
+            <h2 className="salo text-[#E96428] uppercase leading-none text-[clamp(28px,14vh,150px)]">
               Vision Driven <br /> Legacy Built
             </h2>
 
-            <p className="jost  text-black tracking-tight leading-[140%] text-[clamp(14px,2vw,24px)] ">
-              Timeless craftsmanship meets contemporary vision. <br /> Designed for
+            <p className="jost  text-black tracking-tight leading-[140%] w-[34ch] max-w-[480px] text-[clamp(14px,20vh,24px)] ">
+              Timeless craftsmanship meets contemporary vision. Designed for
               those who value legacy,  precision, and progress.
             </p>
           </div>

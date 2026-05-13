@@ -73,7 +73,7 @@ const PadlrHero = () => {
           top-0 
           right-0 
           h-full 
-          w-full xl:w-[50%]
+          w-full lg:w-[50%] xl:w-[50%]
           flex items-center
           px-6 md:px-10 xl:px-14 2xl:px-18
         "

@@ -125,7 +125,7 @@ const MobRaksHero = () => {
           </h1>
 
           <button className="jost rounded-full bg-[#060EBB] text-white px-6 py-3 text-[10px]">
-            MULTI-VERTICA
+            INTERNATIONAL SCHOOL
           </button>
         </div>
       </div>
