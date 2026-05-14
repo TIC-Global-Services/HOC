@@ -6,36 +6,37 @@ import raks from '../assets/client/page/clientsLogo/raksLogo.png';
 import qatamaran from '../assets/client/page/clientsLogo/qatamaranLogo.png';
 import gopalan from '../assets/client/page/clientsLogo/Gopalan Group_Logo.png';
 
+
 const imageLogos = [
   {
     src: qatamaran,
     alt: "Company 1",
-    width: 250,
-    height: 140,
+    width: 180,
+    height: 180,
   },
   {
     src: padlr,
     alt: "Company 2",
-    width: 250,
-    height: 140,
+    width: 120,
+    height: 120,
   },
   {
     src: gopalan,
     alt: "Company 3",
-    width: 250,
-    height: 200,
+    width: 150,
+    height: 150,
   },
   {
     src: syed,
     alt: "Company 4",
-    width: 250,
-    height: 250,
+    width: 150,
+    height: 150,
   },
   {
     src: raks,
     alt: "Company 5",
-    width: 250,
-    height: 250,
+    width: 150,
+    height: 150,
   },
 ];
 

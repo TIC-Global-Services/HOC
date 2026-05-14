@@ -53,7 +53,7 @@ const Raks = () => {
       </div>
 
       {/* View Next */}
-      <ViewNext activeClient="raks" titleColor="#000085" heading="VIEW NEXT?" />
+      <ViewNext activeClient="raks" titleColor="#000085"  />
 
       <Footer />
     </div>

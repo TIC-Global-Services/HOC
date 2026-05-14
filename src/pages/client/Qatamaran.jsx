@@ -55,7 +55,6 @@ const Qatamaran = () => {
       <ViewNext
         activeClient="qatamaran"
         titleColor="#1E382D"
-        heading="VIEW NEXT?"
       />
 
       {/* Footer */}

@@ -49,7 +49,6 @@ const GopalanEnterprises = () => {
       <ViewNext
         activeClient="gopalan"
         titleColor="#E96428"
-        heading="VIEW NEXT?"
       />
 
       {/* FOOTER */}

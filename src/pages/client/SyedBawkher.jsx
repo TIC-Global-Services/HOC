@@ -62,7 +62,7 @@ const SyedBawkher = () => {
       </div>
 
       {/* View Next */}
-      <ViewNext activeClient="syed" titleColor="#262666" heading="VIEW NEXT?" />
+      <ViewNext activeClient="syed" titleColor="#262666" />
 
       {/* Footer */}
       <Footer />

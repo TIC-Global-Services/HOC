@@ -63,7 +63,6 @@ const Padlr = () => {
       <ViewNext
         activeClient="padlr"
         titleColor="#8FC4E9"
-        heading="VIEW NEXT?"
       />
 
       <Footer />

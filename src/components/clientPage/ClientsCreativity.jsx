@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import creativityVideo from "../../assets/client/page/hocVideo.webm";
+import creativityVideo from "../../assets/client/page/vinyl.mp4";
 
 const ClientsCreativity = () => {
   return (
@@ -12,7 +12,7 @@ const ClientsCreativity = () => {
         muted
         loop
         playsInline
-        className="w-[400px] md:w-[500px] lg:w-[600px] rounded-[20px] object-cover"
+        className=" w-1/2 rounded-[20px] object-cover "
         initial={{ x: -100, opacity: 0 }}
         whileInView={{ x: 0, opacity: 1 }}
         viewport={{ once: true }}
