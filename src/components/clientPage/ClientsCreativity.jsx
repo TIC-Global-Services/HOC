@@ -1,14 +1,18 @@
 import { motion } from "framer-motion";
-import creativity from "../../assets/client/page/creativity.png";
+import creativityVideo from "../../assets/client/page/hocVideo.webm";
 
 const ClientsCreativity = () => {
   return (
     <div className="flex flex-col md:flex-row items-center justify-center mt-[-50%] md:-mt-[10%] gap-10 px-10">
-      {/* Left Image */}
-      <motion.img
-        src={creativity}
-        alt="Creativity"
-        className="w-[400px] md:w-[500px] lg:w-[600px]"
+      
+      {/* Left Video */}
+      <motion.video
+        src={creativityVideo}
+        autoPlay
+        muted
+        loop
+        playsInline
+        className="w-[400px] md:w-[500px] lg:w-[600px] rounded-[20px] object-cover"
         initial={{ x: -100, opacity: 0 }}
         whileInView={{ x: 0, opacity: 1 }}
         viewport={{ once: true }}
@@ -23,7 +27,7 @@ const ClientsCreativity = () => {
         viewport={{ once: true }}
         transition={{ duration: 0.5, delay: 0.2 }}
       >
-        Our Clients Are The Reason 
+        Our Clients Are The Reason
         Our Creativity Keeps Evolving.
       </motion.p>
     </div>
