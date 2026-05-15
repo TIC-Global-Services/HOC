@@ -110,7 +110,7 @@ const Section3 = () => {
 
       {/* TEXT */}
       <div
-        className="jost text-start capitalize text-black absolute"
+        className="jost text-start font-medium capitalize text-black absolute"
         style={{
           bottom: "5%",
           left: "33.5%",

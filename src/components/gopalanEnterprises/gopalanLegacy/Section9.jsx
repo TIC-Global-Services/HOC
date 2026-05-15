@@ -113,7 +113,7 @@ const Section9 = () => {
           style={{
             top: "30%",
             right: "10%",
-            maxWidth: "clamp(260px,28vw,440px)",
+            maxWidth: "clamp(260px,28vw,520px)",
           }}
         >
           <p

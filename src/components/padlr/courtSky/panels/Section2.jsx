@@ -166,7 +166,7 @@ export default function Panel2() {
         <div className="w-1/2 relative flex items-center justify-center px-[5%]">
           {/* TEXT */}
           <p
-            className="jost text-start capitalize tracking-tight text-white/90 max-w-[80%]"
+            className="jost text-start font-medium capitalize tracking-tight text-white/90 max-w-[80%]"
             style={{
               fontSize: "clamp(16px,4vh,24px)",
               lineHeight: "160%",

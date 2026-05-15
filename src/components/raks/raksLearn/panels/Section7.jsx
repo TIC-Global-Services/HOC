@@ -79,8 +79,8 @@ const Section7 = () => {
       </div>
 
       {/* CENTER CONTENT */}
-      <div className="w-[20vw] h-full flex items-center justify-center px-5">
-        <div className="text-center max-w-[500px] space-y-[clamp(16px,2vw,44px)]">
+      <div className="w-[22vw] h-full flex items-center justify-center px-5">
+        <div className="text-center max-w-[540px] space-y-[clamp(16px,2vw,44px)]">
 
           {/* ICON (animated) */}
           <img

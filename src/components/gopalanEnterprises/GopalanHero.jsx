@@ -135,7 +135,7 @@ const GopalanHero = () => {
               max-w-[420px]
               lg:max-w-[541px]
               xl:max-w-[560px]
-              2xl:max-w-[580px]
+              2xl:max-w-[620px]
               flex justify-start
             "
           >

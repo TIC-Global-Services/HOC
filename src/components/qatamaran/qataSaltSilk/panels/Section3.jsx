@@ -68,7 +68,7 @@ export default function Section3() {
         {/* ───── LEFT SIDE ───── */}
         <div
           className="flex flex-col justify-between
-        w-[32vw] min-w-[280px] max-w-[520px]
+        w-[35vw] min-w-[280px] max-w-[550px]
         py-[clamp(20px,6vh,60px)]
         px-[clamp(16px,3vw,40px)]"
         >
@@ -87,7 +87,7 @@ export default function Section3() {
           </div>
 
           {/* TEXT */}
-          <div className="text-black text-start max-w-[480px]">
+          <div className="text-black text-start ">
             <h2
               className="salo uppercase mb-4 leading-[110%]
             text-[clamp(26px,6vh,50px)]"

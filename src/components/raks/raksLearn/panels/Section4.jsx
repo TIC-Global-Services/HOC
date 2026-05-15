@@ -82,7 +82,7 @@ const Section4 = () => {
             Where Curiosity Meets a <br />New Way of  Learning
           </h2>
 
-          <p className="jost text-start text-black leading-[120%] max-w-[420px] tracking-tight text-[clamp(14px,3vh,26px)]">
+          <p className="jost text-start text-black leading-[120%] max-w-[440px] tracking-tight text-[clamp(14px,3vh,24px)]">
             “At RAKS Pallikkoodam, every student is nurtured to grow with confidence, curiosity, and 
             creativity—empowered to learn, explore, and shine every single day.”
           </p>
