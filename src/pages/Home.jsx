@@ -346,7 +346,7 @@ const ThirdSection = () => {
   return (
     <div className="relative mt-0 md:-mt-40 md:flex md:min-h-[80vh]">
       {/* LEFT — VIDEO */}
-      <div className="w-full md:absolute md:left-5 md:top-0 md:h-full md:w-[50%]">
+      <div className="w-full md:absolute md:left-5 md:top-0 md:w-[50%]">
         <video
           ref={videoRef}
           id="loader-video"
@@ -355,9 +355,7 @@ const ThirdSection = () => {
           loop
           controls={false}
           playsInline
-          className={`w-full h-full object-cover ${
-            isIOS || isSafari ? "scale-75 border-2 border-white" : "scale-125"
-          }`}
+          className="w-full h-auto object-contain scale-125"
         >
           <source
             src={videoSource}

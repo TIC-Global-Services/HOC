@@ -27,7 +27,7 @@ const Section5 = () => {
       <div
         className="absolute top-0 left-0 h-full"
         style={{
-          width: "30vw", 
+          width: "34vw", 
         }}
       >
         <img
