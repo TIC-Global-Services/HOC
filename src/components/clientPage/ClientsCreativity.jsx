@@ -12,7 +12,7 @@ const ClientsCreativity = () => {
         muted
         loop
         playsInline
-        className=" w-1/2 rounded-[20px] object-cover "
+        className="block w-1/2 rounded-[20px] object-cover"
         initial={{ x: -100, opacity: 0 }}
         whileInView={{ x: 0, opacity: 1 }}
         viewport={{ once: true }}
