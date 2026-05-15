@@ -195,7 +195,7 @@ export default function Section2() {
           <div className="h-full w-[40vw] aspect-9/16 relative overflow-hidden">
             <img
               src={qataRightImg}
-              className="absolute inset-0 w-full h-full aspect-9/16 object-cover"
+              className="absolute inset-0 w-full h-full aspect-9/16 object-cover object-[center_80%]"
             />
           </div>
         </div>

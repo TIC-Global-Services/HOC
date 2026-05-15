@@ -14,23 +14,8 @@ const slides = [
   },
   {
     title: "Client Testimonial",
-    text: `After years of searching for a graphic designer to create our logo and
-    brand identity, we realized it wasn't just about a logo—it was about
-    crafting an experience that reflects what our company truly stands
-    for. Ria, the creative director of Haus of Chaos, not only
-    conceptualized the journey of how clients experience our brand but
-    also responded with remarkable efficiency.`,
-    author: "Rak's Pallikkoodam, 21st century international school",
-  },
-  {
-    title: "Client Testimonial",
-    text: `After years of searching for a graphic designer to create our logo and
-    brand identity, we realized it wasn't just about a logo—it was about
-    crafting an experience that reflects what our company truly stands
-    for. Ria, the creative director of Haus of Chaos, not only
-    conceptualized the journey of how clients experience our brand but
-    also responded with remarkable efficiency.`,
-    author: "Rak's Pallikkoodam, 21st century international school",
+    text: `HOC brings a deep and contemporary understanding of branding, aesthetics, and consumer recall, coupled with a fresh perspective on market penetration. It was a great experience working with the founders in building a seamless go-to-market strategy.`,
+    author: "Sharath Hari, CMO, Gopalan Group",
   },
 ];
 

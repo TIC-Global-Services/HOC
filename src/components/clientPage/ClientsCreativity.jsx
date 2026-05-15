@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import creativityVideo from "../../assets/client/page/vinyl.mp4";
+import creativityVideo from "../../assets/client/page/vinyl_final.mp4";
 
 const ClientsCreativity = () => {
   return (

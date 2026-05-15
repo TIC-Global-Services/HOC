@@ -33,7 +33,6 @@ export default function RaksLearning() {
     85,  // 8
     100, // 10
     100, // 9
-    60,  // 11
     60,  // 13
   ];
 
@@ -100,7 +99,7 @@ export default function RaksLearning() {
     { Component: Section8, width: sectionWidths[7] },
     { Component: Section10, width: sectionWidths[8] },
     { Component: Section9, width: sectionWidths[9] },
-    { Component: Section13, width: sectionWidths[11] },
+    { Component: Section13, width: sectionWidths[10] },
   ];
 
   return (
