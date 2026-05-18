@@ -346,7 +346,7 @@ const ThirdSection = () => {
   return (
     <div className="relative mt-0 md:-mt-40 md:flex md:min-h-[80vh]">
       {/* LEFT — VIDEO */}
-      <div className="w-full md:absolute md:left-5 md:top-10 md:w-[50%]">
+      <div className="w-full md:absolute md:left-5 md:top-20 md:w-[50%]">
         <video
           ref={videoRef}
           id="loader-video"
