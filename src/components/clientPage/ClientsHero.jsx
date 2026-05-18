@@ -26,7 +26,7 @@ const ClientsHero = () => {
 
         {/* CLIENTS text*/}
         <motion.h1
-          className="relative font-[1000] px-10 mt-40 md:!mt-20 md:leading-[0px] md:tracking-tight text-7xl md:text-[clamp(2rem,35vh,260px)] alinsa text-[#0000FF] z-[10]"
+          className="relative font-[1000] px-10 mt-40 md:!mt-20 md:leading-[0px] md:tracking-tight text-7xl md:text-[clamp(2rem,35vh,260px)] alinsa text-[#060ebb] z-[10]"
           initial={{ scale: 0.8, opacity: 0 }}
           animate={{ scale: 1, opacity: 1 }}
           transition={{ duration: 0.5, ease: "easeOut" }}

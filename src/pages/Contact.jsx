@@ -354,7 +354,7 @@ const JobListings2 = ({ scrollToBottom }) => {
         ))}
 
       <h1
-        className="absolute  md:block hidden cursor-pointer !bottom-2 md:bottom-10 tracking-wide text-[#0000FF]   text-center text-2xl md:text-[20px]"
+        className="absolute  md:block hidden cursor-pointer !bottom-2 md:bottom-10 tracking-wide text-[#060ebb]   text-center text-2xl md:text-[20px]"
         onClick={scrollToBottom}
       >
         Scroll Down

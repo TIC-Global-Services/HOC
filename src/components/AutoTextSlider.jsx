@@ -14,7 +14,7 @@ const slides = [
   },
   {
     title: "Client Testimonial",
-    text: `HOC brings a deep and contemporary understanding of branding, aesthetics, and consumer recall, coupled with a fresh perspective on market penetration. It was a great experience working with the founders in building a seamless go-to-market strategy.`,
+    text: `House of Chaos brings a deep and contemporary understanding of branding, aesthetics, and consumer recall, coupled with a fresh perspective on market penetration. It was a great experience working with the founders in building a seamless go-to-market strategy.`,
     author: "Sharath Hari, CMO, Gopalan Group",
   },
 ];
