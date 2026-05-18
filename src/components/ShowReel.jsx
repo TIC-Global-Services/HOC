@@ -24,7 +24,7 @@ const ShowReel = () => {
         loop
         playsInline
         preload="metadata"
-        className="w-full h-full object-contain md:object-cover"
+        className="block w-full h-full object-contain md:object-cover"
       />
       <button
         onClick={toggleMute}

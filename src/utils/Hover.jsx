@@ -48,7 +48,7 @@ const CursorHover = () => {
           key={img.id}
           src={img.src}
           alt="hover-effect"
-          className="absolute object-cover w-40 h-40"
+          className="absolute object-cover w-56 h-56"
           initial={{ x: img.x, y: img.y, opacity: 1, scale: 1 }}
           animate={{ x: img.x + img.offsetX, y: img.y + img.offsetY, opacity: 0, scale: 0.5 }}
           transition={{ duration: 1, ease: "easeOut" }}
