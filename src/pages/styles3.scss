@@ -10,21 +10,7 @@
   background-color: #ffffff !important;
 }
 
-.hamburger-menu {
-    cursor: pointer;
-    display: flex;
-    flex-direction: column;
-    gap: 6px;
-    padding: 10px;
-  }
-  
-  .hamburger-line {
-    width: 24px;
-    height: 2px;
-    background-color: white;
-    display: block;
-    transition: all 0.3s ease;
-  }
+
 body {  
   font-family: 'Georgia';
   font-size: 16px;
@@ -152,6 +138,7 @@ nav {
 }
 
 .hamburger-menu3 {
+    margin-top: 12px;
     cursor: pointer;
     display: flex;
     flex-direction: column;

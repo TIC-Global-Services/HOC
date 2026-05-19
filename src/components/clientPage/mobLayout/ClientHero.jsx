@@ -25,7 +25,7 @@ const ClientHero = () => {
 
         {/* CLIENTS TEXT */}
         <motion.h1
-          className="alinsa text-[#0000FF] text-[50px] leading-none z-[10]"
+          className="alinsa text-[#060ebb] text-[50px] leading-none z-[10]"
           initial={{ scale: 0.8, opacity: 0 }}
           animate={{ scale: 1, opacity: 1 }}
           transition={{ duration: 0.4, ease: "easeOut" }}

@@ -3,7 +3,7 @@ import creativityVideo from "../../assets/client/page/vinyl_new.mp4";
 
 const ClientsCreativity = () => {
   return (
-    <div className="flex flex-col md:flex-row items-center justify-center mt-[-50%] md:-mt-[10%] gap-10 px-10">
+    <div className="flex flex-col md:flex-row items-center justify-center mt-[-35%] md:-mt-[10%] gap-10 px-10">
       
       {/* Left Video */}
       <motion.video
