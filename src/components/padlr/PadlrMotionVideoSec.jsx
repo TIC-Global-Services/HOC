@@ -1,5 +1,5 @@
 import { useRef } from "react";
-import video from "../../assets/client/padlr/vdo/Padlr_Animation1.mp4";
+import video from "../../assets/client/padlr/vdo/Padlr_Animation1.mov";
 import useMobileVideoFix from "../../hooks/useMobileVideo";
 
 const PadlrMotionVideoSec = () => {
@@ -12,10 +12,6 @@ const PadlrMotionVideoSec = () => {
       {/* VIDEO */}
       <video
        ref={videoRef}
-        style={{
-          transform: "scale(1.01)",
-          backfaceVisibility: "hidden",
-        }}
         src={video}
         autoPlay
         loop
@@ -28,10 +24,10 @@ const PadlrMotionVideoSec = () => {
         absolute inset-0
         w-full h-full
         object-contain
-        scale-[1.01]
-        bg-white
       "
       />
+
+     
     </section>
   );
 };

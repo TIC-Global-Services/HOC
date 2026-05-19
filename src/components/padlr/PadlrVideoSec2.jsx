@@ -8,7 +8,7 @@ const PadlrVideoSec2 = () => {
       useMobileVideoFix(videoRef);
 
   return (
-    <section className="w-full min-h-screen md:hidden relative bg-[#0506C3] overflow-hidden">
+    <section className="w-full min-h-screen md:hidden relative bg-[#0505CA] overflow-hidden">
 
       <video
         ref={videoRef}

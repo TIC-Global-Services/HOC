@@ -42,7 +42,7 @@ const MobRaksSec1 = () => {
         </div>
 
         {/* ABOUT SECTION */}
-        <div className="text-start border-b border-white px-5 py-24 relative">
+        <div className="text-start px-5 py-24 relative">
           {/* LOGO RIGHT */}
           <img
           ref={iconRef}

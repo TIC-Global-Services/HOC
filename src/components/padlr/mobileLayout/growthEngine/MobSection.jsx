@@ -30,7 +30,7 @@ const MobSection = () => {
         </div>
 
         {/* ABOUT SECTION */}
-        <div className="text-start border-b border-white px-5 py-24 relative">
+        <div className="text-start px-5 py-24 relative">
           {/* LOGO RIGHT */}
           <img
             src={paddleLogoImg}
@@ -55,7 +55,7 @@ const MobSection = () => {
         
 
         {/* VIDEO */}
-        <div className="w-full bg-[#EAEAEA]">
+        <div className="w-full bg-[#EAEAEA] ">
           <video
             ref={videoRef}
             src={aboutVideo}
@@ -63,7 +63,7 @@ const MobSection = () => {
             muted
             loop
             playsInline
-            className="w-full object-cover"
+            className="w-full block object-cover"
           />
         </div>
       </section>

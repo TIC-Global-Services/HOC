@@ -34,21 +34,21 @@ const MobQataSec2 = () => {
         ref={topLeftRef}
         src={topLeftImg}
         alt=""
-        className="absolute top-[15%] left-[5%] w-[110px] -rotate-12 z-10"
+        className="absolute top-[10%] left-[5%] w-[150px] -rotate-12 z-10 "
       />
 
       <img
         ref={topRightRef}
         src={topRightImg}
         alt=""
-        className="absolute top-[65%] right-[5%] w-[110px] -rotate-12 z-10"
+        className="absolute top-[70%] right-[5%] w-[130px] -rotate-12 z-10"
       />
 
       <img
         ref={bottomLeftRef}
         src={bottomLeftImg}
         alt=""
-        className="absolute bottom-[8%] left-[5%] w-[110px] -rotate-12 z-10"
+        className="absolute bottom-[2%] left-[5%] w-[150px] -rotate-12 z-10"
       />
 
       {/* CONTENT */}
