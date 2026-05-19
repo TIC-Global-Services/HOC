@@ -1,9 +1,7 @@
 import React from "react";
-import { Link, useLocation } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
-import worldsmall from "../assets/worldsmall.png";
 // import tvpng from "../assets/tv.png";
-import logo from "../assets/logo.png";
 // import logo2 from "../assets/logo2.png";
 // import befooter from "../assets/befooter.png";
 // import hand from "../assets/hand.png";
@@ -14,132 +12,16 @@ import linelab from "../assets/linelab.png";
 import { motion } from "framer-motion";
 // import { div } from "framer-motion/client";
 import grid from "../assets/lines.png";
-import MobileNav from "./MobileNav2.jsx";
+import Navbar from "../components/Navbar";
 import Footer from "./Footer.jsx";
 
 import noswitch from "../assets/noswitch.svg";
 const Experience = () => {
-  const location = useLocation();
-  const [isSection2, setIsSection2] = useState(false);
-  const [isFixed, setIsFixed] = useState(true);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      const scrollPosition = window.scrollY;
-      const windowHeight = window.innerHeight;
-
-      setIsSection2(scrollPosition > windowHeight * 0.2); // Toggle theme at 20% height
-      setIsFixed(scrollPosition < windowHeight); // Navbar stays fixed only in the first section
-    };
-
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
-  const [isToggled, setIsToggled] = useState(false);
-
-  const handleToggle = () => {
-    setIsToggled(!isToggled);
-  };
-
-  const isActiveRoute = (path) => {
-    return location.pathname === path;
-  };
 
   return (
     <>
+      <Navbar variant="dark" />
       <div className="bg-black jost relative" style={{ minHeight: "100vh" }}>
-        {/* Navbar */}
-        <div className="md:hidden">
-          <MobileNav />
-        </div>
-        <div className="hidden md:block">
-          <div
-            className={`${
-              isFixed ? "fixed" : "absolute"
-            } w-full z-[500] top-0 left-0 ${
-              isSection2 ? "bg-black text-white" : "  bg-black text-white"
-            } transition-all py-2 duration-700`}
-          >
-            <div className="flex py-4 jost px-4 md:px-10 justify-between items-start">
-              <Link to={"/"}>
-                <img
-                  src={isSection2 ? logo : logo}
-                  className="w-[80px] md:w-[110px] transition-all duration-700"
-                  alt="Logo"
-                />
-              </Link>
-              <div className="text-[14px] md:text-[19px] font-semibold flex gap-4 md:gap-14 items-center">
-                <Link
-                  to={"/client"}
-                  className={`hover:text-black/50 ${
-                    isActiveRoute("/client")
-                      ? "text-[#060ebb] border-b-2 border-[#060ebb]"
-                      : ""
-                  }`}
-                >
-                  <h1>CLIENTS</h1>
-                </Link>
-                <Link
-                  to={"/Services"}
-                  className={`hover:text-gray-400 ${isActiveRoute("/Services") ? "text-[#060ebb] border-b-2 border-[#060ebb]" : ""}`}
-                >
-                  <h1>SERVICES</h1>
-                </Link>
-                <Link
-                  to={"/Experience"}
-                  className={`hover:text-gray-400 ${isActiveRoute("/Experience") ? "text-gray-400 border-b-2 border-text-gray-400" : ""}`}
-                >
-                  <h1>EXPERIENCE LAB</h1>
-                </Link>
-                <Link
-                  to={"/Ethos"}
-                  className={`hover:text-gray-400 ${isActiveRoute("/Ethos") ? "text-[#060ebb] border-b-2 border-[#060ebb]" : ""}`}
-                >
-                  <h1>ETHOS</h1>
-                </Link>
-                <Link
-                  to={"/Careers"}
-                  className={`hover:text-gray-400 ${isActiveRoute("/Careers") ? "text-[#060ebb] border-b-2 border-[#060ebb]" : ""}`}
-                >
-                  <h1>CAREERS</h1>
-                </Link>
-              </div>
-              <Link to={"/Contact"}>
-                <motion.div
-                  className={`py-2 px-4 rounded-full relative text-[12px] md:text-[13px] font-semibold flex items-center cursor-pointer ${
-                    isToggled
-                      ? "bg-black text-white"
-                      : "bg-[#F0F0F0] text-[#060ebb]"
-                  }`}
-                  onClick={handleToggle}
-                  initial={{ opacity: 1 }}
-                  animate={{ opacity: 1 }}
-                >
-                  <motion.h1
-                    className={`mr-6 md:mr-9 text-center`}
-                    animate={{
-                      x: isToggled ? "35px" : "0px",
-                      color: isToggled ? "#FFFFFF" : "#060ebb",
-                    }}
-                    transition={{ duration: 0.5 }}
-                  >
-                    CONTACT
-                  </motion.h1>
-                  <motion.img
-                    className="w-[36px] md:w-[46px] h-[36px] md:h-[46px] absolute"
-                    src={worldsmall}
-                    alt="World"
-                    animate={{
-                      x: isToggled ? "-50%" : "150%",
-                      rotate: isToggled ? 360 : 0,
-                    }}
-                    transition={{ duration: 0.8 }}
-                  />
-                </motion.div>
-              </Link>
-            </div>
-          </div>
-        </div>
         {/* Absolutely Centered Text */}
         <div className="items-center flex-col  bg-black mt-20 md:mt-14 relative justify-center min-h-screen  flex ">
           <SecondSection />

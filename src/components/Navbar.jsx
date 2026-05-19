@@ -1,21 +1,30 @@
 import React, { useEffect, useState } from "react";
 import MobileNav from "../pages/MobileNav";
+import MobileNav3 from "../pages/MobileNav3";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import gsap from "gsap";
 
 import worldsmall from "../assets/worldsmall.png";
+import logo from "../assets/logo.png";
 import logo2 from "../assets/logo2.png";
+import CursorHover from "../utils/Hover";
 
-const Navbar = () => {
+const Navbar = ({
+  variant = "default",
+  logoLight: customLogoLight,
+  logoDark: customLogoDark,
+  showCursorHover = false,
+}) => {
   const location = useLocation();
   const navigate = useNavigate();
 
+  const resolvedLogoLight = customLogoLight || logo;
+  const resolvedLogoDark = customLogoDark || logo2;
+
   const [isSection2, setIsSection2] = useState(false);
   const [isToggled, setIsToggled] = useState(false);
-
-  // SHOW / HIDE NAVBAR
   const [showNavbar, setShowNavbar] = useState(true);
 
   useEffect(() => {
@@ -25,15 +34,12 @@ const Navbar = () => {
       const scrollY = window.scrollY;
       const firstSectionHeight = window.innerHeight;
 
-      // SECTION COLOR CHANGE
       setIsSection2(scrollY > firstSectionHeight * 0.2);
 
       // NAVBAR HIDE / SHOW
       if (scrollY > lastScrollY && scrollY > 100) {
-        // SCROLL DOWN
         setShowNavbar(false);
       } else {
-        // SCROLL UP
         setShowNavbar(true);
       }
 
@@ -41,7 +47,6 @@ const Navbar = () => {
     };
 
     window.addEventListener("scroll", handleScroll);
-
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
@@ -69,44 +74,59 @@ const Navbar = () => {
     navigate(path);
   };
 
+  const isLanding = variant === "landing";
+  const isDark = variant === "dark";
+
+  // Determine bg/text classes based on variant and section
+  const sectionClasses = isLanding
+    ? isSection2
+      ? "bg-white text-black"
+      : "bg-[#060ebb] text-white"
+    : isDark
+      ? "bg-black text-white"
+      : isSection2
+        ? "bg-white text-black"
+        : "text-[#000000]";
+
+  // Logo for current section
+  const currentLogo = isLanding
+    ? isSection2
+      ? resolvedLogoDark
+      : resolvedLogoLight
+    : isDark
+      ? resolvedLogoLight
+      : resolvedLogoDark;
+
   return (
     <>
       {/* MOBILE NAV */}
       <div className="md:hidden">
-        <MobileNav />
+        {isLanding ? <MobileNav3 /> : <MobileNav />}
       </div>
 
       {/* DESKTOP NAV */}
-      <div className="hidden md:block pt-[10%]">
-
+      <div className="hidden md:block">
         <div
           className={`
             fixed
             top-0
             left-0
             w-full
-            z-[500]
+            z-[1200]
             py-2
             transition-all
             duration-500
             transform
-            ${
-              showNavbar
-                ? "translate-y-0"
-                : "-translate-y-full"
-            }
-            ${
-              isSection2
-                ? "bg-white text-black"
-                : "text-[#000000]"
-            }
+            ${showNavbar ? "translate-y-0" : "-translate-y-full"}
+            ${sectionClasses}
           `}
         >
-          <div className="flex py-2 jost px-4 md:px-10 justify-between items-center">
+          {isLanding && !isSection2 && showCursorHover && <CursorHover />}
 
+          <div className="flex py-2 jost px-4 md:px-10 justify-between items-center">
             {/* LOGO */}
             <img
-              src={logo2}
+              src={currentLogo}
               onClick={() => handleNav("/")}
               className="w-[80px] transition-all duration-700 cursor-pointer"
               alt="Logo"
@@ -114,7 +134,6 @@ const Navbar = () => {
 
             {/* NAVIGATION LINKS */}
             <div className="text-[14px] md:text-[19px] font-semibold flex gap-4 md:gap-14 items-center">
-
               <h1
                 onClick={() => handleNav("/client")}
                 className={`cursor-pointer hover:text-black/50 ${
