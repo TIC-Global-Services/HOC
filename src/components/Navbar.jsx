@@ -112,7 +112,7 @@ const Navbar = ({
             top-0
             left-0
             w-full
-            z-[1200]
+            z-[800]
             py-2
             transition-all
             duration-500
@@ -136,7 +136,7 @@ const Navbar = ({
             <div className="text-[14px] md:text-[19px] font-semibold flex gap-4 md:gap-14 items-center">
               <h1
                 onClick={() => handleNav("/client")}
-                className={`cursor-pointer hover:text-black/50 ${
+                className={`cursor-pointer ${isDark ? "hover:text-[#060ebb]" : "hover:text-black/50"} ${
                   isActiveRoute("/client")
                     ? "text-[#060ebb] border-b-2 border-[#060ebb]"
                     : ""
@@ -147,7 +147,7 @@ const Navbar = ({
 
               <h1
                 onClick={() => handleNav("/services")}
-                className={`cursor-pointer hover:text-black/50 ${
+                className={`cursor-pointer ${isDark ? "hover:text-[#060ebb]" : "hover:text-black/50"} ${
                   isActiveRoute("/services")
                     ? "text-[#060ebb] border-b-2 border-[#060ebb]"
                     : ""
@@ -158,7 +158,7 @@ const Navbar = ({
 
               <Link
                 to={"/Experience"}
-                className={`hover:text-black/50 ${
+                className={`${isDark ? "hover:text-[#060ebb]" : "hover:text-black/50"} ${
                   isActiveRoute("/Experience")
                     ? "text-[#060ebb] border-b-2 border-[#060ebb]"
                     : ""
@@ -169,7 +169,7 @@ const Navbar = ({
 
               <h1
                 onClick={() => handleNav("/ethos")}
-                className={`cursor-pointer hover:text-black/50 ${
+                className={`cursor-pointer ${isDark ? "hover:text-[#060ebb]" : "hover:text-black/50"} ${
                   isActiveRoute("/ethos")
                     ? "text-[#060ebb] border-b-2 border-[#060ebb]"
                     : ""
@@ -180,7 +180,7 @@ const Navbar = ({
 
               <h1
                 onClick={() => handleNav("/careers")}
-                className={`cursor-pointer hover:text-black/50 ${
+                className={`cursor-pointer ${isDark ? "hover:text-[#060ebb]" : "hover:text-black/50"} ${
                   isActiveRoute("/careers")
                     ? "text-[#060ebb] border-b-2 border-[#060ebb]"
                     : ""

@@ -48,7 +48,7 @@ const Landing = () => {
       <div
         className={`${
           isSection2 ? "bg-white text-[#060ebb]" : "bg-[#060ebb] text-white"
-        } relative cursor-pointer transition-all !z-[700]  duration-700`}
+        } relative cursor-pointer transition-all z-[600] duration-700`}
         style={{ minHeight: "100vh" }}
       >
         {/* Centered Text */}

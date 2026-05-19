@@ -30,7 +30,7 @@ const Ethos = () => {
     <>
       <Navbar />
       <div
-        className="bg-white !z-[1100] jost relative"
+        className="bg-white isolate jost relative"
         style={{ minHeight: "100vh" }}
       >
         {/* Absolutely Centered Text */}

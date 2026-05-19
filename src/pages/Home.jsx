@@ -355,7 +355,7 @@ const ThirdSection = () => {
           loop
           controls={false}
           playsInline
-          className="block w-full h-auto object-contain scale-125"
+          className="block w-full h-auto object-contain scale-100"
         >
           <source
             src={videoSource}
