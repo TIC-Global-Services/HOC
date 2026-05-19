@@ -18,7 +18,7 @@ const ShowReel = () => {
     <section className="w-full md:h-screen overflow-hidden relative bg-white">
       <video
         ref={videoRef}
-        src="/video/showReel-HP.mp4"
+        src="/video/showreel-sd.mov"
         autoPlay
         muted
         loop
