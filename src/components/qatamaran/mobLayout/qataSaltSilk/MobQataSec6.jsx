@@ -10,7 +10,7 @@ const MobQataSec6 = () => {
         <img
           src={qataRightImg}
           alt=""
-          className="w-full h-full object-cover"
+          className="w-full h-full object-cover-[center_40%]"
         />
       </div>
 
