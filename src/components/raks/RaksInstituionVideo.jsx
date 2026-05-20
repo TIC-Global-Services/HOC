@@ -1,7 +1,7 @@
 import { useRef } from "react";
 import { motion } from "framer-motion";
 import useMobileVideoFix from "../../hooks/useMobileVideo";
-import video from "../../assets/client/raks/vdo/Raks Animation 1.mp4";
+import video from "../../assets/client/raks/vdo/Raks_animation1.mp4";
 
 const RaksInstitutionVideo = () => {
   const videoRef = useRef(null);

@@ -86,7 +86,7 @@ const Navbar = ({
       ? "bg-black text-white"
       : isSection2
         ? "bg-white text-black"
-        : "text-[#000000]";
+        : "bg-white text-[#000000]";
 
   // Logo for current section
   const currentLogo = isLanding
