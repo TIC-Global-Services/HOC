@@ -158,7 +158,7 @@ const HausOfChaos = () => {
         </div>
 
         {/* Bottom Footer */}
-        <div className="absolute left-0 px-4 md:px-20 bottom-6 md:bottom-10 flex flex-col-reverse md:flex-row items-start md:gap-0 gap-12 md:justify-between w-full">
+        <div className="absolute left-0 px-4 md:px-20 bottom-2 md:bottom-10 flex flex-col-reverse md:flex-row items-start md:gap-0 gap-12 md:justify-between w-full">
           <Link
             to="/"
             onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}

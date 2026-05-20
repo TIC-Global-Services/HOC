@@ -42,11 +42,11 @@ const SyedHero = () => {
 
         <div className="relative w-full h-[500px] md:h-screen md:w-1/2 overflow-hidden flex-shrink-0">
           {/* GRID */}
-          <GridOverlay color="0,0,0" opacity={0.20} size={100} position="99px 0px" />
+          <GridOverlay color="0,0,0" opacity={0.20} size={100} position="99px 0px" offsetY={70} />
           {/* FLOATING IMAGES */}
           <img
             src={img1}
-            className="float-1 absolute top-[5%] left-[10%] w-[40px] sm:w-[60px] md:w-[80px] xl:w-[130px]"
+            className="float-1 absolute top-[15%] left-[10%] w-[40px] sm:w-[60px] md:w-[80px] xl:w-[130px]"
           />
           <img
             src={img2}

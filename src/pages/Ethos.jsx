@@ -94,7 +94,7 @@ const Ethos = () => {
 
           {/* Adding smooth infinite rotation */}
           <motion.div
-            className="w-[80%]  mt-4 md:-mt-10 -top-4 !z-[-800] relative left-10 md:left-16 md:top-[19rem] overflow-hidden"
+            className="w-[80%] mt-4 md:-mt-10 -top-4 !z-[-800] relative left-10 md:left-16 md:top-[19rem] overflow-hidden"
             animate={{ rotate: 360 }}
           >
             <video

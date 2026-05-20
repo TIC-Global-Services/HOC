@@ -115,6 +115,7 @@ export default function MobModernLegacy() {
             opacity={0.15}
             size={100}
             position="99px 0px"
+            offsetY={120}
           />
       {/* MOBILE HEADING */}
       <h2 className="absolute left-1/2 -translate-x-1/2 top-[75px] z-10 salo text-[#E96428] text-[30px] uppercase text-center leading-none">

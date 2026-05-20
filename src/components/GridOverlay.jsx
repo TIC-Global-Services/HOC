@@ -3,9 +3,13 @@ const GridOverlay = ({
   opacity = 0.06,
   size = 100,
   position = "0px 0px",
+  offsetY = 0,
 }) => {
   return (
-    <div className="absolute inset-0 pointer-events-none z-0 overflow-hidden">
+    <div
+      className="absolute inset-x-0 bottom-0 pointer-events-none z-0 overflow-hidden"
+      style={{ top: `${offsetY}px` }}
+    >
       <div
         className="w-full h-full"
         style={{

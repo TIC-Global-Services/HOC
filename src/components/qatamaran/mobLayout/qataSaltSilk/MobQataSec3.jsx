@@ -10,10 +10,10 @@ const MobQataSec3 = () => {
   useScrollFloat(iconRef, { yFactor: 0.6, rFactor: 0.3 });
 
   return (
-    <section className="w-full h-[90vh] flex flex-col overflow-hidden">
+    <section className="w-full h-full flex flex-col overflow-hidden">
 
       {/* TOP IMAGE */}
-      <div className="w-full h-[50vh]">
+      <div className="w-full h-[60vh] relative">
         <img
           src={qataLeftImg}
           alt=""

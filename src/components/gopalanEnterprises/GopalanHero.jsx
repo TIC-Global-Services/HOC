@@ -50,6 +50,7 @@ const GopalanHero = () => {
             opacity={0.2}
             size={100}
             position="99px 0px"
+            offsetY={70}
           />
 
           {/* FLOATING IMAGES */}

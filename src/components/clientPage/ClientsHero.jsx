@@ -4,7 +4,7 @@ import starImg from "../../assets/client/page/endIcon.png";
 
 const ClientsHero = () => {
   return (
-    <div className="items-center flex-col relative justify-center h-[50vh] md:h-screen flex px-10 md:-mt-[10%]">
+    <div className="relative flex h-[50vh] flex-col justify-center px-10 pt-24 items-center md:min-h-screen md:pt-32">
 
       {/* CLIENT Title  */}
       <div className="relative inline-block">
@@ -12,10 +12,8 @@ const ClientsHero = () => {
         {/* Button image */}
         <motion.img
           src={heroCallout}
-          className="absolute w-[50px] md:w-[200px] z-[1]"
+          className="absolute left-[2%] top-[-3rem] w-[50px] z-[1] md:top-[-14rem] md:w-[200px]"
           style={{
-            left: "5%",     
-            bottom: "100%", 
             rotate: "-15deg",
           }}
           alt="Button"
@@ -26,7 +24,7 @@ const ClientsHero = () => {
 
         {/* CLIENTS text*/}
         <motion.h1
-          className="relative font-[1000] px-10 mt-40 md:!mt-20 md:leading-[0px] md:tracking-tight text-7xl md:text-[clamp(2rem,35vh,260px)] alinsa text-[#060ebb] z-[10]"
+          className="relative mt-24 px-10 font-[1000] text-7xl alinsa text-[#060ebb] z-[10] md:mt-8 md:leading-[0px] md:tracking-tight md:text-[clamp(2rem,35vh,260px)]"
           initial={{ scale: 0.8, opacity: 0 }}
           animate={{ scale: 1, opacity: 1 }}
           transition={{ duration: 0.5, ease: "easeOut" }}

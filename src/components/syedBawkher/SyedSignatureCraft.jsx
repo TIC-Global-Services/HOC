@@ -1,4 +1,4 @@
-import React, { useRef, useEffect } from "react";
+import React, { useRef, useLayoutEffect } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
@@ -28,13 +28,15 @@ export default function SyedSignatureCraft() {
     }
   };
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     const container = containerRef.current;
 
     if (!container) return;
 
     let ctx;
     let rafId;
+    let resizeTimeout;
+    let cancelled = false;
 
     // TOTAL WIDTH
 
@@ -45,6 +47,11 @@ export default function SyedSignatureCraft() {
     // INIT
 
     const init = () => {
+      if (cancelled) return;
+
+      ctx?.revert();
+      gsap.set(container, { x: 0 });
+
       ctx = gsap.context(() => {
         // HORIZONTAL SCROLL
         gsap.to(container, {
@@ -124,30 +131,55 @@ export default function SyedSignatureCraft() {
 
       // FINAL REFRESH
       requestAnimationFrame(() => {
-        ScrollTrigger.refresh();
+        if (!cancelled) {
+          ScrollTrigger.refresh();
+        }
       });
     };
 
 
-    // WAIT FOR FULL PAGE LOAD
+    // WAIT FOR ALL IMAGES TO DECODE + LAYOUT, THEN INIT
 
-    const handleLoad = () => {
-      setTimeout(() => {
-        init();
+    const waitForImages = async () => {
+      if (!container) return;
+      const imgs = container.querySelectorAll("img");
+      await Promise.all(
+        Array.from(imgs).map(async (img) => {
+          if (!img.complete || img.naturalWidth === 0) {
+            await new Promise((resolve) => {
+              img.addEventListener("load", resolve, { once: true });
+              img.addEventListener("error", resolve, { once: true });
+            });
+          }
 
-        ScrollTrigger.refresh();
-      }, 500);
+          if (img.decode) {
+            try {
+              await img.decode();
+            } catch {
+              // Ignore decode errors and let layout proceed with the loaded asset.
+            }
+          }
+        }),
+      );
     };
 
-    if (document.readyState === "complete") {
-      handleLoad();
-    } else {
-      window.addEventListener("load", handleLoad);
-    }
+    const handleLoad = async () => {
+      await waitForImages();
+      if (cancelled) return;
+
+      // Double rAF ensures browser has laid out decoded images
+      await new Promise((resolve) => requestAnimationFrame(resolve));
+      await new Promise((resolve) => requestAnimationFrame(resolve));
+
+      if (cancelled) return;
+
+      init();
+      ScrollTrigger.refresh();
+    };
+
+    handleLoad();
 
     // RESIZE REFRESH
-  
-    let resizeTimeout;
 
     const handleResize = () => {
       clearTimeout(resizeTimeout);
@@ -159,11 +191,11 @@ export default function SyedSignatureCraft() {
 
     window.addEventListener("resize", handleResize);
     return () => {
+      cancelled = true;
+
       cancelAnimationFrame(rafId);
 
       clearTimeout(resizeTimeout);
-
-      window.removeEventListener("load", handleLoad);
 
       window.removeEventListener("resize", handleResize);
 

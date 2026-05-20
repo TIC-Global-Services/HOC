@@ -1,4 +1,4 @@
-import { useEffect, useRef } from "react";
+import { useLayoutEffect, useRef } from "react";
 import React from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import gsap from "gsap";
@@ -98,7 +98,7 @@ export default function SyedTailorHeritage() {
     }
   };
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     if (window.innerWidth < 768) return;
 
     const track = trackRef.current;
@@ -109,12 +109,18 @@ export default function SyedTailorHeritage() {
     let ctx;
     let rafId;
     let resizeTimeout;
+    let cancelled = false;
 
     const getTotal = () => {
       return Math.max(track.scrollWidth - window.innerWidth, 0);
     };
 
     const init = () => {
+      if (cancelled) return;
+
+      ctx?.revert();
+      gsap.set(track, { x: 0 });
+
       ctx = gsap.context(() => {
         // HORIZONTAL SCROLL
         gsap.to(track, {
@@ -193,24 +199,51 @@ export default function SyedTailorHeritage() {
 
       // FINAL REFRESH
       requestAnimationFrame(() => {
-        ScrollTrigger.refresh();
+        if (!cancelled) {
+          ScrollTrigger.refresh();
+        }
       });
     };
 
 
-    const handleLoad = () => {
-      setTimeout(() => {
-        init();
+    const waitForImages = async () => {
+      if (!track) return;
+      const imgs = track.querySelectorAll("img");
+      await Promise.all(
+        Array.from(imgs).map(async (img) => {
+          if (!img.complete || img.naturalWidth === 0) {
+            await new Promise((resolve) => {
+              img.addEventListener("load", resolve, { once: true });
+              img.addEventListener("error", resolve, { once: true });
+            });
+          }
 
-        ScrollTrigger.refresh();
-      }, 500);
+          if (img.decode) {
+            try {
+              await img.decode();
+            } catch {
+              // Ignore decode errors and let layout proceed with the loaded asset.
+            }
+          }
+        }),
+      );
     };
 
-    if (document.readyState === "complete") {
-      handleLoad();
-    } else {
-      window.addEventListener("load", handleLoad);
-    }
+    const handleLoad = async () => {
+      await waitForImages();
+      if (cancelled) return;
+
+      // Double rAF ensures browser has laid out decoded images
+      await new Promise((resolve) => requestAnimationFrame(resolve));
+      await new Promise((resolve) => requestAnimationFrame(resolve));
+
+      if (cancelled) return;
+
+      init();
+      ScrollTrigger.refresh();
+    };
+
+    handleLoad();
 
     const handleResize = () => {
       clearTimeout(resizeTimeout);
@@ -223,11 +256,11 @@ export default function SyedTailorHeritage() {
     window.addEventListener("resize", handleResize);
 
     return () => {
+      cancelled = true;
+
       cancelAnimationFrame(rafId);
 
       clearTimeout(resizeTimeout);
-
-      window.removeEventListener("load", handleLoad);
 
       window.removeEventListener("resize", handleResize);
 

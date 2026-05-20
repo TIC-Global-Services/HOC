@@ -16,7 +16,7 @@ const ClientPage = () => {
         <div className='md:hidden'>
         <ClientHero />
         </div>
-        <div className='md:block hidden mt-[10%]'>
+        <div className='hidden md:block'>
         <ClientsHero />
         </div>
         <ClientsCreativity />

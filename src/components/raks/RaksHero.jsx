@@ -29,10 +29,11 @@ const RaksHero = () => {
             opacity={0.20}
             size={100}
             position="99px 0px"
+            offsetY={70}
           />
           <img
             src={img2}
-            className="float-1 absolute top-[10%] left-[10%] w-[50px] md:w-[80px] xl:w-[180px]"
+            className="float-1 absolute top-[15%] left-[10%] w-[50px] md:w-[80px] xl:w-[180px]"
           />
           <img
             src={img1}
