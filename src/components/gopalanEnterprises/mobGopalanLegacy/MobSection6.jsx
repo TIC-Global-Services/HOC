@@ -1,6 +1,6 @@
 import { useRef } from "react";
 
-import centerVideo from "../../../assets/client/gopalan/GE_Visual Identity 1_Animation.mp4";
+import centerVideo from "../../../assets/client/gopalan/GE_Visual_identity_1_animation.mp4";
 
 import useMobileVideoFix from "../../../hooks/useMobileVideo";
 import GridOverlay from "../../GridOverlay";

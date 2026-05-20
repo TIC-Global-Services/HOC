@@ -42,8 +42,8 @@ const MobSyedTailoring = () => {
         alt="icon"
         className="
           absolute 
-          top-[10%] 
-          right-[10%] 
+          top-[5%] 
+          right-[25%] 
           w-[25vw] 
           max-w-[120px]
           z-10

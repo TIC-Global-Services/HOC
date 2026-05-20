@@ -8,7 +8,7 @@ const PadlrVideoSec2 = () => {
       useMobileVideoFix(videoRef);
 
   return (
-    <section className="w-full min-h-screen md:hidden relative bg-[#0505CA] overflow-hidden">
+    <section className="w-full md:hidden relative bg-[#0506C3] overflow-hidden">
 
       <video
         ref={videoRef}
@@ -20,7 +20,7 @@ const PadlrVideoSec2 = () => {
         webkit-playsinline="true"
         preload="auto"
         playsInline
-        className="absolute inset-0 w-full h-full object-contain"
+        className="w-full h-auto"
       />
 
     </section>

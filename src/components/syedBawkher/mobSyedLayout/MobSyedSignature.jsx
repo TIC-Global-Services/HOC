@@ -31,7 +31,7 @@ const MobSyedSignature = () => {
             ref={topIconRef}
             src={circleLogoImg}
             alt="icon"
-            className="absolute right-4 top-0 -translate-y-1/2 w-[90px]"
+            className="absolute right-4 top-0 -translate-y-1/2 w-[80px]"
           />
         </div>
 

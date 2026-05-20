@@ -3,7 +3,7 @@ import video2 from "../../../../assets/client/padlr/vdo/Padlr_Animation_3.mp4";
 
 const Section8 = () => {
   return (
-    <section className="relative w-full h-screen overflow-hidden bg-[#0506C3]">
+    <section className="relative w-full h-screen overflow-hidden bg-[#0505CA]">
       <video
         src={video2}
         autoPlay
@@ -19,7 +19,7 @@ const Section8 = () => {
           h-full
           -translate-x-1/2
           -translate-y-1/2
-          object-contain bg-[#0506C3]
+          object-contain
           will-change-transform
         "
       />

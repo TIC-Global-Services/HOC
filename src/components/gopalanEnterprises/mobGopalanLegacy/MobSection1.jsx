@@ -3,7 +3,7 @@ import useScrollFloat from "../../../hooks/useMobileVideo";
 
 import minimalImg from "../../../assets/client/gopalan/heroImg1.png";
 import strokeImg from "../../../assets/client/gopalan/heroImg4.png";
-import GEVideo from "../../../assets/client/gopalan/GE_Visual Identity 2_Animaiton.mp4";
+import GEVideo from "../../../assets/client/gopalan/GE_Visual_identity_2_animation.mp4";
 
 const MobSection1 = () => {
   const craftRef = useRef(null);
