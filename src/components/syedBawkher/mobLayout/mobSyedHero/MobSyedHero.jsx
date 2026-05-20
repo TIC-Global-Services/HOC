@@ -57,7 +57,7 @@ const MobSyedHero = () => {
         {/* FLOAT IMAGES */}
         <img
           src={img1}
-          className="float-1 absolute top-[20%] left-[10%] w-[100px] z-10"
+          className="float-1 absolute top-[10%] left-[10%] w-[100px] z-10"
         />
 
         <img
@@ -67,12 +67,12 @@ const MobSyedHero = () => {
 
         <img
           src={img3}
-          className="float-3 absolute bottom-[20%] left-[8%] w-[100px] z-10"
+          className="float-3 absolute bottom-[15%] left-[8%] w-[100px] z-10"
         />
 
         <img
           src={img4}
-          className="float-4 absolute bottom-[20%] right-[8%] w-[100px] z-10"
+          className="float-4 absolute bottom-[10%] right-[6%] w-[100px] z-10"
         />
 
         {/* CENTER CONTENT */}

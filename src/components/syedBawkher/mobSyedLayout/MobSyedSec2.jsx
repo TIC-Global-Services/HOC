@@ -49,13 +49,13 @@ const MobSyedSec2 = () => {
         <img
           ref={topRef}
           src={syedCircleImg}
-          className="absolute top-[15%] left-[5%] w-[150px] -rotate-12 z-10"
+          className="absolute top-[5%] left-[5%] w-[150px] -rotate-12 z-10"
         />
 
         <img
           ref={middleRef}
           src={texturalImg}
-          className="absolute top-[10%] right-[5%] w-[150px] z-10"
+          className="absolute top-[20%] right-[5%] w-[150px] z-10"
         />
 
         <img
