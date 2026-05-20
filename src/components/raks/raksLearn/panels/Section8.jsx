@@ -33,7 +33,7 @@ const Section8 = () => {
           <p className="jost capitalize  text-black  tracking-tight
             text-[clamp(14px,4vh,24px)] w-[32ch]">
             Haus of Chaos app branding exercise—an exploration of childhood and the Reggio Emilia philosophy. 
-            Through playful geometries, modular systems, and <span className="text-[clamp(18px,5vh,36px)] salo text-[#000085]">expressive visuals</span>, 
+            Through playful geometries, modular systems, and <span className="text-[clamp(18px,5vh,36px)] salo text-[#000085]">Expressive Visuals</span>, 
             the identity balances clarity with imagination while remaining cohesive across institutions.
           </p>
 

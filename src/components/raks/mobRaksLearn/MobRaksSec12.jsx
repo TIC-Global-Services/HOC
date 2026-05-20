@@ -42,7 +42,7 @@ const MobRaksSec12 = () => {
           modular systems, and{" "}
 
           <span className="text-[#000085] text-[20px] salo">
-            expressive visuals,
+            Expressive Visuals,
           </span>{" "}
 
           the identity balances clarity with imagination while remaining
