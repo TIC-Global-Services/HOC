@@ -58,7 +58,7 @@ const MobSyedSignature = () => {
           />
 
           {/* TITLE */}
-          <h2 className="salo text-[42px] leading-none uppercase mb-6">
+          <h2 className="salo text-[60px] leading-none uppercase mb-6">
             About
           </h2>
 

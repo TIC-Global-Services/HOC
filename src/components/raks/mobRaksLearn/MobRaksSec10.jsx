@@ -65,7 +65,7 @@ const MobRaksSec10 = () => {
         </h2>
 
         {/* PARAGRAPH */}
-        <p className="jost text-[16px] text-black/60 leading-[120%] text-start max-w-[320px] w-[28ch]">
+        <p className="jost text-[16px] text-black leading-[120%] text-start max-w-[320px] w-[28ch]">
           A thoughtful approach to shaping young minds through purpose,
           rhythm, and meaningful learning.
         </p>

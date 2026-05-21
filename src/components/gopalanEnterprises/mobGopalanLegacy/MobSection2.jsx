@@ -56,7 +56,7 @@ const MobSection2 = () => {
 
         {/* PARA */}
         <div className="pt-10">
-          <p className="jost text-start text-black/60 text-[16px] leading-[120%] max-w-[320px]">
+          <p className="jost text-start text-black text-[16px] leading-[120%] max-w-[320px]">
             Timeless craftsmanship meets contemporary vision.
             Designed for those who value legacy, precision,
             and progress.

@@ -108,7 +108,7 @@ const MobRaksSec4 = () => {
             New Way of Learning
           </h2>
 
-          <p className="jost text-black/40 leading-[16px] tracking-tight text-[16px]">
+          <p className="jost text-black leading-[20px] tracking-tight text-[16px]">
             “At RAKS Pallikkoodam, every student is nurtured to grow with
             confidence, curiosity, and creativity—empowered to learn,
             explore, and shine every single day.”

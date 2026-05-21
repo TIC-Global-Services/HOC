@@ -62,11 +62,11 @@ const MobQataSec2 = () => {
         }}
       >
         <div className="flex flex-col gap-8 text-start">
-          <h2 className="salo text-[#1E382D] uppercase leading-none text-[50px]">
+          <h2 className="salo text-[#1E382D] uppercase leading-none text-[3.125rem]">
             Tide bound <br /> Tailoring
           </h2>
 
-          <p className="jost font-[400] text-black/50 text-[16px] w-[28ch] leading-[100%]">
+          <p className="jost font-[400] text-black text-[16px] w-[28ch] leading-[100%]">
             Classic techniques meet contemporary expression. Designed for the
             man who moves with quiet confidence.
           </p>

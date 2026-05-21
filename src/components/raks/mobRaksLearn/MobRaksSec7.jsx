@@ -92,7 +92,7 @@ const MobRaksSec7 = () => {
           Learn Beyond Limits
         </h2>
 
-        <p className="jost text-black/50 text-[16px] leading-[16px] tracking-tight">
+        <p className="jost text-black text-[16px] leading-tight tracking-tight">
           From academics to arts and sports, every talent finds its place.
           A balanced approach to learning, creativity, and growth.
           Nurturing skills beyond the classroom for a brighter future.

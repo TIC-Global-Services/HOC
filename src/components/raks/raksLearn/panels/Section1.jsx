@@ -134,7 +134,7 @@ export default function RaksLearning() {
                 className="jost text-[#FFCEC8] leading-[140%] border-t border-b border-white px-5 py-10"
                 style={{ fontSize: "clamp(11px, 1.6vw, 24px)" }}
               >
-                RaK’s Institutions is a forward-thinking school rooted in the
+                RAKS Institutions is a forward-thinking school rooted in the
                 Reggio-Emilia philosophy, where children lead their own learning
                 journeys. Through experiential, sports-integrated, and
                 problem-based approaches.
