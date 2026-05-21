@@ -95,7 +95,7 @@ const MobRaksSec2 = () => {
           src={viVidImg}
           className="
             absolute
-            top-[20%]
+            top-[15%]
             left-[5%]
             w-[150px]
             -rotate-12

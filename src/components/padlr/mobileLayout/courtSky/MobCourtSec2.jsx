@@ -8,7 +8,7 @@ import GridOverlay from "../../../GridOverlay";
 
 const MobCourtSec2 = () => {
   return (
-    <section className="w-full h-[95vh] flex flex-col overflow-hidden relative bg-[#8FC4E9]">
+    <section className="w-full h-screen flex flex-col overflow-hidden relative bg-[#8FC4E9]">
 
       {/* GRID */}
       <div className="absolute inset-0 z-0 pointer-events-none">

@@ -72,7 +72,7 @@ const MobRaksHero = () => {
           className="
             float-1
             absolute
-            top-[20%]
+            top-[15%]
             left-[5%]
             w-[150px]
             -rotate-12
@@ -110,7 +110,7 @@ const MobRaksHero = () => {
           className="
             float-4
             absolute
-            bottom-[20%]
+            bottom-[15%]
             right-[10%]
             w-[130px]
             z-10

@@ -124,7 +124,7 @@ const MobRaksSec4 = () => {
             absolute
             top-4
             left-4
-            w-[70px]
+            w-[100px]
             z-10
           "
         />
@@ -139,7 +139,7 @@ const MobRaksSec4 = () => {
             absolute
             top-4
             right-4
-            w-[80px]
+            w-[100px]
             z-10
           "
         />
@@ -153,8 +153,8 @@ const MobRaksSec4 = () => {
           className="
             absolute
             bottom-2
-            left-[-10px]
-            w-[110px]
+            left-[-2px]
+            w-[120px]
             z-10
           "
         />
@@ -168,7 +168,7 @@ const MobRaksSec4 = () => {
             absolute
             bottom-4
             right-4
-            w-[100px]
+            w-[120px]
             z-10
           "
         />

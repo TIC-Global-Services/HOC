@@ -53,7 +53,7 @@ const MobQataSec1 = () => {
         />
 
         {/* TITLE */}
-        <h2 className="salo text-[60px] leading-none uppercase">About</h2>
+        <h2 className="salo text-[60px] leading-wide uppercase">About</h2>
 
         {/* TEXT */}
         <p className="jost capitalize font-[300] text-[16px] leading-[120%] max-w-[340px] pt-3">

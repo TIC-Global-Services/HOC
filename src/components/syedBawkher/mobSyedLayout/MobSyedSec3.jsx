@@ -18,7 +18,7 @@ const pinRef = useRef(null);
         <img src={topLeftImg} alt="" className="w-full h-full object-contain" />
       </div>
 
-      <div className="absolute inset-0 flex items-center justify-center px-5 py-[22vh] mt-[2%]">
+      <div className="absolute inset-0 flex items-center justify-center px-5 py-[22vh] mt-[5%]">
         <p className="jost text-black text-[16px] leading-[140%] tracking-tight text-start max-w-[330px] capitalize">
           Full-canvas tailoring rooted in generations of expertise.
           A seamless blend of time-honoured{" "}
@@ -30,7 +30,7 @@ const pinRef = useRef(null);
         </p>
       </div>
 
-      <div className="absolute bottom-[5%] left-1/2 -translate-x-1/2 w-[60vw] max-w-[240px]">
+      <div className="absolute bottom-[2%] left-1/2 -translate-x-1/2 w-[60vw] max-w-[240px]">
         <img
           ref={pinRef}
           src={pinIcon}

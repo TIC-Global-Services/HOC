@@ -11,7 +11,7 @@ import GridOverlay from "../../../GridOverlay";
 const MobCourtSec4 = () => {
   return (
     <section
-      className="w-full relative h-[100vh] flex flex-col justify-between px-5 py-8">
+      className="w-full relative h-screen flex flex-col justify-between px-5 py-8">
         {/* GRID */}
       <div className="absolute inset-0 z-0 pointer-events-none">
         <GridOverlay
@@ -76,7 +76,7 @@ const MobCourtSec4 = () => {
         <img
           src={topImg}
           alt=""
-          className="w-[220px] absolute bottom-[2%] right-0"
+          className="w-[200px] h-[234px] absolute bottom-[2%] right-0"
         />
 
       </div>

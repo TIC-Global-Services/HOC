@@ -39,7 +39,7 @@ const MobSection = () => {
           />
 
           {/* ABOUT TITLE */}
-          <h2 className="absolute bottom-4 salo text-[42px] leading-none uppercase">
+          <h2 className="absolute bottom-4 salo text-[60px] leading-none uppercase">
             About
           </h2>
           </div>
