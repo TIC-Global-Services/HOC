@@ -88,7 +88,7 @@ const MobSection3 = () => {
           data-rotate="0"
           src={spinIcon}
           alt="icon"
-          className="absolute right-[10%] top-[50%] w-[60px] z-10"
+          className="absolute right-[10%] top-[80%] w-[60px] z-10"
         />
       </div>
 

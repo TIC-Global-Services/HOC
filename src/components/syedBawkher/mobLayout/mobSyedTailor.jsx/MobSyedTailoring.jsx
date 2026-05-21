@@ -58,7 +58,7 @@ const MobSyedTailoring = () => {
           left-1/2 
           -translate-x-1/2 
           -translate-y-1/2 
-          w-[90%]
+          w-[95%]
           z-10
         "
       >
@@ -72,7 +72,7 @@ const MobSyedTailoring = () => {
             Crafted <br /> In Heritage
           </p>
 
-          <p className="jost font-[400] text-[16px] leading-[22px] tracking-[-0.03em] capitalize text-[#262666]">
+          <p className="jost font-[400] text-[16px] leading-[22px] tracking-[-0.04em] capitalize text-[#262666] max-w-[400px]">
             Syed Bawkher is a heritage tailoring house built on generations
             of craftsmanship—where tradition, precision, and timeless style
             come together. Designed for the modern gentleman, it offers

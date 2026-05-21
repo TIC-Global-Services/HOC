@@ -133,7 +133,7 @@ const FAQ_CATEGORIES = [
   {
     idx: 5,
     id: "others",
-    title: "Other FAQ'S",
+    title: "Other FAQs",
     faqs: [FAQ_DATA[12], FAQ_DATA[13]],
   },
 ];
