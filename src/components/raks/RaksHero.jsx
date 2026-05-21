@@ -91,7 +91,7 @@ const RaksHero = () => {
             "
           >
             <p className="jost text-start font-[500] capitalize text-black  leading-[45px] text-[14px] md:text-[18px] xl:text-[26px] w-[42ch]">
-              RaK's Institutions is a future-forward school rooted in the{" "}
+              RAKS Institutions is a future-forward school rooted in the{" "}
               <span className="salo text-[#000085] text-[18px] md:text-[26px] xl:text-[40px]">
                 Reggio Emilia philosophy,
               </span>{" "}
@@ -99,7 +99,7 @@ const RaksHero = () => {
               grow with purpose. Embracing this spirit, Haus of Chaos crafted an
               identity for{" "}
               <span className="salo text-[#000085] text-[18px] md:text-[26px] xl:text-[40px]">
-                RaK's Pallikkoodam
+                RAKS Pallikkoodam
               </span>{" "}
               that is warm, attentive, and child-centric. The result is a
               playful yet thoughtful visual language and environment designed to

@@ -102,10 +102,11 @@ const MobSection8 = () => {
               jost
               font-[400]
               text-start
-              text-white/80
+              text-white
               max-w-[360px]
               text-[16px]
               leading-[23px]
+              tracking-tight
               capitalize
             "
           >

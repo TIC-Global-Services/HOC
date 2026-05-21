@@ -134,7 +134,7 @@ const MobRaksHero = () => {
       <div className="w-full text-start flex-1 px-5 py-8 flex items-center">
 
         <p className="jost font-medium text-[14px] leading-[24px] tracking-[-0.03em] capitalize w-[45ch] text-black">
-          RaK's Institutions is a future-forward school rooted in the{" "}
+          RAKS Institutions is a future-forward school rooted in the{" "}
 
           <span className="salo text-[#000085] text-[20px] leading-[24px] capitalize">
             Reggio Emilia philosophy,
@@ -145,7 +145,7 @@ const MobRaksHero = () => {
           an identity for{" "}
 
           <span className="salo text-[#000085] text-[20px] leading-[24px] capitalize">
-            RaK's Pallikkoodam
+            RAKS Pallikkoodam
           </span>{" "}
 
           that is warm, attentive, and child-centric.

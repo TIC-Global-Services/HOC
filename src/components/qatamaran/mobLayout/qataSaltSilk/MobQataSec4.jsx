@@ -41,7 +41,7 @@ const MobQataSec4 = () => {
           Where Heritage Meets Modern Elegance
         </h2>
 
-        <p className="jost text-[16px] leading-[130%] font-[400]">
+        <p className="jost text-[16px] leading-[130%] tracking-tighter font-[400]">
           "At Qatamaran, every piece is thoughtfully crafted to embody
           timeless tailoring, coastal inspiration, and effortless
           sophistication—designed for the modern gentleman to wear with

@@ -10,7 +10,7 @@ const slides = [
     for. Ria, the creative director of Haus of Chaos, not only
     conceptualized the journey of how clients experience our brand but
     also responded with remarkable efficiency.`,
-    author: "Rak's Pallikkoodam, 21st century international school",
+    author: "RAKS Pallikkoodam, 21st century international school",
   },
   {
     title: "Client Testimonial",

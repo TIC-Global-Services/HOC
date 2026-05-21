@@ -45,7 +45,7 @@ const Section5 = () => {
         className="absolute text-start"
         style={{
           top: "50%",
-          right: "10%",              
+          right: "5%",              
           transform: "translateY(-50%)",
           maxWidth: "30vw",
         }}

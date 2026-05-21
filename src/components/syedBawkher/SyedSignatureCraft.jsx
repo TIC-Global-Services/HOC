@@ -397,7 +397,7 @@ export default function SyedSignatureCraft() {
                 </h2>
 
                 <p
-                  className="jost text-start text-black leading-[120%] tracking-tight mt-2 pl-3"
+                  className="jost text-start text-black/50 leading-[120%] tracking-tight mt-2 pl-3"
                   style={{
                     fontSize: "clamp(12px,3.5vh,24px)",
                     width: "42ch",

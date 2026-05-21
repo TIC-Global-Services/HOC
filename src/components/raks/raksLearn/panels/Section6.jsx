@@ -171,7 +171,7 @@ const Section6 = () => {
             alt="icon"
             className="object-contain"
             style={{
-              width: "clamp(200px,50vh,500px)",
+              width: "clamp(200px,45vh,500px)",
             }}
           />
         </div>

@@ -83,7 +83,7 @@ const SyedHero = () => {
           transition={{ duration: 0.8, ease: "easeOut" }}
           className="
           absolute
-          top-0
+          top-10
           right-0
           h-screen
           w-full md:w-1/2
