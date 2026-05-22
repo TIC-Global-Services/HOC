@@ -48,7 +48,7 @@ const AutoTextSlider = () => {
           </h1>
           
           {/* TEXT */}
-          <h1 className="text-[#5B636D] px-4 font-[500] md:w-[70%] text-sm md:text-[22px] text-center md:leading-[30px]">
+          <h1 className="text-[#5B636D] px-3 font-[500] md:w-[70%] text-sm md:text-[22px] text-center md:leading-[30px]">
             {slides[index].text}
           </h1>
 
