@@ -69,7 +69,7 @@ const MobSyedSec2 = () => {
           className="absolute px-5 z-10"
           style={{
             top: "50%",
-            left: "50%",
+            left: "60%",
             transform: "translate(-50%, -50%)",
             width: "105%",
           }}
@@ -80,7 +80,7 @@ const MobSyedSec2 = () => {
               PRECISION <br /> TAILORED
             </h2>
 
-            <p className="jost font-[400] text-black tracking-tighter text-[16px] leading-[140%] max-w-[380px] ">
+            <p className="jost font-[400] text-black tracking-tighter text-[16px] leading-[140%] max-w-[280px] ">
               Crafted through generations of expertise, each piece reflects
               precision and purpose. A seamless blend of heritage and
               refinement, tailored for the modern gentleman.

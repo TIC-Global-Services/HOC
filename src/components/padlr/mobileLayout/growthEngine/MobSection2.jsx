@@ -105,7 +105,7 @@ const MobSection2 = () => {
             </h2>
 
             {/* TEXT */}
-            <p className="jost font-[500] text-black text-[clamp(13px,4.5vw,16px)] max-w-[300px] leading-[1] tracking-[-0.02em]">
+            <p className="jost font-[400] text-black text-[clamp(13px,4.5vw,16px)] max-w-[300px] leading-[1] tracking-[-0.02em]">
               Move Better Every Day. Designed for Daily Motion, engineered for
               Performance built for Strength & Balance.
             </p>
