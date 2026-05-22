@@ -66,9 +66,9 @@ const GopalanHero = () => {
           <img
             src={img2}
             alt=""
-            className="float-2 absolute top-[10%] right-[10%] object-contain"
+            className="float-2 absolute top-[15%] right-[10%] object-contain"
             style={{
-              width: "clamp(80px, 20vh, 150px)",
+              width: "clamp(80px, 14vh, 150px)",
             }}
           />
 

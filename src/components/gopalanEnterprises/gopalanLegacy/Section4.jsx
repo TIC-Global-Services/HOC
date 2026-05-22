@@ -43,7 +43,7 @@ const Section4 = () => {
               font-[500]
               text-black
               leading-[160%]
-              tracking-tight
+              tracking-tighter
               text-start
               text-[clamp(14px,2vw,24px)]
             "

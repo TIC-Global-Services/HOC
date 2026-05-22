@@ -91,7 +91,7 @@ const MobSection8 = () => {
               leading-none
             "
           >
-            Shape The Future
+            Shaping The Future
           </p>
         </div>
 
