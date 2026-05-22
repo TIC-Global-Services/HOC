@@ -357,10 +357,10 @@ export default function SyedTailorHeritage() {
               <div
                 className="absolute"
                 style={{
-                  right: "5%",
+                  right: "3%",
                   top: "50%",
                   transform: "translateY(-50%)",
-                  maxWidth: "40%",
+                  maxWidth: "45%",
                 }}
               >
                 <p className="jost text-start text-[24px] leading-[130%] capitalize text-[#262666]">

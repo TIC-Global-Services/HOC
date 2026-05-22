@@ -68,7 +68,7 @@ export default function Section3() {
         {/* ───── LEFT SIDE ───── */}
         <div
           className="flex flex-col justify-between
-        w-[35vw] min-w-[280px] max-w-[550px]
+        w-[40vw] min-w-[300px] max-w-[540px]
         py-[clamp(20px,6vh,60px)]
         px-[clamp(16px,3vw,40px)]"
         >

@@ -13,8 +13,8 @@ const Section3 = () => {
           absolute z-10
           w-[82%]
           lg:w-[78%]
-          xl:w-[72%]
-          2xl:w-[68%]
+          xl:w-[75%]
+          2xl:w-[72%]
         "
         style={{
           top: "6%",
