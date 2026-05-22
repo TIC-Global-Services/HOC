@@ -70,7 +70,7 @@ const Section7 = () => {
       <div className="relative z-10 flex w-full h-full">
 
       {/* LEFT IMAGE */}
-      <div className="w-[45vw] h-full relative overflow-hidden">
+      <div className="w-[45vw] right-4 h-full relative overflow-hidden">
         <img
           src={leftImg}
           alt="left"
@@ -79,7 +79,7 @@ const Section7 = () => {
       </div>
 
       {/* CENTER CONTENT */}
-      <div className="w-[22vw] h-full flex items-center justify-center px-5">
+      <div className="w-[22vw] h-full flex items-center justify-center px-1">
         <div className="text-center max-w-[540px] space-y-[clamp(16px,2vw,44px)]">
 
           {/* ICON (animated) */}
@@ -90,7 +90,7 @@ const Section7 = () => {
             src={centerIcon}
             alt="icon"
             className="mx-auto object-contain"
-            style={{ width: "clamp(60px,14vw,200px)" }}
+            style={{ width: "clamp(70px,16vw,2200px)" }}
           />
 
           {/* HEADING */}
@@ -107,7 +107,7 @@ const Section7 = () => {
       </div>
 
       {/* RIGHT IMAGE */}
-      <div className="w-[70vw] h-full relative overflow-hidden">
+      <div className="w-[70vw] left-2 h-full relative overflow-hidden">
         <img
           src={rightImg}
           alt="right"

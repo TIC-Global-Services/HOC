@@ -139,7 +139,7 @@ const Section4 = () => {
             }}
           >
             <p
-              className="jost text-start text-black capitalize leading-[150%] tracking-tight font-[500]"
+              className="jost text-start text-black capitalize leading-[150%] tracking-tighter font-[500]"
               style={{
                 fontSize: "clamp(14px,4vh,24px)",
                 lineHeight: "150%",

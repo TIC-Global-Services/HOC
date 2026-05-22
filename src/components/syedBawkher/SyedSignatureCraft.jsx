@@ -1,4 +1,4 @@
-import React, { useRef, useLayoutEffect } from "react";
+import React, { useRef, useEffect } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
@@ -28,162 +28,90 @@ export default function SyedSignatureCraft() {
     }
   };
 
-  useLayoutEffect(() => {
-    const container = containerRef.current;
+  useEffect(() => {
+    // Only run on desktop — mobile doesn't need horizontal scroll
+    if (window.innerWidth < 768) return;
 
+    const container = containerRef.current;
     if (!container) return;
 
     let ctx;
     let rafId;
     let resizeTimeout;
-    let cancelled = false;
 
     // TOTAL WIDTH
-
     const getTotal = () => {
       return Math.max(container.scrollWidth - window.innerWidth, 0);
     };
 
-    // INIT
+    ctx?.revert();
+    gsap.set(container, { x: 0 });
 
-    const init = () => {
-      if (cancelled) return;
+    ctx = gsap.context(() => {
+      // HORIZONTAL SCROLL
+      gsap.to(container, {
+        x: () => -getTotal(),
+        ease: "none",
+        scrollTrigger: {
+          trigger: container.parentElement,
+          start: "top top",
+          end: () => `+=${getTotal()}`,
+          pin: true,
+          scrub: 1.2,
+          anticipatePin: 1,
+          invalidateOnRefresh: true,
+          fastScrollEnd: true,
+        },
+      });
+    }, container);
 
-      ctx?.revert();
-      gsap.set(container, { x: 0 });
+    // FLOATING ICONS
+    const qs = iconRefs.current.map((el) => ({
+      el,
+      setX: gsap.quickTo(el, "x", {
+        duration: 1,
+        ease: "power3.out",
+      }),
+      setY: gsap.quickTo(el, "y", {
+        duration: 0.8,
+        ease: "power3.out",
+      }),
+      setR: gsap.quickTo(el, "rotation", {
+        duration: 1,
+        ease: "power3.out",
+      }),
+    }));
 
-      ctx = gsap.context(() => {
-        // HORIZONTAL SCROLL
-        gsap.to(container, {
-          x: () => -getTotal(),
+    let lastScrollY = window.scrollY;
+    let velocity = 0;
 
-          ease: "none",
+    const tick = () => {
+      const scrollY = window.scrollY;
+      const delta = scrollY - lastScrollY;
+      lastScrollY = scrollY;
+      velocity += (delta - velocity) * 0.15;
 
-          scrollTrigger: {
-            trigger: container.parentElement,
-
-            start: "top top",
-
-            end: () => `+=${getTotal()}`,
-
-            pin: true,
-
-            scrub: 1.2,
-
-            anticipatePin: 1,
-
-            invalidateOnRefresh: true,
-
-            fastScrollEnd: true,
-          },
-        });
-      }, container);
-
-      // FLOATING ICONS
-
-      const qs = iconRefs.current.map((el) => ({
-        el,
-
-        setX: gsap.quickTo(el, "x", {
-          duration: 1,
-          ease: "power3.out",
-        }),
-
-        setY: gsap.quickTo(el, "y", {
-          duration: 0.8,
-          ease: "power3.out",
-        }),
-
-        setR: gsap.quickTo(el, "rotation", {
-          duration: 1,
-          ease: "power3.out",
-        }),
-      }));
-
-      let lastScrollY = window.scrollY;
-      let velocity = 0;
-
-      const tick = () => {
-        const scrollY = window.scrollY;
-
-        const delta = scrollY - lastScrollY;
-
-        lastScrollY = scrollY;
-
-        velocity += (delta - velocity) * 0.15;
-
-        qs.forEach(({ el, setX, setY, setR }) => {
-          const speed = parseFloat(el.dataset.speed || 0.5);
-
-          const baseRotate = parseFloat(el.dataset.rotate || 0);
-
-          setX(velocity * speed * 4);
-
-          setY(velocity * speed * 0.8);
-
-          setR(baseRotate + velocity * speed * 0.6);
-        });
-
-        rafId = requestAnimationFrame(tick);
-      };
+      qs.forEach(({ el, setX, setY, setR }) => {
+        const speed = parseFloat(el.dataset.speed || 0.5);
+        const baseRotate = parseFloat(el.dataset.rotate || 0);
+        setX(velocity * speed * 4);
+        setY(velocity * speed * 0.8);
+        setR(baseRotate + velocity * speed * 0.6);
+      });
 
       rafId = requestAnimationFrame(tick);
-
-      // FINAL REFRESH
-      requestAnimationFrame(() => {
-        if (!cancelled) {
-          ScrollTrigger.refresh();
-        }
-      });
     };
 
+    rafId = requestAnimationFrame(tick);
 
-    // WAIT FOR ALL IMAGES TO DECODE + LAYOUT, THEN INIT
-
-    const waitForImages = async () => {
-      if (!container) return;
-      const imgs = container.querySelectorAll("img");
-      await Promise.all(
-        Array.from(imgs).map(async (img) => {
-          if (!img.complete || img.naturalWidth === 0) {
-            await new Promise((resolve) => {
-              img.addEventListener("load", resolve, { once: true });
-              img.addEventListener("error", resolve, { once: true });
-            });
-          }
-
-          if (img.decode) {
-            try {
-              await img.decode();
-            } catch {
-              // Ignore decode errors and let layout proceed with the loaded asset.
-            }
-          }
-        }),
-      );
-    };
-
-    const handleLoad = async () => {
-      await waitForImages();
-      if (cancelled) return;
-
-      // Double rAF ensures browser has laid out decoded images
-      await new Promise((resolve) => requestAnimationFrame(resolve));
-      await new Promise((resolve) => requestAnimationFrame(resolve));
-
-      if (cancelled) return;
-
-      init();
+    // Final refresh after layout settles
+    requestAnimationFrame(() => {
       ScrollTrigger.refresh();
-    };
-
-    handleLoad();
+    });
 
     // RESIZE REFRESH
-
     const handleResize = () => {
       clearTimeout(resizeTimeout);
-
       resizeTimeout = setTimeout(() => {
         ScrollTrigger.refresh();
       }, 300);
@@ -191,20 +119,15 @@ export default function SyedSignatureCraft() {
 
     window.addEventListener("resize", handleResize);
     return () => {
-      cancelled = true;
-
       cancelAnimationFrame(rafId);
-
       clearTimeout(resizeTimeout);
-
       window.removeEventListener("resize", handleResize);
-
       ctx?.revert();
     };
   }, []);
 
   return (
-    <div className="h-screen">
+    <div className="h-screen overflow-hidden">
       <div
         ref={containerRef}
         className="flex h-full"
@@ -397,7 +320,7 @@ export default function SyedSignatureCraft() {
                 </h2>
 
                 <p
-                  className="jost text-start text-black/50 leading-[120%] tracking-tight mt-2 pl-3"
+                  className="jost text-start text-black leading-[120%] tracking-tight mt-2 pl-3"
                   style={{
                     fontSize: "clamp(12px,3.5vh,24px)",
                     width: "42ch",
