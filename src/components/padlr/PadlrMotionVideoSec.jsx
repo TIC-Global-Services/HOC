@@ -1,5 +1,5 @@
 import { useRef } from "react";
-import video from "../../assets/client/padlr/vdo/Padlr_Animation1.mov";
+import video from "../../assets/client/padlr/vdo/padlr_animation_1_final.mp4";
 import useMobileVideoFix from "../../hooks/useMobileVideo";
 
 const PadlrMotionVideoSec = () => {
@@ -22,7 +22,8 @@ const PadlrMotionVideoSec = () => {
         preload="auto"
         className="
         w-full h-auto
-        md:absolute md:inset-0 md:w-full md:h-full md:object-contain md:object-center
+        object-cover object-center
+        md:absolute md:inset-0 md:w-full md:h-full md:object-contain md:object-center 
       "
       />
 

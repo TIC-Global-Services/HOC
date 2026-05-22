@@ -57,7 +57,7 @@ const GopalanHero = () => {
           <img
             src={img1}
             alt=""
-            className="float-1 absolute top-[15%] left-[10%] object-contain"
+            className="float-1 absolute top-[20%] left-[10%] object-contain"
             style={{
               width: "clamp(70px, 30vh, 150px)",
             }}
@@ -66,9 +66,9 @@ const GopalanHero = () => {
           <img
             src={img2}
             alt=""
-            className="float-2 absolute top-[15%] right-[10%] object-contain"
+            className="float-2 absolute top-[18%] right-[10%] object-contain"
             style={{
-              width: "clamp(80px, 14vh, 150px)",
+              width: "clamp(80px, 16vh, 150px)",
             }}
           />
 
@@ -91,7 +91,7 @@ const GopalanHero = () => {
           />
 
           {/* CONTENT */}
-          <div className="w-full h-full flex flex-col items-center justify-center gap-4 md:gap-6 px-4 relative z-10">
+          <div className="w-full h-full flex flex-col items-center justify-center gap-4 md:gap-6 px-4 relative z-10" style={{ paddingTop: "clamp(40px, 18vh, 120px)" }}>
             <h1
               className="font-[1000] alinsa text-[#060EBB] leading-none text-center tracking-tight "
               style={{ fontSize: "clamp(48px, 18vh, 140px)" }}

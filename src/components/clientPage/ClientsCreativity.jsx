@@ -1,23 +1,25 @@
 import { motion } from "framer-motion";
-import creativityVideo from "../../assets/client/page/vinyl_new.mp4";
+import creativityVideo from "../../assets/client/page/vinyl_new_2.mp4";
 
 const ClientsCreativity = () => {
   return (
     <div className="flex flex-col md:flex-row items-center justify-center mt-[-35%] md:-mt-[10%] gap-10 px-4">
       
       {/* Left Video */}
+      <div className="w-1/2 rounded-[20px] overflow-hidden">
       <motion.video
         src={creativityVideo}
         autoPlay
         muted
         loop
         playsInline
-        className="block w-1/2 h-full rounded-[20px] object-cover"
+        className="block w-full h-full object-cover scale[1.005]"
         initial={{ x: -100, opacity: 0 }}
         whileInView={{ x: 0, opacity: 1 }}
         viewport={{ once: true }}
         transition={{ type: "spring", stiffness: 120, damping: 10 }}
       />
+      </div>
 
       {/* Right Text */}
       <motion.p
