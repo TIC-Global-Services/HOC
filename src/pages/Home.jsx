@@ -353,6 +353,7 @@ const ThirdSection = () => {
           autoPlay
           muted
           loop
+          preload="metadata"
           controls={false}
           playsInline
           className="block w-full h-auto object-contain scale-100"

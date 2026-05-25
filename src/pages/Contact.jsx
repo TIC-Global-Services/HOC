@@ -29,7 +29,7 @@ const Contact = () => {
 // import svg4 from "../assets/hover/element3-min.png";
 import svg5 from "../assets/hover/element5-min.png";
 import svg6 from "../assets/hover/element6-min.png";
-import flowerImg from '../assets/hover/flowerImg.png'
+import flowerImg from "../assets/hover/flowerImg.png";
 // https://ik.imagekit.io/7da6fpjdo/hover/element5-min.png?updatedAt=1741945058062
 
 // import lin from "../assets/lin.png";
@@ -42,39 +42,37 @@ import arrow from "../assets/down-arrow.png";
 const images = [
   {
     src: flowerImg,
-    className: "bottom-80 !w-1/4 left-0",
+    className: "top-[35%] left-[2%] w-[18vh] max-w-[280px]",
     link: "/Contact",
     rotate: 0,
   },
   {
-    src: "https://res.cloudinary.com/dek8wxl7o/image/upload/v1749622005/1_1_vtehrn.png",
-    className: "bottom-10 !w-[40%] -left-10",
+    src: "https://res.cloudinary.com/dek8wxl7o/image/upload/f_auto,q_auto,w_1000/v1749622005/1_1_vtehrn.png",
+    className: "bottom-[5%] left-[0%] w-[32vh] max-w-[400px]",
     link: "https://www.linkedin.com/company/hausofchaos/",
     rotate: -20,
   },
   {
-    src: "https://res.cloudinary.com/dek8wxl7o/image/upload/v1749308707/instagram_k17dfc.png",
-    className: "bottom-[24rem] !w-[40%] left-[25rem]",
+    src: "https://res.cloudinary.com/dek8wxl7o/image/upload/f_auto,q_auto,w_1000/v1749308707/instagram_k17dfc.png",
+    className: "top-[20%] left-[28%] w-[28vh] max-w-[400px]",
     link: "https://www.instagram.com/hausofchaos.co/",
     rotate: -20,
   },
   {
     src: svg5,
-    className: "bottom-28 !w-1/4 left-[30rem]",
+    className: "bottom-[8%] left-[35%] w-[14vh] max-w-[280px]",
     link: "/Contact",
     rotate: 8,
   },
-  // { src: fab, className: "bottom-0 !w-[40%] left-[40rem]", link: "/facebook-page", rotate: -12 },
   {
-    src: "https://res.cloudinary.com/dek8wxl7o/image/upload/v1749624895/Artboard_1_2440x_pxibcw.png",
-    className: "bottom-20 !w-[40%] right-[4rem]",
+    src: "https://res.cloudinary.com/dek8wxl7o/image/upload/f_auto,q_auto,w_1000/v1749624895/Artboard_1_2440x_pxibcw.png",
+    className: "bottom-[10%] right-[3%] w-[28vh] max-w-[400px]",
     link: "mailto:explore@hausofchaos.co",
     rotate: 20,
   },
-  // { src: dri, className: "bottom-0 !w-[40%] right-0", link: "/Contact", rotate: 10 },
   {
     src: svg6,
-    className: "bottom-80 !w-1/4 right-40",
+    className: "top-[15%] right-[10%] w-[14vh] max-w-[280px]",
     link: "/Contact",
     rotate: 10,
   },
@@ -82,32 +80,40 @@ const images = [
 const images2 = [
   {
     src: flowerImg,
-    className: "  bottom-20 left-0",
+    className: "bottom-20 left-0",
     link: "/Contact",
     rotate: 0,
   },
   {
-    src: "https://res.cloudinary.com/dek8wxl7o/image/upload/v1749622005/1_1_vtehrn.png",
-    className: " w-[60%] top-[45%]  right-0",
+    src: "https://res.cloudinary.com/dek8wxl7o/image/upload/f_auto,q_auto,w_1000/v1749622005/1_1_vtehrn.png",
+    className: "w-[60%] top-[50%] right-0",
     link: "https://www.linkedin.com/company/hausofchaos/",
     rotate: -20,
   },
   {
-    src: "https://res.cloudinary.com/dek8wxl7o/image/upload/v1749308707/instagram_k17dfc.png",
-    className: " w-[60%]  top-[40%] left-0",
+    src: "https://res.cloudinary.com/dek8wxl7o/image/upload/f_auto,q_auto,w_1000/v1749308707/instagram_k17dfc.png",
+    className: "w-[60%] top-[40%] left-0",
     link: "https://www.instagram.com/hausofchaos.co/",
     rotate: -20,
   },
-  { src: svg5, className: " bottom-20 right-0 ", link: "/Contact", rotate: 8 },
-  // { src: fab, className: " bottom-60 right-0", link: "/facebook-page",rotate: -12 },
   {
-    src: "https://res.cloudinary.com/dek8wxl7o/image/upload/v1749624895/Artboard_1_2440x_pxibcw.png",
-    className: "w-[60%]  bottom-40 left-20",
-    link: "mailto:explore@hausofchaos.co",
-    rotate: 20,
+    src: svg5,
+    className: "bottom-20 right-0",
+    link: "/Contact",
+    rotate: 8,
   },
-  // { src: dri, className: "bottom-72 left-10", link: "/Contact" ,rotate: 10},
-  { src: svg6, className: " top-40 left-48", link: "/Contact", rotate: 10 },
+  {
+    src: "https://res.cloudinary.com/dek8wxl7o/image/upload/f_auto,q_auto,w_1000/v1749624895/Artboard_1_2440x_pxibcw.png",
+    className: "w-[50%] top-[20%] left-[5%]",
+    link: "mailto:explore@hausofchaos.co",
+    rotate: -20,
+  },
+  {
+    src: svg6,
+    className: "top-40 left-48",
+    link: "/Contact",
+    rotate: 10,
+  },
 ];
 
 const JobListings = ({ scrollToBottom }) => {
@@ -137,27 +143,34 @@ const JobListings = ({ scrollToBottom }) => {
             key={index}
             src={img.src}
             alt={`img-${index}`}
+            loading={index === 0 ? "eager" : "lazy"}
+            decoding="async"
+            fetchPriority={index === 0 ? "high" : "auto"}
+            draggable={false}
             className={`absolute w-1/2 md:w-auto ${img.className}`}
             initial={{
-              y: -1000,
+              y: -200,
               opacity: 0,
-              rotate: img.rotate, // Custom initial rotation
+              rotate: img.rotate,
             }}
             animate={{
               y: 0,
               opacity: 1,
-              rotate: img.rotate, // Maintain assigned rotation
+              rotate: img.rotate,
               transition: {
                 type: "spring",
-                duration: 1.5,
-                delay: index * 0.2,
-                bounce: 0.2,
-                damping: 10,
-                stiffness: 100,
+                duration: 1,
+                delay: index * 0.12,
+                bounce: 0.15,
+                damping: 15,
+                stiffness: 120,
               },
             }}
             drag
-            dragTransition={{ bounceStiffness: 200, bounceDamping: 5 }}
+            dragTransition={{
+              bounceStiffness: 200,
+              bounceDamping: 10,
+            }}
             dragConstraints={{
               top: -400,
               left: -1000,
@@ -170,10 +183,11 @@ const JobListings = ({ scrollToBottom }) => {
             style={{
               touchAction: "none",
               cursor: "default",
+              willChange: "transform, opacity",
             }}
             whileHover={{
-              scale: 1.1,
-              rotate: img.rotate + 5, // Slightly more tilt on hover
+              scale: 1.08,
+              rotate: img.rotate + 5,
               cursor: "grab",
             }}
             whileDrag={{
@@ -216,24 +230,34 @@ const JobListings2 = ({ scrollToBottom }) => {
             key={index}
             src={img.src}
             alt={`img-${index}`}
-            className={`absolute  w-1/2 md:w-auto  ${img.className}`}
-            initial={{ y: -1000, opacity: 0, rotate: img.rotate }}
+            loading={index === 0 ? "eager" : "lazy"}
+            decoding="async"
+            fetchPriority={index === 0 ? "high" : "auto"}
+            draggable={false}
+            className={`absolute w-1/2 md:w-auto ${img.className}`}
+            initial={{
+              y: -200,
+              opacity: 0,
+              rotate: img.rotate,
+            }}
             animate={{
               y: 0,
-              rotate: img.rotate, // Maintain assigned rotation
               opacity: 1,
-
+              rotate: img.rotate,
               transition: {
                 type: "spring",
-                duration: 1.5,
-                delay: index * 0.2,
-                bounce: 0.2,
-                damping: 10,
-                stiffness: 100,
+                duration: 1,
+                delay: index * 0.12,
+                bounce: 0.15,
+                damping: 15,
+                stiffness: 120,
               },
             }}
             drag
-            dragTransition={{ bounceStiffness: 200, bounceDamping: 5 }}
+            dragTransition={{
+              bounceStiffness: 200,
+              bounceDamping: 10,
+            }}
             dragConstraints={{
               top: -400,
               left: -1000,
@@ -246,9 +270,11 @@ const JobListings2 = ({ scrollToBottom }) => {
             style={{
               touchAction: "none",
               cursor: "default",
+              willChange: "transform, opacity",
             }}
             whileHover={{
-              scale: 1.1,
+              scale: 1.08,
+              rotate: img.rotate + 5,
               cursor: "grab",
             }}
             whileDrag={{
