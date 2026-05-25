@@ -30,6 +30,9 @@ const Contact = () => {
 import svg5 from "../assets/hover/element5-min.png";
 import svg6 from "../assets/hover/element6-min.png";
 import flowerImg from "../assets/hover/flowerImg.png";
+import linkedInImg from '../assets/hover/linkedInImg.png'
+import instagramImg from '../assets/hover/instagramImg.png'
+import emailImg from '../assets/hover/emailImg.png'
 // https://ik.imagekit.io/7da6fpjdo/hover/element5-min.png?updatedAt=1741945058062
 
 // import lin from "../assets/lin.png";
@@ -47,13 +50,13 @@ const images = [
     rotate: 0,
   },
   {
-    src: "https://res.cloudinary.com/dek8wxl7o/image/upload/f_auto,q_auto,w_1000/v1749622005/1_1_vtehrn.png",
+    src: linkedInImg,
     className: "bottom-[5%] left-[0%] w-[32vh] max-w-[400px]",
     link: "https://www.linkedin.com/company/hausofchaos/",
     rotate: -20,
   },
   {
-    src: "https://res.cloudinary.com/dek8wxl7o/image/upload/f_auto,q_auto,w_1000/v1749308707/instagram_k17dfc.png",
+    src: instagramImg,
     className: "top-[20%] left-[28%] w-[28vh] max-w-[400px]",
     link: "https://www.instagram.com/hausofchaos.co/",
     rotate: -20,
@@ -65,7 +68,7 @@ const images = [
     rotate: 8,
   },
   {
-    src: "https://res.cloudinary.com/dek8wxl7o/image/upload/f_auto,q_auto,w_1000/v1749624895/Artboard_1_2440x_pxibcw.png",
+    src: emailImg,
     className: "bottom-[10%] right-[3%] w-[28vh] max-w-[400px]",
     link: "mailto:explore@hausofchaos.co",
     rotate: 20,
@@ -85,13 +88,13 @@ const images2 = [
     rotate: 0,
   },
   {
-    src: "https://res.cloudinary.com/dek8wxl7o/image/upload/f_auto,q_auto,w_1000/v1749622005/1_1_vtehrn.png",
+    src: linkedInImg,
     className: "w-[60%] top-[50%] right-0",
     link: "https://www.linkedin.com/company/hausofchaos/",
     rotate: -20,
   },
   {
-    src: "https://res.cloudinary.com/dek8wxl7o/image/upload/f_auto,q_auto,w_1000/v1749308707/instagram_k17dfc.png",
+    src: instagramImg,
     className: "w-[60%] top-[40%] left-0",
     link: "https://www.instagram.com/hausofchaos.co/",
     rotate: -20,
@@ -103,7 +106,7 @@ const images2 = [
     rotate: 8,
   },
   {
-    src: "https://res.cloudinary.com/dek8wxl7o/image/upload/f_auto,q_auto,w_1000/v1749624895/Artboard_1_2440x_pxibcw.png",
+    src: emailImg,
     className: "w-[50%] top-[20%] left-[5%]",
     link: "mailto:explore@hausofchaos.co",
     rotate: -20,
@@ -143,9 +146,9 @@ const JobListings = ({ scrollToBottom }) => {
             key={index}
             src={img.src}
             alt={`img-${index}`}
-            loading={index === 0 ? "eager" : "lazy"}
+            loading="eager"
             decoding="async"
-            fetchPriority={index === 0 ? "high" : "auto"}
+            fetchPriority="high"
             draggable={false}
             className={`absolute w-1/2 md:w-auto ${img.className}`}
             initial={{
@@ -230,9 +233,9 @@ const JobListings2 = ({ scrollToBottom }) => {
             key={index}
             src={img.src}
             alt={`img-${index}`}
-            loading={index === 0 ? "eager" : "lazy"}
+            loading="eager"
             decoding="async"
-            fetchPriority={index === 0 ? "high" : "auto"}
+            fetchPriority="high"
             draggable={false}
             className={`absolute w-1/2 md:w-auto ${img.className}`}
             initial={{

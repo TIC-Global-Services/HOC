@@ -118,7 +118,7 @@ const Home = () => {
 
       {/* <SecondSection /> */}
       <div className="md:mt-10 md:mb-20">
-      <LogosLoop />
+        <LogosLoop />
       </div>
       <ThirdSection />
       <div className="md:hidden block mb-10">
@@ -311,34 +311,33 @@ const ThirdSection = () => {
 
   useEffect(() => {
     const video = videoRef.current;
+
     if (!video) return;
 
-    let hasPlayed = false; 
+    video.muted = true;
+    video.playsInline = true;
+    video.preload = "auto";
+    video.setAttribute("playsinline", "");
 
-    const playVideo = () => {
-      if (hasPlayed) return;
-      hasPlayed = true;
-
-      video.muted = true;
-      video.playsInline = true;
-      video.setAttribute("playsinline", "");
-
-      const promise = video.play();
-      if (promise !== undefined) {
-        promise.catch(() => {
-          hasPlayed = false; // allow retry on interaction
-        });
+    const playVideo = async () => {
+      try {
+        await video.play();
+      } catch (error) {
+        console.log("Autoplay blocked");
       }
     };
 
-    //wait until video metadata is ready (Safari safe)
-    video.addEventListener("loadedmetadata", playVideo);
+    // Play immediately
+    playVideo();
 
-    const handleTouch = () => playVideo();
+    // iOS / Safari fallback
+    const handleTouch = () => {
+      playVideo();
+    };
+
     window.addEventListener("touchstart", handleTouch, { once: true });
 
     return () => {
-      video.removeEventListener("loadedmetadata", playVideo);
       window.removeEventListener("touchstart", handleTouch);
     };
   }, []);
@@ -353,10 +352,10 @@ const ThirdSection = () => {
           autoPlay
           muted
           loop
-          preload="metadata"
+          preload="auto"
           controls={false}
           playsInline
-          className="block w-full h-auto object-contain scale-100"
+          className="block w-full h-auto object-contain transform-gpu"
         >
           <source
             src={videoSource}
