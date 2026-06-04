@@ -1,13 +1,14 @@
 import React, { useEffect, useRef } from "react";
 import gsap from "gsap";
+import grid from "../../../../assets/client/padlr/img/checkBg.png";
+import GridOverlay from "../../../GridOverlay";
 
 import leftImg from "../../../../assets/client/raks/img/panel3.png";
 import innocenceCallouts from "../../../../assets/client/raks/img/heroImg3.png";
 import learnCallouts from "../../../../assets/client/raks/img/raksLearn.png";
 import viVidCallouts from "../../../../assets/client/raks/img/heroImg1.png";
 import pragmaCallouts from "../../../../assets/client/raks/img/heroImg4.png";
-import grid from "../../../../assets/client/padlr/img/checkBg.png";
-import GridOverlay from "../../../GridOverlay";
+
 
 const Section4 = () => {
   const iconRefs = useRef([]);

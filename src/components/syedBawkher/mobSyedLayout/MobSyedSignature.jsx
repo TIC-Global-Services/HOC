@@ -1,11 +1,14 @@
 import React, { useRef } from "react";
 import useScrollFloat from "../../../hooks/useScrollFloat";
-
-import craftImg from "../../../assets/client/syedBawkher/img/signatureRightImg.png";
-import elegantLogoImg from "../../../assets/client/syedBawkher/img/signatureImg.png";
-import circleLogoImg from "../../../assets/client/syedBawkher/img/heroImg1.png";
 import grid from "../../../assets/client/padlr/img/checkBg.png";
 import MobSyedSec2 from "./MobSyedSec2";
+
+
+const craftImg = "https://ik.imagekit.io/hoc01/assets/client/syed%20Bawkher/signatureRightImg.png";
+const elegantLogoImg = "https://ik.imagekit.io/hoc01/assets/client/syed%20Bawkher/signatureImg.png";
+const circleLogoImg = "https://ik.imagekit.io/hoc01/assets/client/syed%20Bawkher/heroImg1.png";
+
+
 
 const MobSyedSignature = () => {
   const topIconRef = useRef(null);

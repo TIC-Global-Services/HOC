@@ -1,9 +1,9 @@
 import React, { useRef } from "react";
 import useScrollFloat from "../../../hooks/useScrollFloat";
 
-import topLeftImg from "../../../assets/client/syedBawkher/img/signatureRightImg.png";
-import bottomImg from "../../../assets/client/syedBawkher/img/syedBawkher4.png";
-import pinIcon from "../../../assets/client/syedBawkher/img/signatureImg.png";
+const topLeftImg = "https://ik.imagekit.io/hoc01/assets/client/syed%20Bawkher/signatureRightImg.png";
+const bottomImg = "https://ik.imagekit.io/hoc01/assets/client/syed%20Bawkher/heroImg4.png";
+const pinIcon = "https://ik.imagekit.io/hoc01/assets/client/syed%20Bawkher/signatureImg.png";
 
 const MobSyedSec3 = () => {
 const pinRef = useRef(null);

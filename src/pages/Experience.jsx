@@ -6,16 +6,21 @@ import { useState, useEffect } from "react";
 // import befooter from "../assets/befooter.png";
 // import hand from "../assets/hand.png";
 // import ufo from "../assets/ufo.png";
-import two from "../assets/right.png";
-import three from "../assets/left.png";
-import linelab from "../assets/linelab.png";
+
+
 import { motion } from "framer-motion";
 // import { div } from "framer-motion/client";
-import grid from "../assets/lines.png";
+
 import Navbar from "../components/Navbar";
 import Footer from "./Footer.jsx";
 
-import noswitch from "../assets/noswitch.svg";
+
+const grid = "https://ik.imagekit.io/hoc01/assets/lines.png";
+const two = "https://ik.imagekit.io/hoc01/assets/two.png";
+const three = "https://ik.imagekit.io/hoc01/assets/three.png";
+const linelab = "https://ik.imagekit.io/hoc01/assets/linelab.png";
+const noswitch = "https://ik.imagekit.io/hoc01/assets/noswitch.svg";
+
 const Experience = () => {
 
   return (
@@ -107,7 +112,7 @@ const SecondSection = () => {
           {/* Three Image */}
           <motion.img
             src={three}
-            className="w-[50%] z-[10] min-[1470] absolute left-[25%]"
+            className="w-[50%] z-[10] min-[1470] absolute left-[20%]"
             alt="Lab"
             style={{
               transform: `translateX(${moveImageOne(scrollY)}px)`,
@@ -120,7 +125,7 @@ const SecondSection = () => {
           {/* Two Image */}
           <motion.img
             src={two}
-            className="w-[50%] z-[2] min-[1470] -mt-5 absolute right-[30%] !-mr-10"
+            className="w-[50%] z-[2] min-[1470] -mt-5 absolute right-[20%] !-mr-10"
             alt="Lab"
             style={{
               transform: `translateX(${moveImageTwo(scrollY)}px)`,
@@ -186,8 +191,8 @@ const SecondSection = () => {
 };
 // import gridethos from "../assets/gridethos.png";
 // import playground from "../assets/playground.png";
-import tictacX from "../assets/tictacX.png";
-import tictacO from "../assets/tictacO.png";
+const tictacX = "https://ik.imagekit.io/hoc01/assets/tictacX.png";
+const tictacO = "https://ik.imagekit.io/hoc01/assets/tictacO.png";
 
 const Play = () => {
   const [clicks, setClicks] = useState([]);
@@ -287,12 +292,14 @@ const Play = () => {
 // import playground1 from "../assets/hocpo/05080625-c986-468e-b4c1-1376ff24c56f-min.jpg";
 // import playground2 from "../assets/hocpo/54f31009-987f-4ed5-be3c-1500148ef995-min.jpg";
 // import playground3 from "../assets/hocpo/831bc518-1ffb-4c9c-a99d-356d62ccb9eb-min.jpg";
-import playgorund4 from "../assets/hocpo/TID05717-min.jpg";
-import playground5 from "../assets/hocpo/TID05724-min.jpg";
-import playground6 from "../assets/hocpo/TID05738-min.jpg";
-import playground7 from "../assets/hocpo/TID05735-min.jpg";
-import playground8 from "../assets/hocpo/TID05757-min.jpg";
 import GridOverlay from "../components/GridOverlay.jsx";
+
+
+const playground5 = "https://ik.imagekit.io/hoc01/assets/hocpo/TID05724-min.jpg";
+const playground6 = "https://ik.imagekit.io/hoc01/assets/hocpo/TID05738-min.jpg";
+const playground7 = "https://ik.imagekit.io/hoc01/assets/hocpo/TID05735-min.jpg";
+const playground8 = "https://ik.imagekit.io/hoc01/assets/hocpo/TID05757-min.jpg";
+const playgorund4 = "https://ik.imagekit.io/hoc01/assets/hocpo/TID05717-min.jpg";
 
 const AutoFlipImages = () => {
   const [currentIndex, setCurrentIndex] = useState(0);

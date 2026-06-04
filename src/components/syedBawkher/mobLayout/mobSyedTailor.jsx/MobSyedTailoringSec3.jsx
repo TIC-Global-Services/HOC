@@ -1,8 +1,8 @@
 import React, { useRef } from "react";
 import useScrollFloat from "../../../../hooks/useScrollFloat";
 
-import syedBawkherImg from "../../../../assets/client/syedBawkher/img/syedBawkher4.png";
-import tagElegantImg from "../../../../assets/client/syedBawkher/img/signatureImg.png";
+const tagElegantImg = "https://ik.imagekit.io/hoc01/assets/client/syed%20Bawkher/signatureImg.png";
+const syedBawkherImg=  "https://ik.imagekit.io/hoc01/assets/client/syed%20Bawkher/syedBawkher4.png";
 
 const MobSyedTailoringSec3 = () => {
   const imgRef = useRef(null);

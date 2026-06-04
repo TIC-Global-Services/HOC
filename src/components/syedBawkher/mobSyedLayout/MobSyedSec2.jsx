@@ -1,9 +1,9 @@
 import React, { useRef } from "react";
 import useScrollFloat from "../../../hooks/useScrollFloat";
 
-import elegantPairImg from "../../../assets/client/syedBawkher/img/elegantPairImg.png";
-import syedCircleImg from "../../../assets/client/syedBawkher/img/heroImg4.png";
-import texturalImg from "../../../assets/client/syedBawkher/img/heroImg3.png";
+const elegantPairImg = "https://ik.imagekit.io/hoc01/assets/client/syed%20Bawkher/elegantPairImg.png";
+const syedCircleImg = "https://ik.imagekit.io/hoc01/assets/client/syed%20Bawkher/heroImg4.png";
+const texturalImg = "https://ik.imagekit.io/hoc01/assets/client/syed%20Bawkher/heroImg3.png";
 
 import GridOverlay from "../../GridOverlay";
 import MobSyedSec3 from "./MobSyedSec3";

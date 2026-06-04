@@ -1,10 +1,10 @@
 import LogoLoop from '../hooks/LogoLoop';
 
-import padlr from '../assets/client/page/clientsLogo/Padlr_Logo.png';
-import syed from '../assets/client/page/clientsLogo/syedLogo.png';
-import raks from '../assets/client/page/clientsLogo/raksLogo.png';
-import qatamaran from '../assets/client/page/clientsLogo/qatamaranLogo.png';
-import gopalan from '../assets/client/page/clientsLogo/Gopalan Group_Logo.png';
+const padlr = 'https://ik.imagekit.io/hoc01/assets/client/clientlogos/Padlr_Logo.png';
+const syed = 'https://ik.imagekit.io/hoc01/assets/client/clientlogos/syedLogo.png';
+const raks = 'https://ik.imagekit.io/hoc01/assets/client/clientlogos/raksLogo.png';
+const qatamaran = 'https://ik.imagekit.io/hoc01/assets/client/clientlogos/qatamaranLogo.png';
+const gopalan = 'https://ik.imagekit.io/hoc01/assets/client/clientlogos/Gopalan%20Group_Logo.png';
 
 
 const imageLogos = [

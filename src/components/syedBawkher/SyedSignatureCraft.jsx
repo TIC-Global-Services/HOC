@@ -1,17 +1,18 @@
 import React, { useRef, useEffect } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-
-import craftImg from "../../assets/client/syedBawkher/img/signatureRightImg.png";
-import elegantLogoImg from "../../assets/client/syedBawkher/img/signatureImg.png";
-import circleLogoImg from "../../assets/client/syedBawkher/img/heroImg1.png";
-import elegantPairImg from "../../assets/client/syedBawkher/img/elegantPairImg.png";
-import syedCircleImg from "../../assets/client/syedBawkher/img/heroImg4.png";
-import texturalImg from "../../assets/client/syedBawkher/img/heroImg3.png";
-import syedLeftImg from "../../assets/client/syedBawkher/img/signatureRightImg.png";
-import tagImg from "../../assets/client/syedBawkher/img/signatureImg.png";
-import syedCardImg from "../../assets/client/syedBawkher/img/syedBawkher4.png";
 import GridOverlay from "../../components/GridOverlay";
+
+const craftImg =  "https://ik.imagekit.io/hoc01/assets/client/syed%20Bawkher/signatureRightImg.png";
+const elegantLogoImg =  "https://ik.imagekit.io/hoc01/assets/client/syed%20Bawkher/signatureImg.png";
+const circleLogoImg  = "https://ik.imagekit.io/hoc01/assets/client/syed%20Bawkher/heroImg1.png";
+const elegantPairImg  = "https://ik.imagekit.io/hoc01/assets/client/syed%20Bawkher/elegantPairImg.png";
+const syedCircleImg  = "https://ik.imagekit.io/hoc01/assets/client/syed%20Bawkher/heroImg4.png";
+const texturalImg  = "https://ik.imagekit.io/hoc01/assets/client/syed%20Bawkher/heroImg3.png";
+const syedLeftImg  = "https://ik.imagekit.io/hoc01/assets/client/syed%20Bawkher/signatureRightImg.png";
+const tagImg =  "https://ik.imagekit.io/hoc01/assets/client/syed%20Bawkher/signatureImg.png";
+const syedCardImg  = "https://ik.imagekit.io/hoc01/assets/client/syed%20Bawkher/syedBawkher4.png";
+
 
 gsap.registerPlugin(ScrollTrigger);
 

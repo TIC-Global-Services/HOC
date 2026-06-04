@@ -3,17 +3,19 @@ import React from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-
-import tailorHeritageImg from "../../assets/client/syedBawkher/img/secImg.png";
 import grid from "../../assets/client/padlr/img/checkBg.png";
-import buttonImg from "../../assets/client/page/button.png";
-import syedLogo from "../../assets/client/syedBawkher/img/heroImg1.png";
-import syedBawkherImg from "../../assets/client/syedBawkher/img/syedBawkher4.png";
-import tagElegantImg from "../../assets/client/syedBawkher/img/signatureImg.png";
+
 import video from "../../assets/client/syedBawkher/vdo/Brochure_animation.mp4";
-import question from "../../assets/client/syedBawkher/img/question.png";
 import GridOverlay from "../../components/GridOverlay";
 import ImagesTrail from "../../components/ImagesTrail";
+
+const tailorHeritageImg = "https://ik.imagekit.io/hoc01/assets/client/syed%20Bawkher/secImg.png";
+const buttonImg = "https://ik.imagekit.io/hoc01/assets/client/clientPage/button.png";
+const syedLogo = "https://ik.imagekit.io/hoc01/assets/client/syed%20Bawkher/heroImg1.png";
+const syedBawkherImg = "https://ik.imagekit.io/hoc01/assets/client/syed%20Bawkher/syedBawkher4.png";
+const tagElegantImg = "https://ik.imagekit.io/hoc01/assets/client/syed%20Bawkher/signatureImg.png";
+const question = "https://ik.imagekit.io/hoc01/assets/client/syed%20Bawkher/question.png";
+
 
 gsap.registerPlugin(ScrollTrigger);
 

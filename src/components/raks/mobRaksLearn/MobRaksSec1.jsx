@@ -1,8 +1,12 @@
 import React, { useRef } from "react";
-import rakathonImg from "../../../assets/client/raks/img/rightImg.png";
-import raksLearnImg from "../../../assets/client/raks/img/raksLearn.png";
-import raksImg from "../../../assets/client/raks/img/heroImg2.png";
 import useScrollFloat from "../../../hooks/useScrollFloat";
+
+
+
+const rakathonImg = "https://ik.imagekit.io/hoc01/assets/client/raks/rightImg.png";
+const raksLearnImg = "https://ik.imagekit.io/hoc01/assets/client/raks/raksLearn.png";
+const raksImg = "https://ik.imagekit.io/hoc01/assets/client/raks/heroImg2.png";
+
 
 const MobRaksSec1 = () => {
   const iconRef = useRef(null);

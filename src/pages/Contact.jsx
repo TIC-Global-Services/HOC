@@ -27,12 +27,12 @@ const Contact = () => {
 };
 
 // import svg4 from "../assets/hover/element3-min.png";
-import svg5 from "../assets/hover/element5-min.png";
-import svg6 from "../assets/hover/element6-min.png";
-import flowerImg from "../assets/hover/flowerImg.png";
-import linkedInImg from '../assets/hover/linkedInImg.png'
-import instagramImg from '../assets/hover/instagramImg.png'
-import emailImg from '../assets/hover/emailImg.png'
+const svg5 = "https://ik.imagekit.io/hoc01/assets/hover/element5-min.png?updatedAt=1780581082484";
+const svg6 = "https://ik.imagekit.io/hoc01/assets/hover/element6-min.png?updatedAt=1780581077263";
+const flowerImg = "https://ik.imagekit.io/hoc01/assets/hover/flowerImg.png?updatedAt=1780581075105";
+const linkedInImg = 'https://ik.imagekit.io/hoc01/assets/hover/linkedInImg.png?updatedAt=1780581069934'
+const instagramImg = 'https://ik.imagekit.io/hoc01/assets/hover/instagramImg.png?updatedAt=1780581082108'
+const emailImg = 'https://ik.imagekit.io/hoc01/assets/hover/emailImg.png?updatedAt=1780581076239'
 // https://ik.imagekit.io/7da6fpjdo/hover/element5-min.png?updatedAt=1741945058062
 
 // import lin from "../assets/lin.png";

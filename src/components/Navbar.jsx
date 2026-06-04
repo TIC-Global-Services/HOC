@@ -5,11 +5,12 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import gsap from "gsap";
-
-import worldsmall from "../assets/worldsmall.png";
-import logo from "../assets/logo.png";
-import logo2 from "../assets/logo2.png";
 import CursorHover from "../utils/Hover";
+
+const worldsmall = "https://ik.imagekit.io/hoc01/assets/worldsmall.png";
+const logo = "https://ik.imagekit.io/hoc01/assets/logo.png";
+const logo2 = "https://ik.imagekit.io/hoc01/assets/logo2.png";
+
 
 const Navbar = ({
   variant = "default",

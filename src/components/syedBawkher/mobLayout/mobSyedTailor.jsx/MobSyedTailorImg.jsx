@@ -1,6 +1,8 @@
 import React from "react";
-import tailorHeritageImg from "../../../../assets/client/syedBawkher/img/secImg.png";
-import grid from "../../../../assets/client/padlr/img/checkBg.png";
+
+
+const tailorHeritageImg = "https://ik.imagekit.io/hoc01/assets/client/syed%20Bawkher/secImg.png";
+
 
 const MobSyedTailorImg = () => {
   return (

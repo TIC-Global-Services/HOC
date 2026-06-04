@@ -1,11 +1,11 @@
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 
-import img1 from "../assets/client/page/Qatamaran.png";
-import img2 from "../assets/client/page/Padlr.png";
-import img3 from "../assets/client/page/Gopalan.png";
-import img4 from "../assets/client/page/Syed Bawkher.png";
-import img5 from "../assets/client/page/Raks.png";
+const img1 = "https://ik.imagekit.io/hoc01/assets/client/clientPage/Qatamaran.png";
+const img2 = "https://ik.imagekit.io/hoc01/assets/client/clientPage/Padlr.png";
+const img3 = "https://ik.imagekit.io/hoc01/assets/client/clientPage/Gopalan.png";
+const img4 = "https://ik.imagekit.io/hoc01/assets/client/clientPage/Syed%20Bawkher.png";
+const img5 = "https://ik.imagekit.io/hoc01/assets/client/clientPage/Raks.png";
 
 import cd from "../assets/client/page/clientsCd.png";
 

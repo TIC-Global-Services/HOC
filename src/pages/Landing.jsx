@@ -2,7 +2,9 @@ import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Home from "./Home";
 import Navbar from "../components/Navbar";
-import arrow from "../assets/downwhite.png";
+
+
+const arrow = "https://ik.imagekit.io/hoc01/assets/downwhite.png";
 // import { useInView } from "react-intersection-observer";
 
 const Landing = () => {

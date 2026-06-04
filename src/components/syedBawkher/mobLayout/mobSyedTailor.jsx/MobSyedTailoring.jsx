@@ -1,8 +1,8 @@
 import React, { useRef } from "react";
 import useScrollFloat from "../../../../hooks/useScrollFloat";
 
-import buttonImg from "../../../../assets/client/page/button.png";
-import syedLogo from "../../../../assets/client/syedBawkher/img/heroImg1.png";
+const buttonImg = "https://ik.imagekit.io/hoc01/assets/client/clientPage/button.png";
+const syedLogo = "https://ik.imagekit.io/hoc01/assets/client/syed%20Bawkher/heroImg1.png";
 
 import GridOverlay from "../../../GridOverlay";
 

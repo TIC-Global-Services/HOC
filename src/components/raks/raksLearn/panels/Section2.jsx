@@ -1,12 +1,14 @@
 import React, { useEffect, useRef } from "react";
 import gsap from "gsap";
-
-import grid from "../../../../assets/client/padlr/img/checkBg.png";
-import viVidImg from "../../../../assets/client/raks/img/heroImg1.png";
-import innocenceImg from "../../../../assets/client/raks/img/heroImg3.png";
-import playfulImg from "../../../../assets/client/raks/img/heroImg2.png";
-import raksCenterImg from "../../../../assets/client/raks/img/raksInstituion.png";
 import GridOverlay from '../../../../components/GridOverlay'
+import grid from "../../../../assets/client/padlr/img/checkBg.png";
+
+
+const viVidImg = "https://ik.imagekit.io/hoc01/assets/client/raks/heroImg1.png";
+const innocenceImg = "https://ik.imagekit.io/hoc01/assets/client/raks/heroImg3.png";
+const playfulImg = "https://ik.imagekit.io/hoc01/assets/client/raks/heroImg2.png";
+const raksCenterImg = "https://ik.imagekit.io/hoc01/assets/client/raks/raksInstituion.png";
+
 
 const Section2 = () => {
   const iconRefs = useRef([]);

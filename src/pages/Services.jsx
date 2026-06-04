@@ -4,15 +4,16 @@ import { motion, AnimatePresence } from "framer-motion";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
-// Assets
-import grid from "../assets/lines.png";
-import svgser from "../assets/svgser.png";
-import wiresm from "../assets/wiresm.png";
-import plugservicesleft from "../assets/left.png";
-import plugservicesright from "../assets/right.png";
+
 import Footer from "./Footer";
 import Navbar from "../components/Navbar";
 import GridOverlay from "../components/GridOverlay";
+
+const grid = "https://ik.imagekit.io/hoc01/assets/lines.png";
+const svgser = "https://ik.imagekit.io/hoc01/assets/svgser.png";
+const wiresm = "https://ik.imagekit.io/hoc01/assets/wiresm.png";
+const plugservicesleft = "https://ik.imagekit.io/hoc01/assets/left.png";
+const plugservicesright = "https://ik.imagekit.io/hoc01/assets/right.png";
 
 gsap.registerPlugin(ScrollTrigger);
 

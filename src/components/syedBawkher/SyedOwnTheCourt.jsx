@@ -2,13 +2,14 @@ import { useEffect, useRef, useState } from "react";
 import gsap from "gsap";
 
 import grid from "../../assets/client/padlr/img/checkBg.png";
-import img1 from "../../assets/client/syedBawkher/img/heroImg1.png";
-import img2 from "../../assets/client/syedBawkher/img/heroImg2.png";
-import img3 from "../../assets/client/syedBawkher/img/heroImg3.png";
-import img4 from "../../assets/client/syedBawkher/img/heroImg4.png";
-import img5 from "../../assets/client/syedBawkher/img/elegantPairImg.png";
-import img6 from "../../assets/client/syedBawkher/img/signatureImg.png";
 import GridOverlay from "../../components/GridOverlay";
+
+const img1 = "https://ik.imagekit.io/hoc01/assets/client/syed%20Bawkher/heroImg1.png";
+const img2 = "https://ik.imagekit.io/hoc01/assets/client/syed%20Bawkher/heroImg2.png";
+const img3 = "https://ik.imagekit.io/hoc01/assets/client/syed%20Bawkher/heroImg3.png";
+const img4 = "https://ik.imagekit.io/hoc01/assets/client/syed%20Bawkher/heroImg4.png";
+const img5 = "https://ik.imagekit.io/hoc01/assets/client/syed%20Bawkher/elegantPairImg.png";
+const img6 = "https://ik.imagekit.io/hoc01/assets/client/syed%20Bawkher/signatureImg.png";
 
 
 const IMGS = { circleB: img1, elpairing: img2, textural: img3, circleW: img4, elegant: img5, signature: img6 };

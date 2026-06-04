@@ -118,8 +118,9 @@ const Ethos = () => {
 
 export default Ethos;
 
-import founder from "../assets/RIA3.jpg";
-import founder2 from "../assets/FounderBanner.jpg";
+const founder = "https://ik.imagekit.io/hoc01/assets/RIA3.jpg";
+const founder2 = "https://ik.imagekit.io/hoc01/assets/FounderBanner.jpg";
+
 const FounderSection = () => {
   const handleEmailClick = () => {
     console.log("Email button clicked"); // Debugging

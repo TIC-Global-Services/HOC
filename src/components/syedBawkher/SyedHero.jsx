@@ -1,11 +1,12 @@
 import { motion } from "framer-motion";
-
-import img1 from "../../assets/client/syedBawkher/img/heroImg1.png";
-import img2 from "../../assets/client/syedBawkher/img/heroImg2.png";
-import img3 from "../../assets/client/syedBawkher/img/heroImg3.png";
-import img4 from "../../assets/client/syedBawkher/img/heroImg4.png";
 import grid from "../../assets/client/padlr/img/checkBg.png";
 import GridOverlay from "../../components/GridOverlay";
+
+
+const img1 = "https://ik.imagekit.io/hoc01/assets/client/syed%20Bawkher/heroImg1.png";
+const img2 = "https://ik.imagekit.io/hoc01/assets/client/syed%20Bawkher/heroImg2.png";
+const img3 = "https://ik.imagekit.io/hoc01/assets/client/syed%20Bawkher/heroImg3.png";
+const img4 = "https://ik.imagekit.io/hoc01/assets/client/syed%20Bawkher/heroImg4.png";
 
 const fadeUp = {
   hidden: {

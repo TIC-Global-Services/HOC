@@ -4,13 +4,16 @@ import { useState, useEffect } from "react";
 // import tvpng from "../assets/tv.png";
 // import logo from "../assets/logo.png";
 // import befooter from "../assets/befooter.png";
-import hand from "../assets/hand.png";
-import ufo from "../assets/ufo.png";
+
 import Navbar from "../components/Navbar";
 import Footer from "./Footer";
 
 import { motion } from "framer-motion";
 // import { div } from "framer-motion/client";
+
+const hand = "https://ik.imagekit.io/hoc01/assets/hand.png";
+const ufo  ="https://ik.imagekit.io/hoc01/assets/ufo.png";
+
 const Careers = () => {
 
   return (

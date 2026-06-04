@@ -1,5 +1,7 @@
 import React from "react";
-import panel5 from "../../../assets/client/raks/img/panel5.png";
+
+
+const panel5 = "https://ik.imagekit.io/hoc01/assets/client/raks/panel5.png";
 
 const MobRaksSec6 = () => {
   return (

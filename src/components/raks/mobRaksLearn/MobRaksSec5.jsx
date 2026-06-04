@@ -1,8 +1,8 @@
 import React from "react";
-
-import leftImg from "../../../assets/client/raks/img/Panel4.jpg";
-
 import GridOverlay from "../../GridOverlay";
+
+
+const leftImg = "https://ik.imagekit.io/hoc01/assets/client/raks/panel4.png";
 
 const MobRaksSec5 = () => {
   return (

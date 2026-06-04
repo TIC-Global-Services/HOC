@@ -1,10 +1,11 @@
 import React, { useRef } from "react";
 import useScrollFloat from "../../../hooks/useScrollFloat";
-
-import topImg from "../../../assets/client/raks/img/panel2.png";
-import leftIcon from "../../../assets/client/raks/img/heroImg2.png";
-
 import GridOverlay from "../../GridOverlay";
+
+const topImg = "https://ik.imagekit.io/hoc01/assets/client/raks/panel2.png";
+const leftIcon = "https://ik.imagekit.io/hoc01/assets/client/raks/heroImg2.png";
+
+
 
 const MobRaksSec3 = () => {
   const iconRef = useRef(null);

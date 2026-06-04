@@ -1,6 +1,9 @@
 import React, { useRef, useState, useCallback, useEffect } from "react";
 import { motion, useTransform } from "framer-motion";
-import swrillpng from "../assets/swrill3.png";
+
+
+
+const swrillpng = "https://ik.imagekit.io/hoc01/assets/swrill3.png";
 
 const Swrillmaker = ({ scrollYProgress, targetRef }) => {
   const contentRef = useRef(null);

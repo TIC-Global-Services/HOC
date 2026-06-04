@@ -1,9 +1,9 @@
 import React, { useEffect, useRef } from "react";
 import gsap from "gsap";
 
-import viVidImg from "../../../assets/client/raks/img/heroImg1.png";
-import innocenceImg from "../../../assets/client/raks/img/heroImg3.png";
-import playfulImg from "../../../assets/client/raks/img/heroImg2.png";
+const viVidImg = "https://ik.imagekit.io/hoc01/assets/client/raks/heroImg1.png";
+const innocenceImg = "https://ik.imagekit.io/hoc01/assets/client/raks/heroImg3.png";
+const playfulImg = "https://ik.imagekit.io/hoc01/assets/client/raks/heroImg2.png";
 
 import GridOverlay from "../../GridOverlay";
 

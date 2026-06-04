@@ -10,8 +10,10 @@ import FAQ from "./FAQ";
 import Footer from "./Footer";
 
 import { useEffect } from "react";
-import noswitch from "../assets/noswitch.svg";
 import Swrillmaker from "./Swrilltrans";
+
+const noswitch = "https://ik.imagekit.io/hoc01/assets/noswitch.svg";
+
 const Home = () => {
   const ref = useRef(null);
   const { scrollYProgress } = useScroll({

@@ -1,9 +1,13 @@
 import React, { useEffect, useRef } from "react";
-import emPowerImg from "../../../../assets/client/raks/img/panel2.png";
-import viVidImg from "../../../../assets/client/raks/img/heroImg1.png";
-import grid from "../../../../assets/client/padlr/img/checkBg.png";
 import gsap from "gsap";
 import GridOverlay from "../../../GridOverlay";
+import grid from "../../../../assets/client/padlr/img/checkBg.png";
+
+
+const emPowerImg =  "https://ik.imagekit.io/hoc01/assets/client/raks/panel2.png";
+const viVidImg = "https://ik.imagekit.io/hoc01/assets/client/raks/heroImg1.png";
+
+
 
 const Section3 = () => {
   const iconRefs = useRef([]);
