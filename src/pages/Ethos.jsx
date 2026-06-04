@@ -35,7 +35,7 @@ const Ethos = () => {
       >
         {/* Absolutely Centered Text */}
         <div className=" !z-[-200]  items-end   md:flex-row flex-col  h-full md:h-full mt-0 md:mt-0  bottom-0 flex px-4 md:px-10">
-          <div className="  capitalize   md:mt-0 mt-80  w-[100%]">
+          <div className="  md:mt-0 mt-80  w-[100%]">
             <h2 className="jost md:text-[26px] text-2xl text-left md:block hidden  mb-10  md:-mb-20 md:leading-[40px]">
               <span className=" md:text-[45px]  text-3xl salo uppercase  text-[#060ebb]">
                 {" "}
@@ -47,13 +47,13 @@ const Ethos = () => {
                 of{" "}
                 <span className=" md:text-[45px] text-3xl uppercase salo text-[#060ebb]">
                   {" "}
-                  Organized Chaos
+                  Organized Chaos, 
                 </span>
                 <br />
                 <span className=" whitespace-nowrap">
-                  —akin to chaos theory—our philosophy centers on <br />
-                  challenging conventional{" "}
-                </span>
+                   akin to chaos theory, our philosophy centers on <br />
+                   challenging conventional{" "}
+                 </span>
               </span>
               <span className="  md:text-[45px] text-3xl salo uppercase text-[#060ebb]">
                 {" "}
@@ -77,7 +77,7 @@ const Ethos = () => {
               <span className="salo uppercase  text-3xl text-[#060ebb]">
                 Organized Chaos{" "}
               </span>
-              —akin to chaos theory—our philosophy centers on challenging
+               , akin to chaos theory, our philosophy centers on challenging
               conventional{" "}
               <span className="salo uppercase  text-3xl text-[#060ebb]">
                 {" "}
@@ -194,7 +194,7 @@ const FounderSection = () => {
                 compelling the story, the greater the influence we hold. Haus of
                 Chaos is the intersection of a graphic design house and an
                 experimental studio, enabling us to dive into new, experimental
-                forms of communication—disrupting and redefining existing norms.
+                forms of communication, disrupting and redefining existing norms.
               </p>
               <div className="flex text-xs md:text-base   gap-4">
                 <motion.button
