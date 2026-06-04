@@ -1,6 +1,6 @@
 import React from "react";
 
-import panel4Img from "../../../assets/client/gopalan/panel4Img.png";
+const panel4Img = "https://ik.imagekit.io/hoc01/assets/client/gopalan/panel4Img.png";
 
 const Section5 = () => {
   return (

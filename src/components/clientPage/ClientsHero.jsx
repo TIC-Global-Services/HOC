@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
-import heroCallout from "../../assets/client/page/hoc-callout.png";
-import starImg from "../../assets/client/page/endIcon.png";
+const heroCallout ="https://ik.imagekit.io/hoc01/assets/client/clientPage/hoc-callout.png";
+const starImg ="https://ik.imagekit.io/hoc01/assets/client/clientPage/endIcon.png";
 
 const ClientsHero = () => {
   return (

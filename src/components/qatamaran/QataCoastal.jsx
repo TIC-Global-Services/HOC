@@ -1,7 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import gsap from "gsap";
 
-import grid from "../../assets/client/padlr/img/checkBg.png";
 import img1 from "../../assets/client/qatamaran/heroFloat1.png";
 import img2 from "../../assets/client/qatamaran/heroFloat2.png";
 import img3 from "../../assets/client/qatamaran/heroFloat3.png";

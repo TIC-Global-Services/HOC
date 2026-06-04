@@ -1,6 +1,5 @@
 import React from "react";
-
-import courtImg from "../../../../assets/client/padlr/img/courtImg1.png";
+const courtImg = "https://ik.imagekit.io/hoc01/assets/client/padlr/courtImg1.png";
 
 const MobCourtSec1 = () => {
   return (

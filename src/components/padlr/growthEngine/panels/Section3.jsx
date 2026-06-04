@@ -1,7 +1,10 @@
 import React from "react";
 
-import palatteImg from "../../../../assets/client/padlr/img/courtImg2.png";
-import attachIcon from "../../../../assets/client/padlr/img/attachIcon.png";
+const palatteImg =
+  "https://ik.imagekit.io/hoc01/assets/client/padlr/courtImg2.png";
+
+const attachIcon =
+  "https://ik.imagekit.io/hoc01/assets/client/padlr/attachIcon.png";
 
 const Section3 = () => {
   return (

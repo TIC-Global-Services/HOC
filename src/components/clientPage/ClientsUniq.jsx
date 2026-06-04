@@ -1,17 +1,27 @@
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 
-import img1 from "../../assets/client/page/Qatamaran.png";
-import img1back from "../../assets/client/page/QTBack.png";
-import img2 from "../../assets/client/page/Padlr.png";
-import img2back from "../../assets/client/page/PadlrBack.png";
-import img3 from "../../assets/client/page/Gopalan.png";
-import img3back from "../../assets/client/page/GEBack.png";
-import img4 from "../../assets/client/page/Syed Bawkher.png";
-import img4back from "../../assets/client/page/SyedBawkher_Back.png";
-import img5 from "../../assets/client/page/Raks.png";
-import img5back from "../../assets/client/page/RAKS_Back.png";
-import cd from "../../assets/client/page/clientsCd.png";
+const img1 ="https://ik.imagekit.io/hoc01/assets/client/clientPage/Qatamaran.png";
+
+const img1back ="https://ik.imagekit.io/hoc01/assets/client/clientPage/QTBack.png";
+
+const img2 ="https://ik.imagekit.io/hoc01/assets/client/clientPage/Padlr.png";
+
+const img2back ="https://ik.imagekit.io/hoc01/assets/client/clientPage/PadlrBack.png";
+
+const img3 ="https://ik.imagekit.io/hoc01/assets/client/clientPage/Gopalan.png";
+
+const img3back ="https://ik.imagekit.io/hoc01/assets/client/clientPage/GEBack.png";
+
+const img4 ="https://ik.imagekit.io/hoc01/assets/client/clientPage/Syed%20Bawkher.png";
+
+const img4back ="https://ik.imagekit.io/hoc01/assets/client/clientPage/SyedBawkher_Back.png";
+
+const img5 ="https://ik.imagekit.io/hoc01/assets/client/clientPage/Raks.png";
+
+const img5back ="https://ik.imagekit.io/hoc01/assets/client/clientPage/RAKS_Back.png";
+
+const cd ="https://ik.imagekit.io/hoc01/assets/client/clientPage/clientsCd.png";
 
 const items = [
   { img: img1, backImg: img1back, title: "QATAMARAN", path: "/client/qatamaran" },

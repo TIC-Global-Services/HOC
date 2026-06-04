@@ -1,11 +1,12 @@
 import React, { useEffect, useRef } from "react";
 import gsap from "gsap";
-
-import springImg from "../../../../assets/client/padlr/img/heroImg3.png";
-import canImg from "../../../../assets/client/padlr/img/heroImg4.png";
-import batImg from "../../../../assets/client/padlr/img/heroImg2.png";
-
 import GridOverlay from "../../../GridOverlay";
+
+
+const springImg = "https://ik.imagekit.io/hoc01/assets/client/padlr/heroImg3.png";
+const canImg = "https://ik.imagekit.io/hoc01/assets/client/padlr/heroImg4.png";
+const batImg = "https://ik.imagekit.io/hoc01/assets/client/padlr/heroImg2.png";
+
 
 const MobSection2 = () => {
   const iconRefs = useRef([]);

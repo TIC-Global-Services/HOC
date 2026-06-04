@@ -1,12 +1,13 @@
 import { useEffect, useRef } from "react";
 import gsap from "gsap";
-
-import batlogo from "../../../../assets/client/padlr/img/batIcon.png";
 import grid from "../../../../assets/client/padlr/img/checkBg.png";
-import rightImg from "../../../../assets/client/padlr/img/courtPanelImg.png";
-import courtImg2 from "../../../../assets/client/padlr/img/courtImg2.png";
-import courtImg3 from "../../../../assets/client/padlr/img/courtImg3.png";
 import GridOverlay from "../../../../components/GridOverlay";
+
+const batlogo = "https://ik.imagekit.io/hoc01/assets/client/padlr/batIcon.png";
+const rightImg = "https://ik.imagekit.io/hoc01/assets/client/padlr/courtPanelImg.png";
+const courtImg2 = "https://ik.imagekit.io/hoc01/assets/client/padlr/courtImg2.png";
+const courtImg3 = "https://ik.imagekit.io/hoc01/assets/client/padlr/courtImg3.png";
+
 
 export default function Panel2() {
   const iconRefs = useRef([]);

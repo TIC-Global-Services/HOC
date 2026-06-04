@@ -1,8 +1,8 @@
 import { useEffect, useRef } from "react";
 import gsap from "gsap";
 
-import minimalImg from "../../../assets/client/gopalan/heroImg1.png";
-import strokeSystemImg from "../../../assets/client/gopalan/heroImg4.png";
+const minimalImg ="https://ik.imagekit.io/hoc01/assets/client/gopalan/heroImg1.png";
+const strokeSystemImg ="https://ik.imagekit.io/hoc01/assets/client/gopalan/heroImg4.png";
 import visualVideo1 from '../../../assets/client/gopalan/GE_Visual Identity 1_Animation.mp4'
 
 const ORANGE = "#E96428";

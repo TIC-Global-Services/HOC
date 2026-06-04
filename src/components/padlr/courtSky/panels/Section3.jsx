@@ -1,11 +1,12 @@
 import React, { useEffect, useRef } from "react";
 import gsap from "gsap";
-
-import grid from "../../../../assets/client/padlr/img/checkBg.png";
-import highlyExplose from "../../../../assets/client/padlr/img/courtPanelImg.png";
-import topImg from "../../../../assets/client/padlr/img/courtPanelImg3.png";
-import paddle from "../../../../assets/client/padlr/img/batIcon.png";
 import GridOverlay from "../../../GridOverlay";
+import grid from "../../../../assets/client/padlr/img/checkBg.png";
+
+const highlyExplose = "https://ik.imagekit.io/hoc01/assets/client/padlr/courtPanelImg.png";
+const topImg = "https://ik.imagekit.io/hoc01/assets/client/padlr/courtPanelImg3.png";
+const paddle = "https://ik.imagekit.io/hoc01/assets/client/padlr/batIcon.png";
+
 
 const Section3 = () => {
   const iconRefs = useRef([]);

@@ -1,10 +1,10 @@
 import React, { useEffect, useRef, useState } from "react";
 import gsap from "gsap";
 
-import img1 from "../../../../assets/client/padlr/img/heroImg1.png";
-import img2 from "../../../../assets/client/padlr/img/heroImg2.png";
-import img3 from "../../../../assets/client/padlr/img/heroImg3.png";
-import img4 from "../../../../assets/client/padlr/img/heroImg4.png";
+const img1 = "https://ik.imagekit.io/hoc01/assets/client/padlr/heroImg1.png";
+const img2 = "https://ik.imagekit.io/hoc01/assets/client/padlr/heroImg2.png";
+const img3  ="https://ik.imagekit.io/hoc01/assets/client/padlr/heroImg3.png";
+const img4 = "https://ik.imagekit.io/hoc01/assets/client/padlr/heroImg4.png";
 
 import GridOverlay from "../../../GridOverlay";
 

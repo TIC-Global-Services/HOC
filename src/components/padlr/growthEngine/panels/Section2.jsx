@@ -1,7 +1,6 @@
 import React, { useEffect, useRef } from "react";
 import gsap from "gsap";
 
-import grid from "../../../../assets/client/padlr/img/checkBg.png";
 import springImg from "../../../../assets/client/padlr/img/heroImg3.png";
 import canImg from "../../../../assets/client/padlr/img/heroImg4.png";
 import batImg from "../../../../assets/client/padlr/img/heroImg2.png";

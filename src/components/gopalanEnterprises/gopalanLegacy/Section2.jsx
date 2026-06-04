@@ -2,8 +2,11 @@ import React, { useEffect, useRef } from "react";
 import gsap from "gsap";
 
 import GridOverlay from "../../GridOverlay";
-import evolutionImg from "../../../assets/client/gopalan/heroImg2.png";
-import systemImg from "../../../assets/client/gopalan/heroImg4.png";
+const evolutionImg =
+  "https://ik.imagekit.io/hoc01/assets/client/gopalan/heroImg2.png";
+
+const systemImg =
+  "https://ik.imagekit.io/hoc01/assets/client/gopalan/heroImg4.png";
 
 const Section2 = () => {
   const iconRefs = useRef([]);

@@ -1,8 +1,9 @@
 import { useEffect, useRef } from "react";
 import gsap from "gsap";
 
-import courtImg1 from "../../../../assets/client/padlr/img/courtImg1.png";
-import grid from "../../../../assets/client/padlr/img/checkBg.png";
+
+const courtImg1 = "https://ik.imagekit.io/hoc01/assets/client/padlr/courtImg1.png";
+
 
 export default function Section1() {
   return (

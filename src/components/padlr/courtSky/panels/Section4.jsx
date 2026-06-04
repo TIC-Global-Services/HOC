@@ -1,8 +1,9 @@
 import { useEffect, useRef } from "react";
 import gsap from "gsap";
-
-import circleBadge from "../../../../assets/client/padlr/img/heroImg1.png";
 import GridOverlay from "../../../GridOverlay";
+
+const circleBadge = "https://ik.imagekit.io/hoc01/assets/client/padlr/heroImg1.png";
+
 
 export default function Section4() {
   const badgeRef = useRef(null);

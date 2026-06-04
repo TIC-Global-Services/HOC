@@ -1,4 +1,5 @@
-import padlrInstaImg from "../../assets/client/padlr/img/padlrSecImg.png";
+
+const padlrInstaImg = "https://ik.imagekit.io/hoc01/assets/client/padlr/padlrSecImg.png";
 
 const MobPadlrInstaImg = () => {
   return (

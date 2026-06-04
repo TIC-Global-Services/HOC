@@ -1,4 +1,4 @@
-import img from "../../../../assets/client/padlr/img/padlrSecImg.png";
+const img = "https://ik.imagekit.io/hoc01/assets/client/padlr/padlrSecImg.png";
 
 const Section7 = () => {
   return (

@@ -1,8 +1,8 @@
 import { useRef } from "react";
 import useScrollFloat from "../../../hooks/useScrollFloat";
 
-import topIcon from "../../../assets/client/gopalan/heroImg3.png";
-import bottomIcon from "../../../assets/client/gopalan/heroImg2.png";
+const topIcon = "https://ik.imagekit.io/hoc01/assets/client/gopalan/heroImg3.png";
+const bottomIcon = "https://ik.imagekit.io/hoc01/assets/client/gopalan/heroImg2.png";
 
 import GridOverlay from "../../GridOverlay";
 

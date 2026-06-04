@@ -1,13 +1,13 @@
 import React from "react";
 
-import courtPanelImg from "../../../../assets/client/padlr/img/courtPanelImg.png";
+const highlyExplose = "https://ik.imagekit.io/hoc01/assets/client/padlr/courtPanelImg.png";
 
 const MobCourtSec3 = () => {
   return (
     <section className="w-full">
 
       <img
-        src={courtPanelImg}
+        src={highlyExplose}
         alt="Court Visual"
         className="w-full h-auto object-cover"
       />

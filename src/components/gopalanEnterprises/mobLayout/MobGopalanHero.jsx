@@ -1,8 +1,10 @@
-import img1 from "../../../assets/client/gopalan/heroImg1.png";
-import img2 from "../../../assets/client/gopalan/heroImg2.png";
-import img3 from "../../../assets/client/gopalan/heroImg3.png";
-import img4 from "../../../assets/client/gopalan/heroImg4.png";
 import GridOverlay from "../../GridOverlay";
+
+const img1 = "https://ik.imagekit.io/hoc01/assets/client/gopalan/heroImg1.png";
+const img2 = "https://ik.imagekit.io/hoc01/assets/client/gopalan/heroImg2.png";
+const img3 = "https://ik.imagekit.io/hoc01/assets/client/gopalan/heroImg3.png";
+const img4 = "https://ik.imagekit.io/hoc01/assets/client/gopalan/heroImg4.png";
+
 
 const MobGopalanHero = () => {
   return (

@@ -1,8 +1,8 @@
 import React, { useRef } from "react";
 import useScrollFloat from "../../../hooks/useMobileVideo";
 
-import minimalImg from "../../../assets/client/gopalan/heroImg1.png";
-import strokeImg from "../../../assets/client/gopalan/heroImg4.png";
+const minimalImg ="https://ik.imagekit.io/hoc01/assets/client/gopalan/heroImg1.png";
+const strokeImg ="https://ik.imagekit.io/hoc01/assets/client/gopalan/heroImg4.png";
 import GEVideo from "../../../assets/client/gopalan/GE_Visual_identity_2_animation.mp4";
 
 const MobSection1 = () => {

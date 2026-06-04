@@ -1,6 +1,6 @@
 import React from "react";
 
-import gopalanImg from "../../../assets/client/gopalan/groupImg.png";
+const gopalanImg = "https://ik.imagekit.io/hoc01/assets/client/gopalan/groupImg.png";
 
 const Section3 = () => {
   return (

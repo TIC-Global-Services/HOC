@@ -1,6 +1,8 @@
-import computerImg from "../../../../assets/client/padlr/img/Group.png";
-import paddleLogoImg from "../../../../assets/client/padlr/img/heroImg2.png";
 import aboutVideo from "../../../../assets/client/padlr/vdo/Padlr_Animation 2.mp4";
+
+const paddleLogoImg =
+  "https://ik.imagekit.io/hoc01/assets/client/padlr/heroImg2.png";
+
 
 export default function Section1() {
   return (

@@ -1,5 +1,5 @@
 import React from "react";
-import refinedImg from "../../../assets/client/gopalan/Gopalan groups.png";
+const gopalanGroupImg = "https://ik.imagekit.io/hoc01/assets/client/gopalan/Gopalan_groups.png";
 
 const MobSection7 = () => {
   return (
@@ -8,7 +8,7 @@ const MobSection7 = () => {
     >
       <div className="relative w-full h-full">
         <img
-          src={refinedImg}
+          src={gopalanGroupImg}
           alt=""
           className="absolute inset-0 w-full h-full object-cover"
         />

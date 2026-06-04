@@ -1,8 +1,8 @@
 import React, { useRef } from "react";
 import useScrollFloat from "../../../hooks/useScrollFloat";
 
-import topLeftImg from "../../../assets/client/gopalan/heroImg2.png";
-import topRightImg from "../../../assets/client/gopalan/heroImg4.png";
+const topLeftImg = "https://ik.imagekit.io/hoc01/assets/client/gopalan/heroImg2.png";
+const topRightImg = "https://ik.imagekit.io/hoc01/assets/client/gopalan/heroImg4.png";
 import GridOverlay from "../../GridOverlay";
 
 const MobSection2 = () => {

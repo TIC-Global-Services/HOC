@@ -1,12 +1,14 @@
 import React, { useEffect, useRef } from "react";
 import gsap from "gsap";
-
-import visualImg from "../../../../assets/client/padlr/img/visualImg.png";
-import spinIcon from "../../../../assets/client/padlr/img/heroImg1.png";
-import palatteImg from "../../../../assets/client/padlr/img/courtImg2.png";
-import attachIcon from "../../../../assets/client/padlr/img/attachIcon.png";
 import grid from "../../../../assets/client/padlr/img/checkBg.png";
 import GridOverlay from "../../../GridOverlay";
+
+const visualImg = "https://ik.imagekit.io/hoc01/assets/client/padlr/visualImg.png";
+const spinIcon = "https://ik.imagekit.io/hoc01/assets/client/padlr/heroImg1.png";
+const palatteImg = "https://ik.imagekit.io/hoc01/assets/client/padlr/courtImg2.png";
+const attachIcon = "https://ik.imagekit.io/hoc01/assets/client/padlr/attachIcon.png";
+
+
 
 const MobSection3 = () => {
   const iconRefs = useRef([]);

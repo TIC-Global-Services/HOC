@@ -1,6 +1,6 @@
 import React, { useRef } from "react";
 
-import minimalImg from "../../../assets/client/gopalan/heroImg1.png";
+const minimalImg ="https://ik.imagekit.io/hoc01/assets/client/gopalan/heroImg1.png";
 import GridOverlay from "../../GridOverlay";
 
 import useScrollFloat from "../../../hooks/useScrollFloat";

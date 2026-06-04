@@ -1,11 +1,17 @@
 import React from "react";
-
-
-import delightImg from "../../../../assets/client/padlr/img/courtPanelImg4.png";
-import topImg from "../../../../assets/client/padlr/img/courtPanelImg3.png";
-import paddle from "../../../../assets/client/padlr/img/batIcon.png";
-import circleImg from "../../../../assets/client/padlr/img/heroImg1.png";
 import GridOverlay from "../../../GridOverlay";
+
+
+const delightImg = "https://ik.imagekit.io/hoc01/assets/client/padlr/courtPanelImg4.png";
+const topImg =
+  "https://ik.imagekit.io/hoc01/assets/client/padlr/courtPanelImg3.png";
+
+const paddle =
+  "https://ik.imagekit.io/hoc01/assets/client/padlr/batIcon.png";
+
+const circleImg =
+  "https://ik.imagekit.io/hoc01/assets/client/padlr/heroImage1.png";
+
 
 
 const MobCourtSec4 = () => {

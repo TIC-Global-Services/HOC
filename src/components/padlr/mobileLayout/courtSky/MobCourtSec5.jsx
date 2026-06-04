@@ -1,6 +1,6 @@
 import React from "react";
 
-import padlrImg from "../../../../assets/client/padlr/img/courtPanelImg2.png";
+const padlrImg = "https://ik.imagekit.io/hoc01/assets/client/padlr/courtPanelImg2.png";
 
 const MobCourtSec5 = () => {
   return (

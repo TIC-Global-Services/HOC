@@ -1,8 +1,8 @@
 import React, { useRef } from "react";
 import useScrollFloat from "../../../hooks/useScrollFloat";
 
-import qataLeftImg from "../../../assets/client/gopalan/groupImg.png";
-import treeIcon from "../../../assets/client/gopalan/heroImg1.png";
+const qataLeftImg = "https://ik.imagekit.io/hoc01/assets/client/gopalan/groupImg.png";
+const minimalImg ="https://ik.imagekit.io/hoc01/assets/client/gopalan/heroImg1.png";
 
 const MobSection3 = () => {
   const iconRef = useRef(null);
@@ -33,7 +33,7 @@ const MobSection3 = () => {
 
         {/* ANIMATED ICON */}
         <div ref={iconRef} className="w-[250px]">
-          <img src={treeIcon} alt="icon" className="w-full object-contain" />
+          <img src={minimalImg} alt="icon" className="w-full object-contain" />
         </div>
 
       </div>

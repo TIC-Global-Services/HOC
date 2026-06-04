@@ -1,7 +1,7 @@
 import { useEffect, useRef } from "react";
 import gsap from "gsap";
-import callOutCenter from "../../../assets/client/gopalan/heroImg4.png";
-import callOutTop from "../../../assets/client/gopalan/heroImg1.png";
+const callOutCenter = "https://ik.imagekit.io/hoc01/assets/client/gopalan/heroImg4.png";
+const callOutTop = "https://ik.imagekit.io/hoc01/assets/client/gopalan/heroImg1.png";
 import GridOverlay from "../../../components/GridOverlay";
 
 const Section9 = () => {

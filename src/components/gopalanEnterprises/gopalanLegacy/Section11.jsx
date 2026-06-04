@@ -1,10 +1,9 @@
 import { useRef } from "react";
 
-import topImage from "../../../assets/client/gopalan/panelImg2.png";
-import bottomImage from "../../../assets/client/gopalan/PanelImg1.png";
-
-import tagIcon from "../../../assets/client/gopalan/heroImg2.png";
-import tagIcon2 from "../../../assets/client/gopalan/heroImg3.png";
+const topImage = "https://ik.imagekit.io/hoc01/assets/client/gopalan/panelImg2.png";
+const bottomImage=  "https://ik.imagekit.io/hoc01/assets/client/gopalan/PanelImg1.png";
+const tagIcon = "https://ik.imagekit.io/hoc01/assets/client/gopalan/heroImg2.png";
+const tagIcon2=  "https://ik.imagekit.io/hoc01/assets/client/gopalan/heroImg3.png";
 
 import useScrollFloat from "../../../hooks/useScrollFloat";
 

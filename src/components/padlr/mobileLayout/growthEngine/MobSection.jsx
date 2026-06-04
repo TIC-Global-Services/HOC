@@ -1,7 +1,9 @@
 import React, { useRef } from "react";
-import paddleLogoImg from "../../../../assets/client/padlr/img/heroImg2.png";
+
 import aboutVideo from "../../../../assets/client/padlr/vdo/Padlr_Animation 2.mp4";
 import useMobileVideoFix from "../../../../hooks/useMobileVideo";
+
+const paddleLogoImg = "https://ik.imagekit.io/hoc01/assets/client/padlr/heroImg2.png";
 
 const MobSection = () => {
   const videoRef = useRef(null);

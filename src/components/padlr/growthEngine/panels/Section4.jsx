@@ -1,6 +1,6 @@
 import React from "react";
 
-import visualImg from "../../../../assets/client/padlr/img/visualImg.png";
+const visualImg = "https://ik.imagekit.io/hoc01/assets/client/padlr/visualImg.png";
 
 const Section4 = () => {
   return (

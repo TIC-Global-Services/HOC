@@ -1,4 +1,4 @@
-import brandImg from "../../../../assets/client/padlr/img/courtPanelImg2.png";
+const brandImg = "https://ik.imagekit.io/hoc01/assets/client/padlr/courtImg2.png";
 
 export default function Section9() {
   return (

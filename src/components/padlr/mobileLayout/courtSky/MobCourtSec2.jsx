@@ -1,8 +1,8 @@
 import React from "react";
 
-import courtImg2 from "../../../../assets/client/padlr/img/courtImg2.png";
-import courtImg3 from "../../../../assets/client/padlr/img/courtImg3.png";
-import batlogo from "../../../../assets/client/padlr/img/batIcon.png";
+const batlogo = "https://ik.imagekit.io/hoc01/assets/client/padlr/batIcon.png";
+const courtImg2 = "https://ik.imagekit.io/hoc01/assets/client/padlr/courtImg2.png";
+const courtImg3 = "https://ik.imagekit.io/hoc01/assets/client/padlr/courtImg3.png";
 
 import GridOverlay from "../../../GridOverlay";
 

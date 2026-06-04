@@ -1,10 +1,11 @@
 import { motion } from "framer-motion";
-import heroCallout from "../../../assets/client/page/hoc-callout.png";
-import starImg from "../../../assets/client/page/endIcon.png";
+
+const heroCallout ="https://ik.imagekit.io/hoc01/assets/client/clientPage/hoc-callout.png";
+const starImg ="https://ik.imagekit.io/hoc01/assets/client/clientPage/endIcon.png";
 
 const ClientHero = () => {
   return (
-    <div className="flex flex-col items-center justify-center relative min-h-screen  text-center">
+    <div className="flex flex-col items-center justify-center relative min-h-screen text-center">
 
       {/* TITLE BLOCK */}
       <div className="relative flex items-center justify-center">
@@ -14,13 +15,17 @@ const ClientHero = () => {
           src={heroCallout}
           className="absolute w-[60px] z-[1]"
           style={{
-            left: "0%",     
-            bottom: "30px", 
+            left: "0%",
+            bottom: "30px",
           }}
           alt="Button"
           initial={{ x: -100, opacity: 0 }}
           animate={{ x: 0, opacity: 1 }}
-          transition={{ type: "spring", stiffness: 120, damping: 10 }}
+          transition={{
+            type: "spring",
+            stiffness: 120,
+            damping: 10,
+          }}
         />
 
         {/* CLIENTS TEXT */}
@@ -28,7 +33,10 @@ const ClientHero = () => {
           className="alinsa text-[#060ebb] text-[50px] leading-none z-[10]"
           initial={{ scale: 0.8, opacity: 0 }}
           animate={{ scale: 1, opacity: 1 }}
-          transition={{ duration: 0.4, ease: "easeOut" }}
+          transition={{
+            duration: 0.4,
+            ease: "easeOut",
+          }}
         >
           CLIENTS
         </motion.h1>
@@ -40,7 +48,10 @@ const ClientHero = () => {
           className="absolute w-[35px] right-[-6%] top-[25px] z-[20]"
           initial={{ scale: 0.5, opacity: 0 }}
           animate={{ scale: 1, opacity: 1 }}
-          transition={{ duration: 0.4, delay: 0.2 }}
+          transition={{
+            duration: 0.4,
+            delay: 0.2,
+          }}
         />
 
       </div>
@@ -50,7 +61,10 @@ const ClientHero = () => {
         className="jost mt-6 max-w-[350px] text-[25px] leading-[30px] font-[500]"
         initial={{ y: 20, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
-        transition={{ duration: 0.4, delay: 0.2 }}
+        transition={{
+          duration: 0.4,
+          delay: 0.2,
+        }}
       >
         ready to be part of the creative process?
       </motion.p>

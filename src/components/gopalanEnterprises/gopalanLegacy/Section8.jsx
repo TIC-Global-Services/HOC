@@ -1,4 +1,4 @@
-import gopalanGroupImg from "../../../assets/client/gopalan/Gopalan groups.png";
+const gopalanGroupImg = "https://ik.imagekit.io/hoc01/assets/client/gopalan/Gopalan_groups.png";
 
 export default function Section8() {
   return (

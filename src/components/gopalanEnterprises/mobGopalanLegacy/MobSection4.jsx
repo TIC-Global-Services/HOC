@@ -1,5 +1,5 @@
 import React from "react";
-import qataRightImg from "../../../assets/client/gopalan/panel4Img.png";
+const qataRightImg = "https://ik.imagekit.io/hoc01/assets/client/gopalan/panel4Img.png";
 
 const MobSection4 = () => {
   return (
