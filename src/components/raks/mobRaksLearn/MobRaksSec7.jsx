@@ -3,9 +3,9 @@ import gsap from "gsap";
 import GridOverlay from "../../GridOverlay";
 
 const topRightImg = "https://ik.imagekit.io/hoc01/assets/client/raks/panel5.png";
-import centerImg from "https://ik.imagekit.io/hoc01/assets/client/raks/panel11.png";
-import pinImg from "https://ik.imagekit.io/hoc01/assets/client/raks/heroImg1.png";
-import pinImg2 from "https://ik.imagekit.io/hoc01/assets/client/raks/heroImg2.png";
+const centerImg = "https://ik.imagekit.io/hoc01/assets/client/raks/panel11.png";
+const pinImg = "https://ik.imagekit.io/hoc01/assets/client/raks/heroImg1.png";
+const pinImg2 = "https://ik.imagekit.io/hoc01/assets/client/raks/heroImg2.png";
 
 
 
