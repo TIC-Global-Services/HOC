@@ -26,12 +26,12 @@ const ClientsUniq = () => {
     <section className="px-4 md:px-16 py-16 md:py-24 text-center">
 
       <style>{`
-        @keyframes vinylSpin {
-          from { transform: translateY(-50%) translateX(0%) rotate(0deg); }
-          to   { transform: translateY(-50%) translateX(70%) rotate(720deg); }
+        .vinyl-cd {
+          transform: translateY(-50%) translateX(0%) rotate(0deg);
+          transition: transform 0.7s cubic-bezier(0.4, 0, 0.2, 1);
         }
         .group:hover .vinyl-cd {
-          animation: vinylSpin 0.6s ease-out forwards;
+          transform: translateY(-50%) translateX(70%) rotate(720deg);
         }
         .flip-card {
           transform-style: preserve-3d;
@@ -62,12 +62,12 @@ const ClientsUniq = () => {
       </div>
 
       {/* GRID */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-x-20 gap-y-10 justify-items-center">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-x-10 md:gap-x-16 gap-y-12 justify-items-center w-full max-w-[1400px] mx-auto">
 
         {items.map((item) => (
-          <Link key={item.title} to={item.path}>
+          <Link key={item.title} to={item.path} className="block w-full max-w-[250px]">
             <motion.div
-              className="group"
+              className="group w-full"
               initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -75,7 +75,7 @@ const ClientsUniq = () => {
 
               {/* CARD */}
               <div
-                className="relative w-[200px] md:w-[220px] aspect-square"
+                className="relative w-full aspect-square"
                 style={{ perspective: "800px" }}
               >
 
@@ -83,8 +83,7 @@ const ClientsUniq = () => {
                 <img
                   src={cd}
                   alt="CD"
-                  className="vinyl-cd absolute top-1/2 left-0 w-[140px] md:w-[180px] z-0"
-                  style={{ transform: "translateY(-50%) translateX(0%) rotate(0deg)" }}
+                  className="vinyl-cd absolute top-1/2 left-0 w-[80%] z-0"
                 />
 
                 {/* FLIP CARD */}
