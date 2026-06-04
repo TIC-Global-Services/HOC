@@ -64,7 +64,7 @@ const Home = () => {
             <h2 className="jost md:text-[30px]  w-[100%] text-right  text-lg md:leading-[40px]">
               We dabble in graphic design, <br />
                a smidge of branding + packaging,
-              <br />+ focus extensively on experience{" "}
+              <br />focus extensively on experience{" "}
               <br className=" md:hidden block" /> design{" "}
               <br className=" md:block hidden" />
               to tie everything together seamlessly.
