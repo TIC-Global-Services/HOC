@@ -218,7 +218,7 @@ export default function SyedSignatureCraft() {
                 </p>
 
                 <p
-                  className="jost text-[#262666] px-[5%] text-start capitalize border-t-2 border-b-2 border-white py-[4vh] mt-[2vh]"
+                  className="jost text-[#262666] px-[5%] text-start border-t-2 border-b-2 border-white py-[4vh] mt-[2vh]"
                   style={{
                     fontSize: "clamp(14px,1.8vw,24px)",
                     lineHeight: "150%",
@@ -375,7 +375,7 @@ export default function SyedSignatureCraft() {
             >
               {/* TEXT */}
               <p
-                className="jost text-start text-black capitalize"
+                className="jost text-start text-black"
                 style={{
                   fontSize: "clamp(14px,3.5vh,24px)",
                   lineHeight: "150%",

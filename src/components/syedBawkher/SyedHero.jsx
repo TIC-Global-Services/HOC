@@ -96,7 +96,7 @@ const SyedHero = () => {
           <div className="w-full max-w-[50vw]">
             <p
               className="
-              jost capitalize text-start font-[500]
+              jost text-start font-[500]
               tracking-tight text-black
               leading-[41px] w-[45.5ch]
             "

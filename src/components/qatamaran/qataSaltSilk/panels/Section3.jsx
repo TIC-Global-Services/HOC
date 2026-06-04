@@ -96,7 +96,7 @@ export default function Section3() {
             </h2>
 
             <p
-              className="jost leading-[140%] tracking-tight capitalize 
+              className="jost leading-[140%] tracking-tight 
             text-[clamp(14px,3vh,24px)]"
             >
               At Qatamaran, every piece is thoughtfully crafted to embody

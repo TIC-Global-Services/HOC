@@ -59,7 +59,7 @@ const MobRaksSec1 = () => {
 
         {/* TEXT */}
         <div className="text-start relative px-5 py-20">
-          <p className="absolute top-0 jost capitalize font-[300] text-[16px] leading-[120%] max-w-[340px] pt-4">
+          <p className="absolute top-0 jost font-[300] text-[16px] leading-[120%] max-w-[340px] pt-4">
             RAKS Institutions is a forward-thinking school rooted in the
             Reggio-Emilia philosophy, where children lead their own learning
             journeys. Through experiential, sports-integrated, and problem-based

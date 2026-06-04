@@ -91,7 +91,7 @@ const MobSyedHero = () => {
       {/* ─── BOTTOM ─── */}
       <div className="w-full text-start flex-1 px-5 py-8 flex items-center">
 
-        <p className="jost font-medium text-[13px] leading-[24px] tracking-[-0.03em] capitalize text-black">
+        <p className="jost font-medium text-[13px] leading-[24px] tracking-[-0.03em] text-black">
           Since 1904, Syed Bawkher & Co. has been a mainstay of the sartorial
           scene in Madras, and remains one of the oldest continual bespoke
           tailoring houses in the world. Marrying the custodial heritage of

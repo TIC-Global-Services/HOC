@@ -57,9 +57,7 @@ const MobRaksSec8 = () => {
 
         {/* PARAGRAPH (LEFT ALIGN) */}
         <p className="jost text-[16px] text-black leading-[140%] text-start max-w-[320px]">
-          Where Little Ideas Turn Into Big Creations A Space to Imagine,
-          Build, and Grow Where Little Ideas Turn Into Big Creations
-          Innovation.
+          Where little ideas turn into big creations a space to imagine, build, and grow where little ideas turn into big creations innovation.
         </p>
       </div>
     </section>

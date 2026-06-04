@@ -46,7 +46,7 @@ const MobSection = () => {
 
           {/* TEXT */}
           <div className="text-start relative px-5 py-16">
-          <p className="absolute top-0 jost capitalize font-[300] text-[16px] leading-[120%] max-w-[350px] w-[42ch] pt-6">
+          <p className="absolute top-0 jost font-[300] text-[16px] leading-[120%] max-w-[350px] w-[42ch] pt-6">
             Padlr is built to power modern digital ecosystems. From fragmented
             data to unified intelligence, every interaction is transformed into
             actionable insight.

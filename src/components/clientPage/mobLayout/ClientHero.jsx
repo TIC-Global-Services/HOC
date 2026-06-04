@@ -4,7 +4,7 @@ import starImg from "../../../assets/client/page/endIcon.png";
 
 const ClientHero = () => {
   return (
-    <div className="flex flex-col items-center justify-center relative h-[60vh]  text-center">
+    <div className="flex flex-col items-center justify-center relative min-h-screen  text-center">
 
       {/* TITLE BLOCK */}
       <div className="relative flex items-center justify-center">

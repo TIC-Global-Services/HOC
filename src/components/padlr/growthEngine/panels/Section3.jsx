@@ -22,7 +22,7 @@ const Section3 = () => {
         }}
       >
         <p
-          className="jost text-start capitalize font-[500] text-black tracking-tight leading-[130%]"
+          className="jost text-start font-[500] text-black tracking-tight leading-[130%]"
           style={{
             fontSize: "clamp(14px,4vh,24px)",
           }}

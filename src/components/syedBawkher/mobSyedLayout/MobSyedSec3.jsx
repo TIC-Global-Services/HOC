@@ -19,7 +19,7 @@ const pinRef = useRef(null);
       </div>
 
       <div className="absolute inset-0 flex items-center justify-center px-5 py-[22vh] mt-[5%]">
-        <p className="jost text-black text-[16px] leading-[140%] tracking-tight text-start max-w-[330px] capitalize">
+        <p className="jost text-black text-[16px] leading-[140%] tracking-tight text-start max-w-[330px]">
           Full-canvas tailoring rooted in generations of expertise.
           A seamless blend of time-honoured{" "}
           <span className=" salo font-[500] text-[20px] text-[#262666]">

@@ -39,7 +39,7 @@ const Section4 = () => {
           <p
             className="
               jost
-              capitalize
+
               font-[500]
               text-black
               leading-[160%]

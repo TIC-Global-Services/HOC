@@ -59,7 +59,7 @@ export default function Section1() {
 
               {/* ABOUT TEXT */}
               <p
-                className="jost capitalize text-white leading-[140%] border-t border-b border-white px-5 py-10"
+                className="jost text-white leading-[140%] border-t border-b border-white px-5 py-10"
                 style={{ fontSize: "clamp(11px, 1.5vw, 24px)" }}
               >
                 Padlr is built to power modern digital ecosystems. From

@@ -63,7 +63,7 @@ const MobSyedSignature = () => {
           </h2>
 
           {/* TEXT */}
-          <p className="jost capitalize font-[400] text-[16px] leading-[140%] max-w-[380px] pt-3">
+          <p className="jost font-[400] text-[16px] leading-[140%] max-w-[380px] pt-3">
             Syed Bawkher is built on a legacy of precision tailoring and
             enduring craftsmanship. From the first measurement to the final
             stitch, every garment is shaped with intent—transforming fine

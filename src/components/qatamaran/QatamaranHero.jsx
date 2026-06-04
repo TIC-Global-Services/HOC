@@ -72,7 +72,7 @@ const QatamaranHero = () => {
           px-6 md:px-8 xl:px-12 2xl:px-14
         "
         >
-          <p className="jost capitalize text-start font-[500] tracking-tight text-black max-w-[420px] lg:max-w-[540px] xl:max-w-[580px] 2xl:max-w-[7400px] leading-[160%] text-[14px] md:text-[18px] xl:text-[24px]">
+          <p className="jost text-start font-[500] tracking-tight text-black max-w-[420px] lg:max-w-[540px] xl:max-w-[580px] 2xl:max-w-[7400px] leading-[160%] text-[14px] md:text-[18px] xl:text-[24px]">
             Qatamaran is a prêt-à-porter menswear label rooted in Chennai's rich
             tailoring heritage, designed for the modern gentleman who{" "}
             <span className="salo text-[#1E382D] text-[18px] md:text-[26px] xl:text-[36px]">

@@ -68,7 +68,7 @@ const MobCourtSec2 = () => {
       {/* ─── BOTTOM TEXT ─── */}
       <div className="relative px-5 mt-[15%] pb-10 z-10">
 
-        <p className="jost text-start text-white/90 max-w-[250px] text-[14px] leading-[20px] capitalize tracking-tight">
+        <p className="jost text-start text-white/90 max-w-[250px] text-[14px] leading-[20px] tracking-tight">
           Padlr is a modern destination built around the fast-growing culture
           of padel—where sport, community, and lifestyle come together.
           Designed for both{" "}

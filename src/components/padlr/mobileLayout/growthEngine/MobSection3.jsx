@@ -74,7 +74,7 @@ const MobSection3 = () => {
 
         {/* RIGHT TEXT */}
         <div className="absolute right-[2%] top-[18%] max-w-[140px] z-10">
-          <p className="jost text-start capitalize text-black leading-[120%] text-[16px]">
+          <p className="jost text-start text-black leading-[120%] text-[16px]">
             Maintains visual balance with neutral tones inspired by real court
             elements. Communicates precision and modernity through a
             distinctive, high-impact typeface

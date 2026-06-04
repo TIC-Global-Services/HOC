@@ -80,7 +80,6 @@ const MobSection1 = () => {
           <p
             className="
             jost
-            capitalize
             font-[300]
             text-[16px]
             leading-[20px]

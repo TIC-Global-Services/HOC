@@ -24,7 +24,7 @@ const MobQataSec3 = () => {
       {/* CONTENT */}
       <div className="w-full h-[40vh] flex flex-col items-center justify-center px-5 py-10 gap-6">
 
-        <p className="jost text-black text-start font-[500] text-[20px] leading-[140%] tracking-tight capitalize max-w-[320px]">
+        <p className="jost text-black text-start font-[500] text-[20px] leading-[140%] tracking-tight max-w-[320px]">
           "Honoring Heritage refining craft. <br /><span className="pl-[3%]">defining modern elegance."</span>
         </p>
 

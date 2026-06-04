@@ -56,7 +56,7 @@ const MobQataSec1 = () => {
         <h2 className="salo text-[60px] leading-wide uppercase">About</h2>
 
         {/* TEXT */}
-        <p className="jost capitalize font-[300] text-[16px] leading-[120%] max-w-[340px] pt-3">
+        <p className="jost  font-[300] text-[16px] leading-[120%] max-w-[340px] pt-3">
           Rooted in seaside heritage, shaped by skilled hands. A balance of
           fluid elegance and structured precision.
         </p>

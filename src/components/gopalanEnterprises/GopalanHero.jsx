@@ -129,7 +129,7 @@ const GopalanHero = () => {
             transition={{ duration: 0.8, ease: "easeOut" }}
             className="
               absolute
-              top-[25%]
+              top-[30%]
               left-0
               ml-[5%] xl:ml-[8%] 2xl:ml-[15%]
               w-[85%]
@@ -141,7 +141,7 @@ const GopalanHero = () => {
             "
           >
             <p
-              className="jost text-start font-[500] capitalize text-black leading-[160%]"
+              className="jost text-start font-[500] text-black leading-[160%]"
               style={{
                 fontSize: "clamp(14px,4vh,24px)",
               }}

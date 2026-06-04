@@ -147,14 +147,14 @@ const Section2 = () => {
             </h2>
 
             <p
-              className="jost  text-black capitalize tracking-tight leading-[140%]"
+              className="jost  text-black tracking-tight leading-[140%]"
               style={{
                 fontSize: "clamp(14px,2vw,24px)",
                 width: "30ch",
               }}
             >
-              Move Better Every Day. Designed for Daily Motion, engineered for
-              Performance built for Strength & Balance.
+              Move better every day. designed for daily motion, engineered for
+              Performance, built for Strength & Balance.
             </p>
           </div>
         </div>

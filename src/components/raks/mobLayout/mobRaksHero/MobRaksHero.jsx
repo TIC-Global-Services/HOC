@@ -133,7 +133,7 @@ const MobRaksHero = () => {
       {/* ─── BOTTOM ─── */}
       <div className="w-full text-start flex-1 px-5 py-8 flex items-center">
 
-        <p className="jost font-medium text-[16px] leading-[24px] tracking-[-0.02em] capitalize w-[45ch] text-black">
+        <p className="jost font-medium text-[16px] leading-[24px] tracking-[-0.02em] w-[45ch] text-black">
           RAKS Institutions is a future-forward school rooted in the{" "}
 
           <span className="salo text-[#000085] text-[20px] leading-[24px] capitalize">

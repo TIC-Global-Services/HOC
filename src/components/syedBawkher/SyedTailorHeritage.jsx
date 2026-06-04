@@ -363,7 +363,7 @@ export default function SyedTailorHeritage() {
                   maxWidth: "45%",
                 }}
               >
-                <p className="jost text-start text-[24px] leading-[130%] capitalize text-[#262666]">
+                <p className="jost text-start text-[24px] leading-[130%] text-[#262666]">
                   Syed Bawkher is a heritage tailoring house built on
                   generations of craftsmanship—where tradition, precision, and
                   timeless style come together. Designed for the modern

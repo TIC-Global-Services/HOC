@@ -100,7 +100,7 @@ const Section7 = () => {
 
           {/* PARAGRAPH */}
           <p className="jost text-start text-black leading-[120%] tracking-tight text-[clamp(14px,1.5vw,24px)]">
-            Where Little Ideas Turn Into Big Creations A Space to Imagine, Build, and Grow Where Little Ideas Turn Into Big Creations Innovation.
+            Where little ideas turn into big creations a space to imagine, build, and grow where little ideas turn into big creations innovation.
           </p>
 
         </div>

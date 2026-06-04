@@ -90,7 +90,7 @@ const RaksHero = () => {
               flex justify-start
             "
           >
-            <p className="jost text-start font-[500] capitalize text-black  leading-[45px] text-[14px] md:text-[18px] xl:text-[26px] w-[42ch]">
+            <p className="jost text-start font-[500] text-black  leading-[45px] text-[14px] md:text-[18px] xl:text-[26px] w-[42ch]">
               RAKS Institutions is a future-forward school rooted in the{" "}
               <span className="salo text-[#000085] text-[18px] md:text-[26px] xl:text-[40px]">
                 Reggio Emilia philosophy,

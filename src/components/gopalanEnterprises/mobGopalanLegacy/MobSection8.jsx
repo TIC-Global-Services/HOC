@@ -107,7 +107,7 @@ const MobSection8 = () => {
               text-[16px]
               leading-[23px]
               tracking-tight
-              capitalize
+              
             "
           >
             Gopalan Group is a legacy-driven enterprise rooted in over four decades of 

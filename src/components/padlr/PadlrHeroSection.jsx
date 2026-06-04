@@ -79,7 +79,7 @@ const PadlrHero = () => {
         "
       >
         <p
-          className="jost text-black text-start font-[500] capitalize tracking-tight leading-[150%] max-w-[420px] lg:max-w-[520px] xl:max-w-[656px] 2xl:max-w-[760px]"
+          className="jost text-black text-start font-[500] tracking-tight leading-[150%] max-w-[420px] lg:max-w-[520px] xl:max-w-[656px] 2xl:max-w-[760px]"
           style={{ fontSize: "clamp(14px, 1.6vw, 24px)" }}
         >
           Established in 2025, Padlr is set to be Chennai's premier padel and{" "}
