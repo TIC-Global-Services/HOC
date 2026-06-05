@@ -1,5 +1,7 @@
 import React from "react";
-import craftWaterImg from "../../../../assets/client/qatamaran/block4Right.png";
+
+
+const craftWaterImg = "https://ik.imagekit.io/hoc01/assets/client/qatamaran/block4Right.png";
 
 const MobRefineSec6 = () => {
   return (

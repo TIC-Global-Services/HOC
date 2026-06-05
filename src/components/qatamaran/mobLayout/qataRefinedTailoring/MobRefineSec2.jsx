@@ -1,8 +1,8 @@
 import { useRef } from "react";
 import useScrollFloat from "../../../../hooks/useScrollFloat";
 
-import treeImg from "../../../../assets/client/qatamaran/heroFloat2.png";
-import callOut from "../../../../assets/client/qatamaran/heroFloat1.png";
+const treeImg = "https://ik.imagekit.io/hoc01/assets/client/qatamaran/heroFloat2.png";
+const callOut = "https://ik.imagekit.io/hoc01/assets/client/qatamaran/heroFloat1.png";
 
 const MobRefineSec2 = () => {
   const topRef = useRef(null);

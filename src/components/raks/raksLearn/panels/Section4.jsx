@@ -3,11 +3,11 @@ import gsap from "gsap";
 import grid from "../../../../assets/client/padlr/img/checkBg.png";
 import GridOverlay from "../../../GridOverlay";
 
-import leftImg from "../../../../assets/client/raks/img/panel3.png";
-import innocenceCallouts from "../../../../assets/client/raks/img/heroImg3.png";
-import learnCallouts from "../../../../assets/client/raks/img/raksLearn.png";
-import viVidCallouts from "../../../../assets/client/raks/img/heroImg1.png";
-import pragmaCallouts from "../../../../assets/client/raks/img/heroImg4.png";
+const leftImg = "https://ik.imagekit.io/hoc01/assets/client/raks/panel3.png";
+const innocenceCallouts = "https://ik.imagekit.io/hoc01/assets/client/raks/heroImg3.png";
+const learnCallouts = "https://ik.imagekit.io/hoc01/assets/client/raks/raksLearn.png";
+const viVidCallouts = "https://ik.imagekit.io/hoc01/assets/client/raks/heroImg1.png";
+const pragmaCallouts = "https://ik.imagekit.io/hoc01/assets/client/raks/heroImg4.png";
 
 
 const Section4 = () => {

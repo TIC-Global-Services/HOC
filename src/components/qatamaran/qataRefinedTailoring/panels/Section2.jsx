@@ -1,13 +1,13 @@
 import { useRef } from "react";
-
-import topCubImage from "../../../../assets/client/qatamaran/syedCub.png";
-import bottomCubImage from "../../../../assets/client/qatamaran/syedCub.png";
-import tagIcon from "../../../../assets/client/qatamaran/heroFloat3.png";
-import tagIcon2 from "../../../../assets/client/qatamaran/heroFloat4.png";
 import grid from "../../../../assets/client/padlr/img/checkBg.png";
-
 import useScrollFloat from "../../../../hooks/useScrollFloat";
 import GridOverlay from "../../../GridOverlay";
+
+const topCubImage = "https://ik.imagekit.io/hoc01/assets/client/qatamaran/syedCub.png";
+const bottomCubImage = "https://ik.imagekit.io/hoc01/assets/client/qatamaran/syedCub.png";
+const tagIcon = "https://ik.imagekit.io/hoc01/assets/client/qatamaran/heroFloat3.png";
+const tagIcon2 = "https://ik.imagekit.io/hoc01/assets/client/qatamaran/heroFloat4.png";
+
 
 const Section2 = () => {
   // refs

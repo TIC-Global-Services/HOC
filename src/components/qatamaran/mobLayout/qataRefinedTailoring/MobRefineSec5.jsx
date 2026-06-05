@@ -1,11 +1,12 @@
 import React, { useRef } from "react";
 import useScrollFloat from "../../../../hooks/useScrollFloat";
-
-import topImg from "../../../../assets/client/qatamaran/block4Top.png";
-import leftIcon from "../../../../assets/client/qatamaran/heroFloat1.png";
-import rightIcon from "../../../../assets/client/qatamaran/coromandelCoast.png";
 import grid from "../../../../assets/client/padlr/img/checkBg.png";
 import GridOverlay from "../../../GridOverlay";
+
+
+const topImg =  "https://ik.imagekit.io/hoc01/assets/client/qatamaran/block4Top.png";
+const leftIcon =  "https://ik.imagekit.io/hoc01/assets/client/qatamaran/heroFloat1.png";
+const rightIcon = "https://ik.imagekit.io/hoc01/assets/client/qatamaran/coromandelCoast.png";
 
 const MobRefineSec5 = () => {
   const leftRef = useRef(null);

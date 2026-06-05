@@ -1,10 +1,13 @@
 import { useRef, useEffect } from "react";
 import gsap from "gsap";
-import designImg from "../../../../assets/client/qatamaran/block4Top.png";
-import iconCoromandelImg from "../../../../assets/client/qatamaran/coromandelCoast.png";
-import glassIcon from "../../../../assets/client/qatamaran/heroFloat1.png";
 import grid from "../../../../assets/client/padlr/img/checkBg.png";
 import GridOverlay from "../../../GridOverlay";
+
+
+const designImg =  "https://ik.imagekit.io/hoc01/assets/client/qatamaran/block4Top.png";
+const iconCoromandelImg = "https://ik.imagekit.io/hoc01/assets/client/qatamaran/coromandelCoast.png";
+const glassIcon =  "https://ik.imagekit.io/hoc01/assets/client/qatamaran/heroFloat1.png";
+
 
 const Section4 = () => {
   const iconRefs = useRef([]);

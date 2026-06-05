@@ -1,4 +1,6 @@
-import qataImg from "../../assets/client/qatamaran/qataSecImg.png";
+
+
+const qataImg = "https://ik.imagekit.io/hoc01/assets/client/qatamaran/qataSecImg.png";
 
 const QataImageSec = () => {
   return (

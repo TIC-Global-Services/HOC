@@ -1,6 +1,7 @@
 import React from "react";
 import grid from "../../../../assets/client/padlr/img/checkBg.png";
-import refinedImg3 from "../../../../assets/client/qatamaran/block3Img.png";
+
+const refinedImg3 = "https://ik.imagekit.io/hoc01/assets/client/qatamaran/block3Img.png";
 
 const MobRefineSec4 = () => {
   return (

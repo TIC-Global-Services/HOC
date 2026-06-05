@@ -1,11 +1,12 @@
 import React, { useEffect, useRef } from "react";
 import gsap from "gsap";
-
-import leftImg from "../../../../assets/client/raks/img/panel6.png";
-import rightImg from "../../../../assets/client/raks/img/panel7.png";
-import centerIcon from "../../../../assets/client/raks/img/heroImg2.png";
 import grid from "../../../../assets/client/padlr/img/checkBg.png";
 import GridOverlay from "../../../GridOverlay";
+
+const leftImg = "https://ik.imagekit.io/hoc01/assets/client/raks/panel6.png";
+const rightImg = "https://ik.imagekit.io/hoc01/assets/client/raks/panel7.png";
+const centerIcon = "https://ik.imagekit.io/hoc01/assets/client/raks/heroImg2.png";
+
 
 const Section7 = () => {
   const iconRefs = useRef([]);

@@ -1,9 +1,12 @@
 import { useEffect, useRef } from "react";
 import gsap from "gsap";
-import treeImg from "../../../../assets/client/qatamaran/heroFloat2.png";
-import callOut from "../../../../assets/client/qatamaran/heroFloat1.png";
 import grid from "../../../../assets/client/padlr/img/checkBg.png";
 import GridOverlay from "../../../../components/GridOverlay";
+
+
+const treeImg = "https://ik.imagekit.io/hoc01/assets/client/qatamaran/heroFloat2.png";
+const callOut = "https://ik.imagekit.io/hoc01/assets/client/qatamaran/heroFloat1.png";
+
 
 const Section1 = () => {
   const iconRefs = useRef([]);

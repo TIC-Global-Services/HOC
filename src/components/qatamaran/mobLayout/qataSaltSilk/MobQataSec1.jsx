@@ -1,9 +1,9 @@
 import React, { useRef } from "react";
 import useScrollFloat from "../../../../hooks/useScrollFloat";
 
-import craftImg from "../../../../assets/client/qatamaran/heroFloat3.png";
-import treeLogoImg from "../../../../assets/client/qatamaran/heroFloat2.png";
-import silkCraft from "../../../../assets/client/qatamaran/silkImg.png";
+const craftImg = "https://ik.imagekit.io/hoc01/assets/client/qatamaran/heroFloat3.png";
+const treeLogoImg = "https://ik.imagekit.io/hoc01/assets/client/qatamaran/heroFloat2.png";
+const silkCraft = "https://ik.imagekit.io/hoc01/assets/client/qatamaran/silkImg.png";
 
 const MobQataSec1 = () => {
   const craftRef = useRef(null);

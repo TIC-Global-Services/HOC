@@ -1,14 +1,15 @@
 import { useEffect, useRef } from "react";
 import gsap from "gsap";
-
-import topLeftImg from "../../../../assets/client/qatamaran/coromandelCoast.png";
-import bottomLeftImg from "../../../../assets/client/qatamaran/heroFloat1.png";
-import topRightImg from "../../../../assets/client/qatamaran/heroFloat4.png";
-import grid from "../../../../assets/client/padlr/img/checkBg.png";
-import qataLeftImg from "../../../../assets/client/qatamaran/qataLeftImg.png";
-import qataRightImg from "../../../../assets/client/qatamaran/qataRightImg.png";
-import treeIcon from "../../../../assets/client/qatamaran/heroFloat2.png";
 import GridOverlay from "../../../../components/GridOverlay";
+import grid from "../../../../assets/client/padlr/img/checkBg.png";
+
+const topLeftImg = "https://ik.imagekit.io/hoc01/assets/client/qatamaran/coromandelCoast.png";
+const bottomLeftImg = "https://ik.imagekit.io/hoc01/assets/client/qatamaran/heroFloat1.png";
+const topRightImg = "https://ik.imagekit.io/hoc01/assets/client/qatamaran/heroFloat4.png";
+const qataLeftImg = "https://ik.imagekit.io/hoc01/assets/client/qatamaran/qataLeftImg.png";
+const qataRightImg = "https://ik.imagekit.io/hoc01/assets/client/qatamaran/qataRightImg.png";
+const treeIcon = "https://ik.imagekit.io/hoc01/assets/client/qatamaran/heroFloat2.png";
+
 
 export default function Section2() {
   const iconRefs = useRef([]);

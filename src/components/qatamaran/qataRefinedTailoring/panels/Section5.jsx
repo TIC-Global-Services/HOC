@@ -1,5 +1,8 @@
-import craftWaterImg from "../../../../assets/client/qatamaran/block4Right.png";
+
 import grid from "../../../../assets/client/padlr/img/checkBg.png";
+
+
+const craftWaterImg = "https://ik.imagekit.io/hoc01/assets/client/qatamaran/block4Right.png";
 
 export default function Section() {
   return (

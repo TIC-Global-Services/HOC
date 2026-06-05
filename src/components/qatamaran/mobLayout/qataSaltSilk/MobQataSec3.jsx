@@ -1,8 +1,8 @@
 import React, { useRef } from "react";
 import useScrollFloat from "../../../../hooks/useScrollFloat";
 
-import qataLeftImg from "../../../../assets/client/qatamaran/qataLeftImg.png";
-import treeIcon from "../../../../assets/client/qatamaran/heroFloat2.png";
+const qataLeftImg = "https://ik.imagekit.io/hoc01/assets/client/qatamaran/qataLeftImg.png";
+const treeIcon = "https://ik.imagekit.io/hoc01/assets/client/qatamaran/heroFloat2.png";
 
 const MobQataSec3 = () => {
   const iconRef = useRef(null);

@@ -1,4 +1,6 @@
-import raksInstaImg from "../../../../assets/client/raks/img/raksInstaImg.png";
+
+
+const raksInstaImg = "https://ik.imagekit.io/hoc01/assets/client/raks/raksInstaImg.png";
 
 const Section12 = () => {
   return (

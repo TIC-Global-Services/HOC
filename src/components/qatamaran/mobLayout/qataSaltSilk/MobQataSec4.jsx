@@ -1,10 +1,9 @@
 import { useRef } from "react";
 import useScrollFloat from "../../../../hooks/useScrollFloat";
-
-import topIcon from "../../../../assets/client/qatamaran/heroFloat1.png";
-import bottomIcon from "../../../../assets/client/qatamaran/heroFloat4.png";
-
 import GridOverlay from "../../../GridOverlay";
+
+const topIcon = "https://ik.imagekit.io/hoc01/assets/client/qatamaran/heroFloat1.png";
+const bottomIcon = "https://ik.imagekit.io/hoc01/assets/client/qatamaran/heroFloat4.png";
 
 const MobQataSec4 = () => {
   const topRef = useRef(null);

@@ -1,11 +1,12 @@
 import React, { useRef } from "react";
 import useScrollFloat from "../../../../hooks/useScrollFloat";
-
-import topLeftImg from "../../../../assets/client/qatamaran/coromandelCoast.png";
-import bottomLeftImg from "../../../../assets/client/qatamaran/heroFloat1.png";
-import topRightImg from "../../../../assets/client/qatamaran/heroFloat4.png";
-
 import GridOverlay from "../../../GridOverlay";
+
+const topLeftImg = "https://ik.imagekit.io/hoc01/assets/client/qatamaran/coromandelCoast.png";
+const bottomLeftImg = "https://ik.imagekit.io/hoc01/assets/client/qatamaran/heroFloat1.png";
+const topRightImg = "https://ik.imagekit.io/hoc01/assets/client/qatamaran/heroFloat4.png";
+
+
 
 const MobQataSec2 = () => {
   const topLeftRef = useRef(null);

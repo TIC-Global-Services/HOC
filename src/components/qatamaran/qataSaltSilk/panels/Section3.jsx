@@ -1,11 +1,13 @@
 import { useEffect, useRef } from "react";
 import gsap from "gsap";
-
-import centerVideo from "../../../../assets/client/qatamaran/Qatamaran_HOC_Website.mov";
-import topIcon from "../../../../assets/client/qatamaran/heroFloat1.png";
-import bottomIcon from "../../../../assets/client/qatamaran/heroFloat4.png";
 import grid from "../../../../assets/client/padlr/img/checkBg.png";
 import GridOverlay from "../../../GridOverlay";
+
+import centerVideo from "../../../../assets/client/qatamaran/Qatamaran_HOC_Website.mov";
+
+
+const topIcon = "https://ik.imagekit.io/hoc01/assets/client/qatamaran/heroFloat1.png";
+const bottomIcon = "https://ik.imagekit.io/hoc01/assets/client/qatamaran/heroFloat4.png";
 
 export default function Section3() {
   const iconRefs = useRef([]);

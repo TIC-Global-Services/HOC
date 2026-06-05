@@ -1,9 +1,12 @@
 import { motion } from "framer-motion";
-import img1 from "../../assets/client/qatamaran/heroFloat1.png";
-import img2 from "../../assets/client/qatamaran/heroFloat2.png";
-import img3 from "../../assets/client/qatamaran/heroFloat3.png";
-import img4 from "../../assets/client/qatamaran/heroFloat4.png";
 import GridOverlay from "../GridOverlay";
+
+
+const img1 = "https://ik.imagekit.io/hoc01/assets/client/qatamaran/heroFloat1.png";
+const img2 = "https://ik.imagekit.io/hoc01/assets/client/qatamaran/heroFloat2.png";
+const img3 = "https://ik.imagekit.io/hoc01/assets/client/qatamaran/heroFloat3.png";
+const img4 = "https://ik.imagekit.io/hoc01/assets/client/qatamaran/heroFloat4.png";
+
 
 const QatamaranHero = () => {
   return (
