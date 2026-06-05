@@ -5,7 +5,7 @@ const starImg ="https://ik.imagekit.io/hoc01/assets/client/clientPage/endIcon.pn
 
 const ClientHero = () => {
   return (
-    <div className="flex flex-col items-center justify-center relative min-h-screen text-center">
+    <div className="flex flex-col items-center justify-center relative min-h-[70dvh] text-center">
 
       {/* TITLE BLOCK */}
       <div className="relative flex items-center justify-center">

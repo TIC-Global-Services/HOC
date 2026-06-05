@@ -3,10 +3,10 @@ import creativityVideo from "../../assets/client/page/vinyl_new_2.mp4";
 
 const ClientsCreativity = () => {
   return (
-    <div className="flex flex-col md:flex-row items-center justify-center mt-0 md:mt-0 gap-10 px-4">
+    <div className="flex flex-col md:flex-row items-center justify-center -mt-32 md:mt-0 gap-10 px-4">
       
       {/* Left Video */}
-      <div className="w-1/2 max-w-[600px] rounded-[20px] overflow-hidden">
+      <div className="w-1/2 max-w-[600px] rounded-[4px] overflow-hidden">
       <motion.video
         src={creativityVideo}
         autoPlay
