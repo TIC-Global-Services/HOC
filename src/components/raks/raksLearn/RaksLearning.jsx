@@ -117,7 +117,7 @@ export default function RaksLearning() {
           {sections.map(({ Component, width }, i) => (
             <div
               key={i}
-              className="h-full flex-shrink-0"
+              className={`h-full flex-shrink-0 ${i === 1 ? 'relative z-[2]' : 'relative z-[1]'}`}
               style={{ width: `${width}vw` }}
             >
               <Component />
