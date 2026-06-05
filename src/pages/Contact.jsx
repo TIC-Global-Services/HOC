@@ -41,7 +41,7 @@ const emailImg = 'https://ik.imagekit.io/hoc01/assets/hover/emailImg.png?updated
 // import bhe from "../assets/mail.png";
 // import dri from "../assets/phone.png";
 
-import arrow from "../assets/down-arrow.png";
+
 const images = [
   {
     src: flowerImg,
@@ -200,7 +200,7 @@ const JobListings = ({ scrollToBottom }) => {
         ))}
 
       {/* <h1 className="absolute  cursor-pointer !bottom-2 md:bottom-10 tracking-wide text-[#0000FF]   text-center text-2xl md:text-[20px]"  onClick={scrollToBottom}>
-        <img src={arrow} alt="Arrow" className="w-10" />
+        <img src="/down-arrow.png" alt="Arrow" className="w-10" />
       </h1> */}
       {/* <div className=" absolute">Scroll Down</div> */}
     </div>

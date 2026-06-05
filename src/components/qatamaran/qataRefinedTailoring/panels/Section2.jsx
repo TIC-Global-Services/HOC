@@ -1,5 +1,4 @@
 import { useRef } from "react";
-import grid from "../../../../assets/client/padlr/img/checkBg.png";
 import useScrollFloat from "../../../../hooks/useScrollFloat";
 import GridOverlay from "../../../GridOverlay";
 

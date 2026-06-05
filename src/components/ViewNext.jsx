@@ -7,7 +7,7 @@ const img3 = "https://ik.imagekit.io/hoc01/assets/client/clientPage/Gopalan.png"
 const img4 = "https://ik.imagekit.io/hoc01/assets/client/clientPage/Syed%20Bawkher.png";
 const img5 = "https://ik.imagekit.io/hoc01/assets/client/clientPage/Raks.png";
 
-import cd from "../assets/client/page/clientsCd.png";
+
 
 // ALL CLIENTS
 const allClients = [
@@ -130,7 +130,7 @@ const ViewNext = ({
               >
                 {/* CD */}
                 <img
-                  src={cd}
+                  src="/client/page/clientsCd.png"
                   alt="CD"
                   className="
                     absolute top-1/2 left-0

@@ -3,7 +3,7 @@ import React from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import grid from "../../assets/client/padlr/img/checkBg.png";
+
 
 import video from "../../assets/client/syedBawkher/vdo/Brochure_animation.mp4";
 import GridOverlay from "../../components/GridOverlay";
@@ -283,7 +283,7 @@ export default function SyedTailorHeritage() {
             className="relative h-full flex-shrink-0"
             style={{
               width: "70vw",
-              backgroundImage: `url(${grid})`,
+              backgroundImage: 'url(/client/padlr/img/checkBg.png)',
               backgroundSize: "cover",
               backgroundColor: "#EBE2CE",
             }}

@@ -1,6 +1,5 @@
 import React, { useRef } from "react";
 import useScrollFloat from "../../../hooks/useScrollFloat";
-import grid from "../../../assets/client/padlr/img/checkBg.png";
 import MobSyedSec2 from "./MobSyedSec2";
 
 

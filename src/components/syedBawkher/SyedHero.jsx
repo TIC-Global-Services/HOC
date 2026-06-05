@@ -1,5 +1,4 @@
 import { motion } from "framer-motion";
-import grid from "../../assets/client/padlr/img/checkBg.png";
 import GridOverlay from "../../components/GridOverlay";
 
 

@@ -1,5 +1,5 @@
 
-import grid from "../../../../assets/client/padlr/img/checkBg.png";
+
 
 
 const craftWaterImg = "https://ik.imagekit.io/hoc01/assets/client/qatamaran/block4Right.png";
@@ -9,7 +9,7 @@ export default function Section() {
     <section
       className="relative w-full h-screen overflow-hidden"
       style={{
-        backgroundImage: `url(${grid})`,
+        backgroundImage: 'url(/client/padlr/img/checkBg.png)',
         backgroundSize: "cover",
         backgroundPosition: "center",
         backgroundColor: "#8FC4E9",

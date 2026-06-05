@@ -1,6 +1,5 @@
 import React from "react";
 import raksVideo from "../../../../assets/client/raks/vdo/raks.mp4";
-import grid from "../../../../assets/client/padlr/img/checkBg.png";
 import GridOverlay from "../../../GridOverlay";
 
 const Section10 = () => {

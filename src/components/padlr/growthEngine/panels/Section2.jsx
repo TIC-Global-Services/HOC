@@ -1,9 +1,7 @@
 import React, { useEffect, useRef } from "react";
 import gsap from "gsap";
 
-import springImg from "../../../../assets/client/padlr/img/heroImg3.png";
-import canImg from "../../../../assets/client/padlr/img/heroImg4.png";
-import batImg from "../../../../assets/client/padlr/img/heroImg2.png";
+
 import GridOverlay from "../../../GridOverlay";
 
 const Section2 = () => {
@@ -77,7 +75,7 @@ const Section2 = () => {
           }}
         >
           <img
-            src={springImg}
+            src="/client/padlr/img/heroImg3.png"
             alt=""
             className="w-[clamp(60px,10vw,190px)] -rotate-12"
           />
@@ -95,7 +93,7 @@ const Section2 = () => {
           }}
         >
           <img
-            src={canImg}
+            src="/client/padlr/img/heroImg4.png"
             alt=""
             className="w-[clamp(80px,12vw,280px)] -rotate-12"
           />
@@ -112,7 +110,7 @@ const Section2 = () => {
             left: "5%",
           }}
         >
-          <img src={batImg} alt="" className="w-[clamp(70px,12vw,270px)]" />
+          <img src="/client/padlr/img/heroImg2.png" alt="" className="w-[clamp(70px,12vw,270px)]" />
         </div>
 
         {/* RIGHT BOTTOM TEXT */}

@@ -10,7 +10,7 @@ const paddle =
   "https://ik.imagekit.io/hoc01/assets/client/padlr/batIcon.png";
 
 const circleImg =
-  "https://ik.imagekit.io/hoc01/assets/client/padlr/heroImage1.png";
+  "https://ik.imagekit.io/hoc01/assets/client/padlr/heroImg1.png";
 
 
 

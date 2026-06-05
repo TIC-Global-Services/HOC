@@ -1,13 +1,12 @@
 import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import GridOverlay from "../../../../components/GridOverlay";
-import grid from "../../../../assets/client/padlr/img/checkBg.png";
 
 const topLeftImg = "https://ik.imagekit.io/hoc01/assets/client/qatamaran/coromandelCoast.png";
 const bottomLeftImg = "https://ik.imagekit.io/hoc01/assets/client/qatamaran/heroFloat1.png";
 const topRightImg = "https://ik.imagekit.io/hoc01/assets/client/qatamaran/heroFloat4.png";
 const qataLeftImg = "https://ik.imagekit.io/hoc01/assets/client/qatamaran/qataLeftImg.png";
-const qataRightImg = "https://ik.imagekit.io/hoc01/assets/client/qatamaran/qataRightImg.png";
+const qataRightImg = "https://ik.imagekit.io/hoc01/assets/client/qatamaran/qataRight.png";
 const treeIcon = "https://ik.imagekit.io/hoc01/assets/client/qatamaran/heroFloat2.png";
 
 

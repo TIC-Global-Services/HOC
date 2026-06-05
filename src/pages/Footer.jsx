@@ -1,8 +1,7 @@
-import logo1 from "../assets/logo.png";
+
 
 import { useState } from "react";
 import emailjs from "@emailjs/browser";
-import grid from "../assets/lines.png";
 import { Link } from "react-router-dom";
 import GridOverlay from '../components/GridOverlay'
 
@@ -73,14 +72,14 @@ const HausOfChaos = () => {
       <div className="relative px-4 py-20 md:px-20 md:py-48 min-h-screen flex flex-col justify-between">
         {/* Logo and Description */}
         <img
-          src={logo1}
+          src="/logo.png"
           className="w-1/2 md:hidden block mb-8"
           alt="Haus Of Chaos"
         />
         <div className="flex">
           <div className="md:max-w-xl">
             <img
-              src={logo1}
+              src="/logo.png"
               className="md:w-40 md:block hidden mb-4"
               alt="Haus Of Chaos"
             />

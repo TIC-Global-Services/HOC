@@ -1,7 +1,7 @@
 import React, { useState } from "react"
 import { motion } from "framer-motion"
 import { Link,useLocation } from "react-router-dom"
-import logo from "../assets/logo2.png"
+
 
 import "./styles.scss"
 
@@ -148,7 +148,7 @@ const App = () => {
       >
        <div className="logo-container">
           <Link to={"/"}>
-            <motion.img variants={hideNavItemsVariant} src={logo} className="w-[80px] md:w-[110px] transition-all duration-700" alt="logo" />
+            <motion.img variants={hideNavItemsVariant} src="/logo2.png" className="w-[80px] md:w-[110px] transition-all duration-700" alt="logo" />
           </Link>
         </div>
         <div className="menu-container">

@@ -1,7 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import gsap from "gsap";
 
-import grid from "../../assets/client/padlr/img/checkBg.png";
 const img1 = "https://ik.imagekit.io/hoc01/assets/client/gopalan/heroImg1.png";
 const img2 = "https://ik.imagekit.io/hoc01/assets/client/gopalan/heroImg2.png";
 const img3 = "https://ik.imagekit.io/hoc01/assets/client/gopalan/heroImg3.png";

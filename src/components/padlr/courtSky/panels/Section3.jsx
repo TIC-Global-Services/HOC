@@ -1,7 +1,6 @@
 import React, { useEffect, useRef } from "react";
 import gsap from "gsap";
 import GridOverlay from "../../../GridOverlay";
-import grid from "../../../../assets/client/padlr/img/checkBg.png";
 
 const highlyExplose = "https://ik.imagekit.io/hoc01/assets/client/padlr/courtPanelImg.png";
 const topImg = "https://ik.imagekit.io/hoc01/assets/client/padlr/courtPanelImg3.png";

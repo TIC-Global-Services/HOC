@@ -1,6 +1,6 @@
 import React from "react";
 
-const qataRightImg = "https://ik.imagekit.io/hoc01/assets/client/qatamaran/qataRightImg.png";
+const qataRightImg = "https://ik.imagekit.io/hoc01/assets/client/qatamaran/qataRight.png";
 
 const MobQataSec6 = () => {
   return (

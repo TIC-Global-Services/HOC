@@ -1,5 +1,4 @@
 import React from "react";
-import grid from "../../../../assets/client/padlr/img/checkBg.png";
 
 const refinedImg = "https://ik.imagekit.io/hoc01/assets/client/qatamaran/refinedImg.png";
 

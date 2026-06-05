@@ -2,7 +2,7 @@ import { useRef } from "react";
 
 import useScrollFloat from "../../../hooks/useScrollFloat";
 
-const topImg = "https://ik.imagekit.io/hoc01/assets/client/gopalan/panelImg4.png";
+const topImg = "https://ik.imagekit.io/hoc01/assets/client/gopalan/panel4Img.png";
 const bottomImg =  "https://ik.imagekit.io/hoc01/assets/client/gopalan/PanelImg1.png";
 
 import GridOverlay from "../../GridOverlay";

@@ -1,4 +1,4 @@
-import grid from "../../../../assets/client/padlr/img/checkBg.png";
+
 
 
 const refinedImg3 = "https://ik.imagekit.io/hoc01/assets/client/qatamaran/block3Img.png";
@@ -8,7 +8,7 @@ const Section3 = () => {
     <section
       className="relative w-full h-screen overflow-hidden"
       style={{
-        backgroundImage: `url(${grid})`,
+        backgroundImage: 'url(/client/padlr/img/checkBg.png)',
         backgroundSize: "cover",
         backgroundColor: "#8FC4E9",
       }}

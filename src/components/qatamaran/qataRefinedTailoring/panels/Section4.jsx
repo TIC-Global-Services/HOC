@@ -1,6 +1,5 @@
 import { useRef, useEffect } from "react";
 import gsap from "gsap";
-import grid from "../../../../assets/client/padlr/img/checkBg.png";
 import GridOverlay from "../../../GridOverlay";
 
 
