@@ -106,13 +106,13 @@ const SecondSection = () => {
             Spaces speak and spaces narrate
           </h2>
         </div>
-        <div className="relative hidden md:flex justify-center items-center gap-10 h-[300px]">
+        <div className="relative hidden md:flex justify-center items-center gap-10 h-[300px] w-full">
           {/* LineLab Image */}
-          <img
+          {/* <img
             src={linelab}
-            className="w-[50%] z-[5] left-[-5rem] top-1/2 -mt-[1.5px] absolute"
+            className="w-[65%] z-[5] left-[-20rem] top-1/2 -mt-[1.6px] absolute"
             alt="Lab"
-          />
+          /> */}
 
           {/* Three Image */}
           <motion.img
@@ -125,12 +125,19 @@ const SecondSection = () => {
             transition={{ duration: 0.4 }}
           />
 
-          <img src={noswitch} className="w-full" alt="Lab" />
+          <div className="w-full absolute h-[2px] bg-[#F4ECE0]"></div>
+          <div className="absolute left-1/2 top-1/2 z-[0]
+            h-[20px]
+            w-[300px]
+            -translate-x-1/2
+            -translate-y-1/2
+            bg-black"
+          />
 
           {/* Two Image */}
           <motion.img
             src={two}
-            className="w-[50%] z-[5] min-[1470] -mt-2 absolute right-[20%] !-mr-10"
+            className="w-[50%] z-[5] min-[1470] -mt-2 absolute right-[18%] !-mr-10"
             alt="Lab"
             style={{
               transform: `translateX(${moveImageTwo(scrollY)}px)`,
@@ -138,20 +145,20 @@ const SecondSection = () => {
             transition={{ duration: 0.4 }}
           />
 
-          <img
+          {/* <img
             src={linelab}
-            className="w-[50%] z-[1] right-[-6rem] top-1/2 -mt-[5.5px] absolute"
+            className="w-full z-[1] right-[-45rem] top-1/2 -mt-[5.5px] absolute"
             alt="Lab"
-          />
+          /> */}
         </div>
 
-        <div className="relative md:hidden -mt-20 flex justify-center items-center gap-10 h-[300px]">
+        <div className="relative md:hidden -mt-20 flex justify-center items-center gap-10 h-[300px] w-full">
           {/* LineLab Image */}
-          <img
+          {/* <img
             src={linelab}
-            className="w-[60%] left-[-4rem] top-1/2 -mt-[0.5px] absolute"
+            className="w-full left-[-16rem] top-1/2 -mt-[0.5px] absolute"
             alt="Lab"
-          />
+          /> */}
 
           {/* Three Image */}
           <motion.img
@@ -164,12 +171,20 @@ const SecondSection = () => {
             transition={{ duration: 0.4 }}
           />
 
-          <img src={noswitch} className="w-full scale-125" alt="Lab" />
+          <div className="w-full absolute h-[2px] bg-[#F4ECE0]"></div>
+          <div className="absolute left-1/2 top-1/2 z-[0]
+            h-[20px]
+            w-[100px]
+            -translate-x-1/2
+            -translate-y-1/2
+            bg-black"
+          />
+
 
           {/* Two Image */}
           <motion.img
             src={two}
-            className="w-[100%] z-[2] absolute -mt-2  right-[-6%] !-mr-10"
+            className="w-[100%] z-[2] absolute -mt-0  right-[-6%] !-mr-10"
             alt="Lab"
             style={{
               transform: `translateX(${moveImageTwo(scrollY)}px)`,
@@ -177,11 +192,11 @@ const SecondSection = () => {
             transition={{ duration: 0.4 }}
           />
 
-            <img
+            {/* <img
             src={linelab}
-            className="w-[60%] right-[-6rem] top-1/2 -mt-[2.5px] absolute"
+            className="w-full right-[-16rem] top-1/2 -mt-[2.5px] absolute"
             alt="Lab"
-          />
+          /> */}
         </div>
         <h1 className="md:px-20   md:mt-0 -mt-28 md:-pt-40 px-4 text-xl md:text-2xl pb-[80px] text-white xl:w-[70%] lg:w-[77%] text-center jost">
           Born from our ethos, the Chaos Lab serves as a testing ground for the
