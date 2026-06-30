@@ -94,7 +94,7 @@ const GopalanHero = () => {
           <div className="w-full h-full flex flex-col items-center justify-center gap-4 md:gap-6 px-4 relative z-10" style={{ paddingTop: "clamp(40px, 18vh, 120px)" }}>
             <h1
               className="font-[1000] alinsa text-[#060EBB] leading-none text-center tracking-tight "
-              style={{ fontSize: "clamp(48px, 18vh, 140px)" }}
+              style={{ fontSize: "clamp(48px, min(18vh, 8vw), 140px)" }}
             >
               GOPALAN GROUPS
             </h1>

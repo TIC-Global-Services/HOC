@@ -62,12 +62,12 @@ const HausOfChaos = () => {
       />
 
       <GridOverlay
-            color="0,0,0"
-            opacity={0.20}
-            size={100}
-            position="99px 0px"
-          />
-        
+        color="0,0,0"
+        opacity={0.20}
+        size={100}
+        position="99px 0px"
+      />
+
       {/* Main Content */}
       <div className="relative px-4 py-20 md:px-20 md:py-48 min-h-screen flex flex-col justify-between">
         {/* Logo and Description */}
@@ -88,7 +88,7 @@ const HausOfChaos = () => {
               Where bold ideas and designs <br /> collide Stay ahead with
               innovative <br />
               thoughts Experience transformative <br /> journeys Embrace the
-              unexpected <br /> and disrupt the norm
+              unexpected <br /> and disrupt the norm.
             </p>
           </div>
 
@@ -167,7 +167,7 @@ const HausOfChaos = () => {
             </div>
           </Link>
 
-        
+
           <div className="text-sm   md:!-mt-10  md:text-base">
             Design by{" "}
             <a

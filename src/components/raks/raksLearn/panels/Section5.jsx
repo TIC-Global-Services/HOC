@@ -11,7 +11,7 @@ const Section5 = () => {
         backgroundColor: "#FFCEC8",
       }}>
 
-        {/* GRID */}
+      {/* GRID */}
       <div className="absolute inset-0 z-0 pointer-events-none">
         <GridOverlay
           color="0,0,0"
@@ -24,42 +24,42 @@ const Section5 = () => {
       {/* CONTENT */}
       <div className="relative z-10 flex w-full h-full">
 
-      {/* LEFT IMAGE */}
-      <div
-        className="absolute top-0 left-0 h-full"
-        style={{
-          width: "34vw", 
-        }}
-      >
-        <img
-          src={leftImg}
-          alt=""
-          className="w-full h-full object-cover object-bottom"
+        {/* LEFT IMAGE */}
+        <div
+          className="absolute top-0 left-0 h-full"
           style={{
-            objectPosition: "center",
-          }}
-        />
-      </div>
-
-      {/* RIGHT TEXT */}
-      <div
-        className="absolute text-start"
-        style={{
-          top: "50%",
-          right: "5%",              
-          transform: "translateY(-50%)",
-          maxWidth: "30vw",
-        }}
-      >
-        <h2
-          className="salo uppercase text-white leading-none"
-          style={{
-            fontSize: "clamp(40px,20vh,200px)",
+            width: "34vw",
           }}
         >
-          Play <br /> Bold <br /> Win.
-        </h2>
-      </div>
+          <img
+            src={leftImg}
+            alt=""
+            className="w-full h-full object-cover object-bottom"
+            style={{
+              objectPosition: "center",
+            }}
+          />
+        </div>
+
+        {/* RIGHT TEXT */}
+        <div
+          className="absolute text-start"
+          style={{
+            top: "50%",
+            right: "2%",
+            transform: "translateY(-50%)",
+            maxWidth: "30vw",
+          }}
+        >
+          <h2
+            className="salo uppercase text-white leading-none"
+            style={{
+              fontSize: "clamp(40px,20vh,200px)",
+            }}
+          >
+            Play <br /> Bold <br /> Win.
+          </h2>
+        </div>
 
       </div>
 

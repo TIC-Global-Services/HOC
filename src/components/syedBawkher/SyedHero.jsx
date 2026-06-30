@@ -65,7 +65,7 @@ const SyedHero = () => {
           <div className="w-full h-full flex flex-col items-center justify-center gap-3 md:gap-6 px-4 text-center ">
             <h1
               className="font-[1000] alinsa text-[#060EBB] leading-none tracking-tight"
-              style={{ fontSize: "clamp(42px, 16vh, 180px)" }}
+              style={{ fontSize: "clamp(42px, min(16vh, 6.5vw), 180px)" }}
             >
               SYED BAWKHER
             </h1>
@@ -93,12 +93,12 @@ const SyedHero = () => {
           overflow-hidden
         "
         >
-          <div className="w-full max-w-[50vw]">
+          <div className="w-full max-w-[420px] lg:max-w-[520px] xl:max-w-[656px] 2xl:max-w-[760px]">
             <p
               className="
               jost text-start font-[500]
               tracking-tight text-black
-              leading-[41px] w-[45.5ch]
+              leading-[160%]
             "
               style={{
                 fontSize: "clamp(12px,3.5vh,24px)",

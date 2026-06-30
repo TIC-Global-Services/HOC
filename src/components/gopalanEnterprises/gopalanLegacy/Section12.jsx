@@ -19,7 +19,7 @@ const Section12 = () => {
       {/* CONTENT */}
       <div className="relative z-10 w-full h-full flex items-center justify-center">
 
-        <div className="w-[50%]">
+        <div className="w-[50%] -translate-x-6 md:-translate-x-10">
 
           <h2
             className="

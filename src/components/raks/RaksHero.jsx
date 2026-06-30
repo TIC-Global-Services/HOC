@@ -8,7 +8,7 @@ const img1 = "https://ik.imagekit.io/hoc01/assets/client/raks/heroImg1.png";
 const img2 = "https://ik.imagekit.io/hoc01/assets/client/raks/heroImg2.png";
 const img3 = "https://ik.imagekit.io/hoc01/assets/client/raks/heroImg3.png";
 const img4 = "https://ik.imagekit.io/hoc01/assets/client/raks/heroImg4.png";
-const heroParaImg  ="https://ik.imagekit.io/hoc01/assets/client/raks/heroParaIcon.png";
+const heroParaImg = "https://ik.imagekit.io/hoc01/assets/client/raks/heroParaIcon.png";
 
 
 const RaksHero = () => {
@@ -56,46 +56,49 @@ const RaksHero = () => {
           <div className="w-full h-full flex flex-col items-center justify-center gap-4 md:gap-6 px-4">
             <h1
               className="font-[1000] alinsa text-[#060EBB] leading-none tracking-tight text-center uppercase"
-              style={{ fontSize: "clamp(60px, 15vh, 90px)" }}
+              style={{ fontSize: "clamp(40px, min(15vh, 6.5vw), 90px)" }}
             >
               RAKS <br />INSTITUTIONS
             </h1>
 
-            <button className="jost rounded-full border-2 bg-[#060EBB] text-white flex items-center justify-center font-medium w-[180px] h-[50px] md:w-[200px] md:h-[60px] xl:w-[220px] xl:h-[70px] text-sm md:text-base">
+            <button
+              className="jost rounded-full border-2 bg-[#060EBB] text-white flex items-center justify-center font-medium"
+              style={{
+                width: "clamp(180px, 20vw, 260px)",
+                height: "clamp(50px, 6vw, 80px)",
+                fontSize: "clamp(12px, 1.2vw, 20px)",
+              }}
+            >
               INTERNATIONAL SCHOOL
             </button>
           </div>
         </div>
 
         {/* RIGHT SIDE WRAPPER */}
-        <div
+        <motion.div
+          initial={{ opacity: 0, y: 80 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
           className="
           absolute 
           top-0 
           right-0 
           h-full 
           w-full md:w-1/2
+          flex items-center justify-start
+          px-6 md:px-8 xl:px-12 2xl:px-14
         "
         >
-          {/* INNER ANIMATION CONTAINER */}
-          <motion.div
-            initial={{ opacity: 0, y: 80 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, ease: "easeOut" }}
+          <div
             className="
-              absolute 
-              lg:top-[18%] xl:top-[25%]
-              left-0 
-              ml-[5%] xl:ml-[6%] 2xl:ml-[10%]
-              w-[85%]
+             w-full
              max-w-[420px]
              lg:max-w-[520px]
              xl:max-w-[590px]
              2xl:max-w-[700px]
-              flex justify-start
             "
           >
-            <p className="jost text-start font-[500] text-black  leading-[45px] text-[14px] md:text-[18px] xl:text-[26px] w-[42ch]">
+            <p className="jost text-start font-[500] text-black leading-[150%] text-[14px] md:text-[18px] xl:text-[26px]">
               RAKS Institutions is a future-forward school rooted in the{" "}
               <span className="salo text-[#000085] text-[18px] md:text-[26px] xl:text-[40px]">
                 Reggio Emilia philosophy,
@@ -112,11 +115,11 @@ const RaksHero = () => {
               <img
                 src={heroParaImg}
                 alt="Binocular"
-                className="inline-block mr-6 size-[14%] object-contain"
+                className="inline-block mr-6 size-[10%] object-contain"
               />
             </p>
-          </motion.div>
-        </div>
+          </div>
+        </motion.div>
       </div>
     </section>
   );

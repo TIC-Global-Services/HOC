@@ -56,11 +56,11 @@ const Section3 = () => {
 
       {/* Grid */}
       <GridOverlay
-            color="0,0,0"
-            opacity={0.15}
-            size={100}
-            position="99px 0px"
-          />
+        color="0,0,0"
+        opacity={0.15}
+        size={100}
+        position="99px 0px"
+      />
 
 
       {/* TITLE */}
@@ -113,7 +113,7 @@ const Section3 = () => {
         className="jost text-start font-medium text-black absolute"
         style={{
           bottom: "5%",
-          left: "33.5%",
+          left: "38%",
           width: "38%",
           fontSize: "clamp(14px,4vh,24px)",
           lineHeight: "150%",

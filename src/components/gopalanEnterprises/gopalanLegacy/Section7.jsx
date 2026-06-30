@@ -14,7 +14,7 @@ const Section7 = () => {
         flex-shrink-0
       "
       style={{
-        width: "100vw",
+        width: "max(100vw, calc(100vh * 16 / 9))",
       }}
     >
       {/* VIDEO */}
