@@ -24,18 +24,18 @@ const Home = () => {
   const swrillimageref = useRef(null);
   return (
     <>
-      <div ref={ref} className="md:h-[200vh] h-full relative">
-        <div className="bg-white jost md:-mt-[22rem] relative md:min-h-screen">
-          <div className="absolute  transform  md:top-[35rem] -top-40 md:-bottom-40 flex px-4 md:px-10">
+      <div ref={ref} className="lg:h-[200vh] h-full relative">
+        <div className="bg-white jost lg:-mt-[22rem] relative lg:min-h-screen">
+          <div className="absolute  transform  lg:top-[35rem] -top-40 lg:-bottom-40 flex px-4 lg:px-10">
             <div className=" z-[500]">
               <h1
-                className="text-3xl   salo md:text-[110px] text-[#060ebb]
-               font-[500] text-left leading-tight md:leading-normal"
+                className="text-3xl   salo lg:text-[110px] text-[#060ebb]
+               font-[500] text-left leading-tight lg:leading-normal"
               >
                 WHO WE ARE
               </h1>
 
-              <h2 className="jost text-lg md:text-[30px]  whitespace-nowrap w-[100%] text-left md:leading-[40px]">
+              <h2 className="jost text-lg lg:text-[30px]  whitespace-nowrap w-[100%] text-left lg:leading-[40px]">
                 A seriously playful process-oriented <br /> experience design
                 studio that disrupts +<br /> questions + creates narrative{" "}
                 environments <br /> and experiences for brands worldwide
@@ -55,29 +55,29 @@ const Home = () => {
           {/* Adding smooth infinite rotation */}
           <motion.div
             ref={swrillimageref}
-            className="w-[100%] !z-[150]  overflow-hidden transform translate-x-[-50px] md:translate-x-[-120px]"
+            className="w-[100%] !z-[150]  overflow-hidden transform translate-x-[-50px] lg:translate-x-[-120px]"
           >
             {/* <img src={swrillpng} className="w-[80%]" alt="Swrill" /> */}
           </motion.div>
-          <div className=" !z-[500] w-full md:-mt-12 mt-20 whitespace-nowrap -mr-5 md:mr-0">
-            <h1 className="text-3xl  salo md:text-[110px] text-[#060ebb] font-[500] text-right leading-tight md:leading-normal">
+          <div className=" !z-[500] w-full lg:-mt-12 mt-20 whitespace-nowrap -mr-5 lg:mr-0">
+            <h1 className="text-3xl  salo lg:text-[110px] text-[#060ebb] font-[500] text-right leading-tight lg:leading-normal">
               WHAT WE DO
             </h1>
-            <h2 className="jost md:text-[30px]  w-[100%] text-right  text-lg md:leading-[40px]">
+            <h2 className="jost lg:text-[30px]  w-[100%] text-right  text-lg lg:leading-[40px]">
               We dabble in graphic design, <br />
                a smidge of branding + packaging,
               <br />focus extensively on experience{" "}
-              <br className=" md:hidden block" /> design{" "}
-              <br className=" md:block hidden" />
+              <br className=" lg:hidden block" /> design{" "}
+              <br className=" lg:block hidden" />
               to tie everything together seamlessly.
             </h2>
           </div>
-          {/* <div className=" md:text-[22px] text-sm -left-20 bottom-20 md:left-auto  flex gap-4  text-[#2354CF]  md:leading-[32px]  tracking-widest md:bottom-[20rem] whitespace-nowrap md:-right-20  rotate-[-90deg]    absolute md:rotate-[90deg]">
+          {/* <div className=" lg:text-[22px] text-sm -left-20 bottom-20 lg:left-auto  flex gap-4  text-[#2354CF]  lg:leading-[32px]  tracking-widest lg:bottom-[20rem] whitespace-nowrap lg:-right-20  rotate-[-90deg]    absolute lg:rotate-[90deg]">
             Scroll To Learn More
             <svg
               width="36"
               height="36"
-              className=" md:block hidden -rotate-90"
+              className=" lg:block hidden -rotate-90"
               viewBox="0 0 36 36"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
@@ -97,7 +97,7 @@ const Home = () => {
             <svg
               width="24"
               height="24"
-              className=" block md:hidden rotate-90"
+              className=" block lg:hidden rotate-90"
               viewBox="0 0 36 36"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
@@ -119,11 +119,11 @@ const Home = () => {
       </div>
 
       {/* <SecondSection /> */}
-      <div className="md:mt-10 md:mb-20">
+      <div className="lg:mt-10 lg:mb-20">
         <LogosLoop />
       </div>
       <ThirdSection />
-      <div className="md:hidden block mb-10">
+      <div className="lg:hidden block mb-10">
         <div className="h-10"></div>
       </div>
       <ShowReel />
@@ -194,14 +194,14 @@ export default Home;
 //     <div ref={sectionRef} className="overflow-hidden py-40">
 //       <div className="bg-black py-20 flex flex-col   gap-10">
 //         <div>
-//           <h1 className="text-[#F4ECE0] text-4xl md:text-[110px] md:leading-[97px] text-center font-sans">
+//           <h1 className="text-[#F4ECE0] text-4xl lg:text-[110px] lg:leading-[97px] text-center font-sans">
 //             Experience Lab
 //           </h1>
-//           <h2 className="text-white md:text-[30px] text-xl text-center jost">
+//           <h2 className="text-white lg:text-[30px] text-xl text-center jost">
 //             Spaces speak and spaces narrate
 //           </h2>
 //         </div>
-//         <div className="relative hidden md:flex justify-center items-center gap-10 h-[300px]">
+//         <div className="relative hidden lg:flex justify-center items-center gap-10 h-[300px]">
 //           {/* LineLab Image */}
 //           <img
 //             src={linelab}
@@ -239,7 +239,7 @@ export default Home;
 //             alt="Lab"
 //           />
 //         </div>
-//         <h1 className="md:px-20 px-4 md:text-2xl text-white text-center jost">
+//         <h1 className="lg:px-20 px-4 lg:text-2xl text-white text-center jost">
 //           Born from our ethos, the Chaos Lab serves as a testing ground for the
 //           diverse narrative environments we experiment with and explore. Based
 //           in India, with plans for growth, we embrace a 'test-and-learn'
@@ -273,7 +273,7 @@ export default Home;
 //     <img src={slider2} alt="aurobindo" className="  w-72  h-auto" />,
 //   ];
 //   return (
-//     <div className="w-screen py-10   z-[300] overflow-hidden  md:flex items-center relative justify-center  gap-20 flex-col">
+//     <div className="w-screen py-10   z-[300] overflow-hidden  lg:flex items-center relative justify-center  gap-20 flex-col">
 //       <div
 //         className="relative items-center justify-center w-[100%] z-[300] overflow-hidden bg-white
 //   before:absolute before:z-[300] before:left-0 before:top-0 before:h-full before:w-[200px]
@@ -345,9 +345,9 @@ const ThirdSection = () => {
   }, []);
 
   return (
-    <div className="relative mt-0 md:-mt-40 md:flex md:min-h-[80vh]">
+    <div className="relative mt-0 lg:-mt-40 lg:flex lg:min-h-[80vh]">
       {/* LEFT — VIDEO */}
-      <div className="w-full md:absolute md:left-5 md:top-20 md:w-[50%]">
+      <div className="w-full lg:absolute lg:left-5 lg:top-20 lg:w-[50%]">
         <video
           ref={videoRef}
           id="loader-video"
@@ -370,7 +370,7 @@ const ThirdSection = () => {
       <div
         className="
       jost text-center flex flex-col items-center justify-center w-full
-      md:absolute md:right-0 md:top-1/2 md:-translate-y-1/2 md:w-[70%] md:translate-x-36 pt-20 md:pt-0
+      lg:absolute lg:right-0 lg:top-1/2 lg:-translate-y-1/2 lg:w-[70%] lg:translate-x-36 pt-20 lg:pt-0
     "
       >
         <AutoTextSlider />

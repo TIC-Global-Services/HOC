@@ -25,9 +25,9 @@ const RaksHero = () => {
         .float-4 { --r: -6deg; animation: floatY 4.4s ease-in-out 0.3s infinite; }
       `}</style>
 
-      <div className="w-full flex flex-col md:flex-row relative">
+      <div className="w-full flex flex-col lg:flex-row relative">
         {/* LEFT */}
-        <div className="relative w-full h-[500px] md:h-screen md:w-1/2 overflow-hidden flex-shrink-0">
+        <div className="relative w-full h-[500px] lg:h-screen lg:w-1/2 overflow-hidden flex-shrink-0">
           {/* GRID */}
           <GridOverlay
             color="0,0,0"
@@ -38,22 +38,22 @@ const RaksHero = () => {
           />
           <img
             src={img2}
-            className="float-1 absolute top-[15%] left-[10%] w-[50px] md:w-[80px] xl:w-[180px]"
+            className="float-1 absolute top-[15%] left-[10%] w-[50px] lg:w-[80px] xl:w-[180px]"
           />
           <img
             src={img1}
-            className="float-2 absolute top-[15%] right-[15%] w-[60px] md:w-[100px] xl:w-[180px]"
+            className="float-2 absolute top-[15%] right-[15%] w-[60px] lg:w-[100px] xl:w-[180px]"
           />
           <img
             src={img4}
-            className="float-3 absolute bottom-[10%] left-[10%] w-[100px] md:w-[140px] xl:w-[180px]"
+            className="float-3 absolute bottom-[10%] left-[10%] w-[100px] lg:w-[140px] xl:w-[180px]"
           />
           <img
             src={img3}
-            className="float-4 absolute bottom-[10%] right-[10%] w-[100px] md:w-[140px] xl:w-[180px]"
+            className="float-4 absolute bottom-[10%] right-[10%] w-[100px] lg:w-[140px] xl:w-[180px]"
           />
 
-          <div className="w-full h-full flex flex-col items-center justify-center gap-4 md:gap-6 px-4">
+          <div className="w-full h-full flex flex-col items-center justify-center gap-4 lg:gap-6 px-4">
             <h1
               className="font-[1000] alinsa text-[#060EBB] leading-none tracking-tight text-center uppercase"
               style={{ fontSize: "clamp(40px, min(15vh, 6.5vw), 90px)" }}
@@ -84,9 +84,9 @@ const RaksHero = () => {
           top-0 
           right-0 
           h-full 
-          w-full md:w-1/2
+          w-full lg:w-1/2
           flex items-center justify-start
-          px-6 md:px-8 xl:px-12 2xl:px-14
+          px-6 lg:px-8 xl:px-12 2xl:px-14
         "
         >
           <div
@@ -98,15 +98,15 @@ const RaksHero = () => {
              2xl:max-w-[700px]
             "
           >
-            <p className="jost text-start font-[500] text-black leading-[150%] text-[14px] md:text-[18px] xl:text-[26px]">
+            <p className="jost text-start font-[500] text-black leading-[150%] text-[14px] lg:text-[18px] xl:text-[26px]">
               RAKS Institutions is a future-forward school rooted in the{" "}
-              <span className="salo text-[#000085] text-[18px] md:text-[26px] xl:text-[40px]">
+              <span className="salo text-[#000085] text-[18px] lg:text-[26px] xl:text-[40px]">
                 Reggio Emilia philosophy,
               </span>{" "}
               fostering experiential, interdisciplinary learning for children to
               grow with purpose. Embracing this spirit, Haus of Chaos crafted an
               identity for{" "}
-              <span className="salo text-[#000085] text-[18px] md:text-[26px] xl:text-[40px]">
+              <span className="salo text-[#000085] text-[18px] lg:text-[26px] xl:text-[40px]">
                 RAKS Pallikkoodam
               </span>{" "}
               that is warm, attentive, and child-centric. The result is a

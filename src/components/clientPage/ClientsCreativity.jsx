@@ -3,7 +3,7 @@ import creativityVideo from "../../assets/client/page/vinyl_new_2.mp4";
 
 const ClientsCreativity = () => {
   return (
-    <div className="flex flex-col md:flex-row items-center justify-center -mt-32 md:mt-0 gap-10 px-4">
+    <div className="flex flex-col lg:flex-row items-center justify-center -mt-32 lg:mt-0 gap-10 px-4">
       
       {/* Left Video */}
       <div className="w-1/2 max-w-[600px] rounded-[4px] overflow-hidden">
@@ -23,7 +23,7 @@ const ClientsCreativity = () => {
 
       {/* Right Text */}
       <motion.p
-        className="jost font-[500] max-w-[550px] text-center md:text-center leading-none md:leading-[100%] md:tracking-tight text-[25px] md:text-[60px]"
+        className="jost font-[500] max-w-[550px] text-center lg:text-center leading-none lg:leading-[100%] lg:tracking-tight text-[25px] lg:text-[60px]"
         initial={{ y: 30, opacity: 0 }}
         whileInView={{ y: 0, opacity: 1 }}
         viewport={{ once: true }}

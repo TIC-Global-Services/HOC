@@ -101,12 +101,12 @@ const Navbar = ({
   return (
     <>
       {/* MOBILE NAV */}
-      <div className="md:hidden">
+      <div className="lg:hidden">
         {isLanding ? <MobileNav3 /> : <MobileNav />}
       </div>
 
       {/* DESKTOP NAV */}
-      <div className="hidden md:block">
+      <div className="hidden lg:block">
         <div
           className={`
             fixed
@@ -124,7 +124,7 @@ const Navbar = ({
         >
           {isLanding && !isSection2 && showCursorHover && <CursorHover />}
 
-          <div className="flex py-2 jost px-4 md:px-10 justify-between items-center">
+          <div className="flex py-2 jost px-4 lg:px-10 justify-between items-center">
             {/* LOGO */}
             <img
               src={currentLogo}
@@ -134,7 +134,7 @@ const Navbar = ({
             />
 
             {/* NAVIGATION LINKS */}
-            <div className="text-[14px] md:text-[19px] font-semibold flex gap-4 md:gap-14 items-center">
+            <div className="text-[14px] lg:text-[19px] font-semibold flex gap-4 lg:gap-14 items-center">
               <h1
                 onClick={() => handleNav("/client")}
                 className={`cursor-pointer ${isDark ? "hover:text-[#060ebb]" : "hover:text-black/50"} ${
@@ -200,7 +200,7 @@ const Navbar = ({
                   rounded-full
                   relative
                   text-[12px]
-                  md:text-[13px]
+                  lg:text-[13px]
                   font-semibold
                   flex
                   items-center
@@ -214,7 +214,7 @@ const Navbar = ({
                 onClick={handleToggle}
               >
                 <motion.h1
-                  className="mr-6 md:mr-9 text-center"
+                  className="mr-6 lg:mr-9 text-center"
                   animate={{
                     x: isToggled ? "35px" : "0px",
                     color: isToggled ? "#FFFFFF" : "#060ebb",
@@ -225,7 +225,7 @@ const Navbar = ({
                 </motion.h1>
 
                 <motion.img
-                  className="w-[36px] md:w-[46px] h-[36px] md:h-[46px] absolute"
+                  className="w-[36px] lg:w-[46px] h-[36px] lg:h-[46px] absolute"
                   src={worldsmall}
                   alt="World"
                   animate={{

@@ -21,11 +21,11 @@ const Careers = () => {
       <Navbar />
       <div className="bg-white jost relative" style={{ minHeight: "100vh" }}>
         {/* Absolutely Centered Text */}
-        <div className="items-center flex-col md:-space-y-24 relative justify-center h-[50vh] md:h-screen mt-20 flex px-10">
+        <div className="items-center flex-col lg:-space-y-24 relative justify-center h-[50vh] lg:h-screen mt-20 flex px-10">
           {/* Hand Image Animation */}
           <motion.img
             src={hand}
-            className="w-[70px] md:w-[150px] hidden md:block absolute z-[1] left-10 md:left-1/4 ml-20 top-4 md:top-28 [@media(min-width:1800px)]:top-[29%] [@media(max-width:800px)]:top-[28%]  "
+            className="w-[70px] lg:w-[150px] hidden lg:block absolute z-[1] left-10 lg:left-1/4 ml-20 top-4 lg:top-28 [@media(min-width:1800px)]:top-[29%] [@media(max-width:800px)]:top-[28%]  "
             alt="Hand"
             initial={{ x: -100, opacity: 0 }}
             animate={{ x: 0, opacity: 1 }}
@@ -33,7 +33,7 @@ const Careers = () => {
           />
           {/* <motion.img
             src={hand}
-            className="w-[30px]   md:hidden block absolute z-[1] left-10 ml-5 top-14  "
+            className="w-[30px]   lg:hidden block absolute z-[1] left-10 ml-5 top-14  "
             alt="Hand"
             initial={{ x: -100, opacity: 0 }}
             animate={{ x: 0, opacity: 1 }}
@@ -42,7 +42,7 @@ const Careers = () => {
           {/* UFO Image Animation */}
           <motion.img
             src={ufo}
-            className="w-[100px] md:w-[150px] md:block hidden absolute z-[20] !-mt-[7.5rem] top-1/2"
+            className="w-[100px] lg:w-[150px] lg:block hidden absolute z-[20] !-mt-[7.5rem] top-1/2"
             alt="UFO"
             initial={{ x: 0, opacity: 0 }} // Start slightly off-screen right
             animate={{ x: 300, opacity: 1 }} // Spring animation into position
@@ -69,14 +69,14 @@ const Careers = () => {
           />
           {/* <motion.img
             src={ufo}
-            className="w-[40px] mt-20  md:hidden block absolute z-[20]   top-0"
+            className="w-[40px] mt-20  lg:hidden block absolute z-[20]   top-0"
             alt="UFO"
            
             id="ufo"
           /> */}
           {/* <motion.img
   src={ufo}
-  className="w-[100px] md:w-[150px] absolute z-[20] top-1/2"
+  className="w-[100px] lg:w-[150px] absolute z-[20] top-1/2"
   alt="UFO"
   initial={{ x: -200, opacity: 0 }} // Start from the left
   animate={{ x: [0, 300, -300, 0] }} // Moves right, then left, then back
@@ -89,7 +89,7 @@ const Careers = () => {
 
           {/* CAREERS Title Animation */}
           <motion.h1
-            className="font-[1000] px-10 -mt-40 md:!mt-20 md:leading-[0px] text-7xl md:text-[clamp(2rem,18vw,260px)] alinsa text-[#060ebb] z-[10]"
+            className="font-[1000] px-10 -mt-40 lg:!mt-20 lg:leading-[0px] text-7xl lg:text-[clamp(2rem,18vw,260px)] alinsa text-[#060ebb] z-[10]"
             initial={{ scale: 0.8, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
             transition={{ duration: 0.5, ease: "easeOut" }}
@@ -99,7 +99,7 @@ const Careers = () => {
 
           {/* Tagline Animation */}
           <motion.p
-            className="jost font-[500]  text-xl md:!mt-24 lowercase md:text-[60px] z-[10]"
+            className="jost font-[500]  text-xl lg:!mt-24 lowercase lg:text-[60px] z-[10]"
             initial={{ y: 30, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.5, delay: 0.2 }}
@@ -131,23 +131,23 @@ const JobListings = () => {
   ];
 
   return (
-    <div className="md:px-10 px-2  md:mt-0 -mt-60 py-10">
+    <div className="lg:px-10 px-2  lg:mt-0 -mt-60 py-10">
       <div
         ref={ref}
-        className="min-h-[70vh] rounded-[20px] bg-black text-white p-4 md:p-8"
+        className="min-h-[70vh] rounded-[20px] bg-black text-white p-4 lg:p-8"
       >
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6 }}
-          className="flex  md:flex-row flex-col mx-auto md:px-10 py-10 md:py-20 gap-10"
+          className="flex  lg:flex-row flex-col mx-auto lg:px-10 py-10 lg:py-20 gap-10"
         >
-          <div className="mb-12 md:w-[55%] text-left">
+          <div className="mb-12 lg:w-[55%] text-left">
             <motion.h1
               initial={{ opacity: 0 }}
               animate={isInView ? { opacity: 1 } : {}}
               transition={{ delay: 0.3 }}
-              className="xl:text-[50px] lg:text-[42px] text-4xl md:leading-[50px] font-bold jost mb-6"
+              className="xl:text-[50px] lg:text-[42px] text-4xl lg:leading-[50px] font-bold jost mb-6"
             >
               <span className="text-[#060ebb] hover:text-white ">E-mail us</span> if you are a
               creator, open to learning, nurturing, growing, and fostering the
@@ -189,7 +189,7 @@ const JobListings = () => {
             initial={{ opacity: 0 }}
             animate={isInView ? { opacity: 1 } : {}}
             transition={{ delay: 0.6 }}
-            className="space-y-4  md:mt-20 text-center md:text-right md:w-[45%]"
+            className="space-y-4  lg:mt-20 text-center lg:text-right lg:w-[45%]"
           >
             {positions.map((position, index) => (
               <motion.div

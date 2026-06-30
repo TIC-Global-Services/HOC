@@ -138,7 +138,7 @@ const JobListings = ({ scrollToBottom }) => {
   return (
     <div
       ref={ref}
-      className="w-full h-[100vh] hidden md:flex justify-center items-center relative overflow-hidden"
+      className="w-full h-[100vh] hidden lg:flex justify-center items-center relative overflow-hidden"
     >
       {isInView &&
         images.map((img, index) => (
@@ -150,7 +150,7 @@ const JobListings = ({ scrollToBottom }) => {
             decoding="async"
             fetchPriority="high"
             draggable={false}
-            className={`absolute w-1/2 md:w-auto ${img.className}`}
+            className={`absolute w-1/2 lg:w-auto ${img.className}`}
             initial={{
               y: -200,
               opacity: 0,
@@ -199,7 +199,7 @@ const JobListings = ({ scrollToBottom }) => {
           />
         ))}
 
-      {/* <h1 className="absolute  cursor-pointer !bottom-2 md:bottom-10 tracking-wide text-[#0000FF]   text-center text-2xl md:text-[20px]"  onClick={scrollToBottom}>
+      {/* <h1 className="absolute  cursor-pointer !bottom-2 lg:bottom-10 tracking-wide text-[#0000FF]   text-center text-2xl lg:text-[20px]"  onClick={scrollToBottom}>
         <img src="/down-arrow.png" alt="Arrow" className="w-10" />
       </h1> */}
       {/* <div className=" absolute">Scroll Down</div> */}
@@ -225,7 +225,7 @@ const JobListings2 = ({ scrollToBottom }) => {
   return (
     <div
       ref={ref}
-      className="w-full h-[100vh] md:hidden flex justify-center items-center relative overflow-hidden"
+      className="w-full h-[100vh] lg:hidden flex justify-center items-center relative overflow-hidden"
     >
       {isInView &&
         images2.map((img, index) => (
@@ -237,7 +237,7 @@ const JobListings2 = ({ scrollToBottom }) => {
             decoding="async"
             fetchPriority="high"
             draggable={false}
-            className={`absolute w-1/2 md:w-auto ${img.className}`}
+            className={`absolute w-1/2 lg:w-auto ${img.className}`}
             initial={{
               y: -200,
               opacity: 0,
@@ -287,7 +287,7 @@ const JobListings2 = ({ scrollToBottom }) => {
         ))}
 
       <h1
-        className="absolute  md:block hidden cursor-pointer !bottom-2 md:bottom-10 tracking-wide text-[#060ebb]   text-center text-2xl md:text-[20px]"
+        className="absolute  lg:block hidden cursor-pointer !bottom-2 lg:bottom-10 tracking-wide text-[#060ebb]   text-center text-2xl lg:text-[20px]"
         onClick={scrollToBottom}
       >
         Scroll Down

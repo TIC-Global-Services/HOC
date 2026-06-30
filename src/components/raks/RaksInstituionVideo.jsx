@@ -24,18 +24,18 @@ const RaksInstitutionVideo = () => {
         className="
           w-full 
           h-[30vh]        
-          md:absolute 
-          md:top-0 
-          md:left-0 
-          md:w-full 
-          md:h-full 
-          md:object-cover
+          lg:absolute 
+          lg:top-0 
+          lg:left-0 
+          lg:w-full 
+          lg:h-full 
+          lg:object-cover
           object-cover
         "
       />
 
       {/* Desktop height */}
-      <div className="hidden md:block h-screen" />
+      <div className="hidden lg:block h-screen" />
 
     </section>
   );

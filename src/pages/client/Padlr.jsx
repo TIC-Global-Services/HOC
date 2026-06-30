@@ -21,18 +21,18 @@ const Padlr = () => {
       <Navbar />
 
       {/* Hero */}
-      <div className="md:hidden">
+      <div className="lg:hidden">
         <MobPadlrHero />
       </div>
-      <div className="md:block hidden">
+      <div className="lg:block hidden">
         <PadlrHero />
       </div>
 
       {/* Growth Engine */}
-      <div className="hidden md:block">
+      <div className="hidden lg:block">
         <GrowthEngine />
       </div>
-      <div className="md:hidden">
+      <div className="lg:hidden">
         <MobGrowthEngine />
       </div>
 
@@ -43,12 +43,12 @@ const Padlr = () => {
       </div>
 
       {/* Court Sky */}
-      <div className="hidden md:block">
+      <div className="hidden lg:block">
         <CourtSky />
       </div>
 
       {/* All mobile-only sections in ONE wrapper */}
-      <div className="md:hidden">
+      <div className="lg:hidden">
         <MobCourtSky />
         {/* <MobWannaKnowMore /> */}
         <MobPadlrInstaImg />
@@ -56,7 +56,7 @@ const Padlr = () => {
       </div>
 
       {/* Desktop */}
-      <div className="hidden md:block">
+      <div className="hidden lg:block">
         <OwnTheCourt />
       </div>
 

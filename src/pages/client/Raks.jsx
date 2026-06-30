@@ -21,34 +21,34 @@ const Raks = () => {
       <Navbar />
 
       {/* Hero */}
-      <div className="md:hidden">
+      <div className="lg:hidden">
         <MobRaksHero />
       </div>
-      <div className="md:block hidden">
+      <div className="lg:block hidden">
         <RaksHero />
       </div>
 
       <RaksInstitutionVideo />
 
       {/* Learning */}
-      <div className="md:hidden">
+      <div className="lg:hidden">
         <MobRaksLearn />
       </div>
-      <div className="md:block hidden">
+      <div className="lg:block hidden">
         <RaksLearning />
       </div>
 
       <RaksVideoSec />
 
       {/*  mobile-only sections grouped in one wrapper */}
-      <div className="md:hidden">
+      <div className="lg:hidden">
         {/* <MobRaksWanna /> */}
         <RaksInstaImg />
         <MobRaksOwnTheCourt />
       </div>
 
       {/* Desktop section pulled up to close gap after video */}
-      <div className="hidden md:block -mt-[3px]">
+      <div className="hidden lg:block -mt-[3px]">
         <RaksOwnTheCourt />
       </div>
 

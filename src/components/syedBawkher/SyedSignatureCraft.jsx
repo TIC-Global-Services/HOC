@@ -336,7 +336,7 @@ export default function SyedSignatureCraft() {
 
             {/* BOTTOM TEXT */}
             <div className="absolute bottom-[10%] right-[10%]">
-              <p className="jost font-[500] tracking-tight uppercase text-base md:text-[40px]">
+              <p className="jost font-[500] tracking-tight uppercase text-base lg:text-[40px]">
                 DETAIL & DISCIPLINE
               </p>
             </div>

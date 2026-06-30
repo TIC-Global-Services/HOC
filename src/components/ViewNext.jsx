@@ -87,9 +87,9 @@ const ViewNext = ({
     .slice(0, 4);
 
   return (
-    <section className="relative w-full overflow-hidden py-20 md:py-28">
+    <section className="relative w-full overflow-hidden py-20 lg:py-28">
       {/* HEADING */}
-      <div className="mb-16 flex justify-center md:mb-24">
+      <div className="mb-16 flex justify-center lg:mb-24">
         <motion.h2
           initial={{ opacity: 0, y: 70 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -100,7 +100,7 @@ const ViewNext = ({
           }}
           className="
             salo
-            text-[40px] md:text-[90px]
+            text-[40px] lg:text-[90px]
             leading-none
             tracking-wide
             uppercase
@@ -117,11 +117,11 @@ const ViewNext = ({
       <div
         className="
           mx-auto grid w-full max-w-[1400px]
-          grid-cols-2 md:grid-cols-4
+          grid-cols-2 lg:grid-cols-4
           justify-items-center
-          gap-x-6 md:gap-x-12
-          gap-y-14 md:gap-y-10
-          px-4 md:px-10
+          gap-x-6 lg:gap-x-12
+          gap-y-14 lg:gap-y-10
+          px-4 lg:px-10
         "
       >
         {clients.map((item, index) => (
@@ -147,7 +147,7 @@ const ViewNext = ({
               <div
                 className="
                   relative
-                  w-[160px] md:w-[200px]
+                  w-[160px] lg:w-[200px]
                   aspect-square
                 "
                 style={{ perspective: "1000px" }}
@@ -159,7 +159,7 @@ const ViewNext = ({
                   className="
                     absolute left-0 top-1/2
                     z-0
-                    w-[120px] md:w-[160px]
+                    w-[120px] lg:w-[160px]
                     -translate-y-1/2
                     transition-all duration-700
                     ease-[cubic-bezier(0.22,1,0.36,1)]
@@ -218,9 +218,9 @@ const ViewNext = ({
               <p
                 className="
                   salo
-                  mt-4 md:mt-6
-                  text-center md:text-left
-                  text-[12px] md:text-[24px]
+                  mt-4 lg:mt-6
+                  text-center lg:text-left
+                  text-[12px] lg:text-[24px]
                   font-normal
                   tracking-[1px]
                 "

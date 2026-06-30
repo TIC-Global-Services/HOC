@@ -39,7 +39,7 @@
 //         will-change-transform
 //       "
 //     >
-//       <span className="text-[50px] md:text-[150px]">
+//       <span className="text-[50px] lg:text-[150px]">
 //         {char === " " ? "\u00A0" : char}
 //       </span>
 //     </motion.span>
@@ -60,7 +60,7 @@
 //       className="
 //         w-full
 //         h-[80vh]
-//         md:hidden
+//         lg:hidden
 //         relative
 //         flex
 //         items-center

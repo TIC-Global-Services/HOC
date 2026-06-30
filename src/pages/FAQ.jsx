@@ -144,16 +144,16 @@ import { AnimatePresence } from "framer-motion";
 
 const FAQItem = ({ item, isOpen, onToggle }) => {
   return (
-    <div className="border-b   max-w-xl px-4 md:max-w-2xl border-blue-100/10">
+    <div className="border-b   max-w-xl px-4 lg:max-w-2xl border-blue-100/10">
       <button
         className="flex w-full items-center justify-between py-6 text-left"
         onClick={onToggle}
       >
         <div className="flex items-center">
-          <span className="text-[#E3E1E6] font-bold mr-4 text-xl md:text-[32px]">
+          <span className="text-[#E3E1E6] font-bold mr-4 text-xl lg:text-[32px]">
             -
           </span>
-          <span className="text-white text-lg md:text-2xl">
+          <span className="text-white text-lg lg:text-2xl">
             {item.question}
           </span>
         </div>
@@ -213,7 +213,7 @@ const CategoryAccordion = ({
         className="flex w-full items-center justify-between py-6 text-left"
         onClick={() => onCategoryToggle(category.id)}
       >
-        <span className="text-white text-xl md:text-3xl font-bold">
+        <span className="text-white text-xl lg:text-3xl font-bold">
           <span className=" text-4xl text-[#E3E1E6] mr-2">
             {" "}     
             0{category.idx}
@@ -286,17 +286,17 @@ const FAQ = () => {
 
   return (
     <div className="min-h-screen bg-black">
-      <div className="justify-evenly md:items-start items-center   flex flex-col md:flex-row mx-auto py-32">
-        <div className="mb-12 text-center md:text-left md:sticky md:top-32 md:h-fit">
-          <h2 className="text-[#E3E1E6] salo text-5xl md:text-[90px] md:leading-[120px]">
+      <div className="justify-evenly lg:items-start items-center   flex flex-col lg:flex-row mx-auto py-32">
+        <div className="mb-12 text-center lg:text-left lg:sticky lg:top-32 lg:h-fit">
+          <h2 className="text-[#E3E1E6] salo text-5xl lg:text-[90px] lg:leading-[120px]">
             FAQS
           </h2>
-          {/* <p className="text-[#F4ECE0] jost uppercase text-xs md:text-[15px] font-bold">
+          {/* <p className="text-[#F4ECE0] jost uppercase text-xs lg:text-[15px] font-bold">
             frequently asked questions
             </p> */}
         </div>
 
-        <div className="space-y-4 md:w-[600px] px-4">
+        <div className="space-y-4 lg:w-[600px] px-4">
           {FAQ_CATEGORIES.map((category) => (
             <CategoryAccordion
               key={category.id}

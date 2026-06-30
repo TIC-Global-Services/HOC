@@ -4,7 +4,7 @@ const SyedCraftmanShip = () => {
   return (
     <>
       {/* ─── DESKTOP ───
-      <section className="hidden md:block w-full h-screen relative overflow-hidden">
+      <section className="hidden lg:block w-full h-screen relative overflow-hidden">
         <video
           src={video}
           autoPlay
@@ -16,7 +16,7 @@ const SyedCraftmanShip = () => {
       </section> */}
 
       {/* ─── MOBILE ─── */}
-      <section className="block md:hidden w-full h-[30vh] relative overflow-hidden">
+      <section className="block lg:hidden w-full h-[30vh] relative overflow-hidden">
         <video
           src={video}
           autoPlay

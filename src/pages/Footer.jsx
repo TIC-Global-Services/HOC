@@ -69,21 +69,21 @@ const HausOfChaos = () => {
       />
 
       {/* Main Content */}
-      <div className="relative px-4 py-20 md:px-20 md:py-48 min-h-screen flex flex-col justify-between">
+      <div className="relative px-4 py-20 lg:px-20 lg:py-48 min-h-screen flex flex-col justify-between">
         {/* Logo and Description */}
         <img
           src="/logo.png"
-          className="w-1/2 md:hidden block mb-8"
+          className="w-1/2 lg:hidden block mb-8"
           alt="Haus Of Chaos"
         />
         <div className="flex">
-          <div className="md:max-w-xl">
+          <div className="lg:max-w-xl">
             <img
               src="/logo.png"
-              className="md:w-40 md:block hidden mb-4"
+              className="lg:w-40 lg:block hidden mb-4"
               alt="Haus Of Chaos"
             />
-            <p className="text-lg md:block hidden text-left mb-6">
+            <p className="text-lg lg:block hidden text-left mb-6">
               Step into the chaos of creativity <br />
               Where bold ideas and designs <br /> collide Stay ahead with
               innovative <br />
@@ -131,8 +131,8 @@ const HausOfChaos = () => {
         </div>
 
         {/* Footer Section */}
-        <div className="relative whitespace-normal md:pt-16 pt-6 md:pb-0 pb-20">
-          <div className="flex md:justify-end gap-4 text-sm">
+        <div className="relative whitespace-normal lg:pt-16 pt-6 lg:pb-0 pb-20">
+          <div className="flex lg:justify-end gap-4 text-sm">
             <a href="mailto:explore@hausofchaos.co" className="hover:underline">
               MAIL
             </a>
@@ -157,7 +157,7 @@ const HausOfChaos = () => {
         </div>
 
         {/* Bottom Footer */}
-        <div className="absolute left-0 px-4 md:px-20 bottom-2 md:bottom-10 flex flex-col-reverse md:flex-row items-start md:gap-0 gap-12 md:justify-between w-full">
+        <div className="absolute left-0 px-4 lg:px-20 bottom-2 lg:bottom-10 flex flex-col-reverse lg:flex-row items-start lg:gap-0 gap-12 lg:justify-between w-full">
           <Link
             to="/"
             onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
@@ -168,7 +168,7 @@ const HausOfChaos = () => {
           </Link>
 
 
-          <div className="text-sm   md:!-mt-10  md:text-base">
+          <div className="text-sm   lg:!-mt-10  lg:text-base">
             Design by{" "}
             <a
               href="https://theinternetcompany.one/"

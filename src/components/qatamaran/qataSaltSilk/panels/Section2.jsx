@@ -72,7 +72,7 @@ export default function Section2() {
           <div className="absolute top-0 left-0 w-full py-[clamp(6px,1vw,14px)] bg-[#1E382D]" />
 
           {/* CENTER */}
-          <div className="absolute top-[20%] left-[20%] flex items-center justify-center px-[clamp(20px,4vw,80px)] md:translate-x-[0%]">
+          <div className="absolute top-[20%] left-[20%] flex items-center justify-center px-[clamp(20px,4vw,80px)] lg:translate-x-[0%]">
             <div className="max-w-[900px] text-start space-y-[clamp(12px,0.5vw,14px)]">
               <h2 className="salo text-[#1E382D] uppercase tracking-tight leading-none text-[clamp(48px,20vh,200px)]">
                 Tide bound <br /> Tailoring

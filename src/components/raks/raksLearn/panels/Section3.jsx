@@ -67,7 +67,7 @@ const Section3 = () => {
           />
 
       {/* LEFT IMAGE */}
-      <div className="w-[40vw] h-full md:ml-[13%] aspect-[9/16] relative overflow-hidden">
+      <div className="w-[40vw] h-full lg:ml-[13%] aspect-[9/16] relative overflow-hidden">
         <img
           src={emPowerImg}
           alt="visual"
@@ -90,7 +90,7 @@ const Section3 = () => {
           <img
             src={viVidImg}
             alt="icon"
-            className="object-contain md:mt-[10%] -rotate-12"
+            className="object-contain lg:mt-[10%] -rotate-12"
             style={{ width: "clamp(60px,20vw,650px)" }}
           />
         </div>

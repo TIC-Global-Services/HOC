@@ -9,7 +9,7 @@ const RaksVideoSec = () => {
 
   return (
     <section
-      className="w-full md:hidden relative bg-white -mb-[2px]"
+      className="w-full lg:hidden relative bg-white -mb-[2px]"
       style={{ fontSize: 0, lineHeight: 0 }}
     >
       <video

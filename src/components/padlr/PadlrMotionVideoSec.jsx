@@ -8,7 +8,7 @@ const PadlrMotionVideoSec = () => {
       useMobileVideoFix(videoRef);
   
   return (
-    <section className="w-full md:h-screen bg-white relative overflow-hidden">
+    <section className="w-full lg:h-screen bg-white relative overflow-hidden">
       {/* VIDEO */}
       <video
        ref={videoRef}
@@ -23,7 +23,7 @@ const PadlrMotionVideoSec = () => {
         className="
         w-full h-auto
         object-cover object-center
-        md:absolute md:inset-0 md:w-full md:h-full md:object-contain md:object-center 
+        lg:absolute lg:inset-0 lg:w-full lg:h-full lg:object-contain lg:object-center 
       "
       />
 

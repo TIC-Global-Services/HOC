@@ -16,12 +16,12 @@ const GopalanEnterprises = () => {
       <Navbar />
 
       {/* MOBILE HERO */}
-      <div className="block md:hidden">
+      <div className="block lg:hidden">
         <MobGopalanHero />
       </div>
 
       {/* DESKTOP HERO */}
-      <div className="hidden md:block">
+      <div className="hidden lg:block">
         <GopalanHero />
       </div>
 
@@ -30,18 +30,18 @@ const GopalanEnterprises = () => {
 
       {/* Mob */}
 
-      <div className="block md:hidden">
+      <div className="block lg:hidden">
         <MobGopalanLegacy />
       </div>
 
       {/* DESKTOP ONLY */}
-      <div className="hidden md:block">
+      <div className="hidden lg:block">
         <GopalanLegacy />
         <GopalanModernLegacy />
       </div>
 
       {/* Mobile */}
-      <div className="block md:hidden">
+      <div className="block lg:hidden">
         <MobModernLegacy />
       </div>
 

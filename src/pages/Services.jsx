@@ -103,7 +103,7 @@ const Contact = () => {
       <Navbar />
       <div className="bg-white jost relative" style={{ minHeight: "100vh" }}>
 
-      <div className="bg-black z-[1] mx-auto mt-40 md:mt-20 rounded-t-3xl relative">
+      <div className="bg-black z-[1] mx-auto mt-40 lg:mt-20 rounded-t-3xl relative">
         <div/>
         <MainServices />
       </div>
@@ -214,11 +214,11 @@ const MainServices = () => {
   return () => ctx.revert();
 }, [active]);
   return (
-    <div className="flex flex-col items-center md:items-start w-full py-32 md:px-20 relative overflow-hidden transition-all duration-500">
+    <div className="flex flex-col items-center lg:items-start w-full py-32 lg:px-20 relative overflow-hidden transition-all duration-500">
       {/* Grid Lines */}
       <GridOverlay size={100} opacity={0.15} position="99px 0px"/>
       
-      <div className="flex items-center md:items-stretch relative flex-col -space-y-16 uppercase z-[100] text-[108px] font-[1000] text-[#F4ECE0] alinsa mb-10">
+      <div className="flex items-center lg:items-stretch relative flex-col -space-y-16 uppercase z-[100] text-[108px] font-[1000] text-[#F4ECE0] alinsa mb-10">
         <div className="xl:flex hidden relative">
           <h1 className="z-[110]">Our</h1>
           <img src={wiresm} className="-ml-2 mt-8 w-[80px] h-[80px] object-cover" alt="" />

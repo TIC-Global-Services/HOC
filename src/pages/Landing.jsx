@@ -58,12 +58,12 @@ const Landing = () => {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 1 }}
-          className="absolute top-1/2 left-1/2 transform md:whitespace-nowrap -translate-x-1/2 -translate-y-1/2 px-4"
+          className="absolute top-1/2 left-1/2 transform lg:whitespace-nowrap -translate-x-1/2 -translate-y-1/2 px-4"
         >
           <AnimatePresence mode="wait">
             <motion.h1
               key={currentText}
-              className="text-[44px] px-20   alinsa uppercase md:text-[80px] font-[1000] text-center leading-tight md:leading-[1]"
+              className="text-[44px] px-20   alinsa uppercase lg:text-[80px] font-[1000] text-center leading-tight lg:leading-[1]"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -20 }}
@@ -104,7 +104,7 @@ const Landing = () => {
         </motion.div>
         {/* Footer */}
 
-        {/* <div className="absolute px-4 uppercase md:px-20 jost text-[14px] flex w-full items-center justify-between bottom-4">
+        {/* <div className="absolute px-4 uppercase lg:px-20 jost text-[14px] flex w-full items-center justify-between bottom-4">
           <h1>@Madeintic</h1>
           <h1>SCROLL NOW</h1>
           <h1 className="text-right font-normal leading-[17px]">

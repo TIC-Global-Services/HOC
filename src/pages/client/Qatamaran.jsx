@@ -19,22 +19,22 @@ const Qatamaran = () => {
       <Navbar />
       {/* Sections */}
       {/* Mob */}
-      <div className="md:hidden">
+      <div className="lg:hidden">
         <MobQataHero />
       </div>
 
       {/* Desktop */}
-      <div className="md:block hidden">
+      <div className="lg:block hidden">
         <QatamaranHero />
       </div>
       {/* MobileLayout */}
-      <div className="md:hidden">
+      <div className="lg:hidden">
         <MobQataSalt />
         <MobQataRefined />
       </div>
 
       {/* Desktop Layout */}
-      <div className="hidden md:block">
+      <div className="hidden lg:block">
         <QataSaltSilk />
         <QataRefinedTailoring />
       </div>
@@ -42,12 +42,12 @@ const Qatamaran = () => {
 
       {/* Mobile */}
 
-      <div className="md:hidden">
+      <div className="lg:hidden">
         <MobQataOwnTheCourt />
       </div>
 
       {/* Desktop */}
-      <div className="hidden md:block">
+      <div className="hidden lg:block">
         <QataCoastal />
       </div>
 

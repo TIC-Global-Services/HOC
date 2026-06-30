@@ -197,7 +197,7 @@ export default function OwnTheCourt() {
           />
 
 
-      <h2 className="absolute left-[5%] top-[clamp(40px,8vh,90px)] text-start z-10 m-0 salo font-medium text-[14px] md:text-[120px] leading-none tracking-[-0.02em] uppercase text-[#7ac9f0]">
+      <h2 className="absolute left-[5%] top-[clamp(40px,8vh,90px)] text-start z-10 m-0 salo font-medium text-[14px] lg:text-[120px] leading-none tracking-[-0.02em] uppercase text-[#7ac9f0]">
         <span style={{ display: "block" }}>OWN THE</span>
         <span style={{ display: "block" }} className="pl-[5%]">COURT</span>
       </h2>

@@ -22,31 +22,31 @@ const QatamaranHero = () => {
         .float-4 { --r: -6deg; animation: floatY 4.4s ease-in-out 0.3s infinite; }
       `}</style>
 
-      <div className="w-full flex flex-col md:flex-row relative">
+      <div className="w-full flex flex-col lg:flex-row relative">
         {/* LEFT SIDE */}
         <div
-          className="relative w-full h-[500px] md:h-screen md:w-1/2 overflow-hidden flex-shrink-0"
+          className="relative w-full h-[500px] lg:h-screen lg:w-1/2 overflow-hidden flex-shrink-0"
         >
           {/* GRID */}
           <GridOverlay color="0,0,0" opacity={0.20} size={100} position="99px 0px" offsetY={70} />
           <img
             src={img1}
-            className="float-1 absolute top-[15%] left-[10%] w-[50px] md:w-[80px] xl:w-[120px]"
+            className="float-1 absolute top-[15%] left-[10%] w-[50px] lg:w-[80px] xl:w-[120px]"
           />
           <img
             src={img2}
-            className="float-2 absolute top-[15%] right-[15%] w-[60px] md:w-[100px] xl:w-[120px]"
+            className="float-2 absolute top-[15%] right-[15%] w-[60px] lg:w-[100px] xl:w-[120px]"
           />
           <img
             src={img3}
-            className="float-3 absolute bottom-[8%] left-[10%] w-[100px] md:w-[140px] xl:w-[220px]"
+            className="float-3 absolute bottom-[8%] left-[10%] w-[100px] lg:w-[140px] xl:w-[220px]"
           />
           <img
             src={img4}
-            className="float-4 absolute bottom-[8%] right-[10%] w-[100px] md:w-[140px] xl:w-[220px]"
+            className="float-4 absolute bottom-[8%] right-[10%] w-[100px] lg:w-[140px] xl:w-[220px]"
           />
 
-          <div className="w-full h-full flex flex-col items-center justify-center gap-4 md:gap-6 px-4">
+          <div className="w-full h-full flex flex-col items-center justify-center gap-4 lg:gap-6 px-4">
             <h1
               className="font-[1000] uppercase alinsa text-[#060EBB] leading-none tracking-tight text-center"
               style={{ fontSize: "clamp(48px, min(12vh, 8vw), 140px)" }}
@@ -54,7 +54,7 @@ const QatamaranHero = () => {
               Qatamaran
             </h1>
 
-            <button className="jost rounded-full border-2 bg-[#060EBB] text-white flex items-center justify-center font-medium w-[160px] h-[45px] md:w-[200px] md:h-[60px] xl:w-[220px] xl:h-[70px] text-sm md:text-base">
+            <button className="jost rounded-full border-2 bg-[#060EBB] text-white flex items-center justify-center font-medium w-[160px] h-[45px] lg:w-[200px] lg:h-[60px] xl:w-[220px] xl:h-[70px] text-sm lg:text-base">
               FASHION & LIFESTYLE
             </button>
           </div>
@@ -70,15 +70,15 @@ const QatamaranHero = () => {
           top-0 
           right-0 
           h-full 
-          w-full md:w-1/2
+          w-full lg:w-1/2
           flex items-center justify-start
-          px-6 md:px-8 xl:px-12 2xl:px-14
+          px-6 lg:px-8 xl:px-12 2xl:px-14
         "
         >
-          <p className="jost text-start font-[500] tracking-tight text-black max-w-[420px] lg:max-w-[540px] xl:max-w-[580px] 2xl:max-w-[7400px] leading-[160%] text-[14px] md:text-[18px] xl:text-[24px]">
+          <p className="jost text-start font-[500] tracking-tight text-black max-w-[420px] lg:max-w-[540px] xl:max-w-[580px] 2xl:max-w-[7400px] leading-[160%] text-[14px] lg:text-[18px] xl:text-[24px]">
             Qatamaran is a prêt-à-porter menswear label rooted in Chennai's rich
             tailoring heritage, designed for the modern gentleman who{" "}
-            <span className="salo text-[#1E382D] text-[18px] md:text-[26px] xl:text-[36px]">
+            <span className="salo text-[#1E382D] text-[18px] lg:text-[26px] xl:text-[36px]">
               balances luxury with simplicity.
             </span>{" "}
             Haus of Chaos crafted a visual identity inspired by its tropical

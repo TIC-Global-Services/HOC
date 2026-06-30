@@ -20,44 +20,44 @@ const SyedBawkher = () => {
       <Navbar />
       {/* Sections */}
       {/* Mob */}
-      <div className="md:hidden">
+      <div className="lg:hidden">
         <MobSyedHero />
       </div>
 
       {/* Desktop */}
-      <div className="md:block hidden">
+      <div className="lg:block hidden">
         <SyedHero />
       </div>
       {/* Mob */}
-      <div className="md:hidden">
+      <div className="lg:hidden">
         <MobSyedSignature />
       </div>
 
       {/* Desktop */}
-      <div className="md:block hidden">
+      <div className="lg:block hidden">
         <SyedSignatureCraft />
       </div>
       <SyedDesignVideo />
 
       {/* Mob */}
-      <div className="md:hidden">
+      <div className="lg:hidden">
         <SyedTailorMob />
       </div>
 
       {/* Desktop */}
-      <div className="md:block hidden">
+      <div className="lg:block hidden">
         <SyedTailorHeritage />
       </div>
       {/* <SyedWannaKnow /> */}
       <SyedCraftmanShip />
 
       {/* Mob */}
-      <div className="block md:hidden">
+      <div className="block lg:hidden">
         <MobSyedTheCourt />
       </div>
 
       {/* Desktop */}
-      <div className="md:block hidden">
+      <div className="lg:block hidden">
         <SyedOwnTheCourt />
       </div>
 

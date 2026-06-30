@@ -18,7 +18,7 @@
 //       style={{ opacity, y }}
 //       className="text-[#1E382D] font-[500] salo uppercase inline-block"
 //     >
-//       <span className="text-[50px] md:text-[150px]">
+//       <span className="text-[50px] lg:text-[150px]">
 //         {char === " " ? "\u00A0" : char}
 //       </span>
 //     </motion.span>
@@ -36,7 +36,7 @@
 //   return (
 //     <section
 //       ref={ref}
-//       className="w-full h-[80dvh] md:h-[100dvh] relative flex items-center justify-center overflow-hidden isolate"
+//       className="w-full h-[80dvh] lg:h-[100dvh] relative flex items-center justify-center overflow-hidden isolate"
 //     >
 //       <GridOverlay
 //             color="0,0,0"

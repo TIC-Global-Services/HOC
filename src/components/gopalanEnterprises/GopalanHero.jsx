@@ -41,9 +41,9 @@ const GopalanHero = () => {
         }
       `}</style>
 
-      <div className="w-full flex flex-col md:flex-row relative">
+      <div className="w-full flex flex-col lg:flex-row relative">
         {/* ───── LEFT SIDE ───── */}
-        <div className="relative w-full h-[500px] md:h-screen md:w-1/2 overflow-hidden flex-shrink-0">
+        <div className="relative w-full h-[500px] lg:h-screen lg:w-1/2 overflow-hidden flex-shrink-0">
           {/* GRID */}
           <GridOverlay
             color="0,0,0"
@@ -91,7 +91,7 @@ const GopalanHero = () => {
           />
 
           {/* CONTENT */}
-          <div className="w-full h-full flex flex-col items-center justify-center gap-4 md:gap-6 px-4 relative z-10" style={{ paddingTop: "clamp(40px, 18vh, 120px)" }}>
+          <div className="w-full h-full flex flex-col items-center justify-center gap-4 lg:gap-6 px-4 relative z-10" style={{ paddingTop: "clamp(40px, 18vh, 120px)" }}>
             <h1
               className="font-[1000] alinsa text-[#060EBB] leading-none text-center tracking-tight "
               style={{ fontSize: "clamp(48px, min(18vh, 8vw), 140px)" }}
@@ -119,7 +119,7 @@ const GopalanHero = () => {
             top-0 
             right-0 
             h-full 
-            w-full md:w-1/2
+            w-full lg:w-1/2
           "
         >
           {/* INNER ANIMATION CONTAINER */}

@@ -15,7 +15,7 @@ const ShowReel = () => {
   };
 
   return (
-    <section className="w-full md:h-screen overflow-hidden relative bg-white">
+    <section className="w-full lg:h-screen overflow-hidden relative bg-white">
       <video
         ref={videoRef}
         src="/video/showreel-sd-new.mp4"
@@ -24,7 +24,7 @@ const ShowReel = () => {
         loop
         playsInline
         preload="metadata"
-        className="block w-full h-full object-contain md:object-cover"
+        className="block w-full h-full object-contain lg:object-cover"
       />
       <button
         onClick={toggleMute}

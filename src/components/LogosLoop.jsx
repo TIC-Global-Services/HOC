@@ -42,7 +42,7 @@ const imageLogos = [
 
 const LogosLoop = () => {
   return (
-    <div className='h-[200px] md:h-[250px] relative place-items-center overflow-hidden mt-20 md:mt-10 lg:mt-10 xl:-mt-10'>
+    <div className='h-[200px] lg:h-[250px] relative place-items-center overflow-hidden mt-20 lg:mt-10 lg:mt-10 xl:-mt-10'>
       <LogoLoop
         logos={imageLogos}
         speed={100}

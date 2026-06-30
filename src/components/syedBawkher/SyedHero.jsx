@@ -37,32 +37,32 @@ const SyedHero = () => {
         .float-4 { --r: -6deg; animation: floatY 4.4s ease-in-out 0.3s infinite; }
       `}</style>
 
-      <div className="w-full flex flex-col md:flex-row relative">
+      <div className="w-full flex flex-col lg:flex-row relative">
         {/* LEFT */}
 
-        <div className="relative w-full h-[500px] md:h-screen md:w-1/2 overflow-hidden flex-shrink-0">
+        <div className="relative w-full h-[500px] lg:h-screen lg:w-1/2 overflow-hidden flex-shrink-0">
           {/* GRID */}
           <GridOverlay color="0,0,0" opacity={0.20} size={100} position="99px 0px" offsetY={70} />
           {/* FLOATING IMAGES */}
           <img
             src={img1}
-            className="float-1 absolute top-[15%] left-[10%] w-[40px] sm:w-[60px] md:w-[80px] xl:w-[130px]"
+            className="float-1 absolute top-[15%] left-[10%] w-[40px] sm:w-[60px] lg:w-[80px] xl:w-[130px]"
           />
           <img
             src={img2}
-            className="float-2 absolute top-[15%] right-[10%] w-[50px] sm:w-[80px] md:w-[100px] xl:w-[180px]"
+            className="float-2 absolute top-[15%] right-[10%] w-[50px] sm:w-[80px] lg:w-[100px] xl:w-[180px]"
           />
           <img
             src={img3}
-            className="float-3 absolute bottom-[10%] left-[8%] w-[80px] sm:w-[110px] md:w-[140px] xl:w-[180px]"
+            className="float-3 absolute bottom-[10%] left-[8%] w-[80px] sm:w-[110px] lg:w-[140px] xl:w-[180px]"
           />
           <img
             src={img4}
-            className="float-4 absolute bottom-[10%] right-[8%] w-[80px] sm:w-[110px] md:w-[140px] xl:w-[160px]"
+            className="float-4 absolute bottom-[10%] right-[8%] w-[80px] sm:w-[110px] lg:w-[140px] xl:w-[160px]"
           />
 
           {/* CENTER TEXT */}
-          <div className="w-full h-full flex flex-col items-center justify-center gap-3 md:gap-6 px-4 text-center ">
+          <div className="w-full h-full flex flex-col items-center justify-center gap-3 lg:gap-6 px-4 text-center ">
             <h1
               className="font-[1000] alinsa text-[#060EBB] leading-none tracking-tight"
               style={{ fontSize: "clamp(42px, min(16vh, 6.5vw), 180px)" }}
@@ -70,7 +70,7 @@ const SyedHero = () => {
               SYED BAWKHER
             </h1>
 
-            <button className="jost rounded-full border-2 bg-[#060EBB] text-white flex items-center justify-center font-medium w-[140px] h-[40px] sm:w-[180px] sm:h-[50px] md:w-[200px] md:h-[60px] xl:w-[220px] xl:h-[70px] text-xs sm:text-sm md:text-base">
+            <button className="jost rounded-full border-2 bg-[#060EBB] text-white flex items-center justify-center font-medium w-[140px] h-[40px] sm:w-[180px] sm:h-[50px] lg:w-[200px] lg:h-[60px] xl:w-[220px] xl:h-[70px] text-xs sm:text-sm lg:text-base">
               FASHION & LIFESTYLE
             </button>
           </div>
@@ -86,10 +86,10 @@ const SyedHero = () => {
           top-10
           right-0
           h-screen
-          w-full md:w-1/2
+          w-full lg:w-1/2
           flex items-center
           justify-center
-          px-6 md:px-8 xl:px-10
+          px-6 lg:px-8 xl:px-10
           overflow-hidden
         "
         >

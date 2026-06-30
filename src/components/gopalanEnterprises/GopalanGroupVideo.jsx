@@ -8,7 +8,7 @@ const GopalanGroupVideo = () => {
   useMobileVideoFix(videoRef); 
 
   return (
-    <section className="w-full md:min-h-screen relative overflow-hidden">
+    <section className="w-full lg:min-h-screen relative overflow-hidden">
 
       <video
         ref={videoRef} 
@@ -23,18 +23,18 @@ const GopalanGroupVideo = () => {
         className="
           w-full 
           h-[30vh]        
-          md:absolute 
-          md:top-0 
-          md:left-0 
-          md:w-full 
-          md:h-full 
-          md:object-cover bg-white
+          lg:absolute 
+          lg:top-0 
+          lg:left-0 
+          lg:w-full 
+          lg:h-full 
+          lg:object-cover bg-white
           object-cover
         "
       />
 
       {/* Desktop height */}
-      <div className="hidden md:block h-screen" />
+      <div className="hidden lg:block h-screen" />
 
     </section>
   );

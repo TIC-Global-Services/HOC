@@ -10,7 +10,7 @@ const SyedDesignVideo = () => {
   return (
     <>
       {/* First Video */}
-      <section className="w-full h-auto md:min-h-screen bg-black flex items-center justify-center overflow-hidden">
+      <section className="w-full h-auto lg:min-h-screen bg-black flex items-center justify-center overflow-hidden">
         <video
           ref={videoRef} 
           src={video}

@@ -28,7 +28,7 @@ const Experience = () => {
       <Navbar variant="dark" />
       <div className="bg-black jost relative" style={{ minHeight: "100vh" }}>
         {/* Absolutely Centered Text */}
-        <div className="items-center flex-col  bg-black mt-20 md:mt-14 relative justify-center min-h-screen  flex ">
+        <div className="items-center flex-col  bg-black mt-20 lg:mt-14 relative justify-center min-h-screen  flex ">
           <SecondSection />
         </div>
         {/* <div className="items-center flex-col   -mt-20 relative justify-center !h-screen  flex "> */}
@@ -97,16 +97,16 @@ const SecondSection = () => {
 
   return (
     <div ref={sectionRef} className="overflow-hidden z-[300] ">
-      <div className="bg-black mt-6 md:mt-0 py-[60px] md:py-[120px] flex flex-col   items-center gap-10">
+      <div className="bg-black mt-6 lg:mt-0 py-[60px] lg:py-[120px] flex flex-col   items-center gap-10">
         <div>
-          <h1 className="text-[#F4ECE0] text-4xl md:text-[110px] md:leading-[97px] text-center  uppercase alinsa">
+          <h1 className="text-[#F4ECE0] text-4xl lg:text-[110px] lg:leading-[97px] text-center  uppercase alinsa">
             Experience Lab
           </h1>
-          <h2 className="text-white md:text-[30px] text-xl text-center jost">
+          <h2 className="text-white lg:text-[30px] text-xl text-center jost">
             Spaces speak and spaces narrate
           </h2>
         </div>
-        <div className="relative hidden md:flex justify-center items-center gap-10 h-[300px] w-full">
+        <div className="relative hidden lg:flex justify-center items-center gap-10 h-[300px] w-full">
           {/* LineLab Image */}
           {/* <img
             src={linelab}
@@ -152,7 +152,7 @@ const SecondSection = () => {
           /> */}
         </div>
 
-        <div className="relative md:hidden -mt-20 flex justify-center items-center gap-10 h-[300px] w-full">
+        <div className="relative lg:hidden -mt-20 flex justify-center items-center gap-10 h-[300px] w-full">
           {/* LineLab Image */}
           {/* <img
             src={linelab}
@@ -198,7 +198,7 @@ const SecondSection = () => {
             alt="Lab"
           /> */}
         </div>
-        <h1 className="md:px-20   md:mt-0 -mt-28 md:-pt-40 px-4 text-xl md:text-2xl pb-[80px] text-white xl:w-[70%] lg:w-[77%] text-center jost">
+        <h1 className="lg:px-20   lg:mt-0 -mt-28 lg:-pt-40 px-4 text-xl lg:text-2xl pb-[80px] text-white xl:w-[70%] lg:w-[77%] text-center jost">
           Born from our ethos, the Chaos Lab serves as a testing ground for the
           diverse narrative environments we experiment with and explore. Based
           in India, with plans for growth, we embrace a 'test-and-learn'
@@ -250,7 +250,7 @@ const Play = () => {
 
   return (
     <div
-      className="md:min-h-screen -mt-[35px] bg-black text-white relative overflow-hidden"
+      className="lg:min-h-screen -mt-[35px] bg-black text-white relative overflow-hidden"
       onClick={handleClick}
     >
       {/* Grid Overlay */}
@@ -266,7 +266,7 @@ const Play = () => {
         <div className="flex justify-between items-center px-20 py-10">
           <div className="max-w-xl"></div>
 
-          <div className="max-w-xl relative hidden md:flex flex-col  justify-start items-end">
+          <div className="max-w-xl relative hidden lg:flex flex-col  justify-start items-end">
             <h1 className="font-[1000] alinsa -ml-40 text-[100px] whitespace-nowrap">
               PLAY GROUND
             </h1>
@@ -278,7 +278,7 @@ const Play = () => {
             </div>
           </div>
 
-          <div className="w-full  py-10 relative md:hidden flex flex-col  text-center   items-center justify-center">
+          <div className="w-full  py-10 relative lg:hidden flex flex-col  text-center   items-center justify-center">
             <h1 className="  alinsa   text-center text-5xl !font-medium whitespace-nowrap">
               PLAY GROUND
             </h1>

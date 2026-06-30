@@ -10,22 +10,22 @@
 //   const [hovered, setHovered] = useState(false);
 
 //   return (
-//     <section className="flex flex-col items-center justify-center text-center px-6 py-10 mt-6 md:-mt-[0%] md:py-20">
+//     <section className="flex flex-col items-center justify-center text-center px-6 py-10 mt-6 lg:-mt-[0%] lg:py-20">
 
 //       {/* TEXT */}
 //       <div className="leading-none">
-//         <h2 className="text-[50px] md:text-[150px] salo text-[#0000FF]">
+//         <h2 className="text-[50px] lg:text-[150px] salo text-[#0000FF]">
 //           CURIOUS ?
 //         </h2>
 
-//         <p className="text-[20px] md:text-[60px] jost text-black tracking-tight font-[500]">
+//         <p className="text-[20px] lg:text-[60px] jost text-black tracking-tight font-[500]">
 //           let’s build your next big idea.
 //         </p>
 //       </div>
 
 //       {/* CARD WRAPPER */}
 //       <div
-//         className="relative mt-10 md:mt-[10%] right-[5%] cursor-pointer"
+//         className="relative mt-10 lg:mt-[10%] right-[5%] cursor-pointer"
 //         onClick={() => setFlipped(!flipped)}
 //         onMouseEnter={() => setHovered(true)}
 //         onMouseLeave={() => setHovered(false)}
@@ -35,7 +35,7 @@
 //         <motion.img
 //           src={cd}
 //           alt="CD"
-//           className="absolute top-0 right-0 w-[180px] md:w-[500px] -translate-y-1/2 z-0"
+//           className="absolute top-0 right-0 w-[180px] lg:w-[500px] -translate-y-1/2 z-0"
 //           initial={{ x: 0, rotate: 0 }}
 //           animate={{
 //             x: hovered ? 320 : 0,   // slide out
@@ -46,7 +46,7 @@
 
 //         {/* FLIP CARD */}
 //         <motion.div
-//           className="relative w-[260px] md:w-[500px] aspect-square z-10"
+//           className="relative w-[260px] lg:w-[500px] aspect-square z-10"
 //           style={{ perspective: "1000px" }}
 //         >
 //           <motion.div

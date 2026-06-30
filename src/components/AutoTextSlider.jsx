@@ -43,17 +43,17 @@ const AutoTextSlider = () => {
         >
           {/* TITLE */}
 
-          <h1 className="text-base md:text-[42px] mb-6 uppercase text-[#060ebb] tracking-normal salo">
+          <h1 className="text-base lg:text-[42px] mb-6 uppercase text-[#060ebb] tracking-normal salo">
             Client Testimonial
           </h1>
           
           {/* TEXT */}
-          <h1 className="text-[#5B636D] px-3 font-[500] md:w-[70%] text-sm md:text-[22px] text-center md:leading-[30px]">
+          <h1 className="text-[#5B636D] px-3 font-[500] lg:w-[70%] text-sm lg:text-[22px] text-center lg:leading-[30px]">
             {slides[index].text}
           </h1>
 
           {/* AUTHOR */}
-          <h2 className="text-[#060ebb] text-xs md:text-[20px] mt-2 md:mt-5">
+          <h2 className="text-[#060ebb] text-xs lg:text-[20px] mt-2 lg:mt-5">
             {slides[index].author}
           </h2>
         </motion.div>
@@ -64,7 +64,7 @@ const AutoTextSlider = () => {
         {slides.map((_, i) => (
           <div
             key={i}
-            className={`h-2 w-2 md:h-3 md:w-3 rounded-full transition-all duration-300 ${
+            className={`h-2 w-2 lg:h-3 lg:w-3 rounded-full transition-all duration-300 ${
               i === index
                 ? "bg-[#060ebb] scale-125"
                 : "bg-[#060ebb]/30"

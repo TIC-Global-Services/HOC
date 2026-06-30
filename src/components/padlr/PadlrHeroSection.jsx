@@ -30,19 +30,19 @@ const PadlrHero = () => {
           <GridOverlay color="0,0,0" opacity={0.20} size={100} position="99px 0px" offsetY={70} />
         <img
           src={img2}
-          className="float-1 absolute top-[15%] left-[8%] w-[50px] sm:w-[70px] md:w-[90px] lg:w-[150px]"
+          className="float-1 absolute top-[15%] left-[8%] w-[50px] sm:w-[70px] lg:w-[150px]"
         />
         <img
           src={img1}
-          className="float-2 absolute top-[15%] right-[10%] w-[60px] sm:w-[80px] md:w-[100px] lg:w-[150px]"
+          className="float-2 absolute top-[15%] right-[10%] w-[60px] sm:w-[80px] lg:w-[150px]"
         />
         <img
           src={img4}
-          className="float-3 absolute bottom-[10%] left-[8%] w-[90px] sm:w-[120px] md:w-[150px] lg:w-[160px]"
+          className="float-3 absolute bottom-[10%] left-[8%] w-[90px] sm:w-[120px] lg:w-[160px]"
         />
         <img
           src={img3}
-          className="float-4 absolute bottom-[10%] right-[10%] w-[90px] sm:w-[120px] md:w-[150px] lg:w-[180px]"
+          className="float-4 absolute bottom-[10%] right-[10%] w-[90px] sm:w-[120px] lg:w-[180px]"
         />
 
         <div className="w-full h-full flex flex-col items-center justify-center gap-4 sm:gap-6 px-4 text-center">
@@ -78,7 +78,7 @@ const PadlrHero = () => {
           h-full 
           w-full lg:w-[50%] xl:w-[50%]
           flex items-center
-          px-6 md:px-10 xl:px-14 2xl:px-18
+          px-6 lg:px-10 xl:px-14 2xl:px-18
         "
       >
         <p

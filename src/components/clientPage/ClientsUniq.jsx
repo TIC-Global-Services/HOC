@@ -33,7 +33,7 @@ const items = [
 
 const ClientsUniq = () => {
   return (
-    <section className="px-4 md:px-16 py-16 md:py-24 text-center">
+    <section className="px-4 lg:px-16 py-16 lg:py-24 text-center">
 
       <style>{`
         .vinyl-cd {
@@ -61,18 +61,18 @@ const ClientsUniq = () => {
       `}</style>
 
       {/* CURIOUS HEADING */}
-      <div className="leading-none mb-10 md:mb-20">
-        <h2 className="text-[50px] md:text-[150px] salo text-[#060ebb]">
+      <div className="leading-none mb-10 lg:mb-20">
+        <h2 className="text-[50px] lg:text-[150px] salo text-[#060ebb]">
           CURIOUS <span className="font-[Arial]">?</span>
         </h2>
 
-        <p className="text-[20px] md:text-[60px] jost text-black tracking-tight mt-4 font-[500]">
+        <p className="text-[20px] lg:text-[60px] jost text-black tracking-tight mt-4 font-[500]">
           let's build your next big idea.
         </p>
       </div>
 
       {/* GRID */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-x-10 md:gap-x-16 gap-y-12 justify-items-center w-full max-w-[1400px] mx-auto">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-10 lg:gap-x-16 gap-y-12 justify-items-center w-full max-w-[1400px] mx-auto">
 
         {items.map((item) => (
           <Link key={item.title} to={item.path} className="block w-full max-w-[250px]">
@@ -122,7 +122,7 @@ const ClientsUniq = () => {
               </div>
 
               {/* TITLE */}
-              <p className="mt-2 md:mt-6 text-center md:text-left text-sm md:text-[24px] font-normal salo tracking-[2%] md:tracking-normal">
+              <p className="mt-2 lg:mt-6 text-center lg:text-left text-sm lg:text-[24px] font-normal salo tracking-[2%] lg:tracking-normal">
                 {item.title}
               </p>
 

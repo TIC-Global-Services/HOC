@@ -14,23 +14,23 @@ const JobListings = () => {
   ];
 
   return (
-    <div className="md:px-10 px-2 py-10">
+    <div className="lg:px-10 px-2 py-10">
       <div
         ref={ref}
-        className="min-h-[70vh] rounded-[20px] bg-black text-white p-4 md:p-8"
+        className="min-h-[70vh] rounded-[20px] bg-black text-white p-4 lg:p-8"
       >
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6 }}
-          className="flex  md:flex-row flex-col mx-auto md:px-10 py-10 md:py-20 gap-10"
+          className="flex  lg:flex-row flex-col mx-auto lg:px-10 py-10 lg:py-20 gap-10"
         >
-          <div className="mb-12 md:w-[55%] text-left">
+          <div className="mb-12 lg:w-[55%] text-left">
             <motion.h1
               initial={{ opacity: 0 }}
               animate={isInView ? { opacity: 1 } : {}}
               transition={{ delay: 0.3 }}
-              className="xl:text-[50px] lg:text-[42px] text-4xl md:leading-[50px] font-bold jost mb-6"
+              className="xl:text-[50px] lg:text-[42px] text-4xl lg:leading-[50px] font-bold jost mb-6"
             >
               <span className="text-[#060ebb] hover:text-white ">E-mail us</span> if you are a
               creator, open to learning, nurturing, growing, and fostering the
@@ -38,7 +38,7 @@ const JobListings = () => {
             </motion.h1>
 
             <div className="flex gap-4">
-              <div className="flex md:justify-center md:items-center">
+              <div className="flex lg:justify-center lg:items-center">
                 <button
                   className="bg-white jost text-[#060ebb] px-6 py-3 rounded-full font-medium transition-colors duration-300 hover:bg-blue-600 hover:text-white"
                   onClick={(e) => {
@@ -71,7 +71,7 @@ const JobListings = () => {
             initial={{ opacity: 0 }}
             animate={isInView ? { opacity: 1 } : {}}
             transition={{ delay: 0.6 }}
-            className="space-y-4  md:mt-20 text-center md:text-right md:w-[45%]"
+            className="space-y-4  lg:mt-20 text-center lg:text-right lg:w-[45%]"
           >
             {positions.map((position, index) => (
               <motion.div
