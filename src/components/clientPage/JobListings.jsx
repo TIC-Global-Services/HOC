@@ -30,7 +30,7 @@ const JobListings = () => {
               initial={{ opacity: 0 }}
               animate={isInView ? { opacity: 1 } : {}}
               transition={{ delay: 0.3 }}
-              className="xl:text-[50px] lg:text-[42px] text-4xl lg:leading-[50px] font-bold jost mb-6"
+              className="xl:text-[50px] text-[clamp(36px,2.9vw,42px)] lg:leading-[50px] font-bold jost mb-6"
             >
               <span className="text-[#060ebb] hover:text-white ">E-mail us</span> if you are a
               creator, open to learning, nurturing, growing, and fostering the

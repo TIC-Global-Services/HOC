@@ -200,7 +200,7 @@ export default function SyedOwnTheCourt() {
                 position="99px 0px"
               />
 
-      <h2 className="absolute text-start left-[5%] top-[clamp(40px,8vh,90px)] z-10 m-0 salo font-medium text-[14px] lg:text-[140px] leading-none tracking-[-0.02em] uppercase text-[#262666]">
+      <h2 className="absolute text-start left-[5%] top-[clamp(40px,8vh,90px)] z-10 m-0 salo font-medium text-[clamp(14px,9.7vw,140px)] leading-none tracking-[-0.02em] uppercase text-[#262666]">
         <span style={{ display: "block" }}>REFINED</span>
         <span style={{ display: "block" }}>IDENTITY</span>
       </h2>

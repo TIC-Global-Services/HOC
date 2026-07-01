@@ -54,7 +54,7 @@ const QatamaranHero = () => {
               Qatamaran
             </h1>
 
-            <button className="jost rounded-full border-2 bg-[#060EBB] text-white flex items-center justify-center font-medium w-[160px] h-[45px] lg:w-[200px] lg:h-[60px] xl:w-[220px] xl:h-[70px] text-sm lg:text-base">
+            <button className="jost rounded-full border-2 bg-[#060EBB] text-white flex items-center justify-center font-medium w-[160px] h-[45px] lg:w-[200px] lg:h-[60px] xl:w-[220px] xl:h-[70px] text-[clamp(14px,1.1vw,16px)] ">
               FASHION & LIFESTYLE
             </button>
           </div>
@@ -75,10 +75,10 @@ const QatamaranHero = () => {
           px-6 lg:px-8 xl:px-12 2xl:px-14
         "
         >
-          <p className="jost text-start font-[500] tracking-tight text-black max-w-[420px] lg:max-w-[540px] xl:max-w-[580px] 2xl:max-w-[7400px] leading-[160%] text-[14px] lg:text-[18px] xl:text-[24px]">
+          <p className="jost text-start font-[500] tracking-tight text-black max-w-[420px] lg:max-w-[540px] xl:max-w-[580px] 2xl:max-w-[7400px] leading-[160%] text-[clamp(14px,1.3vw,18px)] xl:text-[24px]">
             Qatamaran is a prêt-à-porter menswear label rooted in Chennai's rich
             tailoring heritage, designed for the modern gentleman who{" "}
-            <span className="salo text-[#1E382D] text-[18px] lg:text-[26px] xl:text-[36px]">
+            <span className="salo text-[#1E382D] text-[clamp(18px,1.8vw,26px)] xl:text-[36px]">
               balances luxury with simplicity.
             </span>{" "}
             Haus of Chaos crafted a visual identity inspired by its tropical

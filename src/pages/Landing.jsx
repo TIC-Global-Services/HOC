@@ -63,7 +63,7 @@ const Landing = () => {
           <AnimatePresence mode="wait">
             <motion.h1
               key={currentText}
-              className="text-[44px] px-20   alinsa uppercase lg:text-[80px] font-[1000] text-center leading-tight lg:leading-[1]"
+              className="text-[clamp(44px,5.6vw,80px)] px-20 alinsa uppercase font-[1000] text-center leading-tight lg:leading-[1]"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -20 }}

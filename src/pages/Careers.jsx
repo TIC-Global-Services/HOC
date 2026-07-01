@@ -99,7 +99,7 @@ const Careers = () => {
 
           {/* Tagline Animation */}
           <motion.p
-            className="jost font-[500]  text-xl lg:!mt-24 lowercase lg:text-[60px] z-[10]"
+            className="jost font-[500] text-[clamp(20px,4.2vw,60px)] lg:!mt-24 lowercase z-[10]"
             initial={{ y: 30, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.5, delay: 0.2 }}
@@ -147,7 +147,7 @@ const JobListings = () => {
               initial={{ opacity: 0 }}
               animate={isInView ? { opacity: 1 } : {}}
               transition={{ delay: 0.3 }}
-              className="xl:text-[50px] lg:text-[42px] text-4xl lg:leading-[50px] font-bold jost mb-6"
+              className="xl:text-[50px] text-[clamp(36px,2.9vw,42px)] lg:leading-[50px] font-bold jost mb-6"
             >
               <span className="text-[#060ebb] hover:text-white ">E-mail us</span> if you are a
               creator, open to learning, nurturing, growing, and fostering the

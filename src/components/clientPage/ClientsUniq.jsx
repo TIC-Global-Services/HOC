@@ -62,11 +62,11 @@ const ClientsUniq = () => {
 
       {/* CURIOUS HEADING */}
       <div className="leading-none mb-10 lg:mb-20">
-        <h2 className="text-[50px] lg:text-[150px] salo text-[#060ebb]">
+        <h2 className="text-[clamp(50px,10.4vw,150px)] salo text-[#060ebb]">
           CURIOUS <span className="font-[Arial]">?</span>
         </h2>
 
-        <p className="text-[20px] lg:text-[60px] jost text-black tracking-tight mt-4 font-[500]">
+        <p className="text-[clamp(20px,4.2vw,60px)] jost text-black tracking-tight mt-4 font-[500]">
           let's build your next big idea.
         </p>
       </div>
@@ -122,7 +122,7 @@ const ClientsUniq = () => {
               </div>
 
               {/* TITLE */}
-              <p className="mt-2 lg:mt-6 text-center lg:text-left text-sm lg:text-[24px] font-normal salo tracking-[2%] lg:tracking-normal">
+              <p className="mt-2 lg:mt-6 text-center lg:text-left text-[clamp(14px,1.7vw,24px)] font-normal salo tracking-[2%] lg:tracking-normal">
                 {item.title}
               </p>
 

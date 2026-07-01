@@ -39,7 +39,7 @@
 //         will-change-transform
 //       "
 //     >
-//       <span className="text-[50px] lg:text-[150px]">
+//       <span className="text-[clamp(50px,10.4vw,150px)] ">
 //         {char === " " ? "\u00A0" : char}
 //       </span>
 //     </motion.span>

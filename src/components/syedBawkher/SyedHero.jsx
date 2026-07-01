@@ -70,7 +70,7 @@ const SyedHero = () => {
               SYED BAWKHER
             </h1>
 
-            <button className="jost rounded-full border-2 bg-[#060EBB] text-white flex items-center justify-center font-medium w-[140px] h-[40px] sm:w-[180px] sm:h-[50px] lg:w-[200px] lg:h-[60px] xl:w-[220px] xl:h-[70px] text-xs sm:text-sm lg:text-base">
+            <button className="jost rounded-full border-2 bg-[#060EBB] text-white flex items-center justify-center font-medium w-[140px] h-[40px] sm:w-[180px] sm:h-[50px] lg:w-[200px] lg:h-[60px] xl:w-[220px] xl:h-[70px] text-[clamp(12px,1.1vw,16px)] sm:text-sm ">
               FASHION & LIFESTYLE
             </button>
           </div>

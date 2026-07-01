@@ -35,7 +35,7 @@ const Home = () => {
                 WHO WE ARE
               </h1>
 
-              <h2 className="jost text-lg lg:text-[30px]  whitespace-nowrap w-[100%] text-left lg:leading-[40px]">
+              <h2 className="jost text-[clamp(18px,2.1vw,30px)] whitespace-nowrap w-[100%] text-left lg:leading-[40px]">
                 A seriously playful process-oriented <br /> experience design
                 studio that disrupts +<br /> questions + creates narrative{" "}
                 environments <br /> and experiences for brands worldwide
@@ -60,10 +60,10 @@ const Home = () => {
             {/* <img src={swrillpng} className="w-[80%]" alt="Swrill" /> */}
           </motion.div>
           <div className=" !z-[500] w-full lg:-mt-12 mt-20 whitespace-nowrap -mr-5 lg:mr-0">
-            <h1 className="text-3xl  salo lg:text-[110px] text-[#060ebb] font-[500] text-right leading-tight lg:leading-normal">
+            <h1 className="text-[clamp(30px,7.6vw,110px)] salo text-[#060ebb] font-[500] text-right leading-tight lg:leading-normal">
               WHAT WE DO
             </h1>
-            <h2 className="jost lg:text-[30px]  w-[100%] text-right  text-lg lg:leading-[40px]">
+            <h2 className="jost w-[100%] text-right text-[clamp(18px,2.1vw,30px)] lg:leading-[40px]">
               We dabble in graphic design, <br />
                a smidge of branding + packaging,
               <br />focus extensively on experience{" "}
@@ -72,7 +72,7 @@ const Home = () => {
               to tie everything together seamlessly.
             </h2>
           </div>
-          {/* <div className=" lg:text-[22px] text-sm -left-20 bottom-20 lg:left-auto  flex gap-4  text-[#2354CF]  lg:leading-[32px]  tracking-widest lg:bottom-[20rem] whitespace-nowrap lg:-right-20  rotate-[-90deg]    absolute lg:rotate-[90deg]">
+          {/* <div className=" text-[clamp(14px,1.5vw,22px)] -left-20 bottom-20 lg:left-auto flex gap-4 text-[#2354CF] lg:leading-[32px] tracking-widest lg:bottom-[20rem] whitespace-nowrap lg:-right-20 rotate-[-90deg] absolute lg:rotate-[90deg]">
             Scroll To Learn More
             <svg
               width="36"
@@ -194,10 +194,10 @@ export default Home;
 //     <div ref={sectionRef} className="overflow-hidden py-40">
 //       <div className="bg-black py-20 flex flex-col   gap-10">
 //         <div>
-//           <h1 className="text-[#F4ECE0] text-4xl lg:text-[110px] lg:leading-[97px] text-center font-sans">
+//           <h1 className="text-[#F4ECE0] text-[clamp(36px,7.6vw,110px)] lg:leading-[97px] text-center font-sans">
 //             Experience Lab
 //           </h1>
-//           <h2 className="text-white lg:text-[30px] text-xl text-center jost">
+//           <h2 className="text-white text-[clamp(20px,2.1vw,30px)] text-center jost">
 //             Spaces speak and spaces narrate
 //           </h2>
 //         </div>

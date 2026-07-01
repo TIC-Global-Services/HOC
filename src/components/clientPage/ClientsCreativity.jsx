@@ -23,7 +23,7 @@ const ClientsCreativity = () => {
 
       {/* Right Text */}
       <motion.p
-        className="jost font-[500] max-w-[550px] text-center lg:text-center leading-none lg:leading-[100%] lg:tracking-tight text-[25px] lg:text-[60px]"
+        className="jost font-[500] max-w-[550px] text-center lg:text-center leading-none lg:leading-[100%] lg:tracking-tight text-[clamp(25px,4.2vw,60px)] "
         initial={{ y: 30, opacity: 0 }}
         whileInView={{ y: 0, opacity: 1 }}
         viewport={{ once: true }}

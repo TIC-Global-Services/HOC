@@ -50,7 +50,7 @@ const ClientsHero = () => {
 
       {/* Tagline */}
       <motion.p
-        className="jost font-[500] max-w-[600px] lg:leading-[100%] lg:tracking-tight text-[25px] lg:!mt-24 lowercase lg:text-[60px] z-[10]"
+        className="jost font-[500] max-w-[600px] lg:leading-[100%] lg:tracking-tight text-[clamp(25px,4.2vw,60px)] lg:!mt-24 lowercase z-[10]"
         initial={{ y: 30, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.5, delay: 0.2 }}

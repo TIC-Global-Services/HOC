@@ -73,17 +73,17 @@ const HausOfChaos = () => {
         {/* Logo and Description */}
         <img
           src="/logo.png"
-          className="w-1/2 lg:hidden block mb-8"
+          className="w-[clamp(200px,60vw,450px)] lg:hidden block mb-8"
           alt="Haus Of Chaos"
         />
-        <div className="flex">
+        <div className="flex flex-col lg:flex-row w-full">
           <div className="lg:max-w-xl">
             <img
               src="/logo.png"
               className="lg:w-40 lg:block hidden mb-4"
               alt="Haus Of Chaos"
             />
-            <p className="text-lg lg:block hidden text-left mb-6">
+            <p className="text-[clamp(16px,1.2vw,18px)] lg:block hidden text-left mb-6">
               Step into the chaos of creativity <br />
               Where bold ideas and designs <br /> collide Stay ahead with
               innovative <br />
@@ -93,7 +93,7 @@ const HausOfChaos = () => {
           </div>
 
           {/* Newsletter Form */}
-          <div className="max-w-xl mt-20 ml-auto">
+          <div className="w-full lg:max-w-xl mt-10 lg:mt-20 lg:ml-auto">
             <form className="space-y-4 flex flex-col" onSubmit={handleSubmit}>
               <div>
                 <input
@@ -168,7 +168,7 @@ const HausOfChaos = () => {
           </Link>
 
 
-          <div className="text-sm   lg:!-mt-10  lg:text-base">
+          <div className="text-[clamp(14px,1.1vw,16px)] lg:!-mt-10 ">
             Design by{" "}
             <a
               href="https://theinternetcompany.one/"

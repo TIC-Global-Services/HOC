@@ -150,10 +150,10 @@ const FAQItem = ({ item, isOpen, onToggle }) => {
         onClick={onToggle}
       >
         <div className="flex items-center">
-          <span className="text-[#E3E1E6] font-bold mr-4 text-xl lg:text-[32px]">
+          <span className="text-[#E3E1E6] font-bold mr-4 text-[clamp(20px,2.2vw,32px)] ">
             -
           </span>
-          <span className="text-white text-lg lg:text-2xl">
+          <span className="text-white text-[clamp(18px,1.7vw,24px)] ">
             {item.question}
           </span>
         </div>
@@ -213,7 +213,7 @@ const CategoryAccordion = ({
         className="flex w-full items-center justify-between py-6 text-left"
         onClick={() => onCategoryToggle(category.id)}
       >
-        <span className="text-white text-xl lg:text-3xl font-bold">
+        <span className="text-white text-[clamp(20px,2.1vw,30px)] font-bold">
           <span className=" text-4xl text-[#E3E1E6] mr-2">
             {" "}     
             0{category.idx}
@@ -288,10 +288,10 @@ const FAQ = () => {
     <div className="min-h-screen bg-black">
       <div className="justify-evenly lg:items-start items-center   flex flex-col lg:flex-row mx-auto py-32">
         <div className="mb-12 text-center lg:text-left lg:sticky lg:top-32 lg:h-fit">
-          <h2 className="text-[#E3E1E6] salo text-5xl lg:text-[90px] lg:leading-[120px]">
+          <h2 className="text-[#E3E1E6] salo text-[clamp(48px,6.3vw,90px)] lg:leading-[120px]">
             FAQS
           </h2>
-          {/* <p className="text-[#F4ECE0] jost uppercase text-xs lg:text-[15px] font-bold">
+          {/* <p className="text-[#F4ECE0] jost uppercase text-[clamp(12px,1vw,15px)] font-bold">
             frequently asked questions
             </p> */}
         </div>

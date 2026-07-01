@@ -43,17 +43,17 @@ const AutoTextSlider = () => {
         >
           {/* TITLE */}
 
-          <h1 className="text-base lg:text-[42px] mb-6 uppercase text-[#060ebb] tracking-normal salo">
+          <h1 className="text-[clamp(16px,2.9vw,42px)] mb-6 uppercase text-[#060ebb] tracking-normal salo">
             Client Testimonial
           </h1>
           
           {/* TEXT */}
-          <h1 className="text-[#5B636D] px-3 font-[500] lg:w-[70%] text-sm lg:text-[22px] text-center lg:leading-[30px]">
+          <h1 className="text-[#5B636D] px-3 font-[500] lg:w-[70%] text-[clamp(14px,1.5vw,22px)] text-center lg:leading-[30px]">
             {slides[index].text}
           </h1>
 
           {/* AUTHOR */}
-          <h2 className="text-[#060ebb] text-xs lg:text-[20px] mt-2 lg:mt-5">
+          <h2 className="text-[#060ebb] text-[clamp(12px,1.4vw,20px)] mt-2 lg:mt-5">
             {slides[index].author}
           </h2>
         </motion.div>

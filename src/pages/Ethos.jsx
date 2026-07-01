@@ -36,8 +36,8 @@ const Ethos = () => {
         {/* Absolutely Centered Text */}
         <div className=" !z-[-200]  items-end   lg:flex-row flex-col  h-full lg:h-full mt-0 lg:mt-0  bottom-0 flex px-4 lg:px-10">
           <div className="  lg:mt-0 mt-80  w-[100%]">
-            <h2 className="jost lg:text-[26px] text-2xl text-left lg:block hidden  mb-10  lg:-mb-20 lg:leading-[40px]">
-              <span className=" lg:text-[45px]  text-3xl salo uppercase  text-[#060ebb]">
+            <h2 className="jost text-[clamp(24px,1.8vw,26px)] text-left lg:block hidden mb-10 lg:-mb-20 lg:leading-[40px]">
+              <span className=" text-[clamp(30px,3.1vw,45px)] salo uppercase text-[#060ebb]">
                 {" "}
                 Haus Of Chaos{" "}
               </span>{" "}
@@ -45,7 +45,7 @@ const Ethos = () => {
                 is a process-oriented design firm <br /> that prioritizes{" "}
                 innovative forms of communication. <br /> Embracing the concept
                 of{" "}
-                <span className=" lg:text-[45px] text-3xl uppercase salo text-[#060ebb]">
+                <span className=" text-[clamp(30px,3.1vw,45px)] uppercase salo text-[#060ebb]">
                   {" "}
                   Organized Chaos, 
                 </span>
@@ -55,14 +55,14 @@ const Ethos = () => {
                    challenging conventional{" "}
                  </span>
               </span>
-              <span className="  lg:text-[45px] text-3xl salo uppercase text-[#060ebb]">
+              <span className=" text-[clamp(30px,3.1vw,45px)] salo uppercase text-[#060ebb]">
                 {" "}
                 Design{" "}
               </span>{" "}
               paradigms <br className=" lg:block hidden" /> integrating the
               intangible aspects of interdisciplinary <br /> design,
               particularly
-              <span className=" lg:text-[45px] text-3xl uppercase salo text-[#060ebb]">
+              <span className=" text-[clamp(30px,3.1vw,45px)] uppercase salo text-[#060ebb]">
                 {" "}
                 Transmedia Approaches.
               </span>
@@ -178,7 +178,7 @@ const FounderSection = () => {
             animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.6 }}
           >
-            <h1 className="text-[#F4ECE0] lg:-ml-10 lg:mt-0 -mt-60 text-center uppercase alinsa text-7xl    lg:mb-10 lg:text-[110px] font-bold tracking-wide">
+            <h1 className="text-[#F4ECE0] lg:-ml-10 lg:mt-0 -mt-60 text-center uppercase alinsa text-[clamp(72px,7.6vw,110px)] lg:mb-10 font-bold tracking-wide">
               FOUNDER
             </h1>
           </motion.div>
@@ -190,14 +190,14 @@ const FounderSection = () => {
               transition={{ duration: 0.6, delay: 0.3 }}
               className="lg:w-1/2 lg:-ml-10 lg:block flex flex-col items-center"
             >
-              <p className="text-white   lg:-ml-5  lg:text-[26px] jost  text-lg lg:w-full lg:text-[28px]  px-4 lg:leading-[37px] mb-4 lg:mb-8">
+              <p className="text-white lg:-ml-5 jost text-[clamp(18px,1.8vw,26px)] lg:w-full lg:text-[28px] px-4 lg:leading-[37px] mb-4 lg:mb-8">
                 As experiential designers, we never remain neutral. The more
                 compelling the story, the greater the influence we hold. Haus of
                 Chaos is the intersection of a graphic design house and an
                 experimental studio, enabling us to dive into new, experimental
                 forms of communication, disrupting and redefining existing norms.
               </p>
-              <div className="flex text-xs lg:text-base   gap-4">
+              <div className="flex text-[clamp(12px,1.1vw,16px)] gap-4">
                 <motion.button
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}

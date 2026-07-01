@@ -99,10 +99,10 @@ const SecondSection = () => {
     <div ref={sectionRef} className="overflow-hidden z-[300] ">
       <div className="bg-black mt-6 lg:mt-0 py-[60px] lg:py-[120px] flex flex-col   items-center gap-10">
         <div>
-          <h1 className="text-[#F4ECE0] text-4xl lg:text-[110px] lg:leading-[97px] text-center  uppercase alinsa">
+          <h1 className="text-[#F4ECE0] text-[clamp(36px,7.6vw,110px)] lg:leading-[97px] text-center uppercase alinsa">
             Experience Lab
           </h1>
-          <h2 className="text-white lg:text-[30px] text-xl text-center jost">
+          <h2 className="text-white text-[clamp(20px,2.1vw,30px)] text-center jost">
             Spaces speak and spaces narrate
           </h2>
         </div>
@@ -198,7 +198,7 @@ const SecondSection = () => {
             alt="Lab"
           /> */}
         </div>
-        <h1 className="lg:px-20   lg:mt-0 -mt-28 lg:-pt-40 px-4 text-xl lg:text-2xl pb-[80px] text-white xl:w-[70%] lg:w-[77%] text-center jost">
+        <h1 className="lg:px-20 lg:mt-0 -mt-28 lg:-pt-40 px-4 text-[clamp(20px,1.7vw,24px)] pb-[80px] text-white xl:w-[70%] lg:w-[77%] text-center jost">
           Born from our ethos, the Chaos Lab serves as a testing ground for the
           diverse narrative environments we experiment with and explore. Based
           in India, with plans for growth, we embrace a 'test-and-learn'

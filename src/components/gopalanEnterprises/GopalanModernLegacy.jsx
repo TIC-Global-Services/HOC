@@ -195,7 +195,7 @@ export default function GopalanModernLegacy() {
             position="99px 0px"
           />
       {/* TITLE */}
-      <h2 className="absolute left-[5%] text-start top-[clamp(40px,8vh,90px)] z-10 m-0 salo font-medium text-[14px] lg:text-[140px] leading-none tracking-[-0.02em] uppercase text-[#E96428]">
+      <h2 className="absolute left-[5%] text-start top-[clamp(40px,8vh,90px)] z-10 m-0 salo font-medium text-[clamp(14px,9.7vw,140px)] leading-none tracking-[-0.02em] uppercase text-[#E96428]">
         <span style={{ display: "block" }}>MODERN</span>
         <span style={{ display: "block" }}>LEGACY</span>
       </h2>

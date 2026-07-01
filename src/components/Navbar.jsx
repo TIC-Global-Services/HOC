@@ -134,7 +134,7 @@ const Navbar = ({
             />
 
             {/* NAVIGATION LINKS */}
-            <div className="text-[14px] lg:text-[19px] font-semibold flex gap-4 lg:gap-14 items-center">
+            <div className="text-[clamp(14px,1.3vw,19px)] font-semibold flex gap-4 lg:gap-14 items-center">
               <h1
                 onClick={() => handleNav("/client")}
                 className={`cursor-pointer ${isDark ? "hover:text-[#060ebb]" : "hover:text-black/50"} ${
@@ -194,23 +194,7 @@ const Navbar = ({
             {/* CONTACT BUTTON */}
             <div onClick={() => handleNav("/contact")}>
               <motion.div
-                className={`
-                  py-2
-                  px-4
-                  rounded-full
-                  relative
-                  text-[12px]
-                  lg:text-[13px]
-                  font-semibold
-                  flex
-                  items-center
-                  cursor-pointer
-                  ${
-                    isToggled
-                      ? "bg-black text-white"
-                      : "bg-[#F0F0F0] text-[#060ebb]"
-                  }
-                `}
+                className={` py-2 px-4 rounded-full relative text-[clamp(12px,0.9vw,13px)] font-semibold flex items-center cursor-pointer ${ isToggled ? "bg-black text-white" : "bg-[#F0F0F0] text-[#060ebb]" } `}
                 onClick={handleToggle}
               >
                 <motion.h1

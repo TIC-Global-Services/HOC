@@ -14,11 +14,11 @@
 
 //       {/* TEXT */}
 //       <div className="leading-none">
-//         <h2 className="text-[50px] lg:text-[150px] salo text-[#0000FF]">
+//         <h2 className="text-[clamp(50px,10.4vw,150px)] salo text-[#0000FF]">
 //           CURIOUS ?
 //         </h2>
 
-//         <p className="text-[20px] lg:text-[60px] jost text-black tracking-tight font-[500]">
+//         <p className="text-[clamp(20px,4.2vw,60px)] jost text-black tracking-tight font-[500]">
 //           let’s build your next big idea.
 //         </p>
 //       </div>

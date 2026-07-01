@@ -199,7 +199,7 @@ const JobListings = ({ scrollToBottom }) => {
           />
         ))}
 
-      {/* <h1 className="absolute  cursor-pointer !bottom-2 lg:bottom-10 tracking-wide text-[#0000FF]   text-center text-2xl lg:text-[20px]"  onClick={scrollToBottom}>
+      {/* <h1 className="absolute cursor-pointer !bottom-2 lg:bottom-10 tracking-wide text-[#0000FF] text-center text-[clamp(24px,1.4vw,20px)] "  onClick={scrollToBottom}>
         <img src="/down-arrow.png" alt="Arrow" className="w-10" />
       </h1> */}
       {/* <div className=" absolute">Scroll Down</div> */}
@@ -287,7 +287,7 @@ const JobListings2 = ({ scrollToBottom }) => {
         ))}
 
       <h1
-        className="absolute  lg:block hidden cursor-pointer !bottom-2 lg:bottom-10 tracking-wide text-[#060ebb]   text-center text-2xl lg:text-[20px]"
+        className="absolute lg:block hidden cursor-pointer !bottom-2 lg:bottom-10 tracking-wide text-[#060ebb] text-center text-[clamp(24px,1.4vw,20px)] "
         onClick={scrollToBottom}
       >
         Scroll Down
