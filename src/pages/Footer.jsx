@@ -73,7 +73,7 @@ const HausOfChaos = () => {
         {/* Logo and Description */}
         <img
           src="/logo.png"
-          className="w-[clamp(200px,60vw,450px)] lg:hidden block mb-8"
+          className="w-[clamp(100px,60vw,250px)] lg:hidden block "
           alt="Haus Of Chaos"
         />
         <div className="flex flex-col lg:flex-row w-full">
