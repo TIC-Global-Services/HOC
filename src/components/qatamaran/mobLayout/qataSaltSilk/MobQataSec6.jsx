@@ -7,7 +7,7 @@ const MobQataSec6 = () => {
     <section className="w-full overflow-hidden">
 
       {/* ─── BOTTOM IMAGE ─── */}
-      <div className="w-full h-[70vh]">
+      <div className="w-full h-[70vh] ">
         <img
           src={qataRightImg}
           alt=""

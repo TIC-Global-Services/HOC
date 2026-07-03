@@ -35,12 +35,12 @@ const MobQataSec4 = () => {
       </div>
 
       {/* TEXT */}
-      <div className="text-black text-start max-w-[320px] relative z-10">
-        <h2 className="salo uppercase text-[20px] leading-[110%] mb-3">
+      <div className="text-black text-start max-w-[320px] sm:max-w-md md:max-w-lg relative z-10">
+        <h2 className="salo uppercase text-[20px] sm:text-3xl leading-[110%] mb-3">
           Where Heritage Meets Modern Elegance
         </h2>
 
-        <p className="jost text-[16px] leading-[1.3] tracking-tighter font-[400]">
+        <p className="jost text-[16px] sm:text-xl leading-[1.3] tracking-tighter font-[400]">
           "At Qatamaran, every piece is thoughtfully crafted to embody
           timeless tailoring, coastal inspiration, and effortless
           sophistication—designed for the modern gentleman to wear with

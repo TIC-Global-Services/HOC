@@ -37,11 +37,11 @@ const MobRefineSec2 = () => {
         ref={rightRef}
         className="absolute top-[40%] right-[5%] w-[90px]"
       >
-        <img
+        {/* <img
           src={callOut}
           alt=""
           className="w-full object-contain -rotate-12"
-        />
+        /> */}
       </div>
 
       {/* PARAGRAPH */}

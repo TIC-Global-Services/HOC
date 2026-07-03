@@ -5,7 +5,7 @@ const refinedImg = "https://ik.imagekit.io/hoc01/assets/client/qatamaran/refined
 const MobRefineSec = () => {
   return (
     <section
-      className="w-full h-[50vh] overflow-hidden"
+      className="w-full h-[50vh] sm:h-[90vh]  overflow-hidden"
     >
       <div className="relative w-full h-full">
         <img

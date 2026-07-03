@@ -74,7 +74,7 @@ const MobSection2 = () => {
           data-rotate="-12"
           src={springImg}
           alt=""
-          className="absolute top-[20%] left-[5%] w-[110px] sm:w-[160px] -rotate-12 z-10"
+          className="absolute top-[10%] left-[5%] w-[110px] sm:w-[160px] -rotate-12 z-10"
         />
 
         {/* MIDDLE RIGHT CAN */}
