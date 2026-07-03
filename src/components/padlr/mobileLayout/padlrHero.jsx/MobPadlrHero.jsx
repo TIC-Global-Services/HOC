@@ -37,34 +37,34 @@ const MobPadlrHero = () => {
         <img
           src={img2}
           alt=""
-          className="float-1 absolute top-[15%] left-[8%] w-[100px] z-10"
+          className="float-1 absolute top-[15%] left-[8%] w-[100px] sm:w-35 z-10"
         />
 
         <img
           src={img1}
           alt=""
-          className="float-2 absolute top-[20%] right-[10%] w-[60px] z-10"
+          className="float-2 absolute top-[20%] right-[10%] w-[60px] sm:w-35 z-10"
         />
 
         <img
           src={img4}
           alt=""
-          className="float-3 absolute bottom-[14%] left-[8%] w-[90px] z-10"
+          className="float-3 absolute bottom-[14%] left-[8%] w-[90px] sm:w-35 z-10"
         />
 
         <img
           src={img3}
           alt=""
-          className="float-4 absolute bottom-[10%] right-[10%] w-[120px] z-10"
+          className="float-4 absolute bottom-[10%] right-[10%] w-[120px] sm:w-40 z-10"
         />
 
         {/* CENTER TITLE */}
         <div className="flex flex-col items-center justify-center gap-4 px-4 text-center relative z-10">
-          <h2 className="alinsa text-[#060EBB] text-[50px] leading-none">
+          <h2 className="alinsa text-[#060EBB] text-[50px] sm:text-8xl leading-none">
             PADLR
           </h2>
 
-          <button className="jost rounded-full bg-[#060EBB] text-white px-6 py-3 text-[10px]">
+          <button className="jost rounded-full bg-[#060EBB] text-white px-6 py-3 text-[10px] sm:text-sm">
             SPORTS & LIFESTYLE
           </button>
         </div>

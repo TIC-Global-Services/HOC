@@ -123,11 +123,11 @@ const MobRaksHero = () => {
         {/* CENTER CONTENT */}
         <div className="relative z-10 flex flex-col items-center justify-center gap-4 px-4 text-center">
 
-          <h1 className="alinsa text-[#060EBB] text-[50px] leading-none uppercase">
+          <h1 className="alinsa text-[#060EBB] text-[50px] sm:text-7xl leading-none uppercase">
             RAKS <br /> INSTITUTIONS
           </h1>
 
-          <button className="jost rounded-full bg-[#060EBB] text-white px-6 py-3 text-[10px]">
+          <button className="jost rounded-full bg-[#060EBB] text-white px-6 py-3 text-[10px] sm:text-sm">
             INTERNATIONAL SCHOOL
           </button>
         </div>
@@ -136,7 +136,7 @@ const MobRaksHero = () => {
       {/* ─── BOTTOM ─── */}
       <div className="w-full text-start flex-1 px-5 py-8 flex items-center">
 
-        <p className="jost font-medium text-[16px] leading-[24px] tracking-[-0.02em] w-[45ch] text-black">
+        <p className="jost font-medium text-[16px] leading-[24px] tracking-[-0.02em] w-[45ch] sm:w-full text-black">
           RAKS Institutions is a future-forward school rooted in the{" "}
 
           <span className="salo text-[#000085] text-[20px] leading-[24px] capitalize">

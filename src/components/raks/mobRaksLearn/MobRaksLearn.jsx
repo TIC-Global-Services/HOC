@@ -20,7 +20,7 @@ const MobRaksLearn = () => {
     <>
       <MobRaksSec1 />
       <MobRaksSec2 />
-      <MobRaksSec3 />
+      <MobRaksSec3/>
       <MobRaksSec4 />
       <MobRaksSec5 />
       <MobRaksSec6 />

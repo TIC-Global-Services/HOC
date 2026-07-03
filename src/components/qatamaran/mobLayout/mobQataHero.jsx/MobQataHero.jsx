@@ -41,30 +41,30 @@ const MobQataHero = () => {
         <img
           src={img1}
           alt=""
-          className="float-1 absolute top-[10%] left-[10%] w-[90px] -rotate-12 z-10"
+          className="float-1 absolute top-[10%] left-[10%] w-[90px] sm:w-40 -rotate-12 z-10"
         />
 
         <img
           src={img2}
           alt=""
-          className="float-2 absolute top-[15%] right-[15%] w-[80px] rotate-12 z-10"
+          className="float-2 absolute top-[15%] right-[15%] w-[80px] sm:w-40 rotate-12 z-10"
         />
 
         <img
           src={img3}
           alt=""
-          className="float-3 absolute bottom-[10%] left-[10%] w-[100px] -rotate-12 z-10"
+          className="float-3 absolute bottom-[10%] left-[10%] w-[100px] sm:w-40 -rotate-12 z-10"
         />
 
         <img
           src={img4}
           alt=""
-          className="float-4 absolute bottom-[10%] right-[10%] w-[100px] rotate-12 z-10"
+          className="float-4 absolute bottom-[10%] right-[10%] w-[100px] sm:w-40 rotate-12 z-10"
         />
 
         {/* CENTER TITLE */}
         <div className="flex flex-col items-center justify-center gap-4 px-4 text-center relative z-10">
-          <h1 className="alinsa text-[#060EBB] text-[50px] leading-none uppercase">
+          <h1 className="alinsa text-[#060EBB] text-[50px] sm:text-8xl leading-none uppercase">
             Qatamaran
           </h1>
 
@@ -76,7 +76,7 @@ const MobQataHero = () => {
 
       {/* ─── BOTTOM (TEXT) ─── */}
       <div className="w-full text-start flex-1 px-4 py-8 flex items-center">
-        <p className="jost font-medium text-[14px] leading-[24px] tracking-[-0.03em] w-[42ch] pl-[2%] text-black">
+        <p className="jost font-medium text-[14px] leading-[24px] tracking-[-0.03em] w-[42ch] sm:w-full pl-[2%] text-black">
           Qatamaran is a prêt-à-porter menswear label rooted in Chennai's rich
           tailoring heritage, designed for the modern gentleman who{" "}
           <span className="salo text-[#1E382D] text-[20px] leading-[24px] capitalize">

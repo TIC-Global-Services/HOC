@@ -2,7 +2,7 @@ import React, { useEffect, useRef } from "react";
 import gsap from "gsap";
 import GridOverlay from "../../GridOverlay";
 
-const topRightImg = "https://ik.imagekit.io/hoc01/assets/client/raks/panel5.png";
+const topRightImg = "https://ik.imagekit.io/hoc01/assets/client/raks/panel6Left.pngmpowe";
 const centerImg = "https://ik.imagekit.io/hoc01/assets/client/raks/panel11.png";
 const pinImg = "https://ik.imagekit.io/hoc01/assets/client/raks/heroImg1.png";
 const pinImg2 = "https://ik.imagekit.io/hoc01/assets/client/raks/heroImg2.png";
@@ -113,7 +113,7 @@ const MobRaksSec7 = () => {
         {/* IMAGE */}
         <img
           src={centerImg}
-          className="w-[80%] rotate-[-10deg]"
+          className="w-[80%] sm:w-[50%] rotate-[-10deg]"
         />
       </div>
 
@@ -145,7 +145,7 @@ const MobRaksSec7 = () => {
         {/* IMAGE */}
         <img
           src={topRightImg}
-          className="w-[150px] rotate-[-10deg]"
+          className="w-[150px] sm:w-[170px] rotate-[-10deg]"
         />
       </div>
     </section>

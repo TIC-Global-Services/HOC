@@ -59,32 +59,32 @@ const MobSyedHero = () => {
         {/* FLOAT IMAGES */}
         <img
           src={img1}
-          className="float-1 absolute top-[10%] left-[10%] w-[100px] z-10"
+          className="float-1 absolute top-[10%] left-[10%] w-[100px] sm:w-32 z-10"
         />
 
         <img
           src={img2}
-          className="float-2 absolute top-[20%] right-[10%] w-[100px] z-10"
+          className="float-2 absolute top-[20%] right-[10%] w-[100px] sm:w-32 z-10"
         />
 
         <img
           src={img3}
-          className="float-3 absolute bottom-[15%] left-[8%] w-[100px] z-10"
+          className="float-3 absolute bottom-[15%] left-[8%] w-[100px] sm:w-32 z-10"
         />
 
         <img
           src={img4}
-          className="float-4 absolute bottom-[10%] right-[6%] w-[100px] z-10"
+          className="float-4 absolute bottom-[10%] right-[6%] w-[100px] sm:w-32 z-10"
         />
 
         {/* CENTER CONTENT */}
         <div className="relative z-10 flex flex-col items-center justify-center gap-4 px-4 text-center">
 
-          <h1 className="alinsa text-[#060EBB] text-[50px] leading-none uppercase">
+          <h1 className="alinsa text-[#060EBB] text-[50px] sm:text-7xl leading-none uppercase">
             SYED <br />BAWKHER
           </h1>
 
-          <button className="jost rounded-full bg-[#060EBB] text-white px-6 py-3 text-[10px]">
+          <button className="jost rounded-full bg-[#060EBB] text-white px-6 py-3 text-[10px] sm:text-sm">
             FASHION & LIFESTYLE
           </button>
         </div>

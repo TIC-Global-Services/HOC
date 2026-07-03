@@ -40,11 +40,11 @@ const MobGopalanHero = () => {
         <img src={img4} className="float-4 absolute bottom-[10%] right-[10%] w-[120px] rotate-12" />
 
         <div className="flex flex-col items-center justify-center gap-4 px-4 text-center">
-          <h1 className="alinsa text-[#060EBB] text-[48px] leading-none uppercase">
+          <h1 className="alinsa text-[#060EBB] text-[48px] sm:text-7xl leading-none uppercase">
             Gopalan Groups
           </h1>
 
-          <button className="jost rounded-full bg-[#060EBB] text-white px-6 py-3 text-[12px]">
+          <button className="jost rounded-full bg-[#060EBB] text-white px-6 py-3 text-[12px] sm:text-sm">
             MULTI-VERTICAL
           </button>
         </div>
@@ -52,7 +52,7 @@ const MobGopalanHero = () => {
 
       {/* ─── BOTTOM ─── */}
       <div className="w-full text-start flex-1 px-5 py-8 flex items-center">
-        <p className="jost font-medium text-[13px] leading-[24px] w-[42ch] pl-[2%] tracking-[-0.03em] text-black">
+        <p className="jost font-medium text-[13px] leading-[24px] w-[42ch] sm:w-full pl-[2%] tracking-[-0.03em] text-black">
           Reimagining Gopalan Group's identity meant balancing four decades of
           trust with a future-ready vision. The refined{" "}
           

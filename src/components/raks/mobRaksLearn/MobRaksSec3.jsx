@@ -28,12 +28,12 @@ const MobRaksSec3 = () => {
       </div>
 
       {/* ─── TOP IMAGE ─── */}
-      <div className="w-full relative z-10">
+      <div className="w-full h-[60%] relative z-10">
         <img src={topImg} alt="" className="w-full h-full object-cover" />
       </div>
 
       {/* ─── BOTTOM CONTENT ─── */}
-      <div className="w-full h-full flex items-center justify-around relative z-10">
+      <div className="w-full h-[40%] flex items-center justify-around relative z-10">
         {/* LEFT ICON */}
         <div ref={iconRef} className="w-[120px]">
           <img src={leftIcon} alt="icon" className="w-full object-contain" />
