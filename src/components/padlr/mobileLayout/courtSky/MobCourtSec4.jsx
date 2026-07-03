@@ -48,7 +48,7 @@ const MobCourtSec4 = () => {
       </div>
 
       {/* ─── CENTER TEXT ─── */}
-      <div className="mt-8 absolute left-[10%] top-[35%] max-w-[295px] text-start">
+      <div className="mt-8 absolute left-[10%] top-[35%] max-w-[295px] sm:max-w-[350px] text-start">
 
         {/* HEADING */}
         <h1 className="salo text-[#8FC4E9] text-[80px] tracking-wider leading-[110%] mb-4">
@@ -56,11 +56,11 @@ const MobCourtSec4 = () => {
         </h1>
 
         {/* PARAGRAPH */}
-        <p className="jost text-black text-[14px] leading-[18px] tracking-normal">
+        <p className="jost text-black text-[14px] sm:text-xl leading-[18px] tracking-normal">
           The typography system balances bold expression with refined clarity—
           where the primary typeface delivers a strong, modern identity, and the
           secondary typeface ensures{" "}
-          <span className="salo text-[#8FC4E9] text-[16px] leading-[14px]">
+          <span className="salo text-[#8FC4E9] text-[16px] sm:text-xl leading-[14px]">
             versatility and seamless
           </span>{" "}
           readability across all brand touchpoints.

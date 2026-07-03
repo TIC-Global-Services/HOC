@@ -72,7 +72,7 @@ const MobPadlrHero = () => {
 
       {/* ─── BOTTOM ─── */}
       <div className="w-full flex-1 px-5 py-8 flex items-center">
-        <p className="jost text-start font-medium text-[13px] leading-[24px] tracking-[-0.03em]">
+        <p className="jost text-start font-medium text-[13px] sm:text-base leading-[24px] tracking-[-0.03em]">
           Established in 2025, Padlr is set to be Chennai's premier padel and{" "}
           <span className="salo text-[#060EBB] font-normal text-[20px] leading-[24px] ">
             Pickleball

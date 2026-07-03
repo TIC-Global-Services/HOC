@@ -39,13 +39,13 @@ const MobCourtSec2 = () => {
 
         {/* LEFT TEXT */}
         <div className="w-[55%]">
-          <p className="salo text-start text-white leading-none tracking-tight text-[30px]">
+          <p className="salo text-start text-white leading-none tracking-tight text-[30px]  sm:text-4xl">
             BOLD, <br />
             RICH, AND <br />
             UNAPOLOGETIC.
           </p>
 
-          <p className="jost text-start leading-none tracking-tight text-white/80 mt-3 text-[14px]">
+          <p className="jost text-start leading-none tracking-tight text-white/80 mt-3 sm:mt-1 text-[14px] sm:text-xl">
             Hex Precision
           </p>
 
@@ -68,7 +68,7 @@ const MobCourtSec2 = () => {
       {/* ─── BOTTOM TEXT ─── */}
       <div className="relative px-5 mt-[15%] pb-10 z-10">
 
-        <p className="jost text-start text-white/90 max-w-[250px] text-[14px] leading-[20px] tracking-tight">
+        <p className="jost text-start text-white/90 max-w-[250px] sm:max-w-lg text-[14px] sm:text-xl leading-[20px] tracking-tight">
           Padlr is a modern destination built around the fast-growing culture
           of padel—where sport, community, and lifestyle come together.
           Designed for both{" "}
@@ -83,7 +83,7 @@ const MobCourtSec2 = () => {
         <img
           src={batlogo}
           alt="bat"
-          className="absolute right-4 bottom-0 w-[90px]"
+          className="absolute right-4 bottom-0 w-[90px] sm:w-[100px]"
         />
 
       </div>

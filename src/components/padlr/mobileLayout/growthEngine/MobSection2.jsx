@@ -74,7 +74,7 @@ const MobSection2 = () => {
           data-rotate="-12"
           src={springImg}
           alt=""
-          className="absolute top-[20%] left-[5%] w-[110px] -rotate-12 z-10"
+          className="absolute top-[20%] left-[5%] w-[110px] sm:w-[160px] -rotate-12 z-10"
         />
 
         {/* MIDDLE RIGHT CAN */}
@@ -84,7 +84,7 @@ const MobSection2 = () => {
           data-rotate="-12"
           src={canImg}
           alt=""
-          className="absolute top-[65%] right-[5%] w-[100px] -rotate-12 z-10"
+          className="absolute top-[65%] right-[5%] w-[100px] sm:w-[160px] -rotate-12 z-10"
         />
 
         {/* BOTTOM BAT */}
@@ -93,7 +93,7 @@ const MobSection2 = () => {
           data-speed="0.7"
           src={batImg}
           alt=""
-          className="absolute bottom-[8%] left-[5%] w-[110px] z-10"
+          className="absolute bottom-[8%] left-[5%] w-[110px] sm:w-[160px] z-10"
         />
 
         {/* ─── CENTER CONTENT ─── */}
@@ -101,12 +101,12 @@ const MobSection2 = () => {
           <div className="w-full text-left space-y-6">
 
             {/* HEADING */}
-            <h2 className="salo text-[#0606BC] uppercase leading-[0.95] text-[clamp(32px,14vw,50px)]">
+            <h2 className="salo text-[#0606BC] uppercase leading-[0.95] text-[clamp(36px,14vw,64px)]">
               Performance <br /> Driven
             </h2>
 
             {/* TEXT */}
-            <p className="jost font-[400] text-black text-[clamp(13px,4.5vw,16px)] max-w-[300px] leading-[1] tracking-[-0.02em]">
+            <p className="jost font-[400] text-black text-[clamp(13px,4.5vw,20px)] max-w-[300px] leading-[1] tracking-[-0.02em]">
               Move Better Every Day. Designed for Daily Motion, engineered for
               Performance built for Strength & Balance.
             </p>

@@ -220,7 +220,7 @@ const ViewNext = ({
                   salo
                   mt-4 lg:mt-6
                   text-center lg:text-left
-                  text-[12px] lg:text-[24px]
+                  text-[12px] sm:text-xl lg:text-[24px]
                   font-normal
                   tracking-[1px]
                 "

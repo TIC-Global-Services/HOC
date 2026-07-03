@@ -13,11 +13,7 @@ const ClientHero = () => {
         {/* Button image */}
         <motion.img
           src={heroCallout}
-          className="absolute w-[60px] z-[1]"
-          style={{
-            left: "0%",
-            bottom: "30px",
-          }}
+          className="absolute w-[60px] sm:w-[80px] z-[1] -left-10 sm:bottom-20 bottom-10"
           alt="Button"
           initial={{ x: -100, opacity: 0 }}
           animate={{ x: 0, opacity: 1 }}
@@ -30,7 +26,7 @@ const ClientHero = () => {
 
         {/* CLIENTS TEXT */}
         <motion.h1
-          className="alinsa text-[#060ebb] text-[50px] leading-none z-[10]"
+          className="alinsa text-[#060ebb] text-[50px] sm:text-8xl leading-none z-[10]"
           initial={{ scale: 0.8, opacity: 0 }}
           animate={{ scale: 1, opacity: 1 }}
           transition={{
@@ -45,7 +41,7 @@ const ClientHero = () => {
         <motion.img
           src={starImg}
           alt="star"
-          className="absolute w-[35px] right-[-6%] top-[25px] z-[20]"
+          className="absolute w-[35px] sm:w-[45px] right-[-6%] top-10 sm:bottom-12 z-[20]"
           initial={{ scale: 0.5, opacity: 0 }}
           animate={{ scale: 1, opacity: 1 }}
           transition={{

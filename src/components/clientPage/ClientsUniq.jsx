@@ -122,7 +122,7 @@ const ClientsUniq = () => {
               </div>
 
               {/* TITLE */}
-              <p className="mt-2 lg:mt-6 text-center lg:text-left text-[clamp(14px,1.7vw,24px)] font-normal salo tracking-[2%] lg:tracking-normal">
+              <p className="mt-2 lg:mt-6 text-center lg:text-left text-[clamp(20px,1.7vw,24px)] font-normal salo tracking-[2%] lg:tracking-normal">
                 {item.title}
               </p>
 
