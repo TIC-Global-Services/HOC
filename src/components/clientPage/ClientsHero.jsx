@@ -36,7 +36,7 @@ const ClientsHero = () => {
         <motion.img
           src={starImg}
           alt="star_image"
-          className="absolute w-[40px] lg:w-[130px] z-[20] right-0 top-20"
+          className="absolute w-[40px] lg:w-[130px] z-[20] right-0 top-40"
           initial={{ opacity: 0, scale: 0.5 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.5, delay: 0.3, ease: "easeOut" }}

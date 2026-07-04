@@ -1,15 +1,23 @@
 import React from "react";
 
 const qataRightImg = "https://ik.imagekit.io/hoc01/assets/client/qatamaran/qataRight.png";
+const qataRightImgnew = "https://ik.imagekit.io/hoc01/assets/client/qatamaran/qataRight_4.3_.png";
 
 const MobQataSec6 = () => {
   return (
     <section className="w-full overflow-hidden">
 
       {/* ─── BOTTOM IMAGE ─── */}
-      <div className="w-full h-[70vh] ">
+      <div className="w-full h-[70vh] sm:hidden ">
         <img
           src={qataRightImg}
+          alt=""
+          className="w-full h-full object-cover-[center_40%]"
+        />
+      </div>
+      <div className="w-full h-[70vh] sm:block hidden">
+        <img
+          src={qataRightImgnew}
           alt=""
           className="w-full h-full object-cover-[center_40%]"
         />

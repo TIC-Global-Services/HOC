@@ -42,7 +42,7 @@ const MobQataSec1 = () => {
       </div>
 
       {/* ABOUT SECTION */}
-      <div className="text-start px-4 py-[35%] relative">
+      <div className="text-start px-4 py-[35%] sm:py-[15%] relative">
 
         {/* LOGO RIGHT  */}
         <img

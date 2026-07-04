@@ -16,7 +16,7 @@ const MobRefineSec5 = () => {
 
   return (
     <section
-      className="w-full h-screen flex flex-col relative">
+      className="w-full min-h-screen sm:h-auto flex flex-col relative">
 
         {/* GRID */}
       <div className="absolute inset-0 z-0 pointer-events-none">
@@ -38,21 +38,21 @@ const MobRefineSec5 = () => {
       </div>
 
       {/* ─── TEXT CONTENT  ─── */}
-      <div className="w-full flex justify-center px-5 py-10">
+      <div className="w-full flex justify-center px-5 py-10 sm:py-20">
         
-        <div className="max-w-[340px] text-left space-y-4">
+        <div className="max-w-[340px] sm:max-w-[600px] text-left space-y-4">
 
           {/* HEADING */}
-          <h2 className="salo text-[#1E382D] text-[50px] leading-[110%] uppercase">
+          <h2 className="salo text-[#1E382D] text-[50px] sm:text-[60px] md:text-[70px] leading-[110%] uppercase">
             TIMELESS TAILORING
           </h2>
 
           {/* PARAGRAPH */}
-          <p className="jost text-black text-[16px] leading-[22px] w-[35ch]">
+          <p className="jost text-black text-[16px] sm:text-[18px] md:text-[20px] leading-[22px] sm:leading-[140%] w-[35ch] sm:w-full">
             Qatamaran is a contemporary prêt-à-porter menswear label inspired by Chennai’s deep-rooted tailoring legacy. 
             Blending skilled craftsmanship with refined precision, the brand embodies a sense of enduring elegance. 
             Created for{" "}
-            <span className="salo text-[20px] text-[#1E382D]">
+            <span className="salo text-[20px] sm:text-[24px] md:text-[26px] text-[#1E382D]">
               The Modern Gentleman,
             </span>{" "}
             it seamlessly fuses tradition with a subtle touch of coastal influence, offering styles that are both sophisticated and effortlessly distinctive.

@@ -41,13 +41,13 @@ const MobQataHero = () => {
         <img
           src={img1}
           alt=""
-          className="float-1 absolute top-[10%] left-[10%] w-[90px] sm:w-40 -rotate-12 z-10"
+          className="float-1 absolute top-[5%] left-[10%] w-[90px] sm:w-40 -rotate-12 z-10"
         />
 
         <img
           src={img2}
           alt=""
-          className="float-2 absolute top-[15%] right-[15%] w-[80px] sm:w-40 rotate-12 z-10"
+          className="float-2 absolute top-[3%] right-[15%] w-[80px] sm:w-[140px] rotate-12 z-10"
         />
 
         <img

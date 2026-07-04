@@ -5,7 +5,7 @@ const MobCourtSec6 = () => {
     <section className="relative w-full h-[400px] flex items-center justify-center overflow-hidden">
 
       {/* RIGHT BLUE PANEL */}
-      <div className="absolute right-0 top-0 h-full w-[70%] bg-[#8FC4E9]" />
+      <div className="absolute right-0 top-0 h-full w-[calc(50%+75px)] bg-[#8FC4E9]" />
 
       {/* TEXT */}
       <div className="relative z-10 text-start leading-none">

@@ -34,10 +34,10 @@ const MobGopalanHero = () => {
           />
 
         {/* FLOAT IMAGES (STATIC) */}
-        <img src={img1} className="float-1 absolute top-[15%] left-[10%] w-[120px] -rotate-12" />
-        <img src={img2} className="float-2 absolute top-[15%] right-[15%] w-[120px] rotate-12" />
-        <img src={img3} className="float-3 absolute bottom-[10%] left-[10%] w-[120px] -rotate-12" />
-        <img src={img4} className="float-4 absolute bottom-[10%] right-[10%] w-[120px] rotate-12" />
+        <img src={img1} className="float-1 absolute top-[15%] left-[10%] w-[120px] sm:w-40 -rotate-12" />
+        <img src={img2} className="float-2 absolute top-[15%] right-[15%] w-[120px] sm:w-40 rotate-12" />
+        <img src={img3} className="float-3 absolute bottom-[10%] left-[10%] w-[120px] sm:w-40 -rotate-12" />
+        <img src={img4} className="float-4 absolute bottom-[10%] right-[10%] w-[120px] sm:w-40 rotate-12" />
 
         <div className="flex flex-col items-center justify-center gap-4 px-4 text-center">
           <h1 className="alinsa text-[#060EBB] text-[48px] sm:text-7xl leading-none uppercase">
@@ -52,7 +52,7 @@ const MobGopalanHero = () => {
 
       {/* ─── BOTTOM ─── */}
       <div className="w-full text-start flex-1 px-5 py-8 flex items-center">
-        <p className="jost font-medium text-[13px] leading-[24px] w-[42ch] sm:w-full pl-[2%] tracking-[-0.03em] text-black">
+        <p className="jost font-medium text-base leading-[24px] w-[42ch] sm:w-full pl-[2%] tracking-[-0.03em] text-black">
           Reimagining Gopalan Group's identity meant balancing four decades of
           trust with a future-ready vision. The refined{" "}
           

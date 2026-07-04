@@ -22,7 +22,8 @@ const GopalanGroupVideo = () => {
         preload="auto"
         className="
           w-full 
-          h-[30vh]        
+          h-[30vh] 
+          sm:h-[50dvh]       
           lg:absolute 
           lg:top-0 
           lg:left-0 

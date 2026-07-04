@@ -42,7 +42,7 @@ const MobCourtSec4 = () => {
         <img
           src={paddle}
           alt=""
-          className="w-[100px] absolute top-[5%] right-[5%]"
+          className="w-[100px] sm:w-40 absolute top-[5%] right-[5%]"
         />
 
       </div>
@@ -82,7 +82,7 @@ const MobCourtSec4 = () => {
         <img
           src={topImg}
           alt=""
-          className="w-[200px] h-[234px] absolute bottom-[2%] right-0"
+          className="w-[200px] h-[234px] sm:h-[300px] absolute bottom-[2%] right-0"
         />
 
       </div>

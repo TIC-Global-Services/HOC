@@ -75,7 +75,7 @@ const MobSection2 = () => {
           ref={bottomRightRef}
           src={topRightImg}
           alt=""
-          className="absolute bottom-10 right-6 w-[100px] rotate-12"
+          className="absolute bottom-10 right-6 w-[100px] sm:w-40 rotate-12"
         />
 
       </div>

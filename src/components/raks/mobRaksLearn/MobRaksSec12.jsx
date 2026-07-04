@@ -8,6 +8,7 @@ const MobRaksSec12 = () => {
       className="
         w-full
         h-[40dvh]
+        sm:h-[30vh]
         flex
         items-center
         justify-start
@@ -36,7 +37,7 @@ const MobRaksSec12 = () => {
         </h2>
 
         {/* PARAGRAPH */}
-        <p className="jost text-[16px] text-black leading-[20px] tracking-tight max-w-[300px]">
+        <p className="jost text-[16px] text-black leading-[20px] tracking-tight max-w-[300px] sm:max-w-full">
           Haus of Chaos app branding exercise—an exploration of childhood
           and the Reggio Emilia philosophy. Through playful geometries,
           modular systems, and{" "}

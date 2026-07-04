@@ -94,9 +94,9 @@ const MobSection3 = () => {
       </div>
 
       {/* ─── BOTTOM  ─── */}
-      <div className="absolute bottom-0 left-0 w-full h-[50vh] bg-white">
+      <div className="absolute bottom-0 left-0 w-full h-[55vh] bg-white">
         {/* CARD */}
-        <div className="absolute top-[10%] left-1/2 -translate-x-1/2 w-[60%]">
+        <div className="absolute top-[10%] sm:top-[15%] left-1/2 -translate-x-1/2 w-[60%] sm:w-[45%] md:w-[35%] max-w-[350px]">
           <img
             src={attachIcon}
             alt="pin"
@@ -106,7 +106,7 @@ const MobSection3 = () => {
           <img
             src={palatteImg}
             alt="palette"
-            className="max-w-full rotate-[-10deg]"
+            className="w-full h-auto object-contain rotate-[-10deg]"
           />
         </div>
 

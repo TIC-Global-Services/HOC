@@ -34,7 +34,7 @@ const MobSection10 = () => {
 
         {/* ─── TOP IMAGE ─── */}
         <div
-          className="absolute top-[12%] left-1/2 -translate-x-1/2"
+          className="absolute top-[8%] left-1/2 -translate-x-1/2"
           style={{
             width: "300px",
             height: "300px",
@@ -67,7 +67,7 @@ const MobSection10 = () => {
 
         {/* ─── BOTTOM IMAGE ─── */}
         <div
-          className="absolute bottom-[8%] left-1/2 -translate-x-1/2"
+          className="absolute bottom-[3%] left-1/2 -translate-x-1/2"
           style={{
             width: "300px",
             height: "300px",
