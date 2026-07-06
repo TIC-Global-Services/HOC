@@ -13,11 +13,11 @@ const MobQataSec3 = () => {
     <section className="w-full h-full flex flex-col overflow-hidden">
 
       {/* TOP IMAGE */}
-      <div className="w-full h-[60vh] relative">
+      <div className="w-full h-[60vh] sm:h-[120dvh] relative">
         <img
           src={qataLeftImg}
           alt=""
-          className="w-full h-full object-cover"
+          className="w-full h-full object-cover sm:object-fill"
         />
       </div>
 

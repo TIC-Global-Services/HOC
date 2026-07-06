@@ -8,6 +8,7 @@ yarn-error.log*
 dist/          # Vite's production build
 dist-ssr/      # SSR build (if applicable)
 .temp/         # Vite temp files (if any)
+dist
 
 # Node modules (do NOT commit these)
 node_modules/

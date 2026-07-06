@@ -83,7 +83,7 @@ const HausOfChaos = () => {
               className="lg:w-40 lg:block hidden mb-4"
               alt="Haus Of Chaos"
             />
-            <p className="text-[clamp(16px,1.2vw,18px)] lg:block hidden text-left mb-6">
+            <p className="text-[clamp(16px,1.2vw,18px)] text-left lg:mb-6 py-10 ">
               Step into the chaos of creativity. <br />
               Where bold ideas and designs <br /> collide. Stay ahead with
               innovative <br />
@@ -93,7 +93,7 @@ const HausOfChaos = () => {
           </div>
 
           {/* Newsletter Form */}
-          <div className="w-full lg:max-w-xl mt-10 lg:mt-20 lg:ml-auto">
+          <div className="w-full lg:max-w-xl mt-5 lg:mt-20 lg:ml-auto">
             <form className="space-y-4 flex flex-col" onSubmit={handleSubmit}>
               <div>
                 <input
