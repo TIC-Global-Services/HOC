@@ -84,10 +84,10 @@ const HausOfChaos = () => {
               alt="Haus Of Chaos"
             />
             <p className="text-[clamp(16px,1.2vw,18px)] lg:block hidden text-left mb-6">
-              Step into the chaos of creativity <br />
-              Where bold ideas and designs <br /> collide Stay ahead with
+              Step into the chaos of creativity. <br />
+              Where bold ideas and designs <br /> collide. Stay ahead with
               innovative <br />
-              thoughts Experience transformative <br /> journeys Embrace the
+              thoughts. Experience transformative <br /> journeys. Embrace the
               unexpected <br /> and disrupt the norm.
             </p>
           </div>
