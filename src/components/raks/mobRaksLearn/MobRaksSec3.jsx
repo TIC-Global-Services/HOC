@@ -16,7 +16,7 @@ const MobRaksSec3 = () => {
   });
 
   return (
-    <section className="w-full h-screen flex flex-col relative overflow-hidden bg-white">
+    <section className="w-full h-screen sm:min-h-screen sm:h-auto flex flex-col relative overflow-hidden bg-white">
       {/* GRID */}
       <div className="absolute inset-0 z-0 pointer-events-none">
         <GridOverlay
@@ -33,7 +33,7 @@ const MobRaksSec3 = () => {
       </div>
 
       {/* ─── BOTTOM CONTENT ─── */}
-      <div className="w-full h-[40%] flex items-center justify-around relative z-10">
+      <div className="w-full h-[40%] sm:h-auto sm:py-6 flex items-center justify-around relative z-10">
         {/* LEFT ICON */}
         <div ref={iconRef} className="w-[120px] sm:w-40">
           <img src={leftIcon} alt="icon" className="w-full object-contain" />

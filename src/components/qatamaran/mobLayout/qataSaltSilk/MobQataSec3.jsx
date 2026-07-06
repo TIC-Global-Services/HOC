@@ -2,6 +2,7 @@ import React, { useRef } from "react";
 import useScrollFloat from "../../../../hooks/useScrollFloat";
 
 const qataLeftImg = "https://ik.imagekit.io/hoc01/assets/client/qatamaran/qataLeftImg.png";
+const qataLeftImgtab = "https://ik.imagekit.io/hoc01/assets/client/qatamaran/qataLeftImg_tab.png";
 const treeIcon = "https://ik.imagekit.io/hoc01/assets/client/qatamaran/heroFloat2.png";
 
 const MobQataSec3 = () => {
@@ -13,11 +14,18 @@ const MobQataSec3 = () => {
     <section className="w-full h-full flex flex-col overflow-hidden">
 
       {/* TOP IMAGE */}
-      <div className="w-full h-[60vh] sm:h-[120dvh] relative">
+      <div className="w-full h-[60vh] sm:hidden relative">
         <img
           src={qataLeftImg}
           alt=""
           className="w-full h-full object-cover sm:object-fill"
+        />
+      </div>
+      <div className="w-full h-full sm:block hidden relative">
+        <img
+          src={qataLeftImgtab}
+          alt=""
+          className="w-full h-full object-cover"
         />
       </div>
 
