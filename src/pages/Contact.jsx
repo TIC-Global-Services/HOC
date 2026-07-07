@@ -45,37 +45,37 @@ const emailImg = 'https://ik.imagekit.io/hoc01/assets/hover/emailImg.png?updated
 const images = [
   {
     src: flowerImg,
-    className: "top-[35%] left-[2%] w-[18vh] max-w-[280px]",
+    className: "top-[35%] left-[2%] w-[18vw] max-w-[20%]",
     link: "/Contact",
     rotate: 0,
   },
   {
     src: linkedInImg,
-    className: "bottom-[5%] left-[0%] w-[32vw] max-w-[500px]",
+    className: "bottom-[5%] left-[0%] w-[32vw] max-w-[35%]",
     link: "https://www.linkedin.com/company/hausofchaos/",
     rotate: -20,
   },
   {
     src: instagramImg,
-    className: "top-[20%] left-[28%] w-[28vw] max-w-[500px]",
+    className: "top-[20%] left-[28%] w-[28vw] max-w-[35%]",
     link: "https://www.instagram.com/hausofchaos.co/",
     rotate: -20,
   },
   {
     src: svg5,
-    className: "bottom-[8%] left-[35%] w-[14vw] max-w-[380px]",
+    className: "bottom-[8%] left-[35%] w-[14vw] max-w-[30%]",
     link: "/Contact",
     rotate: 8,
   },
   {
     src: emailImg,
-    className: "bottom-[10%] right-[3%] w-[28vh] max-w-[500px]",
+    className: "bottom-[10%] right-[3%] w-[28vh] max-w-[35%]",
     link: "mailto:explore@hausofchaos.co",
     rotate: 20,
   },
   {
     src: svg6,
-    className: "top-[15%] right-[10%] w-[14vh] max-w-[280px]",
+    className: "top-[15%] right-[10%] w-[14vh] max-w-[25%]",
     link: "/Contact",
     rotate: 10,
   },
