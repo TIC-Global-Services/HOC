@@ -51,25 +51,25 @@ const images = [
   },
   {
     src: linkedInImg,
-    className: "bottom-[5%] left-[0%] w-[32vh] max-w-[400px]",
+    className: "bottom-[5%] left-[0%] w-[32vw] max-w-[500px]",
     link: "https://www.linkedin.com/company/hausofchaos/",
     rotate: -20,
   },
   {
     src: instagramImg,
-    className: "top-[20%] left-[28%] w-[28vh] max-w-[400px]",
+    className: "top-[20%] left-[28%] w-[28vw] max-w-[500px]",
     link: "https://www.instagram.com/hausofchaos.co/",
     rotate: -20,
   },
   {
     src: svg5,
-    className: "bottom-[8%] left-[35%] w-[14vh] max-w-[280px]",
+    className: "bottom-[8%] left-[35%] w-[14vw] max-w-[380px]",
     link: "/Contact",
     rotate: 8,
   },
   {
     src: emailImg,
-    className: "bottom-[10%] right-[3%] w-[28vh] max-w-[400px]",
+    className: "bottom-[10%] right-[3%] w-[28vh] max-w-[500px]",
     link: "mailto:explore@hausofchaos.co",
     rotate: 20,
   },
@@ -107,7 +107,7 @@ const images2 = [
   },
   {
     src: emailImg,
-    className: "w-[50%] top-[20%] left-[5%]",
+    className: "top-[20%] left-[5%]",
     link: "mailto:explore@hausofchaos.co",
     rotate: -20,
   },
