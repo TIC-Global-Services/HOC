@@ -55,7 +55,7 @@ const RaksHero = () => {
 
           <div className="w-full h-full flex flex-col items-center justify-center gap-4 lg:gap-6 px-4">
             <h1
-              className="font-[1000] alinsa text-[#060EBB] leading-none tracking-tight text-center uppercase"
+              className="alinsa text-[#060EBB] leading-none tracking-tight text-center uppercase"
               style={{ fontSize: "clamp(40px, min(15vh, 6.5vw), 90px)" }}
             >
               RAKS <br />INSTITUTIONS

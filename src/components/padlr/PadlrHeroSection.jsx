@@ -47,7 +47,7 @@ const PadlrHero = () => {
 
         <div className="w-full h-full flex flex-col items-center justify-center gap-4 sm:gap-6 px-4 text-center">
           <h2
-            className="font-[1000] alinsa text-[#060EBB] leading-none tracking-tight"
+            className=" alinsa text-[#060EBB] leading-none tracking-tight"
             style={{ fontSize: "clamp(60px, min(20vh, 10vw), 160px)" }}
           >
             PADLR
