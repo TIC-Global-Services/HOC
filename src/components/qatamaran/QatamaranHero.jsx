@@ -31,11 +31,11 @@ const QatamaranHero = () => {
           <GridOverlay color="0,0,0" opacity={0.20} size={100} position="99px 0px" offsetY={70} />
           <img
             src={img1}
-            className="float-1 absolute top-[15%] left-[10%] w-[50px] lg:w-[80px] xl:w-[120px]"
+            className="float-1 absolute top-[15%] left-[10%] w-[50px] lg:w-[80px] xl:w-[100px]"
           />
           <img
             src={img2}
-            className="float-2 absolute top-[15%] right-[15%] w-[60px] lg:w-[100px] xl:w-[120px]"
+            className="float-2 absolute top-[15%] right-[15%] w-[60px] lg:w-[100px] xl:w-[100px]"
           />
           <img
             src={img3}

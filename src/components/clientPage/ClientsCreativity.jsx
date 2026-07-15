@@ -3,22 +3,22 @@ import creativityVideo from "../../assets/client/page/vinyl_new_2.mp4";
 
 const ClientsCreativity = () => {
   return (
-    <div className="flex flex-col lg:flex-row items-center justify-center -mt-32 lg:mt-0 gap-10 px-4">
-      
+    <div className="flex flex-col lg:flex-row items-center justify-center -mt-32 lg:mt-12 lg:mb-6 gap-10 px-4">
+
       {/* Left Video */}
       <div className="w-1/2 max-w-[600px] rounded-[4px] overflow-hidden">
-      <motion.video
-        src={creativityVideo}
-        autoPlay
-        muted
-        loop
-        playsInline
-        className="block w-full h-full object-cover scale[1.005]"
-        initial={{ x: -100, opacity: 0 }}
-        whileInView={{ x: 0, opacity: 1 }}
-        viewport={{ once: true }}
-        transition={{ type: "spring", stiffness: 120, damping: 10 }}
-      />
+        <motion.video
+          src={creativityVideo}
+          autoPlay
+          muted
+          loop
+          playsInline
+          className="block w-full h-full object-cover scale[1.005]"
+          initial={{ x: -100, opacity: 0 }}
+          whileInView={{ x: 0, opacity: 1 }}
+          viewport={{ once: true }}
+          transition={{ type: "spring", stiffness: 120, damping: 10 }}
+        />
       </div>
 
       {/* Right Text */}
