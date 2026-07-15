@@ -1,4 +1,5 @@
-import React, { useEffect } from "react";
+import React, { useState, useEffect } from "react";
+import { AnimatePresence } from "framer-motion";
 import {
   BrowserRouter as Router,
   Routes,
@@ -28,6 +29,7 @@ import Raks from "./pages/client/Raks";
 import SyedBawkher from "./pages/client/SyedBawkher";
 import GopalanEnterprises from "./pages/client/GopalanEnterprises";
 import Qatamaran from "./pages/client/Qatamaran";
+import Loader from "./components/Loader";
 
 /* SCROLL RESET  */
 function ScrollToTop() {
@@ -115,8 +117,13 @@ function AppContent() {
 
 /* MAIN APP */
 function App() {
+  const [loading, setLoading] = useState(true);
+
   return (
     <Router>
+      <AnimatePresence>
+        {loading && <Loader onComplete={() => setLoading(false)} />}
+      </AnimatePresence>
       <AppContent />
     </Router>
   );
