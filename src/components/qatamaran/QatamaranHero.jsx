@@ -48,10 +48,10 @@ const QatamaranHero = () => {
 
           <div className="w-full h-full flex flex-col items-center justify-center gap-4 lg:gap-6 px-4">
             <h1
-              className="uppercase alinsa text-[#060EBB] leading-none tracking-tight text-center"
+              className="alinsa text-[#060EBB] leading-none  text-center"
               style={{ fontSize: "clamp(48px, min(12vh, 8vw), 140px)" }}
             >
-              Qatamaran
+              QATAMARAN
             </h1>
 
             <button className="jost rounded-full border-2 bg-[#060EBB] text-white flex items-center justify-center font-medium w-[160px] h-[45px] lg:w-[200px] lg:h-[60px] xl:w-[220px] xl:h-[70px] text-[clamp(14px,1.1vw,16px)] ">
