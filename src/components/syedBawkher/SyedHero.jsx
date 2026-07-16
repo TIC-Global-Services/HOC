@@ -62,9 +62,9 @@ const SyedHero = () => {
           />
 
           {/* CENTER TEXT */}
-          <div className="w-full h-full flex flex-col items-center justify-center gap-3 lg:gap-6 px-4 text-center ">
+          <div className="w-full h-full flex flex-col items-center justify-center gap-3 lg:gap-6 px-4 text-center">
             <h1
-              className="font-[1000] alinsa text-[#060EBB] leading-none tracking-tight"
+              className="font-[1000] alinsa text-[#060EBB] leading-none"
               style={{ fontSize: "clamp(42px, min(16vh, 6.5vw), 180px)" }}
             >
               SYED BAWKHER

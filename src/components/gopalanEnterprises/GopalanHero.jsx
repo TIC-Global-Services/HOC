@@ -93,7 +93,7 @@ const GopalanHero = () => {
           {/* CONTENT */}
           <div className="w-full h-full flex flex-col items-center justify-center gap-4 lg:gap-6 px-4 relative z-10" style={{ paddingTop: "clamp(40px, 18vh, 120px)" }}>
             <h1
-              className="alinsa text-[#060EBB] leading-none text-center tracking-tight "
+              className="alinsa text-[#060EBB] leading-none text-center"
               style={{ fontSize: "clamp(48px, min(18vh, 8vw), 140px)" }}
             >
               GOPALAN GROUPS

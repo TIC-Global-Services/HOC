@@ -27,6 +27,7 @@
   font-family: 'salo';
   font-weight: normal;
 }
+
 .alinsa {
   font-family: 'alinsa';
 }
@@ -61,6 +62,15 @@ body {
   /* Prevent horizontal scrolling */
 }
 
+.alinsa {
+  font-variant-ligatures: none;
+  font-feature-settings: "liga" 0, "clig" 0, "kern" 0;
+}
+.alinsa {
+  text-rendering: geometricPrecision;
+  -webkit-font-smoothing: antialiased;
+}
+
 /* For modern browsers
 body::-webkit-scrollbar {
   width: 0.5em;
@@ -79,4 +89,3 @@ body::-webkit-scrollbar-thumb {
 .main-services-height {
   min-height: 240vh;
 }
-
